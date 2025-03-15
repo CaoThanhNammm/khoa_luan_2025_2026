@@ -1,0 +1,19 @@
+{
+  "entities": [
+    {
+      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "type": "tổ chức"
+    },
+    {
+      "name": "2035",
+      "type": "thời gian"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "2035",
+      "relation": "MỤC_TIÊU_ĐẾN"
+    }
+  ]
+}

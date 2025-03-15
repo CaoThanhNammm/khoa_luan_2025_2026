@@ -1,0 +1,900 @@
+{
+  "entities": [
+    {
+      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+      "type": "tổ chức"
+    },
+    {
+      "name": "12 phòng ban",
+      "type": "số lượng"
+    },
+    {
+      "name": "07 trung tâm",
+      "type": "số lượng"
+    },
+    {
+      "name": "01 viện nghiên cứu",
+      "type": "số lượng"
+    },
+    {
+      "name": "12 khoa đào tạo chuyên môn",
+      "type": "số lượng"
+    },
+    {
+      "name": "01 khoa cơ bản",
+      "type": "số lượng"
+    },
+    {
+      "name": "01 bộ môn",
+      "type": "số lượng"
+    },
+    {
+      "name": "Phòng Công tác Sinh viên",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.38974560",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://nls.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.38963350",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://pdt.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Đào tạo Sau đại học",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.38963339",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://pgo.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Hành chính",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.38966780",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "https://ado.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Hợp tác Quốc tế",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.38966946",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://iro.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Kế hoạch Tài chính",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.38963334",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://pkhtc.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Quản lý Chất lượng",
+      "type": "phòng ban"
+    },
+    {
+      "name": "0283.7245870",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "https://kdcl.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng QL Nghiên cứu Khoa học",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.38963340",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://srmo.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Quản trị Vật tư",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.38961157",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://pqtvt.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Tổ chức Cán bộ",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.38963341",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://tccb.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Thanh tra giáo dục",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.37245195",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://ttra.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Thông tin và Truyền thông",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.35359097",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "https://4t.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Đoàn Thanh niên, Hội sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "0283.7245396",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "https://www.tuoitrenonglam.com",
+      "type": "website"
+    },
+    {
+      "name": "Tạp chí Nông nghiệp và phát triển trường Đại học Nông Lâm TP.HCM",
+      "type": "tổ chức"
+    },
+    {
+      "name": "028.37245670",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "https://jad.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Thư viện",
+      "type": "phòng ban"
+    },
+    {
+      "name": "028.38963351",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://elib.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Trung tâm Dịch vụ Sinh viên",
+      "type": "trung tâm"
+    },
+    {
+      "name": "028.38963346",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "https://ttdvsv.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "TT hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
+      "type": "trung tâm"
+    },
+    {
+      "name": "028.37245397",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://htsv.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "TT Nghiên cứu & chuyển giao KHCN",
+      "type": "trung tâm"
+    },
+    {
+      "name": "028.38966056",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://rttc.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Trung tâm Nghiên cứu biến đổi khí hậu",
+      "type": "trung tâm"
+    },
+    {
+      "name": "028.37242522",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "https://rccc.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Trung tâm Nghiên cứu và Ứng dụng Công nghệ Địa chính",
+      "type": "trung tâm"
+    },
+    {
+      "name": "028.37245422",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://cadas.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "TT Ngoại ngữ",
+      "type": "trung tâm"
+    },
+    {
+      "name": "028.38960109",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://cfs.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "TT Tin học ứng dụng",
+      "type": "trung tâm"
+    },
+    {
+      "name": "028.38961713",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://aic.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "TT Ươm tạo doanh nghiệp công nghệ",
+      "type": "trung tâm"
+    },
+    {
+      "name": "28.37245197",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://tbi.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Viện Nghiên cứu Công nghệ Sinh học và Môi trường",
+      "type": "viện nghiên cứu"
+    },
+    {
+      "name": "028.37220294",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://ribe.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Công nghệ Hóa học và Thực phẩm",
+      "type": "khoa"
+    },
+    {
+      "name": "028.38960871",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "https://ceft.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Công nghệ Thông tin",
+      "type": "khoa"
+    },
+    {
+      "name": "028.37242623",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://fit.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Cơ khí Công nghệ",
+      "type": "khoa"
+    },
+    {
+      "name": "028.38960721",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://fme.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Chăn nuôi Thú y",
+      "type": "khoa"
+    },
+    {
+      "name": "028.38961711",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "https://cnty.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Kinh tế",
+      "type": "khoa"
+    },
+    {
+      "name": "028.38961708",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://eco.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Khoa học",
+      "type": "khoa"
+    },
+    {
+      "name": "028.37220262",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://fs.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Khoa học Sinh học",
+      "type": "khoa"
+    },
+    {
+      "name": "028.37245163",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://biotech.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Lâm nghiệp",
+      "type": "khoa"
+    },
+    {
+      "name": "028.38975453",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://ff.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Môi trường và Tài nguyên",
+      "type": "khoa"
+    },
+    {
+      "name": "028.37220723",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://env.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Nông học",
+      "type": "khoa"
+    },
+    {
+      "name": "028.38961710",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://fa.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Ngoại ngữ - Sư phạm",
+      "type": "khoa"
+    },
+    {
+      "name": "028.37220727",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://ffl.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Quản lý đất đai và Bất động sản",
+      "type": "khoa"
+    },
+    {
+      "name": "028.37220261",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://lrem.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Khoa Thủy sản",
+      "type": "khoa"
+    },
+    {
+      "name": "028.38963343",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "https://fof.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "Bộ môn Lý luận Chính trị",
+      "type": "bộ môn"
+    },
+    {
+      "name": "028.38963342",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "http://bmllct.hcmuaf.edu.vn",
+      "type": "website"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+      "target": "12 phòng ban",
+      "relation": "SỞ_HỮU"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+      "target": "07 trung tâm",
+      "relation": "SỞ_HỮU"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+      "target": "01 viện nghiên cứu",
+      "relation": "SỞ_HỮU"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+      "target": "12 khoa đào tạo chuyên môn",
+      "relation": "SỞ_HỮU"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+      "target": "01 khoa cơ bản",
+      "relation": "SỞ_HỮU"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+      "target": "01 bộ môn",
+      "relation": "SỞ_HỮU"
+    },
+    {
+      "source": "Phòng Công tác Sinh viên",
+      "target": "028.38974560",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Công tác Sinh viên",
+      "target": "http://nls.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "028.38963350",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "http://pdt.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng Đào tạo Sau đại học",
+      "target": "028.38963339",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Đào tạo Sau đại học",
+      "target": "http://pgo.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng Hành chính",
+      "target": "028.38966780",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Hành chính",
+      "target": "https://ado.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng Hợp tác Quốc tế",
+      "target": "028.38966946",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Hợp tác Quốc tế",
+      "target": "http://iro.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng Kế hoạch Tài chính",
+      "target": "028.38963334",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Kế hoạch Tài chính",
+      "target": "http://pkhtc.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng Quản lý Chất lượng",
+      "target": "0283.7245870",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Quản lý Chất lượng",
+      "target": "https://kdcl.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng QL Nghiên cứu Khoa học",
+      "target": "028.38963340",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng QL Nghiên cứu Khoa học",
+      "target": "http://srmo.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng Quản trị Vật tư",
+      "target": "028.38961157",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Quản trị Vật tư",
+      "target": "http://pqtvt.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng Tổ chức Cán bộ",
+      "target": "028.38963341",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Tổ chức Cán bộ",
+      "target": "http://tccb.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng Thanh tra giáo dục",
+      "target": "028.37245195",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Thanh tra giáo dục",
+      "target": "http://ttra.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Phòng Thông tin và Truyền thông",
+      "target": "028.35359097",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Phòng Thông tin và Truyền thông",
+      "target": "https://4t.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Đoàn Thanh niên, Hội sinh viên",
+      "target": "0283.7245396",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Đoàn Thanh niên, Hội sinh viên",
+      "target": "https://www.tuoitrenonglam.com",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Tạp chí Nông nghiệp và phát triển trường Đại học Nông Lâm TP.HCM",
+      "target": "028.37245670",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Tạp chí Nông nghiệp và phát triển trường Đại học Nông Lâm TP.HCM",
+      "target": "https://jad.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Thư viện",
+      "target": "028.38963351",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Thư viện",
+      "target": "http://elib.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Trung tâm Dịch vụ Sinh viên",
+      "target": "028.38963346",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Trung tâm Dịch vụ Sinh viên",
+      "target": "https://ttdvsv.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "TT hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
+      "target": "028.37245397",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "TT hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
+      "target": "http://htsv.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "TT Nghiên cứu & chuyển giao KHCN",
+      "target": "028.38966056",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "TT Nghiên cứu & chuyển giao KHCN",
+      "target": "http://rttc.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Trung tâm Nghiên cứu biến đổi khí hậu",
+      "target": "028.37242522",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Trung tâm Nghiên cứu biến đổi khí hậu",
+      "target": "https://rccc.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Trung tâm Nghiên cứu và Ứng dụng Công nghệ Địa chính",
+      "target": "028.37245422",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Trung tâm Nghiên cứu và Ứng dụng Công nghệ Địa chính",
+      "target": "http://cadas.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "TT Ngoại ngữ",
+      "target": "028.38960109",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "TT Ngoại ngữ",
+      "target": "http://cfs.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "TT Tin học ứng dụng",
+      "target": "028.38961713",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "TT Tin học ứng dụng",
+      "target": "http://aic.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "TT Ươm tạo doanh nghiệp công nghệ",
+      "target": "28.37245197",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "TT Ươm tạo doanh nghiệp công nghệ",
+      "target": "http://tbi.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Viện Nghiên cứu Công nghệ Sinh học và Môi trường",
+      "target": "028.37220294",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Viện Nghiên cứu Công nghệ Sinh học và Môi trường",
+      "target": "http://ribe.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Công nghệ Hóa học và Thực phẩm",
+      "target": "028.38960871",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Công nghệ Hóa học và Thực phẩm",
+      "target": "https://ceft.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Công nghệ Thông tin",
+      "target": "028.37242623",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Công nghệ Thông tin",
+      "target": "http://fit.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Cơ khí Công nghệ",
+      "target": "028.38960721",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Cơ khí Công nghệ",
+      "target": "http://fme.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Chăn nuôi Thú y",
+      "target": "028.38961711",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Chăn nuôi Thú y",
+      "target": "https://cnty.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Kinh tế",
+      "target": "028.38961708",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Kinh tế",
+      "target": "http://eco.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Khoa học",
+      "target": "028.37220262",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Khoa học",
+      "target": "http://fs.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Khoa học Sinh học",
+      "target": "028.37245163",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Khoa học Sinh học",
+      "target": "http://biotech.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Lâm nghiệp",
+      "target": "028.38975453",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Lâm nghiệp",
+      "target": "http://ff.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Môi trường và Tài nguyên",
+      "target": "028.37220723",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Môi trường và Tài nguyên",
+      "target": "http://env.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Nông học",
+      "target": "028.38961710",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Nông học",
+      "target": "http://fa.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Ngoại ngữ - Sư phạm",
+      "target": "028.37220727",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Ngoại ngữ - Sư phạm",
+      "target": "http://ffl.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Quản lý đất đai và Bất động sản",
+      "target": "028.37220261",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Quản lý đất đai và Bất động sản",
+      "target": "http://lrem.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Khoa Thủy sản",
+      "target": "028.38963343",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Khoa Thủy sản",
+      "target": "https://fof.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Bộ môn Lý luận Chính trị",
+      "target": "028.38963342",
+      "relation": "SỐ_ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Bộ môn Lý luận Chính trị",
+      "target": "http://bmllct.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "entities": [
+    {
+      "name": "Tổ tham vấn tâm lý học đường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "type": "tổ chức"
+    },
+    {
+      "name": "tham vấn trực tiếp",
+      "type": "hình thức"
+    },
+    {
+      "name": "tham vấn online",
+      "type": "hình thức"
+    },
+    {
+      "name": "Radio Nông Lâm",
+      "type": "phương tiện truyền thông"
+    },
+    {
+      "name": "chuyên gia tư vấn",
+      "type": "người"
+    },
+    {
+      "name": "cán bộ",
+      "type": "người"
+    },
+    {
+      "name": "giảng viên",
+      "type": "người"
+    },
+    {
+      "name": "trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "Tổ Tư vấn Tâm lý học đường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "G.05, nhà Thiên Lý",
+      "type": "địa điểm"
+    },
+    {
+      "name": "tuvantamly@hcmuaf.edu.vn",
+      "type": "email"
+    },
+    {
+      "name": "https://nls.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "0283 897 4560",
+      "type": "số điện thoại"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Tổ tham vấn tâm lý học đường",
+      "target": "Trường Đại học Nông Lâm TP.HCM",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Tổ tham vấn tâm lý học đường",
+      "target": "tham vấn trực tiếp",
+      "relation": "HOẠT_ĐỘNG"
+    },
+    {
+      "source": "Tổ tham vấn tâm lý học đường",
+      "target": "tham vấn online",
+      "relation": "HOẠT_ĐỘNG"
+    },
+    {
+      "source": "Tổ tham vấn tâm lý học đường",
+      "target": "Radio Nông Lâm",
+      "relation": "HOẠT_ĐỘNG"
+    },
+    {
+      "source": "Tổ tham vấn tâm lý học đường",
+      "target": "chuyên gia tư vấn",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Tổ tham vấn tâm lý học đường",
+      "target": "cán bộ",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Tổ tham vấn tâm lý học đường",
+      "target": "giảng viên",
+      "relation": "CÓ"
+    },
+    {
+      "source": "giảng viên",
+      "target": "trường",
+      "relation": "TRONG"
+    },
+    {
+      "source": "cán bộ",
+      "target": "trường",
+      "relation": "TRONG"
+    },
+    {
+      "source": "chuyên gia tư vấn",
+      "target": "sinh viên",
+      "relation": "TƯ_VẤN"
+    },
+    {
+      "source": "giảng viên",
+      "target": "sinh viên",
+      "relation": "TƯ_VẤN"
+    },
+    {
+      "source": "cán bộ",
+      "target": "sinh viên",
+      "relation": "TƯ_VẤN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Tổ Tư vấn Tâm lý học đường",
+      "relation": "ĐĂNG_KÝ"
+    },
+    {
+      "source": "Tổ Tư vấn Tâm lý học đường",
+      "target": "G.05, nhà Thiên Lý",
+      "relation": "TẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tuvantamly@hcmuaf.edu.vn",
+      "relation": "GỬI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "https://nls.hcmuaf.edu.vn",
+      "relation": "TRUY_CẬP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "0283 897 4560",
+      "relation": "LIÊN_HỆ"
+    }
+  ]
+}

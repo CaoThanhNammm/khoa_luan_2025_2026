@@ -1,0 +1,1174 @@
+{
+  "entities": [
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "người có thẩm quyền",
+      "type": "người"
+    },
+    {
+      "name": "email",
+      "type": "khái niệm"
+    },
+    {
+      "name": "đơn",
+      "type": "văn bản"
+    },
+    {
+      "name": "bản in",
+      "type": "văn bản"
+    },
+    {
+      "name": "photocopy",
+      "type": "văn bản"
+    },
+    {
+      "name": "website",
+      "type": "website"
+    },
+    {
+      "name": "Nhà Trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "điện thoại",
+      "type": "thiết bị"
+    },
+    {
+      "name": "Khoa",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "giáo viên chủ nhiệm",
+      "type": "người"
+    },
+    {
+      "name": "cố vấn học tập",
+      "type": "người"
+    },
+    {
+      "name": "học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "học kỳ",
+      "type": "thời gian"
+    },
+    {
+      "name": "số tín chỉ",
+      "type": "số lượng"
+    },
+    {
+      "name": "chuyên ngành đào tạo",
+      "type": "khái niệm"
+    },
+    {
+      "name": "giáo viên giảng dạy",
+      "type": "người"
+    },
+    {
+      "name": "đề cương chi tiết học phần",
+      "type": "văn bản"
+    },
+    {
+      "name": "điểm bộ phận",
+      "type": "khái niệm"
+    },
+    {
+      "name": "ngân hàng câu hỏi thi",
+      "type": "khái niệm"
+    },
+    {
+      "name": "tài liệu học tập",
+      "type": "văn bản"
+    },
+    {
+      "name": "tài liệu tham khảo",
+      "type": "văn bản"
+    },
+    {
+      "name": "khiếu nại",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Khoa",
+      "type": "tổ chức"
+    },
+    {
+      "name": "đình chỉ thi",
+      "type": "hình thức kỷ luật"
+    },
+    {
+      "name": "Khoa chuyên môn",
+      "type": "tổ chức"
+    },
+    {
+      "name": "giáo vụ khoa",
+      "type": "người"
+    },
+    {
+      "name": "Ban chủ nhiệm khoa",
+      "type": "nhóm người"
+    },
+    {
+      "name": "chương trình đào tạo",
+      "type": "khái niệm"
+    },
+    {
+      "name": "điều kiện tốt nghiệp",
+      "type": "khái niệm"
+    },
+    {
+      "name": "thẻ sinh viên",
+      "type": "văn bản"
+    },
+    {
+      "name": "bộ phận quản lý đăng ký trực tuyến",
+      "type": "nhóm người"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "3 tuần",
+      "type": "thời gian"
+    },
+    {
+      "name": "môn học",
+      "type": "khái niệm"
+    },
+    {
+      "name": "thời khóa biểu",
+      "type": "văn bản"
+    },
+    {
+      "name": "cơ sở dữ liệu",
+      "type": "khái niệm"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "trang Web",
+      "type": "website"
+    },
+    {
+      "name": "trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "lớp học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "bản in",
+      "type": "văn bản"
+    },
+    {
+      "name": "văn bản pháp lý",
+      "type": "văn bản"
+    },
+    {
+      "name": "Website",
+      "type": "website"
+    },
+    {
+      "name": "Phòng Công tác sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "tài khoản cá nhân",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Email",
+      "type": "khái niệm"
+    },
+    {
+      "name": "trang Web",
+      "type": "website"
+    },
+    {
+      "name": "thẻ sinh viên",
+      "type": "văn bản"
+    },
+    {
+      "name": "giáo viên chủ nhiệm",
+      "type": "người"
+    },
+    {
+      "name": "cố vấn học tập",
+      "type": "người"
+    },
+    {
+      "name": "cán bộ giảng dạy",
+      "type": "người"
+    },
+    {
+      "name": "trợ lý giáo vụ",
+      "type": "người"
+    },
+    {
+      "name": "Ban chủ nhiệm khoa",
+      "type": "nhóm người"
+    },
+    {
+      "name": "phòng chức năng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "thông tin",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Điều 4",
+      "type": "điều khoản"
+    },
+    {
+      "name": "đơn vị chức năng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Ban giám hiệu",
+      "type": "nhóm người"
+    },
+    {
+      "name": "Chương 3",
+      "type": "chương"
+    },
+    {
+      "name": "giáo viên chủ nhiệm",
+      "type": "người"
+    },
+    {
+      "name": "cố vấn học tập",
+      "type": "người"
+    },
+    {
+      "name": "giáo vụ khoa",
+      "type": "người"
+    },
+    {
+      "name": "BCN Khoa",
+      "type": "viết tắt"
+    },
+    {
+      "name": "phòng chức năng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "giáo viên chủ nhiệm",
+      "type": "người"
+    },
+    {
+      "name": "cố vấn học tập",
+      "type": "người"
+    },
+    {
+      "name": "Trưởng phòng Đào tạo",
+      "type": "người"
+    },
+    {
+      "name": "danh sách lớp học phần",
+      "type": "văn bản"
+    },
+    {
+      "name": "danh sách bổ sung",
+      "type": "văn bản"
+    },
+    {
+      "name": "đăng ký",
+      "type": "hoạt động"
+    },
+    {
+      "name": "rút học phần",
+      "type": "hoạt động"
+    },
+    {
+      "name": "lớp học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "đơn",
+      "type": "văn bản"
+    },
+    {
+      "name": "bản in",
+      "type": "văn bản"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "học kỳ",
+      "type": "thời gian"
+    },
+    {
+      "name": "lớp học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "đơn",
+      "type": "văn bản"
+    },
+    {
+      "name": "học phí",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Quy chế đào tạo",
+      "type": "văn bản"
+    },
+    {
+      "name": "điểm bộ phận",
+      "type": "khái niệm"
+    },
+    {
+      "name": "điểm thi kết thúc học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "điểm thi học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "thi",
+      "type": "sự kiện"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "điểm thi",
+      "type": "khái niệm"
+    },
+    {
+      "name": "khoa",
+      "type": "tổ chức"
+    },
+    {
+      "name": "bản in",
+      "type": "văn bản"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "Trưởng Bộ môn",
+      "type": "người"
+    },
+    {
+      "name": "Bộ môn",
+      "type": "tổ chức"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "điểm thi kết thúc học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "điểm học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Khoa",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "giấy hẹn",
+      "type": "văn bản"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "cơ sở dữ liệu",
+      "type": "khái niệm"
+    },
+    {
+      "name": "01 tuần",
+      "type": "thời gian"
+    },
+    {
+      "name": "phúc khảo",
+      "type": "hoạt động"
+    },
+    {
+      "name": "điểm thi kết thúc học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "khoa chuyên môn",
+      "type": "tổ chức"
+    },
+    {
+      "name": "3 ngày",
+      "type": "thời gian"
+    },
+    {
+      "name": "ngày công bố điểm",
+      "type": "thời gian"
+    },
+    {
+      "name": "Trưởng bộ môn",
+      "type": "người"
+    },
+    {
+      "name": "giáo viên",
+      "type": "người"
+    },
+    {
+      "name": "3 ngày",
+      "type": "thời gian"
+    },
+    {
+      "name": "ngày nhận đơn",
+      "type": "thời gian"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "điểm thi học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "Ban giám hiệu",
+      "type": "nhóm người"
+    },
+    {
+      "name": "đơn",
+      "type": "văn bản"
+    },
+    {
+      "name": "Chương 2",
+      "type": "chương"
+    },
+    {
+      "name": "Chương 3",
+      "type": "chương"
+    },
+    {
+      "name": "Điều 10",
+      "type": "điều khoản"
+    },
+    {
+      "name": "nhà trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "công tác đào tạo",
+      "type": "khái niệm"
+    },
+    {
+      "name": "công tác sinh viên",
+      "type": "khái niệm"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "Điều 10",
+      "type": "điều khoản"
+    },
+    {
+      "name": "Website",
+      "type": "website"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "tiêu đề",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Điều 10",
+      "type": "điều khoản"
+    },
+    {
+      "name": "Điều 11",
+      "type": "điều khoản"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "người có thẩm quyền",
+      "relation": "CHUYỂN_TỚI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "email",
+      "relation": "GỬI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "relation": "VIẾT"
+    },
+    {
+      "source": "đơn",
+      "target": "minh chứng",
+      "relation": "KÈM"
+    },
+    {
+      "source": "minh chứng",
+      "target": "bản in",
+      "relation": "LÀ"
+    },
+    {
+      "source": "minh chứng",
+      "target": "photocopy",
+      "relation": "LÀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "website",
+      "relation": "TRỰC_TUYẾN"
+    },
+    {
+      "source": "Nhà Trường",
+      "target": "điện thoại",
+      "relation": "KHÔNG_CHẤP_NHẬN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Chương II",
+      "relation": "THEO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "relation": "NỘP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Khoa",
+      "relation": "CHO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "relation": "CHO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Chương III",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khoa",
+      "target": "đơn",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "đơn",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "Khoa",
+      "target": "sổ",
+      "relation": "LƯU"
+    },
+    {
+      "source": "Khoa",
+      "target": "ngày trả lời",
+      "relation": "HẸN"
+    },
+    {
+      "source": "Khoa",
+      "target": "phiếu trả lời",
+      "relation": "PHÁT"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "sổ",
+      "relation": "LƯU"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "ngày trả lời",
+      "relation": "HẸN"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "phiếu trả lời",
+      "relation": "PHÁT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giáo viên chủ nhiệm",
+      "relation": "TRAO_ĐỔI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "cố vấn học tập",
+      "relation": "TRAO_ĐỔI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phần",
+      "relation": "TƯ_VẤN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học kỳ",
+      "relation": "TRONG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "số tín chỉ",
+      "relation": "VỀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "chuyên ngành đào tạo",
+      "relation": "TƯ_VẤN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giáo viên giảng dạy",
+      "relation": "TRAO_ĐỔI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đề cương chi tiết học phần",
+      "relation": "THẮC_MẮC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm bộ phận",
+      "relation": "THẮC_MẮC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "ngân hàng câu hỏi thi",
+      "relation": "THẮC_MẮC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tài liệu học tập",
+      "relation": "THẮC_MẮC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tài liệu tham khảo",
+      "relation": "THẮC_MẮC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "khiếu nại",
+      "relation": "VỀ"
+    },
+    {
+      "source": "giảng viên",
+      "target": "đình chỉ thi",
+      "relation": "ĐỀ_NGHỊ"
+    },
+    {
+      "source": "giảng viên",
+      "target": "Khoa",
+      "relation": "ĐỀ_NGHỊ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Khoa chuyên môn",
+      "relation": "TRAO_ĐỔI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giáo vụ khoa",
+      "relation": "TRAO_ĐỔI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Ban chủ nhiệm khoa",
+      "relation": "TRAO_ĐỔI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "chương trình đào tạo",
+      "relation": "VỀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điều kiện tốt nghiệp",
+      "relation": "VỀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "relation": "TRAO_ĐỔI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thẻ sinh viên",
+      "relation": "MANG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bản in",
+      "relation": "MANG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "photo",
+      "relation": "MANG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bộ phận quản lý đăng ký trực tuyến",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "relation": "ĐƯỢC_HỖ_TRỢ"
+    },
+    {
+      "source": "3 tuần",
+      "target": "học",
+      "relation": "SAU"
+    },
+    {
+      "source": "sinh viên",
+      "target": "danh sách",
+      "relation": "TRONG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "lớp học phần",
+      "relation": "CỦA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "môn học",
+      "relation": "VỀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thời khóa biểu",
+      "relation": "VỀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "cơ sở dữ liệu",
+      "relation": "TRONG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "sinh viên",
+      "relation": "CỦA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trang Web",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "relation": "THÔNG_BÁO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "lớp học phần",
+      "relation": "ĐI_HỌC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "cơ sở dữ liệu",
+      "relation": "CHƯA_ĐƯỢC_SỬA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trang Web",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trường",
+      "relation": "CỦA"
+    },
+    {
+      "source": "lớp học phần",
+      "target": "bản in",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "bản in",
+      "target": "văn bản pháp lý",
+      "relation": "LÀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kết quả đăng ký học phần",
+      "relation": "CÔNG_NHẬN"
+    },
+    {
+      "source": "Website",
+      "target": "tham khảo",
+      "relation": "CHỈ_LÀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tài khoản cá nhân",
+      "relation": "MẤT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Email",
+      "relation": "MẤT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trang Web",
+      "relation": "ĐĂNG_NHẬP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thẻ sinh viên",
+      "relation": "MANG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Công tác sinh viên",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hướng dẫn",
+      "relation": "ĐƯỢC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hỗ trợ",
+      "relation": "ĐƯỢC"
+    },
+    {
+      "source": "giáo viên chủ nhiệm",
+      "target": "ý kiến",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "ý kiến",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "cán bộ giảng dạy",
+      "target": "ý kiến",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "trợ lý giáo vụ",
+      "target": "ý kiến",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "Ban chủ nhiệm khoa",
+      "target": "ý kiến",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "phòng chức năng",
+      "target": "ý kiến",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "giáo viên chủ nhiệm",
+      "target": "sinh viên",
+      "relation": "GIÚP_ĐỠ"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "sinh viên",
+      "relation": "GIÚP_ĐỠ"
+    },
+    {
+      "source": "cán bộ giảng dạy",
+      "target": "sinh viên",
+      "relation": "GIÚP_ĐỠ"
+    },
+    {
+      "source": "trợ lý giáo vụ",
+      "target": "sinh viên",
+      "relation": "GIÚP_ĐỠ"
+    },
+    {
+      "source": "Ban chủ nhiệm khoa",
+      "target": "sinh viên",
+      "relation": "GIÚP_ĐỠ"
+    },
+    {
+      "source": "phòng chức năng",
+      "target": "sinh viên",
+      "relation": "GIÚP_ĐỠ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thông tin",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Điều 4",
+      "target": "sinh viên",
+      "relation": "NÊU"
+    },
+    {
+      "source": "đơn vị chức năng",
+      "target": "Ban giám hiệu",
+      "relation": "HOẶC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Chương 3",
+      "relation": "THEO"
+    },
+    {
+      "source": "giáo viên chủ nhiệm",
+      "target": "đơn",
+      "relation": "XÁC_NHẬN"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "đơn",
+      "relation": "XÁC_NHẬN"
+    },
+    {
+      "source": "giáo vụ khoa",
+      "target": "đơn",
+      "relation": "XÁC_NHẬN"
+    },
+    {
+      "source": "giáo viên chủ nhiệm",
+      "target": "đơn",
+      "relation": "GHI"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "đơn",
+      "relation": "GHI"
+    },
+    {
+      "source": "giáo vụ khoa",
+      "target": "đơn",
+      "relation": "GHI"
+    },
+    {
+      "source": "giáo viên chủ nhiệm",
+      "target": "BCN Khoa",
+      "relation": "CHUYỂN"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "BCN Khoa",
+      "relation": "CHUYỂN"
+    },
+    {
+      "source": "giáo vụ khoa",
+      "target": "BCN Khoa",
+      "relation": "CHUYỂN"
+    },
+    {
+      "source": "giáo viên chủ nhiệm",
+      "target": "phòng chức năng",
+      "relation": "CHUYỂN"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "phòng chức năng",
+      "relation": "CHUYỂN"
+    },
+    {
+      "source": "giáo vụ khoa",
+      "target": "phòng chức năng",
+      "relation": "CHUYỂN"
+    },
+    {
+      "source": "giáo viên chủ nhiệm",
+      "target": "bản",
+      "relation": "LƯU"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "bản",
+      "relation": "LƯU"
+    },
+    {
+      "source": "sinh viên",
+      "target": "danh sách lớp học phần",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Trưởng phòng Đào tạo",
+      "target": "danh sách lớp học phần",
+      "relation": "KÝ"
+    },
+    {
+      "source": "danh sách bổ sung",
+      "target": "danh sách lớp học phần",
+      "relation": "LÀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đăng ký",
+      "relation": "ĐÃ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "rút học phần",
+      "relation": "VỀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "lớp học phần",
+      "relation": "VỀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "relation": "VIẾT"
+    },
+    {
+      "source": "đơn",
+      "target": "bản in",
+      "relation": "KÈM"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "relation": "GỬI"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "đơn",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "sinh viên",
+      "relation": "GIẢI_QUYẾT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "relation": "VIẾT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phí",
+      "relation": "NỘP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "relation": "NỘP"
+    },
+    {
+      "source": "Nhà trường",
+      "target": "đơn",
+      "relation": "XEM_XÉT"
+    },
+    {
+      "source": "Nhà trường",
+      "target": "Quy chế đào tạo",
+      "relation": "THEO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm thi",
+      "relation": "KIỂM_TRA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "khoa",
+      "relation": "TẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bản in",
+      "relation": "TẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "relation": "TẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm bộ phận",
+      "relation": "THẮC_MẮC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giảng viên giảng dạy",
+      "relation": "VỚI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Trưởng Bộ môn",
+      "relation": "GỬI"
+    },
+    {
+      "source": "Trưởng Bộ môn",
+      "target": "sinh viên",
+      "relation": "GIẢI_QUYẾT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm thi kết thúc học phần",
+      "relation": "THẮC_MẮC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm học phần",
+      "relation": "THẮC_MẮC"

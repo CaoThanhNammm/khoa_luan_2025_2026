@@ -1,0 +1,19 @@
+{
+  "entities": [
+    {
+      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Việt Nam",
+      "type": "địa điểm"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "Việt Nam",
+      "relation": "PHỤC_VỤ"
+    }
+  ]
+}

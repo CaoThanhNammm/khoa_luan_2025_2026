@@ -1,0 +1,188 @@
+{
+  "entities": [
+    {
+      "name": "Bảo hiểm y tế",
+      "type": "khái niệm"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "Luật Bảo hiểm y tế 2008",
+      "type": "văn bản"
+    },
+    {
+      "name": "2014",
+      "type": "năm"
+    },
+    {
+      "name": "nhà nước",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Bảo hiểm y tế",
+      "type": "khái niệm"
+    },
+    {
+      "name": "thẻ bảo hiểm y tế",
+      "type": "văn bản"
+    },
+    {
+      "name": "CN, BT, HN, DT, DK, XD, TS, TC, TQ, TV, TA, TY, HG, PV",
+      "type": "mã"
+    },
+    {
+      "name": "Mức đóng",
+      "type": "khái niệm"
+    },
+    {
+      "name": "4,5%",
+      "type": "tỉ lệ"
+    },
+    {
+      "name": "mức lương cơ sở",
+      "type": "khái niệm"
+    },
+    {
+      "name": "số tháng",
+      "type": "số lượng"
+    },
+    {
+      "name": "70%",
+      "type": "tỉ lệ"
+    },
+    {
+      "name": "Quốc hội",
+      "type": "tổ chức"
+    },
+    {
+      "name": "https://bhytsv.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "email sinh viên",
+      "type": "khái niệm"
+    },
+    {
+      "name": "nhà trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "email",
+      "type": "khái niệm"
+    },
+    {
+      "name": "thẻ bảo hiểm y tế",
+      "type": "văn bản"
+    },
+    {
+      "name": "Nhà nước",
+      "type": "tổ chức"
+    },
+    {
+      "name": "https://bhytsv.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "thẻ",
+      "type": "văn bản"
+    },
+    {
+      "name": "baohiemxahoi.gov.vn",
+      "type": "website"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "Bảo hiểm y tế",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Bảo hiểm y tế",
+      "target": "Luật Bảo hiểm y tế 2008",
+      "relation": "THEO"
+    },
+    {
+      "source": "Luật Bảo hiểm y tế 2008",
+      "target": "2014",
+      "relation": "SỬA_ĐỔI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nhà nước",
+      "relation": "DO"
+    },
+    {
+      "source": "nhà nước",
+      "target": "Bảo hiểm y tế",
+      "relation": "CẤP"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "CN, BT, HN, DT, DK, XD, TS, TC, TQ, TV, TA, TY, HG, PV",
+      "relation": "MÃ"
+    },
+    {
+      "source": "Mức đóng",
+      "target": "4,5%",
+      "relation": "BẰNG"
+    },
+    {
+      "source": "Mức đóng",
+      "target": "mức lương cơ sở",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Mức đóng",
+      "target": "số tháng",
+      "relation": "NHÂN"
+    },
+    {
+      "source": "Mức đóng",
+      "target": "70%",
+      "relation": "NHÂN"
+    },
+    {
+      "source": "mức lương cơ sở",
+      "target": "Quốc hội",
+      "relation": "DO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "https://bhytsv.hcmuaf.edu.vn",
+      "relation": "TRUY_CẬP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "email sinh viên",
+      "relation": "BẰNG"
+    },
+    {
+      "source": "email sinh viên",
+      "target": "nhà trường",
+      "relation": "DO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "email",
+      "relation": "KIỂM_TRA"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "Nhà nước",
+      "relation": "DO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "https://bhytsv.hcmuaf.edu.vn",
+      "relation": "CẬP_NHẬT"
+    },
+    {
+      "source": "thẻ",
+      "target": "baohiemxahoi.gov.vn",
+      "relation": "TRA_CỨU"
+    }
+  ]
+}

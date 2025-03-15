@@ -1,0 +1,952 @@
+{
+  "entities": [
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "ngành/chuyên ngành",
+      "type": "khái niệm"
+    },
+    {
+      "name": "CTĐT",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Hiệu trưởng",
+      "type": "người"
+    },
+    {
+      "name": "Hội đồng Khoa",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Trưởng Khoa",
+      "type": "người"
+    },
+    {
+      "name": "website",
+      "type": "website"
+    },
+    {
+      "name": "Bộ Giáo dục và Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "50%",
+      "type": "tỉ lệ"
+    },
+    {
+      "name": "điểm M",
+      "type": "khái niệm"
+    },
+    {
+      "name": "học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "điểm D",
+      "type": "khái niệm"
+    },
+    {
+      "name": "điểm F",
+      "type": "khái niệm"
+    },
+    {
+      "name": "ĐTBCHK",
+      "type": "khái niệm"
+    },
+    {
+      "name": "ĐTBCNH",
+      "type": "khái niệm"
+    },
+    {
+      "name": "ĐTBCTL",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Xi",
+      "type": "khái niệm"
+    },
+    {
+      "name": "ai",
+      "type": "khái niệm"
+    },
+    {
+      "name": "n",
+      "type": "khái niệm"
+    },
+    {
+      "name": "02 học kỳ chính",
+      "type": "thời gian"
+    },
+    {
+      "name": "4,0",
+      "type": "số lượng"
+    },
+    {
+      "name": "3,5",
+      "type": "số lượng"
+    },
+    {
+      "name": "3,0",
+      "type": "số lượng"
+    },
+    {
+      "name": "2,5",
+      "type": "số lượng"
+    },
+    {
+      "name": "2,0",
+      "type": "số lượng"
+    },
+    {
+      "name": "1,5",
+      "type": "số lượng"
+    },
+    {
+      "name": "1,0",
+      "type": "số lượng"
+    },
+    {
+      "name": "0,0",
+      "type": "số lượng"
+    },
+    {
+      "name": "CTĐT",
+      "type": "khái niệm"
+    },
+    {
+      "name": "3,60",
+      "type": "số lượng"
+    },
+    {
+      "name": "4,00",
+      "type": "số lượng"
+    },
+    {
+      "name": "3,20",
+      "type": "số lượng"
+    },
+    {
+      "name": "3,59",
+      "type": "số lượng"
+    },
+    {
+      "name": "2,50",
+      "type": "số lượng"
+    },
+    {
+      "name": "3,19",
+      "type": "số lượng"
+    },
+    {
+      "name": "2,00",
+      "type": "số lượng"
+    },
+    {
+      "name": "2,49",
+      "type": "số lượng"
+    },
+    {
+      "name": "1,00",
+      "type": "số lượng"
+    },
+    {
+      "name": "1,99",
+      "type": "số lượng"
+    },
+    {
+      "name": "N",
+      "type": "khái niệm"
+    },
+    {
+      "name": "M",
+      "type": "khái niệm"
+    },
+    {
+      "name": "30 tín chỉ",
+      "type": "số lượng"
+    },
+    {
+      "name": "37 tín chỉ",
+      "type": "số lượng"
+    },
+    {
+      "name": "60 tín chỉ",
+      "type": "số lượng"
+    },
+    {
+      "name": "75 tín chỉ",
+      "type": "số lượng"
+    },
+    {
+      "name": "90 tín chỉ",
+      "type": "số lượng"
+    },
+    {
+      "name": "112 tín chỉ",
+      "type": "số lượng"
+    },
+    {
+      "name": "120 tín chỉ",
+      "type": "số lượng"
+    },
+    {
+      "name": "150 tín chỉ",
+      "type": "số lượng"
+    },
+    {
+      "name": "02 bảng ghi điểm thi",
+      "type": "số lượng"
+    },
+    {
+      "name": "Phòng Quản lý chất lượng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Khoa/Bộ môn",
+      "type": "tổ chức"
+    },
+    {
+      "name": "01 bản",
+      "type": "số lượng"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "30 ngày",
+      "type": "thời gian"
+    },
+    {
+      "name": "thông tư số 16/2015/TT-BGDĐT",
+      "type": "văn bản"
+    },
+    {
+      "name": "ngày 12 tháng 8 năm 2015",
+      "type": "ngày tháng"
+    },
+    {
+      "name": "ĐRL",
+      "type": "khái niệm"
+    },
+    {
+      "name": "100 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "90 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "80 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "65 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "50 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "35 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "bảng điểm toàn khóa",
+      "type": "văn bản"
+    },
+    {
+      "name": "14 tín chỉ",
+      "type": "số lượng"
+    },
+    {
+      "name": "50%",
+      "type": "tỉ lệ"
+    },
+    {
+      "name": "24",
+      "type": "số lượng"
+    },
+    {
+      "name": "0,8",
+      "type": "số lượng"
+    },
+    {
+      "name": "1,0",
+      "type": "số lượng"
+    },
+    {
+      "name": "1,2",
+      "type": "số lượng"
+    },
+    {
+      "name": "1,4",
+      "type": "số lượng"
+    },
+    {
+      "name": "1,6",
+      "type": "số lượng"
+    },
+    {
+      "name": "1,8",
+      "type": "số lượng"
+    },
+    {
+      "name": "02 lần",
+      "type": "số lượng"
+    },
+    {
+      "name": "1 năm",
+      "type": "thời gian"
+    },
+    {
+      "name": "tháng 4",
+      "type": "thời gian"
+    },
+    {
+      "name": "tháng 10",
+      "type": "thời gian"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "ngành/chuyên ngành",
+      "relation": "HỌC_TẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "CTĐT",
+      "relation": "THEO_HỌC"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "target": "sinh viên",
+      "relation": "XÉT_TƯƠNG_ĐƯƠNG"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "target": "học phần",
+      "relation": "CÔNG_NHẬN"
+    },
+    {
+      "source": "CTĐT",
+      "target": "học phần",
+      "relation": "THUỘC"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "học phần",
+      "relation": "QUY_ĐỊNH"
+    },
+    {
+      "source": "Hội đồng Khoa",
+      "target": "tín chỉ",
+      "relation": "XÉT"
+    },
+    {
+      "source": "Trưởng Khoa",
+      "target": "học phần",
+      "relation": "RÀ_SOÁT"
+    },
+    {
+      "source": "Trưởng Khoa",
+      "target": "học phần",
+      "relation": "ĐỀ_XUẤT"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "học phần",
+      "relation": "PHÊ_DUYỆT"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "target": "website",
+      "relation": "CÔNG_BỐ_TRÊN"
+    },
+    {
+      "source": "học phần",
+      "target": "50%",
+      "relation": "KHÔNG_VƯỢT_QUÁ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm M",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "sinh viên",
+      "relation": "ĐỒNG_Ý"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phần",
+      "relation": "TÍCH_LŨY"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm D",
+      "relation": "ĐẠT_TỪ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm F",
+      "relation": "KHÔNG_TÍCH_LŨY"
+    },
+    {
+      "source": "ĐTBCHK",
+      "target": "học phần",
+      "relation": "TÍNH_THEO"
+    },
+    {
+      "source": "ĐTBCHK",
+      "target": "tín chỉ",
+      "relation": "TRỌNG_SỐ"
+    },
+    {
+      "source": "ĐTBCHK",
+      "target": "Xi",
+      "relation": "TÍNH_THEO"
+    },
+    {
+      "source": "ĐTBCHK",
+      "target": "ai",
+      "relation": "TÍNH_THEO"
+    },
+    {
+      "source": "ĐTBCHK",
+      "target": "n",
+      "relation": "TÍNH_THEO"
+    },
+    {
+      "source": "ĐTBCNH",
+      "target": "02 học kỳ chính",
+      "relation": "TÍNH_THEO"
+    },
+    {
+      "source": "ĐTBCTL",
+      "target": "học phần",
+      "relation": "TÍNH_THEO"
+    },
+    {
+      "source": "ĐTBCTL",
+      "target": "ngành/chuyên ngành",
+      "relation": "THEO"
+    },
+    {
+      "source": "A",
+      "target": "4,0",
+      "relation": "QUY_ĐỔI_THÀNH"
+    },
+    {
+      "source": "B+",
+      "target": "3,5",
+      "relation": "QUY_ĐỔI_THÀNH"
+    },
+    {
+      "source": "B",
+      "target": "3,0",
+      "relation": "QUY_ĐỔI_THÀNH"
+    },
+    {
+      "source": "C+",
+      "target": "2,5",
+      "relation": "QUY_ĐỔI_THÀNH"
+    },
+    {
+      "source": "C",
+      "target": "2,0",
+      "relation": "QUY_ĐỔI_THÀNH"
+    },
+    {
+      "source": "D+",
+      "target": "1,5",
+      "relation": "QUY_ĐỔI_THÀNH"
+    },
+    {
+      "source": "D",
+      "target": "1,0",
+      "relation": "QUY_ĐỔI_THÀNH"
+    },
+    {
+      "source": "F",
+      "target": "0,0",
+      "relation": "QUY_ĐỔI_THÀNH"
+    },
+    {
+      "source": "CTĐT",
+      "target": "học phần",
+      "relation": "KHÔNG_THUỘC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "3,60",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "4,00",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "3,20",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "3,59",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "2,50",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "3,19",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "2,00",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "2,49",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "1,00",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "1,99",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "N",
+      "relation": "CĂN_CỨ_VÀO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "M",
+      "relation": "CĂN_CỨ_VÀO"
+    },
+    {
+      "source": "Năm thứ 1",
+      "target": "30 tín chỉ",
+      "relation": "ÍT_HƠN"
+    },
+    {
+      "source": "Năm thứ 1",
+      "target": "37 tín chỉ",
+      "relation": "ÍT_HƠN"
+    },
+    {
+      "source": "Năm thứ 2",
+      "target": "30 tín chỉ",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Năm thứ 2",
+      "target": "60 tín chỉ",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Năm thứ 2",
+      "target": "38 tín chỉ",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Năm thứ 2",
+      "target": "75 tín chỉ",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Năm thứ 3",
+      "target": "60 tín chỉ",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Năm thứ 3",
+      "target": "90 tín chỉ",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Năm thứ 3",
+      "target": "76 tín chỉ",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Năm thứ 3",
+      "target": "112 tín chỉ",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Năm thứ 4",
+      "target": "90 tín chỉ",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Năm thứ 4",
+      "target": "120 tín chỉ",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Năm thứ 4",
+      "target": "113 tín chỉ",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Năm thứ 4",
+      "target": "150 tín chỉ",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Năm thứ 5",
+      "target": "120 tín chỉ",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Năm thứ 5",
+      "target": "150 tín chỉ",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "02 bảng ghi điểm thi",
+      "relation": "GHI_ĐIỂM_VÀO"
+    },
+    {
+      "source": "Phòng Quản lý chất lượng",
+      "target": "02 bảng ghi điểm thi",
+      "relation": "CUNG_CẤP"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "Khoa/Bộ môn",
+      "relation": "GỬI"
+    },
+    {
+      "source": "Khoa/Bộ môn",
+      "target": "Phòng Đào tạo",
+      "relation": "GỬI"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "01 bản",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "30 ngày",
+      "relation": "TRONG"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "Phòng Đào tạo",
+      "relation": "CẬP_NHẬT"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "điểm",
+      "relation": "KIỂM_TRA"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "điểm",
+      "relation": "CÔNG_BỐ"
+    },
+    {
+      "source": "Khoa/Bộ môn",
+      "target": "kết quả học tập",
+      "relation": "XỬ_LÝ"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "ĐTBCHK",
+      "relation": "XỬ_LÝ"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "ĐTBCNH",
+      "relation": "XỬ_LÝ"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "ĐTBCTL",
+      "relation": "XỬ_LÝ"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "sinh viên",
+      "relation": "THÔNG_BÁO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "website",
+      "relation": "XEM_TRÊN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bảng điểm cá nhân",
+      "relation": "ĐĂNG_KÝ"
+    },
+    {
+      "source": "Trường",
+      "target": "mức chi phí",
+      "relation": "QUY_ĐỊNH"
+    },
+    {
+      "source": "Trường",
+      "target": "thời gian cấp",
+      "relation": "QUY_ĐỊNH"
+    },
+    {
+      "source": "sinh viên",
+      "target": "ĐRL",
+      "relation": "ĐƯỢC_ĐÁNH_GIÁ"
+    },
+    {
+      "source": "ĐRL",
+      "target": "100 điểm",
+      "relation": "THANG_ĐIỂM"
+    },
+    {
+      "source": "ĐRL",
+      "target": "thông tư số 16/2015/TT-BGDĐT",
+      "relation": "DỰA_VÀO"
+    },
+    {
+      "source": "ĐRL",
+      "target": "ngày 12 tháng 8 năm 2015",
+      "relation": "DỰA_VÀO"
+    },
+    {
+      "source": "ĐRL cả năm",
+      "target": "ĐRL",
+      "relation": "TRUNG_BÌNH_CỘNG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "90 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "100 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "80 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "90 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "65 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "80 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "50 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "65 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "35 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "50 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "35 điểm",
+      "relation": "XẾP_LOẠI"
+    },
+    {
+      "source": "Trường",
+      "target": "sinh viên",
+      "relation": "KỶ_LUẬT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "ĐRL",
+      "relation": "KHÔNG_THAM_GIA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phí",
+      "relation": "CHẬM_TRỄ"
+    },
+    {
+      "source": "ĐRL",
+      "target": "hồ sơ quản lý sinh viên",
+      "relation": "LƯU_TRONG"
+    },
+    {
+      "source": "ĐRL",
+      "target": "bảng điểm toàn khóa",
+      "relation": "GHI_VÀO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học tập",
+      "relation": "ĐÌNH_CHỈ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học",
+      "relation": "BUỘC_THÔI"
+    },
+    {
+      "source": "ĐRL",
+      "target": "học bổng",
+      "relation": "XÉT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "14 tín chỉ",
+      "relation": "KHÔNG_ĐỦ"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "sinh viên",
+      "relation": "CHO_PHÉP"
+    },
+    {
+      "source": "học kỳ",
+      "target": "50%",
+      "relation": "VƯỢT_QUÁ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "24",
+      "relation": "VƯỢT_QUÁ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "0,8",
+      "relation": "ĐIỂM_TRUNG_BÌNH"
+    },
+    {
+      "source": "sinh viên",
+      "target": "1,0",
+      "relation": "ĐIỂM_TRUNG_BÌNH"
+    },
+    {
+      "source": "sinh viên",
+      "target": "1,2",
+      "relation": "ĐIỂM_TRUNG_BÌNH"
+    },
+    {
+      "source": "sinh viên",
+      "target": "1,4",
+      "relation": "ĐIỂM_TRUNG_BÌNH"
+    },
+    {
+      "source": "sinh viên",
+      "target": "1,6",
+      "relation": "ĐIỂM_TRUNG_BÌNH"
+    },
+    {
+      "source": "sinh viên",
+      "target": "1,8",
+      "relation": "ĐIỂM_TRUNG_BÌNH"
+    },
+    {
+      "source": "Trường",
+      "target": "sinh viên",
+      "relation": "KỶ_LUẬT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "02 lần",
+      "relation": "BỊ_CẢNH_BÁO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phí",
+      "relation": "KHÔNG_ĐÓNG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "02 năm",
+      "relation": "LIÊN_TIẾP"
+    },
+    {
+      "source": "Trường",
+      "target": "sinh viên",
+      "relation": "CHO_CHUYỂN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "1 năm",
+      "relation": "TRONG"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "kết quả học tập",
+      "relation": "BẢO_LƯU"
+    },
+    {
+      "source": "Trường",
+      "target": "quyết định",
+      "relation": "CÔNG_BỐ"
+    },
+    {
+      "source": "Trường",
+      "target": "tháng 4",
+      "relation": "CÔNG_BỐ"
+    },
+    {
+      "source": "Trường",
+      "target": "tháng 10",
+      "relation": "CÔNG_BỐ"
+    },
+    {
+      "source": "Trường",
+      "target": "gia đình",
+      "relation": "GỬI_THÔNG_BÁO"
+    },
+    {
+      "source": "Trường",
+      "target": "địa phương",
+      "relation": "GỬI_THÔNG_BÁO"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "entities": [
+    {
+      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "type": "tổ chức"
+    },
+    {
+      "name": "2021-2025",
+      "type": "thời gian"
+    },
+    {
+      "name": "2035",
+      "type": "thời gian"
+    },
+    {
+      "name": "Việt Nam",
+      "type": "địa điểm"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "2021-2025",
+      "relation": "KẾ_HOẠCH_CHIẾN_LƯỢC_TỪ"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "2035",
+      "relation": "TẦM_NHÌN_ĐẾN"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "Việt Nam",
+      "relation": "TRONG"
+    }
+  ]
+}

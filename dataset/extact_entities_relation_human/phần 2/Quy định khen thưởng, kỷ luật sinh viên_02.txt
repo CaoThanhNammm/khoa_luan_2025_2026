@@ -1,0 +1,811 @@
+{
+  "entities": [
+    {
+      "name": "Khiển trách",
+      "type": "hình thức kỷ luật"
+    },
+    {
+      "name": "giờ học",
+      "type": "thời gian"
+    },
+    {
+      "name": "giờ thực tập",
+      "type": "thời gian"
+    },
+    {
+      "name": "5-10 điểm rèn luyện",
+      "type": "số lượng"
+    },
+    {
+      "name": "thầy, cô giáo",
+      "type": "người"
+    },
+    {
+      "name": "CBVC nhà trường",
+      "type": "người"
+    },
+    {
+      "name": "buộc thôi học",
+      "type": "hình thức kỷ luật"
+    },
+    {
+      "name": "thi",
+      "type": "sự kiện"
+    },
+    {
+      "name": "kiểm tra",
+      "type": "sự kiện"
+    },
+    {
+      "name": "tiểu luận",
+      "type": "văn bản"
+    },
+    {
+      "name": "đồ án",
+      "type": "văn bản"
+    },
+    {
+      "name": "khóa luận tốt nghiệp",
+      "type": "văn bản"
+    },
+    {
+      "name": "cơ quan chức năng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "pháp luật",
+      "type": "khái niệm"
+    },
+    {
+      "name": "phòng thi",
+      "type": "địa điểm"
+    },
+    {
+      "name": "đề thi",
+      "type": "văn bản"
+    },
+    {
+      "name": "bài thi",
+      "type": "văn bản"
+    },
+    {
+      "name": "học phí",
+      "type": "khái niệm"
+    },
+    {
+      "name": "bảo hiểm y tế",
+      "type": "khái niệm"
+    },
+    {
+      "name": "KTX",
+      "type": "viết tắt"
+    },
+    {
+      "name": "tài sản",
+      "type": "khái niệm"
+    },
+    {
+      "name": "rượu, bia",
+      "type": "đồ uống"
+    },
+    {
+      "name": "giờ học",
+      "type": "thời gian"
+    },
+    {
+      "name": "cảnh cáo",
+      "type": "hình thức kỷ luật"
+    },
+    {
+      "name": "đình chỉ có thời hạn",
+      "type": "hình thức kỷ luật"
+    },
+    {
+      "name": "thuốc lá",
+      "type": "vật phẩm"
+    },
+    {
+      "name": "phòng họp",
+      "type": "địa điểm"
+    },
+    {
+      "name": "phòng thí nghiệm",
+      "type": "địa điểm"
+    },
+    {
+      "name": "đánh bạc",
+      "type": "hoạt động"
+    },
+    {
+      "name": "sản phẩm văn hóa đồi trụy",
+      "type": "sản phẩm"
+    },
+    {
+      "name": "hoạt động mê tín dị đoan",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động tôn giáo trái phép",
+      "type": "hoạt động"
+    },
+    {
+      "name": "ma túy",
+      "type": "vật phẩm"
+    },
+    {
+      "name": "mại dâm",
+      "type": "hoạt động"
+    },
+    {
+      "name": "tài sản",
+      "type": "khái niệm"
+    },
+    {
+      "name": "vũ khí",
+      "type": "vật phẩm"
+    },
+    {
+      "name": "chất nổ",
+      "type": "vật phẩm"
+    },
+    {
+      "name": "hàng cấm",
+      "type": "vật phẩm"
+    },
+    {
+      "name": "Nhà nước",
+      "type": "tổ chức"
+    },
+    {
+      "name": "phần tử xấu",
+      "type": "người"
+    },
+    {
+      "name": "KTX",
+      "type": "viết tắt"
+    },
+    {
+      "name": "đánh nhau",
+      "type": "hoạt động"
+    },
+    {
+      "name": "biểu tình",
+      "type": "hoạt động"
+    },
+    {
+      "name": "truyền đơn",
+      "type": "văn bản"
+    },
+    {
+      "name": "áp phích",
+      "type": "văn bản"
+    },
+    {
+      "name": "pháp luật",
+      "type": "khái niệm"
+    },
+    {
+      "name": "bài viết",
+      "type": "văn bản"
+    },
+    {
+      "name": "hình ảnh",
+      "type": "khái niệm"
+    },
+    {
+      "name": "an ninh quốc gia",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Đảng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Nhà nước",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Internet",
+      "type": "mạng lưới"
+    },
+    {
+      "name": "cơ quan chức năng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "quấy rối",
+      "type": "hoạt động"
+    },
+    {
+      "name": "dâm ô",
+      "type": "hoạt động"
+    },
+    {
+      "name": "an toàn giao thông",
+      "type": "khái niệm"
+    },
+    {
+      "name": "hồ sơ",
+      "type": "văn bản"
+    },
+    {
+      "name": "văn bằng",
+      "type": "văn bản"
+    },
+    {
+      "name": "chứng chỉ",
+      "type": "văn bản"
+    },
+    {
+      "name": "văn bằng tốt nghiệp",
+      "type": "văn bản"
+    },
+    {
+      "name": "nhà trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Trung bình",
+      "type": "khái niệm"
+    },
+    {
+      "name": "lần 1",
+      "type": "số lần"
+    },
+    {
+      "name": "lần 2",
+      "type": "số lần"
+    },
+    {
+      "name": "lần 3",
+      "type": "số lần"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Khiển trách",
+      "target": "giờ học",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "giờ thực tập",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "5-10 điểm rèn luyện",
+      "relation": "TRỪ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "thầy, cô giáo",
+      "relation": "VÔ_LỄ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "CBVC nhà trường",
+      "relation": "VÔ_LỄ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "học thay",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "thi",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "kiểm tra",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "tiểu luận",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "đồ án",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "khóa luận tốt nghiệp",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "LẦN_1"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "phòng thi",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "đề thi",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "bài thi",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "Trung bình",
+      "relation": "HẠ_ĐIỂM"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "học phí",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "bảo hiểm y tế",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "KTX",
+      "relation": "TÀI_SẢN_TRONG"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "tài sản",
+      "relation": "LÀM_HƯ_HỎNG"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "bồi thường",
+      "relation": "PHẢI"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "rượu, bia",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cảnh cáo",
+      "relation": "LẦN_1"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "đình chỉ có thời hạn",
+      "relation": "LẦN_2"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "LẦN_3"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "thuốc lá",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cảnh cáo",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "đánh bạc",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cảnh cáo",
+      "relation": "LẦN_1"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "đình chỉ có thời hạn",
+      "relation": "LẦN_2"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "LẦN_3"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "sản phẩm văn hóa đồi trụy",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "hoạt động mê tín dị đoan",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "hoạt động tôn giáo trái phép",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cảnh cáo",
+      "relation": "LẦN_1"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "đình chỉ có thời hạn",
+      "relation": "LẦN_2"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "LẦN_3"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "ma túy",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "mại dâm",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "tài sản",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "vũ khí",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "chất nổ",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "hàng cấm",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "Nhà nước",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "phần tử xấu",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "KTX",
+      "relation": "TRONG"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "đánh nhau",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "đình chỉ có thời hạn",
+      "relation": "LẦN_1"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "LẦN_2"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "biểu tình",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "truyền đơn",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "áp phích",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "TRÁI"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "LẦN_1"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "biểu tình",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cảnh cáo",
+      "relation": "LẦN_1"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "đình chỉ có thời hạn",
+      "relation": "LẦN_2"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "LẦN_3"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "bài viết",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "hình ảnh",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "an ninh quốc gia",
+      "relation": "XÂM_PHẠM"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "Đảng",
+      "relation": "CHỐNG_PHÁ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "Nhà nước",
+      "relation": "CHỐNG_PHÁ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "Internet",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "quấy rối",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "dâm ô",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "cơ quan chức năng",
+      "relation": "GIAO_CHO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "pháp luật",
+      "relation": "THEO"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "an toàn giao thông",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "hồ sơ",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "văn bằng",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "chứng chỉ",
+      "relation": "VỀ"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "văn bằng tốt nghiệp",
+      "relation": "THU_HỒI"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "nhà trường",
+      "relation": "XEM_XÉT"
+    },
+    {
+      "source": "Khiển trách",
+      "target": "buộc thôi học",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "lần 1",
+      "target": "cảnh cáo",
+      "relation": "LÀ"
+    },
+    {
+      "source": "lần 2",
+      "target": "đình chỉ có thời hạn",
+      "relation": "LÀ"
+    },
+    {
+      "source": "lần 3",
+      "target": "buộc thôi học",
+      "relation": "LÀ"
+    }
+  ]
+}

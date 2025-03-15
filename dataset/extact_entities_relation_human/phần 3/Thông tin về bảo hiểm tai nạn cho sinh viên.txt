@@ -1,0 +1,462 @@
+{
+  "entities": [
+    {
+      "name": "Bảo hiểm tai nạn",
+      "type": "khái niệm"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "tai nạn giao thông",
+      "type": "sự kiện"
+    },
+    {
+      "name": "tai nạn sinh hoạt",
+      "type": "sự kiện"
+    },
+    {
+      "name": "tiêm ngừa bệnh dại",
+      "type": "sự kiện"
+    },
+    {
+      "name": "động vật cắn",
+      "type": "sự kiện"
+    },
+    {
+      "name": "10 – 15 ngày",
+      "type": "thời gian"
+    },
+    {
+      "name": "Phòng Công tác sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "hồ sơ",
+      "type": "văn bản"
+    },
+    {
+      "name": "Phòng Công tác sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "giờ hành chính",
+      "type": "thời gian"
+    },
+    {
+      "name": "thứ 2 đến thứ 6",
+      "type": "thời gian"
+    },
+    {
+      "name": "hàng tuần",
+      "type": "thời gian"
+    },
+    {
+      "name": "ngày nghỉ lễ",
+      "type": "thời gian"
+    },
+    {
+      "name": "hồ sơ yêu cầu bồi thường",
+      "type": "văn bản"
+    },
+    {
+      "name": "Giấy yêu cầu trả tiền bảo hiểm",
+      "type": "văn bản"
+    },
+    {
+      "name": "biên bản tường trình tai nạn",
+      "type": "văn bản"
+    },
+    {
+      "name": "Phòng Công tác sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "CCCD",
+      "type": "văn bản"
+    },
+    {
+      "name": "giấy phép lái xe",
+      "type": "văn bản"
+    },
+    {
+      "name": "cà vẹt xe",
+      "type": "văn bản"
+    },
+    {
+      "name": "hồ sơ điều trị thương tật",
+      "type": "văn bản"
+    },
+    {
+      "name": "giấy ra viện",
+      "type": "văn bản"
+    },
+    {
+      "name": "giấy phẫu thuật",
+      "type": "văn bản"
+    },
+    {
+      "name": "phim X.quang",
+      "type": "văn bản"
+    },
+    {
+      "name": "phim MRI",
+      "type": "văn bản"
+    },
+    {
+      "name": "đơn thuốc",
+      "type": "văn bản"
+    },
+    {
+      "name": "hóa đơn",
+      "type": "văn bản"
+    },
+    {
+      "name": "Bệnh viện/cơ sở y tế",
+      "type": "tổ chức"
+    },
+    {
+      "name": "biên bản tai nạn giao thông",
+      "type": "văn bản"
+    },
+    {
+      "name": "chính quyền",
+      "type": "tổ chức"
+    },
+    {
+      "name": "giấy chứng tử",
+      "type": "văn bản"
+    },
+    {
+      "name": "ủy quyền thừa kế",
+      "type": "văn bản"
+    },
+    {
+      "name": "kết quả nồng độ cồn",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Giấy yêu cầu trả tiền bảo hiểm",
+      "type": "văn bản"
+    },
+    {
+      "name": "biên bản tường trình tai nạn",
+      "type": "văn bản"
+    },
+    {
+      "name": "Phòng Công tác sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "CCCD",
+      "type": "văn bản"
+    },
+    {
+      "name": "hồ sơ điều trị thương tật",
+      "type": "văn bản"
+    },
+    {
+      "name": "giấy ra viện",
+      "type": "văn bản"
+    },
+    {
+      "name": "giấy phẫu thuật",
+      "type": "văn bản"
+    },
+    {
+      "name": "phim X.quang",
+      "type": "văn bản"
+    },
+    {
+      "name": "phim MRI",
+      "type": "văn bản"
+    },
+    {
+      "name": "đơn thuốc",
+      "type": "văn bản"
+    },
+    {
+      "name": "hóa đơn",
+      "type": "văn bản"
+    },
+    {
+      "name": "Bệnh viện/cơ sở y tế",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Giấy yêu cầu trả tiền bảo hiểm",
+      "type": "văn bản"
+    },
+    {
+      "name": "biên bản tường trình tai nạn",
+      "type": "văn bản"
+    },
+    {
+      "name": "Phòng Công tác sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "CCCD",
+      "type": "văn bản"
+    },
+    {
+      "name": "sổ tiêm ngừa bệnh dại",
+      "type": "văn bản"
+    },
+    {
+      "name": "hóa đơn",
+      "type": "văn bản"
+    },
+    {
+      "name": "Bệnh viện/cơ sở y tế",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Phòng Công tác sinh viên",
+      "type": "tổ chức"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Bảo hiểm tai nạn",
+      "target": "sinh viên",
+      "relation": "CHO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Bảo hiểm tai nạn",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tai nạn giao thông",
+      "relation": "BỊ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tai nạn sinh hoạt",
+      "relation": "BỊ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tiêm ngừa bệnh dại",
+      "relation": "BỊ"
+    },
+    {
+      "source": "tiêm ngừa bệnh dại",
+      "target": "động vật cắn",
+      "relation": "DO"
+    },
+    {
+      "source": "bồi thường",
+      "target": "10 – 15 ngày",
+      "relation": "SAU"
+    },
+    {
+      "source": "bồi thường",
+      "target": "Phòng Công tác sinh viên",
+      "relation": "NỘP"
+    },
+    {
+      "source": "hồ sơ",
+      "target": "Phòng Công tác sinh viên",
+      "relation": "TẠI"
+    },
+    {
+      "source": "hồ sơ",
+      "target": "giờ hành chính",
+      "relation": "TRONG"
+    },
+    {
+      "source": "giờ hành chính",
+      "target": "thứ 2 đến thứ 6",
+      "relation": "TỪ"
+    },
+    {
+      "source": "hàng tuần",
+      "target": "thứ 2 đến thứ 6",
+      "relation": "MỖI"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "tai nạn giao thông",
+      "relation": "ĐỐI_VỚI"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "Giấy yêu cầu trả tiền bảo hiểm",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "biên bản tường trình tai nạn",
+      "relation": "CÓ"
+    },
+    {
+      "source": "biên bản tường trình tai nạn",
+      "target": "Phòng Công tác sinh viên",
+      "relation": "DO"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "CCCD",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "giấy phép lái xe",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "cà vẹt xe",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "hồ sơ điều trị thương tật",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ điều trị thương tật",
+      "target": "giấy ra viện",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ điều trị thương tật",
+      "target": "giấy phẫu thuật",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ điều trị thương tật",
+      "target": "phim X.quang",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ điều trị thương tật",
+      "target": "phim MRI",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ điều trị thương tật",
+      "target": "đơn thuốc",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ điều trị thương tật",
+      "target": "hóa đơn",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Bệnh viện/cơ sở y tế",
+      "target": "hồ sơ điều trị thương tật",
+      "relation": "ĐÓNG_MỘC"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "biên bản tai nạn giao thông",
+      "relation": "CÓ"
+    },
+    {
+      "source": "chính quyền",
+      "target": "biên bản tai nạn giao thông",
+      "relation": "XÁC_NHẬN"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "giấy chứng tử",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "ủy quyền thừa kế",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "kết quả nồng độ cồn",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "tai nạn sinh hoạt",
+      "relation": "ĐỐI_VỚI"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "Giấy yêu cầu trả tiền bảo hiểm",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "biên bản tường trình tai nạn",
+      "relation": "CÓ"
+    },
+    {
+      "source": "biên bản tường trình tai nạn",
+      "target": "Phòng Công tác sinh viên",
+      "relation": "DO"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "CCCD",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "hồ sơ điều trị thương tật",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Bệnh viện/cơ sở y tế",
+      "target": "hồ sơ điều trị thương tật",
+      "relation": "ĐÓNG_MỘC"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "tiêm ngừa bệnh dại",
+      "relation": "ĐỐI_VỚI"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "Giấy yêu cầu trả tiền bảo hiểm",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "biên bản tường trình tai nạn",
+      "relation": "CÓ"
+    },
+    {
+      "source": "biên bản tường trình tai nạn",
+      "target": "Phòng Công tác sinh viên",
+      "relation": "DO"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "CCCD",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "sổ tiêm ngừa bệnh dại",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Bệnh viện/cơ sở y tế",
+      "target": "hóa đơn",
+      "relation": "ĐÓNG_MỘC"
+    },
+    {
+      "source": "hồ sơ yêu cầu bồi thường",
+      "target": "tai nạn",
+      "relation": "ĐỐI_VỚI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Công tác sinh viên",
+      "relation": "LIÊN_HỆ"
+    }
+  ]
+}

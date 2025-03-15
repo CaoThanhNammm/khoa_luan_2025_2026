@@ -1,0 +1,220 @@
+{
+  "entities": [
+    {
+      "name": "Đại học Nông Lâm TP.HCM",
+      "type": "tổ chức"
+    },
+    {
+      "name": "ngành học",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Khoa",
+      "type": "tổ chức"
+    },
+    {
+      "name": "đội ngũ cố vấn học tập",
+      "type": "nhóm người"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "chương trình đào tạo",
+      "type": "khái niệm"
+    },
+    {
+      "name": "kế hoạch học tập",
+      "type": "văn bản"
+    },
+    {
+      "name": "học kỳ",
+      "type": "thời gian"
+    },
+    {
+      "name": "khóa học",
+      "type": "thời gian"
+    },
+    {
+      "name": "năng lực",
+      "type": "khái niệm"
+    },
+    {
+      "name": "hoàn cảnh",
+      "type": "khái niệm"
+    },
+    {
+      "name": "điều kiện học tập",
+      "type": "khái niệm"
+    },
+    {
+      "name": "học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "kế hoạch học tập",
+      "type": "văn bản"
+    },
+    {
+      "name": "kết quả học tập",
+      "type": "khái niệm"
+    },
+    {
+      "name": "biện pháp hỗ trợ",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Ban cố vấn học tập",
+      "type": "nhóm người"
+    },
+    {
+      "name": "website",
+      "type": "website"
+    },
+    {
+      "name": "Khoa",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Phòng Công tác Sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "http://nls.hcmuaf.edu.vn/",
+      "type": "website"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Đại học Nông Lâm TP.HCM",
+      "target": "ngành học",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Đại học Nông Lâm TP.HCM",
+      "target": "Khoa",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Khoa",
+      "target": "đội ngũ cố vấn học tập",
+      "relation": "CÓ"
+    },
+    {
+      "source": "đội ngũ cố vấn học tập",
+      "target": "sinh viên",
+      "relation": "HỖ_TRỢ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "chương trình đào tạo",
+      "relation": "VỀ"
+    },
+    {
+      "source": "đội ngũ cố vấn học tập",
+      "target": "sinh viên",
+      "relation": "TƯ_VẤN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kế hoạch học tập",
+      "relation": "XÂY_DỰNG"
+    },
+    {
+      "source": "kế hoạch học tập",
+      "target": "học kỳ",
+      "relation": "CHO"
+    },
+    {
+      "source": "kế hoạch học tập",
+      "target": "khóa học",
+      "relation": "CHO"
+    },
+    {
+      "source": "kế hoạch học tập",
+      "target": "năng lực",
+      "relation": "PHÙ_HỢP"
+    },
+    {
+      "source": "kế hoạch học tập",
+      "target": "hoàn cảnh",
+      "relation": "PHÙ_HỢP"
+    },
+    {
+      "source": "kế hoạch học tập",
+      "target": "điều kiện học tập",
+      "relation": "PHÙ_HỢP"
+    },
+    {
+      "source": "đội ngũ cố vấn học tập",
+      "target": "sinh viên",
+      "relation": "HƯỚNG_DẪN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phần",
+      "relation": "ĐĂNG_KÝ"
+    },
+    {
+      "source": "học phần",
+      "target": "học kỳ",
+      "relation": "Ở"
+    },
+    {
+      "source": "đội ngũ cố vấn học tập",
+      "target": "sinh viên",
+      "relation": "TƯ_VẤN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kế hoạch học tập",
+      "relation": "ĐIỀU_CHỈNH"
+    },
+    {
+      "source": "đội ngũ cố vấn học tập",
+      "target": "kế hoạch học tập",
+      "relation": "XÁC_NHẬN"
+    },
+    {
+      "source": "đội ngũ cố vấn học tập",
+      "target": "sinh viên",
+      "relation": "THEO_DÕI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kết quả học tập",
+      "relation": "CỦA"
+    },
+    {
+      "source": "đội ngũ cố vấn học tập",
+      "target": "biện pháp hỗ trợ",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Ban cố vấn học tập",
+      "target": "Khoa",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Ban cố vấn học tập",
+      "target": "website",
+      "relation": "CẬP_NHẬT_TRÊN"
+    },
+    {
+      "source": "Khoa",
+      "target": "website",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Phòng Công tác Sinh viên",
+      "target": "website",
+      "relation": "CỦA"
+    },
+    {
+      "source": "website",
+      "target": "http://nls.hcmuaf.edu.vn/",
+      "relation": "LÀ"
+    }
+  ]
+}

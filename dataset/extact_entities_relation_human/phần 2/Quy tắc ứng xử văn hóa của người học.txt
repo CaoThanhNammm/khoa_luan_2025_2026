@@ -1,0 +1,348 @@
+{
+  "entities": [
+    {
+      "name": "Quy chế đào tạo",
+      "type": "văn bản"
+    },
+    {
+      "name": "Quy chế công tác HSSV",
+      "type": "văn bản"
+    },
+    {
+      "name": "Quy định đối với HSSV nội ngoại trú",
+      "type": "văn bản"
+    },
+    {
+      "name": "Quy định về việc thực hiện nếp sống văn hóa học đường",
+      "type": "văn bản"
+    },
+    {
+      "name": "Quy định về giờ giấc học tập",
+      "type": "văn bản"
+    },
+    {
+      "name": "thầy cô",
+      "type": "người"
+    },
+    {
+      "name": "bài tập",
+      "type": "khái niệm"
+    },
+    {
+      "name": "đề tài",
+      "type": "khái niệm"
+    },
+    {
+      "name": "thi",
+      "type": "sự kiện"
+    },
+    {
+      "name": "kiểm tra",
+      "type": "sự kiện"
+    },
+    {
+      "name": "Bộ Giáo dục và Đào tạo",
+      "type": "tổ chức"
+    },
+    {
+      "name": "nhà trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "hoạt động học tập",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động xã hội",
+      "type": "hoạt động"
+    },
+    {
+      "name": "phong trào thi đua",
+      "type": "phong trào"
+    },
+    {
+      "name": "tổ chức đoàn thể",
+      "type": "tổ chức"
+    },
+    {
+      "name": "nghiên cứu khoa học",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động khởi nghiệp",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động phục vụ cộng đồng",
+      "type": "hoạt động"
+    },
+    {
+      "name": "giảng viên",
+      "type": "người"
+    },
+    {
+      "name": "nhân viên nhà trường",
+      "type": "người"
+    },
+    {
+      "name": "bạn bè",
+      "type": "người"
+    },
+    {
+      "name": "cử chỉ",
+      "type": "hành động"
+    },
+    {
+      "name": "trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "cơ sở vật chất",
+      "type": "vật chất"
+    },
+    {
+      "name": "thiết bị dạy và học",
+      "type": "vật chất"
+    },
+    {
+      "name": "môi trường sống",
+      "type": "khái niệm"
+    },
+    {
+      "name": "nơi công cộng",
+      "type": "địa điểm"
+    },
+    {
+      "name": "khu vực hiệu bộ",
+      "type": "địa điểm"
+    },
+    {
+      "name": "giờ làm việc",
+      "type": "thời gian"
+    },
+    {
+      "name": "khu giảng đường",
+      "type": "địa điểm"
+    },
+    {
+      "name": "phòng học",
+      "type": "địa điểm"
+    },
+    {
+      "name": "giờ học",
+      "type": "thời gian"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "người học",
+      "target": "Quy chế đào tạo",
+      "relation": "THỰC_HIỆN"
+    },
+    {
+      "source": "người học",
+      "target": "Quy chế công tác HSSV",
+      "relation": "THỰC_HIỆN"
+    },
+    {
+      "source": "người học",
+      "target": "Quy định đối với HSSV nội ngoại trú",
+      "relation": "THỰC_HIỆN"
+    },
+    {
+      "source": "người học",
+      "target": "Quy định về việc thực hiện nếp sống văn hóa học đường",
+      "relation": "THỰC_HIỆN"
+    },
+    {
+      "source": "người học",
+      "target": "Quy định về giờ giấc học tập",
+      "relation": "THỰC_HIỆN"
+    },
+    {
+      "source": "người học",
+      "target": "thầy cô",
+      "relation": "LẮNG_NGHE"
+    },
+    {
+      "source": "người học",
+      "target": "thảo luận",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "tranh luận",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "bài tập",
+      "relation": "HOÀN_THÀNH"
+    },
+    {
+      "source": "người học",
+      "target": "đề tài",
+      "relation": "HOÀN_THÀNH"
+    },
+    {
+      "source": "người học",
+      "target": "thi",
+      "relation": "NGHIÊM_TÚC"
+    },
+    {
+      "source": "người học",
+      "target": "kiểm tra",
+      "relation": "NGHIÊM_TÚC"
+    },
+    {
+      "source": "người học",
+      "target": "Bộ Giáo dục và Đào tạo",
+      "relation": "CỦA"
+    },
+    {
+      "source": "người học",
+      "target": "nhà trường",
+      "relation": "CỦA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động học tập",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động xã hội",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "phong trào thi đua",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "tổ chức đoàn thể",
+      "target": "phong trào thi đua",
+      "relation": "PHÁT_ĐỘNG"
+    },
+    {
+      "source": "người học",
+      "target": "nghiên cứu khoa học",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động khởi nghiệp",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động phục vụ cộng đồng",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "TÔN_TRỌNG"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "TÔN_TRỌNG"
+    },
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "HỎI"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "HỎI"
+    },
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "TRẢ_LỜI"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "TRẢ_LỜI"
+    },
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "LÀM_PHIỀN"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "LÀM_PHIỀN"
+    },
+    {
+      "source": "bạn bè",
+      "target": "người học",
+      "relation": "QUAN_HỆ"
+    },
+    {
+      "source": "người học",
+      "target": "người học",
+      "relation": "TÔN_TRỌNG"
+    },
+    {
+      "source": "người học",
+      "target": "cử chỉ",
+      "relation": "CÓ"
+    },
+    {
+      "source": "người học",
+      "target": "trường",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "người học",
+      "target": "nơi công cộng",
+      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+    },
+    {
+      "source": "người học",
+      "target": "khu vực hiệu bộ",
+      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+    },
+    {
+      "source": "người học",
+      "target": "giờ làm việc",
+      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+    },
+    {
+      "source": "người học",
+      "target": "khu giảng đường",
+      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+    },
+    {
+      "source": "người học",
+      "target": "phòng học",
+      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+    },
+    {
+      "source": "người học",
+      "target": "giờ học",
+      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+    },
+    {
+      "source": "người học",
+      "target": "cơ sở vật chất",
+      "relation": "GIỮ_GÌN"
+    },
+    {
+      "source": "người học",
+      "target": "thiết bị dạy và học",
+      "relation": "GIỮ_GÌN"
+    },
+    {
+      "source": "người học",
+      "target": "môi trường sống",
+      "relation": "GIỮ_GÌN"
+    }
+  ]
+}

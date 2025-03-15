@@ -1,0 +1,369 @@
+{
+  "entities": [
+    {
+      "name": "học bổng tài trợ",
+      "type": "khái niệm"
+    },
+    {
+      "name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+      "type": "tổ chức"
+    },
+    {
+      "name": "cựu sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "doanh nghiệp",
+      "type": "tổ chức"
+    },
+    {
+      "name": "tổ chức",
+      "type": "tổ chức"
+    },
+    {
+      "name": "cá nhân",
+      "type": "người"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "hoàn cảnh khó khăn",
+      "type": "khái niệm"
+    },
+    {
+      "name": "hộ nghèo",
+      "type": "khái niệm"
+    },
+    {
+      "name": "mồ côi cha mẹ",
+      "type": "khái niệm"
+    },
+    {
+      "name": "hoàn cảnh khó khăn đột xuất",
+      "type": "khái niệm"
+    },
+    {
+      "name": "thiên tai",
+      "type": "hiện tượng tự nhiên"
+    },
+    {
+      "name": "tai nạn",
+      "type": "sự kiện"
+    },
+    {
+      "name": "thành tích cao",
+      "type": "khái niệm"
+    },
+    {
+      "name": "học tập",
+      "type": "hoạt động"
+    },
+    {
+      "name": "nghiên cứu khoa học",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động cộng đồng",
+      "type": "hoạt động"
+    },
+    {
+      "name": "Đoàn - Hội",
+      "type": "tổ chức"
+    },
+    {
+      "name": "chương trình học bổng",
+      "type": "khái niệm"
+    },
+    {
+      "name": "phòng Công tác sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Khoa",
+      "type": "tổ chức"
+    },
+    {
+      "name": "6 tỷ đồng",
+      "type": "số tiền"
+    },
+    {
+      "name": "tiền mặt",
+      "type": "khái niệm"
+    },
+    {
+      "name": "khóa học đào tạo ngắn hạn",
+      "type": "khái niệm"
+    },
+    {
+      "name": "tin học",
+      "type": "khái niệm"
+    },
+    {
+      "name": "ngoại ngữ",
+      "type": "khái niệm"
+    },
+    {
+      "name": "kỹ năng",
+      "type": "khái niệm"
+    },
+    {
+      "name": "học bổng Đồng hành",
+      "type": "khái niệm"
+    },
+    {
+      "name": "năm học",
+      "type": "thời gian"
+    },
+    {
+      "name": "chương trình học bổng",
+      "type": "khái niệm"
+    },
+    {
+      "name": "phòng Công tác sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "điều kiện",
+      "type": "khái niệm"
+    },
+    {
+      "name": "đối tượng",
+      "type": "khái niệm"
+    },
+    {
+      "name": "quy trình",
+      "type": "khái niệm"
+    },
+    {
+      "name": "thủ tục",
+      "type": "khái niệm"
+    },
+    {
+      "name": "hồ sơ học bổng",
+      "type": "văn bản"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "email sinh viên",
+      "type": "khái niệm"
+    },
+    {
+      "name": "website",
+      "type": "website"
+    },
+    {
+      "name": "Khoa",
+      "type": "tổ chức"
+    },
+    {
+      "name": "website phòng Công tác sinh viên",
+      "type": "website"
+    },
+    {
+      "name": "https://nls.hcmuaf.edu.vn/",
+      "type": "website"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "học bổng tài trợ",
+      "target": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+      "relation": "TRÍCH_TỪ"
+    },
+    {
+      "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+      "target": "cựu sinh viên",
+      "relation": "DO"
+    },
+    {
+      "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+      "target": "doanh nghiệp",
+      "relation": "DO"
+    },
+    {
+      "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+      "target": "tổ chức",
+      "relation": "DO"
+    },
+    {
+      "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+      "target": "cá nhân",
+      "relation": "DO"
+    },
+    {
+      "source": "học bổng",
+      "target": "sinh viên",
+      "relation": "XÉT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hoàn cảnh khó khăn",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hoàn cảnh khó khăn",
+      "target": "hộ nghèo",
+      "relation": "LÀ"
+    },
+    {
+      "source": "hoàn cảnh khó khăn",
+      "target": "mồ côi cha mẹ",
+      "relation": "LÀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hoàn cảnh khó khăn đột xuất",
+      "relation": "CÓ"
+    },
+    {
+      "source": "hoàn cảnh khó khăn đột xuất",
+      "target": "thiên tai",
+      "relation": "DO"
+    },
+    {
+      "source": "hoàn cảnh khó khăn đột xuất",
+      "target": "tai nạn",
+      "relation": "DO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thành tích cao",
+      "relation": "ĐẠT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học tập",
+      "relation": "TRONG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nghiên cứu khoa học",
+      "relation": "TRONG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hoạt động cộng đồng",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Đoàn - Hội",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "chương trình học bổng",
+      "target": "phòng Công tác sinh viên",
+      "relation": "DO"
+    },
+    {
+      "source": "chương trình học bổng",
+      "target": "Khoa",
+      "relation": "PHỐI_HỢP"
+    },
+    {
+      "source": "học bổng",
+      "target": "6 tỷ đồng",
+      "relation": "TRỊ_GIÁ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tiền mặt",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "khóa học đào tạo ngắn hạn",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "khóa học đào tạo ngắn hạn",
+      "target": "tin học",
+      "relation": "NHƯ"
+    },
+    {
+      "source": "khóa học đào tạo ngắn hạn",
+      "target": "ngoại ngữ",
+      "relation": "NHƯ"
+    },
+    {
+      "source": "khóa học đào tạo ngắn hạn",
+      "target": "kỹ năng",
+      "relation": "NHƯ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học bổng Đồng hành",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "học bổng Đồng hành",
+      "target": "năm học",
+      "relation": "MỘT_LẦN"
+    },
+    {
+      "source": "chương trình học bổng",
+      "target": "phòng Công tác sinh viên",
+      "relation": "CỦA"
+    },
+    {
+      "source": "phòng Công tác sinh viên",
+      "target": "điều kiện",
+      "relation": "THÔNG_BÁO"
+    },
+    {
+      "source": "phòng Công tác sinh viên",
+      "target": "đối tượng",
+      "relation": "THÔNG_BÁO"
+    },
+    {
+      "source": "phòng Công tác sinh viên",
+      "target": "quy trình",
+      "relation": "THÔNG_BÁO"
+    },
+    {
+      "source": "phòng Công tác sinh viên",
+      "target": "thủ tục",
+      "relation": "THÔNG_BÁO"
+    },
+    {
+      "source": "phòng Công tác sinh viên",
+      "target": "hồ sơ học bổng",
+      "relation": "THÔNG_BÁO"
+    },
+    {
+      "source": "phòng Công tác sinh viên",
+      "target": "sinh viên",
+      "relation": "CHO"
+    },
+    {
+      "source": "phòng Công tác sinh viên",
+      "target": "email sinh viên",
+      "relation": "QUA"
+    },
+    {
+      "source": "phòng Công tác sinh viên",
+      "target": "website",
+      "relation": "QUA"
+    },
+    {
+      "source": "Khoa",
+      "target": "website",
+      "relation": "CỦA"
+    },
+    {
+      "source": "phòng Công tác sinh viên",
+      "target": "website phòng Công tác sinh viên",
+      "relation": "LÀ"
+    },
+    {
+      "source": "website phòng Công tác sinh viên",
+      "target": "https://nls.hcmuaf.edu.vn/",
+      "relation": "LÀ"
+    }
+  ]
+}

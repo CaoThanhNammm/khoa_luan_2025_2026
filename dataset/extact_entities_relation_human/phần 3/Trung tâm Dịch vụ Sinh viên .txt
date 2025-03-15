@@ -1,0 +1,194 @@
+{
+  "entities": [
+    {
+      "name": "Trung tâm dịch vụ sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "sinh viên nội trú",
+      "type": "người"
+    },
+    {
+      "name": "ăn",
+      "type": "hoạt động"
+    },
+    {
+      "name": "ở",
+      "type": "hoạt động"
+    },
+    {
+      "name": "học tập",
+      "type": "hoạt động"
+    },
+    {
+      "name": "sinh hoạt",
+      "type": "hoạt động"
+    },
+    {
+      "name": "dịch vụ",
+      "type": "khái niệm"
+    },
+    {
+      "name": "kỹ năng ngoại khóa",
+      "type": "khái niệm"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "Nhà trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Nhà khách",
+      "type": "địa điểm"
+    },
+    {
+      "name": "giữ xe",
+      "type": "dịch vụ"
+    },
+    {
+      "name": "căn tin",
+      "type": "địa điểm"
+    },
+    {
+      "name": "photocopy",
+      "type": "dịch vụ"
+    },
+    {
+      "name": "internet",
+      "type": "dịch vụ"
+    },
+    {
+      "name": "phương tiện vận chuyển",
+      "type": "vật phẩm"
+    },
+    {
+      "name": "Văn phòng Trung tâm Dịch vụ Sinh viên",
+      "type": "địa điểm"
+    },
+    {
+      "name": "đường số 6",
+      "type": "địa điểm"
+    },
+    {
+      "name": "trường Đại học Nông Lâm TP.HCM",
+      "type": "tổ chức"
+    },
+    {
+      "name": "https://ttdvsv.hcmuaf.edu.vn",
+      "type": "website"
+    },
+    {
+      "name": "028-38963346",
+      "type": "số điện thoại"
+    },
+    {
+      "name": "ttdvsv@hcmuaf.edu.vn",
+      "type": "email"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "sinh viên nội trú",
+      "relation": "TỔ_CHỨC"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "ăn",
+      "relation": "QUẢN_LÝ"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "ở",
+      "relation": "QUẢN_LÝ"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "học tập",
+      "relation": "QUẢN_LÝ"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "sinh hoạt",
+      "relation": "QUẢN_LÝ"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "dịch vụ",
+      "relation": "CUNG_CẤP"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "kỹ năng ngoại khóa",
+      "relation": "CUNG_CẤP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Nhà trường",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "sinh viên",
+      "relation": "PHỤC_VỤ"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "Nhà khách",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "giữ xe",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "căn tin",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "photocopy",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "internet",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "phương tiện vận chuyển",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Văn phòng Trung tâm Dịch vụ Sinh viên",
+      "target": "đường số 6",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Văn phòng Trung tâm Dịch vụ Sinh viên",
+      "target": "trường Đại học Nông Lâm TP.HCM",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "https://ttdvsv.hcmuaf.edu.vn",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "028-38963346",
+      "relation": "ĐIỆN_THOẠI"
+    },
+    {
+      "source": "Trung tâm dịch vụ sinh viên",
+      "target": "ttdvsv@hcmuaf.edu.vn",
+      "relation": "EMAIL"
+    }
+  ]
+}

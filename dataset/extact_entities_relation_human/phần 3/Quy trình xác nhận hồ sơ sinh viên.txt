@@ -1,0 +1,304 @@
+{
+  "entities": [
+    {
+      "name": "giấy tờ",
+      "type": "văn bản"
+    },
+    {
+      "name": "Vay vốn ngân hàng chính sách xã hội",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Tạm hoãn nghĩa vụ quân sự",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Đi xe buýt",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ nhận trợ cấp",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ làm lại thẻ sinh viên",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ thuế cho người thân",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ thi học kỳ",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ thi acces",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ lý lịch cá nhân",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ nhận học bổng",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ giảm trừ gia cảnh",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ đi làm",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "Bổ sung hồ sơ đi thực tập",
+      "type": "loại giấy tờ"
+    },
+    {
+      "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+      "type": "website"
+    },
+    {
+      "name": "trình duyệt web",
+      "type": "phần mềm"
+    },
+    {
+      "name": "internet",
+      "type": "mạng lưới"
+    },
+    {
+      "name": "máy tính để bàn",
+      "type": "thiết bị"
+    },
+    {
+      "name": "máy tính xách tay",
+      "type": "thiết bị"
+    },
+    {
+      "name": "máy tính bảng",
+      "type": "thiết bị"
+    },
+    {
+      "name": "điện thoại di động",
+      "type": "thiết bị"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+      "type": "website"
+    },
+    {
+      "name": "thông tin cá nhân",
+      "type": "khái niệm"
+    },
+    {
+      "name": "giấy xác nhận",
+      "type": "văn bản"
+    },
+    {
+      "name": "cán bộ phòng Công tác Sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "phòng Công tác sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "thời gian",
+      "type": "thời gian"
+    },
+    {
+      "name": "hệ thống",
+      "type": "hệ thống"
+    },
+    {
+      "name": "bước 4",
+      "type": "thứ tự"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "giấy tờ",
+      "target": "Vay vốn ngân hàng chính sách xã hội",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Tạm hoãn nghĩa vụ quân sự",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Đi xe buýt",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ nhận trợ cấp",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ làm lại thẻ sinh viên",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ thuế cho người thân",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ thi học kỳ",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ thi acces",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ lý lịch cá nhân",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ nhận học bổng",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ giảm trừ gia cảnh",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ đi làm",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "giấy tờ",
+      "target": "Bổ sung hồ sơ đi thực tập",
+      "relation": "LOẠI"
+    },
+    {
+      "source": "đăng ký",
+      "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+      "relation": "TẠI"
+    },
+    {
+      "source": "đăng ký",
+      "target": "trình duyệt web",
+      "relation": "SỬ_DỤNG"
+    },
+    {
+      "source": "đăng ký",
+      "target": "internet",
+      "relation": "TRUY_CẬP"
+    },
+    {
+      "source": "đăng ký",
+      "target": "máy tính để bàn",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "đăng ký",
+      "target": "máy tính xách tay",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "đăng ký",
+      "target": "máy tính bảng",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "đăng ký",
+      "target": "điện thoại di động",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+      "relation": "TRUY_CẬP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hệ thống",
+      "relation": "ĐĂNG_NHẬP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thông tin cá nhân",
+      "relation": "KIỂM_TRA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thông tin",
+      "relation": "BỔ_SUNG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thông tin",
+      "relation": "CẬP_NHẬT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giấy xác nhận",
+      "relation": "ĐĂNG_KÝ"
+    },
+    {
+      "source": "cán bộ phòng Công tác Sinh viên",
+      "target": "giấy xác nhận",
+      "relation": "IN"
+    },
+    {
+      "source": "cán bộ phòng Công tác Sinh viên",
+      "target": "giấy xác nhận",
+      "relation": "TRÌNH_KÝ"
+    },
+    {
+      "source": "cán bộ phòng Công tác Sinh viên",
+      "target": "giấy xác nhận",
+      "relation": "ĐÓNG_DẤU"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giấy xác nhận",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "phòng Công tác sinh viên",
+      "relation": "TẠI"
+    },
+    {
+      "source": "thời gian",
+      "target": "hệ thống",
+      "relation": "THÔNG_BÁO"
+    },
+    {
+      "source": "bước 4",
+      "target": "thời gian",
+      "relation": "Ở"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "entities": [
+    {
+      "name": "Sinh hoạt công dân - sinh viên (SHCD - SV)",
+      "type": "hoạt động"
+    },
+    {
+      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "type": "tổ chức"
+    },
+    {
+      "name": "https://go.hcmuaf.edu.vn/lichshcd2024",
+      "type": "website"
+    },
+    {
+      "name": "Tân sinh viên",
+      "type": "nhóm người"
+    },
+    {
+      "name": "sinh viên năm 2",
+      "type": "nhóm người"
+    },
+    {
+      "name": "sinh viên năm 3",
+      "type": "nhóm người"
+    },
+    {
+      "name": "sinh viên năm cuối",
+      "type": "nhóm người"
+    },
+    {
+      "name": "Hồ Chí Minh",
+      "type": "người"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sinh hoạt công dân - sinh viên (SHCD - SV)",
+      "target": "Trường Đại học Nông Lâm TP.HCM",
+      "relation": "TỔ_CHỨC_BỞI"
+    },
+    {
+      "source": "Sinh hoạt công dân - sinh viên (SHCD - SV)",
+      "target": "https://go.hcmuaf.edu.vn/lichshcd2024",
+      "relation": "ĐƯỢC_ĐĂNG_TẠI"
+    },
+    {
+      "source": "hướng dẫn phương pháp học đại học",
+      "target": "Tân sinh viên",
+      "relation": "DÀNH_CHO"
+    },
+    {
+      "source": "sử dụng các tiện ích Online",
+      "target": "Tân sinh viên",
+      "relation": "DÀNH_CHO"
+    },
+    {
+      "source": "sử dụng thư viện",
+      "target": "Tân sinh viên",
+      "relation": "DÀNH_CHO"
+    },
+    {
+      "source": "đăng ký môn học",
+      "target": "Tân sinh viên",
+      "relation": "DÀNH_CHO"
+    },
+    {
+      "source": "phổ biến quy chế học vụ",
+      "target": "Tân sinh viên",
+      "relation": "DÀNH_CHO"
+    },
+    {
+      "source": "giới thiệu các hoạt động Đoàn - Hội và phong trào sinh viên",
+      "target": "Tân sinh viên",
+      "relation": "DÀNH_CHO"
+    },
+    {
+      "source": "định hướng nghề nghiệp - khởi nghiệp",
+      "target": "sinh viên năm 2, năm 3 và năm cuối",
+      "relation": "DÀNH_CHO"
+    },
+    {
+      "source": "thông tin tình hình kinh tế - chính trị - xã hội",
+      "target": "sinh viên năm 2, năm 3 và năm cuối",
+      "relation": "DÀNH_CHO"
+    },
+    {
+      "source": "học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh",
+      "target": "sinh viên năm 2, năm 3 và năm cuối",
+      "relation": "DÀNH_CHO"
+    }
+  ]
+}

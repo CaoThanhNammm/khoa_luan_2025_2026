@@ -1,0 +1,860 @@
+{
+  "entities": [
+    {
+      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "type": "tổ chức"
+    },
+    {
+      "name": "CLB CÁN BỘ ĐOÀN NGÔI SAO XANH",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Đoàn Thanh niên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Hồ Thị Thanh Hồng",
+      "type": "người"
+    },
+    {
+      "name": "clbdoanngoisaoxanh@hcmuaf.edu.vn",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/ClbCanBoDoanNgoiSaoXanh",
+      "type": "website"
+    },
+    {
+      "name": "BEC ENGLISH CLUB",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Đoàn–Hội khoa Khoa học sinh học",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Nguyễn Lê Thanh Vy",
+      "type": "người"
+    },
+    {
+      "name": "bec@tuoitrenonglam.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/BioEnglishClub",
+      "type": "website"
+    },
+    {
+      "name": "CLB BÓNG RỔ ĐẠI HỌC NÔNG LÂM",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Hội thể thao",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Hồ Thanh Tú",
+      "type": "người"
+    },
+    {
+      "name": "hothanhtusbb11@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/NLUBASKETBALL",
+      "type": "website"
+    },
+    {
+      "name": "CLB DU LỊCH SINH THÁI",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Đoàn–Hội khoa Môi trường – Tài nguyên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Trần Lê Hiếu",
+      "type": "người"
+    },
+    {
+      "name": "dlst@tuoitrenonglam.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/dlst.info",
+      "type": "website"
+    },
+    {
+      "name": "CLB DƯỢC THÚ Y",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Đoàn – Hội khoa Chăn nuôi Thú y",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Nguyễn Nữ Mai Thơ",
+      "type": "người"
+    },
+    {
+      "name": "duocthuynlu@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "Câu lạc bộ Dược Thú Y Đại học Nông Lâm TPHCM",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "CLB ĐỒNG HÀNH – AC",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Phạm Chí Biết",
+      "type": "người"
+    },
+    {
+      "name": "ac@tuoitrenonglam.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/clbdonghanh.ac",
+      "type": "website"
+    },
+    {
+      "name": "FIRE ENGLISH CLUB",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Đoàn–Hội khoa Ngoại ngữ–Sư phạm",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Nguyễn Hoàng Nam Phương",
+      "type": "người"
+    },
+    {
+      "name": "fireenglishclub@tuoitrenonglam.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/FiRE.EnglishClub",
+      "type": "website"
+    },
+    {
+      "name": "CLB HỌC THUẬT–KỸ NĂNG QUẢN TRỊ (B.A.S)",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Phòng Công tác sinh viên",
+      "type": "phòng ban"
+    },
+    {
+      "name": "Võ Lê Bách",
+      "type": "người"
+    },
+    {
+      "name": "caulacbo.b.a.s@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/CLB.B.A.S",
+      "type": "website"
+    },
+    {
+      "name": "CLB KARATE-DO",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Lê Quang Trí",
+      "type": "người"
+    },
+    {
+      "name": "Lequangtri@hcmuaf.edu.vn",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/groups/308034235884043",
+      "type": "website"
+    },
+    {
+      "name": "CLB KẾT NỐI THÀNH CÔNG",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Trung tâm Hỗ trợ Sinh viên & Quan hệ Doanh nghiệp",
+      "type": "trung tâm"
+    },
+    {
+      "name": "Dương Triệu Duy",
+      "type": "người"
+    },
+    {
+      "name": "clbketnoithanhcong10@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/clbkntc",
+      "type": "website"
+    },
+    {
+      "name": "CLB KHỞI NGHIỆP (NLU STARTUP CLUB) NSC",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Trung tâm Ươm tạo Doanh nghiệp công nghệ",
+      "type": "trung tâm"
+    },
+    {
+      "name": "Trần Phạm Mỹ Duyên",
+      "type": "người"
+    },
+    {
+      "name": "clbkhoinghiep@tuoitrenonglam.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/NSC.CLBKNNL",
+      "type": "website"
+    },
+    {
+      "name": "CLB MỘT SỨC KHỎE TP.HCM (HCMC One Health Club)",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Võ Minh Trường",
+      "type": "người"
+    },
+    {
+      "name": "onehealthtphcm@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/oh.tphcm",
+      "type": "website"
+    },
+    {
+      "name": "CLB SÁCH VÀ HÀNH ĐỘNG NÔNG LÂM TP.HCM",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Thư viện",
+      "type": "phòng ban"
+    },
+    {
+      "name": "Phạm Thị Huyên",
+      "type": "người"
+    },
+    {
+      "name": "sachvahanhdong@tuoitrenonglam.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/clbsvhdnlu",
+      "type": "website"
+    },
+    {
+      "name": "CLB TIẾNG ANH KHOA CÔNG NGHỆ HÓA HỌC VÀ THỰC PHẨM (Seeds For Future) SFF",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Đoàn - Hội khoa Công nghệ hóa học và Thực phẩm",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Nguyễn Thị Ngọc Hân",
+      "type": "người"
+    },
+    {
+      "name": "englishclubsff@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/sffenglishclub",
+      "type": "website"
+    },
+    {
+      "name": "CLB TIẾNG ANH KHOA KINH TẾ EFB (English For Business Club) EFB",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Đoàn - Hội khoa Kinh tế",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Nguyễn Hoàng Tuấn",
+      "type": "người"
+    },
+    {
+      "name": "englishforbusinessnlu@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/englishforbusinessnlu",
+      "type": "website"
+    },
+    {
+      "name": "CLB THỂ THAO ĐIỆN TỬ PWF – CLB PWF GAMING",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Nguyễn Võ Hải Triều",
+      "type": "người"
+    },
+    {
+      "name": "pwfgamingnlu@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/pwfgamingnlu",
+      "type": "website"
+    },
+    {
+      "name": "CLB THÚ Y ENGSCOPE",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Nguyễn Ngọc Uyên Nhi",
+      "type": "người"
+    },
+    {
+      "name": "engscope.asvm@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/Engscope",
+      "type": "website"
+    },
+    {
+      "name": "CLB TRUYỀN THÔNG NÔNG LÂM RADIO",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Bùi Thị Thùy Trang",
+      "type": "người"
+    },
+    {
+      "name": "hcmnlu.radio@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/NongLamUniversity.Radio",
+      "type": "website"
+    },
+    {
+      "name": "WILDLIFE VET STUDENT CLUB",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Lê Tường Vi",
+      "type": "người"
+    },
+    {
+      "name": "wildlife28082019@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/WildlifeVetsClub",
+      "type": "website"
+    },
+    {
+      "name": "CLB YÊU MÔI TRƯỜNG",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Trần Ái Thiên",
+      "type": "người"
+    },
+    {
+      "name": "clbyeumoitruong@hcmuaf.edu.vn",
+      "type": "email"
+    },
+    {
+      "name": "https://vi-vn.facebook.com/CLB.YMT.NL",
+      "type": "website"
+    },
+    {
+      "name": "TỔ TU DƯỠNG RÈN LUYỆN HẠT GIỐNG ĐỎ",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Dương Quốc Thái",
+      "type": "người"
+    },
+    {
+      "name": "hatgiongdo@hcmuaf.edu.vn",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/totdrlhatgiongdo",
+      "type": "website"
+    },
+    {
+      "name": "ĐỘI CÔNG TÁC XÃ HỘI",
+      "type": "đội"
+    },
+    {
+      "name": "Hội Sinh viên trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Võ Công Thương",
+      "type": "người"
+    },
+    {
+      "name": "doicongtacxahoi@st.hcmuaf.edu.vn",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/ctxh2001nlu",
+      "type": "website"
+    },
+    {
+      "name": "ĐỘI KHÁT VỌNG TUỔI TRẺ KHOA CHĂN NUÔI THÚ Y",
+      "type": "đội"
+    },
+    {
+      "name": "Trần Viết Nguyên Chương",
+      "type": "người"
+    },
+    {
+      "name": "doikhatvongtuoitre@tuoitrenonglam.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/khatvongtuoitrekhoacnty",
+      "type": "website"
+    },
+    {
+      "name": "ĐỘI NHIỆT HUYẾT RỪNG XANH",
+      "type": "đội"
+    },
+    {
+      "name": "Đoàn–Hội khoa Lâm Nghiệp",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Nguyễn Hữu Hoàng",
+      "type": "người"
+    },
+    {
+      "name": "doinhiethuyetrungxanh@hcmuaf.edu.vn",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/NhietHuyetRungXanh",
+      "type": "website"
+    },
+    {
+      "name": "ĐỘI VĂN NGHỆ MFB–MELODY FROM BIO",
+      "type": "đội"
+    },
+    {
+      "name": "Đoàn–Hội khoa Khoa học Sinh học",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Trần Đức Phúc",
+      "type": "người"
+    },
+    {
+      "name": "melodyfrombiotech@tuoitrenonglam.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/melodyfrombio",
+      "type": "website"
+    },
+    {
+      "name": "ĐỘI VĂN NGHỆ RẠNG ĐÔNG",
+      "type": "đội"
+    },
+    {
+      "name": "Lê Thành Tài",
+      "type": "người"
+    },
+    {
+      "name": "vanngherangdong@hcmuaf.edu.vn",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/doivannghe.rangdong",
+      "type": "website"
+    },
+    {
+      "name": "ĐỘI VĂN NGHỆ XUNG KÍCH NHỊP ĐIỆU XANH",
+      "type": "đội"
+    },
+    {
+      "name": "Nguyễn Nhu Minh Hạ",
+      "type": "người"
+    },
+    {
+      "name": "vannghenhipdieuxanh@hcmuaf.edu.vn",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/Vnxk.nhip.dieu.xanh",
+      "type": "website"
+    },
+    {
+      "name": "ĐỘI XUNG KÍCH KHOA KHOA HỌC SINH HỌC",
+      "type": "đội"
+    },
+    {
+      "name": "Đỗ Minh Anh",
+      "type": "người"
+    },
+    {
+      "name": "doixungkichkhsh@toitrenonglam.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/doixungkichbiotech",
+      "type": "website"
+    },
+    {
+      "name": "HỘI CỔ ĐỘNG VIÊN (NONG LAM BUFFALOES) NLB",
+      "type": "câu lạc bộ"
+    },
+    {
+      "name": "Đoàn An Bình",
+      "type": "người"
+    },
+    {
+      "name": "nonglambuffaloes@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "https://www.facebook.com/NonglamBuffaloes",
+      "type": "website"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "CLB CÁN BỘ ĐOÀN NGÔI SAO XANH",
+      "target": "Đoàn Thanh niên",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB CÁN BỘ ĐOÀN NGÔI SAO XANH",
+      "target": "Hồ Thị Thanh Hồng",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB CÁN BỘ ĐOÀN NGÔI SAO XANH",
+      "target": "clbdoanngoisaoxanh@hcmuaf.edu.vn",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB CÁN BỘ ĐOÀN NGÔI SAO XANH",
+      "target": "https://www.facebook.com/ClbCanBoDoanNgoiSaoXanh",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "BEC ENGLISH CLUB",
+      "target": "Đoàn–Hội khoa Khoa học sinh học",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "BEC ENGLISH CLUB",
+      "target": "Nguyễn Lê Thanh Vy",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "BEC ENGLISH CLUB",
+      "target": "bec@tuoitrenonglam.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "BEC ENGLISH CLUB",
+      "target": "https://www.facebook.com/BioEnglishClub",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB BÓNG RỔ ĐẠI HỌC NÔNG LÂM",
+      "target": "Hội thể thao",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB BÓNG RỔ ĐẠI HỌC NÔNG LÂM",
+      "target": "Hồ Thanh Tú",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB BÓNG RỔ ĐẠI HỌC NÔNG LÂM",
+      "target": "hothanhtusbb11@gmail.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB BÓNG RỔ ĐẠI HỌC NÔNG LÂM",
+      "target": "https://www.facebook.com/NLUBASKETBALL",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB DU LỊCH SINH THÁI",
+      "target": "Đoàn–Hội khoa Môi trường – Tài nguyên",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB DU LỊCH SINH THÁI",
+      "target": "Trần Lê Hiếu",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB DU LỊCH SINH THÁI",
+      "target": "dlst@tuoitrenonglam.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB DU LỊCH SINH THÁI",
+      "target": "https://www.facebook.com/dlst.info",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB DƯỢC THÚ Y",
+      "target": "Đoàn – Hội khoa Chăn nuôi Thú y",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB DƯỢC THÚ Y",
+      "target": "Nguyễn Nữ Mai Thơ",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB DƯỢC THÚ Y",
+      "target": "duocthuynlu@gmail.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB DƯỢC THÚ Y",
+      "target": "Câu lạc bộ Dược Thú Y Đại học Nông Lâm TPHCM",
+      "relation": "TÊN_KHÁC"
+    },
+    {
+      "source": "CLB ĐỒNG HÀNH – AC",
+      "target": "Đoàn Thanh niên",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB ĐỒNG HÀNH – AC",
+      "target": "Phạm Chí Biết",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB ĐỒNG HÀNH – AC",
+      "target": "ac@tuoitrenonglam.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB ĐỒNG HÀNH – AC",
+      "target": "https://www.facebook.com/clbdonghanh.ac",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "FIRE ENGLISH CLUB",
+      "target": "Đoàn–Hội khoa Ngoại ngữ–Sư phạm",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "FIRE ENGLISH CLUB",
+      "target": "Nguyễn Hoàng Nam Phương",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "FIRE ENGLISH CLUB",
+      "target": "fireenglishclub@tuoitrenonglam.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "FIRE ENGLISH CLUB",
+      "target": "https://www.facebook.com/FiRE.EnglishClub",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB HỌC THUẬT–KỸ NĂNG QUẢN TRỊ (B.A.S)",
+      "target": "Phòng Công tác sinh viên",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB HỌC THUẬT–KỸ NĂNG QUẢN TRỊ (B.A.S)",
+      "target": "Võ Lê Bách",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB HỌC THUẬT–KỸ NĂNG QUẢN TRỊ (B.A.S)",
+      "target": "caulacbo.b.a.s@gmail.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB HỌC THUẬT–KỸ NĂNG QUẢN TRỊ (B.A.S)",
+      "target": "https://www.facebook.com/CLB.B.A.S",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB KARATE-DO",
+      "target": "Hội thể thao",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB KARATE-DO",
+      "target": "Lê Quang Trí",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB KARATE-DO",
+      "target": "Lequangtri@hcmuaf.edu.vn",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB KARATE-DO",
+      "target": "https://www.facebook.com/groups/308034235884043",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB KẾT NỐI THÀNH CÔNG",
+      "target": "Trung tâm Hỗ trợ Sinh viên & Quan hệ Doanh nghiệp",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB KẾT NỐI THÀNH CÔNG",
+      "target": "Dương Triệu Duy",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB KẾT NỐI THÀNH CÔNG",
+      "target": "clbketnoithanhcong10@gmail.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB KẾT NỐI THÀNH CÔNG",
+      "target": "https://www.facebook.com/clbkntc",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB KHỞI NGHIỆP (NLU STARTUP CLUB) NSC",
+      "target": "Trung tâm Ươm tạo Doanh nghiệp công nghệ",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB KHỞI NGHIỆP (NLU STARTUP CLUB) NSC",
+      "target": "Trần Phạm Mỹ Duyên",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB KHỞI NGHIỆP (NLU STARTUP CLUB) NSC",
+      "target": "clbkhoinghiep@tuoitrenonglam.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB KHỞI NGHIỆP (NLU STARTUP CLUB) NSC",
+      "target": "https://www.facebook.com/NSC.CLBKNNL",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB MỘT SỨC KHỎE TP.HCM (HCMC One Health Club)",
+      "target": "Đoàn - Hội khoa Chăn nuôi Thú y",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB MỘT SỨC KHỎE TP.HCM (HCMC One Health Club)",
+      "target": "Võ Minh Trường",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB MỘT SỨC KHỎE TP.HCM (HCMC One Health Club)",
+      "target": "onehealthtphcm@gmail.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB MỘT SỨC KHỎE TP.HCM (HCMC One Health Club)",
+      "target": "https://www.facebook.com/oh.tphcm",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB SÁCH VÀ HÀNH ĐỘNG NÔNG LÂM TP.HCM",
+      "target": "Thư viện",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB SÁCH VÀ HÀNH ĐỘNG NÔNG LÂM TP.HCM",
+      "target": "Phạm Thị Huyên",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB SÁCH VÀ HÀNH ĐỘNG NÔNG LÂM TP.HCM",
+      "target": "sachvahanhdong@tuoitrenonglam.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB SÁCH VÀ HÀNH ĐỘNG NÔNG LÂM TP.HCM",
+      "target": "https://www.facebook.com/clbsvhdnlu",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB TIẾNG ANH KHOA CÔNG NGHỆ HÓA HỌC VÀ THỰC PHẨM (Seeds For Future) SFF",
+      "target": "Đoàn - Hội khoa Công nghệ hóa học và Thực phẩm",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB TIẾNG ANH KHOA CÔNG NGHỆ HÓA HỌC VÀ THỰC PHẨM (Seeds For Future) SFF",
+      "target": "Nguyễn Thị Ngọc Hân",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB TIẾNG ANH KHOA CÔNG NGHỆ HÓA HỌC VÀ THỰC PHẨM (Seeds For Future) SFF",
+      "target": "englishclubsff@gmail.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB TIẾNG ANH KHOA CÔNG NGHỆ HÓA HỌC VÀ THỰC PHẨM (Seeds For Future) SFF",
+      "target": "https://www.facebook.com/sffenglishclub",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB TIẾNG ANH KHOA KINH TẾ EFB (English For Business Club) EFB",
+      "target": "Đoàn - Hội khoa Kinh tế",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB TIẾNG ANH KHOA KINH TẾ EFB (English For Business Club) EFB",
+      "target": "Nguyễn Hoàng Tuấn",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB TIẾNG ANH KHOA KINH TẾ EFB (English For Business Club) EFB",
+      "target": "englishforbusinessnlu@gmail.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB TIẾNG ANH KHOA KINH TẾ EFB (English For Business Club) EFB",
+      "target": "https://www.facebook.com/englishforbusinessnlu",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB THỂ THAO ĐIỆN TỬ PWF – CLB PWF GAMING",
+      "target": "Phòng Công tác Sinh viên",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB THỂ THAO ĐIỆN TỬ PWF – CLB PWF GAMING",
+      "target": "Nguyễn Võ Hải Triều",
+      "relation": "CHỦ_NHIỆM"
+    },
+    {
+      "source": "CLB THỂ THAO ĐIỆN TỬ PWF – CLB PWF GAMING",
+      "target": "pwfgamingnlu@gmail.com",
+      "relation": "EMAIL"
+    },
+    {
+      "source": "CLB THỂ THAO ĐIỆN TỬ PWF – CLB PWF GAMING",
+      "target": "https://www.facebook.com/pwfgamingnlu",
+      "relation": "WEBSITE"
+    },
+    {
+      "source": "CLB THÚ Y ENGSCOPE",
+      "target": "Đoàn - Hội khoa Chăn nuôi Thú y",
+      "relation": "ĐƠN_VỊ_QUẢN_LÝ"
+    },
+    {
+      "source": "CLB THÚ Y ENGSCOPE",
+      "target": "Nguyễn Ngọc Uyên Nhi",

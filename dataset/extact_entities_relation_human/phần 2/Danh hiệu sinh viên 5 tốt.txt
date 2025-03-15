@@ -1,0 +1,888 @@
+{
+  "entities": [
+    {
+      "name": "Sinh viên 5 tốt",
+      "type": "danh hiệu"
+    },
+    {
+      "name": "sinh viên Việt Nam",
+      "type": "người"
+    },
+    {
+      "name": "sinh viên trường Đại học Nông Lâm TP.HCM",
+      "type": "người"
+    },
+    {
+      "name": "Đảng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "pháp luật",
+      "type": "văn bản"
+    },
+    {
+      "name": "quy chế",
+      "type": "văn bản"
+    },
+    {
+      "name": "nội quy",
+      "type": "văn bản"
+    },
+    {
+      "name": "trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "lớp",
+      "type": "tổ chức"
+    },
+    {
+      "name": "địa phương cư trú",
+      "type": "địa điểm"
+    },
+    {
+      "name": "nơi công cộng",
+      "type": "địa điểm"
+    },
+    {
+      "name": "điểm rèn luyện",
+      "type": "khái niệm"
+    },
+    {
+      "name": "85 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "quy chế",
+      "type": "văn bản"
+    },
+    {
+      "name": "môn",
+      "type": "khái niệm"
+    },
+    {
+      "name": "học phần",
+      "type": "khái niệm"
+    },
+    {
+      "name": "tín chỉ",
+      "type": "khái niệm"
+    },
+    {
+      "name": "năm học",
+      "type": "thời gian"
+    },
+    {
+      "name": "điểm trung bình tích lũy",
+      "type": "khái niệm"
+    },
+    {
+      "name": "điểm trung bình học kỳ",
+      "type": "khái niệm"
+    },
+    {
+      "name": "7.3/10",
+      "type": "số lượng"
+    },
+    {
+      "name": "2.9/4.0",
+      "type": "số lượng"
+    },
+    {
+      "name": "điểm F",
+      "type": "khái niệm"
+    },
+    {
+      "name": "sinh viên năm nhất",
+      "type": "người"
+    },
+    {
+      "name": "21 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "6 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "đề tài nghiên cứu khoa học",
+      "type": "khái niệm"
+    },
+    {
+      "name": "khoa/bộ môn",
+      "type": "tổ chức"
+    },
+    {
+      "name": "giải thưởng sinh viên nghiên cứu khoa học Euréka",
+      "type": "giải thưởng"
+    },
+    {
+      "name": "giải thưởng nghiên cứu khoa học cấp thành phố",
+      "type": "giải thưởng"
+    },
+    {
+      "name": "giải thưởng nghiên cứu khoa học cấp trung ương",
+      "type": "giải thưởng"
+    },
+    {
+      "name": "cuộc thi học thuật",
+      "type": "sự kiện"
+    },
+    {
+      "name": "giải khuyến khích",
+      "type": "giải thưởng"
+    },
+    {
+      "name": "vòng chung kết",
+      "type": "giai đoạn"
+    },
+    {
+      "name": "Hiệp hội ngành nghề",
+      "type": "tổ chức"
+    },
+    {
+      "name": "cơ quan thông tấn báo chí",
+      "type": "tổ chức"
+    },
+    {
+      "name": "vòng thi sơ loại",
+      "type": "giai đoạn"
+    },
+    {
+      "name": "CLB học thuật",
+      "type": "tổ chức"
+    },
+    {
+      "name": "06 tháng",
+      "type": "thời gian"
+    },
+    {
+      "name": "bài viết",
+      "type": "văn bản"
+    },
+    {
+      "name": "cơ quan truyền thông uy tín",
+      "type": "tổ chức"
+    },
+    {
+      "name": "báo",
+      "type": "văn bản"
+    },
+    {
+      "name": "tạp chí khoa học chuyên ngành",
+      "type": "văn bản"
+    },
+    {
+      "name": "hội thảo khoa học",
+      "type": "sự kiện"
+    },
+    {
+      "name": "sản phẩm",
+      "type": "khái niệm"
+    },
+    {
+      "name": "cuộc thi về sáng tạo",
+      "type": "sự kiện"
+    },
+    {
+      "name": "cuộc thi khoa học ứng dụng",
+      "type": "sự kiện"
+    },
+    {
+      "name": "Thanh niên khỏe",
+      "type": "danh hiệu"
+    },
+    {
+      "name": "trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "câu lạc bộ thể thao",
+      "type": "tổ chức"
+    },
+    {
+      "name": "hội thao",
+      "type": "sự kiện"
+    },
+    {
+      "name": "giải thi đấu thể dục thể thao",
+      "type": "sự kiện"
+    },
+    {
+      "name": "Hội đồng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "sinh viên khuyết tật",
+      "type": "người"
+    },
+    {
+      "name": "07 ngày",
+      "type": "thời gian"
+    },
+    {
+      "name": "năm",
+      "type": "thời gian"
+    },
+    {
+      "name": "giấy khen",
+      "type": "văn bản"
+    },
+    {
+      "name": "chứng chỉ ngoại ngữ",
+      "type": "văn bản"
+    },
+    {
+      "name": "B1",
+      "type": "khái niệm"
+    },
+    {
+      "name": "TOEIC 450",
+      "type": "khái niệm"
+    },
+    {
+      "name": "TOEFL 450 PBT",
+      "type": "khái niệm"
+    },
+    {
+      "name": "IELTS 4.5",
+      "type": "khái niệm"
+    },
+    {
+      "name": "sinh viên khối ngành ngoại ngữ",
+      "type": "người"
+    },
+    {
+      "name": "chương trình đào tạo tiên tiến",
+      "type": "khái niệm"
+    },
+    {
+      "name": "7.0/10",
+      "type": "số lượng"
+    },
+    {
+      "name": "cuộc thi về ngoại ngữ",
+      "type": "sự kiện"
+    },
+    {
+      "name": "cuộc thi chuyên về ngoại ngữ",
+      "type": "sự kiện"
+    },
+    {
+      "name": "Câu lạc bộ",
+      "type": "tổ chức"
+    },
+    {
+      "name": "chương trình giao lưu",
+      "type": "sự kiện"
+    },
+    {
+      "name": "hợp tác với thanh niên, sinh viên quốc tế",
+      "type": "sự kiện"
+    },
+    {
+      "name": "chứng chỉ A tin học",
+      "type": "văn bản"
+    },
+    {
+      "name": "ủy viên Ban chấp hành",
+      "type": "chức danh"
+    },
+    {
+      "name": "cơ sở Đoàn, Hội",
+      "type": "tổ chức"
+    },
+    {
+      "name": "thành viên Ban điều hành",
+      "type": "chức danh"
+    },
+    {
+      "name": "Câu lạc bộ",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Đoàn Thanh niên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Hội Sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "giấy khen",
+      "type": "văn bản"
+    },
+    {
+      "name": "bằng khen",
+      "type": "văn bản"
+    },
+    {
+      "name": "Đoàn – Hội",
+      "type": "tổ chức"
+    },
+    {
+      "name": "trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "hiến máu tình nguyện",
+      "type": "hoạt động"
+    },
+    {
+      "name": "02 lần",
+      "type": "số lượng"
+    },
+    {
+      "name": "Câu lạc bộ",
+      "type": "tổ chức"
+    },
+    {
+      "name": "đội",
+      "type": "tổ chức"
+    },
+    {
+      "name": "nhóm",
+      "type": "tổ chức"
+    },
+    {
+      "name": "tuyên truyền",
+      "type": "hoạt động"
+    },
+    {
+      "name": "vận động hiến máu tình nguyện",
+      "type": "hoạt động"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "xã, phường",
+      "type": "địa điểm"
+    },
+    {
+      "name": "phương tiện truyền thông đại chúng",
+      "type": "khái niệm"
+    },
+    {
+      "name": "thanh niên tiêu biểu",
+      "type": "người"
+    },
+    {
+      "name": "Đại học Nông Lâm TP.HCM",
+      "type": "tổ chức"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sinh viên 5 tốt",
+      "target": "sinh viên Việt Nam",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Sinh viên 5 tốt",
+      "target": "sinh viên trường Đại học Nông Lâm TP.HCM",
+      "relation": "CỦA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "uy tín",
+      "relation": "CÓ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tự giáo dục",
+      "relation": "MINH_CHỨNG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tự rèn luyện",
+      "relation": "MINH_CHỨNG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tự trau dồi lý tưởng",
+      "relation": "MINH_CHỨNG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "lập thân",
+      "relation": "LẬP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "lập nghiệp",
+      "relation": "LẬP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hạn chế",
+      "relation": "KHẮC_PHỤC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "yếu kém",
+      "relation": "KHẮC_PHỤC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "05 tiêu chí",
+      "relation": "HOÀN_THIỆN"
+    },
+    {
+      "source": "Đạo đức tốt",
+      "target": "Đảng",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Đạo đức tốt",
+      "target": "pháp luật",
+      "relation": "KHÔNG_VI_PHẠM"
+    },
+    {
+      "source": "Đạo đức tốt",
+      "target": "quy chế",
+      "relation": "KHÔNG_VI_PHẠM"
+    },
+    {
+      "source": "Đạo đức tốt",
+      "target": "nội quy",
+      "relation": "KHÔNG_VI_PHẠM"
+    },
+    {
+      "source": "Đạo đức tốt",
+      "target": "trường",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Đạo đức tốt",
+      "target": "lớp",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Đạo đức tốt",
+      "target": "địa phương cư trú",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Đạo đức tốt",
+      "target": "nơi công cộng",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Đạo đức tốt",
+      "target": "điểm rèn luyện",
+      "relation": "ĐẠT"
+    },
+    {
+      "source": "Đạo đức tốt",
+      "target": "85 điểm",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "quy chế",
+      "relation": "KHÔNG_VI_PHẠM"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "môn",
+      "relation": "KHÔNG_NỢ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "học phần",
+      "relation": "KHÔNG_NỢ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "tín chỉ",
+      "relation": "KHÔNG_NỢ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "điểm trung bình tích lũy",
+      "relation": "ĐẠT"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "7.3/10",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "2.9/4.0",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "điểm F",
+      "relation": "KHÔNG_CÓ"
+    },
+    {
+      "source": "sinh viên năm nhất",
+      "target": "21 điểm",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "sinh viên năm nhất",
+      "target": "6 điểm",
+      "relation": "KHÔNG_DƯỚI"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "đề tài nghiên cứu khoa học",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "khoa/bộ môn",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "giải thưởng sinh viên nghiên cứu khoa học Euréka",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "giải thưởng nghiên cứu khoa học cấp thành phố",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "giải thưởng nghiên cứu khoa học cấp trung ương",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "cuộc thi học thuật",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "giải khuyến khích",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "vòng chung kết",
+      "relation": "HOẶC"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "giải khuyến khích",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "Hiệp hội ngành nghề",
+      "relation": "DO"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "cơ quan thông tấn báo chí",
+      "relation": "DO"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "vòng thi sơ loại",
+      "relation": "VƯỢT_QUA"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "CLB học thuật",
+      "relation": "THÀNH_VIÊN"
+    },
+    {
+      "source": "CLB học thuật",
+      "target": "06 tháng",
+      "relation": "ÍT_NHẤT"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "bài viết",
+      "relation": "CÓ"
+    },
+    {
+      "source": "bài viết",
+      "target": "cơ quan truyền thông uy tín",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "bài viết",
+      "target": "báo",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "bài viết",
+      "target": "tạp chí khoa học chuyên ngành",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "bài viết",
+      "target": "trường",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "hội thảo khoa học",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "khoa/bộ môn",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "sản phẩm",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "cuộc thi về sáng tạo",
+      "relation": "TRONG"
+    },
+    {
+      "source": "Học tập tốt",
+      "target": "cuộc thi khoa học ứng dụng",
+      "relation": "TRONG"
+    },
+    {
+      "source": "Thể lực tốt",
+      "target": "Thanh niên khỏe",
+      "relation": "ĐẠT"
+    },
+    {
+      "source": "Thể lực tốt",
+      "target": "trường",
+      "relation": "CẤP"
+    },
+    {
+      "source": "Thể lực tốt",
+      "target": "câu lạc bộ thể thao",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Thể lực tốt",
+      "target": "hội thao",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Thể lực tốt",
+      "target": "giải thi đấu thể dục thể thao",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Hội đồng",
+      "target": "sinh viên khuyết tật",
+      "relation": "XEM_XÉT"
+    },
+    {
+      "source": "Tình nguyện tốt",
+      "target": "07 ngày",
+      "relation": "ÍT_NHẤT"
+    },
+    {
+      "source": "Tình nguyện tốt",
+      "target": "năm",
+      "relation": "MỖI"
+    },
+    {
+      "source": "Tình nguyện tốt",
+      "target": "giấy khen",
+      "relation": "ĐẠT"
+    },
+    {
+      "source": "Tình nguyện tốt",
+      "target": "trường",
+      "relation": "CẤP"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "chứng chỉ ngoại ngữ",
+      "relation": "ĐẠT"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "B1",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "TOEIC 450",
+      "relation": "HOẶC"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "TOEFL 450 PBT",
+      "relation": "HOẶC"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "IELTS 4.5",
+      "relation": "HOẶC"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "sinh viên khối ngành ngoại ngữ",
+      "relation": "ĐỐI_VỚI"
+    },
+    {
+      "source": "sinh viên khối ngành ngoại ngữ",
+      "target": "7.0/10",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "cuộc thi về ngoại ngữ",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "cuộc thi chuyên về ngoại ngữ",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "giải khuyến khích",
+      "relation": "TỪ"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "Câu lạc bộ",
+      "relation": "THÀNH_VIÊN"
+    },
+    {
+      "source": "Câu lạc bộ",
+      "target": "06 tháng",
+      "relation": "ÍT_NHẤT"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "chương trình giao lưu",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "hợp tác với thanh niên, sinh viên quốc tế",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "Hội nhập tốt",
+      "target": "chứng chỉ A tin học",
+      "relation": "ĐẠT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "ủy viên Ban chấp hành",
+      "relation": "LÀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "cơ sở Đoàn, Hội",
+      "relation": "CỦA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thành viên Ban điều hành",
+      "relation": "LÀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Câu lạc bộ",
+      "relation": "CỦA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Đoàn Thanh niên",
+      "relation": "CỦA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Hội Sinh viên",
+      "relation": "CỦA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giấy khen",
+      "relation": "CÓ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bằng khen",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Đoàn – Hội",
+      "target": "giấy khen",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Đoàn – Hội",
+      "target": "bằng khen",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Đoàn – Hội",
+      "target": "trường",
+      "relation": "CẤP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hiến máu tình nguyện",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "02 lần",
+      "relation": "ÍT_NHẤT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Câu lạc bộ",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đội",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nhóm",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tuyên truyền",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "vận động hiến máu tình nguyện",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "xã, phường",
+      "relation": "TỪ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "phương tiện truyền thông đại chúng",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "thanh niên tiêu biểu",
+      "target": "phương tiện truyền thông đại chúng",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "Đại học Nông Lâm TP.HCM",
+      "target": "Sinh viên 5 tốt",
+      "relation": "TRƯỜNG"
+    }
+  ]
+}

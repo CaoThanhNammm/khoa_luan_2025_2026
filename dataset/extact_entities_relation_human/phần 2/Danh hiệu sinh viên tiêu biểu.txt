@@ -1,0 +1,113 @@
+{
+  "entities": [
+    {
+      "name": "Nhà trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "năm học",
+      "type": "thời gian"
+    },
+    {
+      "name": "Lễ tuyên dương sinh viên tiêu biểu",
+      "type": "sự kiện"
+    },
+    {
+      "name": "sinh viên tiêu biểu",
+      "type": "người"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    },
+    {
+      "name": "thành tích học tập",
+      "type": "khái niệm"
+    },
+    {
+      "name": "rèn luyện",
+      "type": "hoạt động"
+    },
+    {
+      "name": "Danh hiệu sinh viên tiêu biểu",
+      "type": "danh hiệu"
+    },
+    {
+      "name": "kết quả học tập",
+      "type": "khái niệm"
+    },
+    {
+      "name": "điểm rèn luyện",
+      "type": "khái niệm"
+    },
+    {
+      "name": "loại khá",
+      "type": "khái niệm"
+    },
+    {
+      "name": "loại tốt",
+      "type": "khái niệm"
+    },
+    {
+      "name": "hoạt động Đoàn-Hội SV",
+      "type": "hoạt động"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Nhà trường",
+      "target": "Lễ tuyên dương sinh viên tiêu biểu",
+      "relation": "TỔ_CHỨC"
+    },
+    {
+      "source": "Lễ tuyên dương sinh viên tiêu biểu",
+      "target": "năm học",
+      "relation": "VÀO_CUỐI"
+    },
+    {
+      "source": "Lễ tuyên dương sinh viên tiêu biểu",
+      "target": "sinh viên tiêu biểu",
+      "relation": "TUYÊN_DƯƠNG"
+    },
+    {
+      "source": "Lễ tuyên dương sinh viên tiêu biểu",
+      "target": "sinh viên",
+      "relation": "KHEN_THƯỞNG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thành tích học tập",
+      "relation": "CÓ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "rèn luyện",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Danh hiệu sinh viên tiêu biểu",
+      "target": "kết quả học tập",
+      "relation": "CĂN_CỨ"
+    },
+    {
+      "source": "Danh hiệu sinh viên tiêu biểu",
+      "target": "điểm rèn luyện",
+      "relation": "CĂN_CỨ"
+    },
+    {
+      "source": "kết quả học tập",
+      "target": "loại khá",
+      "relation": "TỪ"
+    },
+    {
+      "source": "rèn luyện",
+      "target": "loại tốt",
+      "relation": "TỪ"
+    },
+    {
+      "source": "sinh viên tiêu biểu",
+      "target": "hoạt động Đoàn-Hội SV",
+      "relation": "THAM_GIA"
+    }
+  ]
+}

@@ -1,0 +1,701 @@
+{
+  "entities": [
+    {
+      "name": "người học",
+      "type": "người"
+    },
+    {
+      "name": "điểm",
+      "type": "khái niệm"
+    },
+    {
+      "name": "nhà trường",
+      "type": "tổ chức"
+    },
+    {
+      "name": "hoạt động chính trị",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động xã hội",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động văn hóa",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động văn nghệ",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động thể thao",
+      "type": "hoạt động"
+    },
+    {
+      "name": "tội phạm",
+      "type": "khái niệm"
+    },
+    {
+      "name": "tệ nạn xã hội",
+      "type": "khái niệm"
+    },
+    {
+      "name": "cán bộ lớp",
+      "type": "người"
+    },
+    {
+      "name": "đoàn thể",
+      "type": "tổ chức"
+    },
+    {
+      "name": "tổ chức",
+      "type": "tổ chức"
+    },
+    {
+      "name": "cơ sở giáo dục đại học",
+      "type": "tổ chức"
+    },
+    {
+      "name": "thành tích",
+      "type": "khái niệm"
+    },
+    {
+      "name": "học tập",
+      "type": "hoạt động"
+    },
+    {
+      "name": "rèn luyện",
+      "type": "hoạt động"
+    },
+    {
+      "name": "100 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "ý thức",
+      "type": "khái niệm"
+    },
+    {
+      "name": "thái độ",
+      "type": "khái niệm"
+    },
+    {
+      "name": "câu lạc bộ học thuật",
+      "type": "tổ chức"
+    },
+    {
+      "name": "hoạt động học thuật",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động ngoại khóa",
+      "type": "hoạt động"
+    },
+    {
+      "name": "nghiên cứu khoa học",
+      "type": "hoạt động"
+    },
+    {
+      "name": "kỳ thi",
+      "type": "sự kiện"
+    },
+    {
+      "name": "cuộc thi",
+      "type": "sự kiện"
+    },
+    {
+      "name": "kết quả học tập",
+      "type": "khái niệm"
+    },
+    {
+      "name": "20 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "ngành",
+      "type": "khái niệm"
+    },
+    {
+      "name": "cơ quan chỉ đạo cấp trên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "cơ sở giáo dục đại học",
+      "type": "tổ chức"
+    },
+    {
+      "name": "nội quy",
+      "type": "văn bản"
+    },
+    {
+      "name": "quy chế",
+      "type": "văn bản"
+    },
+    {
+      "name": "quy định",
+      "type": "văn bản"
+    },
+    {
+      "name": "25 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "hoạt động rèn luyện",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động chính trị",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động xã hội",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động văn hóa",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động văn nghệ",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động thể thao",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động công ích",
+      "type": "hoạt động"
+    },
+    {
+      "name": "hoạt động tình nguyện",
+      "type": "hoạt động"
+    },
+    {
+      "name": "công tác xã hội",
+      "type": "hoạt động"
+    },
+    {
+      "name": "tội phạm",
+      "type": "khái niệm"
+    },
+    {
+      "name": "tệ nạn xã hội",
+      "type": "khái niệm"
+    },
+    {
+      "name": "20 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "Đảng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Nhà nước",
+      "type": "tổ chức"
+    },
+    {
+      "name": "chính sách",
+      "type": "văn bản"
+    },
+    {
+      "name": "pháp luật",
+      "type": "văn bản"
+    },
+    {
+      "name": "thành tích",
+      "type": "khái niệm"
+    },
+    {
+      "name": "25 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "Đảng",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Đoàn thanh niên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "Hội sinh viên",
+      "type": "tổ chức"
+    },
+    {
+      "name": "10 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "xuất sắc",
+      "type": "khái niệm"
+    },
+    {
+      "name": "tốt",
+      "type": "khái niệm"
+    },
+    {
+      "name": "khá",
+      "type": "khái niệm"
+    },
+    {
+      "name": "trung bình",
+      "type": "khái niệm"
+    },
+    {
+      "name": "yếu",
+      "type": "khái niệm"
+    },
+    {
+      "name": "kém",
+      "type": "khái niệm"
+    },
+    {
+      "name": "90 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "100 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "80 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "65 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "50 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "35 điểm",
+      "type": "số lượng"
+    },
+    {
+      "name": "khiển trách",
+      "type": "hình thức kỷ luật"
+    },
+    {
+      "name": "cảnh cáo",
+      "type": "hình thức kỷ luật"
+    },
+    {
+      "name": "đình chỉ học tập",
+      "type": "hình thức kỷ luật"
+    },
+    {
+      "name": "buộc thôi học",
+      "type": "hình thức kỷ luật"
+    },
+    {
+      "name": "http://sv.hc-muaf.edu.vn/diemrenluyen",
+      "type": "website"
+    },
+    {
+      "name": "sinh viên",
+      "type": "người"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "người học",
+      "target": "điểm",
+      "relation": "ĐÁNH_GIÁ"
+    },
+    {
+      "source": "người học",
+      "target": "ý thức",
+      "relation": "ĐÁNH_GIÁ"
+    },
+    {
+      "source": "người học",
+      "target": "thái độ",
+      "relation": "ĐÁNH_GIÁ"
+    },
+    {
+      "source": "người học",
+      "target": "nhà trường",
+      "relation": "TRONG"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động chính trị",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động xã hội",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động văn hóa",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động văn nghệ",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động thể thao",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "tội phạm",
+      "relation": "PHÒNG_CHỐNG"
+    },
+    {
+      "source": "người học",
+      "target": "tệ nạn xã hội",
+      "relation": "PHÒNG_CHỐNG"
+    },
+    {
+      "source": "người học",
+      "target": "cán bộ lớp",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "đoàn thể",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "tổ chức",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "cơ sở giáo dục đại học",
+      "relation": "TRONG"
+    },
+    {
+      "source": "người học",
+      "target": "thành tích",
+      "relation": "ĐẠT"
+    },
+    {
+      "source": "điểm rèn luyện",
+      "target": "100 điểm",
+      "relation": "THANG_ĐIỂM"
+    },
+    {
+      "source": "người học",
+      "target": "ý thức",
+      "relation": "ĐÁNH_GIÁ"
+    },
+    {
+      "source": "người học",
+      "target": "thái độ",
+      "relation": "ĐÁNH_GIÁ"
+    },
+    {
+      "source": "người học",
+      "target": "câu lạc bộ học thuật",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động học thuật",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động ngoại khóa",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "nghiên cứu khoa học",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "kỳ thi",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "cuộc thi",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "kết quả học tập",
+      "relation": "CÓ"
+    },
+    {
+      "source": "điểm đánh giá",
+      "target": "20 điểm",
+      "relation": "TỪ_0_ĐẾN"
+    },
+    {
+      "source": "người học",
+      "target": "ngành",
+      "relation": "CỦA"
+    },
+    {
+      "source": "người học",
+      "target": "cơ quan chỉ đạo cấp trên",
+      "relation": "CỦA"
+    },
+    {
+      "source": "người học",
+      "target": "cơ sở giáo dục đại học",
+      "relation": "TRONG"
+    },
+    {
+      "source": "người học",
+      "target": "nội quy",
+      "relation": "CHẤP_HÀNH"
+    },
+    {
+      "source": "người học",
+      "target": "quy chế",
+      "relation": "CHẤP_HÀNH"
+    },
+    {
+      "source": "người học",
+      "target": "quy định",
+      "relation": "CHẤP_HÀNH"
+    },
+    {
+      "source": "điểm đánh giá",
+      "target": "25 điểm",
+      "relation": "TỪ_0_ĐẾN"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động rèn luyện",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động chính trị",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động xã hội",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động văn hóa",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động văn nghệ",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động thể thao",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động công ích",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động tình nguyện",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "công tác xã hội",
+      "relation": "THAM_GIA"
+    },
+    {
+      "source": "người học",
+      "target": "tội phạm",
+      "relation": "PHÒNG_CHỐNG"
+    },
+    {
+      "source": "người học",
+      "target": "tệ nạn xã hội",
+      "relation": "PHÒNG_CHỐNG"
+    },
+    {
+      "source": "điểm đánh giá",
+      "target": "20 điểm",
+      "relation": "TỪ_0_ĐẾN"
+    },
+    {
+      "source": "người học",
+      "target": "Đảng",
+      "relation": "CỦA"
+    },
+    {
+      "source": "người học",
+      "target": "Nhà nước",
+      "relation": "CỦA"
+    },
+    {
+      "source": "người học",
+      "target": "chính sách",
+      "relation": "CHẤP_HÀNH"
+    },
+    {
+      "source": "người học",
+      "target": "pháp luật",
+      "relation": "CHẤP_HÀNH"
+    },
+    {
+      "source": "người học",
+      "target": "thành tích",
+      "relation": "CÓ"
+    },
+    {
+      "source": "điểm đánh giá",
+      "target": "25 điểm",
+      "relation": "TỪ_0_ĐẾN"
+    },
+    {
+      "source": "người học",
+      "target": "Đảng",
+      "relation": "CỦA"
+    },
+    {
+      "source": "người học",
+      "target": "Đoàn thanh niên",
+      "relation": "CỦA"
+    },
+    {
+      "source": "người học",
+      "target": "Hội sinh viên",
+      "relation": "CỦA"
+    },
+    {
+      "source": "người học",
+      "target": "tổ chức",
+      "relation": "CỦA"
+    },
+    {
+      "source": "điểm đánh giá",
+      "target": "10 điểm",
+      "relation": "TỪ_0_ĐẾN"
+    },
+    {
+      "source": "kết quả rèn luyện",
+      "target": "xuất sắc",
+      "relation": "PHÂN_LOẠI"
+    },
+    {
+      "source": "kết quả rèn luyện",
+      "target": "tốt",
+      "relation": "PHÂN_LOẠI"
+    },
+    {
+      "source": "kết quả rèn luyện",
+      "target": "khá",
+      "relation": "PHÂN_LOẠI"
+    },
+    {
+      "source": "kết quả rèn luyện",
+      "target": "trung bình",
+      "relation": "PHÂN_LOẠI"
+    },
+    {
+      "source": "kết quả rèn luyện",
+      "target": "yếu",
+      "relation": "PHÂN_LOẠI"
+    },
+    {
+      "source": "kết quả rèn luyện",
+      "target": "kém",
+      "relation": "PHÂN_LOẠI"
+    },
+    {
+      "source": "xuất sắc",
+      "target": "90 điểm",
+      "relation": "TỪ"
+    },
+    {
+      "source": "xuất sắc",
+      "target": "100 điểm",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "tốt",
+      "target": "80 điểm",
+      "relation": "TỪ"
+    },
+    {
+      "source": "tốt",
+      "target": "90 điểm",
+      "relation": "DƯỚI"
+    },
+    {
+      "source": "khá",
+      "target": "65 điểm",
+      "relation": "TỪ"
+    },
+    {
+      "source": "khá",
+      "target": "80 điểm",
+      "relation": "DƯỚI"
+    },
+    {
+      "source": "trung bình",
+      "target": "50 điểm",
+      "relation": "TỪ"
+    },
+    {
+      "source": "trung bình",
+      "target": "65 điểm",
+      "relation": "DƯỚI"
+    },
+    {
+      "source": "yếu",
+      "target": "35 điểm",
+      "relation": "TỪ"
+    },
+    {
+      "source": "yếu",
+      "target": "50 điểm",
+      "relation": "DƯỚI"
+    },
+    {
+      "source": "kém",
+      "target": "35 điểm",
+      "relation": "DƯỚI"
+    },
+    {
+      "source": "khiển trách",
+      "target": "khá",
+      "relation": "KHÔNG_VƯỢT_QUÁ"
+    },
+    {
+      "source": "cảnh cáo",
+      "target": "trung bình",
+      "relation": "KHÔNG_VƯỢT_QUÁ"
+    },
+    {
+      "source": "đình chỉ học tập",
+      "target": "đánh giá rèn luyện",
+      "relation": "KHÔNG_ĐƯỢC"
+    },
+    {
+      "source": "buộc thôi học",
+      "target": "đánh giá kết quả rèn luyện",
+      "relation": "KHÔNG_ĐƯỢC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "http://sv.hc-muaf.edu.vn/diemrenluyen",
+      "relation": "ĐÁNH_GIÁ_QUA"
+    }
+  ]
+}
