@@ -2,112 +2,134 @@
   "entities": [
     {
       "name": "Nhà trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "năm học",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "Lễ tuyên dương sinh viên tiêu biểu",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "sinh viên tiêu biểu",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "thành tích học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "rèn luyện",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "Danh hiệu sinh viên tiêu biểu",
-      "type": "danh hiệu"
+      "type": "title"
     },
     {
       "name": "kết quả học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "điểm rèn luyện",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "loại khá",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "loại tốt",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "hoạt động Đoàn-Hội SV",
-      "type": "hoạt động"
+      "type": "activity"
     }
   ],
   "relationships": [
     {
       "source": "Nhà trường",
       "target": "Lễ tuyên dương sinh viên tiêu biểu",
-      "relation": "TỔ_CHỨC"
+      "relation": "TỔ_CHỨC",
+      "type_source": "organization",
+      "type_target": "event"
     },
     {
       "source": "Lễ tuyên dương sinh viên tiêu biểu",
       "target": "năm học",
-      "relation": "VÀO_CUỐI"
+      "relation": "VÀO_CUỐI",
+      "type_source": "event",
+      "type_target": "time"
     },
     {
       "source": "Lễ tuyên dương sinh viên tiêu biểu",
       "target": "sinh viên tiêu biểu",
-      "relation": "TUYÊN_DƯƠNG"
+      "relation": "TUYÊN_DƯƠNG",
+      "type_source": "event",
+      "type_target": "person"
     },
     {
       "source": "Lễ tuyên dương sinh viên tiêu biểu",
       "target": "sinh viên",
-      "relation": "KHEN_THƯỞNG"
+      "relation": "KHEN_THƯỞNG",
+      "type_source": "event",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "thành tích học tập",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "rèn luyện",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "Danh hiệu sinh viên tiêu biểu",
       "target": "kết quả học tập",
-      "relation": "CĂN_CỨ"
+      "relation": "CĂN_CỨ",
+      "type_source": "title",
+      "type_target": "concept"
     },
     {
       "source": "Danh hiệu sinh viên tiêu biểu",
       "target": "điểm rèn luyện",
-      "relation": "CĂN_CỨ"
+      "relation": "CĂN_CỨ",
+      "type_source": "title",
+      "type_target": "concept"
     },
     {
       "source": "kết quả học tập",
       "target": "loại khá",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "rèn luyện",
       "target": "loại tốt",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "activity",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên tiêu biểu",
       "target": "hoạt động Đoàn-Hội SV",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "activity"
     }
   ]
 }

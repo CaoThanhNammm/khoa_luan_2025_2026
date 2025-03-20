@@ -1,0 +1,202 @@
+{
+  "entities": [
+    {
+      "name": "Nhân văn",
+      "type": "concept"
+    },
+    {
+      "name": "giá trị truyền thống nhân văn",
+      "type": "concept"
+    },
+    {
+      "name": "dân tộc",
+      "type": "group"
+    },
+    {
+      "name": "Nhân bản",
+      "type": "concept"
+    },
+    {
+      "name": "tài năng",
+      "type": "concept"
+    },
+    {
+      "name": "tính sáng tạo",
+      "type": "concept"
+    },
+    {
+      "name": "kỹ năng",
+      "type": "concept"
+    },
+    {
+      "name": "trách nhiệm nghề nghiệp",
+      "type": "concept"
+    },
+    {
+      "name": "người học",
+      "type": "person"
+    },
+    {
+      "name": "Phục vụ",
+      "type": "concept"
+    },
+    {
+      "name": "lợi ích",
+      "type": "concept"
+    },
+    {
+      "name": "người học",
+      "type": "person"
+    },
+    {
+      "name": "cộng đồng",
+      "type": "group"
+    },
+    {
+      "name": "xã hội học tập",
+      "type": "concept"
+    },
+    {
+      "name": "Đổi mới",
+      "type": "concept"
+    },
+    {
+      "name": "chất lượng",
+      "type": "concept"
+    },
+    {
+      "name": "hiệu quả",
+      "type": "concept"
+    },
+    {
+      "name": "nhà trường",
+      "type": "organization"
+    },
+    {
+      "name": "Hội nhập",
+      "type": "concept"
+    },
+    {
+      "name": "hợp tác",
+      "type": "activity"
+    },
+    {
+      "name": "chia sẻ",
+      "type": "activity"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Nhân văn",
+      "target": "giá trị truyền thống nhân văn",
+      "relation": "GÌN_GIỮ_VÀ_PHÁT_HUY",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "giá trị truyền thống nhân văn",
+      "target": "dân tộc",
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "group"
+    },
+    {
+      "source": "Nhân bản",
+      "target": "tài năng",
+      "relation": "PHÁT_HIỆN",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "Nhân bản",
+      "target": "tính sáng tạo",
+      "relation": "NÂNG_ĐỠ",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "Nhân bản",
+      "target": "kỹ năng",
+      "relation": "ĐÀO_TẠO",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "Nhân bản",
+      "target": "trách nhiệm nghề nghiệp",
+      "relation": "ĐÀO_TẠO",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "Nhân bản",
+      "target": "người học",
+      "relation": "CHO",
+      "type_source": "concept",
+      "type_target": "person"
+    },
+    {
+      "source": "Phục vụ",
+      "target": "lợi ích",
+      "relation": "TÔN_TRỌNG",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "lợi ích",
+      "target": "người học",
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "person"
+    },
+    {
+      "source": "lợi ích",
+      "target": "cộng đồng",
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "group"
+    },
+    {
+      "source": "Phục vụ",
+      "target": "xã hội học tập",
+      "relation": "XÂY_DỰNG",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "Đổi mới",
+      "target": "chất lượng",
+      "relation": "ĐỀ_CAO",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "Đổi mới",
+      "target": "hiệu quả",
+      "relation": "ĐỀ_CAO",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "Đổi mới",
+      "target": "nhà trường",
+      "relation": "HOẠT_ĐỘNG_CỦA",
+      "type_source": "concept",
+      "type_target": "organization"
+    },
+    {
+      "source": "Hội nhập",
+      "target": "hợp tác",
+      "relation": "VÀ",
+      "type_source": "concept",
+      "type_target": "activity"
+    },
+    {
+      "source": "Hội nhập",
+      "target": "chia sẻ",
+      "relation": "VÀ",
+      "type_source": "concept",
+      "type_target": "activity"
+    }
+  ]
+}

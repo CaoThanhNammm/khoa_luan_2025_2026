@@ -2,810 +2,1004 @@
   "entities": [
     {
       "name": "Khiển trách",
-      "type": "hình thức kỷ luật"
+      "type": "disciplinary_action"
     },
     {
       "name": "giờ học",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "giờ thực tập",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "5-10 điểm rèn luyện",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "thầy, cô giáo",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "CBVC nhà trường",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "buộc thôi học",
-      "type": "hình thức kỷ luật"
+      "type": "disciplinary_action"
     },
     {
       "name": "thi",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "kiểm tra",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "tiểu luận",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "đồ án",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "khóa luận tốt nghiệp",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "cơ quan chức năng",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "pháp luật",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "phòng thi",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "đề thi",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "bài thi",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "học phí",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "bảo hiểm y tế",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "KTX",
-      "type": "viết tắt"
+      "type": "abbreviation"
     },
     {
       "name": "tài sản",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "rượu, bia",
-      "type": "đồ uống"
-    },
-    {
-      "name": "giờ học",
-      "type": "thời gian"
+      "type": "beverage"
     },
     {
       "name": "cảnh cáo",
-      "type": "hình thức kỷ luật"
+      "type": "disciplinary_action"
     },
     {
       "name": "đình chỉ có thời hạn",
-      "type": "hình thức kỷ luật"
+      "type": "disciplinary_action"
     },
     {
       "name": "thuốc lá",
-      "type": "vật phẩm"
+      "type": "item"
     },
     {
       "name": "phòng họp",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "phòng thí nghiệm",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "đánh bạc",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "sản phẩm văn hóa đồi trụy",
-      "type": "sản phẩm"
+      "type": "product"
     },
     {
       "name": "hoạt động mê tín dị đoan",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "hoạt động tôn giáo trái phép",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "ma túy",
-      "type": "vật phẩm"
+      "type": "item"
     },
     {
       "name": "mại dâm",
-      "type": "hoạt động"
-    },
-    {
-      "name": "tài sản",
-      "type": "khái niệm"
+      "type": "activity"
     },
     {
       "name": "vũ khí",
-      "type": "vật phẩm"
+      "type": "item"
     },
     {
       "name": "chất nổ",
-      "type": "vật phẩm"
+      "type": "item"
     },
     {
       "name": "hàng cấm",
-      "type": "vật phẩm"
+      "type": "item"
     },
     {
       "name": "Nhà nước",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "phần tử xấu",
-      "type": "người"
-    },
-    {
-      "name": "KTX",
-      "type": "viết tắt"
+      "type": "person"
     },
     {
       "name": "đánh nhau",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "biểu tình",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "truyền đơn",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "áp phích",
-      "type": "văn bản"
-    },
-    {
-      "name": "pháp luật",
-      "type": "khái niệm"
+      "type": "document"
     },
     {
       "name": "bài viết",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "hình ảnh",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "an ninh quốc gia",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Đảng",
-      "type": "tổ chức"
-    },
-    {
-      "name": "Nhà nước",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Internet",
-      "type": "mạng lưới"
-    },
-    {
-      "name": "cơ quan chức năng",
-      "type": "tổ chức"
+      "type": "network"
     },
     {
       "name": "quấy rối",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "dâm ô",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "an toàn giao thông",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "hồ sơ",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "văn bằng",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "chứng chỉ",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "văn bằng tốt nghiệp",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "nhà trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Trung bình",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "lần 1",
-      "type": "số lần"
+      "type": "frequency"
     },
     {
       "name": "lần 2",
-      "type": "số lần"
+      "type": "frequency"
     },
     {
       "name": "lần 3",
-      "type": "số lần"
+      "type": "frequency"
     }
   ],
   "relationships": [
     {
       "source": "Khiển trách",
       "target": "giờ học",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "time"
     },
     {
       "source": "Khiển trách",
       "target": "giờ thực tập",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "time"
     },
     {
       "source": "Khiển trách",
       "target": "5-10 điểm rèn luyện",
-      "relation": "TRỪ"
+      "relation": "TRỪ",
+      "type_source": "disciplinary_action",
+      "type_target": "quantity"
     },
     {
       "source": "Khiển trách",
       "target": "thầy, cô giáo",
-      "relation": "VÔ_LỄ"
+      "relation": "VÔ_LỄ",
+      "type_source": "disciplinary_action",
+      "type_target": "person"
     },
     {
       "source": "Khiển trách",
       "target": "CBVC nhà trường",
-      "relation": "VÔ_LỄ"
+      "relation": "VÔ_LỄ",
+      "type_source": "disciplinary_action",
+      "type_target": "person"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "học thay",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "activity"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "thi",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "event"
     },
     {
       "source": "Khiển trách",
       "target": "kiểm tra",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "event"
     },
     {
       "source": "Khiển trách",
       "target": "tiểu luận",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "đồ án",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "khóa luận tốt nghiệp",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "LẦN_1"
+      "relation": "LẦN_1",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "phòng thi",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "location"
     },
     {
       "source": "Khiển trách",
       "target": "đề thi",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "bài thi",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "Trung bình",
-      "relation": "HẠ_ĐIỂM"
+      "relation": "HẠ_ĐIỂM",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "học phí",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "bảo hiểm y tế",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "KTX",
-      "relation": "TÀI_SẢN_TRONG"
+      "relation": "TÀI_SẢN_TRONG",
+      "type_source": "disciplinary_action",
+      "type_target": "abbreviation"
     },
     {
       "source": "Khiển trách",
       "target": "tài sản",
-      "relation": "LÀM_HƯ_HỎNG"
+      "relation": "LÀM_HƯ_HỎNG",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "bồi thường",
-      "relation": "PHẢI"
+      "relation": "PHẢI",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "rượu, bia",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "beverage"
     },
     {
       "source": "Khiển trách",
       "target": "cảnh cáo",
-      "relation": "LẦN_1"
+      "relation": "LẦN_1",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "đình chỉ có thời hạn",
-      "relation": "LẦN_2"
+      "relation": "LẦN_2",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "LẦN_3"
+      "relation": "LẦN_3",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "thuốc lá",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "item"
     },
     {
       "source": "Khiển trách",
       "target": "cảnh cáo",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "đánh bạc",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "activity"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "cảnh cáo",
-      "relation": "LẦN_1"
+      "relation": "LẦN_1",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "đình chỉ có thời hạn",
-      "relation": "LẦN_2"
+      "relation": "LẦN_2",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "LẦN_3"
+      "relation": "LẦN_3",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "sản phẩm văn hóa đồi trụy",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "product"
     },
     {
       "source": "Khiển trách",
       "target": "hoạt động mê tín dị đoan",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "activity"
     },
     {
       "source": "Khiển trách",
       "target": "hoạt động tôn giáo trái phép",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "activity"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "cảnh cáo",
-      "relation": "LẦN_1"
+      "relation": "LẦN_1",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "đình chỉ có thời hạn",
-      "relation": "LẦN_2"
+      "relation": "LẦN_2",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "LẦN_3"
+      "relation": "LẦN_3",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "ma túy",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "item"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "mại dâm",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "activity"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "tài sản",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "vũ khí",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "item"
     },
     {
       "source": "Khiển trách",
       "target": "chất nổ",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "item"
     },
     {
       "source": "Khiển trách",
       "target": "hàng cấm",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "item"
     },
     {
       "source": "Khiển trách",
       "target": "Nhà nước",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "phần tử xấu",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "person"
     },
     {
       "source": "Khiển trách",
       "target": "KTX",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "disciplinary_action",
+      "type_target": "abbreviation"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "đánh nhau",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "activity"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "đình chỉ có thời hạn",
-      "relation": "LẦN_1"
+      "relation": "LẦN_1",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "LẦN_2"
+      "relation": "LẦN_2",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "biểu tình",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "activity"
     },
     {
       "source": "Khiển trách",
       "target": "truyền đơn",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "áp phích",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "TRÁI"
+      "relation": "TRÁI",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "LẦN_1"
+      "relation": "LẦN_1",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "biểu tình",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "activity"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "cảnh cáo",
-      "relation": "LẦN_1"
+      "relation": "LẦN_1",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "đình chỉ có thời hạn",
-      "relation": "LẦN_2"
+      "relation": "LẦN_2",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "LẦN_3"
+      "relation": "LẦN_3",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "bài viết",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "hình ảnh",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "an ninh quốc gia",
-      "relation": "XÂM_PHẠM"
+      "relation": "XÂM_PHẠM",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "Đảng",
-      "relation": "CHỐNG_PHÁ"
+      "relation": "CHỐNG_PHÁ",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "Nhà nước",
-      "relation": "CHỐNG_PHÁ"
+      "relation": "CHỐNG_PHÁ",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "Internet",
-      "relation": "TRÊN"
+      "relation": "TRÊN",
+      "type_source": "disciplinary_action",
+      "type_target": "network"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "quấy rối",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "activity"
     },
     {
       "source": "Khiển trách",
       "target": "dâm ô",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "activity"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "cơ quan chức năng",
-      "relation": "GIAO_CHO"
+      "relation": "GIAO_CHO",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "an toàn giao thông",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "concept"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "Khiển trách",
       "target": "hồ sơ",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "văn bằng",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "chứng chỉ",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "văn bằng tốt nghiệp",
-      "relation": "THU_HỒI"
+      "relation": "THU_HỒI",
+      "type_source": "disciplinary_action",
+      "type_target": "document"
     },
     {
       "source": "Khiển trách",
       "target": "nhà trường",
-      "relation": "XEM_XÉT"
+      "relation": "XEM_XÉT",
+      "type_source": "disciplinary_action",
+      "type_target": "organization"
     },
     {
       "source": "Khiển trách",
       "target": "buộc thôi học",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "disciplinary_action",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "lần 1",
       "target": "cảnh cáo",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "frequency",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "lần 2",
       "target": "đình chỉ có thời hạn",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "frequency",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "lần 3",
       "target": "buộc thôi học",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "frequency",
+      "type_target": "disciplinary_action"
     }
   ]
 }

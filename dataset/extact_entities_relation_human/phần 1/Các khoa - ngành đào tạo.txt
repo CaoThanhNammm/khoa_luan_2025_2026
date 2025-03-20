@@ -2,529 +2,649 @@
   "entities": [
     {
       "name": "Trường Đại học Nông Lâm TP. HCM (NLS)",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "ngành Công nghệ kỹ thuật cơ khí",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Cơ khí - Công nghệ",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Công nghệ kỹ thuật cơ điện tử",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Công nghệ kỹ thuật ôtô",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Công nghệ kỹ thuật nhiệt",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Kỹ thuật điều khiển và tự động hóa",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Công nghệ kỹ thuật năng lượng tái tạo",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa cơ khí - công nghệ",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "ngành Công nghệ Thông tin",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa Công nghệ Thông tin",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "ngành quả lý đất đai",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "bất động sản",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa quản lý đất đai và bất động sản",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "ngành Công nghệ chế biến lâm sản",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Lâm học",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Quản lý tài nguyên rừng",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Lâm nghiệp đô thị",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa lâm nghiệp",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "ngành Công nghệ kỹ thuật hóa học",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Công nghệ thực phẩm",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa công nghệ hóa học và thực phẩm",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "ngành chăn nuôi",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "thú y",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa chăn nuôi – thú y",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "ngành nông học",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "bảo vệ thực vật",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa nông hoc",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "ngành Khoa học sinh học",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
-      "name": "khoa công nghệ sin học",
-      "type": "khoa"
+      "name": "khoa công nghệ sinh học",
+      "type": "faculty"
     },
     {
       "name": "ngành Kỹ thuật Môi trường",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Quản lý tài nguyên và môi trường",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Khoa học Môi trường",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Hệ thống thông tin",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Tài nguyên và du lịch sinh thái",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Cảnh quan và kỹ thuật hoa viên",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa Môi trường và Tài nguyên",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "ngành Nuôi trồng thủy sản",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Công nghệ chế biến thủy sản",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa thủy sản",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "ngành Sư phạm kỹ thuật nông nghiệp",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Ngôn ngữ Anh",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa Ngoại ngữ - Sư phạm",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "ngành Kinh tế",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Quản trị kinh doanh",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Kinh doanh nông nghiệp",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Phát triển nông thôn",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Kế toán",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "khoa kinh tế",
-      "type": "khoa"
+      "type": "faculty"
     },
     {
       "name": "Bác sĩ thú y",
-      "type": "chương trình đào tạo"
+      "type": "training_program"
     },
     {
       "name": "chương trình tiên tiến",
-      "type": "loại chương trình"
+      "type": "program_type"
     },
     {
       "name": "chương trình nâng cao",
-      "type": "loại chương trình"
+      "type": "program_type"
     },
     {
       "name": "Phân hiệu Gia Lai (NLG)",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Phân hiệu Ninh Thuận (NLN)",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Giáo dục Mầm non (Trình độ Cao đẳng)",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     },
     {
       "name": "Giáo dục Mầm non (Trình độ Đại học)",
-      "type": "ngành đào tạo"
+      "type": "training_program"
     }
   ],
-  "relationships": [
+"relationships": [
     {
       "source": "ngành Công nghệ kỹ thuật cơ khí",
       "target": "khoa cơ khí - công nghệ",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Cơ khí - Công nghệ",
       "target": "khoa cơ khí - công nghệ",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Công nghệ kỹ thuật cơ điện tử",
       "target": "khoa cơ khí - công nghệ",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Công nghệ kỹ thuật ôtô",
       "target": "khoa cơ khí - công nghệ",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Công nghệ kỹ thuật nhiệt",
       "target": "khoa cơ khí - công nghệ",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Kỹ thuật điều khiển và tự động hóa",
       "target": "khoa cơ khí - công nghệ",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Công nghệ kỹ thuật năng lượng tái tạo",
       "target": "khoa cơ khí - công nghệ",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành Công nghệ Thông tin",
       "target": "khoa Công nghệ Thông tin",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành quả lý đất đai",
       "target": "khoa quản lý đất đai và bất động sản",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "bất động sản",
       "target": "khoa quản lý đất đai và bất động sản",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành Công nghệ chế biến lâm sản",
       "target": "khoa lâm nghiệp",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Lâm học",
       "target": "khoa lâm nghiệp",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Quản lý tài nguyên rừng",
       "target": "khoa lâm nghiệp",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Lâm nghiệp đô thị",
       "target": "khoa lâm nghiệp",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành Công nghệ kỹ thuật hóa học",
       "target": "khoa công nghệ hóa học và thực phẩm",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Công nghệ thực phẩm",
       "target": "khoa công nghệ hóa học và thực phẩm",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành chăn nuôi",
       "target": "khoa chăn nuôi – thú y",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "thú y",
       "target": "khoa chăn nuôi – thú y",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành nông học",
       "target": "khoa nông hoc",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "bảo vệ thực vật",
       "target": "khoa nông hoc",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành Khoa học sinh học",
-      "target": "khoa công nghệ sin học",
-      "relation": "THUỘC_KHOA"
+      "target": "khoa công nghệ sinh học",
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành Kỹ thuật Môi trường",
       "target": "khoa Môi trường và Tài nguyên",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Quản lý tài nguyên và môi trường",
       "target": "khoa Môi trường và Tài nguyên",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Khoa học Môi trường",
       "target": "khoa Môi trường và Tài nguyên",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Hệ thống thông tin",
       "target": "khoa Môi trường và Tài nguyên",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Tài nguyên và du lịch sinh thái",
       "target": "khoa Môi trường và Tài nguyên",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Cảnh quan và kỹ thuật hoa viên",
       "target": "khoa Môi trường và Tài nguyên",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành Nuôi trồng thủy sản",
       "target": "khoa thủy sản",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Công nghệ chế biến thủy sản",
       "target": "khoa thủy sản",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành Sư phạm kỹ thuật nông nghiệp",
       "target": "khoa Ngoại ngữ - Sư phạm",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Ngôn ngữ Anh",
       "target": "khoa Ngoại ngữ - Sư phạm",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "ngành Kinh tế",
       "target": "khoa kinh tế",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Quản trị kinh doanh",
       "target": "khoa kinh tế",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Kinh doanh nông nghiệp",
       "target": "khoa kinh tế",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Phát triển nông thôn",
       "target": "khoa kinh tế",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Kế toán",
       "target": "khoa kinh tế",
-      "relation": "THUỘC_KHOA"
+      "relation": "THUỘC_KHOA",
+      "type_source": "training_program",
+      "type_target": "faculty"
     },
     {
       "source": "Bác sĩ thú y",
       "target": "Trường Đại học Nông Lâm TP. HCM (NLS)",
-      "relation": "CHƯƠNG_TRÌNH_TIÊN_TIẾN_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_TIÊN_TIẾN_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Công nghệ thực phẩm",
       "target": "Trường Đại học Nông Lâm TP. HCM (NLS)",
-      "relation": "CHƯƠNG_TRÌNH_TIÊN_TIẾN_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_TIÊN_TIẾN_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Quản trị kinh doanh",
       "target": "Trường Đại học Nông Lâm TP. HCM (NLS)",
-      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Công nghệ sinh học",
       "target": "Trường Đại học Nông Lâm TP. HCM (NLS)",
-      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Công nghệ kỹ thuật cơ khí",
       "target": "Trường Đại học Nông Lâm TP. HCM (NLS)",
-      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Công nghệ thực phẩm",
       "target": "Trường Đại học Nông Lâm TP. HCM (NLS)",
-      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Công nghệ kỹ thuật hóa học",
       "target": "Trường Đại học Nông Lâm TP. HCM (NLS)",
-      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Chăn nuôi",
       "target": "Trường Đại học Nông Lâm TP. HCM (NLS)",
-      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_NÂNG_CAO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Quản trị kinh doanh",
       "target": "Phân hiệu Gia Lai (NLG)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "bất động sản",
       "target": "Phân hiệu Gia Lai (NLG)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Kế toán",
       "target": "Phân hiệu Gia Lai (NLG)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Công nghệ sinh học",
       "target": "Phân hiệu Gia Lai (NLG)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Nông học",
       "target": "Phân hiệu Gia Lai (NLG)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Lâm nghiệp đô thị",
       "target": "Phân hiệu Gia Lai (NLG)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "thú y",
       "target": "Phân hiệu Gia Lai (NLG)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Tài nguyên và du lịch sinh thái",
       "target": "Phân hiệu Gia Lai (NLG)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Giáo dục Mầm non (Trình độ Cao đẳng)",
       "target": "Phân hiệu Ninh Thuận (NLN)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Giáo dục Mầm non (Trình độ Đại học)",
       "target": "Phân hiệu Ninh Thuận (NLN)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Ngôn ngữ Anh",
       "target": "Phân hiệu Ninh Thuận (NLN)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Quản trị kinh doanh",
       "target": "Phân hiệu Ninh Thuận (NLN)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Kế toán",
       "target": "Phân hiệu Ninh Thuận (NLN)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Công nghệ thông tin",
       "target": "Phân hiệu Ninh Thuận (NLN)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "Công nghệ kỹ thuật năng lượng tái tạo",
       "target": "Phân hiệu Ninh Thuận (NLN)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     },
     {
       "source": "thú y",
       "target": "Phân hiệu Ninh Thuận (NLN)",
-      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI"
+      "relation": "CHƯƠNG_TRÌNH_ĐÀO_TẠO_TẠI",
+      "type_source": "training_program",
+      "type_target": "organization"
     }
   ]
 }

@@ -2,18 +2,156 @@
   "entities": [
     {
       "name": "Trường Đại học Nông Lâm TP.HCM",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Việt Nam",
-      "type": "địa điểm"
+      "type": "location"
+    },
+    {
+      "name": "trường đại học đa ngành",
+      "type": "type_of_organization"
+    },
+    {
+      "name": "nguồn nhân lực",
+      "type": "concept"
+    },
+    {
+      "name": "chuyên môn",
+      "type": "concept"
+    },
+    {
+      "name": "tư duy sáng tạo",
+      "type": "concept"
+    },
+    {
+      "name": "nghiên cứu",
+      "type": "activity"
+    },
+    {
+      "name": "phát triển",
+      "type": "activity"
+    },
+    {
+      "name": "phổ biến",
+      "type": "activity"
+    },
+    {
+      "name": "chuyển giao tri thức",
+      "type": "activity"
+    },
+    {
+      "name": "công nghệ",
+      "type": "concept"
+    },
+    {
+      "name": "phát triển bền vững",
+      "type": "concept"
+    },
+    {
+      "name": "kinh tế - xã hội",
+      "type": "concept"
+    },
+    {
+      "name": "Việt Nam",
+      "type": "location"
+    },
+    {
+      "name": "khu vực",
+      "type": "location"
     }
   ],
   "relationships": [
     {
       "source": "Trường Đại học Nông Lâm TP.HCM",
       "target": "Việt Nam",
-      "relation": "PHỤC_VỤ"
+      "relation": "PHỤC_VỤ",
+      "type_source": "organization",
+      "type_target": "location"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "trường đại học đa ngành",
+      "relation": "LÀ",
+      "type_source": "organization",
+      "type_target": "type_of_organization"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "nguồn nhân lực",
+      "relation": "ĐÀO_TẠO",
+      "type_source": "organization",
+      "type_target": "concept"
+    },
+    {
+      "source": "nguồn nhân lực",
+      "target": "chuyên môn",
+      "relation": "CÓ",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "nguồn nhân lực",
+      "target": "tư duy sáng tạo",
+      "relation": "CÓ",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "nghiên cứu",
+      "target": "phát triển",
+      "relation": "VÀ",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "nghiên cứu",
+      "target": "phổ biến",
+      "relation": "VÀ",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "nghiên cứu",
+      "target": "chuyển giao tri thức",
+      "relation": "VÀ",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "chuyển giao tri thức",
+      "target": "công nghệ",
+      "relation": "VÀ",
+      "type_source": "activity",
+      "type_target": "concept"
+    },
+    {
+      "source": "nghiên cứu",
+      "target": "phát triển bền vững",
+      "relation": "ĐÁP_ỨNG",
+      "type_source": "activity",
+      "type_target": "concept"
+    },
+    {
+      "source": "phát triển bền vững",
+      "target": "kinh tế - xã hội",
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
+    },
+    {
+      "source": "kinh tế - xã hội",
+      "target": "Việt Nam",
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "location"
+    },
+    {
+      "source": "kinh tế - xã hội",
+      "target": "khu vực",
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "location"
     }
   ]
 }

@@ -2,15 +2,15 @@
   "entities": [
     {
       "name": "Trường Đại học Nông Lâm TP.HCM",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Khu phố 22-23, Phường Linh Trung, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "0283.896.6780",
-      "type": "số điện thoại"
+      "type": "phone_number"
     },
     {
       "name": "https://www.hcmuaf.edu.vn",
@@ -22,15 +22,15 @@
     },
     {
       "name": "Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Ninh Thuận",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Số 8 đường Yên Ninh, Thị trấn Khánh Hải, Huyện Ninh Hải, Tỉnh Ninh Thuận",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "0259.2472.252",
-      "type": "số điện thoại"
+      "type": "phone_number"
     },
     {
       "name": "https://phnt.hcmuaf.edu.vn/",
@@ -42,15 +42,15 @@
     },
     {
       "name": "Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Gia Lai",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Đường Trần Nhật Duật, Thông 01, Xã Diên Phú, Thành phố Pleiku, Tỉnh Gia Lai",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "0269.3877.035",
-      "type": "số điện thoại"
+      "type": "phone_number"
     },
     {
       "name": "https://phgl.hcmuaf.edu.vn/",
@@ -65,62 +65,86 @@
     {
       "source": "Trường Đại học Nông Lâm TP.HCM",
       "target": "Khu phố 22-23, Phường Linh Trung, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
-      "relation": "ĐỊA_CHỈ"
+      "relation": "ĐỊA_CHỈ",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "Trường Đại học Nông Lâm TP.HCM",
       "target": "0283.896.6780",
-      "relation": "SỐ_ĐIỆN_THOẠI"
+      "relation": "SỐ_ĐIỆN_THOẠI",
+      "type_source": "organization",
+      "type_target": "phone_number"
     },
     {
       "source": "Trường Đại học Nông Lâm TP.HCM",
       "target": "https://www.hcmuaf.edu.vn",
-      "relation": "WEBSITE"
+      "relation": "WEBSITE",
+      "type_source": "organization",
+      "type_target": "website"
     },
     {
       "source": "Trường Đại học Nông Lâm TP.HCM",
       "target": "vphanhchinh@hcmuaf.edu.vn",
-      "relation": "EMAIL"
+      "relation": "EMAIL",
+      "type_source": "organization",
+      "type_target": "email"
     },
     {
       "source": "Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Ninh Thuận",
       "target": "Số 8 đường Yên Ninh, Thị trấn Khánh Hải, Huyện Ninh Hải, Tỉnh Ninh Thuận",
-      "relation": "ĐỊA_CHỈ"
+      "relation": "ĐỊA_CHỈ",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Ninh Thuận",
       "target": "0259.2472.252",
-      "relation": "SỐ_ĐIỆN_THOẠI"
+      "relation": "SỐ_ĐIỆN_THOẠI",
+      "type_source": "organization",
+      "type_target": "phone_number"
     },
     {
       "source": "Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Ninh Thuận",
       "target": "https://phnt.hcmuaf.edu.vn/",
-      "relation": "WEBSITE"
+      "relation": "WEBSITE",
+      "type_source": "organization",
+      "type_target": "website"
     },
     {
       "source": "Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Ninh Thuận",
       "target": "phnt@hcmuaf.edu.vn",
-      "relation": "EMAIL"
+      "relation": "EMAIL",
+      "type_source": "organization",
+      "type_target": "email"
     },
     {
       "source": "Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Gia Lai",
       "target": "Đường Trần Nhật Duật, Thông 01, Xã Diên Phú, Thành phố Pleiku, Tỉnh Gia Lai",
-      "relation": "ĐỊA_CHỈ"
+      "relation": "ĐỊA_CHỈ",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Gia Lai",
       "target": "0269.3877.035",
-      "relation": "SỐ_ĐIỆN_THOẠI"
+      "relation": "SỐ_ĐIỆN_THOẠI",
+      "type_source": "organization",
+      "type_target": "phone_number"
     },
     {
       "source": "Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Gia Lai",
       "target": "https://phgl.hcmuaf.edu.vn/",
-      "relation": "WEBSITE"
+      "relation": "WEBSITE",
+      "type_source": "organization",
+      "type_target": "website"
     },
     {
       "source": "Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Gia Lai",
       "target": "phgl@hcmuaf.edu.vn",
-      "relation": "EMAIL"
+      "relation": "EMAIL",
+      "type_source": "organization",
+      "type_target": "email"
     }
   ]
 }

@@ -2,63 +2,63 @@
   "entities": [
     {
       "name": "giấy tờ",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Vay vốn ngân hàng chính sách xã hội",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Tạm hoãn nghĩa vụ quân sự",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Đi xe buýt",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ nhận trợ cấp",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ làm lại thẻ sinh viên",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ thuế cho người thân",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ thi học kỳ",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ thi acces",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ lý lịch cá nhân",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ nhận học bổng",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ giảm trừ gia cảnh",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ đi làm",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "Bổ sung hồ sơ đi thực tập",
-      "type": "loại giấy tờ"
+      "type": "document_type"
     },
     {
       "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
@@ -66,31 +66,31 @@
     },
     {
       "name": "trình duyệt web",
-      "type": "phần mềm"
+      "type": "software"
     },
     {
       "name": "internet",
-      "type": "mạng lưới"
+      "type": "network"
     },
     {
       "name": "máy tính để bàn",
-      "type": "thiết bị"
+      "type": "device"
     },
     {
       "name": "máy tính xách tay",
-      "type": "thiết bị"
+      "type": "device"
     },
     {
       "name": "máy tính bảng",
-      "type": "thiết bị"
+      "type": "device"
     },
     {
       "name": "điện thoại di động",
-      "type": "thiết bị"
+      "type": "device"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
@@ -98,207 +98,275 @@
     },
     {
       "name": "thông tin cá nhân",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "giấy xác nhận",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "cán bộ phòng Công tác Sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "phòng Công tác sinh viên",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "thời gian",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "hệ thống",
-      "type": "hệ thống"
+      "type": "system"
     },
     {
       "name": "bước 4",
-      "type": "thứ tự"
+      "type": "sequence"
     }
   ],
   "relationships": [
     {
       "source": "giấy tờ",
       "target": "Vay vốn ngân hàng chính sách xã hội",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Tạm hoãn nghĩa vụ quân sự",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Đi xe buýt",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ nhận trợ cấp",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ làm lại thẻ sinh viên",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ thuế cho người thân",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ thi học kỳ",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ thi acces",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ lý lịch cá nhân",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ nhận học bổng",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ giảm trừ gia cảnh",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ đi làm",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "giấy tờ",
       "target": "Bổ sung hồ sơ đi thực tập",
-      "relation": "LOẠI"
+      "relation": "LOẠI",
+      "type_source": "document",
+      "type_target": "document_type"
     },
     {
       "source": "đăng ký",
       "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "activity",
+      "type_target": "website"
     },
     {
       "source": "đăng ký",
       "target": "trình duyệt web",
-      "relation": "SỬ_DỤNG"
+      "relation": "SỬ_DỤNG",
+      "type_source": "activity",
+      "type_target": "software"
     },
     {
       "source": "đăng ký",
       "target": "internet",
-      "relation": "TRUY_CẬP"
+      "relation": "TRUY_CẬP",
+      "type_source": "activity",
+      "type_target": "network"
     },
     {
       "source": "đăng ký",
       "target": "máy tính để bàn",
-      "relation": "TRÊN"
+      "relation": "TRÊN",
+      "type_source": "activity",
+      "type_target": "device"
     },
     {
       "source": "đăng ký",
       "target": "máy tính xách tay",
-      "relation": "TRÊN"
+      "relation": "TRÊN",
+      "type_source": "activity",
+      "type_target": "device"
     },
     {
       "source": "đăng ký",
       "target": "máy tính bảng",
-      "relation": "TRÊN"
+      "relation": "TRÊN",
+      "type_source": "activity",
+      "type_target": "device"
     },
     {
       "source": "đăng ký",
       "target": "điện thoại di động",
-      "relation": "TRÊN"
+      "relation": "TRÊN",
+      "type_source": "activity",
+      "type_target": "device"
     },
     {
       "source": "sinh viên",
       "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
-      "relation": "TRUY_CẬP"
+      "relation": "TRUY_CẬP",
+      "type_source": "person",
+      "type_target": "website"
     },
     {
       "source": "sinh viên",
       "target": "hệ thống",
-      "relation": "ĐĂNG_NHẬP"
+      "relation": "ĐĂNG_NHẬP",
+      "type_source": "person",
+      "type_target": "system"
     },
     {
       "source": "sinh viên",
       "target": "thông tin cá nhân",
-      "relation": "KIỂM_TRA"
+      "relation": "KIỂM_TRA",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "thông tin",
-      "relation": "BỔ_SUNG"
+      "relation": "BỔ_SUNG",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "thông tin",
-      "relation": "CẬP_NHẬT"
+      "relation": "CẬP_NHẬT",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "giấy xác nhận",
-      "relation": "ĐĂNG_KÝ"
+      "relation": "ĐĂNG_KÝ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "cán bộ phòng Công tác Sinh viên",
       "target": "giấy xác nhận",
-      "relation": "IN"
+      "relation": "IN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "cán bộ phòng Công tác Sinh viên",
       "target": "giấy xác nhận",
-      "relation": "TRÌNH_KÝ"
+      "relation": "TRÌNH_KÝ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "cán bộ phòng Công tác Sinh viên",
       "target": "giấy xác nhận",
-      "relation": "ĐÓNG_DẤU"
+      "relation": "ĐÓNG_DẤU",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "giấy xác nhận",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "phòng Công tác sinh viên",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "thời gian",
       "target": "hệ thống",
-      "relation": "THÔNG_BÁO"
+      "relation": "THÔNG_BÁO",
+      "type_source": "time",
+      "type_target": "system"
     },
     {
       "source": "bước 4",
       "target": "thời gian",
-      "relation": "Ở"
+      "relation": "Ở",
+      "type_source": "sequence",
+      "type_target": "time"
     }
   ]
 }

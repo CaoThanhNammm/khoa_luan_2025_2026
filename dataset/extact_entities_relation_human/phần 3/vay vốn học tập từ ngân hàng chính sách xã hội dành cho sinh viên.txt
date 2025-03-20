@@ -2,219 +2,219 @@
   "entities": [
     {
       "name": "Quỹ Tín dụng học tập",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "1998",
-      "type": "năm"
+      "type": "year"
     },
     {
       "name": "hoàn cảnh khó khăn",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Ngân hàng Chính sách Xã hội (NHCSXH)",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "vốn vay",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "học tập",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "sinh hoạt",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "học phí",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "phương tiện học tập",
-      "type": "vật phẩm"
+      "type": "item"
     },
     {
       "name": "sách vở",
-      "type": "vật phẩm"
+      "type": "item"
     },
     {
       "name": "ăn, ở, đi lại",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "Trường Đại học Nông Lâm TP.HCM",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "3.000 sinh viên",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "hồ sơ",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "sinh viên mồ côi",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "hộ gia đình",
-      "type": "nhóm người"
+      "type": "group_of_people"
     },
     {
       "name": "hộ cận nghèo",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "hộ nghèo",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "mức sống trung bình",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "pháp luật",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "gia đình",
-      "type": "nhóm người"
+      "type": "group_of_people"
     },
     {
       "name": "bệnh tật",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "tai nạn",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "hỏa hoạn",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "thiên tai",
-      "type": "hiện tượng tự nhiên"
+      "type": "natural_phenomenon"
     },
     {
       "name": "dịch bệnh",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Ủy ban nhân dân xã, phường, thị trấn",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "học sinh, sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "hộ gia đình",
-      "type": "nhóm người"
+      "type": "group_of_people"
     },
     {
       "name": "địa phương",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "sinh viên năm nhất",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "giấy báo trúng tuyển",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "giấy xác nhận",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "nhà trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "giấy xác nhận",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "cờ bạc",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "nghiện hút",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "trộm cắp",
-      "type": "tội phạm"
+      "type": "crime"
     },
     {
       "name": "buôn lậu",
-      "type": "tội phạm"
+      "type": "crime"
     },
     {
       "name": "4.000.000 đ/tháng/sinh viên",
-      "type": "số tiền"
+      "type": "amount"
     },
     {
       "name": "0,65%/tháng",
-      "type": "tỉ lệ"
+      "type": "percentage"
     },
     {
       "name": "130%",
-      "type": "tỉ lệ"
+      "type": "percentage"
     },
     {
       "name": "hộ gia đình",
-      "type": "nhóm người"
+      "type": "group_of_people"
     },
     {
       "name": "Ngân hàng Chính sách Xã hội",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "sinh viên mồ côi",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Ngân hàng Chính sách Xã hội",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "địa phương",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "nhà trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Giấy xác nhận vay vốn",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
@@ -225,287 +225,401 @@
     {
       "source": "Quỹ Tín dụng học tập",
       "target": "sinh viên",
-      "relation": "DÀNH_CHO"
+      "relation": "DÀNH_CHO",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "Quỹ Tín dụng học tập",
       "target": "1998",
-      "relation": "THÀNH_LẬP_TỪ"
+      "relation": "THÀNH_LẬP_TỪ",
+      "type_source": "organization",
+      "type_target": "year"
     },
     {
       "source": "sinh viên",
       "target": "hoàn cảnh khó khăn",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "vốn vay",
-      "relation": "VAY"
+      "relation": "VAY",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "học tập",
-      "relation": "ĐỂ"
+      "relation": "ĐỂ",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "Quỹ Tín dụng học tập",
       "target": "Ngân hàng Chính sách Xã hội (NHCSXH)",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "organization",
+      "type_target": "organization"
     },
     {
       "source": "Ngân hàng Chính sách Xã hội (NHCSXH)",
       "target": "Quỹ Tín dụng học tập",
-      "relation": "QUẢN_LÝ"
+      "relation": "QUẢN_LÝ",
+      "type_source": "organization",
+      "type_target": "organization"
     },
     {
       "source": "vốn vay",
       "target": "sinh viên",
-      "relation": "GIÚP"
+      "relation": "GIÚP",
+      "type_source": "concept",
+      "type_target": "person"
     },
     {
       "source": "vốn vay",
       "target": "học tập",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "concept",
+      "type_target": "activity"
     },
     {
       "source": "vốn vay",
       "target": "sinh hoạt",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "concept",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "trường",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "vốn vay",
       "target": "học phí",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "vốn vay",
       "target": "phương tiện học tập",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "concept",
+      "type_target": "item"
     },
     {
       "source": "vốn vay",
       "target": "sách vở",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "concept",
+      "type_target": "item"
     },
     {
       "source": "vốn vay",
       "target": "ăn, ở, đi lại",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "concept",
+      "type_target": "activity"
     },
     {
       "source": "Trường Đại học Nông Lâm TP.HCM",
       "target": "hồ sơ",
-      "relation": "XÁC_NHẬN"
+      "relation": "XÁC_NHẬN",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "Trường Đại học Nông Lâm TP.HCM",
       "target": "3.000 sinh viên",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "organization",
+      "type_target": "quantity"
     },
     {
       "source": "sinh viên",
       "target": "hồ sơ",
-      "relation": "LÀM"
+      "relation": "LÀM",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "vốn vay",
-      "relation": "THỦ_TỤC"
+      "relation": "THỦ_TỤC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "học tập",
-      "relation": "VAY"
+      "relation": "VAY",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "sinh viên mồ côi",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "hộ gia đình",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "person",
+      "type_target": "group_of_people"
     },
     {
       "source": "hộ gia đình",
       "target": "hộ cận nghèo",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "group_of_people",
+      "type_target": "concept"
     },
     {
       "source": "hộ gia đình",
       "target": "hộ nghèo",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "group_of_people",
+      "type_target": "concept"
     },
     {
       "source": "hộ gia đình",
       "target": "mức sống trung bình",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "group_of_people",
+      "type_target": "concept"
     },
     {
       "source": "mức sống trung bình",
       "target": "pháp luật",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "concept",
+      "type_target": "document"
     },
     {
       "source": "gia đình",
       "target": "bệnh tật",
-      "relation": "GẶP_KHÓ_KHĂN"
+      "relation": "GẶP_KHÓ_KHĂN",
+      "type_source": "group_of_people",
+      "type_target": "concept"
     },
     {
       "source": "gia đình",
       "target": "tai nạn",
-      "relation": "GẶP_KHÓ_KHĂN"
+      "relation": "GẶP_KHÓ_KHĂN",
+      "type_source": "group_of_people",
+      "type_target": "event"
     },
     {
       "source": "gia đình",
       "target": "hỏa hoạn",
-      "relation": "GẶP_KHÓ_KHĂN"
+      "relation": "GẶP_KHÓ_KHĂN",
+      "type_source": "group_of_people",
+      "type_target": "event"
     },
     {
       "source": "gia đình",
       "target": "thiên tai",
-      "relation": "GẶP_KHÓ_KHĂN"
+      "relation": "GẶP_KHÓ_KHĂN",
+      "type_source": "group_of_people",
+      "type_target": "natural_phenomenon"
     },
     {
       "source": "gia đình",
       "target": "dịch bệnh",
-      "relation": "GẶP_KHÓ_KHĂN"
+      "relation": "GẶP_KHÓ_KHĂN",
+      "type_source": "group_of_people",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "Ủy ban nhân dân xã, phường, thị trấn",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "học sinh, sinh viên",
       "target": "Ủy ban nhân dân xã, phường, thị trấn",
-      "relation": "CƯ_TRÚ"
+      "relation": "CƯ_TRÚ",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "hộ gia đình",
-      "relation": "SINH_SỐNG"
+      "relation": "SINH_SỐNG",
+      "type_source": "person",
+      "type_target": "group_of_people"
     },
     {
       "source": "hộ gia đình",
       "target": "địa phương",
-      "relation": "CƯ_TRÚ"
+      "relation": "CƯ_TRÚ",
+      "type_source": "group_of_people",
+      "type_target": "location"
     },
     {
       "source": "sinh viên",
       "target": "vốn vay",
-      "relation": "ĐỦ_TIÊU_CHUẨN"
+      "relation": "ĐỦ_TIÊU_CHUẨN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên năm nhất",
       "target": "giấy báo trúng tuyển",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên năm nhất",
       "target": "giấy xác nhận",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "giấy xác nhận",
       "target": "nhà trường",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "document",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "giấy xác nhận",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "giấy xác nhận",
       "target": "trường",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "document",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "cờ bạc",
-      "relation": "KHÔNG_BỊ"
+      "relation": "KHÔNG_BỊ",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "nghiện hút",
-      "relation": "KHÔNG_BỊ"
+      "relation": "KHÔNG_BỊ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "trộm cắp",
-      "relation": "KHÔNG_BỊ"
+      "relation": "KHÔNG_BỊ",
+      "type_source": "person",
+      "type_target": "crime"
     },
     {
       "source": "sinh viên",
       "target": "buôn lậu",
-      "relation": "KHÔNG_BỊ"
+      "relation": "KHÔNG_BỊ",
+      "type_source": "person",
+      "type_target": "crime"
     },
     {
       "source": "sinh viên",
       "target": "4.000.000 đ/tháng/sinh viên",
-      "relation": "TỐI_ĐA"
+      "relation": "TỐI_ĐA",
+      "type_source": "person",
+      "type_target": "amount"
     },
     {
       "source": "sinh viên",
       "target": "0,65%/tháng",
-      "relation": "LÃI_SUẤT"
+      "relation": "LÃI_SUẤT",
+      "type_source": "person",
+      "type_target": "percentage"
     },
     {
       "source": "nợ quá hạn",
       "target": "130%",
-      "relation": "LÃI_SUẤT"
+      "relation": "LÃI_SUẤT",
+      "type_source": "concept",
+      "type_target": "percentage"
     },
     {
       "source": "sinh viên",
       "target": "hộ gia đình",
-      "relation": "THÔNG_QUA"
+      "relation": "THÔNG_QUA",
+      "type_source": "person",
+      "type_target": "group_of_people"
     },
     {
       "source": "hộ gia đình",
       "target": "vốn vay",
-      "relation": "VAY"
+      "relation": "VAY",
+      "type_source": "group_of_people",
+      "type_target": "concept"
     },
     {
       "source": "hộ gia đình",
       "target": "Ngân hàng Chính sách Xã hội",
-      "relation": "TRẢ_NỢ"
+      "relation": "TRẢ_NỢ",
+      "type_source": "group_of_people",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên mồ côi",
       "target": "vốn vay",
-      "relation": "VAY"
+      "relation": "VAY",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên mồ côi",
       "target": "Ngân hàng Chính sách Xã hội",
-      "relation": "TRẢ_NỢ"
+      "relation": "TRẢ_NỢ",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên mồ côi",
       "target": "địa phương",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "person",
+      "type_target": "location"
     },
     {
       "source": "nhà trường",
       "target": "địa phương",
-      "relation": "ĐÓNG_TRỤ_SỞ"
+      "relation": "ĐÓNG_TRỤ_SỞ",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "sinh viên",
       "target": "Giấy xác nhận vay vốn",
-      "relation": "ĐĂNG_KÝ"
+      "relation": "ĐĂNG_KÝ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "Giấy xác nhận vay vốn",
       "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "document",
+      "type_target": "website"
     }
   ]
 }

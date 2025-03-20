@@ -1,0 +1,293 @@
+{
+  "entities": [
+    {
+      "name": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "type": "activity"
+    },
+    {
+      "name": "Các hoạt động nổi bật khác",
+      "type": "activity"
+    },
+    {
+      "name": "Hoạt động Tự hào Sinh viên Nông Lâm",
+      "type": "activity"
+    },
+    {
+      "name": "Ngày hội Sinh viên Nông Lâm với Pháp luật",
+      "type": "activity"
+    },
+    {
+      "name": "Hội thao Sinh viên Nông Lâm",
+      "type": "activity"
+    },
+    {
+      "name": "Cuộc thi Khởi nghiệp Nông nghiệp",
+      "type": "activity"
+    },
+    {
+      "name": "Cuộc thi Ý tưởng nghiên cứu khoa học",
+      "type": "activity"
+    },
+    {
+      "name": "Hội thảo Nghiên cứu khoa học Sinh viên",
+      "type": "activity"
+    },
+    {
+      "name": "Chiến dịch tình nguyện Mùa hè xanh",
+      "type": "activity"
+    },
+    {
+      "name": "Chương trình Vì màu xanh Nông Lâm",
+      "type": "activity"
+    },
+    {
+      "name": "Chiến dịch Xuân tình nguyện",
+      "type": "activity"
+    },
+    {
+      "name": "Chương trình Hiến máu tình nguyện",
+      "type": "activity"
+    },
+    {
+      "name": "Lễ tuyên dương Thanh niên tiên tiến làm theo lời Bác và trao giải thưởng Nguyễn Thái Bình",
+      "type": "activity"
+    },
+    {
+      "name": "Lễ tuyên dương Sinh viên 5 tốt",
+      "type": "activity"
+    },
+    {
+      "name": "Lễ Tuyên dương hoạt động học thuật, khoa học công nghệ, khởi nghiệp",
+      "type": "activity"
+    },
+    {
+      "name": "phgl@hcmuaf.edu.vn",
+      "type": "email"
+    },
+    {
+      "name": "Cuộc thi Nét đẹp sinh viên Nông Lâm",
+      "type": "activity"
+    },
+    {
+      "name": "Hội thi Bí thư Chi đoàn giỏi",
+      "type": "activity"
+    },
+    {
+      "name": "Hội thi Thủ lĩnh sinh viên",
+      "type": "activity"
+    },
+    {
+      "name": "Chương trình Vì đàn em thân yêu",
+      "type": "activity"
+    },
+    {
+      "name": "Chương trình Ánh trăng cho em",
+      "type": "activity"
+    },
+    {
+      "name": "Ngày Thứ 7 tình nguyện",
+      "type": "activity"
+    },
+    {
+      "name": "Ngày Chủ nhật xanh",
+      "type": "activity"
+    },
+    {
+      "name": "Chương trình Vì nụ cười trẻ thơ",
+      "type": "activity"
+    },
+    {
+      "name": "Chương trình Về nguồn",
+      "type": "activity"
+    },
+    {
+      "name": "Hành trình đi tìm địa chỉ đỏ",
+      "type": "activity"
+    },
+    {
+      "name": "Hành trình đến với bảo tàng",
+      "type": "activity"
+    },
+    {
+      "name": "Hội thi Kiến thức chuyên ngành",
+      "type": "activity"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Hoạt động Tự hào Sinh viên Nông Lâm",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Ngày hội Sinh viên Nông Lâm với Pháp luật",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Hội thao Sinh viên Nông Lâm",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Cuộc thi Khởi nghiệp Nông nghiệp",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Cuộc thi Ý tưởng nghiên cứu khoa học",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Hội thảo Nghiên cứu khoa học Sinh viên",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Chiến dịch tình nguyện Mùa hè xanh",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Chương trình Vì màu xanh Nông Lâm",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Chiến dịch Xuân tình nguyện",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Chương trình Hiến máu tình nguyện",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Lễ tuyên dương Thanh niên tiên tiến làm theo lời Bác và trao giải thưởng Nguyễn Thái Bình",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Lễ tuyên dương Sinh viên 5 tốt",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Lễ Tuyên dương hoạt động học thuật, khoa học công nghệ, khởi nghiệp",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
+      "target": "Cuộc thi Nét đẹp sinh viên Nông Lâm",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Hội thi Bí thư Chi đoàn giỏi",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Hội thi Thủ lĩnh sinh viên",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Chương trình Vì đàn em thân yêu",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Chương trình Ánh trăng cho em",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Ngày Thứ 7 tình nguyện",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Ngày Chủ nhật xanh",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Chương trình Vì nụ cười trẻ thơ",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Chương trình Về nguồn",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Hành trình đi tìm địa chỉ đỏ",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Hành trình đến với bảo tàng",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    },
+    {
+      "source": "Các hoạt động nổi bật khác",
+      "target": "Hội thi Kiến thức chuyên ngành",
+      "relation": "BAO_GỒM",
+      "type_source": "activity",
+      "type_target": "activity"
+    }
+  ]
+}

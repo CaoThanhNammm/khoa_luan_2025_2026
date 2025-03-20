@@ -2,71 +2,71 @@
   "entities": [
     {
       "name": "Đại học Nông Lâm TP.HCM",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "ngành học",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Khoa",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "đội ngũ cố vấn học tập",
-      "type": "nhóm người"
+      "type": "group"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "chương trình đào tạo",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "kế hoạch học tập",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "học kỳ",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "khóa học",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "năng lực",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "hoàn cảnh",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "điều kiện học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "kế hoạch học tập",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "kết quả học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "biện pháp hỗ trợ",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Ban cố vấn học tập",
-      "type": "nhóm người"
+      "type": "group"
     },
     {
       "name": "website",
@@ -74,11 +74,11 @@
     },
     {
       "name": "Khoa",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Phòng Công tác Sinh viên",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "http://nls.hcmuaf.edu.vn/",
@@ -89,132 +89,184 @@
     {
       "source": "Đại học Nông Lâm TP.HCM",
       "target": "ngành học",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Đại học Nông Lâm TP.HCM",
       "target": "Khoa",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "organization"
     },
     {
       "source": "Khoa",
       "target": "đội ngũ cố vấn học tập",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "group"
     },
     {
       "source": "đội ngũ cố vấn học tập",
       "target": "sinh viên",
-      "relation": "HỖ_TRỢ"
+      "relation": "HỖ_TRỢ",
+      "type_source": "group",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "chương trình đào tạo",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "đội ngũ cố vấn học tập",
       "target": "sinh viên",
-      "relation": "TƯ_VẤN"
+      "relation": "TƯ_VẤN",
+      "type_source": "group",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "kế hoạch học tập",
-      "relation": "XÂY_DỰNG"
+      "relation": "XÂY_DỰNG",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "kế hoạch học tập",
       "target": "học kỳ",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "document",
+      "type_target": "time"
     },
     {
       "source": "kế hoạch học tập",
       "target": "khóa học",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "document",
+      "type_target": "time"
     },
     {
       "source": "kế hoạch học tập",
       "target": "năng lực",
-      "relation": "PHÙ_HỢP"
+      "relation": "PHÙ_HỢP",
+      "type_source": "document",
+      "type_target": "concept"
     },
     {
       "source": "kế hoạch học tập",
       "target": "hoàn cảnh",
-      "relation": "PHÙ_HỢP"
+      "relation": "PHÙ_HỢP",
+      "type_source": "document",
+      "type_target": "concept"
     },
     {
       "source": "kế hoạch học tập",
       "target": "điều kiện học tập",
-      "relation": "PHÙ_HỢP"
+      "relation": "PHÙ_HỢP",
+      "type_source": "document",
+      "type_target": "concept"
     },
     {
       "source": "đội ngũ cố vấn học tập",
       "target": "sinh viên",
-      "relation": "HƯỚNG_DẪN"
+      "relation": "HƯỚNG_DẪN",
+      "type_source": "group",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "học phần",
-      "relation": "ĐĂNG_KÝ"
+      "relation": "ĐĂNG_KÝ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "học phần",
       "target": "học kỳ",
-      "relation": "Ở"
+      "relation": "Ở",
+      "type_source": "concept",
+      "type_target": "time"
     },
     {
       "source": "đội ngũ cố vấn học tập",
       "target": "sinh viên",
-      "relation": "TƯ_VẤN"
+      "relation": "TƯ_VẤN",
+      "type_source": "group",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "kế hoạch học tập",
-      "relation": "ĐIỀU_CHỈNH"
+      "relation": "ĐIỀU_CHỈNH",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "đội ngũ cố vấn học tập",
       "target": "kế hoạch học tập",
-      "relation": "XÁC_NHẬN"
+      "relation": "XÁC_NHẬN",
+      "type_source": "group",
+      "type_target": "document"
     },
     {
       "source": "đội ngũ cố vấn học tập",
       "target": "sinh viên",
-      "relation": "THEO_DÕI"
+      "relation": "THEO_DÕI",
+      "type_source": "group",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "kết quả học tập",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "đội ngũ cố vấn học tập",
       "target": "biện pháp hỗ trợ",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "group",
+      "type_target": "concept"
     },
     {
       "source": "Ban cố vấn học tập",
       "target": "Khoa",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "group",
+      "type_target": "organization"
     },
     {
       "source": "Ban cố vấn học tập",
       "target": "website",
-      "relation": "CẬP_NHẬT_TRÊN"
+      "relation": "CẬP_NHẬT_TRÊN",
+      "type_source": "group",
+      "type_target": "website"
     },
     {
       "source": "Khoa",
       "target": "website",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "organization",
+      "type_target": "website"
     },
     {
       "source": "Phòng Công tác Sinh viên",
       "target": "website",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "organization",
+      "type_target": "website"
     },
     {
       "source": "website",
       "target": "http://nls.hcmuaf.edu.vn/",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "website",
+      "type_target": "website"
     }
   ]
 }

@@ -2,155 +2,155 @@
   "entities": [
     {
       "name": "học bổng tài trợ",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "cựu sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "doanh nghiệp",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "tổ chức",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "cá nhân",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "hoàn cảnh khó khăn",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "hộ nghèo",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "mồ côi cha mẹ",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "hoàn cảnh khó khăn đột xuất",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "thiên tai",
-      "type": "hiện tượng tự nhiên"
+      "type": "natural_phenomenon"
     },
     {
       "name": "tai nạn",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "thành tích cao",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "học tập",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "nghiên cứu khoa học",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "hoạt động cộng đồng",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "Đoàn - Hội",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "chương trình học bổng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "phòng Công tác sinh viên",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Khoa",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "6 tỷ đồng",
-      "type": "số tiền"
+      "type": "amount"
     },
     {
       "name": "tiền mặt",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "khóa học đào tạo ngắn hạn",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "tin học",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "ngoại ngữ",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "kỹ năng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "học bổng Đồng hành",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "năm học",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "chương trình học bổng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "phòng Công tác sinh viên",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "điều kiện",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "đối tượng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "quy trình",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "thủ tục",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "hồ sơ học bổng",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "email sinh viên",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "website",
@@ -158,7 +158,7 @@
     },
     {
       "name": "Khoa",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "website phòng Công tác sinh viên",
@@ -173,197 +173,275 @@
     {
       "source": "học bổng tài trợ",
       "target": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
-      "relation": "TRÍCH_TỪ"
+      "relation": "TRÍCH_TỪ",
+      "type_source": "concept",
+      "type_target": "organization"
     },
     {
       "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
       "target": "cựu sinh viên",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
       "target": "doanh nghiệp",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "organization",
+      "type_target": "organization"
     },
     {
       "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
       "target": "tổ chức",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "organization",
+      "type_target": "organization"
     },
     {
       "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
       "target": "cá nhân",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "học bổng",
       "target": "sinh viên",
-      "relation": "XÉT"
+      "relation": "XÉT",
+      "type_source": "concept",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "hoàn cảnh khó khăn",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "hoàn cảnh khó khăn",
       "target": "hộ nghèo",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "hoàn cảnh khó khăn",
       "target": "mồ côi cha mẹ",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "hoàn cảnh khó khăn đột xuất",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "hoàn cảnh khó khăn đột xuất",
       "target": "thiên tai",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "concept",
+      "type_target": "natural_phenomenon"
     },
     {
       "source": "hoàn cảnh khó khăn đột xuất",
       "target": "tai nạn",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "concept",
+      "type_target": "event"
     },
     {
       "source": "sinh viên",
       "target": "thành tích cao",
-      "relation": "ĐẠT"
+      "relation": "ĐẠT",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "học tập",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "nghiên cứu khoa học",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "hoạt động cộng đồng",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "Đoàn - Hội",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "chương trình học bổng",
       "target": "phòng Công tác sinh viên",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "concept",
+      "type_target": "organization"
     },
     {
       "source": "chương trình học bổng",
       "target": "Khoa",
-      "relation": "PHỐI_HỢP"
+      "relation": "PHỐI_HỢP",
+      "type_source": "concept",
+      "type_target": "organization"
     },
     {
       "source": "học bổng",
       "target": "6 tỷ đồng",
-      "relation": "TRỊ_GIÁ"
+      "relation": "TRỊ_GIÁ",
+      "type_source": "concept",
+      "type_target": "amount"
     },
     {
       "source": "sinh viên",
       "target": "tiền mặt",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "khóa học đào tạo ngắn hạn",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khóa học đào tạo ngắn hạn",
       "target": "tin học",
-      "relation": "NHƯ"
+      "relation": "NHƯ",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "khóa học đào tạo ngắn hạn",
       "target": "ngoại ngữ",
-      "relation": "NHƯ"
+      "relation": "NHƯ",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "khóa học đào tạo ngắn hạn",
       "target": "kỹ năng",
-      "relation": "NHƯ"
+      "relation": "NHƯ",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "học bổng Đồng hành",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "học bổng Đồng hành",
       "target": "năm học",
-      "relation": "MỘT_LẦN"
+      "relation": "MỘT_LẦN",
+      "type_source": "concept",
+      "type_target": "time"
     },
     {
       "source": "chương trình học bổng",
       "target": "phòng Công tác sinh viên",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "organization"
     },
     {
       "source": "phòng Công tác sinh viên",
       "target": "điều kiện",
-      "relation": "THÔNG_BÁO"
+      "relation": "THÔNG_BÁO",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "phòng Công tác sinh viên",
       "target": "đối tượng",
-      "relation": "THÔNG_BÁO"
+      "relation": "THÔNG_BÁO",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "phòng Công tác sinh viên",
       "target": "quy trình",
-      "relation": "THÔNG_BÁO"
+      "relation": "THÔNG_BÁO",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "phòng Công tác sinh viên",
       "target": "thủ tục",
-      "relation": "THÔNG_BÁO"
+      "relation": "THÔNG_BÁO",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "phòng Công tác sinh viên",
       "target": "hồ sơ học bổng",
-      "relation": "THÔNG_BÁO"
+      "relation": "THÔNG_BÁO",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "phòng Công tác sinh viên",
       "target": "sinh viên",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "phòng Công tác sinh viên",
       "target": "email sinh viên",
-      "relation": "QUA"
+      "relation": "QUA",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "phòng Công tác sinh viên",
       "target": "website",
-      "relation": "QUA"
+      "relation": "QUA",
+      "type_source": "organization",
+      "type_target": "website"
     },
     {
       "source": "Khoa",
       "target": "website",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "organization",
+      "type_target": "website"
     },
     {
       "source": "phòng Công tác sinh viên",
       "target": "website phòng Công tác sinh viên",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "organization",
+      "type_target": "website"
     },
     {
       "source": "website phòng Công tác sinh viên",
       "target": "https://nls.hcmuaf.edu.vn/",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "website",
+      "type_target": "website"
     }
   ]
 }

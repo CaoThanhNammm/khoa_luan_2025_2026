@@ -2,99 +2,220 @@
   "entities": [
     {
       "name": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Nong Lam University - NLU",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Bộ Giáo dục và Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Thành phố Thủ Đức",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "Thành phố Hồ Chí Minh",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "Thành phố Dĩ An",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "Tỉnh Bình Dương",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "70 năm",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "Huân chương Lao động Hạng ba",
-      "type": "giải thưởng"
+      "type": "award"
     },
     {
       "name": "Huân chương Lao động Hạng nhất",
-      "type": "giải thưởng"
+      "type": "award"
     },
     {
       "name": "Huân chương Độc lập Hạng ba",
-      "type": "giải thưởng"
+      "type": "award"
+    },
+    {
+      "name": "1955",
+      "type": "time"
+    },
+    {
+      "name": "1963",
+      "type": "time"
+    },
+    {
+      "name": "1972",
+      "type": "time"
+    },
+    {
+      "name": "1975",
+      "type": "time"
+    },
+    {
+      "name": "1985",
+      "type": "time"
+    },
+    {
+      "name": "1995",
+      "type": "time"
+    },
+    {
+      "name": "2000",
+      "type": "time"
+    },
+    {
+      "name": "Trường Quốc gia Nông Lâm Mục Blao",
+      "type": "organization"
+    },
+    {
+      "name": "Trường Cao đẳng Nông Lâm Súc",
+      "type": "organization"
+    },
+    {
+      "name": "Học viện Quốc gia Nông Nghiệp Sài Gòn",
+      "type": "organization"
+    },
+    {
+      "name": "Trường Đại học Nông nghiệp 4",
+      "type": "organization"
+    },
+    {
+      "name": "Trường Đại học Nông Lâm nghiệp TP.Hồ Chí Minh",
+      "type": "organization"
+    },
+    {
+      "name": "Trường Đại học Nông Lâm (thành viên của học Quốc Gia TP.Hồ Chí Minh)",
+      "type": "organization"
     }
   ],
   "relationships": [
     {
       "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
       "target": "Nong Lam University - NLU",
-      "relation": "TÊN_KHÁC"
+      "relation": "TÊN_KHÁC",
+      "type_source": "organization",
+      "type_target": "organization"
     },
     {
       "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
       "target": "Bộ Giáo dục và Đào tạo",
-      "relation": "TRỰC_THUỘC"
+      "relation": "TRỰC_THUỘC",
+      "type_source": "organization",
+      "type_target": "organization"
     },
     {
       "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
       "target": "Thành phố Thủ Đức",
-      "relation": "TỌA_LẠC_TẠI"
+      "relation": "TỌA_LẠC_TẠI",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
       "target": "Thành phố Hồ Chí Minh",
-      "relation": "TỌA_LẠC_TẠI"
+      "relation": "TỌA_LẠC_TẠI",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
       "target": "Thành phố Dĩ An",
-      "relation": "TỌA_LẠC_TẠI"
+      "relation": "TỌA_LẠC_TẠI",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "Thành phố Dĩ An",
       "target": "Tỉnh Bình Dương",
-      "relation": "THUỘC"
+      "relation": "THUỘC",
+      "type_source": "location",
+      "type_target": "location"
     },
     {
       "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
       "target": "70 năm",
-      "relation": "THỜI_GIAN_HOẠT_ĐỘNG"
+      "relation": "THỜI_GIAN_HOẠT_ĐỘNG",
+      "type_source": "organization",
+      "type_target": "time"
     },
     {
       "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
       "target": "Huân chương Lao động Hạng ba",
-      "relation": "NHẬN_GIẢI_THƯỞNG"
+      "relation": "NHẬN_GIẢI_THƯỞNG",
+      "type_source": "organization",
+      "type_target": "award"
     },
     {
       "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
       "target": "Huân chương Lao động Hạng nhất",
-      "relation": "NHẬN_GIẢI_THƯỞNG"
+      "relation": "NHẬN_GIẢI_THƯỞNG",
+      "type_source": "organization",
+      "type_target": "award"
     },
     {
       "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
       "target": "Huân chương Độc lập Hạng ba",
-      "relation": "NHẬN_GIẢI_THƯỞNG"
+      "relation": "NHẬN_GIẢI_THƯỞNG",
+      "type_source": "organization",
+      "type_target": "award"
+    },
+    {
+      "source": "1955",
+      "target": "Trường Quốc gia Nông Lâm Mục Blao",
+      "relation": "THÀNH_LẬP",
+      "type_source": "time",
+      "type_target": "organization"
+    },
+    {
+      "source": "1963",
+      "target": "Trường Cao đẳng Nông Lâm Súc",
+      "relation": "THÀNH_LẬP",
+      "type_source": "time",
+      "type_target": "organization"
+    },
+    {
+      "source": "1972",
+      "target": "Học viện Quốc gia Nông Nghiệp Sài Gòn",
+      "relation": "THÀNH_LẬP",
+      "type_source": "time",
+      "type_target": "organization"
+    },
+    {
+      "source": "1975",
+      "target": "Trường Đại học Nông nghiệp 4",
+      "relation": "THÀNH_LẬP",
+      "type_source": "time",
+      "type_target": "organization"
+    },
+    {
+      "source": "1985",
+      "target": "Trường Đại học Nông Lâm nghiệp TP.Hồ Chí Minh",
+      "relation": "THÀNH_LẬP",
+      "type_source": "time",
+      "type_target": "organization"
+    },
+    {
+      "source": "1995",
+      "target": "Trường Đại học Nông Lâm (thành viên của học Quốc Gia TP.Hồ Chí Minh)",
+      "relation": "THÀNH_LẬP",
+      "type_source": "time",
+      "type_target": "organization"
+    },
+    {
+      "source": "2000",
+      "target": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "relation": "THÀNH_LẬP",
+      "type_source": "time",
+      "type_target": "organization"
     }
   ]
 }

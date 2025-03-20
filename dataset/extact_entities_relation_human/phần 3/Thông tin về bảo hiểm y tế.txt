@@ -2,59 +2,59 @@
   "entities": [
     {
       "name": "Bảo hiểm y tế",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Luật Bảo hiểm y tế 2008",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "2014",
-      "type": "năm"
+      "type": "year"
     },
     {
       "name": "nhà nước",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Bảo hiểm y tế",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "thẻ bảo hiểm y tế",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "CN, BT, HN, DT, DK, XD, TS, TC, TQ, TV, TA, TY, HG, PV",
-      "type": "mã"
+      "type": "code"
     },
     {
       "name": "Mức đóng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "4,5%",
-      "type": "tỉ lệ"
+      "type": "percentage"
     },
     {
       "name": "mức lương cơ sở",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "số tháng",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "70%",
-      "type": "tỉ lệ"
+      "type": "percentage"
     },
     {
       "name": "Quốc hội",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "https://bhytsv.hcmuaf.edu.vn",
@@ -62,23 +62,23 @@
     },
     {
       "name": "email sinh viên",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "nhà trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "email",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "thẻ bảo hiểm y tế",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Nhà nước",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "https://bhytsv.hcmuaf.edu.vn",
@@ -86,7 +86,7 @@
     },
     {
       "name": "thẻ",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "baohiemxahoi.gov.vn",
@@ -97,92 +97,128 @@
     {
       "source": "sinh viên",
       "target": "Bảo hiểm y tế",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "Bảo hiểm y tế",
       "target": "Luật Bảo hiểm y tế 2008",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "concept",
+      "type_target": "document"
     },
     {
       "source": "Luật Bảo hiểm y tế 2008",
       "target": "2014",
-      "relation": "SỬA_ĐỔI"
+      "relation": "SỬA_ĐỔI",
+      "type_source": "document",
+      "type_target": "year"
     },
     {
       "source": "sinh viên",
       "target": "nhà nước",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "nhà nước",
       "target": "Bảo hiểm y tế",
-      "relation": "CẤP"
+      "relation": "CẤP",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "thẻ bảo hiểm y tế",
       "target": "CN, BT, HN, DT, DK, XD, TS, TC, TQ, TV, TA, TY, HG, PV",
-      "relation": "MÃ"
+      "relation": "MÃ",
+      "type_source": "document",
+      "type_target": "code"
     },
     {
       "source": "Mức đóng",
       "target": "4,5%",
-      "relation": "BẰNG"
+      "relation": "BẰNG",
+      "type_source": "concept",
+      "type_target": "percentage"
     },
     {
       "source": "Mức đóng",
       "target": "mức lương cơ sở",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Mức đóng",
       "target": "số tháng",
-      "relation": "NHÂN"
+      "relation": "NHÂN",
+      "type_source": "concept",
+      "type_target": "quantity"
     },
     {
       "source": "Mức đóng",
       "target": "70%",
-      "relation": "NHÂN"
+      "relation": "NHÂN",
+      "type_source": "concept",
+      "type_target": "percentage"
     },
     {
       "source": "mức lương cơ sở",
       "target": "Quốc hội",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "concept",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "https://bhytsv.hcmuaf.edu.vn",
-      "relation": "TRUY_CẬP"
+      "relation": "TRUY_CẬP",
+      "type_source": "person",
+      "type_target": "website"
     },
     {
       "source": "sinh viên",
       "target": "email sinh viên",
-      "relation": "BẰNG"
+      "relation": "BẰNG",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "email sinh viên",
       "target": "nhà trường",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "concept",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "email",
-      "relation": "KIỂM_TRA"
+      "relation": "KIỂM_TRA",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "thẻ bảo hiểm y tế",
       "target": "Nhà nước",
-      "relation": "DO"
+      "relation": "DO",
+      "type_source": "document",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "https://bhytsv.hcmuaf.edu.vn",
-      "relation": "CẬP_NHẬT"
+      "relation": "CẬP_NHẬT",
+      "type_source": "person",
+      "type_target": "website"
     },
     {
       "source": "thẻ",
       "target": "baohiemxahoi.gov.vn",
-      "relation": "TRA_CỨU"
+      "relation": "TRA_CỨU",
+      "type_source": "document",
+      "type_target": "website"
     }
   ]
 }

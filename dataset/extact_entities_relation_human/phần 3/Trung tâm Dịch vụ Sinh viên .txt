@@ -2,79 +2,79 @@
   "entities": [
     {
       "name": "Trung tâm dịch vụ sinh viên",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "sinh viên nội trú",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "ăn",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "ở",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "học tập",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "sinh hoạt",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "dịch vụ",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "kỹ năng ngoại khóa",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Nhà trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Nhà khách",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "giữ xe",
-      "type": "dịch vụ"
+      "type": "service"
     },
     {
       "name": "căn tin",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "photocopy",
-      "type": "dịch vụ"
+      "type": "service"
     },
     {
       "name": "internet",
-      "type": "dịch vụ"
+      "type": "service"
     },
     {
       "name": "phương tiện vận chuyển",
-      "type": "vật phẩm"
+      "type": "item"
     },
     {
       "name": "Văn phòng Trung tâm Dịch vụ Sinh viên",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "đường số 6",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "trường Đại học Nông Lâm TP.HCM",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "https://ttdvsv.hcmuaf.edu.vn",
@@ -82,7 +82,7 @@
     },
     {
       "name": "028-38963346",
-      "type": "số điện thoại"
+      "type": "phone_number"
     },
     {
       "name": "ttdvsv@hcmuaf.edu.vn",
@@ -93,102 +93,142 @@
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "sinh viên nội trú",
-      "relation": "TỔ_CHỨC"
+      "relation": "TỔ_CHỨC",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "ăn",
-      "relation": "QUẢN_LÝ"
+      "relation": "QUẢN_LÝ",
+      "type_source": "organization",
+      "type_target": "activity"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "ở",
-      "relation": "QUẢN_LÝ"
+      "relation": "QUẢN_LÝ",
+      "type_source": "organization",
+      "type_target": "activity"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "học tập",
-      "relation": "QUẢN_LÝ"
+      "relation": "QUẢN_LÝ",
+      "type_source": "organization",
+      "type_target": "activity"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "sinh hoạt",
-      "relation": "QUẢN_LÝ"
+      "relation": "QUẢN_LÝ",
+      "type_source": "organization",
+      "type_target": "activity"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "dịch vụ",
-      "relation": "CUNG_CẤP"
+      "relation": "CUNG_CẤP",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "kỹ năng ngoại khóa",
-      "relation": "CUNG_CẤP"
+      "relation": "CUNG_CẤP",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "Nhà trường",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "sinh viên",
-      "relation": "PHỤC_VỤ"
+      "relation": "PHỤC_VỤ",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "Nhà khách",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "giữ xe",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "service"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "căn tin",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "photocopy",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "service"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "internet",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "service"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "phương tiện vận chuyển",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "item"
     },
     {
       "source": "Văn phòng Trung tâm Dịch vụ Sinh viên",
       "target": "đường số 6",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "location",
+      "type_target": "location"
     },
     {
       "source": "Văn phòng Trung tâm Dịch vụ Sinh viên",
       "target": "trường Đại học Nông Lâm TP.HCM",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "location",
+      "type_target": "organization"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "https://ttdvsv.hcmuaf.edu.vn",
-      "relation": "WEBSITE"
+      "relation": "WEBSITE",
+      "type_source": "organization",
+      "type_target": "website"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "028-38963346",
-      "relation": "ĐIỆN_THOẠI"
+      "relation": "ĐIỆN_THOẠI",
+      "type_source": "organization",
+      "type_target": "phone_number"
     },
     {
       "source": "Trung tâm dịch vụ sinh viên",
       "target": "ttdvsv@hcmuaf.edu.vn",
-      "relation": "EMAIL"
+      "relation": "EMAIL",
+      "type_source": "organization",
+      "type_target": "email"
     }
   ]
 }

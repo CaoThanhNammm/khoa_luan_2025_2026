@@ -2,816 +2,940 @@
   "entities": [
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "năm học",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "khóa học",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "Thủ khoa",
-      "type": "chức danh"
+      "type": "position"
     },
     {
       "name": "Á khoa",
-      "type": "chức danh"
+      "type": "position"
     },
     {
       "name": "kỳ thi/xét tuyển sinh đầu vào",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "Olympic các môn học",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "cuộc thi sáng tạo kỹ thuật",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "cuộc thi học thuật",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "cuộc thi văn hóa",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "cuộc thi văn nghệ",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "cuộc thi thể thao",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "nghiên cứu khoa học",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "Đảng",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Đoàn thanh niên",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Hội sinh viên",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "ký túc xá",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "phong trào toàn dân bảo vệ an ninh tổ quốc",
-      "type": "phong trào"
+      "type": "movement"
     },
     {
       "name": "Trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Khoa/Bộ môn",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "SVTB",
-      "type": "viết tắt"
+      "type": "abbreviation"
     },
     {
       "name": "500 sinh viên",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "01 SVTB",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "500 đến 1.000 sinh viên",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "02 SVTB",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "1.000 sinh viên",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "04 SVTB",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "kỳ thi/xét tuyển đầu vào",
-      "type": "sự kiện"
-    },
-    {
-      "name": "Thủ khoa",
-      "type": "chức danh"
-    },
-    {
-      "name": "Á khoa",
-      "type": "chức danh"
+      "type": "event"
     },
     {
       "name": "5%",
-      "type": "tỉ lệ"
+      "type": "percentage"
     },
     {
       "name": "ĐTBTL",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "ngành học",
-      "type": "khái niệm"
-    },
-    {
-      "name": "khóa học",
-      "type": "thời gian"
+      "type": "concept"
     },
     {
       "name": "90 sinh viên",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "01 Thủ khoa",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "01 Á khoa",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "25 đến 89 sinh viên",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "25 sinh viên",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "Hội đồng khen thưởng và kỷ luật sinh viên",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "khối lớp",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "60 sinh viên",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "59 sinh viên",
-      "type": "số lượng"
-    },
-    {
-      "name": "25 sinh viên",
-      "type": "số lượng"
-    },
-    {
-      "name": "nghiên cứu khoa học",
-      "type": "hoạt động"
-    },
-    {
-      "name": "sinh viên",
-      "type": "người"
+      "type": "quantity"
     },
     {
       "name": "Hiệu trưởng",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "03 tháng",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "06 tháng",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "học kỳ",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "một năm học",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "Hội đồng khen thưởng, kỷ luật sinh viên",
-      "type": "tổ chức"
-    },
-    {
-      "name": "Khoa/Bộ môn",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Trưởng khoa",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "bản tường trình",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "bản tự kiểm điểm",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Lớp trưởng",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Trợ lý quản lý sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Biên bản họp",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "tài liệu",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "quyết định kỷ luật",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "gia đình sinh viên",
-      "type": "nhóm người"
+      "type": "group_of_people"
     },
     {
       "name": "Nhà trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "địa phương",
-      "type": "địa điểm"
+      "type": "location"
     }
   ],
   "relationships": [
     {
       "source": "sinh viên",
       "target": "khen thưởng",
-      "relation": "ĐỐI_TƯỢNG"
+      "relation": "ĐỐI_TƯỢNG",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khen thưởng",
       "target": "năm học",
-      "relation": "VÀO_CUỐI"
+      "relation": "VÀO_CUỐI",
+      "type_source": "concept",
+      "type_target": "time"
     },
     {
       "source": "khen thưởng",
       "target": "khóa học",
-      "relation": "VÀO_CUỐI"
+      "relation": "VÀO_CUỐI",
+      "type_source": "concept",
+      "type_target": "time"
     },
     {
       "source": "khen thưởng",
       "target": "Thủ khoa",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "concept",
+      "type_target": "position"
     },
     {
       "source": "khen thưởng",
       "target": "Á khoa",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "concept",
+      "type_target": "position"
     },
     {
       "source": "khen thưởng",
       "target": "kỳ thi/xét tuyển sinh đầu vào",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "concept",
+      "type_target": "event"
     },
     {
       "source": "sinh viên",
       "target": "Olympic các môn học",
-      "relation": "ĐOẠT_GIẢI"
+      "relation": "ĐOẠT_GIẢI",
+      "type_source": "person",
+      "type_target": "event"
     },
     {
       "source": "sinh viên",
       "target": "cuộc thi sáng tạo kỹ thuật",
-      "relation": "ĐOẠT_GIẢI"
+      "relation": "ĐOẠT_GIẢI",
+      "type_source": "person",
+      "type_target": "event"
     },
     {
       "source": "sinh viên",
       "target": "cuộc thi học thuật",
-      "relation": "ĐOẠT_GIẢI"
+      "relation": "ĐOẠT_GIẢI",
+      "type_source": "person",
+      "type_target": "event"
     },
     {
       "source": "sinh viên",
       "target": "cuộc thi văn hóa",
-      "relation": "ĐOẠT_GIẢI"
+      "relation": "ĐOẠT_GIẢI",
+      "type_source": "person",
+      "type_target": "event"
     },
     {
       "source": "sinh viên",
       "target": "cuộc thi văn nghệ",
-      "relation": "ĐOẠT_GIẢI"
+      "relation": "ĐOẠT_GIẢI",
+      "type_source": "person",
+      "type_target": "event"
     },
     {
       "source": "sinh viên",
       "target": "cuộc thi thể thao",
-      "relation": "ĐOẠT_GIẢI"
+      "relation": "ĐOẠT_GIẢI",
+      "type_source": "person",
+      "type_target": "event"
     },
     {
       "source": "sinh viên",
       "target": "nghiên cứu khoa học",
-      "relation": "CÓ_THÀNH_TÍCH"
+      "relation": "CÓ_THÀNH_TÍCH",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "Đảng",
-      "relation": "ĐÓNG_GÓP"
+      "relation": "ĐÓNG_GÓP",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "Đoàn thanh niên",
-      "relation": "ĐÓNG_GÓP"
+      "relation": "ĐÓNG_GÓP",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "Hội sinh viên",
-      "relation": "ĐÓNG_GÓP"
+      "relation": "ĐÓNG_GÓP",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "ký túc xá",
-      "relation": "HOẠT_ĐỘNG_TẠI"
+      "relation": "HOẠT_ĐỘNG_TẠI",
+      "type_source": "person",
+      "type_target": "location"
     },
     {
       "source": "sinh viên",
       "target": "phong trào toàn dân bảo vệ an ninh tổ quốc",
-      "relation": "THỰC_HIỆN"
+      "relation": "THỰC_HIỆN",
+      "type_source": "person",
+      "type_target": "movement"
     },
     {
       "source": "sinh viên",
       "target": "Trường",
-      "relation": "BẢO_ĐẢM_AN_NINH"
+      "relation": "BẢO_ĐẢM_AN_NINH",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "Khoa/Bộ môn",
-      "relation": "THUỘC"
+      "relation": "THUỘC",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "khen thưởng",
       "target": "SVTB",
-      "relation": "CHO"
-    },
-    {
-      "source": "khen thưởng",
-      "target": "năm học",
-      "relation": "VÀO_CUỐI"
+      "relation": "CHO",
+      "type_source": "concept",
+      "type_target": "abbreviation"
     },
     {
       "source": "Khoa/Bộ môn",
       "target": "500 sinh viên",
-      "relation": "ÍT_HƠN_HOẶC_BẰNG"
+      "relation": "ÍT_HƠN_HOẶC_BẰNG",
+      "type_source": "organization",
+      "type_target": "quantity"
     },
     {
       "source": "Khoa/Bộ môn",
       "target": "01 SVTB",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "organization",
+      "type_target": "quantity"
     },
     {
       "source": "Khoa/Bộ môn",
       "target": "500 đến 1.000 sinh viên",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "organization",
+      "type_target": "quantity"
     },
     {
       "source": "Khoa/Bộ môn",
       "target": "02 SVTB",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "organization",
+      "type_target": "quantity"
     },
     {
       "source": "Khoa/Bộ môn",
       "target": "1.000 sinh viên",
-      "relation": "TRÊN"
+      "relation": "TRÊN",
+      "type_source": "organization",
+      "type_target": "quantity"
     },
     {
       "source": "Khoa/Bộ môn",
       "target": "04 SVTB",
-      "relation": "CHỌN"
-    },
-    {
-      "source": "khen thưởng",
-      "target": "Thủ khoa",
-      "relation": "CHO"
-    },
-    {
-      "source": "khen thưởng",
-      "target": "Á khoa",
-      "relation": "CHO"
+      "relation": "CHỌN",
+      "type_source": "organization",
+      "type_target": "quantity"
     },
     {
       "source": "khen thưởng",
       "target": "kỳ thi/xét tuyển đầu vào",
-      "relation": "TRONG"
-    },
-    {
-      "source": "sinh viên",
-      "target": "khen thưởng",
-      "relation": "ĐỐI_TƯỢNG"
+      "relation": "TRONG",
+      "type_source": "concept",
+      "type_target": "event"
     },
     {
       "source": "sinh viên",
       "target": "kỷ luật",
-      "relation": "KHÔNG_CHỊU"
+      "relation": "KHÔNG_CHỊU",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "tốt nghiệp",
-      "relation": "KHÔNG_BỊ_HẠ_BẬC"
+      "relation": "KHÔNG_BỊ_HẠ_BẬC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "5%",
-      "relation": "KHÔNG_VƯỢT_QUÁ"
+      "relation": "KHÔNG_VƯỢT_QUÁ",
+      "type_source": "person",
+      "type_target": "percentage"
     },
     {
       "source": "sinh viên",
       "target": "tốt nghiệp",
-      "relation": "ĐỦ_ĐIỀU_KIỆN"
+      "relation": "ĐỦ_ĐIỀU_KIỆN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "ĐTBTL",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "tốt nghiệp",
-      "relation": "ĐÚNG_HOẶC_TRƯỚC"
+      "relation": "ĐÚNG_HOẶC_TRƯỚC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "Thủ khoa",
       "target": "ngành học",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Á khoa",
       "target": "ngành học",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Thủ khoa",
       "target": "khóa học",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "position",
+      "type_target": "time"
     },
     {
       "source": "Á khoa",
       "target": "khóa học",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "position",
+      "type_target": "time"
     },
     {
       "source": "Thủ khoa",
       "target": "ĐTBTL",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Á khoa",
       "target": "ĐTBTL",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Thủ khoa",
       "target": "90 sinh viên",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Á khoa",
       "target": "90 sinh viên",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Thủ khoa",
       "target": "01 Thủ khoa",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Á khoa",
       "target": "01 Á khoa",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Thủ khoa",
       "target": "ĐTBTL",
-      "relation": "CAO_NHẤT"
+      "relation": "CAO_NHẤT",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Á khoa",
       "target": "ĐTBTL",
-      "relation": "CAO_THỨ_HAI"
+      "relation": "CAO_THỨ_HAI",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Thủ khoa",
       "target": "25 đến 89 sinh viên",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Á khoa",
       "target": "25 đến 89 sinh viên",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Thủ khoa",
       "target": "ĐTBTL",
-      "relation": "CAO_NHẤT"
+      "relation": "CAO_NHẤT",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Thủ khoa",
       "target": "25 sinh viên",
-      "relation": "DƯỚI"
+      "relation": "DƯỚI",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Á khoa",
       "target": "25 sinh viên",
-      "relation": "DƯỚI"
+      "relation": "DƯỚI",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "sinh viên",
       "target": "ĐTBTL",
-      "relation": "BẰNG_NHAU"
+      "relation": "BẰNG_NHAU",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "Thủ khoa",
-      "relation": "CÔNG_NHẬN"
+      "relation": "CÔNG_NHẬN",
+      "type_source": "person",
+      "type_target": "position"
     },
     {
       "source": "sinh viên",
       "target": "Á khoa",
-      "relation": "CÔNG_NHẬN"
+      "relation": "CÔNG_NHẬN",
+      "type_source": "person",
+      "type_target": "position"
     },
     {
       "source": "sinh viên",
       "target": "Xuất sắc",
-      "relation": "KHEN_THƯỞNG"
+      "relation": "KHEN_THƯỞNG",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "Giỏi",
-      "relation": "KHEN_THƯỞNG"
+      "relation": "KHEN_THƯỞNG",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "Hội đồng khen thưởng và kỷ luật sinh viên",
-      "relation": "XÉT"
+      "relation": "XÉT",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "Thủ khoa",
       "target": "khối lớp",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Á khoa",
       "target": "khối lớp",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Thủ khoa",
       "target": "60 sinh viên",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Á khoa",
       "target": "60 sinh viên",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Thủ khoa",
       "target": "ĐTBTL",
-      "relation": "CAO_NHẤT"
+      "relation": "CAO_NHẤT",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Á khoa",
       "target": "ĐTBTL",
-      "relation": "CAO_THỨ_HAI"
+      "relation": "CAO_THỨ_HAI",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Thủ khoa",
       "target": "25 đến 59 sinh viên",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Á khoa",
       "target": "25 đến 59 sinh viên",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Thủ khoa",
       "target": "ĐTBTL",
-      "relation": "CAO_NHẤT"
+      "relation": "CAO_NHẤT",
+      "type_source": "position",
+      "type_target": "concept"
     },
     {
       "source": "Thủ khoa",
       "target": "25 sinh viên",
-      "relation": "DƯỚI"
+      "relation": "DƯỚI",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "Á khoa",
       "target": "25 sinh viên",
-      "relation": "DƯỚI"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nghiên cứu khoa học",
-      "relation": "CÓ_THÀNH_TÍCH"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Xuất sắc",
-      "relation": "KHEN_THƯỞNG"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Giỏi",
-      "relation": "KHEN_THƯỞNG"
-    },
-    {
-      "source": "sinh viên",
-      "target": "kỷ luật",
-      "relation": "BỊ"
+      "relation": "DƯỚI",
+      "type_source": "position",
+      "type_target": "quantity"
     },
     {
       "source": "sinh viên",
       "target": "Hiệu trưởng",
-      "relation": "ÁP_DỤNG_BỞI"
+      "relation": "ÁP_DỤNG_BỞI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "Hiệu trưởng",
       "target": "quy chế đào tạo",
-      "relation": "CĂN_CỨ_VÀO"
-    },
-    {
-      "source": "sinh viên",
-      "target": "kỷ luật",
-      "relation": "BỊ"
+      "relation": "CĂN_CỨ_VÀO",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "hồ sơ quản lý sinh viên",
-      "relation": "LƯU_VÀO"
+      "relation": "LƯU_VÀO",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "gia đình sinh viên",
-      "relation": "THÔNG_BÁO"
+      "relation": "THÔNG_BÁO",
+      "type_source": "person",
+      "type_target": "group_of_people"
     },
     {
       "source": "Nhà trường",
       "target": "địa phương",
-      "relation": "GỬI_THÔNG_BÁO"
+      "relation": "GỬI_THÔNG_BÁO",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "Nhà trường",
       "target": "gia đình sinh viên",
-      "relation": "GỬI_THÔNG_BÁO"
+      "relation": "GỬI_THÔNG_BÁO",
+      "type_source": "organization",
+      "type_target": "group_of_people"
     },
     {
       "source": "sinh viên",
       "target": "bản tường trình",
-      "relation": "LÀM"
+      "relation": "LÀM",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "bản tự kiểm điểm",
-      "relation": "LÀM"
+      "relation": "LÀM",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "kỷ luật",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
       "target": "chứng cứ",
-      "relation": "CĂN_CỨ_VÀO"
+      "relation": "CĂN_CỨ_VÀO",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Lớp trưởng",
       "target": "tập thể lớp sinh viên",
-      "relation": "CHỦ_TRÌ"
+      "relation": "CHỦ_TRÌ",
+      "type_source": "person",
+      "type_target": "group_of_people"
     },
     {
       "source": "Lớp trưởng",
       "target": "Khoa/Bộ môn",
-      "relation": "GỬI"
+      "relation": "GỬI",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "Trợ lý quản lý sinh viên",
       "target": "Lớp trưởng",
-      "relation": "THAM_DỰ"
+      "relation": "THAM_DỰ",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
       "target": "sinh viên",
-      "relation": "XÉT"
+      "relation": "XÉT",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
       "target": "kỷ luật",
-      "relation": "KIẾN_NGHỊ"
+      "relation": "KIẾN_NGHỊ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Trưởng khoa",
       "target": "kỷ luật",
-      "relation": "XÉT"
+      "relation": "XÉT",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
       "target": "sinh viên",
-      "relation": "MỜI"
+      "relation": "MỜI",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "khuyết điểm",
-      "relation": "XÉT_THÊM"
+      "relation": "XÉT_THÊM",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
       "target": "kỷ luật",
-      "relation": "KIẾN_NGHỊ"
+      "relation": "KIẾN_NGHỊ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Hiệu trưởng",
       "target": "kỷ luật",
-      "relation": "RA_QUYẾT_ĐỊNH"
+      "relation": "RA_QUYẾT_ĐỊNH",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "bản tường trình",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "bản tự kiểm điểm",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "tập thể lớp sinh viên",
       "target": "Biên bản họp",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "group_of_people",
+      "type_target": "document"
     },
     {
       "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
       "target": "Biên bản họp",
-      "relation": "CÓ"
-    },
-    {
-      "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
-      "target": "Biên bản họp",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "tài liệu",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "03 tháng",
-      "relation": "SAU"
+      "relation": "SAU",
+      "type_source": "person",
+      "type_target": "time"
     },
     {
       "source": "sinh viên",
       "target": "quyết định kỷ luật",
-      "relation": "CHẤM_DỨT"
+      "relation": "CHẤM_DỨT",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "06 tháng",
-      "relation": "SAU"
+      "relation": "SAU",
+      "type_source": "person",
+      "type_target": "time"
     },
     {
       "source": "sinh viên",
       "target": "quyết định kỷ luật",
-      "relation": "CHẤM_DỨT"
+      "relation": "CHẤM_DỨT",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "thời hạn đình chỉ",
-      "relation": "HẾT"
+      "relation": "HẾT",
+      "type_source": "person",
+      "type_target": "time"
     },
     {
       "source": "sinh viên",
       "target": "chứng nhận",
-      "relation": "XUẤT_TRÌNH"
+      "relation": "XUẤT_TRÌNH",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "Nhà trường",
-      "relation": "XEM_XÉT"
+      "relation": "XEM_XÉT",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "học",
-      "relation": "TIẾP_NHẬN"
+      "relation": "TIẾP_NHẬN",
+      "type_source": "person",
+      "type_target": "activity"
     }
   ]
 }

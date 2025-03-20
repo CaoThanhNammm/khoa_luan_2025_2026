@@ -2,347 +2,431 @@
   "entities": [
     {
       "name": "Quy chế đào tạo",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Quy chế công tác HSSV",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Quy định đối với HSSV nội ngoại trú",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Quy định về việc thực hiện nếp sống văn hóa học đường",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Quy định về giờ giấc học tập",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "thầy cô",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "bài tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "đề tài",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "thi",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "kiểm tra",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "Bộ Giáo dục và Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "nhà trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "hoạt động học tập",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "hoạt động xã hội",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "phong trào thi đua",
-      "type": "phong trào"
+      "type": "movement"
     },
     {
       "name": "tổ chức đoàn thể",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "nghiên cứu khoa học",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "hoạt động khởi nghiệp",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "hoạt động phục vụ cộng đồng",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "giảng viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "nhân viên nhà trường",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "bạn bè",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "cử chỉ",
-      "type": "hành động"
+      "type": "action"
     },
     {
       "name": "trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "cơ sở vật chất",
-      "type": "vật chất"
+      "type": "material"
     },
     {
       "name": "thiết bị dạy và học",
-      "type": "vật chất"
+      "type": "material"
     },
     {
       "name": "môi trường sống",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "nơi công cộng",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "khu vực hiệu bộ",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "giờ làm việc",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "khu giảng đường",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "phòng học",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "giờ học",
-      "type": "thời gian"
+      "type": "time"
     }
   ],
   "relationships": [
     {
       "source": "người học",
       "target": "Quy chế đào tạo",
-      "relation": "THỰC_HIỆN"
+      "relation": "THỰC_HIỆN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "người học",
       "target": "Quy chế công tác HSSV",
-      "relation": "THỰC_HIỆN"
+      "relation": "THỰC_HIỆN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "người học",
       "target": "Quy định đối với HSSV nội ngoại trú",
-      "relation": "THỰC_HIỆN"
+      "relation": "THỰC_HIỆN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "người học",
       "target": "Quy định về việc thực hiện nếp sống văn hóa học đường",
-      "relation": "THỰC_HIỆN"
+      "relation": "THỰC_HIỆN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "người học",
       "target": "Quy định về giờ giấc học tập",
-      "relation": "THỰC_HIỆN"
+      "relation": "THỰC_HIỆN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "người học",
       "target": "thầy cô",
-      "relation": "LẮNG_NGHE"
+      "relation": "LẮNG_NGHE",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "người học",
       "target": "thảo luận",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "người học",
       "target": "tranh luận",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "người học",
       "target": "bài tập",
-      "relation": "HOÀN_THÀNH"
+      "relation": "HOÀN_THÀNH",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "người học",
       "target": "đề tài",
-      "relation": "HOÀN_THÀNH"
+      "relation": "HOÀN_THÀNH",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "người học",
       "target": "thi",
-      "relation": "NGHIÊM_TÚC"
+      "relation": "NGHIÊM_TÚC",
+      "type_source": "person",
+      "type_target": "event"
     },
     {
       "source": "người học",
       "target": "kiểm tra",
-      "relation": "NGHIÊM_TÚC"
+      "relation": "NGHIÊM_TÚC",
+      "type_source": "person",
+      "type_target": "event"
     },
     {
       "source": "người học",
       "target": "Bộ Giáo dục và Đào tạo",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "người học",
       "target": "nhà trường",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "người học",
       "target": "hoạt động học tập",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "người học",
       "target": "hoạt động xã hội",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "người học",
       "target": "phong trào thi đua",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "movement"
     },
     {
       "source": "tổ chức đoàn thể",
       "target": "phong trào thi đua",
-      "relation": "PHÁT_ĐỘNG"
+      "relation": "PHÁT_ĐỘNG",
+      "type_source": "organization",
+      "type_target": "movement"
     },
     {
       "source": "người học",
       "target": "nghiên cứu khoa học",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "người học",
       "target": "hoạt động khởi nghiệp",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "người học",
       "target": "hoạt động phục vụ cộng đồng",
-      "relation": "THAM_GIA"
+      "relation": "THAM_GIA",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "người học",
       "target": "giảng viên",
-      "relation": "TÔN_TRỌNG"
+      "relation": "TÔN_TRỌNG",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "người học",
       "target": "nhân viên nhà trường",
-      "relation": "TÔN_TRỌNG"
+      "relation": "TÔN_TRỌNG",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "người học",
       "target": "giảng viên",
-      "relation": "HỎI"
+      "relation": "HỎI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "người học",
       "target": "nhân viên nhà trường",
-      "relation": "HỎI"
+      "relation": "HỎI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "người học",
       "target": "giảng viên",
-      "relation": "TRẢ_LỜI"
+      "relation": "TRẢ_LỜI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "người học",
       "target": "nhân viên nhà trường",
-      "relation": "TRẢ_LỜI"
+      "relation": "TRẢ_LỜI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "người học",
       "target": "giảng viên",
-      "relation": "LÀM_PHIỀN"
+      "relation": "LÀM_PHIỀN",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "người học",
       "target": "nhân viên nhà trường",
-      "relation": "LÀM_PHIỀN"
+      "relation": "LÀM_PHIỀN",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "bạn bè",
       "target": "người học",
-      "relation": "QUAN_HỆ"
+      "relation": "QUAN_HỆ",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "người học",
       "target": "người học",
-      "relation": "TÔN_TRỌNG"
+      "relation": "TÔN_TRỌNG",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "người học",
       "target": "cử chỉ",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "action"
     },
     {
       "source": "người học",
       "target": "trường",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "người học",
       "target": "nơi công cộng",
-      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+      "relation": "KHÔNG_GÂY_ỒN_ÀO",
+      "type_source": "person",
+      "type_target": "location"
     },
     {
       "source": "người học",
       "target": "khu vực hiệu bộ",
-      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+      "relation": "KHÔNG_GÂY_ỒN_ÀO",
+      "type_source": "person",
+      "type_target": "location"
     },
     {
       "source": "người học",
       "target": "giờ làm việc",
-      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+      "relation": "KHÔNG_GÂY_ỒN_ÀO",
+      "type_source": "person",
+      "type_target": "time"
     },
     {
       "source": "người học",
       "target": "khu giảng đường",
-      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+      "relation": "KHÔNG_GÂY_ỒN_ÀO",
+      "type_source": "person",
+      "type_target": "location"
     },
     {
       "source": "người học",
       "target": "phòng học",
-      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+      "relation": "KHÔNG_GÂY_ỒN_ÀO",
+      "type_source": "person",
+      "type_target": "location"
     },
     {
       "source": "người học",
       "target": "giờ học",
-      "relation": "KHÔNG_GÂY_ỒN_ÀO"
+      "relation": "KHÔNG_GÂY_ỒN_ÀO",
+      "type_source": "person",
+      "type_target": "time"
     },
     {
       "source": "người học",
       "target": "cơ sở vật chất",
-      "relation": "GIỮ_GÌN"
+      "relation": "GIỮ_GÌN",
+      "type_source": "person",
+      "type_target": "material"
     },
     {
       "source": "người học",
       "target": "thiết bị dạy và học",
-      "relation": "GIỮ_GÌN"
+      "relation": "GIỮ_GÌN",
+      "type_source": "person",
+      "type_target": "material"
     },
     {
       "source": "người học",
       "target": "môi trường sống",
-      "relation": "GIỮ_GÌN"
+      "relation": "GIỮ_GÌN",
+      "type_source": "person",
+      "type_target": "concept"
     }
   ]
 }

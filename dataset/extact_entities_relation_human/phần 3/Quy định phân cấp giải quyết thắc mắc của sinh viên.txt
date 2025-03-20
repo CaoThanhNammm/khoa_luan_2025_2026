@@ -2,27 +2,27 @@
   "entities": [
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "người có thẩm quyền",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "email",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "đơn",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "bản in",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "photocopy",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "website",
@@ -30,131 +30,131 @@
     },
     {
       "name": "Nhà Trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "điện thoại",
-      "type": "thiết bị"
+      "type": "device"
     },
     {
       "name": "Khoa",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Phòng Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "giáo viên chủ nhiệm",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "cố vấn học tập",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "học kỳ",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "số tín chỉ",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "chuyên ngành đào tạo",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "giáo viên giảng dạy",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "đề cương chi tiết học phần",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "điểm bộ phận",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "ngân hàng câu hỏi thi",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "tài liệu học tập",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "tài liệu tham khảo",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "khiếu nại",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Khoa",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "đình chỉ thi",
-      "type": "hình thức kỷ luật"
+      "type": "disciplinary_action"
     },
     {
       "name": "Khoa chuyên môn",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "giáo vụ khoa",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Ban chủ nhiệm khoa",
-      "type": "nhóm người"
+      "type": "group"
     },
     {
       "name": "chương trình đào tạo",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "điều kiện tốt nghiệp",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "thẻ sinh viên",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "bộ phận quản lý đăng ký trực tuyến",
-      "type": "nhóm người"
+      "type": "group"
     },
     {
       "name": "Phòng Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "3 tuần",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "môn học",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "thời khóa biểu",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "cơ sở dữ liệu",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "trang Web",
@@ -162,19 +162,19 @@
     },
     {
       "name": "trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "lớp học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "bản in",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "văn bản pháp lý",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Website",
@@ -182,15 +182,15 @@
     },
     {
       "name": "Phòng Công tác sinh viên",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "tài khoản cá nhân",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Email",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "trang Web",
@@ -198,323 +198,323 @@
     },
     {
       "name": "thẻ sinh viên",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "giáo viên chủ nhiệm",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "cố vấn học tập",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "cán bộ giảng dạy",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "trợ lý giáo vụ",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Ban chủ nhiệm khoa",
-      "type": "nhóm người"
+      "type": "group"
     },
     {
       "name": "phòng chức năng",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "thông tin",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Điều 4",
-      "type": "điều khoản"
+      "type": "clause"
     },
     {
       "name": "đơn vị chức năng",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Ban giám hiệu",
-      "type": "nhóm người"
+      "type": "group"
     },
     {
       "name": "Chương 3",
-      "type": "chương"
+      "type": "chapter"
     },
     {
       "name": "giáo viên chủ nhiệm",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "cố vấn học tập",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "giáo vụ khoa",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "BCN Khoa",
-      "type": "viết tắt"
+      "type": "abbreviation"
     },
     {
       "name": "phòng chức năng",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "giáo viên chủ nhiệm",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "cố vấn học tập",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Trưởng phòng Đào tạo",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "danh sách lớp học phần",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "danh sách bổ sung",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "đăng ký",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "rút học phần",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "lớp học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "đơn",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "bản in",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Phòng Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "học kỳ",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "lớp học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "đơn",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "học phí",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Phòng Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Quy chế đào tạo",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "điểm bộ phận",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "điểm thi kết thúc học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "điểm thi học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "thi",
-      "type": "sự kiện"
+      "type": "event"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "điểm thi",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "khoa",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "bản in",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Phòng Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Trưởng Bộ môn",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Bộ môn",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "điểm thi kết thúc học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "điểm học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Khoa",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Phòng Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "giấy hẹn",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Phòng Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "cơ sở dữ liệu",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "01 tuần",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "phúc khảo",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "điểm thi kết thúc học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "khoa chuyên môn",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "3 ngày",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "ngày công bố điểm",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "Trưởng bộ môn",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "giáo viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "3 ngày",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "ngày nhận đơn",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "Phòng Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "điểm thi học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Ban giám hiệu",
-      "type": "nhóm người"
+      "type": "group"
     },
     {
       "name": "đơn",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Chương 2",
-      "type": "chương"
+      "type": "chapter"
     },
     {
       "name": "Chương 3",
-      "type": "chương"
+      "type": "chapter"
     },
     {
       "name": "Điều 10",
-      "type": "điều khoản"
+      "type": "clause"
     },
     {
       "name": "nhà trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "công tác đào tạo",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "công tác sinh viên",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Điều 10",
-      "type": "điều khoản"
+      "type": "clause"
     },
     {
       "name": "Website",
@@ -522,653 +522,910 @@
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "tiêu đề",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Điều 10",
-      "type": "điều khoản"
+      "type": "clause"
     },
     {
       "name": "Điều 11",
-      "type": "điều khoản"
+      "type": "clause"
     }
   ],
   "relationships": [
     {
       "source": "sinh viên",
       "target": "người có thẩm quyền",
-      "relation": "CHUYỂN_TỚI"
+      "relation": "CHUYỂN_TỚI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "email",
-      "relation": "GỬI"
+      "relation": "GỬI",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "đơn",
-      "relation": "VIẾT"
+      "relation": "VIẾT",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "đơn",
       "target": "minh chứng",
-      "relation": "KÈM"
+      "relation": "KÈM",
+      "type_source": "document",
+      "type_target": "document"
     },
     {
       "source": "minh chứng",
       "target": "bản in",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "document",
+      "type_target": "document"
     },
     {
       "source": "minh chứng",
       "target": "photocopy",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "document",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "website",
-      "relation": "TRỰC_TUYẾN"
+      "relation": "TRỰC_TUYẾN",
+      "type_source": "person",
+      "type_target": "website"
     },
     {
       "source": "Nhà Trường",
       "target": "điện thoại",
-      "relation": "KHÔNG_CHẤP_NHẬN"
+      "relation": "KHÔNG_CHẤP_NHẬN",
+      "type_source": "organization",
+      "type_target": "device"
     },
     {
       "source": "sinh viên",
       "target": "Chương II",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "person",
+      "type_target": "chapter"
     },
     {
       "source": "sinh viên",
       "target": "đơn",
-      "relation": "NỘP"
+      "relation": "NỘP",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "Khoa",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "Phòng Đào tạo",
-      "relation": "CHO"
+      "relation": "CHO",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "Chương III",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "person",
+      "type_target": "chapter"
     },
     {
       "source": "Khoa",
       "target": "đơn",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "Phòng Đào tạo",
       "target": "đơn",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "Khoa",
       "target": "sổ",
-      "relation": "LƯU"
+      "relation": "LƯU",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "Khoa",
       "target": "ngày trả lời",
-      "relation": "HẸN"
+      "relation": "HẸN",
+      "type_source": "organization",
+      "type_target": "time"
     },
     {
       "source": "Khoa",
       "target": "phiếu trả lời",
-      "relation": "PHÁT"
+      "relation": "PHÁT",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "Phòng Đào tạo",
       "target": "sổ",
-      "relation": "LƯU"
+      "relation": "LƯU",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "Phòng Đào tạo",
       "target": "ngày trả lời",
-      "relation": "HẸN"
+      "relation": "HẸN",
+      "type_source": "organization",
+      "type_target": "time"
     },
     {
       "source": "Phòng Đào tạo",
       "target": "phiếu trả lời",
-      "relation": "PHÁT"
+      "relation": "PHÁT",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "giáo viên chủ nhiệm",
-      "relation": "TRAO_ĐỔI"
+      "relation": "TRAO_ĐỔI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "cố vấn học tập",
-      "relation": "TRAO_ĐỔI"
+      "relation": "TRAO_ĐỔI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "học phần",
-      "relation": "TƯ_VẤN"
+      "relation": "TƯ_VẤN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "học kỳ",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "person",
+      "type_target": "time"
     },
     {
       "source": "sinh viên",
       "target": "số tín chỉ",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "quantity"
     },
     {
       "source": "sinh viên",
       "target": "chuyên ngành đào tạo",
-      "relation": "TƯ_VẤN"
+      "relation": "TƯ_VẤN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "giáo viên giảng dạy",
-      "relation": "TRAO_ĐỔI"
+      "relation": "TRAO_ĐỔI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "đề cương chi tiết học phần",
-      "relation": "THẮC_MẮC"
+      "relation": "THẮC_MẮC",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "điểm bộ phận",
-      "relation": "THẮC_MẮC"
+      "relation": "THẮC_MẮC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "ngân hàng câu hỏi thi",
-      "relation": "THẮC_MẮC"
+      "relation": "THẮC_MẮC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "tài liệu học tập",
-      "relation": "THẮC_MẮC"
+      "relation": "THẮC_MẮC",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "tài liệu tham khảo",
-      "relation": "THẮC_MẮC"
+      "relation": "THẮC_MẮC",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "khiếu nại",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "giảng viên",
       "target": "đình chỉ thi",
-      "relation": "ĐỀ_NGHỊ"
+      "relation": "ĐỀ_NGHỊ",
+      "type_source": "person",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "giảng viên",
       "target": "Khoa",
-      "relation": "ĐỀ_NGHỊ"
+      "relation": "ĐỀ_NGHỊ",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "Khoa chuyên môn",
-      "relation": "TRAO_ĐỔI"
+      "relation": "TRAO_ĐỔI",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "giáo vụ khoa",
-      "relation": "TRAO_ĐỔI"
+      "relation": "TRAO_ĐỔI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "Ban chủ nhiệm khoa",
-      "relation": "TRAO_ĐỔI"
+      "relation": "TRAO_ĐỔI",
+      "type_source": "person",
+      "type_target": "group"
     },
     {
       "source": "sinh viên",
       "target": "chương trình đào tạo",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "điều kiện tốt nghiệp",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "Phòng Đào tạo",
-      "relation": "TRAO_ĐỔI"
+      "relation": "TRAO_ĐỔI",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "thẻ sinh viên",
-      "relation": "MANG"
+      "relation": "MANG",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "bản in",
-      "relation": "MANG"
+      "relation": "MANG",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "photo",
-      "relation": "MANG"
+      "relation": "MANG",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "bộ phận quản lý đăng ký trực tuyến",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "person",
+      "type_target": "group"
     },
     {
       "source": "sinh viên",
       "target": "Phòng Đào tạo",
-      "relation": "ĐƯỢC_HỖ_TRỢ"
+      "relation": "ĐƯỢC_HỖ_TRỢ",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "3 tuần",
       "target": "học",
-      "relation": "SAU"
+      "relation": "SAU",
+      "type_source": "time",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "danh sách",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "lớp học phần",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "môn học",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "thời khóa biểu",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "cơ sở dữ liệu",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "sinh viên",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "trang Web",
-      "relation": "TRÊN"
+      "relation": "TRÊN",
+      "type_source": "person",
+      "type_target": "website"
     },
     {
       "source": "sinh viên",
       "target": "Phòng Đào tạo",
-      "relation": "THÔNG_BÁO"
+      "relation": "THÔNG_BÁO",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "lớp học phần",
-      "relation": "ĐI_HỌC"
+      "relation": "ĐI_HỌC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "cơ sở dữ liệu",
-      "relation": "CHƯA_ĐƯỢC_SỬA"
+      "relation": "CHƯA_ĐƯỢC_SỬA",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "trang Web",
-      "relation": "TRÊN"
+      "relation": "TRÊN",
+      "type_source": "person",
+      "type_target": "website"
     },
     {
       "source": "sinh viên",
       "target": "trường",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "lớp học phần",
       "target": "bản in",
-      "relation": "TRÊN"
+      "relation": "TRÊN",
+      "type_source": "concept",
+      "type_target": "document"
     },
     {
       "source": "bản in",
       "target": "văn bản pháp lý",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "document",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "kết quả đăng ký học phần",
-      "relation": "CÔNG_NHẬN"
+      "relation": "CÔNG_NHẬN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "Website",
       "target": "tham khảo",
-      "relation": "CHỈ_LÀ"
+      "relation": "CHỈ_LÀ",
+      "type_source": "website",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "tài khoản cá nhân",
-      "relation": "MẤT"
+      "relation": "MẤT",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "Email",
-      "relation": "MẤT"
+      "relation": "MẤT",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "trang Web",
-      "relation": "ĐĂNG_NHẬP"
+      "relation": "ĐĂNG_NHẬP",
+      "type_source": "person",
+      "type_target": "website"
     },
     {
       "source": "sinh viên",
       "target": "thẻ sinh viên",
-      "relation": "MANG"
+      "relation": "MANG",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "Phòng Công tác sinh viên",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "hướng dẫn",
-      "relation": "ĐƯỢC"
+      "relation": "ĐƯỢC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "hỗ trợ",
-      "relation": "ĐƯỢC"
+      "relation": "ĐƯỢC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "giáo viên chủ nhiệm",
       "target": "ý kiến",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "cố vấn học tập",
       "target": "ý kiến",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "cán bộ giảng dạy",
       "target": "ý kiến",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "trợ lý giáo vụ",
       "target": "ý kiến",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "Ban chủ nhiệm khoa",
       "target": "ý kiến",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "group",
+      "type_target": "concept"
     },
     {
       "source": "phòng chức năng",
       "target": "ý kiến",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "giáo viên chủ nhiệm",
       "target": "sinh viên",
-      "relation": "GIÚP_ĐỠ"
+      "relation": "GIÚP_ĐỠ",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "cố vấn học tập",
       "target": "sinh viên",
-      "relation": "GIÚP_ĐỠ"
+      "relation": "GIÚP_ĐỠ",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "cán bộ giảng dạy",
       "target": "sinh viên",
-      "relation": "GIÚP_ĐỠ"
+      "relation": "GIÚP_ĐỠ",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "trợ lý giáo vụ",
       "target": "sinh viên",
-      "relation": "GIÚP_ĐỠ"
+      "relation": "GIÚP_ĐỠ",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "Ban chủ nhiệm khoa",
       "target": "sinh viên",
-      "relation": "GIÚP_ĐỠ"
+      "relation": "GIÚP_ĐỠ",
+      "type_source": "group",
+      "type_target": "person"
     },
     {
       "source": "phòng chức năng",
       "target": "sinh viên",
-      "relation": "GIÚP_ĐỠ"
+      "relation": "GIÚP_ĐỠ",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "thông tin",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "Điều 4",
       "target": "sinh viên",
-      "relation": "NÊU"
+      "relation": "NÊU",
+      "type_source": "clause",
+      "type_target": "person"
     },
     {
       "source": "đơn vị chức năng",
       "target": "Ban giám hiệu",
-      "relation": "HOẶC"
+      "relation": "HOẶC",
+      "type_source": "organization",
+      "type_target": "group"
     },
     {
       "source": "sinh viên",
       "target": "Chương 3",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "person",
+      "type_target": "chapter"
     },
     {
       "source": "giáo viên chủ nhiệm",
       "target": "đơn",
-      "relation": "XÁC_NHẬN"
+      "relation": "XÁC_NHẬN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "cố vấn học tập",
       "target": "đơn",
-      "relation": "XÁC_NHẬN"
+      "relation": "XÁC_NHẬN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "giáo vụ khoa",
       "target": "đơn",
-      "relation": "XÁC_NHẬN"
+      "relation": "XÁC_NHẬN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "giáo viên chủ nhiệm",
       "target": "đơn",
-      "relation": "GHI"
+      "relation": "GHI",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "cố vấn học tập",
       "target": "đơn",
-      "relation": "GHI"
+      "relation": "GHI",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "giáo vụ khoa",
       "target": "đơn",
-      "relation": "GHI"
+      "relation": "GHI",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "giáo viên chủ nhiệm",
       "target": "BCN Khoa",
-      "relation": "CHUYỂN"
+      "relation": "CHUYỂN",
+      "type_source": "person",
+      "type_target": "abbreviation"
     },
     {
       "source": "cố vấn học tập",
       "target": "BCN Khoa",
-      "relation": "CHUYỂN"
+      "relation": "CHUYỂN",
+      "type_source": "person",
+      "type_target": "abbreviation"
     },
     {
       "source": "giáo vụ khoa",
       "target": "BCN Khoa",
-      "relation": "CHUYỂN"
+      "relation": "CHUYỂN",
+      "type_source": "person",
+      "type_target": "abbreviation"
     },
     {
       "source": "giáo viên chủ nhiệm",
       "target": "phòng chức năng",
-      "relation": "CHUYỂN"
+      "relation": "CHUYỂN",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "cố vấn học tập",
       "target": "phòng chức năng",
-      "relation": "CHUYỂN"
+      "relation": "CHUYỂN",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "giáo vụ khoa",
       "target": "phòng chức năng",
-      "relation": "CHUYỂN"
+      "relation": "CHUYỂN",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "giáo viên chủ nhiệm",
       "target": "bản",
-      "relation": "LƯU"
+      "relation": "LƯU",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "cố vấn học tập",
       "target": "bản",
-      "relation": "LƯU"
+      "relation": "LƯU",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "danh sách lớp học phần",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "Trưởng phòng Đào tạo",
       "target": "danh sách lớp học phần",
-      "relation": "KÝ"
+      "relation": "KÝ",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "danh sách bổ sung",
       "target": "danh sách lớp học phần",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "document",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "đăng ký",
-      "relation": "ĐÃ"
+      "relation": "ĐÃ",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "rút học phần",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "lớp học phần",
-      "relation": "VỀ"
+      "relation": "VỀ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "đơn",
-      "relation": "VIẾT"
+      "relation": "VIẾT",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "đơn",
       "target": "bản in",
-      "relation": "KÈM"
+      "relation": "KÈM",
+      "type_source": "document",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "Phòng Đào tạo",
-      "relation": "GỬI"
+      "relation": "GỬI",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "Phòng Đào tạo",
       "target": "đơn",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "Phòng Đào tạo",
       "target": "sinh viên",
-      "relation": "GIẢI_QUYẾT"
+      "relation": "GIẢI_QUYẾT",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "đơn",
-      "relation": "VIẾT"
+      "relation": "VIẾT",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "học phí",
-      "relation": "NỘP"
+      "relation": "NỘP",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "Phòng Đào tạo",
-      "relation": "NỘP"
+      "relation": "NỘP",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "Nhà trường",
       "target": "đơn",
-      "relation": "XEM_XÉT"
+      "relation": "XEM_XÉT",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "Nhà trường",
       "target": "Quy chế đào tạo",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "điểm thi",
-      "relation": "KIỂM_TRA"
+      "relation": "KIỂM_TRA",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "khoa",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "bản in",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "Phòng Đào tạo",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "điểm bộ phận",
-      "relation": "THẮC_MẮC"
+      "relation": "THẮC_MẮC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "giảng viên giảng dạy",
-      "relation": "VỚI"
+      "relation": "VỚI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "Trưởng Bộ môn",
-      "relation": "GỬI"
+      "relation": "GỬI",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "Trưởng Bộ môn",
       "target": "sinh viên",
-      "relation": "GIẢI_QUYẾT"
+      "relation": "GIẢI_QUYẾT",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "điểm thi kết thúc học phần",
-      "relation": "THẮC_MẮC"
+      "relation": "THẮC_MẮC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "điểm học phần",
-      "relation": "THẮC_MẮC"
+      "relation": "THẮC_MẮC",
+      "type_source": "person",
+      "type_target": "concept"
+    }
+  ]
+}

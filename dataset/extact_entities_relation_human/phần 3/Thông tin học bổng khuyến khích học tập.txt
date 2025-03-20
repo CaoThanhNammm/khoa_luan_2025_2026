@@ -2,895 +2,1091 @@
   "entities": [
     {
       "name": "Trường Đại học Nông Lâm TP.HCM",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "sinh viên hệ chính quy",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "thời gian thiết kế chương trình đào tạo",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "học bổng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "01 suất học bổng",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "học bổng chính sách",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "trợ cấp xã hội",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chính sách ưu đãi",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "kết quả học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "rèn luyện",
-      "type": "hoạt động"
+      "type": "activity"
     },
     {
       "name": "học bổng khuyến khích học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "khóa học",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "chương trình đào tạo",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Khối học bổng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chương trình tiên tiến",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "giai đoạn dự bị Anh văn",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "trình độ Anh văn",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "học bổng khuyến khích học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "nhà trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "hồ sơ",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Quỹ học bổng khuyến khích học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chương trình đại trà",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "8%",
-      "type": "tỉ lệ"
+      "type": "percentage"
     },
     {
       "name": "tổng thu học phí",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chương trình tiên tiến",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chương trình chất lượng cao",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "3%",
-      "type": "tỉ lệ"
+      "type": "percentage"
     },
     {
       "name": "Hiệu trưởng",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Thành phố Hồ Chí Minh",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "Cơ sở chính",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "khối ngành 1",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "khối ngành 3",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "khối ngành 4",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "khối ngành 5",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "khối ngành 7",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chương trình chất lượng cao",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chương trình tiên tiến",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "ngành Công nghệ thực phẩm",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "ngành Chăn nuôi thú y",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Phân hiệu Gia Lai",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Phân hiệu Ninh Thuận",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "khối cao đẳng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Quỹ học bổng khuyến khích học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "khối học bổng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "công thức",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "𝑞𝑖",
-      "type": "biến"
+      "type": "variable"
     },
     {
       "name": "𝑄",
-      "type": "biến"
+      "type": "variable"
     },
     {
       "name": "𝑛𝑖",
-      "type": "biến"
+      "type": "variable"
     },
     {
       "name": "𝑁",
-      "type": "biến"
+      "type": "variable"
     },
     {
       "name": "điểm trung bình chung học bổng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "học phần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "số tín chỉ",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "thang điểm 10",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "điểm rèn luyện",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Bộ Giáo dục và Đào tạo",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "15 tín chỉ",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "học kỳ",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "học kỳ cuối",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "08 tín chỉ",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "7,0",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "5 điểm",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "70",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "khiển trách",
-      "type": "hình thức kỷ luật"
+      "type": "disciplinary_action"
     },
     {
       "name": "học kỳ",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "Hiệu trưởng",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Học bổng loại Khá",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "7,0",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "70",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "Học bổng loại Giỏi",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "8,0",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "80",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "Học bổng loại Xuất sắc",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "9,0",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "90",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "Học bổng khuyến khích học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chương trình đại trà",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Học bổng loại Khá",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "mức trần học phí",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chương trình đại trà",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "nhóm ngành",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Chính phủ",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "20%",
-      "type": "tỉ lệ"
+      "type": "percentage"
     },
     {
       "name": "Học bổng loại Giỏi",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Học bổng loại Xuất sắc",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Học bổng khuyến khích học tập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Chương trình Chất lượng cao",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Chương trình Tiên tiến",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chương trình đại trà",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "30%",
-      "type": "tỉ lệ"
+      "type": "percentage"
     },
     {
       "name": "học kỳ",
-      "type": "thời gian"
+      "type": "time"
     },
     {
       "name": "Phòng Công tác sinh viên",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Hội đồng xét duyệt",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "khối học bổng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "điểm trung bình chung học bổng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "điểm rèn luyện",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "số tín chỉ",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "điểm trung bình chung tích lũy",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "khối học bổng",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "2 chữ số thập phân",
-      "type": "số lượng"
+      "type": "quantity"
     }
   ],
   "relationships": [
     {
       "source": "sinh viên hệ chính quy",
       "target": "Trường Đại học Nông Lâm TP.HCM",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên hệ chính quy",
       "target": "thời gian thiết kế chương trình đào tạo",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "person",
+      "type_target": "time"
     },
     {
       "source": "sinh viên",
       "target": "học bổng",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "01 suất học bổng",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "quantity"
     },
     {
       "source": "sinh viên",
       "target": "học bổng chính sách",
-      "relation": "THUỘC"
+      "relation": "THUỘC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "trợ cấp xã hội",
-      "relation": "THUỘC"
+      "relation": "THUỘC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "chính sách ưu đãi",
-      "relation": "THUỘC"
+      "relation": "THUỘC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "kết quả học tập",
-      "relation": "ĐẠT"
+      "relation": "ĐẠT",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "rèn luyện",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "học bổng khuyến khích học tập",
-      "relation": "XÉT"
+      "relation": "XÉT",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "sinh viên",
-      "relation": "NHƯ"
+      "relation": "NHƯ",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "khóa học",
-      "relation": "CÙNG"
+      "relation": "CÙNG",
+      "type_source": "person",
+      "type_target": "time"
     },
     {
       "source": "sinh viên",
       "target": "chương trình đào tạo",
-      "relation": "CÙNG"
+      "relation": "CÙNG",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "Khối học bổng",
-      "relation": "XẾP"
+      "relation": "XẾP",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "kết quả học tập",
-      "relation": "SO_SÁNH"
+      "relation": "SO_SÁNH",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "rèn luyện",
-      "relation": "SO_SÁNH"
+      "relation": "SO_SÁNH",
+      "type_source": "person",
+      "type_target": "activity"
     },
     {
       "source": "sinh viên",
       "target": "học bổng khuyến khích học tập",
-      "relation": "XÉT"
+      "relation": "XÉT",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "chương trình tiên tiến",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khối học bổng",
       "target": "giai đoạn dự bị Anh văn",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "concept",
+      "type_target": "time"
     },
     {
       "source": "khối học bổng",
       "target": "trình độ Anh văn",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "học bổng khuyến khích học tập",
       "target": "nhà trường",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "organization"
     },
     {
       "source": "nhà trường",
       "target": "hồ sơ",
-      "relation": "KHÔNG_CẦN"
+      "relation": "KHÔNG_CẦN",
+      "type_source": "organization",
+      "type_target": "document"
     },
     {
       "source": "Quỹ học bổng khuyến khích học tập",
       "target": "chương trình đại trà",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Quỹ học bổng khuyến khích học tập",
       "target": "8%",
-      "relation": "BẰNG"
+      "relation": "BẰNG",
+      "type_source": "concept",
+      "type_target": "percentage"
     },
     {
       "source": "Quỹ học bổng khuyến khích học tập",
       "target": "tổng thu học phí",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Quỹ học bổng khuyến khích học tập",
       "target": "chương trình tiên tiến",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Quỹ học bổng khuyến khích học tập",
       "target": "chương trình chất lượng cao",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Quỹ học bổng khuyến khích học tập",
       "target": "3%",
-      "relation": "BẰNG"
+      "relation": "BẰNG",
+      "type_source": "concept",
+      "type_target": "percentage"
     },
     {
       "source": "Quỹ học bổng khuyến khích học tập",
       "target": "tổng thu học phí",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Hiệu trưởng",
       "target": "Quỹ học bổng khuyến khích học tập",
-      "relation": "BỐ_TRÍ"
+      "relation": "BỐ_TRÍ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "Cơ sở chính",
       "target": "Thành phố Hồ Chí Minh",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "location",
+      "type_target": "location"
     },
     {
       "source": "Cơ sở chính",
       "target": "khối ngành 1",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "location",
+      "type_target": "concept"
     },
     {
       "source": "Cơ sở chính",
       "target": "khối ngành 3",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "location",
+      "type_target": "concept"
     },
     {
       "source": "Cơ sở chính",
       "target": "khối ngành 4",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "location",
+      "type_target": "concept"
     },
     {
       "source": "Cơ sở chính",
       "target": "khối ngành 5",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "location",
+      "type_target": "concept"
     },
     {
       "source": "Cơ sở chính",
       "target": "khối ngành 7",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "location",
+      "type_target": "concept"
     },
     {
       "source": "Cơ sở chính",
       "target": "chương trình chất lượng cao",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "location",
+      "type_target": "concept"
     },
     {
       "source": "Cơ sở chính",
       "target": "chương trình tiên tiến",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "location",
+      "type_target": "concept"
     },
     {
       "source": "Cơ sở chính",
       "target": "ngành Công nghệ thực phẩm",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "location",
+      "type_target": "concept"
     },
     {
       "source": "Cơ sở chính",
       "target": "ngành Chăn nuôi thú y",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "location",
+      "type_target": "concept"
     },
     {
       "source": "Phân hiệu Gia Lai",
       "target": "khối ngành 3",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Phân hiệu Gia Lai",
       "target": "khối ngành 5",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Phân hiệu Ninh Thuận",
       "target": "khối ngành 1",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Phân hiệu Ninh Thuận",
       "target": "khối ngành 3",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Phân hiệu Ninh Thuận",
       "target": "khối ngành 4",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Phân hiệu Ninh Thuận",
       "target": "khối ngành 5",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Phân hiệu Ninh Thuận",
       "target": "khối ngành 7",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Phân hiệu Ninh Thuận",
       "target": "khối cao đẳng",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Quỹ học bổng khuyến khích học tập",
       "target": "khối học bổng",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Quỹ học bổng khuyến khích học tập",
       "target": "công thức",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "𝑞𝑖",
       "target": "Quỹ học bổng khuyến khích học tập",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "variable",
+      "type_target": "concept"
     },
     {
       "source": "𝑄",
       "target": "Quỹ học bổng khuyến khích học tập",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "variable",
+      "type_target": "concept"
     },
     {
       "source": "𝑛𝑖",
       "target": "sinh viên",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "variable",
+      "type_target": "person"
     },
     {
       "source": "𝑁",
       "target": "sinh viên",
-      "relation": "LÀ"
+      "relation": "LÀ",
+      "type_source": "variable",
+      "type_target": "person"
     },
     {
       "source": "điểm trung bình chung học bổng",
       "target": "học phần",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "điểm trung bình chung học bổng",
       "target": "số tín chỉ",
-      "relation": "TRỌNG_SỐ"
+      "relation": "TRỌNG_SỐ",
+      "type_source": "concept",
+      "type_target": "quantity"
     },
     {
       "source": "điểm trung bình chung học bổng",
       "target": "thang điểm 10",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "điểm rèn luyện",
       "target": "Bộ Giáo dục và Đào tạo",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "concept",
+      "type_target": "organization"
     },
     {
       "source": "sinh viên",
       "target": "15 tín chỉ",
-      "relation": "HOÀN_THÀNH"
+      "relation": "HOÀN_THÀNH",
+      "type_source": "person",
+      "type_target": "quantity"
     },
     {
       "source": "sinh viên",
       "target": "học kỳ",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "person",
+      "type_target": "time"
     },
     {
       "source": "học kỳ cuối",
       "target": "chương trình đào tạo",
-      "relation": "HOÀN_THÀNH"
+      "relation": "HOÀN_THÀNH",
+      "type_source": "time",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "08 tín chỉ",
-      "relation": "HOÀN_THÀNH"
+      "relation": "HOÀN_THÀNH",
+      "type_source": "person",
+      "type_target": "quantity"
     },
     {
       "source": "sinh viên",
       "target": "7,0",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "person",
+      "type_target": "quantity"
     },
     {
       "source": "sinh viên",
       "target": "5 điểm",
-      "relation": "KHÔNG_DƯỚI"
+      "relation": "KHÔNG_DƯỚI",
+      "type_source": "person",
+      "type_target": "quantity"
     },
     {
       "source": "sinh viên",
       "target": "70",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "person",
+      "type_target": "quantity"
     },
     {
       "source": "sinh viên",
       "target": "khiển trách",
-      "relation": "KHÔNG_BỊ"
+      "relation": "KHÔNG_BỊ",
+      "type_source": "person",
+      "type_target": "disciplinary_action"
     },
     {
       "source": "sinh viên",
       "target": "học kỳ",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "person",
+      "type_target": "time"
     },
     {
       "source": "Hiệu trưởng",
       "target": "sinh viên",
-      "relation": "QUYẾT_ĐỊNH"
+      "relation": "QUYẾT_ĐỊNH",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "Học bổng loại Khá",
       "target": "7,0",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "concept",
+      "type_target": "quantity"
     },
     {
       "source": "Học bổng loại Khá",
       "target": "70",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "concept",
+      "type_target": "quantity"
     },
     {
       "source": "Học bổng loại Giỏi",
       "target": "8,0",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "concept",
+      "type_target": "quantity"
     },
     {
       "source": "Học bổng loại Giỏi",
       "target": "80",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "concept",
+      "type_target": "quantity"
     },
     {
       "source": "Học bổng loại Xuất sắc",
       "target": "9,0",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "concept",
+      "type_target": "quantity"
     },
     {
       "source": "Học bổng loại Xuất sắc",
       "target": "90",
-      "relation": "TỪ"
+      "relation": "TỪ",
+      "type_source": "concept",
+      "type_target": "quantity"
     },
     {
       "source": "Học bổng khuyến khích học tập",
       "target": "chương trình đại trà",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Học bổng loại Khá",
       "target": "mức trần học phí",
-      "relation": "BẰNG"
+      "relation": "BẰNG",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "mức trần học phí",
       "target": "chương trình đại trà",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "nhóm ngành",
       "target": "chương trình đại trà",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "nhóm ngành",
       "target": "Chính phủ",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "concept",
+      "type_target": "organization"
     },
     {
       "source": "Học bổng loại Giỏi",
       "target": "Học bổng loại Khá",
-      "relation": "CAO_HƠN"
+      "relation": "CAO_HƠN",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Học bổng loại Giỏi",
       "target": "20%",
-      "relation": "CAO_HƠN"
+      "relation": "CAO_HƠN",
+      "type_source": "concept",
+      "type_target": "percentage"
     },
     {
       "source": "Học bổng loại Xuất sắc",
       "target": "Học bổng loại Giỏi",
-      "relation": "CAO_HƠN"
+      "relation": "CAO_HƠN",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Học bổng loại Xuất sắc",
       "target": "20%",
-      "relation": "CAO_HƠN"
+      "relation": "CAO_HƠN",
+      "type_source": "concept",
+      "type_target": "percentage"
     },
     {
       "source": "Học bổng khuyến khích học tập",
       "target": "chương trình đại trà",
-      "relation": "HƠN"
+      "relation": "HƠN",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Học bổng khuyến khích học tập",
       "target": "Chương trình Chất lượng cao",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Học bổng khuyến khích học tập",
       "target": "Chương trình Tiên tiến",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Học bổng khuyến khích học tập",
       "target": "30%",
-      "relation": "CAO_HƠN"
+      "relation": "CAO_HƠN",
+      "type_source": "concept",
+      "type_target": "percentage"
     },
     {
       "source": "Phòng Công tác sinh viên",
       "target": "học kỳ",
-      "relation": "SAU"
+      "relation": "SAU",
+      "type_source": "organization",
+      "type_target": "time"
     },
     {
       "source": "Phòng Công tác sinh viên",
       "target": "sinh viên",
-      "relation": "LẬP"
+      "relation": "LẬP",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "Phòng Công tác sinh viên",
       "target": "Hội đồng xét duyệt",
-      "relation": "TRÌNH"
+      "relation": "TRÌNH",
+      "type_source": "organization",
+      "type_target": "organization"
     },
     {
       "source": "khối học bổng",
       "target": "Học bổng",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "concept",
+      "type_target": "concept"
     },
     {
       "source": "Hội đồng",
       "target": "khối học bổng",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Hội đồng",
       "target": "điểm trung bình chung học bổng",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Hội đồng",
       "target": "điểm rèn luyện",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Hội đồng",
       "target": "số tín chỉ",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "organization",
+      "type_target": "quantity"
     },
     {
       "source": "Hội đồng",
       "target": "điểm trung bình chung tích lũy",
-      "relation": "THEO"
+      "relation": "THEO",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "Hội đồng",
       "target": "khối học bổng",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "organization",
+      "type_target": "concept"
     },
     {
       "source": "điểm trung bình chung học bổng",
       "target": "2 chữ số thập phân",
-      "relation": "LÀM_TRÒN"
+      "relation": "LÀM_TRÒN",
+      "type_source": "concept",
+      "type_target": "quantity"
     }
   ]
 }

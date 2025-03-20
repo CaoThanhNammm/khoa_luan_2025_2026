@@ -2,18 +2,42 @@
   "entities": [
     {
       "name": "Trường Đại học Nông Lâm TP.HCM",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "2035",
-      "type": "thời gian"
+      "type": "time"
+    },
+    {
+      "name": "trường đại học nghiên cứu",
+      "type": "type_of_organization"
+    },
+    {
+      "name": "chất lượng quốc tế",
+      "type": "concept"
     }
   ],
   "relationships": [
     {
       "source": "Trường Đại học Nông Lâm TP.HCM",
       "target": "2035",
-      "relation": "MỤC_TIÊU_ĐẾN"
+      "relation": "MỤC_TIÊU_ĐẾN",
+      "type_source": "organization",
+      "type_target": "time"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "trường đại học nghiên cứu",
+      "relation": "SẼ_TRỞ_THÀNH",
+      "type_source": "organization",
+      "type_target": "type_of_organization"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "chất lượng quốc tế",
+      "relation": "VỚI",
+      "type_source": "organization",
+      "type_target": "concept"
     }
   ]
 }

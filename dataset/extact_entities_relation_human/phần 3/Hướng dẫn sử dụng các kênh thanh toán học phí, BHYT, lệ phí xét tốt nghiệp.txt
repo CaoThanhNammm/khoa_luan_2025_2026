@@ -2,79 +2,79 @@
   "entities": [
     {
       "name": "BIDV",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "khách hàng",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Mã sinh viên",
-      "type": "mã"
+      "type": "code"
     },
     {
       "name": "hóa đơn học phí",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "học phí",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "chứng từ",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "01 liên chứng từ",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "cán bộ BIDV",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "BIDV Smart Banking",
-      "type": "ứng dụng"
+      "type": "application"
     },
     {
       "name": "điện thoại di động",
-      "type": "thiết bị"
+      "type": "device"
     },
     {
       "name": "số điện thoại di động",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "mật khẩu",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Học phí_Lệ phí thi",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "nhà cung cấp",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "mã khách hàng",
-      "type": "mã"
+      "type": "code"
     },
     {
       "name": "OTP",
-      "type": "mã"
+      "type": "code"
     },
     {
       "name": "hóa đơn",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Báo cáo giao dịch",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "BIDV",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "www.bidv.com.vn",
@@ -82,103 +82,103 @@
     },
     {
       "name": "tên đăng nhập",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "mật khẩu",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Thanh toán hóa đơn",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Thanh toán hóa đơn từng lần",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "tài khoản",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "học phí",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "số hóa đơn",
-      "type": "mã"
+      "type": "code"
     },
     {
       "name": "số tiền",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "hóa đơn",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "OTP",
-      "type": "mã"
+      "type": "code"
     },
     {
       "name": "BIDV Online",
-      "type": "hệ thống"
+      "type": "system"
     },
     {
       "name": "Hộp thư/Hộp thư đến",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "ATM",
-      "type": "thiết bị"
+      "type": "device"
     },
     {
       "name": "BIDV",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Thanh toán",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Tài khoản thanh toán",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Học phí– Lệ phí thi",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Trường Đại học Nông Lâm TP.HCM",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Mã sinh viên",
-      "type": "mã"
+      "type": "code"
     },
     {
       "name": "Có",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "BIDV",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "biên lai",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "ATM",
-      "type": "thiết bị"
+      "type": "device"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "chuyển khoản",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "https://dkmh.hcmuaf.edu.vn/",
@@ -186,35 +186,35 @@
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Đóng tiền học phí",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "bill",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "Thanh toán học phí qua BIDV",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "hình thức thanh toán",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "OTP",
-      "type": "mã"
+      "type": "code"
     },
     {
       "name": "số tài khoản",
-      "type": "mã"
+      "type": "code"
     },
     {
       "name": "số tiền",
-      "type": "số lượng"
+      "type": "quantity"
     },
     {
       "name": "https://pkhtc.hcmuaf.edu.vn/pkhtc-24817-1/vn/huong-dan-thanh-toan-hocphionline.html",
@@ -222,374 +222,504 @@
     },
     {
       "name": "BIDV SmartBanking",
-      "type": "ứng dụng"
+      "type": "application"
     },
     {
       "name": "Cài đặt sinh trắc học",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "10.000.000 đồng",
-      "type": "số tiền"
+      "type": "amount"
     },
     {
       "name": "OTP",
-      "type": "mã"
+      "type": "code"
     },
     {
       "name": "giấy tờ tùy thân",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "CCCD",
-      "type": "văn bản"
+      "type": "document"
     },
     {
       "name": "QR",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "CHIP CCCD",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "khuôn mặt",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Cài đặt sinh trắc học",
-      "type": "khái niệm"
+      "type": "concept"
     },
     {
       "name": "Đã thu nhập cấp độ 2",
-      "type": "trạng thái"
+      "type": "status"
     }
   ],
   "relationships": [
     {
       "source": "khách hàng",
       "target": "BIDV",
-      "relation": "ĐẾN"
+      "relation": "ĐẾN",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "khách hàng",
       "target": "Mã sinh viên",
-      "relation": "CUNG_CẤP"
+      "relation": "CUNG_CẤP",
+      "type_source": "person",
+      "type_target": "code"
     },
     {
       "source": "giao dịch viên",
       "target": "hóa đơn học phí",
-      "relation": "THÔNG_BÁO"
+      "relation": "THÔNG_BÁO",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "giao dịch viên",
       "target": "học phí",
-      "relation": "THÔNG_BÁO"
+      "relation": "THÔNG_BÁO",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "giao dịch viên",
       "target": "học phí",
-      "relation": "XỬ_LÝ"
+      "relation": "XỬ_LÝ",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "giao dịch viên",
       "target": "chứng từ",
-      "relation": "IN"
+      "relation": "IN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "khách hàng",
       "target": "01 liên chứng từ",
-      "relation": "NHẬN"
+      "relation": "NHẬN",
+      "type_source": "person",
+      "type_target": "quantity"
     },
     {
       "source": "cán bộ BIDV",
       "target": "01 liên chứng từ",
-      "relation": "DẤU_VÀ_CHỮ_KÝ"
+      "relation": "DẤU_VÀ_CHỮ_KÝ",
+      "type_source": "person",
+      "type_target": "quantity"
     },
     {
       "source": "khách hàng",
       "target": "BIDV Smart Banking",
-      "relation": "TRUY_CẬP"
+      "relation": "TRUY_CẬP",
+      "type_source": "person",
+      "type_target": "application"
     },
     {
       "source": "khách hàng",
       "target": "số điện thoại di động",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "mật khẩu",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "Học phí_Lệ phí thi",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "nhà cung cấp",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "khách hàng",
       "target": "mã khách hàng",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "code"
     },
     {
       "source": "khách hàng",
       "target": "hóa đơn",
-      "relation": "THANH_TOÁN"
+      "relation": "THANH_TOÁN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "khách hàng",
       "target": "OTP",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "code"
     },
     {
       "source": "hóa đơn",
       "target": "BIDV Smart Banking",
-      "relation": "HIỂN_THỊ"
+      "relation": "HIỂN_THỊ",
+      "type_source": "document",
+      "type_target": "application"
     },
     {
       "source": "khách hàng",
       "target": "Báo cáo giao dịch",
-      "relation": "LƯU"
+      "relation": "LƯU",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "khách hàng",
       "target": "BIDV",
-      "relation": "TRUY_CẬP"
+      "relation": "TRUY_CẬP",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "khách hàng",
       "target": "www.bidv.com.vn",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "person",
+      "type_target": "website"
     },
     {
       "source": "khách hàng",
       "target": "tên đăng nhập",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "mật khẩu",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "Thanh toán hóa đơn",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "Thanh toán hóa đơn từng lần",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "tài khoản",
-      "relation": "SỬ_DỤNG"
+      "relation": "SỬ_DỤNG",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "học phí",
-      "relation": "THANH_TOÁN"
+      "relation": "THANH_TOÁN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "số hóa đơn",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "code"
     },
     {
       "source": "số tiền",
       "target": "hóa đơn",
-      "relation": "TƯƠNG_ỨNG"
+      "relation": "TƯƠNG_ỨNG",
+      "type_source": "quantity",
+      "type_target": "document"
     },
     {
       "source": "khách hàng",
       "target": "hóa đơn",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "khách hàng",
       "target": "Thực hiện",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "hóa đơn",
-      "relation": "THANH_TOÁN"
+      "relation": "THANH_TOÁN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "khách hàng",
       "target": "OTP",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "code"
     },
     {
       "source": "hóa đơn",
       "target": "BIDV Online",
-      "relation": "HIỂN_THỊ"
+      "relation": "HIỂN_THỊ",
+      "type_source": "document",
+      "type_target": "system"
     },
     {
       "source": "khách hàng",
       "target": "Hộp thư/Hộp thư đến",
-      "relation": "LƯU"
+      "relation": "LƯU",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "khách hàng",
       "target": "ATM",
-      "relation": "SỬ_DỤNG"
+      "relation": "SỬ_DỤNG",
+      "type_source": "person",
+      "type_target": "device"
     },
     {
       "source": "khách hàng",
       "target": "Thanh toán",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "Tài khoản thanh toán",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "Học phí– Lệ phí thi",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "khách hàng",
       "target": "Trường Đại học Nông Lâm TP.HCM",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "khách hàng",
       "target": "Mã sinh viên",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "code"
     },
     {
       "source": "khách hàng",
       "target": "Có",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "BIDV",
       "target": "khách hàng",
-      "relation": "PHẢN_HỒI"
+      "relation": "PHẢN_HỒI",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "ATM",
       "target": "biên lai",
-      "relation": "IN"
+      "relation": "IN",
+      "type_source": "device",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "chuyển khoản",
-      "relation": "KHÔNG"
+      "relation": "KHÔNG",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "https://dkmh.hcmuaf.edu.vn/",
-      "relation": "ĐĂNG_NHẬP"
+      "relation": "ĐĂNG_NHẬP",
+      "type_source": "person",
+      "type_target": "website"
     },
     {
       "source": "sinh viên",
       "target": "Đóng tiền học phí",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "bill",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "Thanh toán học phí qua BIDV",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "hình thức thanh toán",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "OTP",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "code"
     },
     {
       "source": "số tài khoản",
       "target": "màn hình",
-      "relation": "HIỂN_THỊ"
+      "relation": "HIỂN_THỊ",
+      "type_source": "code",
+      "type_target": "device"
     },
     {
       "source": "số tiền",
       "target": "màn hình",
-      "relation": "HIỂN_THỊ"
+      "relation": "HIỂN_THỊ",
+      "type_source": "quantity",
+      "type_target": "device"
     },
     {
       "source": "sinh viên",
       "target": "xác nhận",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "BIDV SmartBanking",
-      "relation": "ĐĂNG_NHẬP"
+      "relation": "ĐĂNG_NHẬP",
+      "type_source": "person",
+      "type_target": "application"
     },
     {
       "source": "sinh viên",
       "target": "Cài đặt sinh trắc học",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "10.000.000 đồng",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "amount"
     },
     {
       "source": "sinh viên",
       "target": "OTP",
-      "relation": "NHẬP"
+      "relation": "NHẬP",
+      "type_source": "person",
+      "type_target": "code"
     },
     {
       "source": "sinh viên",
       "target": "giấy tờ tùy thân",
-      "relation": "CHỌN"
+      "relation": "CHỌN",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "CCCD",
-      "relation": "CHỤP_ẢNH"
+      "relation": "CHỤP_ẢNH",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "QR",
-      "relation": "QUÉT"
+      "relation": "QUÉT",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "CCCD",
-      "relation": "CHỤP_ẢNH"
+      "relation": "CHỤP_ẢNH",
+      "type_source": "person",
+      "type_target": "document"
     },
     {
       "source": "sinh viên",
       "target": "CHIP CCCD",
-      "relation": "ĐỌC"
+      "relation": "ĐỌC",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "khuôn mặt",
-      "relation": "LẤY_ẢNH"
+      "relation": "LẤY_ẢNH",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "sinh viên",
       "target": "Cài đặt sinh trắc học",
-      "relation": "KIỂM_TRA"
+      "relation": "KIỂM_TRA",
+      "type_source": "person",
+      "type_target": "concept"
     },
     {
       "source": "Đã thu nhập cấp độ 2",
       "target": "Cài đặt sinh trắc học",
-      "relation": "TRẠNG_THÁI"
+      "relation": "TRẠNG_THÁI",
+      "type_source": "status",
+      "type_target": "concept"
     }
   ]
 }

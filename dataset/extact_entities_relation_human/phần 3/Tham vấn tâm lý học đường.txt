@@ -2,51 +2,51 @@
   "entities": [
     {
       "name": "Tổ tham vấn tâm lý học đường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "Trường Đại học Nông Lâm TP.HCM",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "tham vấn trực tiếp",
-      "type": "hình thức"
+      "type": "method"
     },
     {
       "name": "tham vấn online",
-      "type": "hình thức"
+      "type": "method"
     },
     {
       "name": "Radio Nông Lâm",
-      "type": "phương tiện truyền thông"
+      "type": "media"
     },
     {
       "name": "chuyên gia tư vấn",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "cán bộ",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "giảng viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "trường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "sinh viên",
-      "type": "người"
+      "type": "person"
     },
     {
       "name": "Tổ Tư vấn Tâm lý học đường",
-      "type": "tổ chức"
+      "type": "organization"
     },
     {
       "name": "G.05, nhà Thiên Lý",
-      "type": "địa điểm"
+      "type": "location"
     },
     {
       "name": "tuvantamly@hcmuaf.edu.vn",
@@ -58,94 +58,128 @@
     },
     {
       "name": "0283 897 4560",
-      "type": "số điện thoại"
+      "type": "phone_number"
     }
   ],
   "relationships": [
     {
       "source": "Tổ tham vấn tâm lý học đường",
       "target": "Trường Đại học Nông Lâm TP.HCM",
-      "relation": "CỦA"
+      "relation": "CỦA",
+      "type_source": "organization",
+      "type_target": "organization"
     },
     {
       "source": "Tổ tham vấn tâm lý học đường",
       "target": "tham vấn trực tiếp",
-      "relation": "HOẠT_ĐỘNG"
+      "relation": "HOẠT_ĐỘNG",
+      "type_source": "organization",
+      "type_target": "method"
     },
     {
       "source": "Tổ tham vấn tâm lý học đường",
       "target": "tham vấn online",
-      "relation": "HOẠT_ĐỘNG"
+      "relation": "HOẠT_ĐỘNG",
+      "type_source": "organization",
+      "type_target": "method"
     },
     {
       "source": "Tổ tham vấn tâm lý học đường",
       "target": "Radio Nông Lâm",
-      "relation": "HOẠT_ĐỘNG"
+      "relation": "HOẠT_ĐỘNG",
+      "type_source": "organization",
+      "type_target": "media"
     },
     {
       "source": "Tổ tham vấn tâm lý học đường",
       "target": "chuyên gia tư vấn",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "Tổ tham vấn tâm lý học đường",
       "target": "cán bộ",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "Tổ tham vấn tâm lý học đường",
       "target": "giảng viên",
-      "relation": "CÓ"
+      "relation": "CÓ",
+      "type_source": "organization",
+      "type_target": "person"
     },
     {
       "source": "giảng viên",
       "target": "trường",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "cán bộ",
       "target": "trường",
-      "relation": "TRONG"
+      "relation": "TRONG",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "chuyên gia tư vấn",
       "target": "sinh viên",
-      "relation": "TƯ_VẤN"
+      "relation": "TƯ_VẤN",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "giảng viên",
       "target": "sinh viên",
-      "relation": "TƯ_VẤN"
+      "relation": "TƯ_VẤN",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "cán bộ",
       "target": "sinh viên",
-      "relation": "TƯ_VẤN"
+      "relation": "TƯ_VẤN",
+      "type_source": "person",
+      "type_target": "person"
     },
     {
       "source": "sinh viên",
       "target": "Tổ Tư vấn Tâm lý học đường",
-      "relation": "ĐĂNG_KÝ"
+      "relation": "ĐĂNG_KÝ",
+      "type_source": "person",
+      "type_target": "organization"
     },
     {
       "source": "Tổ Tư vấn Tâm lý học đường",
       "target": "G.05, nhà Thiên Lý",
-      "relation": "TẠI"
+      "relation": "TẠI",
+      "type_source": "organization",
+      "type_target": "location"
     },
     {
       "source": "sinh viên",
       "target": "tuvantamly@hcmuaf.edu.vn",
-      "relation": "GỬI"
+      "relation": "GỬI",
+      "type_source": "person",
+      "type_target": "email"
     },
     {
       "source": "sinh viên",
       "target": "https://nls.hcmuaf.edu.vn",
-      "relation": "TRUY_CẬP"
+      "relation": "TRUY_CẬP",
+      "type_source": "person",
+      "type_target": "website"
     },
     {
       "source": "sinh viên",
       "target": "0283 897 4560",
-      "relation": "LIÊN_HỆ"
+      "relation": "LIÊN_HỆ",
+      "type_source": "person",
+      "type_target": "phone_number"
     }
   ]
 }
