@@ -1,12 +1,14 @@
-import general
 from KnowledgeGraphDatabase import Neo4j
+from PreProcessing.PreProcessing import PreProcessing
+
+pre_processing = PreProcessing()
 
 def add_entities_relationship(json_string, part):
     json_string = list(map(lambda s: s.lower(), json_string))
     json = []
     # đổi từ string sang json
     for s in json_string:
-        json.append(general.string_to_json(s))
+        json.append(pre_processing.string_to_json(s))
 
     entities = []
     relationships = []

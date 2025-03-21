@@ -4,8 +4,6 @@ from ModelLLM.ModelEmbedding1024 import ModelEmbedding1024
 from ModelLLM.ModelEmbedding768 import ModelEmbedding768
 from ModelLLM.ModelEmbedding512 import ModelEmbedding512
 from ModelLLM.ModelLateInteraction import ModelLateInteraction
-from ModelLLM.ModelSpladeDoc import ModelSpladeDoc
-
 load_dotenv()
 
 class EmbeddingFactory:
@@ -15,7 +13,6 @@ class EmbeddingFactory:
         model_embedding_768_name = os.getenv("model_embedding_768")
         model_embedding_512_name = os.getenv("model_embedding_512")
         model_late_interaction_name = os.getenv("model_late_interaction")
-        model_splade_doc_name = os.getenv("model_splade_doc")
 
         if embed_model_name == model_embedding_1024_name:
             return ModelEmbedding1024(embed_model_name)
@@ -25,7 +22,5 @@ class EmbeddingFactory:
             return ModelEmbedding512(embed_model_name)
         elif embed_model_name == model_late_interaction_name:
             return ModelLateInteraction(embed_model_name)
-        elif embed_model_name == model_splade_doc_name:
-            return ModelSpladeDoc(model_splade_doc_name)
         else:
             raise ValueError(f"Không hỗ trợ")

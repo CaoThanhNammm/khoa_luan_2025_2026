@@ -1,14 +1,9 @@
 from langchain.text_splitter import SpacyTextSplitter
 from langchain_community.document_loaders import DirectoryLoader, PyMuPDFLoader
 from qdrant_client import QdrantClient
-from dotenv import load_dotenv
 from qdrant_client.models import PointStruct
-
-load_dotenv()
 from dotenv import load_dotenv
-
 load_dotenv()
-import general
 from langchain_nvidia_ai_endpoints import NVIDIARerank
 from langchain_core.documents import Document
 from qdrant_client import models
@@ -16,16 +11,14 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-
-class VectorDatabase:
-    def __init__(self, host, port, model_1024, model_768, model_512, model_late_interaction, model_splade_doc, collection_name):
+class Qdrant:
+    def __init__(self, host, port, model_1024, model_768, model_512, model_late_interaction, collection_name):
         self.client = QdrantClient(host=host, port=port)
         self.collection_name = collection_name
         self.model_1024 = model_1024
         self.model_768 = model_768
         self.model_512 = model_512
         self.model_late_interaction = model_late_interaction
-        self.model_splade_doc = model_splade_doc
 
     def create_collection(self, collection_name, size, distance):
         if self.client.collection_exists(collection_name=collection_name):
@@ -101,9 +94,7 @@ class VectorDatabase:
         model_embed_768, tokenizer_768 = self.model_768.load_model()
         model_embed_512 = self.model_512.load_model()
         model_embed_late_interaction, tokenizer_late_interaction = self.model_late_interaction.load_model()
-        model_splade_doc, tokenizer_splade_doc = self.model_splade_doc.load_model()
 
-        vncorenlp = general.load_vncorenlp()
         points = []
         id = 1
 
@@ -112,22 +103,12 @@ class VectorDatabase:
                 metadata = chunks[chunk].metadata
                 content = chunks[chunk].page_content
 
-                text_pre_processing = general.text_preprocessing_vietnamese(content, vncorenlp)
-
-                embedded_text_1024 = self.model_1024.embed(model_embed_1024, tokenizer_1024, text_pre_processing)
-                embedded_text_768 = self.model_768.embed(model_embed_768, tokenizer_768, text_pre_processing)
-                embedded_text_512 = self.model_512.embed(model_embed_512, None, text_pre_processing)
-
-                doc_vec, doc_tokens = general.compute_vector(text_pre_processing, model=model_splade_doc,
-                                                             tokenizer=tokenizer_splade_doc)
-                sorted_tokens_doc = general.extract_and_map_sparse_vector(doc_vec, tokenizer_splade_doc)
-
+                embedded_text_1024 = self.model_1024.embed(model_embed_1024, tokenizer_1024, content)
+                embedded_text_768 = self.model_768.embed(model_embed_768, tokenizer_768, content)
+                embedded_text_512 = self.model_512.embed(model_embed_512, None, content)
                 embedded_late_interaction = self.model_late_interaction.embed(model_embed_late_interaction,
                                                                                    tokenizer_late_interaction,
-                                                                                   text_pre_processing)
-
-                indices = tokenizer_splade_doc.convert_tokens_to_ids(sorted_tokens_doc)
-                values = list(sorted_tokens_doc.values())
+                                                                                   content)
 
                 points.append(
                     PointStruct(
@@ -137,7 +118,6 @@ class VectorDatabase:
                             'matryoshka-1024dim': embedded_text_1024,
                             'matryoshka-768dim': embedded_text_768,
                             'matryoshka-512dim': embedded_text_512,
-                            'sparse': models.SparseVector(indices=indices, values=values),
                             'late_interaction': embedded_late_interaction
                         }
                     )
@@ -182,7 +162,7 @@ class VectorDatabase:
             limit=10,
         ).points
 
-    def re_ranking(query, query_text_json):
+    def re_ranking(self, query, query_text_json):
         client = NVIDIARerank(
             model="nvidia/nv-rerankqa-mistral-4b-v3",
             api_key=os.getenv("API_KEY_RERANKING"),

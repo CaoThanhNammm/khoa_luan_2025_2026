@@ -1,12 +1,10 @@
 import time
-
 import pandas as pd
-
-import general
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.stats import spearmanr
 import os
 from dotenv import load_dotenv
+from LLM.Gemini import Gemini
 load_dotenv()
 
 def generate_answer(model, question):
@@ -100,7 +98,9 @@ type: Loại, được xác định là một "disease" (bệnh).
 source: Nguồn thông tin đến từ cơ sở dữ liệu, một cơ sở dữ liệu về các bệnh hiếm gặp.
 details: Nói về chi tiết hơn bệnh/dị tật
 """
-model = general.load_model(model_name, prompt)
+api_key = os.getenv("API_KEY")
+gemini = Gemini(api_key)
+model = gemini.load_model(model_name, prompt)
 dataset = pd.read_csv('dataset/prime/prime_auto_qa.csv')
 
 evaluation_results = evaluate_model(model, dataset)

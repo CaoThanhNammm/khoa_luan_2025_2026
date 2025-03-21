@@ -1,22 +1,8 @@
-import json
-from neo4j import GraphDatabase
-from sentence_transformers import SentenceTransformer
 from transformers import AutoModel
-from qdrant_client import QdrantClient, models
-import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer
-import py_vncorenlp
+from transformers import AutoTokenizer
 from dotenv import load_dotenv
-
 from ModelLLM.AModelLLM import IModelLLM
-
 load_dotenv()
-import google.generativeai as generativeai
-import os
-import re
-from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTextSplitter, NLTKTextSplitter, SpacyTextSplitter
-from langchain_community.document_loaders import DirectoryLoader, PyMuPDFLoader, PyPDFLoader, UnstructuredPDFLoader, PyPDFium2Loader, PDFMinerLoader
-from google import genai
 
 class ModelLateInteraction(IModelLLM):
     def load_model(self):
