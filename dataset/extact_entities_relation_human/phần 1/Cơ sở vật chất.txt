@@ -1,7 +1,7 @@
 {
   "entities": [
     {
-      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "type": "organization"
     },
     {
@@ -79,28 +79,28 @@
   ],
   "relationships": [
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "6 giảng đường",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "10 trung tâm",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "01 viện nghiên cứu và ứng dụng",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "01 thư viện trung tâm",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
@@ -114,42 +114,42 @@
       "type_target": "quantity"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "01 bệnh viện thú y",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "01 xưởng dược thú y",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "01 trại thực nghiệm thủy sản",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "04 trung tâm nghiên cứu thí nghiệm",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "thư viện điện tử",
       "relation": "SỬ_DỤNG",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "6 ký túc xá",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
@@ -170,28 +170,28 @@
       "type_target": "quantity"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "1 sân đa môn",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "3 sân bóng chuyền",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "1 sân bóng đá",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "facility"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "Nhà thi đấu và luyện tập thể thao",
       "relation": "SỞ_HỮU",
       "type_source": "organization",

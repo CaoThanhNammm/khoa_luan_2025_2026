@@ -162,12 +162,6 @@ class Neo4j:
             result = session.run(query)
             return [record for record in result]
 
-    # Hàm chạy câu lệnh Cypher
-    def run_cypher_query(self, query):
-        with self.driver.session() as session:
-            result = session.run(query)
-            for record in result:
-                return query
 
     # Lấy tất cả node
     def get_all_nodes(self):
@@ -186,3 +180,27 @@ class Neo4j:
                         "target": record["m"].get("name", "")}
                     for record in result]
             return data
+
+    def get_episode_to_part(self, episode_name, part_name):
+        query = """
+            MATCH (first:episode {name: $episode_name})-[:BAO_GỒM]->(second:part {name: $part_name})-[r*1..2]->(e)
+            RETURN r as relation, e as target
+        """
+        with self.driver.session() as session:
+            result = session.run(query, episode_name=episode_name, part_name=part_name)
+            return [record for record in result]
+
+    def get_relationship(self, records):
+        """Đọc và trích xuất các thuộc tính cần thiết từ kết quả truy vấn episode-part-entity"""
+        references_relationship = []
+
+        for record in records:
+            relations = record['relation']
+            last_relation = relations[-1]
+            source_node = last_relation.nodes[0]['name']
+            relation_type = last_relation.type
+            target_node = last_relation.nodes[1]['name']
+            if source_node is not None:
+                references_relationship.append(f"{source_node} {relation_type} {target_node}")
+
+        return references_relationship

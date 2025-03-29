@@ -1,5 +1,3 @@
-from langchain.text_splitter import SpacyTextSplitter
-from langchain_community.document_loaders import DirectoryLoader, PyMuPDFLoader
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct
 from dotenv import load_dotenv
@@ -8,8 +6,7 @@ from langchain_nvidia_ai_endpoints import NVIDIARerank
 from langchain_core.documents import Document
 from qdrant_client import models
 import os
-from dotenv import load_dotenv
-load_dotenv()
+import pdfplumber
 
 class Qdrant:
     def __init__(self, host, port, model_1024, model_768, model_512, model_late_interaction, collection_name):
@@ -65,81 +62,115 @@ class Qdrant:
                     always_ram=True,
                 ),
             ),
-            sparse_vectors_config={
-                "sparse": models.SparseVectorParams()
-            },
             hnsw_config=hnsw_config  # Thêm cấu hình HNSW
         )
         print("create collection success")
         return self.client
 
-    def read_chunks(self, data_path, chunk_size=700, chunk_overlap=140):
-        # Khai báo loader để quét toàn bộ thư mục data
-        loader = DirectoryLoader(data_path, glob="*.pdf", use_multithreading=True,
-                                 loader_cls=PyMuPDFLoader)  # type: ignore
-        documents = loader.load()
+    # đọc tất cả file pdf trong thư mục {data_path}. Mỗi lần đọc 3 trang
+    # trả về danh sách các nội dung bao gồm của 3 trang được ghép thành 1
+    def read_chunks(self, data_path, footer_height=40):
+        all_pages_text = []
+        pdf_files = [f for f in os.listdir(data_path) if f.lower().endswith('.pdf')]
 
-        # Chỉ lấy từ trang 4 trở đi vì trang đầu thường là bìa sách và mục lục
-        documents = documents[4:len(documents) - 2]
+        for pdf_file in pdf_files:
+            pdf_path = os.path.join(data_path, pdf_file)
 
-        # Sử dụng TextSplitter để chia nhỏ văn bản
-        text_splitter = SpacyTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-        chunks = text_splitter.split_documents(documents)
+            try:
+                with pdfplumber.open(pdf_path) as pdf:
+                    num_pages = len(pdf.pages)
+                    start_page = 10
+                    end_page = num_pages - 2
 
-        print("Read chunk success")
-        return chunks
+                    # Duyệt qua các trang theo nhóm 3
+                    for i in range(start_page, end_page + 1, 3):
+                        group_text = []
+                        group_pages = []
+
+                        # Lấy tối đa 3 trang liên tiếp
+                        for j in range(i, min(i + 3, end_page + 1)):
+                            page = pdf.pages[j]
+                            page_height = page.height
+
+                            # Chỉ cắt bỏ footer
+                            cropped_page = page.within_bbox(
+                                (0, 0, page.width, page_height - footer_height)
+                            )
+                            text = cropped_page.extract_text()
+                            if text:
+                                group_text.append(text)
+                                group_pages.append(j + 1)  # Số trang người dùng thấy (bắt đầu từ 1)
+
+                        if group_text:  # Chỉ thêm nếu có text
+                            all_pages_text.append('\n'.join(group_text))
+            except Exception as e:
+                print(f"Lỗi khi xử lý file {pdf_file}: {str(e)}")
+
+        return all_pages_text
 
     def create_embedding(self, chunks):
-        model_embed_1024, tokenizer_1024 = self.model_1024.load_model()
-        model_embed_768, tokenizer_768 = self.model_768.load_model()
-        model_embed_512 = self.model_512.load_model()
-        model_embed_late_interaction, tokenizer_late_interaction = self.model_late_interaction.load_model()
+        try:
+            model_embed_1024, tokenizer_1024 = self.model_1024.load_model()
+            model_embed_768, tokenizer_768 = self.model_768.load_model()
+            model_embed_512 = self.model_512.load_model()
+            model_embed_late_interaction, tokenizer_late_interaction = self.model_late_interaction.load_model()
+        except Exception as e:
+            print(f"Error loading models: {e}")
+            return
 
         points = []
-        id = 1
+        batch_size = 20
 
-        for chunk in range(len(chunks)):
+        # Sử dụng enumerate thay vì range(len())
+        for chunk_id, chunk_text in enumerate(chunks, 1):
+            print(chunk_text)
             try:
-                metadata = chunks[chunk].metadata
-                content = chunks[chunk].page_content
+                # Tạo embeddings song song nếu có thể
+                embeddings = {
+                    'matryoshka-1024dim': self.model_1024.embed(model_embed_1024, tokenizer_1024, chunk_text),
+                    'matryoshka-768dim': self.model_768.embed(model_embed_768, tokenizer_768, chunk_text),
+                    'matryoshka-512dim': self.model_512.embed(model_embed_512, None, chunk_text),
+                    'late_interaction': self.model_late_interaction.embed(model_embed_late_interaction,
+                                                                          tokenizer_late_interaction,
+                                                                          chunk_text)
+                }
 
-                embedded_text_1024 = self.model_1024.embed(model_embed_1024, tokenizer_1024, content)
-                embedded_text_768 = self.model_768.embed(model_embed_768, tokenizer_768, content)
-                embedded_text_512 = self.model_512.embed(model_embed_512, None, content)
-                embedded_late_interaction = self.model_late_interaction.embed(model_embed_late_interaction,
-                                                                                   tokenizer_late_interaction,
-                                                                                   content)
-
+                # Tạo PointStruct với cách viết gọn hơn
                 points.append(
                     PointStruct(
-                        id=id,
-                        payload={"text": content, "metadata": metadata},
-                        vector={
-                            'matryoshka-1024dim': embedded_text_1024,
-                            'matryoshka-768dim': embedded_text_768,
-                            'matryoshka-512dim': embedded_text_512,
-                            'late_interaction': embedded_late_interaction
-                        }
+                        id=chunk_id,
+                        payload={"text": chunk_text},
+                        vector=embeddings
                     )
                 )
-                print(id)
-                if len(points) == 20:
-                    print('Thêm vào VDB')
-                    self.client.upsert(self.collection_name, points)
+
+                print(f"Processed chunk {chunk_id}")
+
+                # Batch processing
+                if len(points) >= batch_size:
+                    self._upsert_points(points)
                     points.clear()
 
-                id += 1
             except Exception as e:
-                print(e)
+                print(f"Error processing chunk {chunk_id}: {e}")
                 continue
 
-        if points:  # Thêm các points còn lại nếu có
+        # Xử lý các points còn lại
+        if points:
+            self._upsert_points(points)
+
+        print("Embedding creation completed successfully")
+
+    def _upsert_points(self, points):
+        """Helper method để upsert points vào VDB"""
+        try:
             self.client.upsert(self.collection_name, points)
+            print(f"Upserted {len(points)} points to VDB")
+        except Exception as e:
+            print(f"Error upserting points: {e}")
 
-        print("create embedding success")
 
-
-    def query_from_db(self, text_embedded_1024, text_embedded_768, text_embedded_512, embedded_late_interaction):
+    def query_from_db(self, text_embedded_512, text_embedded_768, text_embedded_1024, embedded_late_interaction):
         return self.client.query_points(
             collection_name= self.collection_name,
             prefetch=models.Prefetch(
@@ -151,7 +182,7 @@ class Qdrant:
                     ),
                     query=text_embedded_768,
                     using="matryoshka-768dim",
-                    limit=50,
+                    limit=75,
                 ),
                 query=text_embedded_1024,
                 using="matryoshka-1024dim",
@@ -159,18 +190,18 @@ class Qdrant:
             ),
             query=embedded_late_interaction,
             using="late_interaction",
-            limit=10,
+            limit=5,
         ).points
 
-    def re_ranking(self, query, query_text_json):
+    def re_ranking(self, query, passages):
         client = NVIDIARerank(
-            model="nvidia/nv-rerankqa-mistral-4b-v3",
+            model="nvidia/llama-3.2-nv-rerankqa-1b-v2",
             api_key=os.getenv("API_KEY_RERANKING"),
         )
 
         response = client.compress_documents(
             query=query,
-            documents=[Document(page_content=passage) for passage in query_text_json]
+            documents=[Document(page_content=passage) for passage in passages]
         )
 
         return response

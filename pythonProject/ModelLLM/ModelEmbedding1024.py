@@ -12,15 +12,32 @@ class ModelEmbedding1024(IModelLLM):
         print("load model embedding 1024 success")
         return phobert, tokenizer
 
-    def embed(self, model_embedding, tokenizer, text_pre_processed):
-        input_ids = torch.tensor([tokenizer.encode(text_pre_processed)])
+    def embed(self, model_embedding, tokenizer, text, max_length=256):
+        # Tokenize đoạn văn
+        inputs = tokenizer(
+            text,
+            max_length=max_length,
+            padding=True,
+            truncation=True,
+            return_tensors="pt"  # Trả về PyTorch tensors
+        )
 
+        # Đưa model vào chế độ evaluation
+        model_embedding.eval()
+
+        # Không tính gradient để tiết kiệm bộ nhớ và tăng tốc
         with torch.no_grad():
-            features = model_embedding(input_ids)  # Models outputs are now tuples
-            embeddings = features.last_hidden_state
+            # Lấy output từ model
+            outputs = model_embedding(**inputs)
 
-        cls_embedding = embeddings[:, 0, :]
-        return cls_embedding.numpy()[0]
+            # Lấy hidden states từ layer cuối cùng
+            last_hidden_states = outputs.last_hidden_state
+
+            # Tính mean pooling trên tất cả các token để có được sentence embedding
+            # Loại bỏ dimension batch (squeeze) và lấy mean theo dimension time steps
+            embedding = torch.mean(last_hidden_states, dim=1).squeeze()
+
+        return embedding
 
     def get_dimension(self):
         return 1024

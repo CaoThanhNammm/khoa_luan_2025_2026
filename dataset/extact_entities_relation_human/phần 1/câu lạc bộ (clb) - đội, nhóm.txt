@@ -1,7 +1,7 @@
 {
   "entities": [
-{
-      "name": "Trường Đại học Nông Lâm TP.HCM",
+    {
+      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "type": "organization"
     },
     {
@@ -109,6 +109,10 @@
       "type": "organization"
     },
     {
+      "name": "Đoàn Thanh niên",
+      "type": "organization"
+    },
+    {
       "name": "Phạm Chí Biết",
       "type": "person"
     },
@@ -165,6 +169,10 @@
       "type": "organization"
     },
     {
+      "name": "Hội thể thao",
+      "type": "organization"
+    },
+    {
       "name": "Lê Quang Trí",
       "type": "person"
     },
@@ -202,7 +210,7 @@
     },
     {
       "name": "Trung tâm Ươm tạo Doanh nghiệp công nghệ",
-      "type": "organization"
+      "type": "center"
     },
     {
       "name": "Trần Phạm Mỹ Duyên",
@@ -218,6 +226,10 @@
     },
     {
       "name": "CLB MỘT SỨC KHỎE TP.HCM (HCMC One Health Club)",
+      "type": "organization"
+    },
+    {
+      "name": "Đoàn – Hội khoa Chăn nuôi Thú y",
       "type": "organization"
     },
     {
@@ -297,6 +309,10 @@
       "type": "organization"
     },
     {
+      "name": "Phòng Công tác sinh viên",
+      "type": "department"
+    },
+    {
       "name": "Nguyễn Võ Hải Triều",
       "type": "person"
     },
@@ -310,6 +326,10 @@
     },
     {
       "name": "CLB THÚ Y ENGSCOPE",
+      "type": "organization"
+    },
+    {
+      "name": "Đoàn - Hội khoa Chăn nuôi Thú y",
       "type": "organization"
     },
     {
@@ -329,6 +349,10 @@
       "type": "organization"
     },
     {
+      "name": "Phòng Công tác sinh viên",
+      "type": "department"
+    },
+    {
       "name": "Bùi Thị Thùy Trang",
       "type": "person"
     },
@@ -342,6 +366,10 @@
     },
     {
       "name": "WILDLIFE VET STUDENT CLUB",
+      "type": "organization"
+    },
+    {
+      "name": "Đoàn - Hội khoa Chăn nuôi Thú y",
       "type": "organization"
     },
     {
@@ -361,6 +389,10 @@
       "type": "organization"
     },
     {
+      "name": "Đoàn – Hội khoa Môi trường và Tài nguyên",
+      "type": "organization"
+    },
+    {
       "name": "Trần Ái Thiên",
       "type": "person"
     },
@@ -374,6 +406,10 @@
     },
     {
       "name": "TỔ TU DƯỠNG RÈN LUYỆN HẠT GIỐNG ĐỎ",
+      "type": "organization"
+    },
+    {
+      "name": "Đoàn Thanh niên",
       "type": "organization"
     },
     {
@@ -413,6 +449,10 @@
       "type": "organization"
     },
     {
+      "name": "Đoàn - Hội khoa Chăn nuôi Thú y",
+      "type": "organization"
+    },
+    {
       "name": "Trần Viết Nguyên Chương",
       "type": "person"
     },
@@ -449,6 +489,10 @@
       "type": "organization"
     },
     {
+      "name": "Đoàn–Hội khoa Khoa học Sinh học",
+      "type": "organization"
+    },
+    {
       "name": "Trần Đức Phúc",
       "type": "person"
     },
@@ -462,6 +506,10 @@
     },
     {
       "name": "ĐỘI VĂN NGHỆ RẠNG ĐÔNG",
+      "type": "organization"
+    },
+    {
+      "name": "Đoàn Thanh niên",
       "type": "organization"
     },
     {
@@ -481,6 +529,10 @@
       "type": "organization"
     },
     {
+      "name": "Hội Sinh viên trường",
+      "type": "organization"
+    },
+    {
       "name": "Nguyễn Nhu Minh Hạ",
       "type": "person"
     },
@@ -497,6 +549,10 @@
       "type": "organization"
     },
     {
+      "name": "Đoàn–Hội khoa Khoa học Sinh học",
+      "type": "organization"
+    },
+    {
       "name": "Đỗ Minh Anh",
       "type": "person"
     },
@@ -510,6 +566,10 @@
     },
     {
       "name": "HỘI CỔ ĐỘNG VIÊN (NONG LAM BUFFALOES) NLB",
+      "type": "organization"
+    },
+    {
+      "name": "Hội thể thao",
       "type": "organization"
     },
     {
@@ -671,7 +731,7 @@
       "target": "Trung tâm Ươm tạo Doanh nghiệp công nghệ",
       "relation": "QUẢN_LÝ_BỞI",
       "type_source": "organization",
-      "type_target": "organization"
+      "type_target": "center"
     },
     {
       "source": "CLB KHỞI NGHIỆP (NLU STARTUP CLUB) NSC",

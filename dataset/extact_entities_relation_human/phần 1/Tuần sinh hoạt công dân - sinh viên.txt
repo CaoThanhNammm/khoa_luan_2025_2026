@@ -5,7 +5,7 @@
       "type": "activity"
     },
     {
-      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "type": "organization"
     },
     {
@@ -64,7 +64,7 @@
   "relationships": [
     {
       "source": "Sinh hoạt công dân - sinh viên (SHCD - SV)",
-      "target": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "relation": "TỔ_CHỨC_BỞI",
       "type_source": "activity",
       "type_target": "organization"

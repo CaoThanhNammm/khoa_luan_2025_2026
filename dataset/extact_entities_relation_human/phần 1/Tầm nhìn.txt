@@ -1,7 +1,7 @@
 {
   "entities": [
     {
-      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "type": "organization"
     },
     {
@@ -19,21 +19,21 @@
   ],
   "relationships": [
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "2035",
       "relation": "MỤC_TIÊU_ĐẾN",
       "type_source": "organization",
       "type_target": "time"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "trường đại học nghiên cứu",
       "relation": "SẼ_TRỞ_THÀNH",
       "type_source": "organization",
       "type_target": "type_of_organization"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "chất lượng quốc tế",
       "relation": "VỚI",
       "type_source": "organization",

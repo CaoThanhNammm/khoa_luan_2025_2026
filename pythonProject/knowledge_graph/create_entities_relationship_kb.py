@@ -1,7 +1,9 @@
+import os
 from KnowledgeGraphDatabase import Neo4j
 from PreProcessing.PreProcessing import PreProcessing
-
 pre_processing = PreProcessing()
+from dotenv import load_dotenv
+load_dotenv()
 
 def add_entities_relationship(json_string, part):
     json_string = list(map(lambda s: s.lower(), json_string))
@@ -95,11 +97,12 @@ def jaccard_similarity(str1, str2):
     union = len(set1 | set2)
     return intersection / union if union != 0 else 0
 
+
 if __name__ == "__main__":
     # Thay đổi thông tin kết nối theo cấu hình Neo4j của bạn
-    uri = "bolt://localhost:7687"
-    user = "neo4j"
-    password = "123456789"
+    uri = os.getenv("URI_NEO")
+    user = os.getenv("USER")
+    password = os.getenv("PASSWORD")
 
     # Tạo instance của class Neo4j
     neo = Neo4j(uri, user, password)

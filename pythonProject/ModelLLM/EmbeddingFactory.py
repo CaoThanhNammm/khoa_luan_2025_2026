@@ -8,11 +8,11 @@ load_dotenv()
 
 class EmbeddingFactory:
     @staticmethod
-    def create_embedding_model(embed_model_name):
-        model_embedding_1024_name = os.getenv("model_embedding_1024")
-        model_embedding_768_name = os.getenv("model_embedding_768")
-        model_embedding_512_name = os.getenv("model_embedding_512")
-        model_late_interaction_name = os.getenv("model_late_interaction")
+    def create_embed_model(embed_model_name):
+        model_embedding_1024_name = os.getenv("MODEL_EMBEDDING_1024")
+        model_embedding_768_name = os.getenv("MODEL_EMBEDDING_768")
+        model_embedding_512_name = os.getenv("MODEL_EMBEDDING_512")
+        model_late_interaction_name = os.getenv("MODEL_LATE_INTERACTION")
 
         if embed_model_name == model_embedding_1024_name:
             return ModelEmbedding1024(embed_model_name)

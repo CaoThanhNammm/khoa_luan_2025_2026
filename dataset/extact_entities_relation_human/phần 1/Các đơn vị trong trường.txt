@@ -122,7 +122,7 @@
     },
     {
       "name": "http://srmo.hcmuaf.edu.vn",
-      "type": "WEBSITE"
+      "type": "website"
     },
     {
       "name": "Phòng Quản trị Vật tư",
@@ -523,7 +523,7 @@
     },
     {
       "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "01 bộ môn trực thuộc trường",
+      "target": "01 bộ môn",
       "relation": "SỞ_HỮU",
       "type_source": "organization",
       "type_target": "quantity"

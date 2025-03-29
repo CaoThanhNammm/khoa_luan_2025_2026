@@ -1,7 +1,7 @@
 {
   "entities": [
     {
-      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "type": "organization"
     },
     {
@@ -171,42 +171,42 @@
   ],
   "relationships": [
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "chất lượng",
       "relation": "CÓ",
       "type_source": "organization",
       "type_target": "concept"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "đào tạo",
       "relation": "VỀ",
       "type_source": "organization",
       "type_target": "activity"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "nghiên cứu",
       "relation": "VỀ",
       "type_source": "organization",
       "type_target": "activity"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "chuyển giao công nghệ",
       "relation": "VỀ",
       "type_source": "organization",
       "type_target": "activity"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "hợp tác quốc tế",
       "relation": "VỀ",
       "type_source": "organization",
       "type_target": "activity"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "trường đại học tiên tiến",
       "relation": "SÁNH_VAI",
       "type_source": "organization",
@@ -227,77 +227,77 @@
       "type_target": "location"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "hệ thống quản lý",
       "relation": "ĐỔI_MỚI",
       "type_source": "organization",
       "type_target": "concept"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "quản trị",
       "relation": "ĐỔI_MỚI",
       "type_source": "organization",
       "type_target": "concept"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "nhân sự",
       "relation": "ĐỔI_MỚI",
       "type_source": "organization",
       "type_target": "concept"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "tinh thần sáng tạo",
       "relation": "THÚC_ĐẨY",
       "type_source": "organization",
       "type_target": "concept"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "khởi nghiệp",
       "relation": "THÚC_ĐẨY",
       "type_source": "organization",
       "type_target": "activity"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "tài năng",
       "relation": "PHÁT_HUY",
       "type_source": "organization",
       "type_target": "concept"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "nguồn lực",
       "relation": "PHÁT_HUY",
       "type_source": "organization",
       "type_target": "concept"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "môi trường học thuật",
       "relation": "XÂY_DỰNG",
       "type_source": "organization",
       "type_target": "concept"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "nghiên cứu khoa học",
       "relation": "XÂY_DỰNG",
       "type_source": "organization",
       "type_target": "activity"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "phục vụ cộng đồng",
       "relation": "XÂY_DỰNG",
       "type_source": "organization",
       "type_target": "activity"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "cơ sở giáo dục đại học",
       "relation": "TRỞ_THÀNH",
       "type_source": "organization",
@@ -311,14 +311,14 @@
       "type_target": "location"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "hệ thống cơ sở vật chất",
       "relation": "XÂY_DỰNG",
       "type_source": "organization",
       "type_target": "concept"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "công nghệ thông tin",
       "relation": "XÂY_DỰNG",
       "type_source": "organization",
@@ -409,7 +409,7 @@
       "type_target": "activity"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
       "target": "Kế hoạch chiến lược giai đoạn 2021-2025",
       "relation": "TRONG",
       "type_source": "organization",

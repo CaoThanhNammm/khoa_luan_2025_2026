@@ -1,4 +1,6 @@
+import json
 from KnowledgeGraphDatabase import Neo4j
+from knowledge_graph.create_entities_relationship_kb import pre_processing
 
 def get_path(type, part):
     result = neo.get_path(type, part)
@@ -106,33 +108,54 @@ if __name__ == "__main__":
     # 3. dùng cypher truy vấn vào neo4j
     # 4. trả về kết quả
 
-    query = "giới thiệu về Trường Đại học Nông Lâm Thành phố Hồ Chí Minh"
     all_nodes = neo.get_all_nodes()
     all_nodes_and_relationships = neo.get_all_nodes_and_relationships()
 
-    search_text = "nội dung và chuẩn đầu ra của ctdt áp dụng chung"
-    rel_search_text = change_node_to_relation(search_text)
-    print(rel_search_text)
+    """match (o:organization{name:"trường đại học nông lâm"})-[r:của]->(e:location) return o,r,e"""
+    entities_relationship = [
+        {
+            "entities": [
+                {
+                    "name": "trường đại_học nông_lâm thành_phố hồ_chí_minh",
+                    "type": "organization"
+                },
+                {
+                    "name": "lịch_sử",
+                    "type": "concept"
+                }
+            ],
+            "relationships": [
+                {
+                    "source": "lịch_sử",
+                    "relation": "của",
+                    "type_source": "concept"
+                }
+            ]
+        }]
 
-    for connect in all_nodes_and_relationships:
-        source = connect['source']
-        relation = connect['relation']
-        target = connect['target']
+    relationship = entities_relationship[0]['relationships']
 
-        source_score = jaccard_similarity_for_node(search_text, source)
-        target_score = jaccard_similarity_for_node(search_text, target)
-        relation_score = jaccard_similarity_for_relation(rel_search_text, relation)
+    for relation in relationship:
+        source_text = relation["source"]
+        relation_text = relation["relation"]
+        rel_search_text = change_node_to_relation(relation_text)
 
+        for connect in all_nodes_and_relationships:
+            source = connect['source']
+            relation = connect['relation']
 
-        if source_score > 0.4 or relation_score > 0.4:
-            print({
-                source: source_score,
-                relation: relation_score,
-                target: target_score
-            })
+            source_score = jaccard_similarity_for_node(source_text, source)
+            relation_score = jaccard_similarity_for_relation(rel_search_text, relation)
+
+            if source_score > 0.4 or relation_score > 0.4:
+                print({
+                    source: source_score,
+                    relation: relation_score
+                })
 
     # Đóng kết nối
     neo.close()
+
 
 
 # lấy tất cả quan hệ

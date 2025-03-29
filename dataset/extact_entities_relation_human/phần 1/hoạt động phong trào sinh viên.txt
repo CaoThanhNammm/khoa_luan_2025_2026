@@ -61,10 +61,6 @@
       "type": "activity"
     },
     {
-      "name": "phgl@hcmuaf.edu.vn",
-      "type": "email"
-    },
-    {
       "name": "Cuộc thi Nét đẹp sinh viên Nông Lâm",
       "type": "activity"
     },
