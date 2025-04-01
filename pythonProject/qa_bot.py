@@ -1,3 +1,5 @@
+import time
+
 from Chat import Chat
 from LLM.Gemini import Gemini
 import os
@@ -9,13 +11,18 @@ if __name__ == "__main__":
     model_name = os.getenv('MODEL')
     api_key = os.getenv('API_KEY')
     gemini = Gemini(model_name, api_key)
-    t = 5
+    t = 3
     chat = Chat(t, gemini)
     # 2. câu hỏi
-    question = 'hãy cho tôi biết về thời gian các tiết học'
+    question = 'giới thiệu về Trường Đại học Nông Lâm Thành phố Hồ Chí Minh'
     # 3. trả lời
-    chat.answer(question)
+    while True:
+        question = input(str())
+        chat.answer(question)
 
+    # print(chat.retrieval_graph(question))
+    # print('---------------------------------------')
+    # print(chat.retrieval_text(question))
     # """
     #     1. nhận 1 câu hỏi q, khởi tạo f0
     #     2. đưa vào llm với prompt first decision => return vector or graph at

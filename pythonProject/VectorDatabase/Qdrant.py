@@ -174,16 +174,16 @@ class Qdrant:
         return self.client.query_points(
             collection_name= self.collection_name,
             prefetch=models.Prefetch(
-                prefetch=models.Prefetch(
-                    prefetch=models.Prefetch(
-                        query=text_embedded_512,
-                        using="matryoshka-512dim",
-                        limit=100,
-                    ),
-                    query=text_embedded_768,
-                    using="matryoshka-768dim",
-                    limit=75,
-                ),
+                # prefetch=models.Prefetch(
+                #     # prefetch=models.Prefetch(
+                #     #     query=text_embedded_512,
+                #     #     using="matryoshka-512dim",
+                #     #     limit=150,
+                #     # ),
+                #     query=text_embedded_768,
+                #     using="matryoshka-768dim",
+                #     limit=75,
+                # ),
                 query=text_embedded_1024,
                 using="matryoshka-1024dim",
                 limit=25,

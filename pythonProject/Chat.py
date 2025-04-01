@@ -34,7 +34,7 @@ class Chat:
         self.pre_processing = PreProcessing()
 
     def answer(self, question):
-        question = self.pre_processing.text_preprocessing_vietnamese(question.strip())
+        question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
         feedback = ""
         potential_answer = ""
         print(f"Question: {question}")
@@ -44,10 +44,10 @@ class Chat:
             action = self.agent(question, feedback)
             print(f"Action: {action}")
 
-            references = self.retrieval_bank(question, action)
+            references = self.retrieval_bank(question_pre_processing, action)
             print(f"Available references: {references}")
 
-            potential_answer = self.generator(question, references)
+            potential_answer = self.generator(question_pre_processing, references)
             print(f"Answer: {potential_answer}")
 
             validator = self.valid(question, potential_answer, references)
@@ -56,7 +56,7 @@ class Chat:
                 print(f"Final answer: {potential_answer}")
                 return potential_answer
 
-            feedback = self.commentor(question, action)
+            feedback = self.commentor(question, potential_answer, references)
             print(f"Continuing feedback: {feedback}")
             print("-" * 2000)
 
@@ -70,9 +70,9 @@ class Chat:
         # llm dự đoán câu hỏi thuộc phần nào để thu hẹp nội dung cần truy xuất
         predict = self.gemini.generator(prompt.predict_question_belong_to(question))
         predict = self.pre_processing.string_to_json(predict.lower())
+        print('predict:', predict)
         results = self.neo.get_episode_to_part(predict['episode'], predict['part'])
         references_node = self.neo.get_relationship(results)
-
         return references_node
 
     def retrieval_text(self, question):
@@ -87,6 +87,7 @@ class Chat:
             logit = re_ranking_query_text[i].metadata['relevance_score']
             text = re_ranking_query_text[i].page_content
             print(f"{logit}: {text}")
+
         return re_ranking_query_text[0].page_content
 
     def embed_question(self, question):
@@ -105,7 +106,7 @@ class Chat:
         )
         formatted_prompt = prompt_template.format(question=question)
 
-        return self.gemini.generator(formatted_prompt).strip()
+        return self.gemini.generator(formatted_prompt).lower().strip()
 
 
     def reflection(self, question, feedback):
@@ -115,7 +116,7 @@ class Chat:
         )
         formatted_prompt = prompt_template.format(question=question, feedback=feedback)
 
-        return self.gemini.generator(formatted_prompt).strip()
+        return self.gemini.generator(formatted_prompt).lower().strip()
 
     def generator(self, question, references):
         prompt_template = PromptTemplate(
@@ -133,27 +134,16 @@ class Chat:
         )
         formatted_prompt = prompt_template.format(question=question, answer=answer, references=references)
 
-        return self.gemini.generator(formatted_prompt).strip()
+        return self.gemini.generator(formatted_prompt).lower().strip()
 
-    def commentor(self, question, action):
+    def commentor(self, question, answer, references):
         prompt_template = PromptTemplate(
-            input_variables=["question", "action"],
+            input_variables=["question", "answer", "references"],
             template=prompt.commentor_stsv()
         )
-        formatted_prompt = prompt_template.format(question=question, action=action)
+        formatted_prompt = prompt_template.format(question=question, answer=answer, references=references)
 
         return self.gemini.generator(formatted_prompt).strip()
-
-
-    def extract_entities_relationship_from_question(self, question):
-        prompt_template = PromptTemplate(
-            input_variables=["question"],
-            template=prompt.extract_entities_relationship_from_question()
-        )
-        formatted_prompt = prompt_template.format(question=question)
-
-        string = self.gemini.generator(formatted_prompt).strip()
-        return self.pre_processing.string_to_json(string)
 
     @staticmethod
     def _get_env():

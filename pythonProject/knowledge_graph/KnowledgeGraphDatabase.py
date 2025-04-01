@@ -1,4 +1,5 @@
 from neo4j import GraphDatabase
+import re
 
 class Neo4j:
     def __init__(self, uri, user, password):
@@ -186,6 +187,7 @@ class Neo4j:
             MATCH (first:episode {name: $episode_name})-[:BAO_GỒM]->(second:part {name: $part_name})-[r*1..2]->(e)
             RETURN r as relation, e as target
         """
+
         with self.driver.session() as session:
             result = session.run(query, episode_name=episode_name, part_name=part_name)
             return [record for record in result]

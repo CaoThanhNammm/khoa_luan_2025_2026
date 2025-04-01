@@ -16,7 +16,6 @@ class PreProcessing:
         removed_special = removed_special.strip()
         return json.loads(removed_special)
 
-
     def text_preprocessing_vietnamese(self, text):
         root_dir = os.path.dirname(os.path.abspath(__file__))  # Thư mục chứa file Python hiện tại
         root_dir = os.path.dirname(root_dir)  # Lên thư mục cha
