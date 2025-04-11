@@ -1,0 +1,232 @@
+{
+  "entities": [
+    {
+      "name": "Kết quả rèn luyện",
+      "type": "result"
+    },
+    {
+      "name": "xuất sắc",
+      "type": "category"
+    },
+    {
+      "name": "tốt",
+      "type": "category"
+    },
+    {
+      "name": "khá",
+      "type": "category"
+    },
+    {
+      "name": "trung bình",
+      "type": "category"
+    },
+    {
+      "name": "yếu",
+      "type": "category"
+    },
+    {
+      "name": "kém",
+      "type": "category"
+    },
+    {
+      "name": "Phân loại kết quả rèn luyện",
+      "type": "classification"
+    },
+    {
+      "name": "90 điểm",
+      "type": "score"
+    },
+    {
+      "name": "100 điểm",
+      "type": "score"
+    },
+    {
+      "name": "loại xuất sắc",
+      "type": "category"
+    },
+    {
+      "name": "80 điểm",
+      "type": "score"
+    },
+    {
+      "name": "dưới 90 điểm",
+      "type": "score"
+    },
+    {
+      "name": "loại tốt",
+      "type": "category"
+    },
+    {
+      "name": "65 điểm",
+      "type": "score"
+    },
+    {
+      "name": "dưới 80 điểm",
+      "type": "score"
+    },
+    {
+      "name": "loại khá",
+      "type": "category"
+    },
+    {
+      "name": "50 điểm",
+      "type": "score"
+    },
+    {
+      "name": "dưới 65 điểm",
+      "type": "score"
+    },
+    {
+      "name": "loại trung bình",
+      "type": "category"
+    },
+    {
+      "name": "35 điểm",
+      "type": "score"
+    },
+    {
+      "name": "dưới 50 điểm",
+      "type": "score"
+    },
+    {
+      "name": "loại yếu",
+      "type": "category"
+    },
+    {
+      "name": "dưới 35 điểm",
+      "type": "score"
+    },
+    {
+      "name": "loại kém",
+      "type": "category"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Kết quả rèn luyện",
+      "target": "xuất sắc",
+      "type_source": "result",
+      "type_target": "category",
+      "relation": "được_phân_thành"
+    },
+    {
+      "source": "Kết quả rèn luyện",
+      "target": "tốt",
+      "type_source": "result",
+      "type_target": "category",
+      "relation": "được_phân_thành"
+    },
+    {
+      "source": "Kết quả rèn luyện",
+      "target": "khá",
+      "type_source": "result",
+      "type_target": "category",
+      "relation": "được_phân_thành"
+    },
+    {
+      "source": "Kết quả rèn luyện",
+      "target": "trung bình",
+      "type_source": "result",
+      "type_target": "category",
+      "relation": "được_phân_thành"
+    },
+    {
+      "source": "Kết quả rèn luyện",
+      "target": "yếu",
+      "type_source": "result",
+      "type_target": "category",
+      "relation": "được_phân_thành"
+    },
+    {
+      "source": "Kết quả rèn luyện",
+      "target": "kém",
+      "type_source": "result",
+      "type_target": "category",
+      "relation": "được_phân_thành"
+    },
+    {
+      "source": "Kết quả rèn luyện",
+      "target": "Phân loại kết quả rèn luyện",
+      "type_source": "result",
+      "type_target": "classification",
+      "relation": "có"
+    },
+    {
+      "source": "90 điểm",
+      "target": "100 điểm",
+      "type_source": "score",
+      "type_target": "score",
+      "relation": "từ_đến"
+    },
+    {
+      "source": "90 điểm",
+      "target": "loại xuất sắc",
+      "type_source": "score",
+      "type_target": "category",
+      "relation": "là"
+    },
+    {
+      "source": "80 điểm",
+      "target": "dưới 90 điểm",
+      "type_source": "score",
+      "type_target": "score",
+      "relation": "từ_đến"
+    },
+    {
+      "source": "80 điểm",
+      "target": "loại tốt",
+      "type_source": "score",
+      "type_target": "category",
+      "relation": "là"
+    },
+    {
+      "source": "65 điểm",
+      "target": "dưới 80 điểm",
+      "type_source": "score",
+      "type_target": "score",
+      "relation": "từ_đến"
+    },
+    {
+      "source": "65 điểm",
+      "target": "loại khá",
+      "type_source": "score",
+      "type_target": "category",
+      "relation": "là"
+    },
+    {
+      "source": "50 điểm",
+      "target": "dưới 65 điểm",
+      "type_source": "score",
+      "type_target": "score",
+      "relation": "từ_đến"
+    },
+    {
+      "source": "50 điểm",
+      "target": "loại trung bình",
+      "type_source": "score",
+      "type_target": "category",
+      "relation": "là"
+    },
+    {
+      "source": "35 điểm",
+      "target": "dưới 50 điểm",
+      "type_source": "score",
+      "type_target": "score",
+      "relation": "từ_đến"
+    },
+    {
+      "source": "35 điểm",
+      "target": "loại yếu",
+      "type_source": "score",
+      "type_target": "category",
+      "relation": "là"
+    },
+    {
+      "source": "dưới 35 điểm",
+      "target": "loại kém",
+      "type_source": "score",
+      "type_target": "category",
+      "relation": "là"
+    }
+  ]
+}

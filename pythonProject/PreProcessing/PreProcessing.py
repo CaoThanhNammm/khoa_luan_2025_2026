@@ -5,10 +5,19 @@ load_dotenv()
 import re
 import os
 
+# Global VnCoreNLP instance
+save_dir = r'C:\Users\Nam\Desktop\vncorenlp'
+VnCoreNLP_INSTANCE = None
+
+def get_vncorenlp_instance():
+    global VnCoreNLP_INSTANCE
+    if VnCoreNLP_INSTANCE is None:
+        VnCoreNLP_INSTANCE = py_vncorenlp.VnCoreNLP(annotators=["wseg"], save_dir=save_dir)
+    return VnCoreNLP_INSTANCE
+
 class PreProcessing:
     def __init__(self):
-        save_dir = r'C:\Users\Nam\Desktop\vncorenlp'
-        self.vncorenlp = py_vncorenlp.VnCoreNLP(annotators=["wseg"], save_dir=save_dir)
+        self.vncorenlp = get_vncorenlp_instance()
 
 
     def string_to_json(self, text):

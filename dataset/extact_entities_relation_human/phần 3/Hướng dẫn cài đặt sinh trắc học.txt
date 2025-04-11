@@ -1,0 +1,182 @@
+{
+  "entities": [
+    {
+      "name": "app BIDV Smartbanking",
+      "type": "APPLICATION"
+    },
+    {
+      "name": "Cài đặt sinh trắc học",
+      "type": "BIOMETRIC_SETTING"
+    },
+    {
+      "name": "ô vuông nhỏ",
+      "type": "CHECKBOX"
+    },
+    {
+      "name": "màn hình",
+      "type": "SCREEN"
+    },
+    {
+      "name": "10.000.000 đồng",
+      "type": "MONEY"
+    },
+    {
+      "name": "số tiền tối thiểu",
+      "type": "AMOUNT"
+    },
+    {
+      "name": "Xác thực giao dịch bằng sinh trắc học",
+      "type": "AUTHENTICATION_SETTING"
+    },
+    {
+      "name": "Cài đặt và thu nhập",
+      "type": "SETTING_ACTION"
+    },
+    {
+      "name": "mã OTP",
+      "type": "OTP"
+    },
+    {
+      "name": "tin nhắn điện thoại",
+      "type": "SMS"
+    },
+    {
+      "name": "loại giấy tờ tùy thân",
+      "type": "PERSONAL_DOCUMENT_TYPE"
+    },
+    {
+      "name": "ảnh mặt trước CCCD",
+      "type": "FRONT_CCCD_PHOTO"
+    },
+    {
+      "name": "CCCD",
+      "type": "CCCD"
+    },
+    {
+      "name": "QR",
+      "type": "QR_CODE"
+    },
+    {
+      "name": "ảnh mặt sau CCCD",
+      "type": "BACK_CCCD_PHOTO"
+    },
+    {
+      "name": "CHIP CCCD",
+      "type": "CCCD_CHIP"
+    },
+    {
+      "name": "hình ảnh khuôn mặt",
+      "type": "FACE_IMAGE"
+    },
+    {
+      "name": "hệ thống",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "thành công",
+      "type": "SUCCESS"
+    },
+    {
+      "name": "trạng thái",
+      "type": "STATUS"
+    },
+    {
+      "name": "mục cài đặt sinh trắc học",
+      "type": "BIOMETRIC_SETTING_MENU"
+    },
+    {
+      "name": "Dòng trạng thái thu nhập",
+      "type": "STATUS_LINE"
+    },
+    {
+      "name": "Đã thu nhập cấp độ 2",
+      "type": "LEVEL_2_COLLECTED"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "app BIDV Smartbanking",
+      "target": "Cài đặt sinh trắc học",
+      "relation": "CHỌN_MỤC",
+      "type_source": "APPLICATION",
+      "type_target": "BIOMETRIC_SETTING"
+    },
+    {
+      "source": "ô vuông nhỏ",
+      "target": "màn hình",
+      "relation": "TRÊN_MÀN_HÌNH",
+      "type_source": "CHECKBOX",
+      "type_target": "SCREEN"
+    },
+    {
+      "source": "số tiền tối thiểu",
+      "target": "10.000.000 đồng",
+      "relation": "LÀ",
+      "type_source": "AMOUNT",
+      "type_target": "MONEY"
+    },
+    {
+      "source": "số tiền tối thiểu",
+      "target": "Xác thực giao dịch bằng sinh trắc học",
+      "relation": "NẰM_DƯỚI",
+      "type_source": "AMOUNT",
+      "type_target": "AUTHENTICATION_SETTING"
+    },
+    {
+      "source": "Cài đặt và thu nhập",
+      "target": "Cài đặt sinh trắc học",
+      "relation": "CHỌN_MỤC",
+      "type_source": "SETTING_ACTION",
+      "type_target": "BIOMETRIC_SETTING"
+    },
+    {
+      "source": "mã OTP",
+      "target": "tin nhắn điện thoại",
+      "relation": "GỬI_VÀO",
+      "type_source": "OTP",
+      "type_target": "SMS"
+    },
+    {
+      "source": "ảnh mặt trước CCCD",
+      "target": "CCCD",
+      "relation": "MẶT_TRƯỚC",
+      "type_source": "FRONT_CCCD_PHOTO",
+      "type_target": "CCCD"
+    },
+    {
+      "source": "ảnh mặt sau CCCD",
+      "target": "CCCD",
+      "relation": "MẶT_SAU",
+      "type_source": "BACK_CCCD_PHOTO",
+      "type_target": "CCCD"
+    },
+    {
+      "source": "hệ thống",
+      "target": "thành công",
+      "relation": "BÁO",
+      "type_source": "SYSTEM",
+      "type_target": "SUCCESS"
+    },
+    {
+      "source": "Dòng trạng thái thu nhập",
+      "target": "Đã thu nhập cấp độ 2",
+      "relation": "LÀ",
+      "type_source": "STATUS_LINE",
+      "type_target": "LEVEL_2_COLLECTED"
+    },
+    {
+      "source": "mục cài đặt sinh trắc học",
+      "target": "Cài đặt sinh trắc học",
+      "relation": "LÀ",
+      "type_source": "BIOMETRIC_SETTING_MENU",
+      "type_target": "BIOMETRIC_SETTING"
+    },
+      {
+      "source": "app BIDV Smartbanking",
+      "target": "Cài đặt sinh trắc học",
+      "relation": "ĐĂNG_NHẬP",
+      "type_source": "APPLICATION",
+      "type_target": "BIOMETRIC_SETTING"
+    }
+  ]
+}

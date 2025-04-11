@@ -1,0 +1,167 @@
+{
+  "entities": [
+    {
+      "name": "Sinh viên",
+      "type": "person_type"
+    },
+    {
+      "name": "Hộ gia đình",
+      "type": "group"
+    },
+    {
+      "name": "Địa phương nơi cho vay",
+      "type": "location"
+    },
+    {
+      "name": "Sinh viên năm thứ nhất",
+      "type": "person_type"
+    },
+    {
+      "name": "Giấy báo trúng tuyển",
+      "type": "document"
+    },
+    {
+      "name": "Giấy xác nhận được vào học",
+      "type": "document"
+    },
+    {
+      "name": "Nhà trường",
+      "type": "organization"
+    },
+    {
+      "name": "Sinh viên năm thứ hai trở đi",
+      "type": "person_type"
+    },
+    {
+      "name": "Giấy xác nhận của trường",
+      "type": "document"
+    },
+    {
+      "name": "Cờ bạc",
+      "type": "illegal_act"
+    },
+    {
+      "name": "Nghiện hút",
+      "type": "illegal_act"
+    },
+    {
+      "name": "Trộm cắp",
+      "type": "illegal_act"
+    },
+    {
+      "name": "Buôn lậu",
+      "type": "illegal_act"
+    },
+    {
+      "name": "Vi phạm hành chính",
+      "type": "legal_issue"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sinh viên",
+      "target": "Hộ gia đình",
+      "type_source": "person_type",
+      "type_target": "group",
+      "relation": "sinh_sống_trong"
+    },
+    {
+      "source": "Hộ gia đình",
+      "target": "Địa phương nơi cho vay",
+      "type_source": "group",
+      "type_target": "location",
+      "relation": "cư_trú_tại"
+    },
+    {
+      "source": "Sinh viên năm thứ nhất",
+      "target": "Giấy báo trúng tuyển",
+      "type_source": "person_type",
+      "type_target": "document",
+      "relation": "cần_có"
+    },
+    {
+      "source": "Sinh viên năm thứ nhất",
+      "target": "Giấy xác nhận được vào học",
+      "type_source": "person_type",
+      "type_target": "document",
+      "relation": "cần_có"
+    },
+    {
+      "source": "Giấy báo trúng tuyển",
+      "target": "Nhà trường",
+      "type_source": "document",
+      "type_target": "organization",
+      "relation": "cấp_bởi"
+    },
+    {
+      "source": "Giấy xác nhận được vào học",
+      "target": "Nhà trường",
+      "type_source": "document",
+      "type_target": "organization",
+      "relation": "cấp_bởi"
+    },
+    {
+      "source": "Sinh viên năm thứ hai trở đi",
+      "target": "Giấy xác nhận của trường",
+      "type_source": "person_type",
+      "type_target": "document",
+      "relation": "cần_có"
+    },
+    {
+      "source": "Giấy xác nhận của trường",
+      "target": "Nhà trường",
+      "type_source": "document",
+      "type_target": "organization",
+      "relation": "cấp_bởi"
+    },
+    {
+      "source": "Sinh viên năm thứ hai trở đi",
+      "target": "Vi phạm hành chính",
+      "type_source": "person_type",
+      "type_target": "legal_issue",
+      "relation": "không_bị_xử_phạt"
+    },
+    {
+       "source": "Vi phạm hành chính",
+       "target": "Cờ bạc",
+       "type_source": "legal_issue",
+       "type_target": "illegal_act",
+       "relation": "liên_quan_đến"
+    },
+    {
+       "source": "Vi phạm hành chính",
+       "target": "Nghiện hút",
+       "type_source": "legal_issue",
+       "type_target": "illegal_act",
+       "relation": "liên_quan_đến"
+    },
+    {
+       "source": "Vi phạm hành chính",
+       "target": "Trộm cắp",
+       "type_source": "legal_issue",
+       "type_target": "illegal_act",
+       "relation": "liên_quan_đến"
+    },
+    {
+       "source": "Vi phạm hành chính",
+       "target": "Buôn lậu",
+       "type_source": "legal_issue",
+       "type_target": "illegal_act",
+       "relation": "liên_quan_đến"
+    },
+    {
+        "source": "Sinh viên năm thứ nhất",
+        "target": "Sinh viên",
+        "type_source": "person_type",
+        "type_target": "person_type",
+        "relation": "là_loại_của"
+    },
+    {
+        "source": "Sinh viên năm thứ hai trở đi",
+        "target": "Sinh viên",
+        "type_source": "person_type",
+        "type_target": "person_type",
+        "relation": "là_loại_của"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "entities": [
+    {
+      "name": "Giáo viên chủ nhiệm",
+      "type": "PERSON"
+    },
+    {
+      "name": "cố vấn học tập",
+      "type": "PERSON"
+    },
+    {
+      "name": "giáo vụ khoa",
+      "type": "PERSON"
+    },
+    {
+      "name": "trách nhiệm",
+      "type": "RESPONSIBILITY"
+    },
+    {
+      "name": "ghi kính chuyển",
+      "type": "ACTION"
+    },
+    {
+      "name": "đơn",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "sinh viên",
+      "type": "PERSON_GROUP"
+    },
+    {
+      "name": "BCN Khoa",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "phòng chức năng",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "bản",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "minh chứng",
+      "type": "EVIDENCE"
+    },
+    {
+      "name": "công tác",
+      "type": "ACTIVITY"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Giáo viên chủ nhiệm",
+      "target": "trách nhiệm",
+      "type_source": "PERSON",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "trách nhiệm",
+      "type_source": "PERSON",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "giáo vụ khoa",
+      "target": "trách nhiệm",
+      "type_source": "PERSON",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "ghi kính chuyển",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "ghi kính chuyển",
+      "target": "đơn",
+      "type_source": "ACTION",
+      "type_target": "DOCUMENT",
+      "relation": "VÀO"
+    },
+    {
+      "source": "đơn",
+      "target": "sinh viên",
+      "type_source": "DOCUMENT",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "ghi kính chuyển",
+      "target": "BCN Khoa",
+      "type_source": "ACTION",
+      "type_target": "ORGANIZATION",
+      "relation": "TỚI"
+    },
+    {
+      "source": "ghi kính chuyển",
+      "target": "phòng chức năng",
+      "type_source": "ACTION",
+      "type_target": "DEPARTMENT",
+      "relation": "TỚI"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "bản",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "DOCUMENT",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "bản",
+      "target": "minh chứng",
+      "type_source": "DOCUMENT",
+      "type_target": "EVIDENCE",
+      "relation": "LÀM"
+    },
+    {
+      "source": "minh chứng",
+      "target": "công tác",
+      "type_source": "EVIDENCE",
+      "type_target": "ACTIVITY",
+      "relation": "CHO"
+    },
+    {
+      "source": "công tác",
+      "target": "Giáo viên chủ nhiệm",
+      "type_source": "ACTIVITY",
+      "type_target": "PERSON",
+      "relation": "CỦA"
+    },
+    {
+      "source": "công tác",
+      "target": "cố vấn học tập",
+      "type_source": "ACTIVITY",
+      "type_target": "PERSON",
+      "relation": "CỦA"
+    }
+  ]
+}

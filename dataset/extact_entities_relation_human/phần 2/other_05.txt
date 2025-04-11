@@ -1,0 +1,127 @@
+{
+  "entities": [
+    {
+      "name": "hành động dũng cảm",
+      "type": "BRAVE_ACTION"
+    },
+    {
+      "name": "người bị nạn",
+      "type": "VICTIM"
+    },
+    {
+      "name": "cướp",
+      "type": "CRIMINAL"
+    },
+    {
+      "name": "người neo đơn",
+      "type": "LONELY_PEOPLE"
+    },
+    {
+      "name": "người nghèo",
+      "type": "POOR_PEOPLE"
+    },
+    {
+      "name": "người gặp khó khăn",
+      "type": "PEOPLE_IN_NEED"
+    },
+    {
+      "name": "hoạn nạn",
+      "type": "MISFORTUNE"
+    },
+    {
+      "name": "khen thưởng",
+      "type": "AWARD"
+    },
+    {
+      "name": "biểu dương",
+      "type": "PRAISE"
+    },
+    {
+      "name": "cấp xã, phường",
+      "type": "LOCAL_LEVEL"
+    },
+    {
+      "name": "phương tiện truyền thông đại chúng",
+      "type": "MASS_MEDIA"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "hành động dũng cảm",
+      "target": "người bị nạn",
+      "relation": "cứu",
+      "type_source": "BRAVE_ACTION",
+      "type_target": "VICTIM"
+    },
+    {
+      "source": "hành động dũng cảm",
+      "target": "cướp",
+      "relation": "bắt",
+      "type_source": "BRAVE_ACTION",
+      "type_target": "CRIMINAL"
+    },
+    {
+      "source": "hành động dũng cảm",
+      "target": "người neo đơn",
+      "relation": "giúp",
+      "type_source": "BRAVE_ACTION",
+      "type_target": "LONELY_PEOPLE"
+    },
+    {
+      "source": "hành động dũng cảm",
+      "target": "người nghèo",
+      "relation": "giúp",
+      "type_source": "BRAVE_ACTION",
+      "type_target": "POOR_PEOPLE"
+    },
+    {
+      "source": "hành động dũng cảm",
+      "target": "người gặp khó khăn",
+      "relation": "giúp",
+      "type_source": "BRAVE_ACTION",
+      "type_target": "PEOPLE_IN_NEED"
+    },
+    {
+      "source": "hành động dũng cảm",
+      "target": "hoạn nạn",
+      "relation": "giúp",
+      "type_source": "BRAVE_ACTION",
+      "type_target": "MISFORTUNE"
+    },
+    {
+      "source": "hành động dũng cảm",
+      "target": "khen thưởng",
+      "relation": "được",
+      "type_source": "BRAVE_ACTION",
+      "type_target": "AWARD"
+    },
+    {
+      "source": "khen thưởng",
+      "target": "cấp xã, phường",
+      "relation": "từ_cấp",
+      "type_source": "AWARD",
+      "type_target": "LOCAL_LEVEL"
+    },
+    {
+      "source": "hành động dũng cảm",
+      "target": "biểu dương",
+      "relation": "được",
+      "type_source": "BRAVE_ACTION",
+      "type_target": "PRAISE"
+    },
+    {
+      "source": "biểu dương",
+      "target": "cấp xã, phường",
+      "relation": "từ_cấp",
+      "type_source": "PRAISE",
+      "type_target": "LOCAL_LEVEL"
+    },
+    {
+      "source": "hành động dũng cảm",
+      "target": "phương tiện truyền thông đại chúng",
+      "relation": "được_nêu_gương_trên",
+      "type_source": "BRAVE_ACTION",
+      "type_target": "MASS_MEDIA"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "entities": [
+    {
+      "name": "07 ngày tình nguyện/năm",
+      "type": "DURATION"
+    },
+    {
+      "name": "ngày",
+      "type": "DAY"
+    },
+    {
+      "name": "hoạt động tình nguyện",
+      "type": "VOLUNTEERING_ACTIVITY"
+    },
+    {
+      "name": "sinh viên A",
+      "type": "STUDENT"
+    },
+    {
+      "name": "3 ngày tình nguyện",
+      "type": "DURATION"
+    },
+    {
+      "name": "mái ấm nhà mở",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "1 ngày",
+      "type": "DURATION"
+    },
+    {
+      "name": "hiến máu tình nguyện",
+      "type": "VOLUNTEERING_ACTIVITY"
+    },
+    {
+      "name": "2 ngày",
+      "type": "DURATION"
+    },
+    {
+      "name": "Chủ nhật xanh",
+      "type": "EVENT"
+    },
+    {
+      "name": "những thời điểm khác nhau trong năm",
+      "type": "TIME_PERIOD"
+    },
+    {
+      "name": "năm",
+      "type": "YEAR"
+    },
+    {
+      "name": "tiêu chuẩn",
+      "type": "CRITERIA"
+    },
+    {
+      "name": "sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "giấy khen",
+      "type": "AWARD"
+    },
+    {
+      "name": "cấp trường",
+      "type": "SCHOOL_LEVEL"
+    },
+    {
+      "name": "hoạt động tình nguyện",
+      "type": "VOLUNTEERING_ACTIVITY"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "07 ngày tình nguyện/năm",
+      "relation": "tham_gia_ít_nhất",
+      "type_source": "STUDENT",
+      "type_target": "DURATION"
+    },
+    {
+      "source": "07 ngày tình nguyện/năm",
+      "target": "ngày",
+      "relation": "tính_theo",
+      "type_source": "DURATION",
+      "type_target": "DAY"
+    },
+    {
+      "source": "ngày",
+      "target": "hoạt động tình nguyện",
+      "relation": "tham_gia",
+      "type_source": "DAY",
+      "type_target": "VOLUNTEERING_ACTIVITY"
+    },
+    {
+      "source": "sinh viên A",
+      "target": "3 ngày tình nguyện",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "DURATION"
+    },
+    {
+      "source": "3 ngày tình nguyện",
+      "target": "mái ấm nhà mở",
+      "relation": "tại",
+      "type_source": "DURATION",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "sinh viên A",
+      "target": "1 ngày",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "DURATION"
+    },
+    {
+      "source": "1 ngày",
+      "target": "hiến máu tình nguyện",
+      "relation": "cho_hoạt_động",
+      "type_source": "DURATION",
+      "type_target": "VOLUNTEERING_ACTIVITY"
+    },
+    {
+      "source": "sinh viên A",
+      "target": "2 ngày",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "DURATION"
+    },
+    {
+      "source": "2 ngày",
+      "target": "Chủ nhật xanh",
+      "relation": "cho_hoạt_động",
+      "type_source": "DURATION",
+      "type_target": "EVENT"
+    },
+    {
+      "source": "Chủ nhật xanh",
+      "target": "những thời điểm khác nhau trong năm",
+      "relation": "ở",
+      "type_source": "EVENT",
+      "type_target": "TIME_PERIOD"
+    },
+    {
+      "source": "những thời điểm khác nhau trong năm",
+      "target": "năm",
+      "relation": "trong",
+      "type_source": "TIME_PERIOD",
+      "type_target": "YEAR"
+    },
+    {
+      "source": "ví dụ",
+      "target": "tiêu chuẩn",
+      "relation": "đạt",
+      "type_source": "EXAMPLE",
+      "type_target": "CRITERIA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giấy khen",
+      "relation": "ưu_tiên_đạt",
+      "type_source": "STUDENT",
+      "type_target": "AWARD"
+    },
+    {
+      "source": "giấy khen",
+      "target": "cấp trường",
+      "relation": "cấp",
+      "type_source": "AWARD",
+      "type_target": "SCHOOL_LEVEL"
+    },
+    {
+      "source": "giấy khen",
+      "target": "hoạt động tình nguyện",
+      "relation": "về",
+      "type_source": "AWARD",
+      "type_target": "VOLUNTEERING_ACTIVITY"
+    }
+  ]
+}

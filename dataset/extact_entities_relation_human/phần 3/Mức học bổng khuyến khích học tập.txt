@@ -1,0 +1,144 @@
+{
+  "entities": [
+    {
+      "name": "Mức học bổng khuyến khích học tập",
+      "type": "scholarship_level"
+    },
+    {
+      "name": "Chương trình đại trà",
+      "type": "program_type"
+    },
+    {
+      "name": "Loại Khá",
+      "type": "scholarship_category"
+    },
+    {
+      "name": "Mức trần học phí chương trình đại trà",
+      "type": "fee_level"
+    },
+    {
+      "name": "Nhóm ngành",
+      "type": "field_of_study_group"
+    },
+    {
+      "name": "Chính phủ",
+      "type": "government_organization"
+    },
+    {
+      "name": "Loại Giỏi",
+      "type": "scholarship_category"
+    },
+    {
+      "name": "Loại Xuất sắc",
+      "type": "scholarship_category"
+    },
+    {
+      "name": "Chương trình Chất lượng cao",
+      "type": "program_type"
+    },
+    {
+      "name": "Chương trình Tiên tiến",
+      "type": "program_type"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Mức học bổng khuyến khích học tập",
+      "target": "Chương trình đại trà",
+      "type_source": "scholarship_level",
+      "type_target": "program_type",
+      "relation": "áp_dụng_cho"
+    },
+    {
+      "source": "Loại Khá",
+      "target": "Mức trần học phí chương trình đại trà",
+      "type_source": "scholarship_category",
+      "type_target": "fee_level",
+      "relation": "bằng"
+    },
+    {
+      "source": "Mức trần học phí chương trình đại trà",
+      "target": "Nhóm ngành",
+      "type_source": "fee_level",
+      "type_target": "field_of_study_group",
+      "relation": "theo"
+    },
+    {
+      "source": "Mức trần học phí chương trình đại trà",
+      "target": "Chính phủ",
+      "type_source": "fee_level",
+      "type_target": "government_organization",
+      "relation": "quy_định_bởi"
+    },
+     {
+      "source": "Mức trần học phí chương trình đại trà",
+      "target": "Chương trình đại trà",
+      "type_source": "fee_level",
+      "type_target": "program_type",
+      "relation": "của"
+    },
+    {
+      "source": "Loại Giỏi",
+      "target": "Loại Khá",
+      "type_source": "scholarship_category",
+      "type_target": "scholarship_category",
+      "relation": "cao_hơn_20%"
+    },
+    {
+      "source": "Loại Xuất sắc",
+      "target": "Loại Giỏi",
+      "type_source": "scholarship_category",
+      "type_target": "scholarship_category",
+      "relation": "cao_hơn_20%"
+    },
+     {
+      "source": "Loại Khá",
+      "target": "Chương trình đại trà",
+      "type_source": "scholarship_category",
+      "type_target": "program_type",
+      "relation": "thuộc"
+    },
+     {
+      "source": "Loại Giỏi",
+      "target": "Chương trình đại trà",
+      "type_source": "scholarship_category",
+      "type_target": "program_type",
+      "relation": "thuộc"
+    },
+     {
+      "source": "Loại Xuất sắc",
+      "target": "Chương trình đại trà",
+      "type_source": "scholarship_category",
+      "type_target": "program_type",
+      "relation": "thuộc"
+    },
+    {
+      "source": "Mức học bổng khuyến khích học tập",
+      "target": "Chương trình Chất lượng cao",
+      "type_source": "scholarship_level",
+      "type_target": "program_type",
+      "relation": "áp_dụng_cho"
+    },
+    {
+      "source": "Mức học bổng khuyến khích học tập",
+      "target": "Chương trình Tiên tiến",
+      "type_source": "scholarship_level",
+      "type_target": "program_type",
+      "relation": "áp_dụng_cho"
+    },
+    {
+      "source": "Chương trình Chất lượng cao",
+      "target": "Chương trình đại trà",
+      "type_source": "program_type",
+      "type_target": "program_type",
+      "relation": "có_học_bổng_cao_hơn_30%"
+    },
+    {
+      "source": "Chương trình Tiên tiến",
+      "target": "Chương trình đại trà",
+      "type_source": "program_type",
+      "type_target": "program_type",
+      "relation": "có_học_bổng_cao_hơn_30%"
+    }
+  ]
+}

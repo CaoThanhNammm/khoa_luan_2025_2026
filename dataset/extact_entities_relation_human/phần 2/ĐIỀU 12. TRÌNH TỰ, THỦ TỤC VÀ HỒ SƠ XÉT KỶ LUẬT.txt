@@ -1,0 +1,461 @@
+{
+  "entities": [
+    {
+      "name": "TRÌNH TỰ, THỦ TỤC VÀ HỒ SƠ XÉT KỶ LUẬT",
+      "type": "title"
+    },
+    {
+      "name": "Thủ tục xét kỷ luật",
+      "type": "discipline_procedure"
+    },
+    {
+      "name": "sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "hành vi vi phạm",
+      "type": "violation"
+    },
+    {
+      "name": "bản tường trình",
+      "type": "report"
+    },
+    {
+      "name": "bản tự kiểm điểm",
+      "type": "self_criticism"
+    },
+    {
+      "name": "hình thức kỷ luật",
+      "type": "discipline_form"
+    },
+    {
+      "name": "Hội đồng khen thưởng, kỷ luật sinh viên",
+      "type": "discipline_reward_council"
+    },
+    {
+      "name": "Khoa/Bộ môn",
+      "type": "department"
+    },
+    {
+      "name": "chứng cứ",
+      "type": "evidence"
+    },
+    {
+      "name": "Lớp trưởng",
+      "type": "class_leader"
+    },
+    {
+      "name": "tập thể lớp sinh viên",
+      "type": "student_class_group"
+    },
+    {
+      "name": "hình thức kỷ luật",
+      "type": "discipline_form"
+    },
+    {
+      "name": "Khoa/Bộ môn",
+      "type": "department"
+    },
+    {
+      "name": "Trợ lý quản lý sinh viên",
+      "type": "student_management_assistant"
+    },
+    {
+      "name": "Hội đồng khen thưởng, kỷ luật sinh viên",
+      "type": "discipline_reward_council"
+    },
+    {
+      "name": "Khoa/Bộ môn",
+      "type": "department"
+    },
+    {
+      "name": "xét kỷ luật sinh viên",
+      "type": "student_discipline_consideration"
+    },
+    {
+      "name": "hình thức kỷ luật",
+      "type": "discipline_form"
+    },
+    {
+      "name": "Trưởng khoa",
+      "type": "dean"
+    },
+    {
+      "name": "Hội đồng khen thưởng, kỷ luật sinh viên Trường",
+      "type": "school_discipline_reward_council"
+    },
+    {
+      "name": "Hội đồng khen thưởng, kỷ luật sinh viên",
+      "type": "discipline_reward_council"
+    },
+    {
+      "name": "Khoa/Bộ môn",
+      "type": "department"
+    },
+    {
+      "name": "đại diện tập thể lớp sinh viên",
+      "type": "student_class_group_representative"
+    },
+    {
+      "name": "sinh viên vi phạm kỷ luật",
+      "type": "violating_student"
+    },
+    {
+      "name": "lý do chính đáng",
+      "type": "legitimate_reason"
+    },
+    {
+      "name": "bản tự kiểm điểm",
+      "type": "self_criticism"
+    },
+    {
+      "name": "Hội đồng",
+      "type": "council"
+    },
+    {
+      "name": "khuyết điểm thiếu ý thức tổ chức kỷ luật",
+      "type": "lack_of_discipline_awareness_fault"
+    },
+    {
+      "name": "ý thức tổ chức kỷ luật",
+      "type": "discipline_awareness"
+    },
+    {
+      "name": "Hội đồng khen thưởng, kỷ luật sinh viên Trường",
+      "type": "school_discipline_reward_council"
+    },
+    {
+      "name": "xét kỷ luật",
+      "type": "discipline_consideration"
+    },
+    {
+      "name": "hình thức kỷ luật",
+      "type": "discipline_form"
+    },
+    {
+      "name": "Hiệu trưởng",
+      "type": "rector"
+    },
+    {
+      "name": "quyết định kỷ luật",
+      "type": "discipline_decision"
+    },
+    {
+      "name": "văn bản",
+      "type": "document"
+    },
+    {
+      "name": "Hồ sơ xử lý kỷ luật của sinh viên",
+      "type": "student_discipline_handling_record"
+    },
+    {
+      "name": "Bản tường trình, bản tự kiểm điểm",
+      "type": "report_self_criticism"
+    },
+    {
+      "name": "Biên bản họp của tập thể lớp sinh viên",
+      "type": "student_class_group_meeting_minutes"
+    },
+    {
+      "name": "Biên bản họp Hội đồng khen thưởng, kỷ luật sinh viên của Khoa/Bộ môn",
+      "type": "department_discipline_reward_council_meeting_minutes"
+    },
+    {
+      "name": "Biên bản họp Hội đồng khen thưởng, kỷ luật sinh viên Trường",
+      "type": "school_discipline_reward_council_meeting_minutes"
+    },
+    {
+      "name": "Các tài liệu có liên quan khác",
+      "type": "other_related_documents"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Thủ tục xét kỷ luật",
+      "target": "sinh viên",
+      "relation": "dành_cho",
+      "type_source": "discipline_procedure",
+      "type_target": "student"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hành vi vi phạm",
+      "relation": "có",
+      "type_source": "student",
+      "type_target": "violation"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bản tường trình",
+      "relation": "phải_làm",
+      "type_source": "student",
+      "type_target": "report"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bản tự kiểm điểm",
+      "relation": "phải_làm",
+      "type_source": "student",
+      "type_target": "self_criticism"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hình thức kỷ luật",
+      "relation": "tự_nhận",
+      "type_source": "student",
+      "type_target": "discipline_form"
+    },
+    {
+      "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
+      "target": "Khoa/Bộ môn",
+      "relation": "của",
+      "type_source": "discipline_reward_council",
+      "type_target": "department"
+    },
+    {
+      "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
+      "target": "họp",
+      "relation": "vẫn",
+      "type_source": "discipline_reward_council",
+      "type_target": "meeting"
+    },
+    {
+      "source": "họp",
+      "target": "chứng cứ",
+      "relation": "trên_cơ_sở",
+      "type_source": "meeting",
+      "type_target": "evidence"
+    },
+    {
+      "source": "chứng cứ",
+      "target": "thu thập",
+      "relation": "thu_thập",
+      "type_source": "evidence",
+      "type_target": "collection"
+    },
+    {
+      "source": "Lớp trưởng",
+      "target": "tập thể lớp sinh viên",
+      "relation": "họp_với",
+      "type_source": "class_leader",
+      "type_target": "student_class_group"
+    },
+    {
+      "source": "Lớp trưởng",
+      "target": "tập thể lớp sinh viên",
+      "relation": "chủ_trì_họp_với",
+      "type_source": "class_leader",
+      "type_target": "student_class_group"
+    },
+    {
+      "source": "tập thể lớp sinh viên",
+      "target": "hình thức kỷ luật",
+      "relation": "đề_nghị",
+      "type_source": "student_class_group",
+      "type_target": "discipline_form"
+    },
+    {
+      "source": "hình thức kỷ luật",
+      "target": "Khoa/Bộ môn",
+      "relation": "gửi",
+      "type_source": "discipline_form",
+      "type_target": "department"
+    },
+    {
+      "source": "Khoa/Bộ môn",
+      "target": "xem xét",
+      "relation": "xem_xét",
+      "type_source": "department",
+      "type_target": "consideration"
+    },
+    {
+      "source": "Trợ lý quản lý sinh viên",
+      "target": "tham dự",
+      "relation": "tham_dự",
+      "type_source": "student_management_assistant",
+      "type_target": "attend"
+    },
+    {
+      "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
+      "target": "Khoa/Bộ môn",
+      "relation": "của",
+      "type_source": "discipline_reward_council",
+      "type_target": "department"
+    },
+    {
+      "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
+      "target": "họp",
+      "relation": "họp",
+      "type_source": "discipline_reward_council",
+      "type_target": "meeting"
+    },
+    {
+      "source": "họp",
+      "target": "xét kỷ luật sinh viên",
+      "relation": "để",
+      "type_source": "meeting",
+      "type_target": "student_discipline_consideration"
+    },
+    {
+      "source": "Hội đồng",
+      "target": "hình thức kỷ luật",
+      "relation": "kiến_nghị_áp_dụng",
+      "type_source": "council",
+      "type_target": "discipline_form"
+    },
+    {
+      "source": "Hội đồng",
+      "target": "Trưởng khoa",
+      "relation": "đề_nghị",
+      "type_source": "council",
+      "type_target": "dean"
+    },
+    {
+      "source": "Trưởng khoa",
+      "target": "Hội đồng khen thưởng, kỷ luật sinh viên Trường",
+      "relation": "đề_nghị_lên",
+      "type_source": "dean",
+      "type_target": "school_discipline_reward_council"
+    },
+    {
+      "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
+      "target": "Khoa/Bộ môn",
+      "relation": "của",
+      "type_source": "discipline_reward_council",
+      "type_target": "department"
+    },
+    {
+      "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
+      "target": "đại diện tập thể lớp sinh viên",
+      "relation": "mời",
+      "type_source": "discipline_reward_council",
+      "type_target": "student_class_group_representative"
+    },
+    {
+      "source": "Hội đồng khen thưởng, kỷ luật sinh viên",
+      "target": "sinh viên vi phạm kỷ luật",
+      "relation": "mời",
+      "type_source": "discipline_reward_council",
+      "type_target": "violating_student"
+    },
+    {
+      "source": "sinh viên vi phạm kỷ luật",
+      "target": "Hội đồng",
+      "relation": "không_đến_dự",
+      "type_source": "violating_student",
+      "type_target": "council"
+    },
+    {
+      "source": "không_đến_dự",
+      "target": "lý do chính đáng",
+      "relation": "nếu_không_có",
+      "type_source": "RELATION",
+      "type_target": "legitimate_reason"
+    },
+    {
+      "source": "sinh viên vi phạm kỷ luật",
+      "target": "bản tự kiểm điểm",
+      "relation": "không_có",
+      "type_source": "violating_student",
+      "type_target": "self_criticism"
+    },
+    {
+      "source": "Hội đồng",
+      "target": "họp",
+      "relation": "vẫn_tiến_hành",
+      "type_source": "council",
+      "type_target": "meeting"
+    },
+    {
+      "source": "Hội đồng",
+      "target": "khuyết điểm thiếu ý thức tổ chức kỷ luật",
+      "relation": "xét_thêm",
+      "type_source": "council",
+      "type_target": "lack_of_discipline_awareness_fault"
+    },
+    {
+      "source": "khuyết điểm thiếu ý thức tổ chức kỷ luật",
+      "target": "ý thức tổ chức kỷ luật",
+      "relation": "thiếu",
+      "type_source": "lack_of_discipline_awareness_fault",
+      "type_target": "discipline_awareness"
+    },
+    {
+      "source": "Hội đồng khen thưởng, kỷ luật sinh viên Trường",
+      "target": "tổ chức họp",
+      "relation": "tổ_chức",
+      "type_source": "school_discipline_reward_council",
+      "type_target": "meeting"
+    },
+    {
+      "source": "tổ chức họp",
+      "target": "xét kỷ luật",
+      "relation": "để",
+      "type_source": "meeting",
+      "type_target": "discipline_consideration"
+    },
+    {
+      "source": "Hội đồng",
+      "target": "hình thức kỷ luật",
+      "relation": "kiến_nghị",
+      "type_source": "council",
+      "type_target": "discipline_form"
+    },
+    {
+      "source": "Hội đồng",
+      "target": "Hiệu trưởng",
+      "relation": "đề_nghị",
+      "type_source": "council",
+      "type_target": "rector"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "quyết định kỷ luật",
+      "relation": "ra",
+      "type_source": "rector",
+      "type_target": "discipline_decision"
+    },
+    {
+      "source": "quyết định kỷ luật",
+      "target": "văn bản",
+      "relation": "bằng",
+      "type_source": "discipline_decision",
+      "type_target": "document"
+    },
+    {
+      "source": "Hồ sơ xử lý kỷ luật của sinh viên",
+      "target": "Bản tường trình, bản tự kiểm điểm",
+      "relation": "gồm_có",
+      "type_source": "student_discipline_handling_record",
+      "type_target": "report_self_criticism"
+    },
+    {
+      "source": "Hồ sơ xử lý kỷ luật của sinh viên",
+      "target": "Biên bản họp của tập thể lớp sinh viên",
+      "relation": "gồm_có",
+      "type_source": "student_discipline_handling_record",
+      "type_target": "student_class_group_meeting_minutes"
+    },
+    {
+      "source": "Hồ sơ xử lý kỷ luật của sinh viên",
+      "target": "Biên bản họp Hội đồng khen thưởng, kỷ luật sinh viên của Khoa/Bộ môn",
+      "relation": "gồm_có",
+      "type_source": "student_discipline_handling_record",
+      "type_target": "department_discipline_reward_council_meeting_minutes"
+    },
+    {
+      "source": "Hồ sơ xử lý kỷ luật của sinh viên",
+      "target": "Biên bản họp Hội đồng khen thưởng, kỷ luật sinh viên Trường",
+      "relation": "gồm_có",
+      "type_source": "student_discipline_handling_record",
+      "type_target": "school_discipline_reward_council_meeting_minutes"
+    },
+    {
+      "source": "Hồ sơ xử lý kỷ luật của sinh viên",
+      "target": "Các tài liệu có liên quan khác",
+      "relation": "gồm_có",
+      "type_source": "student_discipline_handling_record",
+      "type_target": "other_related_documents"
+    }
+  ]
+}

@@ -21,91 +21,62 @@ Loại thực thể: "phần 1: nlu - định hướng trường đại học ng
 Loại quan hệ: "website, có, là, tôn_trọng, theo, hủy, in, dưới, bị, mời, đối_với, của, gửi, không, gồm, trong, từ, email, công_bố, BAO_GỒM, sở_hữu, số_điện_thoại, thuộc_khoa, chương_trình_tiên_tiến_tại, chương_trình_nâng_cao_tại, chương_trình_đào_tạo_tại, quản_lý_bởi, chủ_nhiệm, trưởng_ban_điều_hành, đội_trưởng, số_lượng_sách, sử_dụng, số_lượng_phòng, sức_chứa, bao_gồm, về, sánh_vai, trên, đổi_mới, thúc_đẩy, phát_huy, xây_dựng, trở_thành, hàng_đầu, đáp_ứng, tầm_nhìn, tên_khác, trực_thuộc, tọa_lạc_tại, thuộc, thời_gian_hoạt_động, nhận_giải_thưởng, thành_lập, phục_vụ, đào_tạo, và, mục_tiêu_đến, sẽ_trở_thành, với, tổ_chức_bởi, được_đăng_tại, gìn_giữ_và_phát_huy, phát_hiện, nâng_đỡ, cho, đề_cao, hoạt_động_của, dành_cho, hỗ_trợ, tư_vấn, phù_hợp, hướng_dẫn, đăng_ký, ở, điều_chỉnh, xác_nhận, theo_dõi, cập_nhật_trên, không_dưới, ít_nhất, xem_xét, cấp, tham_gia, trường, tổ_chức, vào_cuối, tuyên_dương, khen_thưởng, căn_cứ, đánh_giá, phòng_chống, đạt, thang_điểm, chấp_hành, đến, không_vượt_quá, đánh_giá_qua, đoạt_giải, có_thành_tích, đóng_góp, hoạt_động_tại, thực_hiện, bảo_đảm_an_ninh, ít_hơn_hoặc_bằng, chọn, cao_nhất, cao_thứ_hai, bằng_nhau, công_nhận, xét, áp_dụng_bởi, thông_báo, gửi_thông_báo, làm, tham_dự, sau, chấm_dứt, trừ, vô_lễ, lần_1, giao_cho, hạ_điểm, tài_sản_trong, làm_hư_hỏng, lần_2, lần_3, trái, xâm_phạm, chống_phá, thu_hồi, lắng_nghe, hoàn_thành, nghiêm_túc, phát_động, hỏi, trả_lời, làm_phiền, quan_hệ, không_gây_ồn_ào, giữ_gìn, cung_cấp, nhận, dấu_và_chữ_ký, truy_cập, nhập, thanh_toán, hiển_thị, lưu, tại, tương_ứng, phản_hồi, đăng_nhập, chụp_ảnh, quét, đọc, lấy_ảnh, kiểm_tra, trạng_thái, chuyển_tới, viết, trực_tuyến, không_chấp_nhận, nộp, trao_đổi, thắc_mắc, đề_nghị, mang, được_hỗ_trợ, đi_học, chưa_được_sửa, mất, giúp_đỡ, nêu, hoặc, ghi, chuyển, ký, đã, kèm, giải_quyết, loại, bổ_sung, cập_nhật, trình_ký, đóng_dấu, hoạt_động, liên_hệ, như, cùng, xếp, so_sánh, không_cần, bằng, bố_trí, trọng_số, không_bị, quyết_định, cao_hơn, hơn, lập, trình, làm_tròn, trích_từ, do, phối_hợp, trị_giá, một_lần, qua, mỗi, đóng_mộc, sửa_đổi, mã, nhân, tra_cứu, quản_lý, điện_thoại, thành_lập_từ, vay, để, giúp, thủ_tục, gặp_khó_khăn, cư_trú, sinh_sống, đủ_tiêu_chuẩn, tối_đa, lãi_suất, thông_qua, trả_nợ, đóng_trụ_sở, tuân_thủ_quy_định_của, học_tập_tại, được_tôn_trọng_bởi, được_cung_cấp, được_sử_dụng, hoạt_động_trong, kiến_nghị_với, đề_đạt_nguyện_vọng_lên, được_ở, được_nhận, tuân_thủ_chủ_trương_của, tuân_thủ_pháp_luật_của, tuân_thủ_quy_chế_của, đóng, không_được_xúc_phạm, không_được_tham_gia, không_được, không_được_tổ_chức_hoạt_động_mà_chưa_được_cho_phép, cung_cấp_ctđt_cho, tư_vấn_xây_dựng_khht_cho, thông_báo_học_phần_cho, hướng_dẫn_đăng_ký_cho, thực_hiện_theo, đăng_ký_học_lại, cải_thiện_điểm, cho_phép_đăng_ký_ít_hơn_14_tín_chỉ, rút, không_đi_học, không_dự_thi, nhận_điểm_r, nhận_điểm_f, rút_học_phần_trên, đề_xuất_hủy_hoặc_mở_thêm, đăng_ký_trực_tuyến, công_bố_kết_quả_đăng_ký_cho, cải_thiện_kết_quả, đề_xuất, duy_trì, phê_duyệt_duy_trì, đề_xuất_mở_thêm, chấp_thuận_mở_thêm, mở_thêm, dự_thi, đề_xuất_cấm_thi, duyệt_danh_sách_cấm_thi, tối_thiểu, chuẩn, được_quy_định_trong, thông_báo_cho, thông_báo_lịch_thi, hưởng, chấp_thuận, duyệt_đơn, tổ_chức_thi_cho, xét_tương_đương, quy_định, rà_soát, phê_duyệt, xác_định, đồng_ý, không_đạt, tính_vào, xử_lý, xem_kết_quả, được_đánh_giá, tính, không_tính, dựa_vào, trung_bình_cộng, kỷ_luật, không_tham_gia, xếp_loại, lưu_trong, ghi_vào, đình_chỉ, tiêu_chí, cho_phép, chuyển_sang, cấp_bằng, chấm, thỏa_mản, phân_công, tổ_chức_bảo_vệ, thảo_luận, gia_hạn, quyết_định_gia_hạn, không_hoàn_thành, tích_lũy, ra_quyết_định, được_cấp, báo, bảo_lưu, được_điều_động, cần, theo_quy_định, học_xong, nghỉ, được_công_nhận, học, vượt_quá, nghiên_cứu, bổ_sung_vào, tăng_cường, áp_dụng, chỉ_đạo, phát_triển_trên, không_tổ_chức, giữ_bí_mật, bảo_vệ, chịu_trách_nhiệm, trước, nhấn, mở, tắt, bấm, chia_sẻ"
 
 Câu hỏi: {question}
-Cần có tài liệu để trả lời câu hỏi đã cho, và mục tiêu là tìm kiếm các tài liệu hữu ích. Mỗi thực thể trong biểu đồ tri thức được liên kết với một tài liệu. 
-Dựa trên các thực thể và quan hệ đã trích xuất, graph hay text hữu ích hơn để thu hẹp không gian tìm kiếm? Bạn phải trả lời bằng một trong hai từ, không quá hai từ."""
-#     return """
-# Bạn là một tác tử thông minh có nhiệm vụ trả lời câu hỏi của người dùng bằng cách sử dụng một trong các công cụ sau:
-# Công cụ tìm kiếm văn bản: Dùng để tìm kiếm thông tin trong tài liệu văn bản.
-# Công cụ truy vấn đồ thị: Dùng để tìm kiếm thông tin về các thực thể và mối quan hệ trong đồ thị tri thức.
-# Câu hỏi: {question}
-# Hãy suy nghĩ về loại thông tin cần thiết để trả lời câu hỏi này.
-# Nếu câu hỏi chủ yếu cần thông tin chi tiết hoặc ngữ cảnh, bạn nên sử dụng công cụ tìm kiếm văn bản(text).
-# Nếu câu hỏi chủ yếu hỏi về mối quan hệ giữa các đối tượng hoặc thực thể, bạn nên sử dụng công cụ truy vấn đồ thị(graph).
-# Dựa trên phân tích của bạn, hãy chọn công cụ phù hợp nhất để thu hẹp không gian tìm kiếm và trả lời 'graph' hoặc 'text'. Trả lời không quá 2 từ"""
+Các có tài liệu để trả lời câu hỏi đã cho và mục tiêu là tìm kiếm các tài liệu hữu ích. Mỗi thực thể trong biểu đồ tri thức được liên kết với một tài liệu. 
+Dựa trên các thực thể và quan hệ đã trích xuất, 'graph' hay 'text' hữu ích hơn để thu hẹp không gian tìm kiếm? Bạn phải trả lời bằng một trong hai từ, không quá hai từ."""
 
 def reflection_stsv():
     return """
-Tài liệu đã truy xuất không chính xác.
+Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. Hãy phản hồi dựa trên yêu cầu sau:
+1. Nếu feedback là 'Tài liệu đã truy xuất không đúng. Mô-đun truy xuất hiện tại có thể không hữu ích để thu hẹp không gian tìm kiếm.' thì hãy sử dụng nguồn truy xuất khác với bước trước đó. Nếu trước đó dùng 'graph' thì chuyển sang 'text' và ngược lại, Bạn phải trả lời bằng một trong hai từ. Trả lời không quá hai từ.
 Câu hỏi: {question}
-Phản hồi: {feedback}
-Tài liệu đã truy xuất không chính xác. Hãy trả lời lại dựa trên các thực thể chủ đề và quan hệ hữu ích mới được trích xuất. graph hay text hữu ích hơn để thu hẹp không gian tìm kiếm? Bạn phải trả lời bằng một trong hai từ, không quá hai từ."""
-#     return """
-# Câu hỏi: {question}
-# Phản hồi: {feedback}
-# Dựa trên phản hồi từ người bình luận, hãy suy nghĩ về những điều sau để cải thiện trong lần thử tiếp theo:
-# 1. Nếu người bình luận cho rằng bạn đã chọn sai công cụ, thì hãy chọn công cụ khác(nếu graph thì text, nếu text thì graph)
-# 2. Nếu người bình luận chỉ ra các thực thể hoặc mối quan hệ bị bỏ lỡ hoặc xác định sai, hãy đảm bảo bạn tập trung vào những yếu tố này trong lần truy xuất tiếp theo.
-# 3. Hãy ghi nhớ mọi phản hồi khác và cố gắng điều chỉnh hành động của bạn để giải quyết những vấn đề đó.
-# Trả lời bằng 'graph' hoặc 'text'. Trả lời không quá 2 từ
-# """
+feedback: {feedback}
+"""
 
 def generator_stsv():
     return """
-Nhiệm vụ của bạn là dựa vào câu hỏi và các tài liệu khả thi mà tôi cung cấp, hãy trả lời câu hỏi:
+Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. 
+Nhiệm vụ của bạn là dựa vào câu hỏi và các tài liệu khả thi mà tôi cung cấp để trả lời câu hỏi:
 Câu hỏi: {question}
 Tài liệu khả thi: {references}
-Nếu tài liệu khả thi không có câu trả lời thì phản hồi 'Tài liệu không có thông tin'
-Nếu tài liệu khả thi bị lặp lại thì hãy phản hồi 'Câu trả lời không đổi' """
+Yêu cầu:
+1. Phải sử dụng đầy đủ tài liệu khả thi để trả lời câu hỏi, không tóm tắt.
+2. Trả lời ngắn gọn theo tài liệu được cung cấp. Nếu không có thông tin thì trả lời 'Không có thông tin' và không thêm bất cứ thông tin gì.
+"""
 
 def valid_stsv():
     return """
 Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu.
 Câu hỏi: {question}
 Câu trả lời: {answer}
-Tài liệu khả thi: {references}
-Nhiệm vụ: Tài liệu có phù hợp với các yêu cầu của câu hỏi không? Trả lời chỉ bằng 'yes' hoặc 'no'."""
-#     return """
-# Bạn là một trình xác thực có nhiệm vụ đánh giá tính chính xác của một câu trả lời. Dưới đây là thông tin liên quan:
-# Câu hỏi: {question}
-# Câu trả lời: {answer}
-# Tài liệu khả thi: {references}
-# Để biết câu trả lời có đầy đủ chi tiết, đúng ý nghĩa câu hỏi và không bỏ sót bất kỳ thông tin nào cần dựa vào các yếu tố sau:
-# Dựa trên những thông tin này, hãy trả lời 'yes' hoặc 'no'. Trả lời không quá 2 từ"""
+Nhiệm vụ của bạn là:
+1. Hãy phân tích câu trả lời có đúng với câu hỏi hay không, nếu đúng thì trả lời 'yes', nếu không thì 'no'.
+2. Nếu câu trả lời 'Không có thông tin' thì hãy trả lời 'no'
+Trả lời 1 trong 2 từ 'yes' hoặc 'no'. Trả lời không quá 2 từ"""
 
 def commentor_stsv():
     return """
 Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu.
 Câu hỏi: {question}
-Thực thể chủ đề: <<<các thực thể đã trích xuất>>>
-Quan hệ hữu ích: <<<các quan hệ đã trích xuất>>>
-Vui lòng chỉ ra thực thể hoặc quan hệ nào được trích xuất sai từ câu hỏi, nếu có.
-    """
-#     return """
-# Bạn là một người bình luận có nhiệm vụ cung cấp phản hồi mang tính xây dựng cho tác tử để cải thiện khả năng trả lời câu hỏi. Dưới đây là thông tin liên quan:
-# Câu hỏi: {question}
-# Câu trả lời: {answer}
-# Tài liệu khả thi: {references}
-# Trình xác thực đã đánh giá rằng câu trả lời này không chính xác. Hãy phân tích quá trình truy xuất của tác tử và đưa ra phản hồi cụ thể để giúp tác tử cải thiện.
-# Bạn có nghĩ tác tử đã chọn sai công cụ truy xuất không? Nếu có, hãy phản hồi "Tác tử đã chọn sai công cụ"
-# Có thực thể hoặc mối quan hệ nào trong câu hỏi mà tác tử có thể đã bỏ lỡ hoặc xác định sai không?
-# Phản hồi khác (nếu có):"""
+Tài liệu khả thi: {references}
+Nếu tài liệu khả thi không thể trả lời câu hỏi thì phản hồi 'Tài liệu đã truy xuất không đúng. Mô-đun truy xuất hiện tại {current_module} có thể không hữu ích để thu hẹp không gian tìm kiếm.'
+"""
 
 def extract_entities_relationship_from_text():
     return """
-    Bạn là một hệ thống trích xuất thông tin từ văn bản. Nhiệm vụ của bạn là:
+    Bạn là một hệ thống trích xuất thông tin từ văn bản. Tuân theo khuôn mẫu, Nhiệm vụ của bạn là:
 
 1. Trích xuất tất cả các thực thể có trong đoạn văn bản.
-   - Mỗi thực thể cần có tên và loại.  
-   - Loại của thực thể (ví dụ: người, tổ chức, địa điểm, ngày tháng, sản phẩm, v.v.) phải được ghi bằng tiếng Việt, ghi thường, có dấu.
+   - Mỗi thực thể cần có tên(name) và loại(type).  
+   - Loại của thực thể (ví dụ: person, organization, location, date, v.v.) phải được ghi bằng tiếng anh, nếu có 2 từ trở lên thì phân cách nhau bởi dấu "_".
 
 2. Xác định các mối quan hệ giữa các thực thể.  
-   - Mỗi mối quan hệ phải có nguồn, đích và tên mối quan hệ.  
-   - Tên mối quan hệ phải được ghi IN HOA. Nếu tên mối quan hệ gồm từ hai từ trở lên, các từ phải được nối với nhau bằng dấu gạch dưới (ví dụ: "THỦ_ĐÔ_CỦA", "TẠO_RA").  
-   - Nếu một mối quan hệ giống nhau ở nhiều trường hợp, hãy thống nhất sử dụng một tên mối quan hệ duy nhất và không thêm từ gì khác. Ví dụ: nếu "tphcm ở việt nam" được quy định là mối quan hệ "Ở", thì với mọi trường hợp tương tự, mối quan hệ phải là "Ở".
+   - Mỗi mối quan hệ phải có nguồn(source), đích(target) và tên mối quan hệ(relation).  
+   - Tên mối quan hệ phải được ghi thường, tiếng việt, có dấu, nếu có 2 từ trở lên thì phân cách nhau bởi dấu "_".(ví dụ: "THỦ_ĐÔ_CỦA", "TẠO_RA").  
+   - Nếu một mối quan hệ có ý nghĩa giống nhau ở nhiều trường hợp, hãy thống nhất sử dụng một tên mối quan hệ duy nhất và không thêm từ gì khác. Ví dụ: nếu "tphcm ở việt nam" được quy định là mối quan hệ "Ở", thì với mọi trường hợp tương tự, mối quan hệ phải là "Ở".
 
 3. Trả về kết quả dưới dạng JSON với các trường:
    - "entities": Danh sách các thực thể. Mỗi thực thể có các thuộc tính "name" và "type".
-   - "relationships": Danh sách các mối quan hệ. Mỗi mối quan hệ có các thuộc tính "source", "target" và "relation".
+   - "relationships": Danh sách các mối quan hệ. Mỗi mối quan hệ có các thuộc tính "source", "target", "type_source", "type_target" và "relation".
 
 Đoạn văn bản cần trích xuất:
 {question}
@@ -113,151 +84,19 @@ def extract_entities_relationship_from_text():
 Yêu cầu:
 - Trả về kết quả dưới dạng JSON với các trường: entities, relationships.
 - Mỗi entity cần có name và type.
-- Mỗi relationship cần có source, target, và relation.
+- Mỗi relationship cần có source, target, type_source, type_target và relation.
 
 ---
 ### Giải thích:
 1. **Entity**:
    - Là các đối tượng được nhắc đến trong văn bản, ví dụ: tên người, địa điểm, tổ chức, ngày tháng, v.v.
-   - Mỗi entity cần được gán một loại phù hợp, ví dụ: NGƯỜI, ĐỊA ĐIỂM, TỔ CHỨC, NGÀY, v.v.
+   - Mỗi entity cần được gán một loại phù hợp, ví dụ: person, organization, location, date, v.v
 
 2. **Relationship**:
    - Là mối quan hệ giữa các entity, ví dụ: "Alice knows Bob" → quan hệ Biết giữa Alice và Bob.
 
 3. **Định dạng đầu ra**:
-   - Sử dụng JSON để trả về kết quả một cách có cấu trúc, dễ dàng xử lý tiếp theo.
----
-### Ví dụ 1:
-Câu hỏi: "steve jobs là người sáng lập apple, một công ty công nghệ có trụ sở tại cupertino."
-{
-  "entities": [
-    {"name": "steve jobs", "type": "người"},
-    {"name": "apple", "type": "tổ chức"},
-    {"name": "cupertino", "type": "địa điểm"}
-  ],
-  "relationships": [
-    {"source": "steve jobs", "target": "apple", "relation": "SÁNG_LẬP"},
-    {"source": "apple", "target": "cupertino", "relation": "Ở"}
-  ]
-}
-### Ví dụ 2:
-Câu hỏi: "paris là thủ đô của nước pháp, nằm ở châu âu."
-{
-  "entities": [
-    {"name": "paris", "type": "địa điểm"},
-    {"name": "pháp", "type": "địa điểm"},
-    {"name": "châu âu", "type": "địa điểm"}
-  ],
-  "relationships": [
-    {"source": "paris", "target": "pháp", "relation": "THỦ_ĐÔ_CỦA"},
-    {"source": "pháp", "target": "châu âu", "relation": "Ở"}
-  ]
-}
-### Ví dụ 3:
-Câu hỏi: "elon musk là ceo của tesla và spacex, hai công ty công nghệ hàng đầu thế giới."
-{
-  "entities": [
-    {"name": "elon musk", "type": "người"},
-    {"name": "tesla", "type": "tổ chức"},
-    {"name": "spacex", "type": "tổ chức"}
-  ],
-  "relationships": [
-    {"source": "elon musk", "target": "tesla", "relation": "CEO_CỦA"},
-    {"source": "elon musk", "target": "spacex", "relation": "CEO_CỦA"}
-  ]
-}
-### Ví dụ 4:
-Câu hỏi: "harry potter là nhân vật chính trong bộ truyện cùng tên, được viết bởi j.k. rowling."
-{
-  "entities": [
-    {"name": "harry potter", "type": "người"},
-    {"name": "j.k. rowling", "type": "người"}
-  ],
-  "relationships": [
-    {"source": "harry potter", "target": "j.k. rowling", "relation": "TẠO_RA"}
-  ]
-}
-### Ví dụ 5:
-Câu hỏi: "sông amazon chảy qua brazil và peru, là một trong những con sông dài nhất thế giới."
-{
-  "entities": [
-    {"name": "sông amazon", "type": "địa điểm"},
-    {"name": "brazil", "type": "địa điểm"},
-    {"name": "peru", "type": "địa điểm"}
-  ],
-  "relationships": [
-    {"source": "sông amazon", "target": "brazil", "relation": "CHẢY_QUA"},
-    {"source": "sông amazon", "target": "peru", "relation": "CHẢY_QUA"}
-  ]
-}
-### Ví dụ 6:
-Câu hỏi: "mark zuckerberg kết hôn với priscilla chan vào năm 2012."
-{
-  "entities": [
-    {"name": "mark zuckerberg", "type": "người"},
-    {"name": "priscilla chan", "type": "người"},
-    {"name": "2012", "type": "ngày tháng"}
-  ],
-  "relationships": [
-    {"source": "mark zuckerberg", "target": "priscilla chan", "relation": "KẾT_HÔN_VỚI"},
-    {"source": "mark zuckerberg", "target": "2012", "relation": "KẾT_HÔN_VÀO"}
-  ]
-}
-### Ví dụ 7:
-Câu hỏi: "iphone là sản phẩm của apple, được phát hành lần đầu vào năm 2007."
-{
-  "entities": [
-    {"name": "iphone", "type": "sản phẩm"},
-    {"name": "apple", "type": "tổ chức"},
-    {"name": "2007", "type": "ngày tháng"}
-  ],
-  "relationships": [
-    {"source": "iphone", "target": "apple", "relation": "SẢN_XUẤT_BỞI"},
-    {"source": "iphone", "target": "2007", "relation": "PHÁT_HÀNH_VÀO"}
-  ]
-}
-### Ví dụ 8:
-Câu hỏi: "albert einstein đoạt giải nobel vật lý vào năm 1921."
-{
-  "entities": [
-    {"name": "albert einstein", "type": "người"},
-    {"name": "nobel vật lý", "type": "giải thưởng"},
-    {"name": "1921", "type": "ngày tháng"}
-  ],
-  "relationships": [
-    {"source": "albert einstein", "target": "nobel vật lý", "relation": "ĐOẠT"},
-    {"source": "albert einstein", "target": "1921", "relation": "ĐOẠT_VÀO"}
-  ]
-}
-### Ví dụ 9:
-Câu hỏi: "facebook mua lại instagram vào năm 2012 với giá 1 tỷ usd."
-{
-  "entities": [
-    {"name": "facebook", "type": "tổ chức"},
-    {"name": "instagram", "type": "tổ chức"},
-    {"name": "2012", "type": "ngày tháng"},
-    {"name": "1 tỷ usd", "type": "tiền"}
-  ],
-  "relationships": [
-    {"source": "facebook", "target": "instagram", "relation": "MUA_LẠI"},
-    {"source": "facebook", "target": "2012", "relation": "MUA_VÀO"},
-    {"source": "facebook", "target": "1 tỷ usd", "relation": "MUA_VỚI_GIÁ"}
-  ]
-}
-### Ví dụ 10:
-Câu hỏi: "leonardo da vinci là một họa sĩ nổi tiếng người ý, tác giả của bức tranh mona lisa."
-{
-  "entities": [
-    {"name": "leonardo da vinci", "type": "người"},
-    {"name": "mona lisa", "type": "tác phẩm nghệ thuật"},
-    {"name": "ý", "type": "địa điểm"}
-  ],
-  "relationships": [
-    {"source": "leonardo da vinci", "target": "mona lisa", "relation": "TẠO_RA"},
-    {"source": "leonardo da vinci", "target": "ý", "relation": "QUỐC_TỊCH"}
-  ]
-}
-    """
+   - Sử dụng JSON để trả về kết quả một cách có cấu trúc, dễ dàng xử lý tiếp theo. """
 
 def extract_question_from_text():
     return """nhiệm vụ của bạn là sẽ tạo ra TẤT CẢ các câu hỏi từ văn bản từ đầu đến cuối mà không bỏ xót 1 chi tiết nào, các câu hỏi viết chữ thường, chỉ tạo ra danh sách câu hỏi và không thêm bất cứ thông tin gì"""
@@ -265,206 +104,151 @@ def extract_question_from_text():
 # yêu cầu llm dự đoán câu hỏi sẽ thuộc về phần nào trong sổ tay sinh viên
 def predict_question_belong_to(question):
     return f"""
-    nhiệm vụ của bạn là dự đoán câu hỏi sau nằm trong phần nào dưới đây mà tôi cung cấp. Hãy trả lời ở phần nào, và ở mục nào của phần đó theo dạng json mà tôi cung cấp:
-    "{{
-    "episode": "",
-    "part": ""
-    }}"
-    trong đó:
-        Thuộc tính 'episode': lấy tất cả thông tin
-        Thuộc tính 'part': chỉ lấy từ đầu cho đến ký tự "<<"
-    
+    Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. Nhiệm vụ của bạn: 
+    Đầu tiên, cần dự đoán câu hỏi sau nằm trong phần nào dưới đây mà tôi cung cấp:
+
     câu hỏi cần dự đoán: {question}
+    Dưới đây là mục lục mà bạn cần dự đoán:
+    "part: phần 1: nlu - định hướng trường đại học nghiên cứu
+        section: quá trình hình thành và phát triển  
+        section: sứ mạng  
+        section: tầm nhìn  
+        section: giá trị cốt lõi  
+        section: mục tiêu chiến lược  
+        section: cơ sở vật chất  
+        section: các đơn vị trong trường  
+        section: các khoa - ngành đào tạo
+        section: tuần sinh hoạt công dân sinh viên  
+        section: hoạt động phong trào sinh viên  
+        section: câu lạc bộ (clb) đội, nhóm  
+        section: cơ sở đào tạo  
+    part: phần 2: học tập và rèn luyện
+        section: quy chế sinh viên  
+           part: chương 2: quyền và nghĩa vụ của sinh viên  
+             article: điều 4: quyền của sinh viên  
+             article: điều 5: nghĩa vụ của sinh viên  
+             article: điều 6: các hành vi sinh viên không được làm  
+        section: quy chế học vụ  
+           part: chương 2: lập kế hoạch và tổ chức giảng dạy  
+             article: điều 9: tổ chức đăng ký học tập  
+             article: điều 10: tổ chức lớp học phần  
+           part: chương 3: đánh giá kết quả học tập và cấp bằng tốt nghiệp  
+             article: điều 12: tổ chức thi kết thúc học phần  
+             article: điều 13: đánh giá và tính điểm học phần  
+             article: điều 14: xét tương đương và công nhận học phần của các cơ sở đào tạo khác  
+             article: điều 15: đánh giá kết quả học tập theo học kỳ, năm học  
+             article: điều 16: thông báo kết quả học tập  
+             article: điều 17: điểm rèn luyện (đrl)  
+             article: điều 18: xử lý kết quả học tập  
+             article: điều 19: khóa luận, tiểu luận, tích lũy tín chỉ tốt nghiệp  
+             article: điều 20: công nhận tốt nghiệp và cấp bằng tốt nghiệp  
+           part: chương 4: những quy định khác đối với sinh viên  
+             article: điều 21: nghỉ học tạm thời, thôi học  
+             article: điều 24: học cùng lúc hai chương trình  
+        section: quy định về việc đào tạo trực tuyến  
+           article: điều 3: hệ thống đào tạo trực tuyến tại trường đại học nông lâm tp.hcm  
+           article: điều 9: đánh giá kết quả học tập trực tuyến  
+           article: điều 13: quyền và trách nhiệm của sinh viên  
+        section: quy định khen thưởng, kỷ luật sinh viên  
+           part: chương 2: khen thưởng  
+             article: điều 4: nội dung khen thưởng  
+             article: điều 5: khen thưởng đối với cá nhân và tập thể sinh viên đạt thành tích xứng đáng để biểu dương, khen thưởng  
+             article: điều 6: khen thưởng đối với sinh viên tiêu biểu (svtb) vào cuối mỗi năm học  
+             article: điều 7: khen thưởng đối với sinh viên là thủ khoa, á khoa kỳ tuyển sinh đầu vào  
+             article: điều 8: khen thưởng đối với sinh viên tốt nghiệp  
+           part: chương 3: kỷ luật  
+             article: điều 11: hình thức kỷ luật và nội dung vi phạm  
+             article: điều 12: trình tự, thủ tục và hồ sơ xét kỷ luật  
+             article: điều 13: chấm dứt hiệu lực của quyết định kỷ luật  
+             article: một số nội dung vi phạm và khung xử lý kỷ luật sinh viên  
+        section: quy chế đánh giá kết quả rèn luyện  
+           article: điều 3: nội dung đánh giá và thang điểm  
+           article: điều 4: đánh giá về ý thức tham gia học tập  
+           article: điều 5: đánh giá về ý thức chấp hành nội quy, quy chế, quy định trong cơ sở giáo dục đại học  
+           article: điều 6: đánh giá về ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, nghệ thuật, thể thao, phòng chống tội phạm và các tệ nạn xã hội  
+           article: điều 7: đánh giá về ý thức công dân trong quan hệ cộng đồng  
+           article: điều 8: đánh giá về ý thức và kết quả khi tham gia công tác cán bộ lớp, các đoàn thể, tổ chức trong cơ sở giáo dục đại học hoặc người học đạt được thành tích đặc biệt trong học tập, rèn luyện  
+           article: điều 9: phân loại kết quả rèn luyện  
+           article: điều 10: phân loại để đánh giá  
+           article: điều 11: quy trình đánh giá kết quả rèn luyện  
+        section: quy tắc ứng xử văn hóa của người học  
+           article: điều 4: ứng xử với công tác học tập, nghiên cứu khoa học, rèn luyện  
+           article: điều 5: ứng xử đối với giảng viên và nhân viên nhà trường  
+           article: điều 6: ứng xử với bạn bè  
+           article: điều 7: xử với cảnh quan môi trường và tài sản công  
+        section: cố vấn học tập  
+        section: danh hiệu sinh viên 5 tốt  
+           article: đạo đức tốt  
+           article: học tập tốt  
+           article: thể lực tốt  
+           article: tình nguyện tốt  
+           article: hội nhập tốt  
+           article: khái niệm  
+           part: ngoài ra ưu tiên xét chọn những sinh viên đạt ít nhất 01 trong các tiêu chuẩn sau:  
+             article: ưu tiên 1  
+             article: ưu tiên 2  
+             article: ưu tiên 3  
+             article: ưu tiên 4  
+             article: ưu tiên 5  
+             article: ưu tiên 6  
+        section: danh hiệu sinh viên tiêu biểu  
+    part: phần 3: hỗ trợ và dịch vụ
+        section: quy định phân cấp giải quyết thắc mắc của sinh viên  
+           article: điều 2: hình thức thắc mắc, kiến nghị  
+           article: điều 3: các bước gửi thắc mắc, kiến nghị  
+           article: điều 4: những vấn đề trao đổi trực tiếp hoặc gửi thư qua email  
+           article: điều 5: trách nhiệm của giảng viên và các bộ phận chức năng  
+           article: điều 6: những vấn đề đã trao đổi trực tiếp hoặc gửi thư không được giải quyết thỏa đáng  
+           article: điều 7: những vấn đề liên quan đến tổ chức lớp học phần  
+           article: điều 8: những vấn đề liên quan đến điểm bộ phận, điểm thi kết thúc học phần, điểm thi học phần và tổ chức thi  
+           article: điều 9: chuyển thắc mắc, kiến nghị của sinh viên  
+           article: điều 10: những nội dung được nói trực tuyến trên website  
+           article: điều 11: yêu cầu đối với sinh viên tham gia trực tuyến  
+        section: thông tin học bổng tài trợ  
+        section: vay vốn học tập từ ngân hàng chính sách xã hội dành cho sinh viên  
+           article: đối tượng sinh viên được hỗ trợ vay tiền  
+           article: điều kiện để được hỗ trợ vay tiền sinh viên  
+           article: mức tiền và lãi suất hỗ trợ vay tiền sinh viên  
+           article: phương thức cho vay tiền sinh viên  
+           article: thông tin về vay vốn học tập từ ngân hàng chính sách xã hội dành cho sinh viên  
+        section: quy trình xác nhận hồ sơ sinh viên  
+           article: các loại giấy tờ được xác nhận  
+           article: kênh đăng ký  
+           article: đăng ký  
+           article: quy trình  
+        section: hồ sơ yêu cầu bồi thường bảo hiểm tai nạn sinh viên  
+        section: thông tin về bảo hiểm y tế  
+        section: hướng dẫn sử dụng các kênh thanh toán học phí, bhyt, lệ phí xét tốt nghiệp
+           article: thanh toán tại quầy giao dịch của bidv
+           article: thanh toán qua kênh bidv smart banking
+           article: thanh toán qua kênh bidv online  
+           article: thanh toán qua atm của bidv  
+           article: thanh toán qua website sinh viên  
+           article: hướng dẫn cài đặt sinh trắc học  
+        section: tham vấn tâm lý học đường  
+        section: trung tâm dịch vụ sinh viên  
+        section: thông tin học bổng khuyến khích học tập  
+            article: đối tượng  
+            article: quỹ học bổng khuyến khích học tập  
+            article: căn cứ để xét học bổng khuyến khích học tập  
+            article: mức học bổng khuyến khích học tập  
+            article: quy trình xét học bổng"
+            
+    Thứ hai, sau khi xác định thuộc phần nào, bạn sẽ phải trả về câu cypher query theo mô tả sau:
+    1. các phần như part, section, article được dùng làm "type"(tất cả đều ghi thường, tiếng anh)
+    2. các phần nội dung là phần "name"(tất cả đều ghi thường, tiếng việt)
     
-    Dưới đây là mục lục mà bạn cần dự đoán
-    "Phần 1: NLU - Định hướng trường đại học nghiên cứu:
-    Quá trình hình thành và phát triển<<Lịch sử và các giai đoạn phát triển của trường>>.
-    Sứ mạng<<Mục đích tồn tại và đóng góp của trường>>.
-    Tầm nhìn<<Định hướng phát triển tương lai của trường>>.
-    Giá trị cốt lõi <<Những nguyên tắc và niềm tin cơ bản của trường>>.
-    Mục tiêu chiến lược <<Các mục tiêu cụ thể trường hướng tới>>.
-    Cơ sở vật chất <<Giảng đường, thư viện, ký túc xá, trang thiết bị>>.
-    Các đơn vị trong trường <<Danh sách các phòng, ban, trung tâm, viện>>.
-    Các khoa - ngành đào tạo <<Danh sách các khoa và các ngành học>>.
-    Tuần sinh hoạt công dân - sinh viên <<Hoạt động định hướng đầu khóa cho tân sinh viên>>.
-    Hoạt động phong trào sinh viên <<Các hoạt động ngoại khóa, tình nguyện, văn nghệ, thể thao>>.
-    Câu lạc bộ (CLB) - Đội, Nhóm <<Danh sách các CLB, đội, nhóm sinh viên hoạt động>>.
-    Cơ sở đào tạo <<Địa chỉ các cơ sở chính và phân hiệu>>.
+    Cypher query:
+    MATCH (first:hãy điền type {{name: 'hãy điền name'}})-[:bao_gồm]->(second:hãy điền type {{name: 'hãy điền name'}})-[:bao_gồm]->(third:hãy điền type {{name: 'hãy điền name'}})-[r*1..3]->(e)
+    RETURN r as relation, e as target
     
-    Phần 2: HỌC TẬP VÀ RÈN LUYỆN:
-    Quy chế sinh viên <<Quyền lợi, nghĩa vụ và những điều sinh viên không được làm>>.
-    Quy chế học vụ <<Quy định về đăng ký, học tập, thi cử, đánh giá, tốt nghiệp>>.
-    Quy định về việc đào tạo trực tuyến <<Quy tắc và cách thức học tập online tại trường>>.
-    Quy định khen thưởng, kỷ luật sinh viên <<Các hình thức, tiêu chuẩn khen thưởng và xử lý vi phạm>>.
-    Quy chế đánh giá kết quả rèn luyện <<Tiêu chí và cách thức đánh giá điểm rèn luyện>>.
-    Quy tắc ứng xử văn hóa của người học <<Chuẩn mực giao tiếp, hành vi trong môi trường học đường>>.
-    Cố vấn học tập <<Vai trò và nhiệm vụ của người hỗ trợ sinh viên học tập>>.
-    Danh hiệu sinh viên 5 tốt <<Tiêu chí phấn đấu để đạt danh hiệu cao quý này>>.
-    Danh hiệu sinh viên tiêu biểu << Tiêu chí xét chọn sinh viên xuất sắc hàng năm>>.
-    
-    Phần 3: HỖ TRỢ VÀ DỊCH VỤ:
-    Quy định phân cấp giải quyết thắc mắc của sinh viên <<Quy trình gửi và giải đáp các vấn đề của sinh viên>>.
-    Thông tin học bổng <<Các loại học bổng (khuyến khích, tài trợ) và cách xét duyệt>>.
-    Vay vốn học tập từ ngân hàng chính sách xã hội <<Hướng dẫn thủ tục vay vốn hỗ trợ học phí, sinh hoạt>>.
-    Quy trình xác nhận hồ sơ sinh viên <<Cách đăng ký và nhận các giấy xác nhận cần thiết>>.
-    Hồ sơ yêu cầu bồi thường bảo hiểm tai nạn <<thủ tục cần chuẩn bị khi có tai nạn xảy ra>>.
-    Thông tin về bảo hiểm y tế <<Quy định bắt buộc và cách thức tham gia BHYT>>.
-    Thông tin học bổng tài trợ <<Học bổng tài trợ (>6 tỷ/năm) từ Quỹ Đồng hành hỗ trợ SV khó khăn/thành tích cao/năng động>>
-    Hướng dẫn sử dụng các kênh thanh toán <<Cách nộp học phí, BHYT qua ngân hàng, website>>.
-    Tham vấn tâm lý học đường <<Dịch vụ hỗ trợ tinh thần, giải tỏa căng thẳng cho sinh viên>>.
-    Trung tâm Dịch vụ Sinh viên <<hông tin về ký túc xá, nhà ăn và các dịch vụ hỗ trợ khác>>."
-"""
-
-# dùng để tạo mã cypher cho câu hỏi
-def create_cypher_from_question(question):
-    return f"""
-    Nhiệm vụ của bạn là tạo mã cypher từ câu hỏi mà tôi đưa vào. Chỉ tạo ra mã cypher và không thêm bất cứ thông tin gì. Tất cả source đều ghi bằng chữ thường. Target chỉ có chữ e, không chỉ định gì thêm. 
-Dưới đây tôi sẽ cung cấp cho bạn tất cả các type và relation mà bạn sẽ tạo ra, chỉ tạo ra type và relation mà tôi đã đề cập, không được thêm bất cứ từ nào: 
-Đây là các type đã có sẵn: episode, part, organization, quantity, department, phone_number, website, center, institute, faculty, training_program, person, email, location, facility, activity, type_of_organization, concept, document, year, strategy, time, award, group_of_people, group, title, event, position, disciplinary_action, movement, abbreviation, percentage, beverage, item, network, frequency, action, material, code, device, system, status, clause, chapter, document_type, software, sequence, media, variable, natural_phenomenon, service, crime, grade, data, course_type, degree, assignment, criteria, subject, money, field, right, teaching_method, platform, account, image, feature
-Đây là các relation đã có sẵn: website, có, là, tôn_trọng, theo, hủy, in, dưới, bị, mời, đối_với, của, gửi, không, gồm, trong, từ, email, công_bố, BAO_GỒM, sở_hữu, số_điện_thoại, thuộc_khoa, chương_trình_tiên_tiến_tại, chương_trình_nâng_cao_tại, chương_trình_đào_tạo_tại, quản_lý_bởi, chủ_nhiệm, trưởng_ban_điều_hành, đội_trưởng, số_lượng_sách, sử_dụng, số_lượng_phòng, sức_chứa, bao_gồm, về, sánh_vai, trên, đổi_mới, thúc_đẩy, phát_huy, xây_dựng, trở_thành, hàng_đầu, đáp_ứng, tầm_nhìn, tên_khác, trực_thuộc, tọa_lạc_tại, thuộc, thời_gian_hoạt_động, nhận_giải_thưởng, thành_lập, phục_vụ, đào_tạo, và, mục_tiêu_đến, sẽ_trở_thành, với, tổ_chức_bởi, được_đăng_tại, gìn_giữ_và_phát_huy, phát_hiện, nâng_đỡ, cho, đề_cao, hoạt_động_của, dành_cho, hỗ_trợ, tư_vấn, phù_hợp, hướng_dẫn, đăng_ký, ở, điều_chỉnh, xác_nhận, theo_dõi, cập_nhật_trên, không_dưới, ít_nhất, xem_xét, cấp, tham_gia, trường, tổ_chức, vào_cuối, tuyên_dương, khen_thưởng, căn_cứ, đánh_giá, phòng_chống, đạt, thang_điểm, chấp_hành, đến, không_vượt_quá, đánh_giá_qua, đoạt_giải, có_thành_tích, đóng_góp, hoạt_động_tại, thực_hiện, bảo_đảm_an_ninh, ít_hơn_hoặc_bằng, chọn, cao_nhất, cao_thứ_hai, bằng_nhau, công_nhận, xét, áp_dụng_bởi, thông_báo, gửi_thông_báo, làm, tham_dự, sau, chấm_dứt, trừ, vô_lễ, lần_1, giao_cho, hạ_điểm, tài_sản_trong, làm_hư_hỏng, lần_2, lần_3, trái, xâm_phạm, chống_phá, thu_hồi, lắng_nghe, hoàn_thành, nghiêm_túc, phát_động, hỏi, trả_lời, làm_phiền, quan_hệ, không_gây_ồn_ào, giữ_gìn, cung_cấp, nhận, dấu_và_chữ_ký, truy_cập, nhập, thanh_toán, hiển_thị, lưu, tại, tương_ứng, phản_hồi, đăng_nhập, chụp_ảnh, quét, đọc, lấy_ảnh, kiểm_tra, trạng_thái, chuyển_tới, viết, trực_tuyến, không_chấp_nhận, nộp, trao_đổi, thắc_mắc, đề_nghị, mang, được_hỗ_trợ, đi_học, chưa_được_sửa, mất, giúp_đỡ, nêu, hoặc, ghi, chuyển, ký, đã, kèm, giải_quyết, loại, bổ_sung, cập_nhật, trình_ký, đóng_dấu, hoạt_động, liên_hệ, như, cùng, xếp, so_sánh, không_cần, bằng, bố_trí, trọng_số, không_bị, quyết_định, cao_hơn, hơn, lập, trình, làm_tròn, trích_từ, do, phối_hợp, trị_giá, một_lần, qua, mỗi, đóng_mộc, sửa_đổi, mã, nhân, tra_cứu, quản_lý, điện_thoại, thành_lập_từ, vay, để, giúp, thủ_tục, gặp_khó_khăn, cư_trú, sinh_sống, đủ_tiêu_chuẩn, tối_đa, lãi_suất, thông_qua, trả_nợ, đóng_trụ_sở, tuân_thủ_quy_định_của, học_tập_tại, được_tôn_trọng_bởi, được_cung_cấp, được_sử_dụng, hoạt_động_trong, kiến_nghị_với, đề_đạt_nguyện_vọng_lên, được_ở, được_nhận, tuân_thủ_chủ_trương_của, tuân_thủ_pháp_luật_của, tuân_thủ_quy_chế_của, đóng, không_được_xúc_phạm, không_được_tham_gia, không_được, không_được_tổ_chức_hoạt_động_mà_chưa_được_cho_phép, cung_cấp_ctđt_cho, tư_vấn_xây_dựng_khht_cho, thông_báo_học_phần_cho, hướng_dẫn_đăng_ký_cho, thực_hiện_theo, đăng_ký_học_lại, cải_thiện_điểm, cho_phép_đăng_ký_ít_hơn_14_tín_chỉ, rút, không_đi_học, không_dự_thi, nhận_điểm_r, nhận_điểm_f, rút_học_phần_trên, đề_xuất_hủy_hoặc_mở_thêm, đăng_ký_trực_tuyến, công_bố_kết_quả_đăng_ký_cho, cải_thiện_kết_quả, đề_xuất, duy_trì, phê_duyệt_duy_trì, đề_xuất_mở_thêm, chấp_thuận_mở_thêm, mở_thêm, dự_thi, đề_xuất_cấm_thi, duyệt_danh_sách_cấm_thi, tối_thiểu, chuẩn, được_quy_định_trong, thông_báo_cho, thông_báo_lịch_thi, hưởng, chấp_thuận, duyệt_đơn, tổ_chức_thi_cho, xét_tương_đương, quy_định, rà_soát, phê_duyệt, xác_định, đồng_ý, không_đạt, tính_vào, xử_lý, xem_kết_quả, được_đánh_giá, tính, không_tính, dựa_vào, trung_bình_cộng, kỷ_luật, không_tham_gia, xếp_loại, lưu_trong, ghi_vào, đình_chỉ, tiêu_chí, cho_phép, chuyển_sang, cấp_bằng, chấm, thỏa_mản, phân_công, tổ_chức_bảo_vệ, thảo_luận, gia_hạn, quyết_định_gia_hạn, không_hoàn_thành, tích_lũy, ra_quyết_định, được_cấp, báo, bảo_lưu, được_điều_động, cần, theo_quy_định, học_xong, nghỉ, được_công_nhận, học, vượt_quá, nghiên_cứu, bổ_sung_vào, tăng_cường, áp_dụng, chỉ_đạo, phát_triển_trên, không_tổ_chức, giữ_bí_mật, bảo_vệ, chịu_trách_nhiệm, trước, nhấn, mở, tắt, bấm, chia_sẻ
-Câu hỏi: {question}
-Ví dụ về cypher mà bạn cần tạo:
-1.MATCH (o:organization {{name: "trường đại học nông lâm thành phố hồ chí minh"}})-[r:trực_thuộc]->(e) RETURN o AS source, r AS relationship, e AS target 
-2.MATCH (o:organization {{name: "trường đại học nông lâm thành phố hồ chí minh"}})-[r:tọa_lạc_tại]->(e) RETURN o AS source, r AS relationship, e AS target 
-3.MATCH (o:organization {{name: "trường đại học nông lâm thành phố hồ chí minh"}})-[r:thời_gian_hoạt_động]->(e) RETURN o AS source, r AS relationship, e AS target 
-4.MATCH (o:organization {{name: "trường đại học nông lâm thành phố hồ chí minh"}})-[r:nhận_giải_thưởng]->(e) RETURN o AS source, r AS relationship, e AS target 
-5.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:là]->(e) RETURN o AS source, r AS relationship, e AS target 
-6.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:đào_tạo]->(e) RETURN o AS source, r AS relationship, e AS target 
-7.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:sẽ_trở_thành]->(e) RETURN o AS source, r AS relationship, e AS target 
-8.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:có]->(e) RETURN o AS source, r AS relationship, e AS target 
-9.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:trở_thành]->(e) RETURN o AS source, r AS relationship, e AS target 
-10.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:phát_huy]->(e) RETURN o AS source, r AS relationship, e AS target 
-11.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:xây_dựng]->(e) RETURN o AS source, r AS relationship, e AS target 
-12.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:sánh_vai]->(e) RETURN o AS source, r AS relationship, e AS target 
-13.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:đổi_mới]->(e) RETURN o AS source, r AS relationship, e AS target 
-14.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:thúc_đẩy]->(e) RETURN o AS source, r AS relationship, e AS target 
-15.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:sử_dụng]->(e) RETURN o AS source, r AS relationship, e AS target 
-16.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-17.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-18.MATCH (o:organization {{name: "trường đại học nông lâm tp.hcm"}})-[r:email]->(e) RETURN o AS source, r AS relationship, e AS target 
-19.MATCH (o:department {{name: "phòng công tác sinh viên"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-20.MATCH (o:department {{name: "phòng công tác sinh viên"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-21.MATCH (o:department {{name: "phòng đào tạo"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-22.MATCH (o:department {{name: "phòng đào tạo"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-23.MATCH (o:department {{name: "phòng đào tạo sau đại học"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-24.MATCH (o:department {{name: "phòng đào tạo sau đại học"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-25.MATCH (o:department {{name: "phòng hành chính"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-26.MATCH (o:department {{name: "phòng hành chính"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-27.MATCH (o:department {{name: "phòng hợp tác quốc tế"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-28.MATCH (o:department {{name: "phòng hợp tác quốc tế"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-29.MATCH (o:department {{name: "phòng kế hoạch tài chính"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-30.MATCH (o:department {{name: "phòng kế hoạch tài chính"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-31.MATCH (o:department {{name: "phòng quản lý chất lượng"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-32.MATCH (o:department {{name: "phòng quản lý chất lượng"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-33.MATCH (o:department {{name: "phòng quản trị vật tư"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-34.MATCH (o:department {{name: "phòng quản trị vật tư"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-35.MATCH (o:department {{name: "phòng tổ chức cán bộ"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-36.MATCH (o:department {{name: "phòng tổ chức cán bộ"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-37.MATCH (o:department {{name: "phòng thanh tra giáo dục"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-38.MATCH (o:department {{name: "phòng thanh tra giáo dục"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-39.MATCH (o:department {{name: "phòng thông tin và truyền thông"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-40.MATCH (o:department {{name: "phòng thông tin và truyền thông"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-41.MATCH (o:facility {{name: "thư viện"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-42.MATCH (o:facility {{name: "thư viện"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-43.MATCH (o:center {{name: "trung tâm dịch vụ sinh viên"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-44.MATCH (o:center {{name: "trung tâm dịch vụ sinh viên"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-45.MATCH (o:center {{name: "trung tâm nghiên cứu biến đổi khí hậu"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-46.MATCH (o:center {{name: "trung tâm nghiên cứu biến đổi khí hậu"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-47.MATCH (o:center {{name: "trung tâm nghiên cứu và ứng dụng công nghệ địa chính"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-48.MATCH (o:center {{name: "trung tâm nghiên cứu và ứng dụng công nghệ địa chính"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-49.MATCH (o:institute {{name: "viện nghiên cứu công nghệ sinh học và môi trường"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-50.MATCH (o:institute {{name: "viện nghiên cứu công nghệ sinh học và môi trường"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-51.MATCH (o:faculty {{name: "khoa công nghệ hóa học và thực phẩm"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-52.MATCH (o:faculty {{name: "khoa công nghệ hóa học và thực phẩm"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-53.MATCH (o:faculty {{name: "khoa công nghệ thông tin"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-54.MATCH (o:faculty {{name: "khoa công nghệ thông tin"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-55.MATCH (o:faculty {{name: "khoa cơ khí công nghệ"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-56.MATCH (o:faculty {{name: "khoa cơ khí công nghệ"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-57.MATCH (o:faculty {{name: "khoa chăn nuôi thú y"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-58.MATCH (o:faculty {{name: "khoa chăn nuôi thú y"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-59.MATCH (o:faculty {{name: "khoa kinh tế"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-60.MATCH (o:faculty {{name: "khoa kinh tế"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-61.MATCH (o:faculty {{name: "khoa khoa học"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-62.MATCH (o:faculty {{name: "khoa khoa học"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-63.MATCH (o:faculty {{name: "khoa khoa học sinh học"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-64.MATCH (o:faculty {{name: "khoa khoa học sinh học"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-65.MATCH (o:faculty {{name: "khoa lâm nghiệp"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-66.MATCH (o:faculty {{name: "khoa lâm nghiệp"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-67.MATCH (o:faculty {{name: "khoa môi trường và tài nguyên"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-68.MATCH (o:faculty {{name: "khoa môi trường và tài nguyên"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-69.MATCH (o:faculty {{name: "khoa nông học"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-70.MATCH (o:faculty {{name: "khoa nông học"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-71.MATCH (o:faculty {{name: "khoa ngoại ngữ - sư phạm"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-72.MATCH (o:faculty {{name: "khoa ngoại ngữ - sư phạm"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-73.MATCH (o:faculty {{name: "khoa quản lý đất đai và bất động sản"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-74.MATCH (o:faculty {{name: "khoa quản lý đất đai và bất động sản"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-75.MATCH (o:faculty {{name: "khoa thủy sản"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-76.MATCH (o:faculty {{name: "khoa thủy sản"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-77.MATCH (o:department_subject {{name: "bộ môn lý luận chính trị"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-78.MATCH (o:department_subject {{name: "bộ môn lý luận chính trị"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-79.MATCH (o:training_program {{name: "bất động sản"}})-[r:thuộc_khoa]->(e) RETURN o AS source, r AS relationship, e AS target 
-80.MATCH (o:training_program {{name: "công nghệ chế biến thủy sản"}})-[r:thuộc_khoa]->(e) RETURN o AS source, r AS relationship, e AS target 
-81.MATCH (o:training_program {{name: "lâm học"}})-[r:thuộc_khoa]->(e) RETURN o AS source, r AS relationship, e AS target 
-82.MATCH (o:training_program {{name: "quản lý tài nguyên rừng"}})-[r:thuộc_khoa]->(e) RETURN o AS source, r AS relationship, e AS target 
-83.MATCH (o:training_program {{name: "công nghệ thực phẩm"}})-[r:thuộc_khoa]->(e) RETURN o AS source, r AS relationship, e AS target 
-84.MATCH (o:training_program {{name: "thú y"}})-[r:thuộc_khoa]->(e) RETURN o AS source, r AS relationship, e AS target 
-85.MATCH (o:person {{name: "sinh viên"}})-[r:có]->(e) RETURN o AS source, r AS relationship, e AS target 
-86.MATCH (o:organization {{name: "clb cán bộ đoàn ngôi sao xanh"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-87.MATCH (o:organization {{name: "clb cán bộ đoàn ngôi sao xanh"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-88.MATCH (o:organization {{name: "bec english club"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-89.MATCH (o:organization {{name: "bec english club"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-90.MATCH (o:organization {{name: "clb bóng rổ đại học nông lâm"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-91.MATCH (o:organization {{name: "clb bóng rổ đại học nông lâm"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-92.MATCH (o:organization {{name: "clb du lịch sinh thái"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-93.MATCH (o:organization {{name: "clb du lịch sinh thái"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-94.MATCH (o:organization {{name: "clb dược thú y"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-95.MATCH (o:organization {{name: "clb dược thú y"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-96.MATCH (o:organization {{name: "fire english club"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-97.MATCH (o:organization {{name: "fire english club"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-98.MATCH (o:organization {{name: "clb karate-do"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-99.MATCH (o:organization {{name: "clb karate-do"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-100.MATCH (o:organization {{name: "clb kết nối thành công"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-101.MATCH (o:organization {{name: "clb kết nối thành công"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-102.MATCH (o:organization {{name: "clb khởi nghiệp (nlu startup club) nsc"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-103.MATCH (o:organization {{name: "clb khởi nghiệp (nlu startup club) nsc"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-104.MATCH (o:organization {{name: "clb một sức khỏe tp.hcm (hcmc one health club)"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-105.MATCH (o:organization {{name: "clb sách và hành động nông lâm tp.hcm"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-106.MATCH (o:organization {{name: "clb sách và hành động nông lâm tp.hcm"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-107.MATCH (o:organization {{name: "clb tiếng anh khoa công nghệ hóa học và thực phẩm (seeds for future) sff"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-108.MATCH (o:organization {{name: "clb tiếng anh khoa công nghệ hóa học và thực phẩm (seeds for future) sff"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-109.MATCH (o:organization {{name: "clb tiếng anh khoa kinh tế efb (english for business club) efb"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-110.MATCH (o:organization {{name: "clb tiếng anh khoa kinh tế efb (english for business club) efb"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-111.MATCH (o:organization {{name: "clb thú y engscope"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-112.MATCH (o:organization {{name: "clb truyền thông nông lâm radio"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-113.MATCH (o:organization {{name: "clb truyền thông nông lâm radio"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-114.MATCH (o:organization {{name: "wildlife vet student club"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-115.MATCH (o:organization {{name: "clb yêu môi trường"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-116.MATCH (o:organization {{name: "tổ tu dưỡng rèn luyện hạt giống đỏ"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-117.MATCH (o:organization {{name: "tổ tu dưỡng rèn luyện hạt giống đỏ"}})-[r:trưởng_ban_điều_hành]->(e) RETURN o AS source, r AS relationship, e AS target 
-118.MATCH (o:organization {{name: "đội công tác xã hội"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-119.MATCH (o:organization {{name: "đội công tác xã hội"}})-[r:đội_trưởng]->(e) RETURN o AS source, r AS relationship, e AS target 
-120.MATCH (o:organization {{name: "đội khát vọng tuổi trẻ khoa chăn nuôi thú y"}})-[r:đội_trưởng]->(e) RETURN o AS source, r AS relationship, e AS target 
-121.MATCH (o:organization {{name: "đội nhiệt huyết rừng xanh"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-122.MATCH (o:organization {{name: "đội nhiệt huyết rừng xanh"}})-[r:đội_trưởng]->(e) RETURN o AS source, r AS relationship, e AS target 
-123.MATCH (o:organization {{name: "đội văn nghệ rạng đông"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-124.MATCH (o:organization {{name: "đội văn nghệ rạng đông"}})-[r:đội_trưởng]->(e) RETURN o AS source, r AS relationship, e AS target 
-125.MATCH (o:organization {{name: "đội văn nghệ xung kích nhịp điệu xanh"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-126.MATCH (o:organization {{name: "đội văn nghệ xung kích nhịp điệu xanh"}})-[r:đội_trưởng]->(e) RETURN o AS source, r AS relationship, e AS target 
-127.MATCH (o:organization {{name: "đội xung kích khoa khoa học sinh học"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-128.MATCH (o:organization {{name: "đội xung kích khoa khoa học sinh học"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-129.MATCH (o:organization {{name: "hội cổ động viên (nong lam buffaloes) nlb"}})-[r:quản_lý_bởi]->(e) RETURN o AS source, r AS relationship, e AS target 
-130.MATCH (o:organization {{name: "hội cổ động viên (nong lam buffaloes) nlb"}})-[r:chủ_nhiệm]->(e) RETURN o AS source, r AS relationship, e AS target 
-131.MATCH (o:organization {{name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"}})-[r:tọa_lạc_tại]->(e) RETURN o AS source, r AS relationship, e AS target 
-132.MATCH (o:organization {{name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-133.MATCH (o:organization {{name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-134.MATCH (o:organization {{name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"}})-[r:email]->(e) RETURN o AS source, r AS relationship, e AS target 
-135.MATCH (o:organization {{name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"}})-[r:tọa_lạc_tại]->(e) RETURN o AS source, r AS relationship, e AS target 
-136.MATCH (o:organization {{name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"}})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target 
-137.MATCH (o:organization {{name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"}})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target 
-138.MATCH (o:organization {{name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"}})-[r:email]->(e) RETURN o AS source, r AS relationship, e AS target
-
-
-
+    Trong đó:
+        1. Bạn có thể tùy chỉnh các cấp độ của first, second, third hoặc fourth tùy thuộc vào cấp bậc mà bạn dự đoán
+        2. -[r*1..3]->(e) phải luôn có.
+    Trả lời không giải thích gì thêm, chỉ trả về cypher query theo y hệt mẫu mà tôi cung cấp.
+    Lưu ý: 
+    1. Tất cả câu hỏi đều nằm trong mục lục trên, không có chuyện không có.
+    2. Các cấp bậc trùng nhau không được liên kết với nhau.
 """
 
 # dùng để trích xuất entities và relationship cho câu hỏi
@@ -536,7 +320,7 @@ Dưới đây là văn bản lớn mà tôi cung cấp:
 
 def chunking(paragraph):
     return f"""
-    Bạn là một trợ lý AI chuyên xử lý văn bản tự nhiên. Nhiệm vụ của bạn là giúp tôi trích xuất các đoạn văn nhỏ từ văn bản lớn. Tôi sẽ đưa vào một văn bản lớn. Hãy thực hiện theo các yêu cầu sau:
+Bạn là một trợ lý AI chuyên xử lý văn bản tự nhiên. Nhiệm vụ của bạn là giúp tôi trích xuất các đoạn văn nhỏ từ văn bản lớn. Tôi sẽ đưa vào một văn bản lớn. Hãy thực hiện theo các yêu cầu sau:
 
 1. Chia văn bản thành các đoạn nhỏ, mỗi đoạn có độ dài từ 100 đến 200 từ (hoặc khoảng 2-4 câu, tùy vào ngữ cảnh), nhưng không được cắt giữa chừng làm mất nghĩa của câu hoặc ý chính.
 2. Đảm bảo mỗi đoạn nhỏ giữ được ý nghĩa độc lập và liên quan chặt chẽ đến ngữ cảnh của văn bản gốc, không bị rời rạc.
@@ -563,3 +347,56 @@ def rewrite_question(question):
         Hãy trả về 1 câu hỏi đã được ghi lại, không trả lời quá 1 câu
         Câu hỏi: {question}
     """
+
+# dùng để trích xuất các chủ đề quan trọng. Được sử dụng để thêm thông tin vào chunk để tạo thuận lợi cho ss vector qdrant
+def summary_document():
+    return """
+Bạn là một chuyên gia trích xuất chủ đề quan trọng trong văn bản. nhiệm vụ của bạn là hãy trích xuất chủ đề quan trọng theo các yêu cầu sau đây:
+1. Nội dung không quá 2 dòng
+2. Chỉ trích xuất các nội dung chính được nhắc đến trong đoạn văn
+Văn bản: {paragraph}
+    """
+
+def criteria_complete_question():
+    return """
+Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. 
+Hãy phân tích câu hỏi và trả lời các điểm sau:
+Phạm vi của câu hỏi là rộng hay hẹp? (Rộng: liên quan đến nhiều khía cạnh hoặc không giới hạn thời gian; Hẹp: giới hạn trong một khía cạnh hoặc thời điểm cụ thể).
+Trả lời 1 trong 2 từ "rộng" hoặc "hẹp". Trả lời không quá 2 từ
+
+Nếu là 'hẹp' hãy ghi lại câu hỏi.
+Nếu là 'rộng' hãy trích xuất 2 tiêu chí để hoàn thành câu trả lời một cách đầy đủ và chi tiết nhất. 
+Hãy trả về dưới dạng json như sau:
+{{
+'criteria': [
+<<gồm 1 hoặc 2 tiêu chí duy nhất. Không quá 10 từ. Mỗi tiêu chí chỉ 1 tiêu chí duy nhất>>
+]
+}}
+Câu hỏi: {question}
+"""
+
+def summary_answer():
+    return """
+bạn là một trợ lý hữu ích, tuân theo khuôn mẫu:
+1. Nhiệm vụ của bạn là dựa vào các câu trả lời được cung cấp, hãy diễn đạt lại theo ngôn ngữ tự nhiên một cách hoàn chỉnh.
+2, không thêm, bớt hoặc chỉnh sửa nội dung.
+3. Tự động trình bày lại dữ liệu cho dễ nhìn.
+4. Nếu có liệt kê thì hãy đánh số thứ tự và in đậm.
+
+Câu hỏi: {question}
+Câu trả lời: {answer}
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+

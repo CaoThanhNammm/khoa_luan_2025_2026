@@ -1,0 +1,160 @@
+{
+  "entities": [
+    {
+      "name": "sinh viên",
+      "type": "PERSON_GROUP"
+    },
+    {
+      "name": "nghiêm túc",
+      "type": "ATTRIBUTE"
+    },
+    {
+      "name": "tham gia trực tuyến",
+      "type": "ACTION"
+    },
+    {
+      "name": "Web-site",
+      "type": "PLATFORM"
+    },
+    {
+      "name": "tinh thần tôn sư trọng đạo",
+      "type": "PRINCIPLE"
+    },
+    {
+      "name": "vấn đề",
+      "type": "PROBLEM"
+    },
+    {
+      "name": "tiêu đề rõ ràng",
+      "type": "ATTRIBUTE"
+    },
+    {
+      "name": "viết tắt",
+      "type": "ACTION"
+    },
+    {
+      "name": "viết thiếu nét",
+      "type": "ACTION"
+    },
+    {
+      "name": "quy định",
+      "type": "REGULATION"
+    },
+    {
+      "name": "điều 10",
+      "type": "ARTICLE_NUMBER"
+    },
+    {
+      "name": "khoản 1 điều 11",
+      "type": "REFERENCE"
+    },
+    {
+      "name": "khoản 2 điều 11",
+      "type": "REFERENCE"
+    },
+    {
+      "name": "trả lời",
+      "type": "ACTION"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "tham gia trực tuyến",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ACTION",
+      "relation": "PHẢI"
+    },
+    {
+      "source": "tham gia trực tuyến",
+      "target": "Web-site",
+      "type_source": "ACTION",
+      "type_target": "PLATFORM",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "tham gia trực tuyến",
+      "target": "nghiêm túc",
+      "type_source": "ACTION",
+      "type_target": "ATTRIBUTE",
+      "relation": "PHẢI"
+    },
+    {
+      "source": "tham gia trực tuyến",
+      "target": "tinh thần tôn sư trọng đạo",
+      "type_source": "ACTION",
+      "type_target": "PRINCIPLE",
+      "relation": "TRÊN_TINH_THẦN"
+    },
+    {
+      "source": "vấn đề",
+      "target": "sinh viên",
+      "type_source": "PROBLEM",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "vấn đề",
+      "target": "tiêu đề rõ ràng",
+      "type_source": "PROBLEM",
+      "type_target": "ATTRIBUTE",
+      "relation": "PHẢI_CÓ"
+    },
+    {
+      "source": "vấn đề",
+      "target": "viết tắt",
+      "type_source": "PROBLEM",
+      "type_target": "ACTION",
+      "relation": "KHÔNG_ĐƯỢC"
+    },
+    {
+      "source": "vấn đề",
+      "target": "viết thiếu nét",
+      "type_source": "PROBLEM",
+      "type_target": "ACTION",
+      "relation": "KHÔNG_ĐƯỢC"
+    },
+    {
+      "source": "vấn đề",
+      "target": "sinh viên",
+      "type_source": "PROBLEM",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "vấn đề",
+      "target": "quy định",
+      "type_source": "PROBLEM",
+      "type_target": "REGULATION",
+      "relation": "KHÔNG_TUÂN_THỦ"
+    },
+    {
+      "source": "quy định",
+      "target": "điều 10",
+      "type_source": "REGULATION",
+      "type_target": "ARTICLE_NUMBER",
+      "relation": "TRONG"
+    },
+    {
+      "source": "quy định",
+      "target": "khoản 1 điều 11",
+      "type_source": "REGULATION",
+      "type_target": "REFERENCE",
+      "relation": "TRONG"
+    },
+    {
+      "source": "quy định",
+      "target": "khoản 2 điều 11",
+      "type_source": "REGULATION",
+      "type_target": "REFERENCE",
+      "relation": "TRONG"
+    },
+    {
+      "source": "vấn đề",
+      "target": "trả lời",
+      "type_source": "PROBLEM",
+      "type_target": "ACTION",
+      "relation": "KHÔNG_ĐƯỢC"
+    }
+  ]
+}

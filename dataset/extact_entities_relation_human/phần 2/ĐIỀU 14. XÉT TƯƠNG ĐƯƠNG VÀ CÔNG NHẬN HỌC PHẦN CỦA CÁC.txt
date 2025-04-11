@@ -1,0 +1,645 @@
+{
+  "entities": [
+    {
+      "name": "Điều 14",
+      "type": "regulation_article"
+    },
+    {
+      "name": "Xét tương đương và công nhận học phần",
+      "type": "process"
+    },
+    {
+      "name": "Cơ sở đào tạo khác",
+      "type": "organization_type"
+    },
+    {
+      "name": "Kết quả học tập",
+      "type": "academic_record"
+    },
+    {
+      "name": "sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "trình độ đào tạo khác",
+      "type": "education_level"
+    },
+    {
+      "name": "ngành/chuyên ngành đào tạo",
+      "type": "academic_field"
+    },
+    {
+      "name": "CTĐT",
+      "type": "curriculum"
+    },
+    {
+      "name": "khóa học khác",
+      "type": "course"
+    },
+    {
+      "name": "cơ sở đào tạo",
+      "type": "organization"
+    },
+    {
+      "name": "trường",
+      "type": "organization"
+    },
+    {
+      "name": "tín chỉ",
+      "type": "credit"
+    },
+    {
+      "name": "học phần",
+      "type": "course_unit"
+    },
+    {
+      "name": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "type": "university"
+    },
+    {
+      "name": "học phần đã được tích lũy",
+      "type": "accumulated_credit"
+    },
+    {
+      "name": "các cơ sở đào tạo có ký kết công nhận học phần",
+      "type": "partner_institution"
+    },
+    {
+      "name": "kiểm định chất lượng",
+      "type": "quality_accreditation"
+    },
+    {
+      "name": "Hiệu trưởng",
+      "type": "position"
+    },
+    {
+      "name": "nguyên tắc",
+      "type": "principle"
+    },
+    {
+      "name": "yêu cầu",
+      "type": "requirement"
+    },
+    {
+      "name": "Nghiêm túc",
+      "type": "principle_criterion"
+    },
+    {
+      "name": "khách quan",
+      "type": "principle_criterion"
+    },
+    {
+      "name": "tin cậy",
+      "type": "principle_criterion"
+    },
+    {
+      "name": "trung thực",
+      "type": "principle_criterion"
+    },
+    {
+      "name": "Sự phù hợp",
+      "type": "requirement_criterion"
+    },
+    {
+      "name": "tính mới",
+      "type": "requirement_criterion"
+    },
+    {
+      "name": "hiện đại của kiến thức, kỹ năng",
+      "type": "requirement_criterion"
+    },
+    {
+      "name": "tương đương về khối lượng kiến thức, kỹ năng",
+      "type": "requirement_criterion"
+    },
+    {
+      "name": "thời lượng",
+      "type": "requirement_criterion"
+    },
+    {
+      "name": "Công bằng",
+      "type": "principle_criterion"
+    },
+    {
+      "name": "Hội đồng Khoa",
+      "type": "academic_council"
+    },
+    {
+      "name": "chuẩn đầu ra CTĐT",
+      "type": "learning_outcome"
+    },
+    {
+      "name": "nội dung",
+      "type": "academic_criteria"
+    },
+    {
+      "name": "khối lượng học tập",
+      "type": "academic_criteria"
+    },
+    {
+      "name": "cách thức đánh giá học phần",
+      "type": "assessment_method"
+    },
+    {
+      "name": "điều kiện bảo đảm chất lượng thực hiện chương trình",
+      "type": "quality_assurance_condition"
+    },
+    {
+      "name": "nhóm học phần",
+      "type": "course_group"
+    },
+    {
+      "name": "Trưởng Khoa",
+      "type": "position"
+    },
+    {
+      "name": "danh sách các học phần công nhận tương đương",
+      "type": "document_list"
+    },
+    {
+      "name": "cơ sở đào tạo trong và ngoài nước",
+      "type": "institution_location_type"
+    },
+    {
+      "name": "website của trường",
+      "type": "digital_platform"
+    },
+    {
+      "name": "50%",
+      "type": "percentage_value"
+    },
+    {
+      "name": "khối lượng học tập tối thiểu của CTĐT",
+      "type": "minimum_curriculum_load"
+    },
+    {
+      "name": "ngành đào tạo giáo viên",
+      "type": "academic_field"
+    },
+    {
+      "name": "Bộ Giáo dục và Đào tạo",
+      "type": "government_organization"
+    },
+    {
+      "name": "điểm M",
+      "type": "letter_grade"
+    },
+    {
+      "name": "học phần được xét tương đương và công nhận",
+      "type": "recognized_course_unit"
+    },
+    {
+      "name": "môn học tương đương",
+      "type": "equivalent_course"
+    },
+    {
+      "name": "văn bản",
+      "type": "document_type"
+    },
+    {
+      "name": "minh chứng hợp lệ",
+      "type": "valid_proof"
+    },
+    {
+      "name": "phiếu điểm",
+      "type": "document_type"
+    },
+    {
+      "name": "giấy chứng nhận kết quả công việc",
+      "type": "document_type"
+    },
+     {
+      "name": "học phần tích lũy",
+      "type": "accumulated_credit"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Điều 14",
+      "target": "Xét tương đương và công nhận học phần",
+      "type_source": "regulation_article",
+      "type_target": "process",
+      "relation": "quy_định_về"
+    },
+    {
+      "source": "Xét tương đương và công nhận học phần",
+      "target": "Cơ sở đào tạo khác",
+      "type_source": "process",
+      "type_target": "organization_type",
+      "relation": "áp_dụng_cho"
+    },
+    {
+      "source": "trường",
+      "target": "Kết quả học tập",
+      "type_source": "organization",
+      "type_target": "academic_record",
+      "relation": "xem_xét_công_nhận"
+    },
+    {
+      "source": "Kết quả học tập",
+      "target": "sinh viên",
+      "type_source": "academic_record",
+      "type_target": "student",
+      "relation": "của"
+    },
+    {
+      "source": "Kết quả học tập",
+      "target": "trình độ đào tạo khác",
+      "type_source": "academic_record",
+      "type_target": "education_level",
+      "relation": "tích_lũy_từ"
+    },
+    {
+      "source": "Kết quả học tập",
+      "target": "ngành/chuyên ngành đào tạo",
+      "type_source": "academic_record",
+      "type_target": "academic_field",
+      "relation": "tích_lũy_từ"
+    },
+    {
+      "source": "Kết quả học tập",
+      "target": "CTĐT",
+      "type_source": "academic_record",
+      "type_target": "curriculum",
+      "relation": "tích_lũy_từ"
+    },
+    {
+      "source": "Kết quả học tập",
+      "target": "khóa học khác",
+      "type_source": "academic_record",
+      "type_target": "course",
+      "relation": "tích_lũy_từ"
+    },
+    {
+      "source": "Kết quả học tập",
+      "target": "cơ sở đào tạo",
+      "type_source": "academic_record",
+      "type_target": "organization",
+      "relation": "tích_lũy_từ"
+    },
+    {
+      "source": "Kết quả học tập",
+      "target": "tín chỉ",
+      "type_source": "academic_record",
+      "type_target": "credit",
+      "relation": "chuyển_đổi_sang"
+    },
+    {
+      "source": "tín chỉ",
+      "target": "học phần",
+      "type_source": "credit",
+      "type_target": "course_unit",
+      "relation": "của"
+    },
+    {
+      "source": "học phần",
+      "target": "CTĐT",
+      "type_source": "course_unit",
+      "type_target": "curriculum",
+      "relation": "trong"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "target": "học phần đã được tích lũy",
+      "type_source": "university",
+      "type_target": "accumulated_credit",
+      "relation": "xét_tương_đương_và_công_nhận"
+    },
+    {
+      "source": "học phần đã được tích lũy",
+      "target": "các cơ sở đào tạo có ký kết công nhận học phần",
+      "type_source": "accumulated_credit",
+      "type_target": "partner_institution",
+      "relation": "tại"
+    },
+    {
+      "source": "các cơ sở đào tạo có ký kết công nhận học phần",
+      "target": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "type_source": "partner_institution",
+      "type_target": "university",
+      "relation": "ký_kết_với"
+    },
+    {
+      "source": "học phần",
+      "target": "CTĐT",
+      "type_source": "course_unit",
+      "type_target": "curriculum",
+      "relation": "thuộc"
+    },
+    {
+      "source": "CTĐT",
+      "target": "kiểm định chất lượng",
+      "type_source": "curriculum",
+      "type_target": "quality_accreditation",
+      "relation": "được_kiểm_định_chất_lượng"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "học phần",
+      "type_source": "position",
+      "type_target": "course_unit",
+      "relation": "quy_định_trường_hợp_khác_cho"
+    },
+     {
+      "source": "học phần đã được tích lũy",
+      "target": "nguyên tắc",
+      "type_source": "accumulated_credit",
+      "type_target": "principle",
+      "relation": "việc_công_nhận_phải_phù_hợp_với"
+    },
+    {
+      "source": "học phần đã được tích lũy",
+      "target": "yêu cầu",
+      "type_source": "accumulated_credit",
+      "type_target": "requirement",
+      "relation": "việc_công_nhận_phải_phù_hợp_với"
+    },
+     {
+      "source": "nguyên tắc",
+      "target": "Nghiêm túc",
+      "type_source": "principle",
+      "type_target": "principle_criterion",
+      "relation": "bao_gồm"
+    },
+      {
+      "source": "nguyên tắc",
+      "target": "khách quan",
+      "type_source": "principle",
+      "type_target": "principle_criterion",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "nguyên tắc",
+      "target": "tin cậy",
+      "type_source": "principle",
+      "type_target": "principle_criterion",
+      "relation": "bao_gồm"
+    },
+     {
+      "source": "nguyên tắc",
+      "target": "trung thực",
+      "type_source": "principle",
+      "type_target": "principle_criterion",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "yêu cầu",
+      "target": "Sự phù hợp",
+      "type_source": "requirement",
+      "type_target": "requirement_criterion",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "yêu cầu",
+      "target": "tính mới",
+      "type_source": "requirement",
+      "type_target": "requirement_criterion",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "yêu cầu",
+      "target": "hiện đại của kiến thức, kỹ năng",
+      "type_source": "requirement",
+      "type_target": "requirement_criterion",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "yêu cầu",
+      "target": "tương đương về khối lượng kiến thức, kỹ năng",
+      "type_source": "requirement",
+      "type_target": "requirement_criterion",
+      "relation": "bao_gồm"
+    },
+     {
+      "source": "yêu cầu",
+      "target": "thời lượng",
+      "type_source": "requirement",
+      "type_target": "requirement_criterion",
+      "relation": "bao_gồm"
+    },
+      {
+      "source": "nguyên tắc",
+      "target": "Công bằng",
+      "type_source": "principle",
+      "type_target": "principle_criterion",
+      "relation": "bao_gồm"
+    },
+     {
+      "source": "Công bằng",
+      "target": "sinh viên",
+      "type_source": "principle_criterion",
+      "type_target": "student",
+      "relation": "đối_với"
+    },
+      {
+      "source": "sinh viên",
+      "target": "CTĐT",
+      "type_source": "student",
+      "type_target": "curriculum",
+      "relation": "trong_cùng"
+    },
+    {
+      "source": "Hội đồng Khoa",
+      "target": "tín chỉ",
+      "type_source": "academic_council",
+      "type_target": "credit",
+      "relation": "xem_xét_công_nhận_chuyển_đổi"
+    },
+    {
+      "source": "Hội đồng Khoa",
+      "target": "chuẩn đầu ra CTĐT",
+      "type_source": "academic_council",
+      "type_target": "learning_outcome",
+      "relation": "xem_xét_trên_cơ_sở"
+    },
+    {
+      "source": "Hội đồng Khoa",
+      "target": "nội dung",
+      "type_source": "academic_council",
+      "type_target": "academic_criteria",
+      "relation": "xem_xét_trên_cơ_sở"
+    },
+    {
+      "source": "Hội đồng Khoa",
+      "target": "khối lượng học tập",
+      "type_source": "academic_council",
+      "type_target": "academic_criteria",
+      "relation": "xem_xét_trên_cơ_sở"
+    },
+    {
+      "source": "Hội đồng Khoa",
+      "target": "cách thức đánh giá học phần",
+      "type_source": "academic_council",
+      "type_target": "assessment_method",
+      "relation": "xem_xét_trên_cơ_sở"
+    },
+    {
+      "source": "Hội đồng Khoa",
+      "target": "điều kiện bảo đảm chất lượng thực hiện chương trình",
+      "type_source": "academic_council",
+      "type_target": "quality_assurance_condition",
+      "relation": "xem_xét_trên_cơ_sở"
+    },
+    {
+      "source": "Hội đồng Khoa",
+      "target": "học phần",
+      "type_source": "academic_council",
+      "type_target": "course_unit",
+      "relation": "công_nhận_chuyển_đổi_theo_từng"
+    },
+    {
+      "source": "Hội đồng Khoa",
+      "target": "nhóm học phần",
+      "type_source": "academic_council",
+      "type_target": "course_group",
+      "relation": "công_nhận_chuyển_đổi_theo_từng"
+    },
+    {
+      "source": "Trưởng Khoa",
+      "target": "danh sách các học phần công nhận tương đương",
+      "type_source": "position",
+      "type_target": "document_list",
+      "relation": "rà_soát_và_đề_xuất"
+    },
+     {
+      "source": "danh sách các học phần công nhận tương đương",
+      "target": "học phần đã được tích lũy",
+      "type_source": "document_list",
+      "type_target": "accumulated_credit",
+      "relation": "của"
+    },
+    {
+      "source": "học phần đã được tích lũy",
+      "target": "cơ sở đào tạo trong và ngoài nước",
+      "type_source": "accumulated_credit",
+      "type_target": "institution_location_type",
+      "relation": "tại"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "danh sách các học phần công nhận tương đương",
+      "type_source": "position",
+      "type_target": "document_list",
+      "relation": "phê_duyệt"
+    },
+    {
+      "source": "danh sách các học phần công nhận tương đương",
+      "target": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "type_source": "document_list",
+      "type_target": "university",
+      "relation": "được_công_nhận_tại"
+    },
+    {
+      "source": "danh sách các học phần công nhận tương đương",
+      "target": "website của trường",
+      "type_source": "document_list",
+      "type_target": "digital_platform",
+      "relation": "công_bố_trên"
+    },
+    {
+      "source": "khối lượng học tập",
+      "target": "50%",
+      "type_source": "academic_criteria",
+      "type_target": "percentage_value",
+      "relation": "tối_đa_được_công_nhận_không_vượt_quá"
+    },
+    {
+      "source": "50%",
+      "target": "khối lượng học tập tối thiểu của CTĐT",
+      "type_source": "percentage_value",
+      "type_target": "minimum_curriculum_load",
+      "relation": "của"
+    },
+    {
+      "source": "ngành đào tạo giáo viên",
+      "target": "Bộ Giáo dục và Đào tạo",
+      "type_source": "academic_field",
+      "type_target": "government_organization",
+      "relation": "theo_hướng_dẫn_của"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm M",
+      "type_source": "student",
+      "type_target": "letter_grade",
+      "relation": "nhận_điểm"
+    },
+    {
+      "source": "điểm M",
+      "target": "học phần được xét tương đương và công nhận",
+      "type_source": "letter_grade",
+      "type_target": "recognized_course_unit",
+      "relation": "cho"
+    },
+    {
+      "source": "sinh viên",
+      "target": "môn học tương đương",
+      "type_source": "student",
+      "type_target": "equivalent_course",
+      "relation": "xác_định_và_đăng_ký"
+    },
+     {
+      "source": "môn học tương đương",
+      "target": "cơ sở đào tạo",
+      "type_source": "equivalent_course",
+      "type_target": "organization",
+      "relation": "sẽ_tích_lũy_tại"
+    },
+     {
+      "source": "môn học tương đương",
+      "target": "Hiệu trưởng",
+      "type_source": "equivalent_course",
+      "type_target": "position",
+      "relation": "yêu_cầu_đồng_ý_bởi"
+    },
+     {
+      "source": "Hiệu trưởng",
+      "target": "văn bản",
+      "type_source": "position",
+      "type_target": "document_type",
+      "relation": "đồng_ý_bằng"
+    },
+     {
+      "source": "sinh viên",
+      "target": "Cơ sở đào tạo khác",
+      "type_source": "student",
+      "type_target": "organization_type",
+      "relation": "học_tại"
+    },
+    {
+      "source": "sinh viên",
+      "target": "minh chứng hợp lệ",
+      "type_source": "student",
+      "type_target": "valid_proof",
+      "relation": "cần_có"
+    },
+    {
+      "source": "minh chứng hợp lệ",
+      "target": "phiếu điểm",
+      "type_source": "valid_proof",
+      "type_target": "document_type",
+      "relation": "ví_dụ"
+    },
+    {
+      "source": "minh chứng hợp lệ",
+      "target": "giấy chứng nhận kết quả công việc",
+      "type_source": "valid_proof",
+      "type_target": "document_type",
+      "relation": "ví_dụ"
+    },
+    {
+      "source": "minh chứng hợp lệ",
+      "target": "học phần tích lũy",
+      "type_source": "valid_proof",
+      "type_target": "accumulated_credit",
+      "relation": "để_được_công_nhận"
+    },
+    {
+      "source": "học phần tích lũy",
+      "target": "Cơ sở đào tạo khác",
+      "type_source": "accumulated_credit",
+      "type_target": "organization_type",
+      "relation": "từ"
+    }
+  ]
+}

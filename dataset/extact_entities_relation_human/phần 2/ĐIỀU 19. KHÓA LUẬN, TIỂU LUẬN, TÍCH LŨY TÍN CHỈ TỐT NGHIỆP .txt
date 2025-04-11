@@ -1,0 +1,832 @@
+{
+  "entities": [
+    {
+      "name": "KHÓA LUẬN",
+      "type": "TOPIC"
+    },
+    {
+      "name": "TIỂU LUẬN",
+      "type": "TOPIC"
+    },
+    {
+      "name": "TÍCH LŨY TÍN CHỈ TỐT NGHIỆP",
+      "type": "TOPIC"
+    },
+    {
+      "name": "ngành/chuyên ngành đào tạo",
+      "type": "MAJOR"
+    },
+    {
+      "name": "sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "Cử nhân",
+      "type": "DEGREE"
+    },
+    {
+      "name": "10",
+      "type": "NUMBER"
+    },
+    {
+      "name": "tín chỉ",
+      "type": "CREDIT"
+    },
+    {
+      "name": "12",
+      "type": "NUMBER"
+    },
+    {
+      "name": "Kỹ sư",
+      "type": "DEGREE"
+    },
+    {
+      "name": "Bác sỹ Thú y",
+      "type": "DEGREE"
+    },
+    {
+      "name": "tiểu luận tốt nghiệp",
+      "type": "TOPIC"
+    },
+    {
+      "name": "05",
+      "type": "NUMBER"
+    },
+    {
+      "name": "06",
+      "type": "NUMBER"
+    },
+    {
+      "name": "01 giảng viên",
+      "type": "LECTURER"
+    },
+    {
+      "name": "giảng viên",
+      "type": "LECTURER"
+    },
+    {
+      "name": "hội đồng",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "Cán bộ",
+      "type": "STAFF"
+    },
+    {
+      "name": "Trưởng Khoa",
+      "type": "POSITION"
+    },
+    {
+      "name": "Khoa",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "CTĐT",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "90",
+      "type": "NUMBER"
+    },
+    {
+      "name": "112",
+      "type": "NUMBER"
+    },
+    {
+      "name": "hệ 4",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "2,00",
+      "type": "GRADE"
+    },
+    {
+      "name": "học kỳ cuối cùng",
+      "type": "SEMESTER"
+    },
+    {
+      "name": "chương trình đào tạo",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Bộ môn",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "doanh nghiệp",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "03 cuốn báo cáo",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "giáo viên hướng dẫn",
+      "type": "SUPERVISOR"
+    },
+    {
+      "name": "Hiệu trưởng",
+      "type": "POSITION"
+    },
+    {
+      "name": "chủ tịch hội đồng",
+      "type": "POSITION"
+    },
+    {
+      "name": "ủy viên phản biện",
+      "type": "POSITION"
+    },
+    {
+      "name": "ủy viên",
+      "type": "POSITION"
+    },
+    {
+      "name": "thư ký hành chính",
+      "type": "POSITION"
+    },
+    {
+      "name": "hồ sơ",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "biên bản",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "phiếu nhận xét",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "điểm",
+      "type": "GRADE"
+    },
+    {
+      "name": "3 điểm",
+      "type": "GRADE"
+    },
+    {
+      "name": "Thạc sĩ",
+      "type": "DEGREE"
+    },
+    {
+      "name": "03 năm",
+      "type": "DURATION"
+    },
+    {
+      "name": "lớp",
+      "type": "CLASS"
+    },
+    {
+      "name": "đợt phân công",
+      "type": "ROUND"
+    },
+    {
+      "name": "04",
+      "type": "NUMBER"
+    },
+    {
+      "name": "đề tài khóa luận",
+      "type": "TOPIC"
+    },
+    {
+      "name": "0,5",
+      "type": "NUMBER"
+    },
+    {
+      "name": "01",
+      "type": "NUMBER"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "KHÓA LUẬN",
+      "target": "10 tín chỉ",
+      "relation": "có_khối_lượng",
+      "type_source": "TOPIC",
+      "type_target": "CREDIT"
+    },
+    {
+      "source": "KHÓA LUẬN",
+      "target": "12 tín chỉ",
+      "relation": "có_khối_lượng",
+      "type_source": "TOPIC",
+      "type_target": "CREDIT"
+    },
+    {
+      "source": "tiểu luận tốt nghiệp",
+      "target": "05 tín chỉ",
+      "relation": "có_khối_lượng",
+      "type_source": "TOPIC",
+      "type_target": "CREDIT"
+    },
+    {
+      "source": "tiểu luận tốt nghiệp",
+      "target": "06 tín chỉ",
+      "relation": "có_khối_lượng",
+      "type_source": "TOPIC",
+      "type_target": "CREDIT"
+    },
+    {
+      "source": "tiểu luận tốt nghiệp",
+      "target": "01 giảng viên",
+      "relation": "được_hướng_dẫn_bởi",
+      "type_source": "TOPIC",
+      "type_target": "LECTURER"
+    },
+    {
+      "source": "Trưởng Khoa",
+      "target": "Cán bộ",
+      "relation": "chỉ_định_người_chấm",
+      "type_source": "POSITION",
+      "type_target": "STAFF"
+    },
+    {
+      "source": "sinh viên",
+      "target": "90 tín chỉ",
+      "relation": "cần_tích_lũy",
+      "type_source": "STUDENT",
+      "type_target": "CREDIT"
+    },
+    {
+      "source": "90 tín chỉ",
+      "target": "ngành/chuyên ngành đào tạo",
+      "relation": "dành_cho",
+      "type_source": "CREDIT",
+      "type_target": "MAJOR"
+    },
+    {
+      "source": "ngành/chuyên ngành đào tạo",
+      "target": "Cử nhân",
+      "relation": "cấp_bằng",
+      "type_source": "MAJOR",
+      "type_target": "DEGREE"
+    },
+    {
+      "source": "sinh viên",
+      "target": "112 tín chỉ",
+      "relation": "cần_tích_lũy",
+      "type_source": "STUDENT",
+      "type_target": "CREDIT"
+    },
+    {
+      "source": "112 tín chỉ",
+      "target": "ngành/chuyên ngành đào tạo",
+      "relation": "dành_cho",
+      "type_source": "CREDIT",
+      "type_target": "MAJOR"
+    },
+    {
+      "source": "ngành/chuyên ngành đào tạo",
+      "target": "Kỹ sư",
+      "relation": "cấp_bằng",
+      "type_source": "MAJOR",
+      "type_target": "DEGREE"
+    },
+    {
+      "source": "ngành/chuyên ngành đào tạo",
+      "target": "Bác sỹ Thú y",
+      "relation": "cấp_bằng",
+      "type_source": "MAJOR",
+      "type_target": "DEGREE"
+    },
+    {
+      "source": "sinh viên",
+      "target": "2,00",
+      "relation": "cần_có_điểm_trung_bình",
+      "type_source": "STUDENT",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "hệ thống điểm",
+      "target": "hệ 4",
+      "relation": "là",
+      "type_source": "SYSTEM",
+      "type_target": "SYSTEM"
+    },
+    {
+      "source": "Khoa",
+      "target": "quy định",
+      "relation": "có_thể_bổ_sung",
+      "type_source": "ORGANIZATION",
+      "type_target": "RULE"
+    },
+    {
+      "source": "Trưởng Khoa",
+      "target": "thời điểm phân công đề tài",
+      "relation": "quy_định",
+      "type_source": "POSITION",
+      "type_target": "TIME"
+    },
+    {
+      "source": "Khoa",
+      "target": "định hướng nghiên cứu",
+      "relation": "cập_nhật_và_công_bố",
+      "type_source": "ORGANIZATION",
+      "type_target": "RESEARCH_DIRECTION"
+    },
+    {
+      "source": "định hướng nghiên cứu",
+      "target": "giảng viên",
+      "relation": "của",
+      "type_source": "RESEARCH_DIRECTION",
+      "type_target": "LECTURER"
+    },
+    {
+      "source": "Khoa",
+      "target": "danh sách các đề tài hợp tác",
+      "relation": "cập_nhật_và_công_bố",
+      "type_source": "ORGANIZATION",
+      "type_target": "TOPIC_LIST"
+    },
+    {
+      "source": "Khoa",
+      "target": "đề tài đặt hàng",
+      "relation": "cập_nhật_và_công_bố",
+      "type_source": "ORGANIZATION",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "đề tài đặt hàng",
+      "target": "doanh nghiệp",
+      "relation": "từ",
+      "type_source": "TOPIC",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đề tài",
+      "relation": "chọn",
+      "type_source": "STUDENT",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giảng viên hướng dẫn",
+      "relation": "mời",
+      "type_source": "STUDENT",
+      "type_target": "SUPERVISOR"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đề cương nghiên cứu",
+      "relation": "chuẩn_bị",
+      "type_source": "STUDENT",
+      "type_target": "RESEARCH_PROPOSAL"
+    },
+    {
+      "source": "đề cương nghiên cứu",
+      "target": "giảng viên hướng dẫn",
+      "relation": "được_hỗ_trợ_bởi",
+      "type_source": "RESEARCH_PROPOSAL",
+      "type_target": "SUPERVISOR"
+    },
+    {
+      "source": "Bộ môn",
+      "target": "việc bảo vệ đề cương nghiên cứu",
+      "relation": "tổ_chức",
+      "type_source": "ORGANIZATION",
+      "type_target": "ACTIVITY"
+    },
+    {
+      "source": "việc bảo vệ đề cương nghiên cứu",
+      "target": "sinh viên",
+      "relation": "cho",
+      "type_source": "ACTIVITY",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "Khoa",
+      "target": "sinh viên",
+      "relation": "phân_công_đề_tài",
+      "type_source": "ORGANIZATION",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "đề tài",
+      "target": "KHÓA LUẬN",
+      "relation": "là",
+      "type_source": "TOPIC",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "đề tài",
+      "target": "tiểu luận tốt nghiệp",
+      "relation": "là",
+      "type_source": "TOPIC",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "03 cuốn báo cáo",
+      "relation": "nộp",
+      "type_source": "STUDENT",
+      "type_target": "DOCUMENT"
+    },
+    {
+      "source": "03 cuốn báo cáo",
+      "target": "giáo viên hướng dẫn",
+      "relation": "có_xác_nhận_của",
+      "type_source": "DOCUMENT",
+      "type_target": "SUPERVISOR"
+    },
+    {
+      "source": "Trưởng Khoa",
+      "target": "danh sách hội đồng",
+      "relation": "đề_xuất",
+      "type_source": "POSITION",
+      "type_target": "ORGANIZATION_LIST"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "hội đồng",
+      "relation": "ra_quyết_định",
+      "type_source": "POSITION",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "Hội đồng đánh giá khóa luận",
+      "target": "03 thành viên",
+      "relation": "có",
+      "type_source": "ORGANIZATION",
+      "type_target": "NUMBER"
+    },
+    {
+      "source": "03 thành viên",
+      "target": "đề tài nghiên cứu",
+      "relation": "có_chuyên_môn",
+      "type_source": "NUMBER",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "hội đồng",
+      "target": "chủ tịch hội đồng",
+      "relation": "bao_gồm",
+      "type_source": "ORGANIZATION",
+      "type_target": "POSITION"
+    },
+    {
+      "source": "hội đồng",
+      "target": "ủy viên phản biện",
+      "relation": "bao_gồm",
+      "type_source": "ORGANIZATION",
+      "type_target": "POSITION"
+    },
+    {
+      "source": "hội đồng",
+      "target": "ủy viên",
+      "relation": "bao_gồm",
+      "type_source": "ORGANIZATION",
+      "type_target": "POSITION"
+    },
+    {
+      "source": "hội đồng",
+      "target": "01 thành viên ngoài trường",
+      "relation": "có",
+      "type_source": "ORGANIZATION",
+      "type_target": "NUMBER"
+    },
+    {
+      "source": "01 thành viên ngoài trường",
+      "target": "thành viên hội đồng",
+      "relation": "là",
+      "type_source": "NUMBER",
+      "type_target": "PERSON"
+    },
+    {
+      "source": "thành viên hội đồng",
+      "target": "trường",
+      "relation": "công_tác_ngoài",
+      "type_source": "PERSON",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "giảng viên hướng dẫn",
+      "target": "hội đồng đánh giá khóa luận",
+      "relation": "không_tham_gia",
+      "type_source": "SUPERVISOR",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "hội đồng",
+      "target": "thư ký hành chính",
+      "relation": "có_thể_có",
+      "type_source": "ORGANIZATION",
+      "type_target": "POSITION"
+    },
+    {
+      "source": "thư ký",
+      "target": "hồ sơ",
+      "relation": "chuẩn_bị",
+      "type_source": "POSITION",
+      "type_target": "DOCUMENT"
+    },
+    {
+      "source": "thư ký",
+      "target": "biên bản",
+      "relation": "ghi",
+      "type_source": "POSITION",
+      "type_target": "DOCUMENT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kết quả",
+      "relation": "trình_bày",
+      "type_source": "STUDENT",
+      "type_target": "RESULT"
+    },
+    {
+      "source": "thành viên hội đồng",
+      "target": "sinh viên",
+      "relation": "góp_ý",
+      "type_source": "PERSON",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "thành viên hội đồng",
+      "target": "sinh viên",
+      "relation": "đặt_câu_hỏi",
+      "type_source": "PERSON",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "câu hỏi",
+      "relation": "trả_lời",
+      "type_source": "STUDENT",
+      "type_target": "QUESTION"
+    },
+    {
+      "source": "thư ký",
+      "target": "phiếu nhận xét",
+      "relation": "đọc",
+      "type_source": "POSITION",
+      "type_target": "DOCUMENT"
+    },
+    {
+      "source": "phiếu nhận xét",
+      "target": "giảng viên hướng dẫn",
+      "relation": "của",
+      "type_source": "DOCUMENT",
+      "type_target": "SUPERVISOR"
+    },
+    {
+      "source": "thành viên hội đồng",
+      "target": "khóa luận",
+      "relation": "chấm_điểm",
+      "type_source": "PERSON",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "điểm khóa luận",
+      "target": "trung bình cộng điểm",
+      "relation": "là",
+      "type_source": "GRADE",
+      "type_target": "AVERAGE_GRADE"
+    },
+    {
+      "source": "trung bình cộng điểm",
+      "target": "thành viên hội đồng",
+      "relation": "của",
+      "type_source": "AVERAGE_GRADE",
+      "type_target": "PERSON"
+    },
+    {
+      "source": "trung bình cộng điểm",
+      "target": "giảng viên hướng dẫn",
+      "relation": "của",
+      "type_source": "AVERAGE_GRADE",
+      "type_target": "SUPERVISOR"
+    },
+    {
+      "source": "điểm khóa luận",
+      "target": "sinh viên",
+      "relation": "của",
+      "type_source": "GRADE",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "chủ tịch hội đồng",
+      "target": "thảo luận",
+      "relation": "tổ_chức",
+      "type_source": "POSITION",
+      "type_target": "DISCUSSION"
+    },
+    {
+      "source": "chủ tịch hội đồng",
+      "target": "quyết định cuối cùng",
+      "relation": "quyết_định",
+      "type_source": "POSITION",
+      "type_target": "DECISION"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giảng viên hướng dẫn",
+      "relation": "thảo_luận_với",
+      "type_source": "STUDENT",
+      "type_target": "SUPERVISOR"
+    },
+    {
+      "source": "sinh viên",
+      "target": "góp ý",
+      "relation": "chỉnh_sửa",
+      "type_source": "STUDENT",
+      "type_target": "SUGGESTION"
+    },
+    {
+      "source": "góp ý",
+      "target": "hội đồng đánh giá",
+      "relation": "của",
+      "type_source": "SUGGESTION",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "sinh viên",
+      "target": "báo cáo khóa luận",
+      "relation": "nộp_lưu",
+      "type_source": "STUDENT",
+      "type_target": "DOCUMENT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thời gian thực hiện đề tài khóa luận",
+      "relation": "được_gia_hạn",
+      "type_source": "STUDENT",
+      "type_target": "TIME"
+    },
+    {
+      "source": "thời gian gia hạn",
+      "target": "2 lần",
+      "relation": "không_quá",
+      "type_source": "TIME",
+      "type_target": "NUMBER"
+    },
+    {
+      "source": "Trưởng khoa",
+      "target": "việc gia hạn",
+      "relation": "quyết_định",
+      "type_source": "POSITION",
+      "type_target": "ACTIVITY"
+    },
+    {
+      "source": "việc gia hạn",
+      "target": "đề xuất",
+      "relation": "dựa_trên",
+      "type_source": "ACTIVITY",
+      "type_target": "PROPOSAL"
+    },
+    {
+      "source": "đề xuất",
+      "target": "sinh viên",
+      "relation": "của",
+      "type_source": "PROPOSAL",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "đề xuất",
+      "target": "giảng viên hướng dẫn",
+      "relation": "của",
+      "type_source": "PROPOSAL",
+      "type_target": "SUPERVISOR"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phí",
+      "relation": "phải_đóng",
+      "type_source": "STUDENT",
+      "type_target": "TUITION"
+    },
+    {
+      "source": "hành động đóng học phí",
+      "target": "gia hạn đề tài khóa luận",
+      "relation": "khi",
+      "type_source": "ACTIVITY",
+      "type_target": "ACTIVITY"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đề tài khóa luận",
+      "relation": "không_hoàn_thành",
+      "type_source": "STUDENT",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "đề tài khóa luận",
+      "target": "phân công",
+      "relation": "được",
+      "type_source": "TOPIC",
+      "type_target": "ACTIVITY"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điểm F",
+      "relation": "nhận",
+      "type_source": "STUDENT",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "hành động nhận điểm F",
+      "target": "báo cáo kết quả đề tài khóa luận",
+      "relation": "khi",
+      "type_source": "ACTIVITY",
+      "type_target": "ACTIVITY"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đề tài khóa luận khác",
+      "relation": "thực_hiện_lại",
+      "type_source": "STUDENT",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "đề tài khóa luận khác",
+      "target": "giảng viên khác",
+      "relation": "được_hướng_dẫn_bởi",
+      "type_source": "TOPIC",
+      "type_target": "LECTURER"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tiểu luận",
+      "relation": "chọn_thực_hiện",
+      "type_source": "STUDENT",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tín chỉ",
+      "relation": "học_bổ_sung",
+      "type_source": "STUDENT",
+      "type_target": "CREDIT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tích lũy tín chỉ tốt nghiệp",
+      "relation": "học",
+      "type_source": "STUDENT",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "giảng viên cơ hữu",
+      "target": "hướng dẫn đề tài khóa luận",
+      "relation": "đủ_tiêu_chuẩn_lên_lớp_lý_thuyết",
+      "type_source": "LECTURER",
+      "type_target": "ACTIVITY"
+    },
+    {
+      "source": "Người công tác ngoài trường",
+      "target": "Thạc sĩ trở lên",
+      "relation": "phải_có_trình_độ",
+      "type_source": "PERSON",
+      "type_target": "DEGREE"
+    },
+    {
+      "source": "Người công tác ngoài trường",
+      "target": "nghiên cứu",
+      "relation": "công_tác_trong_lĩnh_vực",
+      "type_source": "PERSON",
+      "type_target": "RESEARCH"
+    },
+    {
+      "source": "thời gian công tác",
+      "target": "03 năm",
+      "relation": "ít_nhất",
+      "type_source": "TIME",
+      "type_target": "DURATION"
+    },
+    {
+      "source": "giảng viên hướng dẫn độc lập",
+      "target": "04 đề tài khóa luận",
+      "relation": "hướng_dẫn_không_quá",
+      "type_source": "LECTURER",
+      "type_target": "TOPIC"
+    },
+    {
+      "source": "giảng viên hướng dẫn độc lập",
+      "target": "lớp",
+      "relation": "hướng_dẫn_trong",
+      "type_source": "LECTURER",
+      "type_target": "CLASS"
+    },
+    {
+      "source": "giảng viên hướng dẫn độc lập",
+      "target": "đợt phân công",
+      "relation": "hướng_dẫn_trong",
+      "type_source": "LECTURER",
+      "type_target": "ROUND"
+    },
+    {
+      "source": "Đồng hướng dẫn",
+      "target": "Hướng dẫn độc lập",
+      "relation": "quy_đổi",
+      "type_source": "ACTIVITY",
+      "type_target": "ACTIVITY"
+    },
+    {
+      "source": "01 đề tài đồng hướng dẫn",
+      "target": "0,5 đề tài độc lập",
+      "relation": "quy_đổi_tương_đương",
+      "type_source": "NUMBER",
+      "type_target": "NUMBER"
+    }
+  ]
+}

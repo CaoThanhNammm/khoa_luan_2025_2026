@@ -1,0 +1,507 @@
+{
+  "entities": [
+    {
+      "name": "GIẢNG VIÊN",
+      "type": "PERSON"
+    },
+    {
+      "name": "bộ phận chức năng",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "Giáo viên chủ nhiệm",
+      "type": "PERSON"
+    },
+    {
+      "name": "cố vấn học tập",
+      "type": "PERSON"
+    },
+    {
+      "name": "cán bộ giảng dạy",
+      "type": "PERSON"
+    },
+    {
+      "name": "trợ lý giáo vụ",
+      "type": "PERSON"
+    },
+    {
+      "name": "Ban chủ nhiệm khoa",
+      "type": "DEPARTMENT_LEADERSHIP"
+    },
+    {
+      "name": "phòng chức năng",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "ý kiến",
+      "type": "OPINION"
+    },
+    {
+      "name": "sinh viên",
+      "type": "PERSON_GROUP"
+    },
+    {
+      "name": "trách nhiệm",
+      "type": "RESPONSIBILITY"
+    },
+    {
+      "name": "giải thích",
+      "type": "ACTION"
+    },
+    {
+      "name": "giúp đỡ",
+      "type": "ACTION"
+    },
+    {
+      "name": "giải quyết thắc mắc, kiến nghị",
+      "type": "ACTION"
+    },
+    {
+      "name": "thắc mắc, kiến nghị",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "thông tin",
+      "type": "INFORMATION"
+    },
+    {
+      "name": "vấn đề",
+      "type": "PROBLEM"
+    },
+    {
+      "name": "điều 4",
+      "type": "ARTICLE_NUMBER"
+    },
+    {
+      "name": "quy định",
+      "type": "REGULATION"
+    },
+    {
+      "name": "kiến nghị, thắc mắc",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "giải quyết trả lời",
+      "type": "ACTION"
+    },
+    {
+      "name": "đơn vị chức năng khác",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "Ban giám hiệu",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "tham khảo ý kiến",
+      "type": "ACTION"
+    },
+    {
+      "name": "đơn vị khác",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "phạm vi trách nhiệm",
+      "type": "RESPONSIBILITY_SCOPE"
+    },
+    {
+      "name": "mình",
+      "type": "PERSON"
+    },
+    {
+      "name": "trao đổi trực tiếp",
+      "type": "METHOD"
+    },
+    {
+      "name": "gởi thư",
+      "type": "METHOD"
+    },
+    {
+      "name": "giải quyết thỏa đáng",
+      "type": "ACTION"
+    },
+    {
+      "name": "quyền viết đơn",
+      "type": "RIGHT"
+    },
+    {
+      "name": "viết đơn",
+      "type": "ACTION"
+    },
+    {
+      "name": "chương 3",
+      "type": "CHAPTER_NUMBER"
+    },
+    {
+      "name": "đơn",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "xác nhận",
+      "type": "ACTION"
+    },
+    {
+      "name": "giáo vụ khoa",
+      "type": "PERSON"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Giáo viên chủ nhiệm",
+      "target": "GIẢNG VIÊN",
+      "type_source": "PERSON",
+      "type_target": "PERSON",
+      "relation": "LÀ"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "GIẢNG VIÊN",
+      "type_source": "PERSON",
+      "type_target": "PERSON",
+      "relation": "LÀ"
+    },
+    {
+      "source": "cán bộ giảng dạy",
+      "target": "GIẢNG VIÊN",
+      "type_source": "PERSON",
+      "type_target": "PERSON",
+      "relation": "LÀ"
+    },
+    {
+      "source": "trợ lý giáo vụ",
+      "target": "GIẢNG VIÊN",
+      "type_source": "PERSON",
+      "type_target": "PERSON",
+      "relation": "LÀ"
+    },
+    {
+      "source": "Ban chủ nhiệm khoa",
+      "target": "bộ phận chức năng",
+      "type_source": "DEPARTMENT_LEADERSHIP",
+      "type_target": "DEPARTMENT",
+      "relation": "LÀ"
+    },
+    {
+      "source": "phòng chức năng",
+      "target": "bộ phận chức năng",
+      "type_source": "DEPARTMENT",
+      "type_target": "DEPARTMENT",
+      "relation": "LÀ"
+    },
+    {
+      "source": "Giáo viên chủ nhiệm",
+      "target": "ý kiến",
+      "type_source": "PERSON",
+      "type_target": "OPINION",
+      "relation": "NHẬN_ĐƯỢC"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "ý kiến",
+      "type_source": "PERSON",
+      "type_target": "OPINION",
+      "relation": "NHẬN_ĐƯỢC"
+    },
+    {
+      "source": "cán bộ giảng dạy",
+      "target": "ý kiến",
+      "type_source": "PERSON",
+      "type_target": "OPINION",
+      "relation": "NHẬN_ĐƯỢC"
+    },
+    {
+      "source": "trợ lý giáo vụ",
+      "target": "ý kiến",
+      "type_source": "PERSON",
+      "type_target": "OPINION",
+      "relation": "NHẬN_ĐƯỢC"
+    },
+    {
+      "source": "Ban chủ nhiệm khoa",
+      "target": "ý kiến",
+      "type_source": "DEPARTMENT_LEADERSHIP",
+      "type_target": "OPINION",
+      "relation": "NHẬN_ĐƯỢC"
+    },
+    {
+      "source": "phòng chức năng",
+      "target": "ý kiến",
+      "type_source": "DEPARTMENT",
+      "type_target": "OPINION",
+      "relation": "NHẬN_ĐƯỢC"
+    },
+    {
+      "source": "ý kiến",
+      "target": "sinh viên",
+      "type_source": "OPINION",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Giáo viên chủ nhiệm",
+      "target": "trách nhiệm",
+      "type_source": "PERSON",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "cố vấn học tập",
+      "target": "trách nhiệm",
+      "type_source": "PERSON",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "cán bộ giảng dạy",
+      "target": "trách nhiệm",
+      "type_source": "PERSON",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "trợ lý giáo vụ",
+      "target": "trách nhiệm",
+      "type_source": "PERSON",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Ban chủ nhiệm khoa",
+      "target": "trách nhiệm",
+      "type_source": "DEPARTMENT_LEADERSHIP",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "phòng chức năng",
+      "target": "trách nhiệm",
+      "type_source": "DEPARTMENT",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "giải thích",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "giúp đỡ",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "giải quyết thắc mắc, kiến nghị",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "giải quyết thắc mắc, kiến nghị",
+      "target": "thắc mắc, kiến nghị",
+      "type_source": "ACTION",
+      "type_target": "CONCEPT",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thông tin",
+      "target": "vấn đề",
+      "type_source": "INFORMATION",
+      "type_target": "PROBLEM",
+      "relation": "VỀ"
+    },
+    {
+      "source": "vấn đề",
+      "target": "điều 4",
+      "type_source": "PROBLEM",
+      "type_target": "ARTICLE_NUMBER",
+      "relation": "NÊU_Ở"
+    },
+    {
+      "source": "điều 4",
+      "target": "quy định",
+      "type_source": "ARTICLE_NUMBER",
+      "type_target": "REGULATION",
+      "relation": "TRONG"
+    },
+    {
+      "source": "kiến nghị, thắc mắc",
+      "target": "giải quyết trả lời",
+      "type_source": "CONCEPT",
+      "type_target": "ACTION",
+      "relation": "KHÔNG_THỂ"
+    },
+    {
+      "source": "giải quyết trả lời",
+      "target": "trả lời",
+      "type_source": "ACTION",
+      "type_target": "ACTION",
+      "relation": "GIẢI_QUYẾT"
+    },
+    {
+      "source": "chủ động liên hệ",
+      "target": "đơn vị chức năng khác",
+      "type_source": "ACTION",
+      "type_target": "DEPARTMENT",
+      "relation": "VỚI"
+    },
+    {
+      "source": "chủ động liên hệ",
+      "target": "Ban giám hiệu",
+      "type_source": "ACTION",
+      "type_target": "ORGANIZATION",
+      "relation": "VỚI"
+    },
+    {
+      "source": "liên hệ",
+      "target": "tham khảo ý kiến",
+      "type_source": "ACTION",
+      "type_target": "ACTION",
+      "relation": "ĐỂ"
+    },
+    {
+      "source": "tham khảo ý kiến",
+      "target": "ý kiến",
+      "type_source": "ACTION",
+      "type_target": "OPINION",
+      "relation": "THAM_KHẢO"
+    },
+    {
+      "source": "trả lời",
+      "target": "sinh viên",
+      "type_source": "ACTION",
+      "type_target": "PERSON_GROUP",
+      "relation": "CHO"
+    },
+    {
+      "source": "hướng dẫn",
+      "target": "sinh viên",
+      "type_source": "ACTION",
+      "type_target": "PERSON_GROUP",
+      "relation": "KHÔNG_ĐƯỢC"
+    },
+    {
+      "source": "hướng dẫn",
+      "target": "đơn vị khác",
+      "type_source": "ACTION",
+      "type_target": "DEPARTMENT",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "vấn đề",
+      "target": "phạm vi trách nhiệm",
+      "type_source": "PROBLEM",
+      "type_target": "RESPONSIBILITY_SCOPE",
+      "relation": "THUỘC"
+    },
+    {
+      "source": "phạm vi trách nhiệm",
+      "target": "mình",
+      "type_source": "RESPONSIBILITY_SCOPE",
+      "type_target": "PERSON",
+      "relation": "CỦA"
+    },
+    {
+      "source": "thắc mắc, kiến nghị",
+      "target": "sinh viên",
+      "type_source": "CONCEPT",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "thắc mắc, kiến nghị",
+      "target": "trao đổi trực tiếp",
+      "type_source": "CONCEPT",
+      "type_target": "METHOD",
+      "relation": "QUA"
+    },
+    {
+      "source": "thắc mắc, kiến nghị",
+      "target": "gởi thư",
+      "type_source": "CONCEPT",
+      "type_target": "METHOD",
+      "relation": "QUA"
+    },
+    {
+      "source": "thắc mắc, kiến nghị",
+      "target": "giải quyết thỏa đáng",
+      "type_source": "CONCEPT",
+      "type_target": "ACTION",
+      "relation": "CHƯA_ĐƯỢC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "quyền viết đơn",
+      "type_source": "PERSON_GROUP",
+      "type_target": "RIGHT",
+      "relation": "CÓ"
+    },
+    {
+      "source": "quyền viết đơn",
+      "target": "viết đơn",
+      "type_source": "RIGHT",
+      "type_target": "ACTION",
+      "relation": "LÀ"
+    },
+    {
+      "source": "viết đơn",
+      "target": "quy định",
+      "type_source": "ACTION",
+      "type_target": "REGULATION",
+      "relation": "THEO"
+    },
+    {
+      "source": "quy định",
+      "target": "chương 3",
+      "type_source": "REGULATION",
+      "type_target": "CHAPTER_NUMBER",
+      "relation": "Ở"
+    },
+    {
+      "source": "viết đơn",
+      "target": "giải quyết",
+      "type_source": "ACTION",
+      "type_target": "ACTION",
+      "relation": "ĐỂ_ĐƯỢC"
+    },
+    {
+      "source": "đơn",
+      "target": "xác nhận",
+      "type_source": "DOCUMENT",
+      "type_target": "ACTION",
+      "relation": "PHẢI_CÓ"
+    },
+    {
+      "source": "xác nhận",
+      "target": "Giáo viên chủ nhiệm",
+      "type_source": "ACTION",
+      "type_target": "PERSON",
+      "relation": "CỦA"
+    },
+    {
+      "source": "xác nhận",
+      "target": "cố vấn học tập",
+      "type_source": "ACTION",
+      "type_target": "PERSON",
+      "relation": "CỦA"
+    },
+    {
+      "source": "xác nhận",
+      "target": "giáo vụ khoa",
+      "type_source": "ACTION",
+      "type_target": "PERSON",
+      "relation": "CỦA"
+    },
+    {
+      "source": "đơn",
+      "target": "sinh viên",
+      "type_source": "DOCUMENT",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    }
+  ]
+}

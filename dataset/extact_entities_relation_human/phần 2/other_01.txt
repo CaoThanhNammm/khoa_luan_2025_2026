@@ -1,0 +1,105 @@
+{
+  "entities": [
+    {
+      "name": "ủy viên Ban chấp hành",
+      "type": "POSITION"
+    },
+    {
+      "name": "cơ sở Đoàn",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "Hội",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "thành viên Ban điều hành",
+      "type": "POSITION"
+    },
+    {
+      "name": "Câu lạc bộ",
+      "type": "CLUB"
+    },
+    {
+      "name": "Đoàn Thanh niên",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "Hội Sinh viên trường",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "hoạt động Đoàn – Hội trường",
+      "type": "YOUTH_ACTIVITY"
+    },
+    {
+      "name": "hoạt động tại đơn vị",
+      "type": "UNIT_ACTIVITY"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "ủy viên Ban chấp hành",
+      "target": "cơ sở Đoàn",
+      "relation": "của",
+      "type_source": "POSITION",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "ủy viên Ban chấp hành",
+      "target": "Hội",
+      "relation": "của",
+      "type_source": "POSITION",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "thành viên Ban điều hành",
+      "target": "Câu lạc bộ",
+      "relation": "của",
+      "type_source": "POSITION",
+      "type_target": "CLUB"
+    },
+    {
+      "source": "Câu lạc bộ",
+      "target": "Đoàn Thanh niên",
+      "relation": "trực_thuộc",
+      "type_source": "CLUB",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "Câu lạc bộ",
+      "target": "Hội Sinh viên trường",
+      "relation": "trực_thuộc",
+      "type_source": "CLUB",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "ủy viên Ban chấp hành",
+      "target": "hoạt động Đoàn – Hội trường",
+      "relation": "đóng_góp_cho",
+      "type_source": "POSITION",
+      "type_target": "YOUTH_ACTIVITY"
+    },
+    {
+      "source": "ủy viên Ban chấp hành",
+      "target": "hoạt động tại đơn vị",
+      "relation": "đóng_góp_cho",
+      "type_source": "POSITION",
+      "type_target": "UNIT_ACTIVITY"
+    },
+    {
+      "source": "thành viên Ban điều hành",
+      "target": "hoạt động Đoàn – Hội trường",
+      "relation": "đóng_góp_cho",
+      "type_source": "POSITION",
+      "type_target": "YOUTH_ACTIVITY"
+    },
+    {
+      "source": "thành viên Ban điều hành",
+      "target": "hoạt động tại đơn vị",
+      "relation": "đóng_góp_cho",
+      "type_source": "POSITION",
+      "type_target": "UNIT_ACTIVITY"
+    }
+  ]
+}

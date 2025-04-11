@@ -1,0 +1,72 @@
+{
+  "entities": [
+    {
+      "name": "hiến máu tình nguyện",
+      "type": "BLOOD_DONATION"
+    },
+    {
+      "name": "02 lần",
+      "type": "FREQUENCY"
+    },
+    {
+      "name": "năm",
+      "type": "YEAR"
+    },
+    {
+      "name": "Câu lạc bộ",
+      "type": "CLUB"
+    },
+    {
+      "name": "đội",
+      "type": "TEAM"
+    },
+    {
+      "name": "nhóm tuyên truyền, vận động hiến máu tình nguyện",
+      "type": "BLOOD_DONATION_GROUP"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "hiến máu tình nguyện",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "BLOOD_DONATION"
+    },
+    {
+      "source": "hiến máu tình nguyện",
+      "target": "02 lần",
+      "relation": "ít_nhất",
+      "type_source": "BLOOD_DONATION",
+      "type_target": "FREQUENCY"
+    },
+    {
+      "source": "02 lần",
+      "target": "năm",
+      "relation": "trong",
+      "type_source": "FREQUENCY",
+      "type_target": "YEAR"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Câu lạc bộ",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "CLUB"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đội",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "TEAM"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nhóm tuyên truyền, vận động hiến máu tình nguyện",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "BLOOD_DONATION_GROUP"
+    }
+  ]
+}

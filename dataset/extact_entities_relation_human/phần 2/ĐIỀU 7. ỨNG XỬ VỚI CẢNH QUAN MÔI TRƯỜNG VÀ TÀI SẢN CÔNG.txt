@@ -1,0 +1,228 @@
+{
+  "entities": [
+    {
+      "name": "trang phục",
+      "type": "CLOTHING"
+    },
+    {
+      "name": "đầu tóc",
+      "type": "HAIR"
+    },
+    {
+      "name": "trường",
+      "type": "SCHOOL"
+    },
+    {
+      "name": "ồn ào",
+      "type": "NOISE"
+    },
+    {
+      "name": "mất trật tự",
+      "type": "DISORDER"
+    },
+    {
+      "name": "nơi công cộng",
+      "type": "PUBLIC_PLACE"
+    },
+    {
+      "name": "khu vực hiệu bộ",
+      "type": "OFFICE_AREA"
+    },
+    {
+      "name": "giờ làm việc",
+      "type": "WORKING_HOUR"
+    },
+    {
+      "name": "khu giảng đường",
+      "type": "LECTURE_HALL_AREA"
+    },
+    {
+      "name": "phòng học",
+      "type": "CLASSROOM"
+    },
+    {
+      "name": "giờ học",
+      "type": "CLASS_HOUR"
+    },
+    {
+      "name": "cơ sở vật chất",
+      "type": "FACILITIES"
+    },
+    {
+      "name": "thiết bị dạy và học",
+      "type": "TEACHING_EQUIPMENT"
+    },
+    {
+      "name": "tiết kiệm",
+      "type": "SAVING"
+    },
+    {
+      "name": "lãng phí",
+      "type": "WASTE"
+    },
+    {
+      "name": "môi trường sống",
+      "type": "LIVING_ENVIRONMENT"
+    },
+    {
+      "name": "xanh, sạch, đẹp",
+      "type": "GREEN_CLEAN_BEAUTIFUL"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "trang phục",
+      "target": "trường",
+      "relation": "đến",
+      "type_source": "CLOTHING",
+      "type_target": "SCHOOL"
+    },
+    {
+      "source": "đầu tóc",
+      "target": "trường",
+      "relation": "đến",
+      "type_source": "HAIR",
+      "type_target": "SCHOOL"
+    },
+    {
+      "source": "người học",
+      "target": "ồn ào",
+      "relation": "không_gây_ở",
+      "type_source": "STUDENT",
+      "type_target": "NOISE"
+    },
+    {
+      "source": "ồn ào",
+      "target": "nơi công cộng",
+      "relation": "ở",
+      "type_source": "NOISE",
+      "type_target": "PUBLIC_PLACE"
+    },
+    {
+      "source": "ồn ào",
+      "target": "khu vực hiệu bộ",
+      "relation": "ở",
+      "type_source": "NOISE",
+      "type_target": "OFFICE_AREA"
+    },
+    {
+      "source": "ồn ào",
+      "target": "khu giảng đường",
+      "relation": "ở",
+      "type_source": "NOISE",
+      "type_target": "LECTURE_HALL_AREA"
+    },
+    {
+      "source": "ồn ào",
+      "target": "phòng học",
+      "relation": "ở",
+      "type_source": "NOISE",
+      "type_target": "CLASSROOM"
+    },
+    {
+      "source": "mất trật tự",
+      "target": "nơi công cộng",
+      "relation": "ở",
+      "type_source": "DISORDER",
+      "type_target": "PUBLIC_PLACE"
+    },
+    {
+      "source": "mất trật tự",
+      "target": "khu vực hiệu bộ",
+      "relation": "ở",
+      "type_source": "DISORDER",
+      "type_target": "OFFICE_AREA"
+    },
+    {
+      "source": "mất trật tự",
+      "target": "khu giảng đường",
+      "relation": "ở",
+      "type_source": "DISORDER",
+      "type_target": "LECTURE_HALL_AREA"
+    },
+    {
+      "source": "mất trật tự",
+      "target": "phòng học",
+      "relation": "ở",
+      "type_source": "DISORDER",
+      "type_target": "CLASSROOM"
+    },
+    {
+      "source": "khu vực hiệu bộ",
+      "target": "giờ làm việc",
+      "relation": "trong",
+      "type_source": "OFFICE_AREA",
+      "type_target": "WORKING_HOUR"
+    },
+    {
+      "source": "khu giảng đường",
+      "target": "giờ học",
+      "relation": "trong",
+      "type_source": "LECTURE_HALL_AREA",
+      "type_target": "CLASS_HOUR"
+    },
+    {
+      "source": "phòng học",
+      "target": "giờ học",
+      "relation": "trong",
+      "type_source": "CLASSROOM",
+      "type_target": "CLASS_HOUR"
+    },
+    {
+      "source": "người học",
+      "target": "cơ sở vật chất",
+      "relation": "giữ_gìn",
+      "type_source": "STUDENT",
+      "type_target": "FACILITIES"
+    },
+    {
+      "source": "người học",
+      "target": "thiết bị dạy và học",
+      "relation": "giữ_gìn",
+      "type_source": "STUDENT",
+      "type_target": "TEACHING_EQUIPMENT"
+    },
+    {
+      "source": "người học",
+      "target": "cơ sở vật chất",
+      "relation": "bảo_vệ",
+      "type_source": "STUDENT",
+      "type_target": "FACILITIES"
+    },
+    {
+      "source": "người học",
+      "target": "thiết bị dạy và học",
+      "relation": "bảo_vệ",
+      "type_source": "STUDENT",
+      "type_target": "TEACHING_EQUIPMENT"
+    },
+    {
+      "source": "người học",
+      "target": "tiết kiệm",
+      "relation": "thực_hành",
+      "type_source": "STUDENT",
+      "type_target": "SAVING"
+    },
+    {
+      "source": "người học",
+      "target": "lãng phí",
+      "relation": "chống",
+      "type_source": "STUDENT",
+      "type_target": "WASTE"
+    },
+    {
+      "source": "người học",
+      "target": "môi trường sống",
+      "relation": "giữ_gìn",
+      "type_source": "STUDENT",
+      "type_target": "LIVING_ENVIRONMENT"
+    },
+    {
+      "source": "môi trường sống",
+      "target": "xanh, sạch, đẹp",
+      "relation": "yêu_cầu",
+      "type_source": "LIVING_ENVIRONMENT",
+      "type_target": "GREEN_CLEAN_BEAUTIFUL"
+    }
+  ]
+}

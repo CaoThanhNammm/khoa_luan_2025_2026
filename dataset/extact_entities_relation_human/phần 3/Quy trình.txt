@@ -1,0 +1,161 @@
+{
+  "entities": [
+    {
+      "name": "Sinh viên",
+      "type": "person_type"
+    },
+    {
+      "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+      "type": "url"
+    },
+    {
+      "name": "Hệ thống",
+      "type": "system"
+    },
+    {
+      "name": "Thông tin cá nhân",
+      "type": "information_type"
+    },
+    {
+      "name": "Giấy xác nhận",
+      "type": "document"
+    },
+    {
+      "name": "Cán bộ phòng Công tác Sinh viên",
+      "type": "role"
+    },
+    {
+      "name": "Phòng Công tác Sinh viên",
+      "type": "organization_department"
+    },
+    {
+      "name": "Thời gian",
+      "type": "time_concept"
+    },
+    {
+      "name": "Bước 4",
+      "type": "process_step"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sinh viên",
+      "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+      "type_source": "person_type",
+      "type_target": "url",
+      "relation": "truy_cập"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Hệ thống",
+      "type_source": "person_type",
+      "type_target": "system",
+      "relation": "đăng_nhập"
+    },
+    {
+        "source": "Hệ thống",
+        "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+        "type_source": "system",
+        "type_target": "url",
+        "relation": "tại_địa_chỉ"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Thông tin cá nhân",
+      "type_source": "person_type",
+      "type_target": "information_type",
+      "relation": "kiểm_tra"
+    },
+    {
+        "source": "Thông tin cá nhân",
+        "target": "Hệ thống",
+        "type_source": "information_type",
+        "type_target": "system",
+        "relation": "có_trên"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Thông tin cá nhân",
+      "type_source": "person_type",
+      "type_target": "information_type",
+      "relation": "bổ_sung"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Thông tin cá nhân",
+      "type_source": "person_type",
+      "type_target": "information_type",
+      "relation": "cập_nhật"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Giấy xác nhận",
+      "type_source": "person_type",
+      "type_target": "document",
+      "relation": "đăng_ký"
+    },
+    {
+      "source": "Cán bộ phòng Công tác Sinh viên",
+      "target": "Giấy xác nhận",
+      "type_source": "role",
+      "type_target": "document",
+      "relation": "in"
+    },
+    {
+      "source": "Cán bộ phòng Công tác Sinh viên",
+      "target": "Giấy xác nhận",
+      "type_source": "role",
+      "type_target": "document",
+      "relation": "trình_ký"
+    },
+    {
+      "source": "Cán bộ phòng Công tác Sinh viên",
+      "target": "Giấy xác nhận",
+      "type_source": "role",
+      "type_target": "document",
+      "relation": "đóng_dấu"
+    },
+    {
+      "source": "Cán bộ phòng Công tác Sinh viên",
+      "target": "Phòng Công tác Sinh viên",
+      "type_source": "role",
+      "type_target": "organization_department",
+      "relation": "thuộc"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Giấy xác nhận",
+      "type_source": "person_type",
+      "type_target": "document",
+      "relation": "nhận"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Phòng Công tác Sinh viên",
+      "type_source": "person_type",
+      "type_target": "organization_department",
+      "relation": "nhận_tại"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Thời gian",
+      "type_source": "person_type",
+      "type_target": "time_concept",
+      "relation": "nhận_theo"
+    },
+    {
+        "source": "Hệ thống",
+        "target": "Thời gian",
+        "type_source": "system",
+        "type_target": "time_concept",
+        "relation": "thông_báo"
+    },
+    {
+        "source": "Hệ thống",
+        "target": "Bước 4",
+        "type_source": "system",
+        "type_target": "process_step",
+        "relation": "thông_báo_ở"
+    }
+  ]
+}

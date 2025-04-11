@@ -1,0 +1,124 @@
+{
+  "entities": [
+    {
+      "name": "giảng viên",
+      "type": "TEACHER"
+    },
+    {
+      "name": "nhân viên nhà trường",
+      "type": "SCHOOL_STAFF"
+    },
+    {
+      "name": "nhà trường",
+      "type": "SCHOOL"
+    },
+    {
+      "name": "câu hỏi",
+      "type": "QUESTION"
+    },
+    {
+      "name": "trả lời",
+      "type": "ANSWER"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "tôn_trọng",
+      "type_source": "STUDENT",
+      "type_target": "TEACHER"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "tôn_trọng",
+      "type_source": "STUDENT",
+      "type_target": "SCHOOL_STAFF"
+    },
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "hỏi",
+      "type_source": "STUDENT",
+      "type_target": "TEACHER"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "hỏi",
+      "type_source": "STUDENT",
+      "type_target": "SCHOOL_STAFF"
+    },
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "trả_lời",
+      "type_source": "STUDENT",
+      "type_target": "TEACHER"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "trả_lời",
+      "type_source": "STUDENT",
+      "type_target": "SCHOOL_STAFF"
+    },
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "thưa_gửi",
+      "type_source": "STUDENT",
+      "type_target": "TEACHER"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "thưa_gửi",
+      "type_source": "STUDENT",
+      "type_target": "SCHOOL_STAFF"
+    },
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "cảm_ơn",
+      "type_source": "STUDENT",
+      "type_target": "TEACHER"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "cảm_ơn",
+      "type_source": "STUDENT",
+      "type_target": "SCHOOL_STAFF"
+    },
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "làm_phiền",
+      "type_source": "STUDENT",
+      "type_target": "TEACHER"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "làm_phiền",
+      "type_source": "STUDENT",
+      "type_target": "SCHOOL_STAFF"
+    },
+    {
+      "source": "người học",
+      "target": "giảng viên",
+      "relation": "xin_lỗi",
+      "type_source": "STUDENT",
+      "type_target": "TEACHER"
+    },
+    {
+      "source": "người học",
+      "target": "nhân viên nhà trường",
+      "relation": "xin_lỗi",
+      "type_source": "STUDENT",
+      "type_target": "SCHOOL_STAFF"
+    }
+  ]
+}

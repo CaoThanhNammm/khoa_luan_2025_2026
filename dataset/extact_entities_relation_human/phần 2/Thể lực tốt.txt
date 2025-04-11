@@ -1,0 +1,160 @@
+{
+  "entities": [
+    {
+      "name": "danh hiệu “Thanh niên khỏe”",
+      "type": "TITLE"
+    },
+    {
+      "name": "cấp trường",
+      "type": "SCHOOL_LEVEL"
+    },
+    {
+      "name": "câu lạc bộ thể thao",
+      "type": "SPORTS_CLUB"
+    },
+    {
+      "name": "trong trường",
+      "type": "INSIDE_SCHOOL"
+    },
+    {
+      "name": "ngoài trường",
+      "type": "OUTSIDE_SCHOOL"
+    },
+    {
+      "name": "giấy xác nhận",
+      "type": "CERTIFICATE"
+    },
+    {
+      "name": "ban chủ nhiệm câu lạc bộ",
+      "type": "CLUB_MANAGEMENT_BOARD"
+    },
+    {
+      "name": "thành viên",
+      "type": "MEMBER"
+    },
+    {
+      "name": "nội dung thi đấu",
+      "type": "COMPETITION_CONTENT"
+    },
+    {
+      "name": "hội thao",
+      "type": "SPORTS_MEETING"
+    },
+    {
+      "name": "giải thi đấu thể dục thể thao",
+      "type": "SPORTS_COMPETITION"
+    },
+    {
+      "name": "các cấp",
+      "type": "LEVELS"
+    },
+    {
+      "name": "Hội đồng",
+      "type": "COUNCIL"
+    },
+    {
+      "name": "sinh viên khuyết tật",
+      "type": "DISABLED_STUDENT"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "danh hiệu “Thanh niên khỏe”",
+      "relation": "đạt",
+      "type_source": "STUDENT",
+      "type_target": "TITLE"
+    },
+    {
+      "source": "danh hiệu “Thanh niên khỏe”",
+      "target": "cấp trường",
+      "relation": "cấp",
+      "type_source": "TITLE",
+      "type_target": "SCHOOL_LEVEL"
+    },
+    {
+      "source": "sinh viên",
+      "target": "câu lạc bộ thể thao",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "SPORTS_CLUB"
+    },
+    {
+      "source": "câu lạc bộ thể thao",
+      "target": "trong trường",
+      "relation": "ở",
+      "type_source": "SPORTS_CLUB",
+      "type_target": "INSIDE_SCHOOL"
+    },
+    {
+      "source": "câu lạc bộ thể thao",
+      "target": "ngoài trường",
+      "relation": "ở",
+      "type_source": "SPORTS_CLUB",
+      "type_target": "OUTSIDE_SCHOOL"
+    },
+    {
+      "source": "sinh viên",
+      "target": "giấy xác nhận",
+      "relation": "có",
+      "type_source": "STUDENT",
+      "type_target": "CERTIFICATE"
+    },
+    {
+      "source": "giấy xác nhận",
+      "target": "ban chủ nhiệm câu lạc bộ",
+      "relation": "của",
+      "type_source": "CERTIFICATE",
+      "type_target": "CLUB_MANAGEMENT_BOARD"
+    },
+    {
+      "source": "ban chủ nhiệm câu lạc bộ",
+      "target": "câu lạc bộ thể thao",
+      "relation": "của",
+      "type_source": "CLUB_MANAGEMENT_BOARD",
+      "type_target": "SPORTS_CLUB"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thành viên",
+      "relation": "là",
+      "type_source": "STUDENT",
+      "type_target": "MEMBER"
+    },
+    {
+      "source": "thành viên",
+      "target": "nội dung thi đấu",
+      "relation": "tham_gia",
+      "type_source": "MEMBER",
+      "type_target": "COMPETITION_CONTENT"
+    },
+    {
+      "source": "nội dung thi đấu",
+      "target": "hội thao",
+      "relation": "tại",
+      "type_source": "COMPETITION_CONTENT",
+      "type_target": "SPORTS_MEETING"
+    },
+    {
+      "source": "nội dung thi đấu",
+      "target": "giải thi đấu thể dục thể thao",
+      "relation": "tại",
+      "type_source": "COMPETITION_CONTENT",
+      "type_target": "SPORTS_COMPETITION"
+    },
+    {
+      "source": "giải thi đấu thể dục thể thao",
+      "target": "các cấp",
+      "relation": "cấp",
+      "type_source": "SPORTS_COMPETITION",
+      "type_target": "LEVELS"
+    },
+    {
+      "source": "Hội đồng",
+      "target": "sinh viên khuyết tật",
+      "relation": "xem_xét",
+      "type_source": "COUNCIL",
+      "type_target": "DISABLED_STUDENT"
+    }
+  ]
+}

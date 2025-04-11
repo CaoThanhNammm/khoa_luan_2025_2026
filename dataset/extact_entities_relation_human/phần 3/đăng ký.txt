@@ -1,0 +1,87 @@
+{
+  "entities": [
+    {
+      "name": "Đăng ký",
+      "type": "registration"
+    },
+    {
+      "name": "trình duyệt web",
+      "type": "web_browser"
+    },
+    {
+      "name": "thiết bị",
+      "type": "device"
+    },
+    {
+      "name": "internet",
+      "type": "internet"
+    },
+    {
+      "name": "máy tính để bàn",
+      "type": "desktop_computer"
+    },
+    {
+      "name": "máy tính xách tay",
+      "type": "laptop"
+    },
+    {
+      "name": "máy tính bảng",
+      "type": "tablet"
+    },
+    {
+      "name": "điện thoại di động",
+      "type": "mobile_phone"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Đăng ký",
+      "target": "trình duyệt web",
+      "relation": "sử_dụng",
+      "type_source": "registration",
+      "type_target": "web_browser"
+    },
+    {
+      "source": "trình duyệt web",
+      "target": "thiết bị",
+      "relation": "trên",
+      "type_source": "web_browser",
+      "type_target": "device"
+    },
+    {
+      "source": "thiết bị",
+      "target": "internet",
+      "relation": "truy_cập",
+      "type_source": "device",
+      "type_target": "internet"
+    },
+    {
+      "source": "thiết bị",
+      "target": "máy tính để bàn",
+      "relation": "như",
+      "type_source": "device",
+      "type_target": "desktop_computer"
+    },
+    {
+      "source": "thiết bị",
+      "target": "máy tính xách tay",
+      "relation": "như",
+      "type_source": "device",
+      "type_target": "laptop"
+    },
+    {
+      "source": "thiết bị",
+      "target": "máy tính bảng",
+      "relation": "như",
+      "type_source": "device",
+      "type_target": "tablet"
+    },
+    {
+      "source": "thiết bị",
+      "target": "điện thoại di động",
+      "relation": "như",
+      "type_source": "device",
+      "type_target": "mobile_phone"
+    }
+  ]
+}

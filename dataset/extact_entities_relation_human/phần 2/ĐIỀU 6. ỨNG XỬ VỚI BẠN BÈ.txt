@@ -1,0 +1,155 @@
+{
+  "entities": [
+    {
+      "name": "bạn bè",
+      "type": "FRIEND"
+    },
+    {
+      "name": "học tập",
+      "type": "STUDY"
+    },
+    {
+      "name": "nghiên cứu",
+      "type": "RESEARCH"
+    },
+    {
+      "name": "rèn luyện",
+      "type": "PRACTICE"
+    },
+    {
+      "name": "lời nói",
+      "type": "SPEECH"
+    },
+    {
+      "name": "hành vi",
+      "type": "BEHAVIOR"
+    },
+    {
+      "name": "cử chỉ",
+      "type": "GESTURE"
+    },
+    {
+      "name": "tinh thần",
+      "type": "SPIRIT"
+    },
+    {
+      "name": "thân thể",
+      "type": "BODY"
+    },
+    {
+      "name": "lỗi",
+      "type": "MISTAKE"
+    },
+    {
+      "name": "sai sót",
+      "type": "ERROR"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "bạn bè",
+      "target": "bạn bè",
+      "relation": "quan_hệ",
+      "type_source": "FRIEND",
+      "type_target": "FRIEND"
+    },
+    {
+      "source": "bạn bè",
+      "target": "học tập",
+      "relation": "động_viên",
+      "type_source": "FRIEND",
+      "type_target": "STUDY"
+    },
+    {
+      "source": "bạn bè",
+      "target": "nghiên cứu",
+      "relation": "động_viên",
+      "type_source": "FRIEND",
+      "type_target": "RESEARCH"
+    },
+    {
+      "source": "bạn bè",
+      "target": "rèn luyện",
+      "relation": "động_viên",
+      "type_source": "FRIEND",
+      "type_target": "PRACTICE"
+    },
+    {
+      "source": "bạn bè",
+      "target": "bạn bè",
+      "relation": "tôn_trọng",
+      "type_source": "FRIEND",
+      "type_target": "FRIEND"
+    },
+    {
+      "source": "bạn bè",
+      "target": "lời nói",
+      "relation": "thể_hiện_văn_hóa_qua",
+      "type_source": "FRIEND",
+      "type_target": "SPEECH"
+    },
+    {
+      "source": "bạn bè",
+      "target": "hành vi",
+      "relation": "thể_hiện_văn_hóa_qua",
+      "type_source": "FRIEND",
+      "type_target": "BEHAVIOR"
+    },
+    {
+      "source": "bạn bè",
+      "target": "cử chỉ",
+      "relation": "thể_hiện_văn_hóa_qua",
+      "type_source": "FRIEND",
+      "type_target": "GESTURE"
+    },
+    {
+      "source": "bạn bè",
+      "target": "bạn bè",
+      "relation": "tránh_gây_gổ",
+      "type_source": "FRIEND",
+      "type_target": "FRIEND"
+    },
+    {
+      "source": "bạn bè",
+      "target": "bạn bè",
+      "relation": "tránh_xích_mích",
+      "type_source": "FRIEND",
+      "type_target": "FRIEND"
+    },
+    {
+      "source": "bạn bè",
+      "target": "tinh thần",
+      "relation": "tránh_tổn_thương",
+      "type_source": "FRIEND",
+      "type_target": "SPIRIT"
+    },
+    {
+      "source": "bạn bè",
+      "target": "thân thể",
+      "relation": "tránh_xâm_phạm",
+      "type_source": "FRIEND",
+      "type_target": "BODY"
+    },
+    {
+      "source": "bạn bè",
+      "target": "lỗi",
+      "relation": "nhận_lỗi",
+      "type_source": "FRIEND",
+      "type_target": "MISTAKE"
+    },
+    {
+      "source": "bạn bè",
+      "target": "lỗi",
+      "relation": "sửa_lỗi",
+      "type_source": "FRIEND",
+      "type_target": "MISTAKE"
+    },
+    {
+      "source": "bạn bè",
+      "target": "sai sót",
+      "relation": "mắc",
+      "type_source": "FRIEND",
+      "type_target": "ERROR"
+    }
+  ]
+}

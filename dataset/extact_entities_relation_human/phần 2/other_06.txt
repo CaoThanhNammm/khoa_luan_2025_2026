@@ -1,0 +1,43 @@
+{
+  "entities": [
+    {
+      "name": "thanh niên tiêu biểu",
+      "type": "PERSON"
+    },
+    {
+      "name": "địa phương",
+      "type": "LOCATION"
+    },
+    {
+      "name": "đơn vị",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "phương tiện truyền thông đại chúng",
+      "type": "ORGANIZATION"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "thanh niên tiêu biểu",
+      "target": "địa phương",
+      "type_source": "PERSON",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "thanh niên tiêu biểu",
+      "target": "đơn vị",
+      "type_source": "PERSON",
+      "type_target": "ORGANIZATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "thanh niên tiêu biểu",
+      "target": "phương tiện truyền thông đại chúng",
+      "type_source": "PERSON",
+      "type_target": "ORGANIZATION",
+      "relation": "NÊU_GƯƠNG_TRÊN"
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "entities": [
+    {
+      "name": "Đối tượng",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Sinh viên hệ chính quy",
+      "type": "STUDENT_TYPE"
+    },
+    {
+      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "thời gian thiết kế chương trình đào tạo",
+      "type": "DURATION"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "PERSON_GROUP"
+    },
+    {
+      "name": "nhiều chương trình",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "01 suất học bổng mức cao nhất",
+      "type": "SCHOLARSHIP"
+    },
+    {
+      "name": "diện hưởng học bổng chính sách",
+      "type": "SCHOLARSHIP_CATEGORY"
+    },
+    {
+      "name": "diện trợ cấp xã hội",
+      "type": "SOCIAL_SUPPORT_CATEGORY"
+    },
+    {
+      "name": "diện chính sách ưu đãi",
+      "type": "POLICY_PREFERENCE_CATEGORY"
+    },
+    {
+      "name": "quy định hiện hành",
+      "type": "REGULATION"
+    },
+    {
+      "name": "kết quả học tập, rèn luyện",
+      "type": "ACADEMIC_PERFORMANCE"
+    },
+    {
+      "name": "diện được xét, cấp học bổng",
+      "type": "SCHOLARSHIP_ELIGIBILITY"
+    },
+    {
+      "name": "quy định này",
+      "type": "REGULATION"
+    },
+    {
+      "name": "học bổng khuyến khích học tập",
+      "type": "SCHOLARSHIP_TYPE"
+    },
+    {
+      "name": "sinh viên khác",
+      "type": "PERSON_GROUP"
+    },
+    {
+      "name": "cùng khóa",
+      "type": "STUDY_YEAR"
+    },
+    {
+      "name": "cùng chương trình đào tạo",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Khối học bổng",
+      "type": "SCHOLARSHIP_GROUP"
+    },
+    {
+      "name": "sinh viên chương trình tiên tiến",
+      "type": "STUDENT_TYPE"
+    },
+    {
+      "name": "giai đoạn dự bị Anh văn",
+      "type": "STUDY_PHASE"
+    },
+    {
+      "name": "trình độ Anh văn",
+      "type": "ENGLISH_LEVEL"
+    },
+    {
+      "name": "nhà trường",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "tự động xét",
+      "type": "ACTION"
+    },
+    {
+      "name": "hồ sơ",
+      "type": "DOCUMENT"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sinh viên hệ chính quy",
+      "target": "Trường Đại học Nông Lâm TP.HCM",
+      "type_source": "STUDENT_TYPE",
+      "type_target": "ORGANIZATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Sinh viên hệ chính quy",
+      "target": "thời gian thiết kế chương trình đào tạo",
+      "type_source": "STUDENT_TYPE",
+      "type_target": "DURATION",
+      "relation": "TRONG"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "nhiều chương trình",
+      "type_source": "PERSON_GROUP",
+      "type_target": "PROGRAM",
+      "relation": "HỌC"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "01 suất học bổng mức cao nhất",
+      "type_source": "PERSON_GROUP",
+      "type_target": "SCHOLARSHIP",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "diện hưởng học bổng chính sách",
+      "type_source": "PERSON_GROUP",
+      "type_target": "SCHOLARSHIP_CATEGORY",
+      "relation": "THUỘC"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "diện trợ cấp xã hội",
+      "type_source": "PERSON_GROUP",
+      "type_target": "SOCIAL_SUPPORT_CATEGORY",
+      "relation": "THUỘC"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "diện chính sách ưu đãi",
+      "type_source": "PERSON_GROUP",
+      "type_target": "POLICY_PREFERENCE_CATEGORY",
+      "relation": "THUỘC"
+    },
+    {
+      "source": "diện chính sách ưu đãi",
+      "target": "quy định hiện hành",
+      "type_source": "POLICY_PREFERENCE_CATEGORY",
+      "type_target": "REGULATION",
+      "relation": "THEO"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "kết quả học tập, rèn luyện",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ACADEMIC_PERFORMANCE",
+      "relation": "ĐẠT"
+    },
+    {
+      "source": "kết quả học tập, rèn luyện",
+      "target": "diện được xét, cấp học bổng",
+      "type_source": "ACADEMIC_PERFORMANCE",
+      "type_target": "SCHOLARSHIP_ELIGIBILITY",
+      "relation": "VÀO"
+    },
+    {
+      "source": "diện được xét, cấp học bổng",
+      "target": "quy định này",
+      "type_source": "SCHOLARSHIP_ELIGIBILITY",
+      "type_target": "REGULATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "học bổng khuyến khích học tập",
+      "type_source": "PERSON_GROUP",
+      "type_target": "SCHOLARSHIP_TYPE",
+      "relation": "ĐƯỢC_XÉT_CẤP"
+    },
+    {
+      "source": "học bổng khuyến khích học tập",
+      "target": "sinh viên khác",
+      "type_source": "SCHOLARSHIP_TYPE",
+      "type_target": "PERSON_GROUP",
+      "relation": "NHƯ"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "cùng khóa",
+      "type_source": "PERSON_GROUP",
+      "type_target": "STUDY_YEAR",
+      "relation": "HỌC"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "cùng chương trình đào tạo",
+      "type_source": "PERSON_GROUP",
+      "type_target": "PROGRAM",
+      "relation": "HỌC"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Khối học bổng",
+      "type_source": "PERSON_GROUP",
+      "type_target": "SCHOLARSHIP_GROUP",
+      "relation": "ĐƯỢC_XẾP_CHUNG"
+    },
+    {
+      "source": "Khối học bổng",
+      "target": "so sánh kết quả học tập và rèn luyện",
+      "type_source": "SCHOLARSHIP_GROUP",
+      "type_target": "ACTION",
+      "relation": "ĐỂ"
+    },
+    {
+      "source": "học bổng khuyến khích học tập",
+      "target": "Khối học bổng",
+      "type_source": "SCHOLARSHIP_TYPE",
+      "type_target": "SCHOLARSHIP_GROUP",
+      "relation": "GỌI_LÀ"
+    },
+    {
+      "source": "Khối học bổng",
+      "target": "sinh viên chương trình tiên tiến",
+      "type_source": "SCHOLARSHIP_GROUP",
+      "type_target": "STUDENT_TYPE",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Khối học bổng",
+      "target": "giai đoạn dự bị Anh văn",
+      "type_source": "SCHOLARSHIP_GROUP",
+      "type_target": "STUDY_PHASE",
+      "relation": "TRONG"
+    },
+    {
+      "source": "Khối học bổng",
+      "target": "trình độ Anh văn",
+      "type_source": "SCHOLARSHIP_GROUP",
+      "type_target": "ENGLISH_LEVEL",
+      "relation": "ĐƯỢC_CHIA_THEO"
+    },
+    {
+      "source": "Học bổng khuyến khích học tập",
+      "target": "nhà trường",
+      "type_source": "SCHOLARSHIP_TYPE",
+      "type_target": "ORGANIZATION",
+      "relation": "ĐƯỢC_XÉT"
+    },
+    {
+      "source": "Học bổng khuyến khích học tập",
+      "target": "tự động xét",
+      "type_source": "SCHOLARSHIP_TYPE",
+      "type_target": "ACTION",
+      "relation": "ĐƯỢC_XÉT"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "hồ sơ",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DOCUMENT",
+      "relation": "KHÔNG_CẦN_NỘP"
+    }
+  ]
+}

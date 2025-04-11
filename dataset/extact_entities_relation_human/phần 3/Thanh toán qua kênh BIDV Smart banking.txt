@@ -1,0 +1,190 @@
+{
+  "entities": [
+    {
+      "name": "BIDV Smart banking",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "điện thoại di động",
+      "type": "DEVICE"
+    },
+    {
+      "name": "khách hàng",
+      "type": "PERSON_TYPE"
+    },
+    {
+      "name": "hệ thống",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "ứng dụng BIDV Smart banking",
+      "type": "APPLICATION"
+    },
+    {
+      "name": "số điện thoại di động",
+      "type": "PHONE_NUMBER"
+    },
+    {
+      "name": "mật khẩu",
+      "type": "PASSWORD"
+    },
+    {
+      "name": "thanh toán",
+      "type": "ACTION"
+    },
+    {
+      "name": "Học phí_Lệ phí thi",
+      "type": "PAYMENT_TYPE"
+    },
+    {
+      "name": "nhà cung cấp",
+      "type": "ORGANIZATION_TYPE"
+    },
+    {
+      "name": "mã khách hàng",
+      "type": "CUSTOMER_ID"
+    },
+    {
+      "name": "nút “Tiếp tục”",
+      "type": "BUTTON"
+    },
+    {
+      "name": "hóa đơn",
+      "type": "BILL"
+    },
+    {
+      "name": "mã OTP",
+      "type": "OTP"
+    },
+    {
+      "name": "kết quả giao dịch",
+      "type": "TRANSACTION_RESULT"
+    },
+    {
+      "name": "màn hình BIDV Smart Banking",
+      "type": "DEVICE"
+    },
+    {
+      "name": "thông tin giao dịch của khách hàng",
+      "type": "CUSTOMER_TRANSACTION_INFO"
+    },
+    {
+      "name": "mục “Báo cáo giao dịch”",
+      "type": "REPORT_CATEGORY"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "thanh toán",
+      "target": "BIDV Smart banking",
+      "relation": "QUA_KÊNH",
+      "type_source": "ACTION",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "khách hàng",
+      "target": "hệ thống",
+      "relation": "ĐĂNG_NHẬP",
+      "type_source": "PERSON_TYPE",
+      "type_target": "SYSTEM"
+    },
+    {
+      "source": "ứng dụng BIDV Smart banking",
+      "target": "điện thoại di động",
+      "relation": "TRÊN",
+      "type_source": "APPLICATION",
+      "type_target": "DEVICE"
+    },
+    {
+      "source": "khách hàng",
+      "target": "ứng dụng BIDV Smart banking",
+      "relation": "TRUY_CẬP",
+      "type_source": "PERSON_TYPE",
+      "type_target": "APPLICATION"
+    },
+    {
+      "source": "khách hàng",
+      "target": "số điện thoại di động",
+      "relation": "NHẬP",
+      "type_source": "PERSON_TYPE",
+      "type_target": "PHONE_NUMBER"
+    },
+    {
+      "source": "khách hàng",
+      "target": "mật khẩu",
+      "relation": "NHẬP",
+      "type_source": "PERSON_TYPE",
+      "type_target": "PASSWORD"
+    },
+    {
+      "source": "khách hàng",
+      "target": "Học phí_Lệ phí thi",
+      "relation": "CHỌN",
+      "type_source": "PERSON_TYPE",
+      "type_target": "PAYMENT_TYPE"
+    },
+    {
+      "source": "khách hàng",
+      "target": "nhà cung cấp",
+      "relation": "CHỌN",
+      "type_source": "PERSON_TYPE",
+      "type_target": "ORGANIZATION_TYPE"
+    },
+    {
+      "source": "khách hàng",
+      "target": "mã khách hàng",
+      "relation": "NHẬP",
+      "type_source": "PERSON_TYPE",
+      "type_target": "CUSTOMER_ID"
+    },
+    {
+      "source": "khách hàng",
+      "target": "nút “Tiếp tục”",
+      "relation": "NHẤN",
+      "type_source": "PERSON_TYPE",
+      "type_target": "BUTTON"
+    },
+    {
+      "source": "thanh toán",
+      "target": "hóa đơn",
+      "relation": "THANH_TOÁN",
+      "type_source": "ACTION",
+      "type_target": "BILL"
+    },
+    {
+      "source": "khách hàng",
+      "target": "thanh toán",
+      "relation": "XÁC_NHẬN",
+      "type_source": "PERSON_TYPE",
+      "type_target": "ACTION"
+    },
+    {
+      "source": "khách hàng",
+      "target": "mã OTP",
+      "relation": "NHẬP",
+      "type_source": "PERSON_TYPE",
+      "type_target": "OTP"
+    },
+    {
+      "source": "hệ thống",
+      "target": "kết quả giao dịch",
+      "relation": "TRẢ_VỀ",
+      "type_source": "SYSTEM",
+      "type_target": "TRANSACTION_RESULT"
+    },
+    {
+      "source": "kết quả giao dịch",
+      "target": "màn hình BIDV Smart Banking",
+      "relation": "HIỂN_THỊ",
+      "type_source": "TRANSACTION_RESULT",
+      "type_target": "DEVICE"
+    },
+    {
+      "source": "thông tin giao dịch của khách hàng",
+      "target": "mục “Báo cáo giao dịch”",
+      "relation": "LƯU_TRỮ_TẠI",
+      "type_source": "CUSTOMER_TRANSACTION_INFO",
+      "type_target": "REPORT_CATEGORY"
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct
 from dotenv import load_dotenv
+
+from PreProcessing.PreProcessing import PreProcessing
 load_dotenv()
 from langchain_nvidia_ai_endpoints import NVIDIARerank
 from langchain_core.documents import Document
@@ -16,6 +18,7 @@ class Qdrant:
         self.model_768 = model_768
         self.model_512 = model_512
         self.model_late_interaction = model_late_interaction
+        self.pre_processing = PreProcessing()
 
     def create_collection(self, collection_name, size, distance):
         if self.client.collection_exists(collection_name=collection_name):
@@ -71,6 +74,9 @@ class Qdrant:
     # trả về danh sách các nội dung bao gồm của 3 trang được ghép thành 1
     def read_chunks(self, data_path, footer_height=40):
         all_pages_text = []
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        data_path = os.path.join(script_dir, data_path)
+
         pdf_files = [f for f in os.listdir(data_path) if f.lower().endswith('.pdf')]
 
         for pdf_file in pdf_files:
@@ -123,16 +129,18 @@ class Qdrant:
 
         # Sử dụng enumerate thay vì range(len())
         for chunk_id, chunk_text in enumerate(chunks, 1):
+            chunk_text_pre_processing = self.pre_processing.text_preprocessing_vietnamese(chunk_text)
             print(chunk_text)
+
             try:
                 # Tạo embeddings song song nếu có thể
                 embeddings = {
-                    'matryoshka-1024dim': self.model_1024.embed(model_embed_1024, tokenizer_1024, chunk_text),
-                    'matryoshka-768dim': self.model_768.embed(model_embed_768, tokenizer_768, chunk_text),
-                    'matryoshka-512dim': self.model_512.embed(model_embed_512, None, chunk_text),
+                    'matryoshka-1024dim': self.model_1024.embed(model_embed_1024, tokenizer_1024, chunk_text_pre_processing),
+                    'matryoshka-768dim': self.model_768.embed(model_embed_768, tokenizer_768, chunk_text_pre_processing),
+                    'matryoshka-512dim': self.model_512.embed(model_embed_512, None, chunk_text_pre_processing),
                     'late_interaction': self.model_late_interaction.embed(model_embed_late_interaction,
                                                                           tokenizer_late_interaction,
-                                                                          chunk_text)
+                                                                          chunk_text_pre_processing)
                 }
 
                 # Tạo PointStruct với cách viết gọn hơn
@@ -190,7 +198,7 @@ class Qdrant:
             ),
             query=embedded_late_interaction,
             using="late_interaction",
-            limit=5,
+            limit=3,
         ).points
 
     def re_ranking(self, query, passages):

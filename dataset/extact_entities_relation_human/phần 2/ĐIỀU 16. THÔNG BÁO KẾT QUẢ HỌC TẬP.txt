@@ -1,0 +1,411 @@
+{
+  "entities": [
+    {
+      "name": "Điều 16",
+      "type": "regulation_article"
+    },
+    {
+      "name": "Thông báo kết quả học tập",
+      "type": "process"
+    },
+    {
+      "name": "Giảng viên",
+      "type": "lecturer"
+    },
+    {
+      "name": "bảng ghi điểm thi",
+      "type": "document"
+    },
+    {
+      "name": "Danh sách ghi điểm",
+      "type": "document_alias"
+    },
+    {
+      "name": "Phòng Quản lý chất lượng",
+      "type": "organization_department"
+    },
+    {
+      "name": "Khoa/Bộ môn quản lý học phần",
+      "type": "department_faculty_role"
+    },
+    {
+      "name": "Khoa/Bộ môn",
+      "type": "department_faculty"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "organization_department"
+    },
+    {
+      "name": "30 ngày",
+      "type": "duration"
+    },
+    {
+      "name": "ngày thi",
+      "type": "date_event"
+    },
+    {
+      "name": "điểm học phần",
+      "type": "course_score"
+    },
+    {
+      "name": "điểm thành phần",
+      "type": "score_component"
+    },
+    {
+      "name": "điểm thi",
+      "type": "final_exam_score"
+    },
+    {
+      "name": "phần mềm",
+      "type": "software"
+    },
+    {
+      "name": "hệ thống",
+      "type": "system"
+    },
+    {
+      "name": "điểm đánh giá thành phần",
+      "type": "score_component"
+    },
+    {
+      "name": "kết thúc học phần",
+      "type": "time_point"
+    },
+    {
+      "name": "khiếu nại",
+      "type": "complaint"
+    },
+    {
+      "name": "kết quả học tập",
+      "type": "academic_record"
+    },
+    {
+      "name": "học phần",
+      "type": "course_unit"
+    },
+    {
+      "name": "học kỳ",
+      "type": "time_period"
+    },
+    {
+      "name": "ĐTBCHK",
+      "type": "gpa_semester"
+    },
+    {
+      "name": "ĐTBCNH",
+      "type": "gpa_year"
+    },
+    {
+      "name": "ĐTBCTL",
+      "type": "gpa_cumulative"
+    },
+    {
+      "name": "sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "cuối mỗi học kỳ",
+      "type": "time_point"
+    },
+    {
+      "name": "website của trường",
+      "type": "digital_platform"
+    },
+    {
+      "name": "Trường",
+      "type": "university"
+    },
+    {
+      "name": "bảng điểm cá nhân",
+      "type": "personal_transcript"
+    },
+    {
+      "name": "nhu cầu riêng",
+      "type": "personal_need"
+    },
+    {
+      "name": "Mức chi phí dịch vụ",
+      "type": "service_fee"
+    },
+    {
+      "name": "thời gian cấp",
+      "type": "processing_time"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Điều 16",
+      "target": "Thông báo kết quả học tập",
+      "type_source": "regulation_article",
+      "type_target": "process",
+      "relation": "quy_định_về"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "bảng ghi điểm thi",
+      "type_source": "lecturer",
+      "type_target": "document",
+      "relation": "chịu_trách_nhiệm_ghi_điểm_vào"
+    },
+    {
+      "source": "bảng ghi điểm thi",
+      "target": "Phòng Quản lý chất lượng",
+      "type_source": "document",
+      "type_target": "organization_department",
+      "relation": "cung_cấp_bởi"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "bảng ghi điểm thi",
+      "type_source": "lecturer",
+      "type_target": "document",
+      "relation": "ký_tên_trên"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "Khoa/Bộ môn quản lý học phần",
+      "type_source": "lecturer",
+      "type_target": "department_faculty_role",
+      "relation": "gửi_bảng_điểm_đến"
+    },
+    {
+      "source": "Khoa/Bộ môn quản lý học phần",
+      "target": "bảng ghi điểm thi",
+      "type_source": "department_faculty_role",
+      "type_target": "document",
+      "relation": "kiểm_tra"
+    },
+    {
+      "source": "Khoa/Bộ môn quản lý học phần",
+      "target": "bảng ghi điểm thi",
+      "type_source": "department_faculty_role",
+      "type_target": "document",
+      "relation": "lưu"
+    },
+    {
+      "source": "Khoa/Bộ môn quản lý học phần",
+      "target": "Phòng Đào tạo",
+      "type_source": "department_faculty_role",
+      "type_target": "organization_department",
+      "relation": "gửi_bảng_điểm_về"
+    },
+    {
+      "source": "bảng ghi điểm thi",
+      "target": "Phòng Đào tạo",
+      "type_source": "document",
+      "type_target": "organization_department",
+      "relation": "có_hạn_nộp_điểm_về"
+    },
+    {
+      "source": "bảng ghi điểm thi",
+      "target": "30 ngày",
+      "type_source": "document",
+      "type_target": "duration",
+      "relation": "có_hạn_nộp_chậm_nhất"
+    },
+    {
+      "source": "30 ngày",
+      "target": "ngày thi",
+      "type_source": "duration",
+      "type_target": "date_event",
+      "relation": "kể_từ"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "phần mềm",
+      "type_source": "lecturer",
+      "type_target": "software",
+      "relation": "cập_nhật_điểm_vào"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "điểm thành phần",
+      "type_source": "lecturer",
+      "type_target": "score_component",
+      "relation": "cập_nhật"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "điểm thi",
+      "type_source": "lecturer",
+      "type_target": "final_exam_score",
+      "relation": "cập_nhật"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "điểm học phần",
+      "type_source": "lecturer",
+      "type_target": "course_score",
+      "relation": "cập_nhật"
+    },
+    {
+      "source": "phần mềm",
+      "target": "Phòng Đào tạo",
+      "type_source": "software",
+      "type_target": "organization_department",
+      "relation": "của"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "điểm học phần",
+      "type_source": "organization_department",
+      "type_target": "course_score",
+      "relation": "kiểm_dò"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "hệ thống",
+      "type_source": "organization_department",
+      "type_target": "system",
+      "relation": "lưu_điểm_vào"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "điểm đánh giá thành phần",
+      "type_source": "lecturer",
+      "type_target": "score_component",
+      "relation": "chịu_trách_nhiệm_công_bố"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "kết thúc học phần",
+      "type_source": "lecturer",
+      "type_target": "time_point",
+      "relation": "công_bố_điểm_trước"
+    },
+    {
+      "source": "Khoa/Bộ môn quản lý học phần",
+      "target": "khiếu nại",
+      "type_source": "department_faculty_role",
+      "type_target": "complaint",
+      "relation": "xử_lý"
+    },
+    {
+      "source": "khiếu nại",
+      "target": "kết quả học tập",
+      "type_source": "complaint",
+      "type_target": "academic_record",
+      "relation": "liên_quan_đến"
+    },
+    {
+      "source": "kết quả học tập",
+      "target": "học phần",
+      "type_source": "academic_record",
+      "type_target": "course_unit",
+      "relation": "của"
+    },
+    {
+      "source": "Khoa/Bộ môn quản lý học phần",
+      "target": "học kỳ",
+      "type_source": "department_faculty_role",
+      "type_target": "time_period",
+      "relation": "xử_lý_khiếu_nại_trong"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "ĐTBCHK",
+      "type_source": "organization_department",
+      "type_target": "gpa_semester",
+      "relation": "xử_lý"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "ĐTBCNH",
+      "type_source": "organization_department",
+      "type_target": "gpa_year",
+      "relation": "xử_lý"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "ĐTBCTL",
+      "type_source": "organization_department",
+      "type_target": "gpa_cumulative",
+      "relation": "xử_lý"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "sinh viên",
+      "type_source": "organization_department",
+      "type_target": "student",
+      "relation": "thông_báo_gpa_đến"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "cuối mỗi học kỳ",
+      "type_source": "organization_department",
+      "type_target": "time_point",
+      "relation": "thông_báo_vào"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kết quả học tập",
+      "type_source": "student",
+      "type_target": "academic_record",
+      "relation": "có_thể_xem"
+    },
+    {
+      "source": "sinh viên",
+      "target": "website của trường",
+      "type_source": "student",
+      "type_target": "digital_platform",
+      "relation": "xem_kết_quả_trên"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kết quả học tập",
+      "type_source": "student",
+      "type_target": "academic_record",
+      "relation": "có_trách_nhiệm_kiểm_tra"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Trường",
+      "type_source": "student",
+      "type_target": "university",
+      "relation": "kiểm_tra_kết_quả_trong_thời_gian_học_tại"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bảng điểm cá nhân",
+      "type_source": "student",
+      "type_target": "personal_transcript",
+      "relation": "có_thể_đăng_ký_cấp"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nhu cầu riêng",
+      "type_source": "student",
+      "type_target": "personal_need",
+      "relation": "đăng_ký_cấp_bảng_điểm_theo"
+    },
+    {
+      "source": "bảng điểm cá nhân",
+      "target": "Mức chi phí dịch vụ",
+      "type_source": "personal_transcript",
+      "type_target": "service_fee",
+      "relation": "có"
+    },
+    {
+      "source": "bảng điểm cá nhân",
+      "target": "thời gian cấp",
+      "type_source": "personal_transcript",
+      "type_target": "processing_time",
+      "relation": "có"
+    },
+    {
+      "source": "Mức chi phí dịch vụ",
+      "target": "Trường",
+      "type_source": "service_fee",
+      "type_target": "university",
+      "relation": "theo_quy_định_của"
+    },
+    {
+      "source": "thời gian cấp",
+      "target": "Trường",
+      "type_source": "processing_time",
+      "type_target": "university",
+      "relation": "theo_quy_định_của"
+    }
+  ]
+}

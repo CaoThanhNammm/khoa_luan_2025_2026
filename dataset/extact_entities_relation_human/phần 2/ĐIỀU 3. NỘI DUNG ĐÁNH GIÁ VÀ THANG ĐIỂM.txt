@@ -1,0 +1,398 @@
+{
+  "entities": [
+    {
+      "name": "ĐIỀU 3",
+      "type": "article"
+    },
+    {
+      "name": "NỘI DUNG ĐÁNH GIÁ",
+      "type": "evaluation_content"
+    },
+    {
+      "name": "THANG ĐIỂM",
+      "type": "scoring_scale"
+    },
+    {
+      "name": "Xem xét, đánh giá kết quả rèn luyện",
+      "type": "process"
+    },
+    {
+      "name": "người học",
+      "type": "category"
+    },
+    {
+      "name": "ý thức",
+      "type": "concept"
+    },
+    {
+      "name": "thái độ",
+      "type": "concept"
+    },
+    {
+      "name": "mức điểm",
+      "type": "score_level"
+    },
+    {
+      "name": "Ý thức tham gia học tập",
+      "type": "evaluation_criterion"
+    },
+    {
+      "name": "học tập",
+      "type": "activity"
+    },
+    {
+      "name": "Ý thức chấp hành nội quy, quy chế, quy định",
+      "type": "evaluation_criterion"
+    },
+    {
+      "name": "nội quy, quy chế, quy định",
+      "type": "regulation"
+    },
+    {
+      "name": "nhà trường",
+      "type": "organization"
+    },
+    {
+      "name": "Ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống tội phạm và các tệ nạn xã hội",
+      "type": "evaluation_criterion"
+    },
+    {
+      "name": "hoạt động chính trị",
+      "type": "activity"
+    },
+    {
+      "name": "hoạt động xã hội",
+      "type": "activity"
+    },
+    {
+      "name": "hoạt động văn hóa",
+      "type": "activity"
+    },
+    {
+      "name": "hoạt động văn nghệ",
+      "type": "activity"
+    },
+    {
+      "name": "hoạt động thể thao",
+      "type": "activity"
+    },
+    {
+      "name": "phòng chống tội phạm và các tệ nạn xã hội",
+      "type": "activity"
+    },
+    {
+      "name": "tội phạm",
+      "type": "concept"
+    },
+    {
+      "name": "tệ nạn xã hội",
+      "type": "concept"
+    },
+    {
+      "name": "Ý thức công dân trong quan hệ cộng đồng",
+      "type": "evaluation_criterion"
+    },
+    {
+      "name": "Ý thức công dân",
+      "type": "concept"
+    },
+    {
+      "name": "quan hệ cộng đồng",
+      "type": "concept"
+    },
+    {
+      "name": "Ý thức và kết quả tham gia công tác cán bộ lớp, các đoàn thể, tổ chức khác",
+      "type": "evaluation_criterion"
+    },
+    {
+      "name": "kết quả tham gia",
+      "type": "result"
+    },
+    {
+      "name": "công tác cán bộ lớp",
+      "type": "activity"
+    },
+    {
+      "name": "các đoàn thể",
+      "type": "organization_type"
+    },
+    {
+      "name": "tổ chức khác",
+      "type": "organization_type"
+    },
+    {
+      "name": "cơ sở giáo dục đại học",
+      "type": "organization"
+    },
+    {
+      "name": "thành tích đặc biệt",
+      "type": "achievement"
+    },
+    {
+      "name": "rèn luyện",
+      "type": "process"
+    },
+    {
+      "name": "Điểm rèn luyện",
+      "type": "score"
+    },
+    {
+      "name": "thang điểm 100",
+      "type": "scoring_scale"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "ĐIỀU 3",
+      "target": "NỘI DUNG ĐÁNH GIÁ",
+      "type_source": "article",
+      "type_target": "evaluation_content",
+      "relation": "quy_định_về"
+    },
+    {
+      "source": "ĐIỀU 3",
+      "target": "THANG ĐIỂM",
+      "type_source": "article",
+      "type_target": "scoring_scale",
+      "relation": "quy_định_về"
+    },
+    {
+      "source": "Xem xét, đánh giá kết quả rèn luyện",
+      "target": "người học",
+      "type_source": "process",
+      "type_target": "category",
+      "relation": "đối_tượng_là"
+    },
+    {
+      "source": "Xem xét, đánh giá kết quả rèn luyện",
+      "target": "ý thức",
+      "type_source": "process",
+      "type_target": "concept",
+      "relation": "đánh_giá"
+    },
+    {
+      "source": "Xem xét, đánh giá kết quả rèn luyện",
+      "target": "thái độ",
+      "type_source": "process",
+      "type_target": "concept",
+      "relation": "đánh_giá"
+    },
+    {
+      "source": "Xem xét, đánh giá kết quả rèn luyện",
+      "target": "mức điểm",
+      "type_source": "process",
+      "type_target": "score_level",
+      "relation": "theo"
+    },
+    {
+      "source": "Xem xét, đánh giá kết quả rèn luyện",
+      "target": "Ý thức tham gia học tập",
+      "type_source": "process",
+      "type_target": "evaluation_criterion",
+      "relation": "bao_gồm_mặt"
+    },
+    {
+      "source": "Xem xét, đánh giá kết quả rèn luyện",
+      "target": "Ý thức chấp hành nội quy, quy chế, quy định",
+      "type_source": "process",
+      "type_target": "evaluation_criterion",
+      "relation": "bao_gồm_mặt"
+    },
+    {
+      "source": "Xem xét, đánh giá kết quả rèn luyện",
+      "target": "Ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống tội phạm và các tệ nạn xã hội",
+      "type_source": "process",
+      "type_target": "evaluation_criterion",
+      "relation": "bao_gồm_mặt"
+    },
+    {
+      "source": "Xem xét, đánh giá kết quả rèn luyện",
+      "target": "Ý thức công dân trong quan hệ cộng đồng",
+      "type_source": "process",
+      "type_target": "evaluation_criterion",
+      "relation": "bao_gồm_mặt"
+    },
+    {
+      "source": "Xem xét, đánh giá kết quả rèn luyện",
+      "target": "Ý thức và kết quả tham gia công tác cán bộ lớp, các đoàn thể, tổ chức khác",
+      "type_source": "process",
+      "type_target": "evaluation_criterion",
+      "relation": "bao_gồm_mặt"
+    },
+    {
+      "source": "Ý thức tham gia học tập",
+      "target": "học tập",
+      "type_source": "evaluation_criterion",
+      "type_target": "activity",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "Ý thức chấp hành nội quy, quy chế, quy định",
+      "target": "nội quy, quy chế, quy định",
+      "type_source": "evaluation_criterion",
+      "type_target": "regulation",
+      "relation": "liên_quan_đến_việc_chấp_hành"
+    },
+    {
+      "source": "nội quy, quy chế, quy định",
+      "target": "nhà trường",
+      "type_source": "regulation",
+      "type_target": "organization",
+      "relation": "của"
+    },
+    {
+      "source": "Ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống tội phạm và các tệ nạn xã hội",
+      "target": "hoạt động chính trị",
+      "type_source": "evaluation_criterion",
+      "type_target": "activity",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "Ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống tội phạm và các tệ nạn xã hội",
+      "target": "hoạt động xã hội",
+      "type_source": "evaluation_criterion",
+      "type_target": "activity",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "Ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống tội phạm và các tệ nạn xã hội",
+      "target": "hoạt động văn hóa",
+      "type_source": "evaluation_criterion",
+      "type_target": "activity",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "Ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống tội phạm và các tệ nạn xã hội",
+      "target": "hoạt động văn nghệ",
+      "type_source": "evaluation_criterion",
+      "type_target": "activity",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "Ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống tội phạm và các tệ nạn xã hội",
+      "target": "hoạt động thể thao",
+      "type_source": "evaluation_criterion",
+      "type_target": "activity",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "Ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống tội phạm và các tệ nạn xã hội",
+      "target": "phòng chống tội phạm và các tệ nạn xã hội",
+      "type_source": "evaluation_criterion",
+      "type_target": "activity",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "phòng chống tội phạm và các tệ nạn xã hội",
+      "target": "tội phạm",
+      "type_source": "activity",
+      "type_target": "concept",
+      "relation": "phòng_chống"
+    },
+    {
+      "source": "phòng chống tội phạm và các tệ nạn xã hội",
+      "target": "tệ nạn xã hội",
+      "type_source": "activity",
+      "type_target": "concept",
+      "relation": "phòng_chống"
+    },
+    {
+      "source": "Ý thức công dân trong quan hệ cộng đồng",
+      "target": "Ý thức công dân",
+      "type_source": "evaluation_criterion",
+      "type_target": "concept",
+      "relation": "liên_quan_đến"
+    },
+    {
+      "source": "Ý thức công dân trong quan hệ cộng đồng",
+      "target": "quan hệ cộng đồng",
+      "type_source": "evaluation_criterion",
+      "type_target": "concept",
+      "relation": "trong"
+    },
+    {
+      "source": "Ý thức và kết quả tham gia công tác cán bộ lớp, các đoàn thể, tổ chức khác",
+      "target": "ý thức",
+      "type_source": "evaluation_criterion",
+      "type_target": "concept",
+      "relation": "đánh_giá"
+    },
+    {
+      "source": "Ý thức và kết quả tham gia công tác cán bộ lớp, các đoàn thể, tổ chức khác",
+      "target": "kết quả tham gia",
+      "type_source": "evaluation_criterion",
+      "type_target": "result",
+      "relation": "đánh_giá"
+    },
+    {
+      "source": "Ý thức và kết quả tham gia công tác cán bộ lớp, các đoàn thể, tổ chức khác",
+      "target": "công tác cán bộ lớp",
+      "type_source": "evaluation_criterion",
+      "type_target": "activity",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "Ý thức và kết quả tham gia công tác cán bộ lớp, các đoàn thể, tổ chức khác",
+      "target": "các đoàn thể",
+      "type_source": "evaluation_criterion",
+      "type_target": "organization_type",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "Ý thức và kết quả tham gia công tác cán bộ lớp, các đoàn thể, tổ chức khác",
+      "target": "tổ chức khác",
+      "type_source": "evaluation_criterion",
+      "type_target": "organization_type",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "các đoàn thể",
+      "target": "cơ sở giáo dục đại học",
+      "type_source": "organization_type",
+      "type_target": "organization",
+      "relation": "trong"
+    },
+    {
+      "source": "tổ chức khác",
+      "target": "cơ sở giáo dục đại học",
+      "type_source": "organization_type",
+      "type_target": "organization",
+      "relation": "trong"
+    },
+    {
+      "source": "người học",
+      "target": "thành tích đặc biệt",
+      "type_source": "category",
+      "type_target": "achievement",
+      "relation": "đạt_được"
+    },
+    {
+      "source": "thành tích đặc biệt",
+      "target": "học tập",
+      "type_source": "achievement",
+      "type_target": "activity",
+      "relation": "trong"
+    },
+    {
+      "source": "thành tích đặc biệt",
+      "target": "rèn luyện",
+      "type_source": "achievement",
+      "type_target": "process",
+      "relation": "trong"
+    },
+    {
+      "source": "Điểm rèn luyện",
+      "target": "thang điểm 100",
+      "type_source": "score",
+      "type_target": "scoring_scale",
+      "relation": "đánh_giá_bằng"
+    },
+    {
+      "source": "nhà trường",
+      "target": "cơ sở giáo dục đại học",
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "là"
+    }
+  ]
+}

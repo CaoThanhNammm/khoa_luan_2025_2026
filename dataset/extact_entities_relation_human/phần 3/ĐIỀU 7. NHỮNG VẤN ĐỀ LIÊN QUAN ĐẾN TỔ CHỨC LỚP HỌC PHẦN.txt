@@ -1,0 +1,403 @@
+{
+  "entities": [
+    {
+      "name": "vấn đề",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "tổ chức lớp học phần",
+      "type": "ACTION"
+    },
+    {
+      "name": "sai sót",
+      "type": "PROBLEM"
+    },
+    {
+      "name": "danh sách lớp học phần",
+      "type": "CLASS_LIST"
+    },
+    {
+      "name": "Trưởng phòng Đào tạo",
+      "type": "PERSON"
+    },
+    {
+      "name": "danh sách thứ nhất",
+      "type": "LIST"
+    },
+    {
+      "name": "danh sách bổ sung",
+      "type": "LIST"
+    },
+    {
+      "name": "quy định",
+      "type": "REGULATION"
+    },
+    {
+      "name": "đăng ký",
+      "type": "ACTION"
+    },
+    {
+      "name": "rút học phần",
+      "type": "ACTION"
+    },
+    {
+      "name": "sinh viên",
+      "type": "PERSON_GROUP"
+    },
+    {
+      "name": "đăng ký trực tuyến",
+      "type": "ACTION"
+    },
+    {
+      "name": "đơn đề nghị",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "bản in",
+      "type": "MEDIUM"
+    },
+    {
+      "name": "minh chứng",
+      "type": "EVIDENCE"
+    },
+    {
+      "name": "học phần",
+      "type": "COURSE"
+    },
+    {
+      "name": "cam kết",
+      "type": "ACTION"
+    },
+    {
+      "name": "trách nhiệm",
+      "type": "RESPONSIBILITY"
+    },
+    {
+      "name": "tính chính xác",
+      "type": "ACCURACY"
+    },
+    {
+      "name": "điều đề nghị",
+      "type": "REQUEST"
+    },
+    {
+      "name": "đơn",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "nhà trường",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "kế hoạch",
+      "type": "PLAN"
+    },
+    {
+      "name": "mở lớp học phần",
+      "type": "ACTION"
+    },
+    {
+      "name": "học kỳ",
+      "type": "TERM"
+    },
+    {
+      "name": "nguyện vọng",
+      "type": "DESIRE"
+    },
+    {
+      "name": "tổ chức thêm lớp học phần",
+      "type": "ACTION"
+    },
+    {
+      "name": "học phí",
+      "type": "TUITION"
+    },
+    {
+      "name": "Quy chế đào tạo hiện hành",
+      "type": "REGULATION"
+    },
+    {
+      "name": "điều kiện",
+      "type": "CONDITION"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "vấn đề",
+      "target": "tổ chức lớp học phần",
+      "type_source": "CONCEPT",
+      "type_target": "ACTION",
+      "relation": "LIÊN_QUAN_ĐẾN"
+    },
+    {
+      "source": "vấn đề",
+      "target": "sai sót",
+      "type_source": "CONCEPT",
+      "type_target": "PROBLEM",
+      "relation": "LIÊN_QUAN_ĐẾN"
+    },
+    {
+      "source": "sai sót",
+      "target": "danh sách lớp học phần",
+      "type_source": "PROBLEM",
+      "type_target": "CLASS_LIST",
+      "relation": "TRONG"
+    },
+    {
+      "source": "danh sách lớp học phần",
+      "target": "Trưởng phòng Đào tạo",
+      "type_source": "CLASS_LIST",
+      "type_target": "PERSON",
+      "relation": "ĐƯỢC_KÝ_BỞI"
+    },
+    {
+      "source": "danh sách lớp học phần",
+      "target": "danh sách thứ nhất",
+      "type_source": "CLASS_LIST",
+      "type_target": "LIST",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "danh sách lớp học phần",
+      "target": "danh sách bổ sung",
+      "type_source": "CLASS_LIST",
+      "type_target": "LIST",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "danh sách bổ sung",
+      "target": "quy định",
+      "type_source": "LIST",
+      "type_target": "REGULATION",
+      "relation": "LÀ_VỀ"
+    },
+    {
+      "source": "quy định",
+      "target": "đăng ký",
+      "type_source": "REGULATION",
+      "type_target": "ACTION",
+      "relation": "VỀ"
+    },
+    {
+      "source": "quy định",
+      "target": "rút học phần",
+      "type_source": "REGULATION",
+      "type_target": "ACTION",
+      "relation": "VỀ"
+    },
+    {
+      "source": "quy định",
+      "target": "tổ chức lớp học phần",
+      "type_source": "REGULATION",
+      "type_target": "ACTION",
+      "relation": "VỀ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đăng ký trực tuyến",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ACTION",
+      "relation": "ĐÃ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đăng ký trực tuyến",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ACTION",
+      "relation": "THÀNH_CÔNG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn đề nghị",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DOCUMENT",
+      "relation": "PHẢI_VIẾT"
+    },
+    {
+      "source": "đơn đề nghị",
+      "target": "bản in",
+      "type_source": "DOCUMENT",
+      "type_target": "MEDIUM",
+      "relation": "KÈM_THEO"
+    },
+    {
+      "source": "bản in",
+      "target": "minh chứng",
+      "type_source": "MEDIUM",
+      "type_target": "EVIDENCE",
+      "relation": "LÀ"
+    },
+    {
+      "source": "minh chứng",
+      "target": "đăng ký học phần",
+      "type_source": "EVIDENCE",
+      "type_target": "ACTION",
+      "relation": "ĐÃ"
+    },
+    {
+      "source": "minh chứng",
+      "target": "thành công",
+      "type_source": "EVIDENCE",
+      "type_target": "STATUS",
+      "relation": "THÀNH_CÔNG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "cam kết",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ACTION",
+      "relation": "PHẢI"
+    },
+    {
+      "source": "cam kết",
+      "target": "trách nhiệm",
+      "type_source": "ACTION",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CHỊU"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "tính chính xác",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACCURACY",
+      "relation": "VỀ"
+    },
+    {
+      "source": "tính chính xác",
+      "target": "điều đề nghị",
+      "type_source": "ACCURACY",
+      "type_target": "REQUEST",
+      "relation": "CỦA"
+    },
+    {
+      "source": "điều đề nghị",
+      "target": "đơn",
+      "type_source": "REQUEST",
+      "type_target": "DOCUMENT",
+      "relation": "TRONG"
+    },
+    {
+      "source": "đơn",
+      "target": "Phòng Đào tạo",
+      "type_source": "DOCUMENT",
+      "type_target": "DEPARTMENT",
+      "relation": "ĐƯỢC_GỬI_ĐẾN"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "đơn",
+      "type_source": "DEPARTMENT",
+      "type_target": "DOCUMENT",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "sinh viên",
+      "type_source": "DEPARTMENT",
+      "type_target": "PERSON_GROUP",
+      "relation": "GIẢI_QUYẾT_CHO"
+    },
+    {
+      "source": "nhà trường",
+      "target": "kế hoạch",
+      "type_source": "ORGANIZATION",
+      "type_target": "PLAN",
+      "relation": "KHÔNG_CÓ"
+    },
+    {
+      "source": "kế hoạch",
+      "target": "mở lớp học phần",
+      "type_source": "PLAN",
+      "type_target": "ACTION",
+      "relation": "MỞ"
+    },
+    {
+      "source": "mở lớp học phần",
+      "target": "học kỳ",
+      "type_source": "ACTION",
+      "type_target": "TERM",
+      "relation": "TRONG"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nguyện vọng",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DESIRE",
+      "relation": "CÓ"
+    },
+    {
+      "source": "nguyện vọng",
+      "target": "tổ chức thêm lớp học phần",
+      "type_source": "DESIRE",
+      "type_target": "ACTION",
+      "relation": "TỔ_CHỨC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DOCUMENT",
+      "relation": "PHẢI_VIẾT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "cam kết",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ACTION",
+      "relation": "VÀ"
+    },
+    {
+      "source": "cam kết",
+      "target": "nộp học phí",
+      "type_source": "ACTION",
+      "type_target": "TUITION",
+      "relation": "TỰ_NGUYỆN"
+    },
+    {
+      "source": "nộp học phí",
+      "target": "quy định",
+      "type_source": "TUITION",
+      "type_target": "REGULATION",
+      "relation": "THEO"
+    },
+    {
+      "source": "nộp học phí",
+      "target": "Phòng Đào tạo",
+      "type_source": "TUITION",
+      "type_target": "DEPARTMENT",
+      "relation": "NỘP_CHO"
+    },
+    {
+      "source": "nhà trường",
+      "target": "đơn",
+      "type_source": "ORGANIZATION",
+      "type_target": "DOCUMENT",
+      "relation": "XEM_XÉT"
+    },
+    {
+      "source": "đơn",
+      "target": "sinh viên",
+      "type_source": "DOCUMENT",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "nhà trường",
+      "target": "điều kiện",
+      "type_source": "ORGANIZATION",
+      "type_target": "CONDITION",
+      "relation": "GIẢI_QUYẾT_NẾU_ĐỦ"
+    },
+    {
+      "source": "điều kiện",
+      "target": "Quy chế đào tạo hiện hành",
+      "type_source": "CONDITION",
+      "type_target": "REGULATION",
+      "relation": "THEO"
+    }
+  ]
+}

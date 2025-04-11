@@ -1,0 +1,226 @@
+{
+  "entities": [
+    {
+      "name": "sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "phương thức cho vay",
+      "type": "loan_method"
+    },
+    {
+      "name": "hộ gia đình",
+      "type": "family"
+    },
+    {
+      "name": "đại diện hộ gia đình",
+      "type": "family_representative"
+    },
+    {
+      "name": "người trực tiếp vay vốn",
+      "type": "borrower"
+    },
+    {
+      "name": "trách nhiệm trả nợ",
+      "type": "debt_responsibility"
+    },
+    {
+      "name": "Ngân hàng Chính sách xã hội",
+      "type": "organization"
+    },
+    {
+      "name": "sinh viên mồ côi cả cha lẫn mẹ",
+      "type": "orphan_student"
+    },
+    {
+      "name": "mồ côi cha",
+      "type": "fatherless_student"
+    },
+    {
+      "name": "mồ côi mẹ",
+      "type": "motherless_student"
+    },
+    {
+      "name": "người còn lại",
+      "type": "remaining_parent"
+    },
+    {
+      "name": "khả năng lao động",
+      "type": "labor_ability"
+    },
+    {
+      "name": "vay vốn",
+      "type": "loan"
+    },
+    {
+      "name": "trả nợ trực tiếp",
+      "type": "direct_debt_payment"
+    },
+    {
+      "name": "địa phương",
+      "type": "location"
+    },
+    {
+      "name": "nhà trường",
+      "type": "school"
+    },
+    {
+      "name": "trụ sở",
+      "type": "headquarters"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "Giấy xác nhận vay vốn",
+      "type": "loan_confirmation_form"
+    },
+    {
+      "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+      "type": "website"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "cho vay",
+      "target": "sinh viên",
+      "relation": "đối_với",
+      "type_source": "loan",
+      "type_target": "student"
+    },
+    {
+      "source": "cho vay",
+      "target": "phương thức cho vay",
+      "relation": "theo",
+      "type_source": "loan",
+      "type_target": "loan_method"
+    },
+    {
+      "source": "phương thức cho vay",
+      "target": "hộ gia đình",
+      "relation": "thông_qua",
+      "type_source": "loan_method",
+      "type_target": "family"
+    },
+    {
+      "source": "đại diện hộ gia đình",
+      "target": "hộ gia đình",
+      "relation": "của",
+      "type_source": "family_representative",
+      "type_target": "family"
+    },
+    {
+      "source": "đại diện hộ gia đình",
+      "target": "người trực tiếp vay vốn",
+      "relation": "là",
+      "type_source": "family_representative",
+      "type_target": "borrower"
+    },
+    {
+      "source": "đại diện hộ gia đình",
+      "target": "trách nhiệm trả nợ",
+      "relation": "có",
+      "type_source": "family_representative",
+      "type_target": "debt_responsibility"
+    },
+    {
+      "source": "trách nhiệm trả nợ",
+      "target": "Ngân hàng Chính sách xã hội",
+      "relation": "trả_cho",
+      "type_source": "debt_responsibility",
+      "type_target": "organization"
+    },
+    {
+      "source": "sinh viên mồ côi cả cha lẫn mẹ",
+      "target": "vay vốn",
+      "relation": "được",
+      "type_source": "orphan_student",
+      "type_target": "loan"
+    },
+    {
+      "source": "sinh viên mồ côi cả cha lẫn mẹ",
+      "target": "trả nợ trực tiếp",
+      "relation": "trả_nợ",
+      "type_source": "orphan_student",
+      "type_target": "direct_debt_payment"
+    },
+     {
+      "source": "sinh viên mồ côi cha",
+      "target": "vay vốn",
+      "relation": "được",
+      "type_source": "fatherless_student",
+      "type_target": "loan"
+    },
+    {
+      "source": "sinh viên mồ côi cha",
+      "target": "trả nợ trực tiếp",
+      "relation": "trả_nợ",
+      "type_source": "fatherless_student",
+      "type_target": "direct_debt_payment"
+    },
+     {
+      "source": "sinh viên mồ côi mẹ",
+      "target": "vay vốn",
+      "relation": "được",
+      "type_source": "motherless_student",
+      "type_target": "loan"
+    },
+    {
+      "source": "sinh viên mồ côi mẹ",
+      "target": "trả nợ trực tiếp",
+      "relation": "trả_nợ",
+      "type_source": "motherless_student",
+      "type_target": "direct_debt_payment"
+    },
+    {
+      "source": "người còn lại",
+      "target": "khả năng lao động",
+      "relation": "không_có",
+      "type_source": "remaining_parent",
+      "type_target": "labor_ability"
+    },
+    {
+      "source": "trả nợ trực tiếp",
+      "target": "Ngân hàng Chính sách xã hội",
+      "relation": "tại",
+      "type_source": "direct_debt_payment",
+      "type_target": "organization"
+    },
+    {
+      "source": "Ngân hàng Chính sách xã hội",
+      "target": "địa phương",
+      "relation": "tại",
+      "type_source": "organization",
+      "type_target": "location"
+    },
+    {
+      "source": "địa phương",
+      "target": "nhà trường",
+      "relation": "nhà_trường_đóng_trụ_sở_tại",
+      "type_source": "location",
+      "type_target": "school"
+    },
+    {
+      "source": "nhà trường",
+      "target": "trụ sở",
+      "relation": "đóng",
+      "type_source": "school",
+      "type_target": "headquarters"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Giấy xác nhận vay vốn",
+      "relation": "đăng_ký",
+      "type_source": "student",
+      "type_target": "loan_confirmation_form"
+    },
+    {
+      "source": "Giấy xác nhận vay vốn",
+      "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+      "relation": "tại",
+      "type_source": "loan_confirmation_form",
+      "type_target": "website"
+    }
+  ]
+}

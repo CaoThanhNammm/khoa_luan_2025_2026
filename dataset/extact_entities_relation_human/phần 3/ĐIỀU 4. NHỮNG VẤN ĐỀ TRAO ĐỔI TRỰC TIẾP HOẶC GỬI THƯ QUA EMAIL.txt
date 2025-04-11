@@ -1,0 +1,653 @@
+{
+  "entities": [
+    {
+      "name": "trao đổi trực tiếp",
+      "type": "METHOD"
+    },
+    {
+      "name": "gửi thư qua email",
+      "type": "METHOD"
+    },
+    {
+      "name": "giáo viên chủ nhiệm",
+      "type": "PERSON"
+    },
+    {
+      "name": "cố vấn học tập",
+      "type": "PERSON"
+    },
+    {
+      "name": "học phần",
+      "type": "COURSE"
+    },
+    {
+      "name": "học kỳ",
+      "type": "TERM"
+    },
+    {
+      "name": "tín chỉ",
+      "type": "CREDIT"
+    },
+    {
+      "name": "học phần thay thế",
+      "type": "COURSE"
+    },
+    {
+      "name": "học phần tương đương",
+      "type": "COURSE"
+    },
+    {
+      "name": "học lại",
+      "type": "ACTION"
+    },
+    {
+      "name": "cải thiện",
+      "type": "ACTION"
+    },
+    {
+      "name": "học vượt",
+      "type": "ACTION"
+    },
+    {
+      "name": "chuyên ngành đào tạo",
+      "type": "MAJOR"
+    },
+    {
+      "name": "mục tiêu đào tạo",
+      "type": "GOAL"
+    },
+    {
+      "name": "cơ hội việc làm",
+      "type": "OPPORTUNITY"
+    },
+    {
+      "name": "giáo viên giảng dạy",
+      "type": "PERSON"
+    },
+    {
+      "name": "đề cương chi tiết học phần",
+      "type": "SYLLABUS"
+    },
+    {
+      "name": "cách đánh giá các điểm bộ phận",
+      "type": "EVALUATION_METHOD"
+    },
+    {
+      "name": "ngân hàng câu hỏi thi",
+      "type": "EXAM_BANK"
+    },
+    {
+      "name": "tài liệu học tập",
+      "type": "MATERIAL"
+    },
+    {
+      "name": "tài liệu tham khảo",
+      "type": "MATERIAL"
+    },
+    {
+      "name": "điểm bộ phận",
+      "type": "GRADE"
+    },
+    {
+      "name": "cấm thi",
+      "type": "ACTION"
+    },
+    {
+      "name": "kết thúc học phần",
+      "type": "EXAM"
+    },
+    {
+      "name": "Giảng viên",
+      "type": "PERSON"
+    },
+    {
+      "name": "bằng chứng",
+      "type": "EVIDENCE"
+    },
+    {
+      "name": "quy chế",
+      "type": "REGULATION"
+    },
+    {
+      "name": "Khoa",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "đình chỉ thi",
+      "type": "ACTION"
+    },
+    {
+      "name": "sinh viên",
+      "type": "PERSON_GROUP"
+    },
+    {
+      "name": "Khoa chuyên môn",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "giáo vụ khoa",
+      "type": "PERSON"
+    },
+    {
+      "name": "Ban chủ nhiệm khoa",
+      "type": "DEPARTMENT_LEADERSHIP"
+    },
+    {
+      "name": "Chương trình đào tạo",
+      "type": "CURRICULUM"
+    },
+    {
+      "name": "điều kiện tốt nghiệp",
+      "type": "GRADUATION_REQUIREMENT"
+    },
+    {
+      "name": "tạm dừng học",
+      "type": "ACTION"
+    },
+    {
+      "name": "buộc thôi học",
+      "type": "ACTION"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "đăng ký trực tuyến",
+      "type": "ACTION"
+    },
+    {
+      "name": "thẻ sinh viên",
+      "type": "ID_CARD"
+    },
+    {
+      "name": "minh chứng bản in",
+      "type": "EVIDENCE"
+    },
+    {
+      "name": "photo",
+      "type": "MEDIUM"
+    },
+    {
+      "name": "bộ phận quản lý đăng ký trực tuyến",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "3 tuần học",
+      "type": "DURATION"
+    },
+    {
+      "name": "tên chính thức",
+      "type": "STATUS"
+    },
+    {
+      "name": "danh sách các lớp học phần",
+      "type": "CLASS_LIST"
+    },
+    {
+      "name": "môn học",
+      "type": "SUBJECT"
+    },
+    {
+      "name": "thời khóa biểu",
+      "type": "SCHEDULE"
+    },
+    {
+      "name": "cơ sở dữ liệu cá nhân",
+      "type": "DATABASE"
+    },
+    {
+      "name": "trang Web của trường",
+      "type": "WEBSITE"
+    },
+    {
+      "name": "email",
+      "type": "COMMUNICATION_CHANNEL"
+    },
+    {
+      "name": "dữ liệu cá nhân",
+      "type": "PERSONAL_DATA"
+    },
+    {
+      "name": "Website",
+      "type": "PLATFORM"
+    },
+    {
+      "name": "danh sách các lớp sinh viên",
+      "type": "CLASS_LIST"
+    },
+    {
+      "name": "bản in",
+      "type": "MEDIUM"
+    },
+    {
+      "name": "văn bản pháp lý",
+      "type": "LEGAL_DOCUMENT"
+    },
+    {
+      "name": "kết quả đăng ký học phần",
+      "type": "REGISTRATION_RESULT"
+    },
+    {
+      "name": "tham khảo",
+      "type": "PURPOSE"
+    },
+    {
+      "name": "Phòng Công tác sinh viên",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "tài khoản cá nhân",
+      "type": "ACCOUNT"
+    },
+    {
+      "name": "địa chỉ Email",
+      "type": "EMAIL_ADDRESS"
+    },
+    {
+      "name": "trang Web",
+      "type": "WEBSITE"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "trao đổi trực tiếp",
+      "target": "giáo viên chủ nhiệm",
+      "type_source": "METHOD",
+      "type_target": "PERSON",
+      "relation": "VỚI"
+    },
+    {
+      "source": "trao đổi trực tiếp",
+      "target": "cố vấn học tập",
+      "type_source": "METHOD",
+      "type_target": "PERSON",
+      "relation": "VỚI"
+    },
+    {
+      "source": "gửi thư qua email",
+      "target": "giáo viên chủ nhiệm",
+      "type_source": "METHOD",
+      "type_target": "PERSON",
+      "relation": "VỚI"
+    },
+    {
+      "source": "gửi thư qua email",
+      "target": "cố vấn học tập",
+      "type_source": "METHOD",
+      "type_target": "PERSON",
+      "relation": "VỚI"
+    },
+    {
+      "source": "học phần",
+      "target": "học kỳ",
+      "type_source": "COURSE",
+      "type_target": "TERM",
+      "relation": "TRONG"
+    },
+    {
+      "source": "tư vấn đăng ký",
+      "target": "học phần",
+      "type_source": "ACTION",
+      "type_target": "COURSE",
+      "relation": "VỀ"
+    },
+    {
+      "source": "tư vấn",
+      "target": "chuyên ngành đào tạo",
+      "type_source": "ACTION",
+      "type_target": "MAJOR",
+      "relation": "VỀ"
+    },
+    {
+      "source": "trao đổi trực tiếp",
+      "target": "giáo viên giảng dạy",
+      "type_source": "METHOD",
+      "type_target": "PERSON",
+      "relation": "VỚI"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "đề cương chi tiết học phần",
+      "type_source": "CONCEPT",
+      "type_target": "SYLLABUS",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "cách đánh giá các điểm bộ phận",
+      "type_source": "CONCEPT",
+      "type_target": "EVALUATION_METHOD",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "ngân hàng câu hỏi thi",
+      "type_source": "CONCEPT",
+      "type_target": "EXAM_BANK",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "tài liệu học tập",
+      "type_source": "CONCEPT",
+      "type_target": "MATERIAL",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "tài liệu tham khảo",
+      "type_source": "CONCEPT",
+      "type_target": "MATERIAL",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thắc mắc, khiếu nại",
+      "target": "điểm bộ phận",
+      "type_source": "CONCEPT",
+      "type_target": "GRADE",
+      "relation": "VỀ"
+    },
+    {
+      "source": "cấm thi",
+      "target": "kết thúc học phần",
+      "type_source": "ACTION",
+      "type_target": "EXAM",
+      "relation": "TRONG"
+    },
+    {
+      "source": "Giảng viên",
+      "target": "bằng chứng",
+      "type_source": "PERSON",
+      "type_target": "EVIDENCE",
+      "relation": "CÓ"
+    },
+    {
+      "source": "bằng chứng",
+      "target": "quy chế",
+      "type_source": "EVIDENCE",
+      "type_target": "REGULATION",
+      "relation": "THEO"
+    },
+    {
+      "source": "đề nghị",
+      "target": "Khoa",
+      "type_source": "ACTION",
+      "type_target": "ORGANIZATION",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "đình chỉ thi",
+      "target": "kết thúc học phần",
+      "type_source": "ACTION",
+      "type_target": "EXAM",
+      "relation": "ĐÌNH_CHỈ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "kết thúc học phần",
+      "type_source": "PERSON_GROUP",
+      "type_target": "EXAM",
+      "relation": "CỦA"
+    },
+    {
+      "source": "trao đổi trực tiếp",
+      "target": "Khoa chuyên môn",
+      "type_source": "METHOD",
+      "type_target": "DEPARTMENT",
+      "relation": "VỚI"
+    },
+    {
+      "source": "Khoa chuyên môn",
+      "target": "giáo vụ khoa",
+      "type_source": "DEPARTMENT",
+      "type_target": "PERSON",
+      "relation": "THÔNG_QUA"
+    },
+    {
+      "source": "Khoa chuyên môn",
+      "target": "Ban chủ nhiệm khoa",
+      "type_source": "DEPARTMENT",
+      "type_target": "DEPARTMENT_LEADERSHIP",
+      "relation": "TRỰC_TIẾP_VỚI"
+    },
+    {
+      "source": "trao đổi trực tiếp",
+      "target": "Phòng Đào tạo",
+      "type_source": "METHOD",
+      "type_target": "DEPARTMENT",
+      "relation": "VỚI"
+    },
+    {
+      "source": "đăng ký trực tuyến",
+      "target": "vướng mắc",
+      "type_source": "ACTION",
+      "type_target": "PROBLEM",
+      "relation": "GẶP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thẻ sinh viên",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ID_CARD",
+      "relation": "PHẢI_MANG_THEO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "minh chứng bản in",
+      "type_source": "PERSON_GROUP",
+      "type_target": "EVIDENCE",
+      "relation": "PHẢI_MANG_THEO"
+    },
+    {
+      "source": "minh chứng bản in",
+      "target": "photo",
+      "type_source": "EVIDENCE",
+      "type_target": "MEDIUM",
+      "relation": "HOẶC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bộ phận quản lý đăng ký trực tuyến",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DEPARTMENT",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "bộ phận quản lý đăng ký trực tuyến",
+      "target": "Phòng Đào tạo",
+      "type_source": "DEPARTMENT",
+      "type_target": "DEPARTMENT",
+      "relation": "CỦA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hỗ trợ",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ACTION",
+      "relation": "ĐƯỢC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "3 tuần học",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DURATION",
+      "relation": "SAU"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tên chính thức",
+      "type_source": "PERSON_GROUP",
+      "type_target": "STATUS",
+      "relation": "CÓ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "danh sách các lớp học phần",
+      "type_source": "PERSON_GROUP",
+      "type_target": "CLASS_LIST",
+      "relation": "TRONG"
+    },
+    {
+      "source": "thay đổi",
+      "target": "môn học",
+      "type_source": "ACTION",
+      "type_target": "SUBJECT",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thay đổi",
+      "target": "thời khóa biểu",
+      "type_source": "ACTION",
+      "type_target": "SCHEDULE",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thay đổi",
+      "target": "cơ sở dữ liệu cá nhân",
+      "type_source": "ACTION",
+      "type_target": "DATABASE",
+      "relation": "TRONG"
+    },
+    {
+      "source": "cơ sở dữ liệu cá nhân",
+      "target": "sinh viên",
+      "type_source": "DATABASE",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "cơ sở dữ liệu cá nhân",
+      "target": "trang Web của trường",
+      "type_source": "DATABASE",
+      "type_target": "WEBSITE",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "email",
+      "type_source": "PERSON_GROUP",
+      "type_target": "COMMUNICATION_CHANNEL",
+      "relation": "GỬI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DEPARTMENT",
+      "relation": "THÔNG_BÁO_CHO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "lớp học phần",
+      "type_source": "PERSON_GROUP",
+      "type_target": "COURSE",
+      "relation": "ĐI_HỌC_THEO"
+    },
+    {
+      "source": "danh sách các lớp sinh viên",
+      "target": "bản in",
+      "type_source": "CLASS_LIST",
+      "type_target": "MEDIUM",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "bản in",
+      "target": "văn bản pháp lý",
+      "type_source": "MEDIUM",
+      "type_target": "LEGAL_DOCUMENT",
+      "relation": "LÀ"
+    },
+    {
+      "source": "văn bản pháp lý",
+      "target": "kết quả đăng ký học phần",
+      "type_source": "LEGAL_DOCUMENT",
+      "type_target": "REGISTRATION_RESULT",
+      "relation": "CÔNG_NHẬN"
+    },
+    {
+      "source": "kết quả đăng ký học phần",
+      "target": "sinh viên",
+      "type_source": "REGISTRATION_RESULT",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "dữ liệu cá nhân",
+      "target": "Website",
+      "type_source": "PERSONAL_DATA",
+      "type_target": "PLATFORM",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "dữ liệu cá nhân",
+      "target": "tham khảo",
+      "type_source": "PERSONAL_DATA",
+      "type_target": "PURPOSE",
+      "relation": "CHỈ_LÀ"
+    },
+    {
+      "source": "trao đổi trực tiếp",
+      "target": "Phòng Công tác sinh viên",
+      "type_source": "METHOD",
+      "type_target": "DEPARTMENT",
+      "relation": "VỚI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tài khoản cá nhân",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ACCOUNT",
+      "relation": "MẤT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "địa chỉ Email",
+      "type_source": "PERSON_GROUP",
+      "type_target": "EMAIL_ADDRESS",
+      "relation": "MẤT"
+    },
+    {
+      "source": "địa chỉ Email",
+      "target": "đăng nhập",
+      "type_source": "EMAIL_ADDRESS",
+      "type_target": "ACTION",
+      "relation": "ĐỂ"
+    },
+    {
+      "source": "đăng nhập",
+      "target": "trang Web của trường",
+      "type_source": "ACTION",
+      "type_target": "WEBSITE",
+      "relation": "VÀO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thẻ sinh viên",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ID_CARD",
+      "relation": "MANG_THEO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Công tác sinh viên",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DEPARTMENT",
+      "relation": "ĐẾN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hướng dẫn",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ACTION",
+      "relation": "ĐƯỢC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hỗ trợ",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ACTION",
+      "relation": "ĐƯỢC"
+    }
+  ]
+}

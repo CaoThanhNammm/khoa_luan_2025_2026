@@ -1,40 +1,108 @@
 {
   "entities": [
     {
-      "name": "Bảo hiểm y tế",
-      "type": "concept"
+      "name": "sinh viên",
+      "type": "student"
     },
     {
-      "name": "sinh viên",
-      "type": "person"
+      "name": "Bảo hiểm y tế",
+      "type": "health_insurance"
     },
     {
       "name": "Luật Bảo hiểm y tế 2008",
-      "type": "document"
+      "type": "law"
     },
     {
-      "name": "2014",
-      "type": "year"
+      "name": "năm 2014",
+      "type": "date"
+    },
+    {
+      "name": "trường",
+      "type": "school"
     },
     {
       "name": "nhà nước",
-      "type": "organization"
+      "type": "government"
     },
     {
       "name": "Bảo hiểm y tế",
-      "type": "concept"
+      "type": "health_insurance"
+    },
+    {
+      "name": "chế độ",
+      "type": "policy"
+    },
+    {
+      "name": "đối tượng chính sách",
+      "type": "policy_beneficiary"
     },
     {
       "name": "thẻ bảo hiểm y tế",
-      "type": "document"
+      "type": "health_insurance_card"
     },
     {
-      "name": "CN, BT, HN, DT, DK, XD, TS, TC, TQ, TV, TA, TY, HG, PV",
-      "type": "code"
+      "name": "CN",
+      "type": "health_insurance_code"
     },
     {
-      "name": "Mức đóng",
-      "type": "concept"
+      "name": "BT",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "HN",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "DT",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "DK",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "XD",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "TS",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "TC",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "TQ",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "TV",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "TA",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "TY",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "HG",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "PV",
+      "type": "health_insurance_code"
+    },
+    {
+      "name": "quy định",
+      "type": "regulation"
+    },
+    {
+      "name": "Mức đóng Bảo hiểm y tế",
+      "type": "health_insurance_premium"
     },
     {
       "name": "4,5%",
@@ -42,51 +110,111 @@
     },
     {
       "name": "mức lương cơ sở",
-      "type": "concept"
+      "type": "basic_salary"
     },
     {
       "name": "số tháng",
-      "type": "quantity"
+      "type": "duration_month"
     },
     {
       "name": "70%",
       "type": "percentage"
     },
     {
+      "name": "Mức lương cơ sở hàng năm",
+      "type": "annual_basic_salary"
+    },
+    {
       "name": "Quốc hội",
       "type": "organization"
     },
     {
+      "name": "Các bước làm Bảo hiểm y tế",
+      "type": "health_insurance_steps"
+    },
+    {
+      "name": "Bước 1",
+      "type": "step_number"
+    },
+    {
+      "name": "Đóng tiền",
+      "type": "payment"
+    },
+    {
+      "name": "thông báo",
+      "type": "notification"
+    },
+    {
+      "name": "Bước 2",
+      "type": "step_number"
+    },
+    {
+      "name": "địa chỉ link",
+      "type": "address"
+    },
+    {
       "name": "https://bhytsv.hcmuaf.edu.vn",
       "type": "website"
+    },
+    {
+      "name": "kê khai thông tin",
+      "type": "information_declaration"
     },
     {
       "name": "email sinh viên",
-      "type": "concept"
+      "type": "student_email"
     },
     {
       "name": "nhà trường",
-      "type": "organization"
+      "type": "school"
     },
     {
-      "name": "email",
-      "type": "concept"
+      "name": "Bước 3",
+      "type": "step_number"
+    },
+    {
+      "name": "Kiểm tra email",
+      "type": "email_check"
+    },
+    {
+      "name": "thường xuyên",
+      "type": "frequency"
+    },
+    {
+      "name": "thông tin đối chiếu",
+      "type": "comparison_information"
+    },
+    {
+      "name": "kết quả",
+      "type": "result"
     },
     {
       "name": "thẻ bảo hiểm y tế",
-      "type": "document"
+      "type": "health_insurance_card"
     },
     {
       "name": "Nhà nước",
-      "type": "organization"
+      "type": "government"
+    },
+    {
+      "name": "địa chỉ link",
+      "type": "address"
     },
     {
       "name": "https://bhytsv.hcmuaf.edu.vn",
       "type": "website"
     },
     {
-      "name": "thẻ",
-      "type": "document"
+      "name": "Thời hạn sử dụng thẻ",
+      "type": "card_validity_period"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "link",
+      "type": "link"
     },
     {
       "name": "baohiemxahoi.gov.vn",
@@ -97,127 +225,330 @@
     {
       "source": "sinh viên",
       "target": "Bảo hiểm y tế",
-      "relation": "THAM_GIA",
-      "type_source": "person",
-      "type_target": "concept"
+      "relation": "tham_gia",
+      "type_source": "student",
+      "type_target": "health_insurance"
     },
     {
       "source": "Bảo hiểm y tế",
       "target": "Luật Bảo hiểm y tế 2008",
-      "relation": "THEO",
-      "type_source": "concept",
-      "type_target": "document"
+      "relation": "theo_luật",
+      "type_source": "health_insurance",
+      "type_target": "law"
     },
     {
       "source": "Luật Bảo hiểm y tế 2008",
-      "target": "2014",
-      "relation": "SỬA_ĐỔI",
-      "type_source": "document",
-      "type_target": "year"
+      "target": "năm 2014",
+      "relation": "sửa_đổi_bổ_sung_năm",
+      "type_source": "law",
+      "type_target": "date"
     },
     {
       "source": "sinh viên",
-      "target": "nhà nước",
-      "relation": "DO",
-      "type_source": "person",
-      "type_target": "organization"
+      "target": "trường",
+      "relation": "tại",
+      "type_source": "student",
+      "type_target": "school"
     },
     {
-      "source": "nhà nước",
+      "source": "sinh viên",
       "target": "Bảo hiểm y tế",
-      "relation": "CẤP",
-      "type_source": "organization",
-      "type_target": "concept"
+      "relation": "được_cấp",
+      "type_source": "student",
+      "type_target": "health_insurance"
+    },
+    {
+      "source": "Bảo hiểm y tế",
+      "target": "nhà nước",
+      "relation": "cấp_bởi",
+      "type_source": "health_insurance",
+      "type_target": "government"
+    },
+    {
+      "source": "Bảo hiểm y tế",
+      "target": "chế độ",
+      "relation": "theo_chế_độ",
+      "type_source": "health_insurance",
+      "type_target": "policy"
+    },
+    {
+      "source": "chế độ",
+      "target": "đối tượng chính sách",
+      "relation": "dành_cho",
+      "type_source": "policy",
+      "type_target": "policy_beneficiary"
     },
     {
       "source": "thẻ bảo hiểm y tế",
-      "target": "CN, BT, HN, DT, DK, XD, TS, TC, TQ, TV, TA, TY, HG, PV",
-      "relation": "MÃ",
-      "type_source": "document",
-      "type_target": "code"
+      "target": "CN",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
     },
     {
-      "source": "Mức đóng",
+      "source": "thẻ bảo hiểm y tế",
+      "target": "BT",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "HN",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "DT",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "DK",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "XD",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "TS",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "TC",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "TQ",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "TV",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "TA",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "TY",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "HG",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "thẻ bảo hiểm y tế",
+      "target": "PV",
+      "relation": "mã",
+      "type_source": "health_insurance_card",
+      "type_target": "health_insurance_code"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Bảo hiểm y tế",
+      "relation": "không_tham_gia",
+      "type_source": "student",
+      "type_target": "health_insurance"
+    },
+    {
+      "source": "sinh viên",
+      "target": "quy định",
+      "relation": "xử_lý_theo",
+      "type_source": "student",
+      "type_target": "regulation"
+    },
+    {
+      "source": "Mức đóng Bảo hiểm y tế",
       "target": "4,5%",
-      "relation": "BẰNG",
-      "type_source": "concept",
+      "relation": "tính_theo",
+      "type_source": "health_insurance_premium",
       "type_target": "percentage"
     },
     {
-      "source": "Mức đóng",
+      "source": "Mức đóng Bảo hiểm y tế",
       "target": "mức lương cơ sở",
-      "relation": "CỦA",
-      "type_source": "concept",
-      "type_target": "concept"
+      "relation": "tính_theo",
+      "type_source": "health_insurance_premium",
+      "type_target": "basic_salary"
     },
     {
-      "source": "Mức đóng",
+      "source": "Mức đóng Bảo hiểm y tế",
       "target": "số tháng",
-      "relation": "NHÂN",
-      "type_source": "concept",
-      "type_target": "quantity"
+      "relation": "nhân_với",
+      "type_source": "health_insurance_premium",
+      "type_target": "duration_month"
     },
     {
-      "source": "Mức đóng",
+      "source": "Mức đóng Bảo hiểm y tế",
       "target": "70%",
-      "relation": "NHÂN",
-      "type_source": "concept",
+      "relation": "nhân_với",
+      "type_source": "health_insurance_premium",
       "type_target": "percentage"
     },
     {
-      "source": "mức lương cơ sở",
+      "source": "Mức lương cơ sở hàng năm",
       "target": "Quốc hội",
-      "relation": "DO",
-      "type_source": "concept",
+      "relation": "quy_định_bởi",
+      "type_source": "annual_basic_salary",
       "type_target": "organization"
     },
     {
-      "source": "sinh viên",
+      "source": "Bước 1",
+      "target": "Đóng tiền",
+      "relation": "là",
+      "type_source": "step_number",
+      "type_target": "payment"
+    },
+    {
+      "source": "Đóng tiền",
+      "target": "thông báo",
+      "relation": "theo",
+      "type_source": "payment",
+      "type_target": "notification"
+    },
+    {
+      "source": "Bước 2",
+      "target": "địa chỉ link",
+      "relation": "truy_cập_vào",
+      "type_source": "step_number",
+      "type_target": "address"
+    },
+    {
+      "source": "địa chỉ link",
       "target": "https://bhytsv.hcmuaf.edu.vn",
-      "relation": "TRUY_CẬP",
-      "type_source": "person",
+      "relation": "là",
+      "type_source": "address",
       "type_target": "website"
     },
     {
-      "source": "sinh viên",
+      "source": "địa chỉ link",
+      "target": "kê khai thông tin",
+      "relation": "để",
+      "type_source": "address",
+      "type_target": "information_declaration"
+    },
+    {
+      "source": "kê khai thông tin",
       "target": "email sinh viên",
-      "relation": "BẰNG",
-      "type_source": "person",
-      "type_target": "concept"
+      "relation": "bằng",
+      "type_source": "information_declaration",
+      "type_target": "student_email"
     },
     {
       "source": "email sinh viên",
       "target": "nhà trường",
-      "relation": "DO",
-      "type_source": "concept",
-      "type_target": "organization"
+      "relation": "của",
+      "type_source": "student_email",
+      "type_target": "school"
+    },
+    {
+      "source": "Bước 3",
+      "target": "Kiểm tra email",
+      "relation": "là",
+      "type_source": "step_number",
+      "type_target": "email_check"
+    },
+    {
+      "source": "Kiểm tra email",
+      "target": "thường xuyên",
+      "relation": "thực_hiện",
+      "type_source": "email_check",
+      "type_target": "frequency"
+    },
+    {
+      "source": "Kiểm tra email",
+      "target": "thông tin đối chiếu",
+      "relation": "để_nhận",
+      "type_source": "email_check",
+      "type_target": "comparison_information"
+    },
+    {
+      "source": "Kiểm tra email",
+      "target": "kết quả",
+      "relation": "để_nhận",
+      "type_source": "email_check",
+      "type_target": "result"
     },
     {
       "source": "sinh viên",
-      "target": "email",
-      "relation": "KIỂM_TRA",
-      "type_source": "person",
-      "type_target": "concept"
+      "target": "thẻ bảo hiểm y tế",
+      "relation": "có",
+      "type_source": "student",
+      "type_target": "health_insurance_card"
     },
     {
       "source": "thẻ bảo hiểm y tế",
       "target": "Nhà nước",
-      "relation": "DO",
-      "type_source": "document",
-      "type_target": "organization"
+      "relation": "cấp_bởi",
+      "type_source": "health_insurance_card",
+      "type_target": "government"
     },
     {
       "source": "sinh viên",
+      "target": "địa chỉ link",
+      "relation": "cập_nhật_thông_tin_tại",
+      "type_source": "student",
+      "type_target": "address"
+    },
+    {
+      "source": "địa chỉ link",
       "target": "https://bhytsv.hcmuaf.edu.vn",
-      "relation": "CẬP_NHẬT",
-      "type_source": "person",
+      "relation": "là",
+      "type_source": "address",
       "type_target": "website"
     },
     {
-      "source": "thẻ",
+      "source": "Thời hạn sử dụng thẻ",
+      "target": "Sinh viên",
+      "relation": "tra_cứu",
+      "type_source": "card_validity_period",
+      "type_target": "student"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "link",
+      "relation": "tra_cứu_tại",
+      "type_source": "student",
+      "type_target": "link"
+    },
+    {
+      "source": "link",
       "target": "baohiemxahoi.gov.vn",
-      "relation": "TRA_CỨU",
-      "type_source": "document",
+      "relation": "là",
+      "type_source": "link",
       "type_target": "website"
     }
   ]

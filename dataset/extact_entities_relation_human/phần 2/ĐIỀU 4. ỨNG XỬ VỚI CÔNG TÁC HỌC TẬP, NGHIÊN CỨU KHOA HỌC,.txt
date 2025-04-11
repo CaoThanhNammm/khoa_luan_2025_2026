@@ -1,0 +1,421 @@
+{
+  "entities": [
+    {
+      "name": "Quy chế đào tạo",
+      "type": "REGULATION"
+    },
+    {
+      "name": "Quy chế công tác HSSV",
+      "type": "REGULATION"
+    },
+    {
+      "name": "Quy định đối với HSSV nội ngoại trú",
+      "type": "REGULATION"
+    },
+    {
+      "name": "Quy định về việc thực hiện nếp sống văn hóa học đường đối với người học",
+      "type": "REGULATION"
+    },
+    {
+      "name": "Quy định về giờ giấc học tập",
+      "type": "REGULATION"
+    },
+    {
+      "name": "HSSV",
+      "type": "STUDENT"
+    },
+    {
+      "name": "người học",
+      "type": "STUDENT"
+    },
+    {
+      "name": "thầy cô",
+      "type": "TEACHER"
+    },
+    {
+      "name": "bài tập",
+      "type": "ASSIGNMENT"
+    },
+    {
+      "name": "đề tài",
+      "type": "PROJECT"
+    },
+    {
+      "name": "kiến thức",
+      "type": "KNOWLEDGE"
+    },
+    {
+      "name": "thực tế cuộc sống",
+      "type": "REALITY"
+    },
+    {
+      "name": "học tập",
+      "type": "STUDY"
+    },
+    {
+      "name": "thi",
+      "type": "EXAM"
+    },
+    {
+      "name": "kiểm tra",
+      "type": "TEST"
+    },
+    {
+      "name": "quy chế",
+      "type": "REGULATION"
+    },
+    {
+      "name": "quy định",
+      "type": "REGULATION"
+    },
+    {
+      "name": "nội quy",
+      "type": "RULE"
+    },
+    {
+      "name": "Bộ Giáo dục và Đào tạo",
+      "type": "EDUCATION_ORGANIZATION"
+    },
+    {
+      "name": "nhà trường",
+      "type": "SCHOOL"
+    },
+    {
+      "name": "hoạt động học tập",
+      "type": "STUDY_ACTIVITY"
+    },
+    {
+      "name": "hoạt động xã hội",
+      "type": "SOCIAL_ACTIVITY"
+    },
+    {
+      "name": "phong trào thi đua",
+      "type": "COMPETITION"
+    },
+    {
+      "name": "tổ chức đoàn thể",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "trường",
+      "type": "SCHOOL"
+    },
+    {
+      "name": "hoạt động nghiên cứu khoa học",
+      "type": "RESEARCH_ACTIVITY"
+    },
+    {
+      "name": "hoạt động khởi nghiệp",
+      "type": "STARTUP_ACTIVITY"
+    },
+    {
+      "name": "sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "hoạt động phục vụ cộng đồng",
+      "type": "COMMUNITY_ACTIVITY"
+    },
+    {
+      "name": "đền ơn đáp nghĩa",
+      "type": "GRATITUDE_ACTIVITY"
+    },
+    {
+      "name": "kỹ năng sống",
+      "type": "LIFE_SKILL"
+    },
+    {
+      "name": "kỹ năng học tập",
+      "type": "STUDY_SKILL"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "người học",
+      "target": "Quy chế đào tạo",
+      "relation": "tuân_thủ",
+      "type_source": "STUDENT",
+      "type_target": "REGULATION"
+    },
+    {
+      "source": "người học",
+      "target": "Quy chế công tác HSSV",
+      "relation": "tuân_thủ",
+      "type_source": "STUDENT",
+      "type_target": "REGULATION"
+    },
+    {
+      "source": "người học",
+      "target": "Quy định đối với HSSV nội ngoại trú",
+      "relation": "tuân_thủ",
+      "type_source": "STUDENT",
+      "type_target": "REGULATION"
+    },
+    {
+      "source": "người học",
+      "target": "Quy định về việc thực hiện nếp sống văn hóa học đường đối với người học",
+      "relation": "tuân_thủ",
+      "type_source": "STUDENT",
+      "type_target": "REGULATION"
+    },
+    {
+      "source": "người học",
+      "target": "Quy định về giờ giấc học tập",
+      "relation": "tuân_thủ",
+      "type_source": "STUDENT",
+      "type_target": "REGULATION"
+    },
+    {
+      "source": "người học",
+      "target": "kiến thức",
+      "relation": "tiếp_nhận",
+      "type_source": "STUDENT",
+      "type_target": "KNOWLEDGE"
+    },
+    {
+      "source": "thầy cô",
+      "target": "kiến thức",
+      "relation": "giảng_dạy",
+      "type_source": "TEACHER",
+      "type_target": "KNOWLEDGE"
+    },
+    {
+      "source": "người học",
+      "target": "thảo luận",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "STUDY"
+    },
+    {
+      "source": "người học",
+      "target": "tranh luận",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "STUDY"
+    },
+    {
+      "source": "người học",
+      "target": "bài tập",
+      "relation": "hoàn_thành",
+      "type_source": "STUDENT",
+      "type_target": "ASSIGNMENT"
+    },
+    {
+      "source": "người học",
+      "target": "đề tài",
+      "relation": "hoàn_thành",
+      "type_source": "STUDENT",
+      "type_target": "PROJECT"
+    },
+    {
+      "source": "người học",
+      "target": "kiến thức",
+      "relation": "vận_dụng_vào",
+      "type_source": "STUDENT",
+      "type_target": "KNOWLEDGE"
+    },
+    {
+      "source": "kiến thức",
+      "target": "thực tế cuộc sống",
+      "relation": "vận_dụng_vào",
+      "type_source": "KNOWLEDGE",
+      "type_target": "REALITY"
+    },
+    {
+      "source": "người học",
+      "target": "học tập",
+      "relation": "trung_thực_trong",
+      "type_source": "STUDENT",
+      "type_target": "STUDY"
+    },
+    {
+      "source": "người học",
+      "target": "thi",
+      "relation": "trung_thực_trong",
+      "type_source": "STUDENT",
+      "type_target": "EXAM"
+    },
+    {
+      "source": "người học",
+      "target": "kiểm tra",
+      "relation": "trung_thực_trong",
+      "type_source": "STUDENT",
+      "type_target": "TEST"
+    },
+    {
+      "source": "người học",
+      "target": "học tập",
+      "relation": "nghiêm_túc_trong",
+      "type_source": "STUDENT",
+      "type_target": "STUDY"
+    },
+    {
+      "source": "người học",
+      "target": "thi",
+      "relation": "nghiêm_túc_trong",
+      "type_source": "STUDENT",
+      "type_target": "EXAM"
+    },
+    {
+      "source": "người học",
+      "target": "kiểm tra",
+      "relation": "nghiêm_túc_trong",
+      "type_source": "STUDENT",
+      "type_target": "TEST"
+    },
+    {
+      "source": "người học",
+      "target": "quy chế",
+      "relation": "vi_phạm",
+      "type_source": "STUDENT",
+      "type_target": "REGULATION"
+    },
+    {
+      "source": "người học",
+      "target": "quy định",
+      "relation": "vi_phạm",
+      "type_source": "STUDENT",
+      "type_target": "REGULATION"
+    },
+    {
+      "source": "người học",
+      "target": "nội quy",
+      "relation": "vi_phạm",
+      "type_source": "STUDENT",
+      "type_target": "RULE"
+    },
+    {
+      "source": "quy chế",
+      "target": "Bộ Giáo dục và Đào tạo",
+      "relation": "của",
+      "type_source": "REGULATION",
+      "type_target": "EDUCATION_ORGANIZATION"
+    },
+    {
+      "source": "quy định",
+      "target": "Bộ Giáo dục và Đào tạo",
+      "relation": "của",
+      "type_source": "REGULATION",
+      "type_target": "EDUCATION_ORGANIZATION"
+    },
+    {
+      "source": "nội quy",
+      "target": "Bộ Giáo dục và Đào tạo",
+      "relation": "của",
+      "type_source": "RULE",
+      "type_target": "EDUCATION_ORGANIZATION"
+    },
+    {
+      "source": "quy chế",
+      "target": "nhà trường",
+      "relation": "của",
+      "type_source": "REGULATION",
+      "type_target": "SCHOOL"
+    },
+    {
+      "source": "quy định",
+      "target": "nhà trường",
+      "relation": "của",
+      "type_source": "REGULATION",
+      "type_target": "SCHOOL"
+    },
+    {
+      "source": "nội quy",
+      "target": "nhà trường",
+      "relation": "của",
+      "type_source": "RULE",
+      "type_target": "SCHOOL"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động học tập",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "STUDY_ACTIVITY"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động xã hội",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "SOCIAL_ACTIVITY"
+    },
+    {
+      "source": "người học",
+      "target": "phong trào thi đua",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "COMPETITION"
+    },
+    {
+      "source": "tổ chức đoàn thể",
+      "target": "trường",
+      "relation": "trong",
+      "type_source": "ORGANIZATION",
+      "type_target": "SCHOOL"
+    },
+    {
+      "source": "tổ chức đoàn thể",
+      "target": "hoạt động học tập",
+      "relation": "phát_động",
+      "type_source": "ORGANIZATION",
+      "type_target": "STUDY_ACTIVITY"
+    },
+    {
+      "source": "tổ chức đoàn thể",
+      "target": "hoạt động xã hội",
+      "relation": "phát_động",
+      "type_source": "ORGANIZATION",
+      "type_target": "SOCIAL_ACTIVITY"
+    },
+    {
+      "source": "tổ chức đoàn thể",
+      "target": "phong trào thi đua",
+      "relation": "phát_động",
+      "type_source": "ORGANIZATION",
+      "type_target": "COMPETITION"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động nghiên cứu khoa học",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "RESEARCH_ACTIVITY"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hoạt động khởi nghiệp",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "STARTUP_ACTIVITY"
+    },
+    {
+      "source": "người học",
+      "target": "hoạt động phục vụ cộng đồng",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "COMMUNITY_ACTIVITY"
+    },
+    {
+      "source": "người học",
+      "target": "đền ơn đáp nghĩa",
+      "relation": "tham_gia",
+      "type_source": "STUDENT",
+      "type_target": "GRATITUDE_ACTIVITY"
+    },
+    {
+      "source": "người học",
+      "target": "kỹ năng sống",
+      "relation": "rèn_luyện",
+      "type_source": "STUDENT",
+      "type_target": "LIFE_SKILL"
+    },
+    {
+      "source": "người học",
+      "target": "kỹ năng học tập",
+      "relation": "rèn_luyện",
+      "type_source": "STUDENT",
+      "type_target": "STUDY_SKILL"
+    }
+  ]
+}

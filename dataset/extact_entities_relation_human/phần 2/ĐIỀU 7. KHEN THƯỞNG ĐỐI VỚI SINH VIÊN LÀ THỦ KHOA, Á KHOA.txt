@@ -1,0 +1,148 @@
+{
+  "entities": [
+    {
+      "name": "ĐIỀU 7",
+      "type": "regulation_section"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "group_of_people"
+    },
+    {
+      "name": "Thủ khoa",
+      "type": "title"
+    },
+    {
+      "name": "Á khoa",
+      "type": "title"
+    },
+    {
+      "name": "Kỳ tuyển sinh đầu vào",
+      "type": "event"
+    },
+    {
+      "name": "Trường",
+      "type": "organization"
+    },
+    {
+      "name": "Thủ tục nhập học",
+      "type": "process"
+    },
+    {
+      "name": "Điểm thi/xét tuyển",
+      "type": "measure"
+    },
+    {
+      "name": "cao nhất",
+      "type": "condition"
+    },
+    {
+      "name": "cao thứ hai",
+      "type": "condition"
+    },
+    {
+      "name": "Điểm thưởng",
+      "type": "measure"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "ĐIỀU 7",
+      "target": "Thủ khoa",
+      "type_source": "regulation_section",
+      "type_target": "title",
+      "relation": "quy_định_về"
+    },
+    {
+      "source": "ĐIỀU 7",
+      "target": "Á khoa",
+      "type_source": "regulation_section",
+      "type_target": "title",
+      "relation": "quy_định_về"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Thủ khoa",
+      "type_source": "group_of_people",
+      "type_target": "title",
+      "relation": "có_thể_đạt_danh_hiệu"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Á khoa",
+      "type_source": "group_of_people",
+      "type_target": "title",
+      "relation": "có_thể_đạt_danh_hiệu"
+    },
+    {
+      "source": "Thủ khoa",
+      "target": "Kỳ tuyển sinh đầu vào",
+      "type_source": "title",
+      "type_target": "event",
+      "relation": "áp_dụng_cho"
+    },
+    {
+      "source": "Á khoa",
+      "target": "Kỳ tuyển sinh đầu vào",
+      "type_source": "title",
+      "type_target": "event",
+      "relation": "áp_dụng_cho"
+    },
+    {
+      "source": "Kỳ tuyển sinh đầu vào",
+      "target": "Trường",
+      "type_source": "event",
+      "type_target": "organization",
+      "relation": "thuộc_về"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Thủ tục nhập học",
+      "type_source": "group_of_people",
+      "type_target": "process",
+      "relation": "phải_hoàn_thành"
+    },
+    {
+      "source": "Thủ khoa",
+      "target": "Điểm thi/xét tuyển",
+      "type_source": "title",
+      "type_target": "measure",
+      "relation": "yêu_cầu"
+    },
+    {
+      "source": "Thủ khoa",
+      "target": "cao nhất",
+      "type_source": "title",
+      "type_target": "condition",
+      "relation": "yêu_cầu_điểm_số_là"
+    },
+    {
+      "source": "Á khoa",
+      "target": "Điểm thi/xét tuyển",
+      "type_source": "title",
+      "type_target": "measure",
+      "relation": "yêu_cầu"
+    },
+    {
+      "source": "Á khoa",
+      "target": "cao thứ hai",
+      "type_source": "title",
+      "type_target": "condition",
+      "relation": "yêu_cầu_điểm_số_là"
+    },
+    {
+      "source": "Thủ khoa",
+      "target": "Điểm thưởng",
+      "type_source": "title",
+      "type_target": "measure",
+      "relation": "không_tính_điểm"
+    },
+    {
+      "source": "Á khoa",
+      "target": "Điểm thưởng",
+      "type_source": "title",
+      "type_target": "measure",
+      "relation": "không_tính_điểm"
+    }
+  ]
+}

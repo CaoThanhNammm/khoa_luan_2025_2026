@@ -1,0 +1,176 @@
+{
+  "entities": [
+    {
+      "name": "website sinh viên",
+      "type": "WEBSITE"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "trang web đăng ký môn học",
+      "type": "WEBSITE"
+    },
+    {
+      "name": "https://dkmh.hcmuaf.edu.vn/",
+      "type": "URL"
+    },
+    {
+      "name": "Đóng tiền học phí",
+      "type": "PAYMENT_ACTION"
+    },
+    {
+      "name": "bill",
+      "type": "BILL"
+    },
+    {
+      "name": "Thanh toán học phí qua BIDV",
+      "type": "PAYMENT_METHOD"
+    },
+    {
+      "name": "BIDV",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "hình thức thanh toán",
+      "type": "PAYMENT_TYPE"
+    },
+    {
+      "name": "thông tin",
+      "type": "INFORMATION"
+    },
+    {
+      "name": "xác nhận",
+      "type": "ACTION"
+    },
+    {
+      "name": "Màn hình",
+      "type": "SCREEN"
+    },
+    {
+      "name": "số tài khoản",
+      "type": "BANK_ACCOUNT"
+    },
+    {
+      "name": "số tiền",
+      "type": "AMOUNT"
+    },
+    {
+      "name": "OTP",
+      "type": "OTP"
+    },
+    {
+      "name": "xác nhận",
+      "type": "ACTION"
+    },
+    {
+      "name": "Giao dịch",
+      "type": "TRANSACTION"
+    },
+    {
+      "name": "https://pkhtc.hcmuaf.edu.vn/pkhtc-24817-1/vn/huong-dan-thanh-toan-hocphionline.html",
+      "type": "URL"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sinh viên",
+      "target": "trang web đăng ký môn học",
+      "relation": "ĐĂNG_NHẬP_VÀO",
+      "type_source": "STUDENT",
+      "type_target": "WEBSITE"
+    },
+    {
+      "source": "trang web đăng ký môn học",
+      "target": "https://dkmh.hcmuaf.edu.vn/",
+      "relation": "ĐỊA_CHỈ_LÀ",
+      "type_source": "WEBSITE",
+      "type_target": "URL"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Đóng tiền học phí",
+      "relation": "CHỌN",
+      "type_source": "STUDENT",
+      "type_target": "PAYMENT_ACTION"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "bill",
+      "relation": "CHỌN",
+      "type_source": "STUDENT",
+      "type_target": "BILL"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Thanh toán học phí qua BIDV",
+      "relation": "CHỌN",
+      "type_source": "STUDENT",
+      "type_target": "PAYMENT_METHOD"
+    },
+    {
+      "source": "Thanh toán học phí qua BIDV",
+      "target": "BIDV",
+      "relation": "QUA",
+      "type_source": "PAYMENT_METHOD",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "hình thức thanh toán",
+      "relation": "CHỌN",
+      "type_source": "STUDENT",
+      "type_target": "PAYMENT_TYPE"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "thông tin",
+      "relation": "ĐIỀN",
+      "type_source": "STUDENT",
+      "type_target": "INFORMATION"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "xác nhận",
+      "relation": "CHỌN",
+      "type_source": "STUDENT",
+      "type_target": "ACTION"
+    },
+    {
+      "source": "Màn hình",
+      "target": "số tài khoản",
+      "relation": "HIỆN",
+      "type_source": "SCREEN",
+      "type_target": "BANK_ACCOUNT"
+    },
+    {
+      "source": "Màn hình",
+      "target": "số tiền",
+      "relation": "HIỆN",
+      "type_source": "SCREEN",
+      "type_target": "AMOUNT"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "OTP",
+      "relation": "NHẬP",
+      "type_source": "STUDENT",
+      "type_target": "OTP"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "xác nhận",
+      "relation": "CHỌN",
+      "type_source": "STUDENT",
+      "type_target": "ACTION"
+    },
+    {
+      "source": "Giao dịch",
+      "target": "hoàn thành",
+      "relation": "TRẠNG_THÁI",
+      "type_source": "TRANSACTION",
+      "type_target": "ACTION"
+    }
+  ]
+}

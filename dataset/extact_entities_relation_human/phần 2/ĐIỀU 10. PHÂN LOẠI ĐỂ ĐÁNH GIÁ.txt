@@ -1,0 +1,106 @@
+{
+  "entities": [
+    {
+      "name": "người học",
+      "type": "student"
+    },
+    {
+      "name": "kỷ luật",
+      "type": "discipline"
+    },
+    {
+      "name": "mức khiển trách",
+      "type": "reprimand_level"
+    },
+    {
+      "name": "đánh giá kết quả rèn luyện",
+      "type": "training_evaluation"
+    },
+    {
+      "name": "loại khá",
+      "type": "good_grade"
+    },
+    {
+      "name": "mức cảnh cáo",
+      "type": "warning_level"
+    },
+    {
+      "name": "loại trung bình",
+      "type": "average_grade"
+    },
+    {
+      "name": "mức đình chỉ học tập",
+      "type": "suspension_level"
+    },
+    {
+      "name": "đánh giá rèn luyện",
+      "type": "training_evaluation"
+    },
+    {
+      "name": "mức buộc thôi học",
+      "type": "expulsion_level"
+    },
+    {
+      "name": "đánh giá kết quả rèn luyện",
+      "type": "training_evaluation"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "người học",
+      "target": "mức khiển trách",
+      "relation": "bị_kỷ_luật_mức",
+      "type_source": "student",
+      "type_target": "reprimand_level"
+    },
+    {
+      "source": "đánh giá kết quả rèn luyện",
+      "target": "loại khá",
+      "relation": "không_được_vượt_quá",
+      "type_source": "training_evaluation",
+      "type_target": "good_grade"
+    },
+    {
+      "source": "người học",
+      "target": "mức cảnh cáo",
+      "relation": "bị_kỷ_luật_mức",
+      "type_source": "student",
+      "type_target": "warning_level"
+    },
+    {
+      "source": "đánh giá kết quả rèn luyện",
+      "target": "loại trung bình",
+      "relation": "không_được_vượt_quá",
+      "type_source": "training_evaluation",
+      "type_target": "average_grade"
+    },
+    {
+      "source": "người học",
+      "target": "mức đình chỉ học tập",
+      "relation": "bị_kỷ_luật_mức",
+      "type_source": "student",
+      "type_target": "suspension_level"
+    },
+    {
+      "source": "người học",
+      "target": "đánh giá rèn luyện",
+      "relation": "không_được_đánh_giá_rèn_luyện",
+      "type_source": "student",
+      "type_target": "training_evaluation"
+    },
+    {
+      "source": "người học",
+      "target": "mức buộc thôi học",
+      "relation": "bị_kỷ_luật_mức",
+      "type_source": "student",
+      "type_target": "expulsion_level"
+    },
+    {
+      "source": "người học",
+      "target": "đánh giá kết quả rèn luyện",
+      "relation": "không_được_đánh_giá_rèn_luyện",
+      "type_source": "student",
+      "type_target": "training_evaluation"
+    }
+  ]
+}

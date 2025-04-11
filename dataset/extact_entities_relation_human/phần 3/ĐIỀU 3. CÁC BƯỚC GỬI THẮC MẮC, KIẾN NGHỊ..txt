@@ -1,0 +1,171 @@
+{
+  "entities": [
+    {
+      "name": "trao đổi trực tiếp",
+      "type": "METHOD"
+    },
+    {
+      "name": "gửi thư qua email",
+      "type": "METHOD"
+    },
+    {
+      "name": "email",
+      "type": "COMMUNICATION_CHANNEL"
+    },
+    {
+      "name": "sinh viên",
+      "type": "PERSON_GROUP"
+    },
+    {
+      "name": "Chương II",
+      "type": "SECTION"
+    },
+    {
+      "name": "viết đơn",
+      "type": "ACTION"
+    },
+    {
+      "name": "đơn",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "Khoa",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "Chương III",
+      "type": "SECTION"
+    },
+    {
+      "name": "bộ phận nhận đơn",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "lưu sổ",
+      "type": "ACTION"
+    },
+    {
+      "name": "hẹn ngày trả lời",
+      "type": "ACTION"
+    },
+    {
+      "name": "phát phiếu trả lời",
+      "type": "ACTION"
+    },
+    {
+      "name": "phiếu trả lời",
+      "type": "DOCUMENT"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "gửi thư qua email",
+      "target": "email",
+      "type_source": "METHOD",
+      "type_target": "COMMUNICATION_CHANNEL",
+      "relation": "QUA"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trao đổi trực tiếp",
+      "type_source": "PERSON_GROUP",
+      "type_target": "METHOD",
+      "relation": "THỰC_HIỆN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "gửi thư qua email",
+      "type_source": "PERSON_GROUP",
+      "type_target": "METHOD",
+      "relation": "THỰC_HIỆN"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Chương II",
+      "type_source": "PERSON_GROUP",
+      "type_target": "SECTION",
+      "relation": "THEO_HƯỚNG_DẪN_TẠI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DOCUMENT",
+      "relation": "NỘP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Khoa",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ORGANIZATION",
+      "relation": "NỘP_CHO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "type_source": "PERSON_GROUP",
+      "type_target": "ORGANIZATION",
+      "relation": "NỘP_CHO"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Chương III",
+      "type_source": "PERSON_GROUP",
+      "type_target": "SECTION",
+      "relation": "THEO_HƯỚNG_DẪN_TẠI"
+    },
+    {
+      "source": "Khoa",
+      "target": "bộ phận nhận đơn",
+      "type_source": "ORGANIZATION",
+      "type_target": "DEPARTMENT",
+      "relation": "CÓ"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "bộ phận nhận đơn",
+      "type_source": "ORGANIZATION",
+      "type_target": "DEPARTMENT",
+      "relation": "CÓ"
+    },
+    {
+      "source": "bộ phận nhận đơn",
+      "target": "đơn",
+      "type_source": "DEPARTMENT",
+      "type_target": "DOCUMENT",
+      "relation": "NHẬN"
+    },
+    {
+      "source": "bộ phận nhận đơn",
+      "target": "sinh viên",
+      "type_source": "DEPARTMENT",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "bộ phận nhận đơn",
+      "target": "lưu sổ",
+      "type_source": "DEPARTMENT",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "bộ phận nhận đơn",
+      "target": "hẹn ngày trả lời",
+      "type_source": "DEPARTMENT",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "bộ phận nhận đơn",
+      "target": "phát phiếu trả lời",
+      "type_source": "DEPARTMENT",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    }
+  ]
+}

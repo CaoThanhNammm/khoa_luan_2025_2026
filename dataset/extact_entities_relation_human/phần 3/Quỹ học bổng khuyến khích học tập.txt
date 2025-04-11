@@ -1,0 +1,397 @@
+{
+  "entities": [
+    {
+      "name": "Quỹ học bổng khuyến khích học tập",
+      "type": "SCHOLARSHIP_FUND"
+    },
+    {
+      "name": "chương trình đại trà",
+      "type": "PROGRAM_TYPE"
+    },
+    {
+      "name": "8%",
+      "type": "PERCENTAGE"
+    },
+    {
+      "name": "tổng thu học phí chương trình đại trà",
+      "type": "TUITION_FEE"
+    },
+    {
+      "name": "chương trình tiên tiến",
+      "type": "PROGRAM_TYPE"
+    },
+    {
+      "name": "chương trình chất lượng cao",
+      "type": "PROGRAM_TYPE"
+    },
+    {
+      "name": "3%",
+      "type": "PERCENTAGE"
+    },
+    {
+      "name": "tổng thu học phí của chương trình",
+      "type": "TUITION_FEE"
+    },
+    {
+      "name": "Quỹ học bổng khuyến khích học tập toàn trường",
+      "type": "SCHOLARSHIP_FUND"
+    },
+    {
+      "name": "Hiệu trưởng",
+      "type": "PERSON"
+    },
+    {
+      "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type": "LOCATION"
+    },
+    {
+      "name": "Chương trình đại trà khối ngành 1",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Chương trình đại trà khối ngành 3",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Chương trình đại trà khối ngành 4",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Chương trình đại trà khối ngành 5",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Chương trình đại trà khối ngành 7",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Chương trình chất lượng cao khối ngành 3",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Chương trình chất lượng cao khối ngành 4",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Chương trình chất lượng cao khối ngành 5",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Chương trình tiên tiến ngành Công nghệ thực phẩm",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Chương trình tiên tiến ngành Chăn nuôi thú y",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "Phân hiệu Gia Lai",
+      "type": "LOCATION"
+    },
+    {
+      "name": "Phân hiệu Ninh Thuận",
+      "type": "LOCATION"
+    },
+    {
+      "name": "Khối cao đẳng",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "từng khối học bổng trong nhóm",
+      "type": "SCHOLARSHIP_GROUP"
+    },
+    {
+      "name": "công thức",
+      "type": "FORMULA"
+    },
+    {
+      "name": "Số tiền học bổng của mỗi khối (qi)",
+      "type": "SCHOLARSHIP_AMOUNT"
+    },
+    {
+      "name": "tổng số tiền học bổng của cả nhóm (Q)",
+      "type": "TOTAL_SCHOLARSHIP_FUND"
+    },
+    {
+      "name": "tổng số sinh viên của cả nhóm (N)",
+      "type": "TOTAL_STUDENT_NUMBER"
+    },
+    {
+      "name": "số lượng sinh viên của riêng khối đó (ni)",
+      "type": "STUDENT_NUMBER"
+    },
+    {
+      "name": "khối học bổng thứ i",
+      "type": "SCHOLARSHIP_GROUP"
+    },
+    {
+      "name": "toàn bộ nhóm học bổng",
+      "type": "SCHOLARSHIP_GROUP"
+    },
+    {
+      "name": "tất cả các khối học bổng trong nhóm",
+      "type": "SCHOLARSHIP_GROUP"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Quỹ học bổng khuyến khích học tập",
+      "target": "chương trình đại trà",
+      "type_source": "SCHOLARSHIP_FUND",
+      "type_target": "PROGRAM_TYPE",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Quỹ học bổng khuyến khích học tập",
+      "target": "8%",
+      "type_source": "SCHOLARSHIP_FUND",
+      "type_target": "PERCENTAGE",
+      "relation": "ĐƯỢC_BỐ_TRÍ_BẰNG"
+    },
+    {
+      "source": "8%",
+      "target": "tổng thu học phí chương trình đại trà",
+      "type_source": "PERCENTAGE",
+      "type_target": "TUITION_FEE",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Quỹ học bổng khuyến khích học tập",
+      "target": "chương trình tiên tiến",
+      "type_source": "SCHOLARSHIP_FUND",
+      "type_target": "PROGRAM_TYPE",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Quỹ học bổng khuyến khích học tập",
+      "target": "chương trình chất lượng cao",
+      "type_source": "SCHOLARSHIP_FUND",
+      "type_target": "PROGRAM_TYPE",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Quỹ học bổng khuyến khích học tập",
+      "target": "3%",
+      "type_source": "SCHOLARSHIP_FUND",
+      "type_target": "PERCENTAGE",
+      "relation": "ĐƯỢC_BỐ_TRÍ_BẰNG"
+    },
+    {
+      "source": "3%",
+      "target": "tổng thu học phí của chương trình",
+      "type_source": "PERCENTAGE",
+      "type_target": "TUITION_FEE",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "Quỹ học bổng khuyến khích học tập toàn trường",
+      "type_source": "PERSON",
+      "type_target": "SCHOLARSHIP_FUND",
+      "relation": "CĂN_CỨ_TRÊN"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "quỹ học bổng",
+      "type_source": "PERSON",
+      "type_target": "SCHOLARSHIP_FUND",
+      "relation": "BỐ_TRÍ"
+    },
+    {
+      "source": "quỹ học bổng",
+      "target": "từng nhóm",
+      "type_source": "SCHOLARSHIP_FUND",
+      "type_target": "GROUP",
+      "relation": "CHO"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 1",
+      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 3",
+      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 4",
+      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 5",
+      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 7",
+      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình chất lượng cao khối ngành 3",
+      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình chất lượng cao khối ngành 4",
+      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình chất lượng cao khối ngành 5",
+      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình tiên tiến ngành Công nghệ thực phẩm",
+      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình tiên tiến ngành Chăn nuôi thú y",
+      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 3",
+      "target": "Phân hiệu Gia Lai",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 5",
+      "target": "Phân hiệu Gia Lai",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 1",
+      "target": "Phân hiệu Ninh Thuận",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 3",
+      "target": "Phân hiệu Ninh Thuận",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 4",
+      "target": "Phân hiệu Ninh Thuận",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 5",
+      "target": "Phân hiệu Ninh Thuận",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Chương trình đại trà khối ngành 7",
+      "target": "Phân hiệu Ninh Thuận",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Khối cao đẳng",
+      "target": "Phân hiệu Ninh Thuận",
+      "type_source": "PROGRAM",
+      "type_target": "LOCATION",
+      "relation": "TẠI"
+    },
+    {
+      "source": "Quỹ học bổng khuyến khích học tập",
+      "target": "từng khối học bổng trong nhóm",
+      "type_source": "SCHOLARSHIP_FUND",
+      "type_target": "SCHOLARSHIP_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Quỹ học bổng khuyến khích học tập",
+      "target": "công thức",
+      "type_source": "SCHOLARSHIP_FUND",
+      "type_target": "FORMULA",
+      "relation": "XÁC_ĐỊNH_THEO"
+    },
+    {
+      "source": "Số tiền học bổng của mỗi khối (qi)",
+      "target": "tổng số tiền học bổng của cả nhóm (Q)",
+      "type_source": "SCHOLARSHIP_AMOUNT",
+      "type_target": "TOTAL_SCHOLARSHIP_FUND",
+      "relation": "TÍNH_BẰNG_CÁCH_LẤY"
+    },
+    {
+      "source": "tổng số tiền học bổng của cả nhóm (Q)",
+      "target": "tổng số sinh viên của cả nhóm (N)",
+      "type_source": "TOTAL_SCHOLARSHIP_FUND",
+      "type_target": "TOTAL_STUDENT_NUMBER",
+      "relation": "CHIA_CHO"
+    },
+    {
+      "source": "tổng số sinh viên của cả nhóm (N)",
+      "target": "số lượng sinh viên của riêng khối đó (ni)",
+      "type_source": "TOTAL_STUDENT_NUMBER",
+      "type_target": "STUDENT_NUMBER",
+      "relation": "NHÂN_VỚI"
+    },
+    {
+      "source": "Số tiền học bổng của mỗi khối (qi)",
+      "target": "khối học bổng thứ i",
+      "type_source": "SCHOLARSHIP_AMOUNT",
+      "type_target": "SCHOLARSHIP_GROUP",
+      "relation": "LÀ"
+    },
+    {
+      "source": "tổng số tiền học bổng của cả nhóm (Q)",
+      "target": "toàn bộ nhóm học bổng",
+      "type_source": "TOTAL_SCHOLARSHIP_FUND",
+      "type_target": "SCHOLARSHIP_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "số lượng sinh viên của riêng khối đó (ni)",
+      "target": "khối học bổng thứ i",
+      "type_source": "STUDENT_NUMBER",
+      "type_target": "SCHOLARSHIP_GROUP",
+      "relation": "TRONG"
+    },
+    {
+      "source": "tổng số lượng sinh viên của tất cả các khối học bổng trong nhóm (N)",
+      "target": "tất cả các khối học bổng trong nhóm",
+      "type_source": "TOTAL_STUDENT_NUMBER",
+      "type_target": "SCHOLARSHIP_GROUP",
+      "relation": "CỦA"
+    }
+  ]
+}

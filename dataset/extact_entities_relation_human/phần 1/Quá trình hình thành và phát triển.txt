@@ -5,6 +5,10 @@
       "type": "organization"
     },
     {
+      "name": "Trường Đại học Nông Lâm(thành viên của đại học quốc gia tp. hồ chí minh)",
+      "type": "organization"
+    },
+    {
       "name": "Nong Lam University - NLU",
       "type": "organization"
     },
@@ -205,7 +209,7 @@
     },
     {
       "source": "1995",
-      "target": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+      "target": "Trường Đại học Nông Lâm(thành viên của đại học quốc gia tp. hồ chí minh)",
       "relation": "THÀNH_LẬP",
       "type_source": "time",
       "type_target": "organization"

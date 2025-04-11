@@ -1,0 +1,230 @@
+{
+  "entities": [
+    {
+      "name": "Sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "cha",
+      "type": "father"
+    },
+    {
+      "name": "mẹ",
+      "type": "mother"
+    },
+    {
+      "name": "người còn lại",
+      "type": "parent"
+    },
+    {
+      "name": "khả năng lao động",
+      "type": "labor_ability"
+    },
+    {
+      "name": "thành viên hộ gia đình",
+      "type": "family_member"
+    },
+    {
+      "name": "hộ cận nghèo",
+      "type": "near_poor_household"
+    },
+    {
+      "name": "hộ nghèo",
+      "type": "poor_household"
+    },
+    {
+      "name": "hộ có mức sống trung bình",
+      "type": "average_income_household"
+    },
+    {
+      "name": "chuẩn quy định của pháp luật",
+      "type": "legal_standard"
+    },
+    {
+      "name": "gia đình",
+      "type": "family"
+    },
+    {
+      "name": "khó khăn về tài chính",
+      "type": "financial_difficulty"
+    },
+    {
+      "name": "bệnh tật",
+      "type": "illness"
+    },
+    {
+      "name": "tai nạn",
+      "type": "accident"
+    },
+    {
+      "name": "hỏa hoạn",
+      "type": "fire"
+    },
+    {
+      "name": "thiên tai",
+      "type": "natural_disaster"
+    },
+    {
+      "name": "dịch bệnh",
+      "type": "epidemic"
+    },
+    {
+      "name": "thời gian theo học",
+      "type": "study_period"
+    },
+    {
+      "name": "xác nhận",
+      "type": "confirmation"
+    },
+    {
+      "name": "Ủy ban nhân dân xã, phường, thị trấn",
+      "type": "local_authority"
+    },
+    {
+      "name": "nơi học sinh, sinh viên cư trú",
+      "type": "residence_area"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sinh viên",
+      "target": "cha",
+      "relation": "mồ_côi_cả",
+      "type_source": "student",
+      "type_target": "father"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "mẹ",
+      "relation": "mồ_côi_cả",
+      "type_source": "student",
+      "type_target": "mother"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "cha",
+      "relation": "mồ_côi",
+      "type_source": "student",
+      "type_target": "father"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "mẹ",
+      "relation": "mồ_côi",
+      "type_source": "student",
+      "type_target": "mother"
+    },
+    {
+      "source": "người còn lại",
+      "target": "khả năng lao động",
+      "relation": "không_có",
+      "type_source": "parent",
+      "type_target": "labor_ability"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "thành viên hộ gia đình",
+      "relation": "là",
+      "type_source": "student",
+      "type_target": "family_member"
+    },
+    {
+      "source": "thành viên hộ gia đình",
+      "target": "hộ cận nghèo",
+      "relation": "thuộc",
+      "type_source": "family_member",
+      "type_target": "near_poor_household"
+    },
+    {
+      "source": "thành viên hộ gia đình",
+      "target": "hộ nghèo",
+      "relation": "thuộc",
+      "type_source": "family_member",
+      "type_target": "poor_household"
+    },
+    {
+      "source": "thành viên hộ gia đình",
+      "target": "hộ có mức sống trung bình",
+      "relation": "thuộc",
+      "type_source": "family_member",
+      "type_target": "average_income_household"
+    },
+    {
+      "source": "hộ có mức sống trung bình",
+      "target": "chuẩn quy định của pháp luật",
+      "relation": "theo",
+      "type_source": "average_income_household",
+      "type_target": "legal_standard"
+    },
+    {
+      "source": "gia đình",
+      "target": "Sinh viên",
+      "relation": "của",
+      "type_source": "family",
+      "type_target": "student"
+    },
+    {
+      "source": "gia đình",
+      "target": "khó khăn về tài chính",
+      "relation": "gặp",
+      "type_source": "family",
+      "type_target": "financial_difficulty"
+    },
+    {
+      "source": "khó khăn về tài chính",
+      "target": "bệnh tật",
+      "relation": "do",
+      "type_source": "financial_difficulty",
+      "type_target": "illness"
+    },
+    {
+      "source": "khó khăn về tài chính",
+      "target": "tai nạn",
+      "relation": "do",
+      "type_source": "financial_difficulty",
+      "type_target": "accident"
+    },
+    {
+      "source": "khó khăn về tài chính",
+      "target": "hỏa hoạn",
+      "relation": "do",
+      "type_source": "financial_difficulty",
+      "type_target": "fire"
+    },
+    {
+      "source": "khó khăn về tài chính",
+      "target": "thiên tai",
+      "relation": "do",
+      "type_source": "financial_difficulty",
+      "type_target": "natural_disaster"
+    },
+    {
+      "source": "khó khăn về tài chính",
+      "target": "dịch bệnh",
+      "relation": "do",
+      "type_source": "financial_difficulty",
+      "type_target": "epidemic"
+    },
+    {
+      "source": "khó khăn về tài chính",
+      "target": "thời gian theo học",
+      "relation": "trong",
+      "type_source": "financial_difficulty",
+      "type_target": "study_period"
+    },
+    {
+      "source": "xác nhận",
+      "target": "Ủy ban nhân dân xã, phường, thị trấn",
+      "relation": "của",
+      "type_source": "confirmation",
+      "type_target": "local_authority"
+    },
+    {
+      "source": "Ủy ban nhân dân xã, phường, thị trấn",
+      "target": "nơi học sinh, sinh viên cư trú",
+      "relation": "tại",
+      "type_source": "local_authority",
+      "type_target": "residence_area"
+    }
+  ]
+}

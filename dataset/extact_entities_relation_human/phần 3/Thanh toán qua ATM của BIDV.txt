@@ -1,0 +1,213 @@
+{
+  "entities": [
+    {
+      "name": "dịch vụ ATM của BIDV",
+      "type": "ATM_SERVICE"
+    },
+    {
+      "name": "BIDV",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "Thanh toán",
+      "type": "PAYMENT"
+    },
+    {
+      "name": "Tài khoản thanh toán",
+      "type": "BANK_ACCOUNT"
+    },
+    {
+      "name": "Học phí– Lệ phí thi",
+      "type": "PAYMENT_TYPE"
+    },
+    {
+      "name": "Nhà cung cấp dịch vụ",
+      "type": "SERVICE_PROVIDER"
+    },
+    {
+      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "Mã sinh viên",
+      "type": "STUDENT_ID"
+    },
+    {
+      "name": "Mã Khách hàng",
+      "type": "CUSTOMER_ID"
+    },
+    {
+      "name": "Người nộp tiền",
+      "type": "PAYER"
+    },
+    {
+      "name": "ký tự chữ cái",
+      "type": "CHARACTER"
+    },
+    {
+      "name": "hai bên màn hình",
+      "type": "SCREEN"
+    },
+    {
+      "name": "ký tự chữ số",
+      "type": "NUMBER"
+    },
+    {
+      "name": "bàn phím",
+      "type": "KEYBOARD"
+    },
+    {
+      "name": "thông tin thanh toán",
+      "type": "PAYMENT_INFO"
+    },
+    {
+      "name": "nút “Có”",
+      "type": "BUTTON"
+    },
+    {
+      "name": "giao dịch thanh toán",
+      "type": "PAYMENT_TRANSACTION"
+    },
+    {
+      "name": "phản hồi kết quả",
+      "type": "FEEDBACK_RESULT"
+    },
+    {
+      "name": "biên lai",
+      "type": "RECEIPT"
+    },
+    {
+      "name": "ATM",
+      "type": "ATM"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "hình thức chuyển khoản",
+      "type": "TRANSFER_METHOD"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "dịch vụ ATM của BIDV",
+      "target": "BIDV",
+      "relation": "CỦA",
+      "type_source": "ATM_SERVICE",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "Thanh toán",
+      "target": "dịch vụ ATM của BIDV",
+      "relation": "SỬ_DỤNG",
+      "type_source": "PAYMENT",
+      "type_target": "ATM_SERVICE"
+    },
+    {
+      "source": "Tài khoản thanh toán",
+      "target": "Thanh toán",
+      "relation": "CHỌN",
+      "type_source": "BANK_ACCOUNT",
+      "type_target": "PAYMENT"
+    },
+    {
+      "source": "Học phí– Lệ phí thi",
+      "target": "Thanh toán",
+      "relation": "CHỌN",
+      "type_source": "PAYMENT_TYPE",
+      "type_target": "PAYMENT"
+    },
+    {
+      "source": "Nhà cung cấp dịch vụ",
+      "target": "Học phí– Lệ phí thi",
+      "relation": "CHỌN",
+      "type_source": "SERVICE_PROVIDER",
+      "type_target": "PAYMENT_TYPE"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "Nhà cung cấp dịch vụ",
+      "relation": "LÀ",
+      "type_source": "ORGANIZATION",
+      "type_target": "SERVICE_PROVIDER"
+    },
+    {
+      "source": "Mã sinh viên",
+      "target": "Mã Khách hàng",
+      "relation": "NHẬP_VÀO",
+      "type_source": "STUDENT_ID",
+      "type_target": "CUSTOMER_ID"
+    },
+    {
+      "source": "Người nộp tiền",
+      "target": "ký tự chữ cái",
+      "relation": "CHỌN",
+      "type_source": "PAYER",
+      "type_target": "CHARACTER"
+    },
+    {
+      "source": "ký tự chữ cái",
+      "target": "hai bên màn hình",
+      "relation": "Ở",
+      "type_source": "CHARACTER",
+      "type_target": "SCREEN"
+    },
+    {
+      "source": "Người nộp tiền",
+      "target": "ký tự chữ số",
+      "relation": "CHỌN",
+      "type_source": "PAYER",
+      "type_target": "NUMBER"
+    },
+    {
+      "source": "ký tự chữ số",
+      "target": "bàn phím",
+      "relation": "TRÊN",
+      "type_source": "NUMBER",
+      "type_target": "KEYBOARD"
+    },
+    {
+      "source": "thông tin thanh toán",
+      "target": "Thanh toán",
+      "relation": "KIỂM_TRA",
+      "type_source": "PAYMENT_INFO",
+      "type_target": "PAYMENT"
+    },
+    {
+      "source": "nút “Có”",
+      "target": "thông tin thanh toán",
+      "relation": "CHỌN",
+      "type_source": "BUTTON",
+      "type_target": "PAYMENT_INFO"
+    },
+    {
+      "source": "giao dịch thanh toán",
+      "target": "nút “Có”",
+      "relation": "XÁC_NHẬN",
+      "type_source": "PAYMENT_TRANSACTION",
+      "type_target": "BUTTON"
+    },
+    {
+      "source": "phản hồi kết quả",
+      "target": "BIDV",
+      "relation": "CỦA",
+      "type_source": "FEEDBACK_RESULT",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "biên lai",
+      "target": "ATM",
+      "relation": "TỪ",
+      "type_source": "RECEIPT",
+      "type_target": "ATM"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "hình thức chuyển khoản",
+      "relation": "KHÔNG_ĐÓNG_BẰNG",
+      "type_source": "STUDENT",
+      "type_target": "TRANSFER_METHOD"
+    }
+  ]
+}

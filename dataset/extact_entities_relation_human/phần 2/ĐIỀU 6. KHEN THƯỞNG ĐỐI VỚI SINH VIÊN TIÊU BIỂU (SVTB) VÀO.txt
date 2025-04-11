@@ -1,0 +1,202 @@
+{
+  "entities": [
+    {
+      "name": "khen thưởng",
+      "type": "reward"
+    },
+    {
+      "name": "sinh viên tiêu biểu",
+      "type": "typical_student"
+    },
+    {
+      "name": "SVTB",
+      "type": "typical_student_acronym"
+    },
+    {
+      "name": "cuối mỗi năm học",
+      "type": "end_of_academic_year"
+    },
+    {
+      "name": "Tiêu chuẩn",
+      "type": "standard"
+    },
+    {
+      "name": "kết quả học tập",
+      "type": "learning_outcome"
+    },
+    {
+      "name": "cả năm học",
+      "type": "academic_year"
+    },
+    {
+      "name": "loại khá trở lên",
+      "type": "good_or_better"
+    },
+    {
+      "name": "xếp loại rèn luyện",
+      "type": "training_classification"
+    },
+    {
+      "name": "loại tốt trở lên",
+      "type": "very_good_or_better"
+    },
+    {
+      "name": "hoạt động Đoàn - Hội sinh viên",
+      "type": "student_union_activities"
+    },
+    {
+      "name": "Đoàn - Hội sinh viên",
+      "type": "student_union"
+    },
+    {
+      "name": "các đơn vị khác trong trường",
+      "type": "other_units_in_school"
+    },
+    {
+      "name": "Số lượng",
+      "type": "quantity"
+    },
+    {
+      "name": "Khoa/Bộ môn",
+      "type": "department"
+    },
+    {
+      "name": "500 sinh viên",
+      "type": "student_count"
+    },
+    {
+      "name": "01 SVTB",
+      "type": "typical_student_quantity"
+    },
+    {
+      "name": "trên 500 đến 1.000 sinh viên",
+      "type": "student_count_range"
+    },
+    {
+      "name": "1.000 sinh viên",
+      "type": "student_count"
+    },
+    {
+      "name": "02 SVTB",
+      "type": "typical_student_quantity"
+    },
+    {
+      "name": "04 SVTB",
+      "type": "typical_student_quantity"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "khen thưởng",
+      "target": "sinh viên tiêu biểu",
+      "relation": "dành_cho",
+      "type_source": "reward",
+      "type_target": "typical_student"
+    },
+    {
+      "source": "sinh viên tiêu biểu",
+      "target": "SVTB",
+      "relation": "là_viết_tắt_của",
+      "type_source": "typical_student",
+      "type_target": "typical_student_acronym"
+    },
+    {
+      "source": "sinh viên tiêu biểu",
+      "target": "cuối mỗi năm học",
+      "relation": "vào_thời_điểm",
+      "type_source": "typical_student",
+      "type_target": "end_of_academic_year"
+    },
+    {
+      "source": "kết quả học tập",
+      "target": "cả năm học",
+      "relation": "của",
+      "type_source": "learning_outcome",
+      "type_target": "academic_year"
+    },
+    {
+      "source": "kết quả học tập",
+      "target": "loại khá trở lên",
+      "relation": "đạt",
+      "type_source": "learning_outcome",
+      "type_target": "good_or_better"
+    },
+    {
+      "source": "xếp loại rèn luyện",
+      "target": "cả năm học",
+      "relation": "của",
+      "type_source": "training_classification",
+      "type_target": "academic_year"
+    },
+    {
+      "source": "xếp loại rèn luyện",
+      "target": "loại tốt trở lên",
+      "relation": "đạt",
+      "type_source": "training_classification",
+      "type_target": "very_good_or_better"
+    },
+    {
+      "source": "sinh viên tiêu biểu",
+      "target": "hoạt động Đoàn - Hội sinh viên",
+      "relation": "tham_gia_tích_cực",
+      "type_source": "typical_student",
+      "type_target": "student_union_activities"
+    },
+    {
+      "source": "hoạt động Đoàn - Hội sinh viên",
+      "target": "Đoàn - Hội sinh viên",
+      "relation": "thuộc",
+      "type_source": "student_union_activities",
+      "type_target": "student_union"
+    },
+    {
+      "source": "sinh viên tiêu biểu",
+      "target": "các đơn vị khác trong trường",
+      "relation": "tham_gia_tích_cực",
+      "type_source": "typical_student",
+      "type_target": "other_units_in_school"
+    },
+    {
+      "source": "Khoa/Bộ môn",
+      "target": "500 sinh viên",
+      "relation": "có_ít_hơn_hoặc_bằng",
+      "type_source": "department",
+      "type_target": "student_count"
+    },
+    {
+      "source": "Khoa/Bộ môn",
+      "target": "01 SVTB",
+      "relation": "được_chọn",
+      "type_source": "department",
+      "type_target": "typical_student_quantity"
+    },
+    {
+      "source": "Khoa/Bộ môn",
+      "target": "trên 500 đến 1.000 sinh viên",
+      "relation": "có",
+      "type_source": "department",
+      "type_target": "student_count_range"
+    },
+    {
+      "source": "Khoa/Bộ môn",
+      "target": "02 SVTB",
+      "relation": "được_chọn",
+      "type_source": "department",
+      "type_target": "typical_student_quantity"
+    },
+    {
+      "source": "Khoa/Bộ môn",
+      "target": "1.000 sinh viên",
+      "relation": "có_trên",
+      "type_source": "department",
+      "type_target": "student_count"
+    },
+    {
+      "source": "Khoa/Bộ môn",
+      "target": "04 SVTB",
+      "relation": "được_chọn",
+      "type_source": "department",
+      "type_target": "typical_student_quantity"
+    }
+  ]
+}

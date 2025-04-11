@@ -1,0 +1,98 @@
+{
+  "entities": [
+    {
+      "name": "ĐIỀU 11",
+      "type": "article"
+    },
+    {
+      "name": "QUY TRÌNH ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN",
+      "type": "process"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "category"
+    },
+    {
+      "name": "điểm rèn luyện",
+      "type": "score"
+    },
+    {
+      "name": "website",
+      "type": "resource_type"
+    },
+    {
+      "name": "http://sv.hc-muaf.edu.vn/diemrenluyen",
+      "type": "url"
+    },
+    {
+      "name": "hướng dẫn đánh giá",
+      "type": "document"
+    },
+    {
+      "name": "địa chỉ",
+      "type": "resource_type"
+    },
+    {
+      "name": "https://nls.hcmuaf.edu.vn/data/file/%C4%90RL/HuongDanDanhGia_KQRL.pdf",
+      "type": "url"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "ĐIỀU 11",
+      "target": "QUY TRÌNH ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN",
+      "type_source": "article",
+      "type_target": "process",
+      "relation": "quy_định_về"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "điểm rèn luyện",
+      "type_source": "category",
+      "type_target": "score",
+      "relation": "đánh_giá"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "website",
+      "type_source": "category",
+      "type_target": "resource_type",
+      "relation": "đánh_giá_qua"
+    },
+    {
+      "source": "website",
+      "target": "http://sv.hc-muaf.edu.vn/diemrenluyen",
+      "type_source": "resource_type",
+      "type_target": "url",
+      "relation": "có_địa_chỉ_là"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "hướng dẫn đánh giá",
+      "type_source": "category",
+      "type_target": "document",
+      "relation": "xem"
+    },
+    {
+      "source": "hướng dẫn đánh giá",
+      "target": "địa chỉ",
+      "type_source": "document",
+      "type_target": "resource_type",
+      "relation": "tại"
+    },
+    {
+      "source": "địa chỉ",
+      "target": "https://nls.hcmuaf.edu.vn/data/file/%C4%90RL/HuongDanDanhGia_KQRL.pdf",
+      "type_source": "resource_type",
+      "type_target": "url",
+      "relation": "có_địa_chỉ_là"
+    },
+    {
+        "source": "hướng dẫn đánh giá",
+        "target": "QUY TRÌNH ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN",
+        "type_source": "document",
+        "type_target": "process",
+        "relation": "hướng_dẫn_cho"
+      }
+  ]
+}

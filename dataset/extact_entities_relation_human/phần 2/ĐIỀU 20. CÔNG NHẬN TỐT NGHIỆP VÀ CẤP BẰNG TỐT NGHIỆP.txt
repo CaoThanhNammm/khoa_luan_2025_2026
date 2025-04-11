@@ -1,0 +1,985 @@
+{
+  "entities": [
+    {
+      "name": "sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "tuần thứ 2",
+      "type": "TIME_PERIOD"
+    },
+    {
+      "name": "tháng 03",
+      "type": "MONTH"
+    },
+    {
+      "name": "tháng 06",
+      "type": "MONTH"
+    },
+    {
+      "name": "tháng 09",
+      "type": "MONTH"
+    },
+    {
+      "name": "tháng 12",
+      "type": "MONTH"
+    },
+    {
+      "name": "điều kiện",
+      "type": "CONDITION"
+    },
+    {
+      "name": "học phần",
+      "type": "COURSE_COMPONENT"
+    },
+    {
+      "name": "tín chỉ",
+      "type": "CREDIT"
+    },
+    {
+      "name": "nội dung bắt buộc",
+      "type": "REQUIREMENT"
+    },
+    {
+      "name": "CTĐT",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "chuẩn đầu ra",
+      "type": "STANDARD_OUTPUT"
+    },
+    {
+      "name": "chuẩn đầu ra Ngoại ngữ không chuyên",
+      "type": "STANDARD_OUTPUT"
+    },
+    {
+      "name": "chuẩn đầu ra Tin học không chuyên",
+      "type": "STANDARD_OUTPUT"
+    },
+    {
+      "name": "Trường",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "Điểm trung bình tích lũy",
+      "type": "GPA"
+    },
+    {
+      "name": "toàn khóa học",
+      "type": "DURATION"
+    },
+    {
+      "name": "trung bình",
+      "type": "LEVEL"
+    },
+    {
+      "name": "2,00",
+      "type": "GRADE"
+    },
+    {
+      "name": "thang điểm 4",
+      "type": "SCALE"
+    },
+    {
+      "name": "thời điểm xét tốt nghiệp",
+      "type": "TIME"
+    },
+    {
+      "name": "trách nhiệm hình sự",
+      "type": "LEGAL_RESPONSIBILITY"
+    },
+    {
+      "name": "thời gian bị kỷ luật",
+      "type": "TIME_PERIOD"
+    },
+    {
+      "name": "kỷ luật",
+      "type": "DISCIPLINE"
+    },
+    {
+      "name": "mức đình chỉ học tập",
+      "type": "LEVEL"
+    },
+    {
+      "name": "Hiệu trưởng",
+      "type": "POSITION"
+    },
+    {
+      "name": "quyết định công nhận tốt nghiệp",
+      "type": "DECISION"
+    },
+    {
+      "name": "bằng tốt nghiệp",
+      "type": "DEGREE"
+    },
+    {
+      "name": "thời hạn 03 tháng",
+      "type": "DURATION"
+    },
+    {
+      "name": "thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp",
+      "type": "TIME"
+    },
+    {
+      "name": "nghĩa vụ",
+      "type": "OBLIGATION"
+    },
+    {
+      "name": "chứng nhận",
+      "type": "CERTIFICATE"
+    },
+    {
+      "name": "học phần đã tích luỹ",
+      "type": "COURSE_COMPONENT"
+    },
+    {
+      "name": "ngành/chuyên ngành",
+      "type": "MAJOR"
+    },
+    {
+      "name": "Quy trình, thủ tục xét và công nhận tốt nghiệp",
+      "type": "PROCESS"
+    },
+    {
+      "name": "Hội đồng xét tốt nghiệp Khoa",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "Biên bản xét tốt nghiệp",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "Hội đồng xét tốt nghiệp Trường",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "ngày 01 các tháng 03, 06, 09 và 12",
+      "type": "DATE"
+    },
+    {
+      "name": "nhu cầu tốt nghiệp khác tiến độ",
+      "type": "DEMAND"
+    },
+    {
+      "name": "đơn đề nghị xét/chưa xét công nhận tốt nghiệp",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "đề nghị",
+      "type": "PROPOSAL"
+    },
+    {
+      "name": "website Phòng Đào tạo",
+      "type": "WEBSITE"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "đợt tốt nghiệp",
+      "type": "GRADUATION_PHASE"
+    },
+    {
+      "name": "thông tin",
+      "type": "INFORMATION"
+    },
+    {
+      "name": "sai sót",
+      "type": "ERROR"
+    },
+    {
+      "name": "07 ngày",
+      "type": "DURATION"
+    },
+    {
+      "name": "danh sách tốt nghiệp",
+      "type": "LIST"
+    },
+    {
+      "name": "Quyết định công nhận tốt nghiệp",
+      "type": "DECISION"
+    },
+    {
+      "name": "Phụ lục văn bằng",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "thời gian chờ nhận bằng",
+      "type": "TIME_PERIOD"
+    },
+    {
+      "name": "Giấy chứng nhận tốt nghiệp tạm thời",
+      "type": "CERTIFICATE"
+    },
+    {
+      "name": "nhu cầu cá nhân",
+      "type": "DEMAND"
+    },
+    {
+      "name": "thủ tục",
+      "type": "PROCEDURE"
+    },
+    {
+      "name": "bản sao bằng tốt nghiệp",
+      "type": "DEGREE_COPY"
+    },
+    {
+      "name": "bản sao phụ lục văn bằng",
+      "type": "DOCUMENT_COPY"
+    },
+    {
+      "name": "Bằng tốt nghiệp đại học",
+      "type": "DEGREE"
+    },
+    {
+      "name": "ngành đào tạo",
+      "type": "MAJOR"
+    },
+    {
+      "name": "xếp loại tốt nghiệp",
+      "type": "GRADUATION_RANK"
+    },
+    {
+      "name": "ĐTBCTL",
+      "type": "GPA"
+    },
+    {
+      "name": "Loại xuất sắc",
+      "type": "RANK"
+    },
+    {
+      "name": "3,60",
+      "type": "GRADE"
+    },
+    {
+      "name": "4,00",
+      "type": "GRADE"
+    },
+    {
+      "name": "Loại giỏi",
+      "type": "RANK"
+    },
+    {
+      "name": "3,20",
+      "type": "GRADE"
+    },
+    {
+      "name": "3,59",
+      "type": "GRADE"
+    },
+    {
+      "name": "Loại khá",
+      "type": "RANK"
+    },
+    {
+      "name": "2,50",
+      "type": "GRADE"
+    },
+    {
+      "name": "3,19",
+      "type": "GRADE"
+    },
+    {
+      "name": "Loại trung bình",
+      "type": "RANK"
+    },
+    {
+      "name": "2,49",
+      "type": "GRADE"
+    },
+    {
+      "name": "hạng tốt nghiệp",
+      "type": "GRADUATION_RANK"
+    },
+    {
+      "name": "loại xuất sắc và giỏi",
+      "type": "RANK_GROUP"
+    },
+    {
+      "name": "một mức",
+      "type": "LEVEL"
+    },
+    {
+      "name": "học phần học lại",
+      "type": "COURSE_COMPONENT"
+    },
+    {
+      "name": "học phần bắt buộc",
+      "type": "COURSE_TYPE"
+    },
+    {
+      "name": "5%",
+      "type": "PERCENTAGE"
+    },
+    {
+      "name": "tổng số tín chỉ quy định",
+      "type": "CREDIT"
+    },
+    {
+      "name": "toàn CTĐT",
+      "type": "PROGRAM"
+    },
+    {
+      "name": "mức cảnh cáo",
+      "type": "LEVEL"
+    },
+    {
+      "name": "thời gian học",
+      "type": "DURATION"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "công nhận tốt nghiệp",
+      "relation": "được_xét_và",
+      "type_source": "STUDENT",
+      "type_target": "GRADUATION_RECOGNITION"
+    },
+    {
+      "source": "công nhận tốt nghiệp",
+      "target": "tuần thứ 2 các tháng 03, 06, 09, 12",
+      "relation": "vào",
+      "type_source": "GRADUATION_RECOGNITION",
+      "type_target": "TIME_PERIOD"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điều kiện",
+      "relation": "được_xét_và_công_nhận_tốt_nghiệp_khi_có_đủ",
+      "type_source": "STUDENT",
+      "type_target": "CONDITION"
+    },
+    {
+      "source": "sinh viên",
+      "target": "học phần",
+      "relation": "tích_lũy_đủ",
+      "type_source": "STUDENT",
+      "type_target": "COURSE_COMPONENT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "tín chỉ",
+      "relation": "tích_lũy_đủ",
+      "type_source": "STUDENT",
+      "type_target": "CREDIT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nội dung bắt buộc",
+      "relation": "hoàn_thành",
+      "type_source": "STUDENT",
+      "type_target": "REQUIREMENT"
+    },
+    {
+      "source": "nội dung bắt buộc",
+      "target": "CTĐT",
+      "relation": "theo_yêu_cầu_của",
+      "type_source": "REQUIREMENT",
+      "type_target": "PROGRAM"
+    },
+    {
+      "source": "sinh viên",
+      "target": "chuẩn đầu ra",
+      "relation": "đạt",
+      "type_source": "STUDENT",
+      "type_target": "STANDARD_OUTPUT"
+    },
+    {
+      "source": "chuẩn đầu ra",
+      "target": "CTĐT",
+      "relation": "của",
+      "type_source": "STANDARD_OUTPUT",
+      "type_target": "PROGRAM"
+    },
+    {
+      "source": "sinh viên",
+      "target": "chuẩn đầu ra Ngoại ngữ không chuyên",
+      "relation": "hoàn_thành",
+      "type_source": "STUDENT",
+      "type_target": "STANDARD_OUTPUT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "chuẩn đầu ra Tin học không chuyên",
+      "relation": "hoàn_thành",
+      "type_source": "STUDENT",
+      "type_target": "STANDARD_OUTPUT"
+    },
+    {
+      "source": "chuẩn đầu ra Ngoại ngữ không chuyên",
+      "target": "Trường",
+      "relation": "theo_quy_định_của",
+      "type_source": "STANDARD_OUTPUT",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "chuẩn đầu ra Tin học không chuyên",
+      "target": "Trường",
+      "relation": "theo_quy_định_của",
+      "type_source": "STANDARD_OUTPUT",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Điểm trung bình tích lũy",
+      "relation": "đạt",
+      "type_source": "STUDENT",
+      "type_target": "GPA"
+    },
+    {
+      "source": "Điểm trung bình tích lũy",
+      "target": "toàn khóa học",
+      "relation": "của",
+      "type_source": "GPA",
+      "type_target": "DURATION"
+    },
+    {
+      "source": "Điểm trung bình tích lũy",
+      "target": "trung bình trở lên",
+      "relation": "đạt_từ",
+      "type_source": "GPA",
+      "type_target": "LEVEL"
+    },
+    {
+      "source": "trung bình trở lên",
+      "target": "2,00",
+      "relation": "là",
+      "type_source": "LEVEL",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "2,00",
+      "target": "thang điểm 4",
+      "relation": "theo",
+      "type_source": "GRADE",
+      "type_target": "SCALE"
+    },
+    {
+      "source": "sinh viên",
+      "target": "trách nhiệm hình sự",
+      "relation": "không_bị_truy_cứu",
+      "type_source": "STUDENT",
+      "type_target": "LEGAL_RESPONSIBILITY"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thời gian bị kỷ luật",
+      "relation": "không_đang_trong",
+      "type_source": "STUDENT",
+      "type_target": "TIME_PERIOD"
+    },
+    {
+      "source": "kỷ luật",
+      "target": "mức đình chỉ học tập",
+      "relation": "ở",
+      "type_source": "DISCIPLINE",
+      "type_target": "LEVEL"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Hiệu trưởng",
+      "relation": "được_công_nhận_tốt_nghiệp_bởi",
+      "type_source": "STUDENT",
+      "type_target": "POSITION"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "quyết định công nhận tốt nghiệp",
+      "relation": "ra",
+      "type_source": "POSITION",
+      "type_target": "DECISION"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "bằng tốt nghiệp",
+      "relation": "cấp",
+      "type_source": "POSITION",
+      "type_target": "DEGREE"
+    },
+    {
+      "source": "quyết định công nhận tốt nghiệp_và_cấp_bằng_tốt_nghiệp",
+      "target": "thời hạn 03 tháng",
+      "relation": "trong",
+      "type_source": "DECISION",
+      "type_target": "DURATION"
+    },
+    {
+      "source": "thời hạn 03 tháng",
+      "target": "thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp",
+      "relation": "tính_từ",
+      "type_source": "DURATION",
+      "type_target": "TIME"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nghĩa vụ",
+      "relation": "hoàn_thành",
+      "type_source": "STUDENT",
+      "type_target": "OBLIGATION"
+    },
+    {
+      "source": "nghĩa vụ",
+      "target": "Trường",
+      "relation": "với",
+      "type_source": "OBLIGATION",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "sinh viên",
+      "target": "chứng nhận",
+      "relation": "được_cấp",
+      "type_source": "STUDENT",
+      "type_target": "CERTIFICATE"
+    },
+    {
+      "source": "chứng nhận",
+      "target": "học phần đã tích luỹ",
+      "relation": "về",
+      "type_source": "CERTIFICATE",
+      "type_target": "COURSE_COMPONENT"
+    },
+    {
+      "source": "học phần đã tích luỹ",
+      "target": "CTĐT",
+      "relation": "trong",
+      "type_source": "COURSE_COMPONENT",
+      "type_target": "PROGRAM"
+    },
+    {
+      "source": "học phần đã tích luỹ",
+      "target": "ngành/chuyên ngành",
+      "relation": "của",
+      "type_source": "COURSE_COMPONENT",
+      "type_target": "MAJOR"
+    },
+    {
+      "source": "Hội đồng xét tốt nghiệp Khoa",
+      "target": "sinh viên",
+      "relation": "xét_tốt_nghiệp_cho",
+      "type_source": "ORGANIZATION",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "Hội đồng xét tốt nghiệp Khoa",
+      "target": "Biên bản xét tốt nghiệp",
+      "relation": "chuyển",
+      "type_source": "ORGANIZATION",
+      "type_target": "DOCUMENT"
+    },
+    {
+      "source": "Biên bản xét tốt nghiệp",
+      "target": "Hội đồng xét tốt nghiệp Trường",
+      "relation": "về",
+      "type_source": "DOCUMENT",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "Biên bản xét tốt nghiệp",
+      "target": "ngày 01 các tháng 03, 06, 09 và 12",
+      "relation": "trước",
+      "type_source": "DOCUMENT",
+      "type_target": "DATE"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nhu cầu tốt nghiệp khác tiến độ",
+      "relation": "có",
+      "type_source": "STUDENT",
+      "type_target": "DEMAND"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn đề nghị xét/chưa xét công nhận tốt nghiệp",
+      "relation": "phải_làm",
+      "type_source": "STUDENT",
+      "type_target": "DOCUMENT"
+    },
+    {
+      "source": "đơn đề nghị xét/chưa xét công nhận tốt nghiệp",
+      "target": "Hội đồng xét tốt nghiệp Khoa",
+      "relation": "gửi_về",
+      "type_source": "DOCUMENT",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "đề nghị",
+      "relation": "căn_cứ",
+      "type_source": "POSITION",
+      "type_target": "PROPOSAL"
+    },
+    {
+      "source": "đề nghị",
+      "target": "Hội đồng xét tốt nghiệp Trường",
+      "relation": "của",
+      "type_source": "PROPOSAL",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "Hiệu trưởng",
+      "target": "quyết định công nhận tốt nghiệp",
+      "relation": "ký",
+      "type_source": "POSITION",
+      "type_target": "DECISION"
+    },
+    {
+      "source": "quyết định công nhận tốt nghiệp",
+      "target": "sinh viên",
+      "relation": "cho",
+      "type_source": "DECISION",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "danh sách công nhận tốt nghiệp",
+      "target": "website Phòng Đào tạo",
+      "relation": "được_công_bố_trên",
+      "type_source": "LIST",
+      "type_target": "WEBSITE"
+    },
+    {
+      "source": "website Phòng Đào tạo",
+      "target": "Phòng Đào tạo",
+      "relation": "của",
+      "type_source": "WEBSITE",
+      "type_target": "DEPARTMENT"
+    },
+    {
+      "source": "danh sách công nhận tốt nghiệp",
+      "target": "đợt tốt nghiệp",
+      "relation": "theo",
+      "type_source": "LIST",
+      "type_target": "GRADUATION_PHASE"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thông tin",
+      "relation": "kiểm_tra",
+      "type_source": "STUDENT",
+      "type_target": "INFORMATION"
+    },
+    {
+      "source": "thông tin",
+      "target": "danh sách tốt nghiệp",
+      "relation": "trên",
+      "type_source": "INFORMATION",
+      "type_target": "LIST"
+    },
+    {
+      "source": "sinh viên",
+      "target": "sai sót",
+      "relation": "phải_báo",
+      "type_source": "STUDENT",
+      "type_target": "ERROR"
+    },
+    {
+      "source": "sai sót",
+      "target": "Phòng Đào tạo",
+      "relation": "về",
+      "type_source": "ERROR",
+      "type_target": "DEPARTMENT"
+    },
+    {
+      "source": "hành động báo",
+      "target": "07 ngày",
+      "relation": "trong_vòng",
+      "type_source": "ACTION",
+      "type_target": "DURATION"
+    },
+    {
+      "source": "07 ngày",
+      "target": "ngày công bố danh sách tốt nghiệp",
+      "relation": "kể_từ",
+      "type_source": "DURATION",
+      "type_target": "DATE"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Quyết định công nhận tốt nghiệp",
+      "relation": "có_tên_trong",
+      "type_source": "STUDENT",
+      "type_target": "DECISION"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Bằng tốt nghiệp",
+      "relation": "được_nhận",
+      "type_source": "STUDENT",
+      "type_target": "DEGREE"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phụ lục văn bằng",
+      "relation": "được_nhận",
+      "type_source": "STUDENT",
+      "type_target": "DOCUMENT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "relation": "liên_hệ",
+      "type_source": "STUDENT",
+      "type_target": "DEPARTMENT"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "Giấy chứng nhận tốt nghiệp tạm thời",
+      "relation": "cấp",
+      "type_source": "DEPARTMENT",
+      "type_target": "CERTIFICATE"
+    },
+    {
+      "source": "Giấy chứng nhận tốt nghiệp tạm thời",
+      "target": "nhu cầu cá nhân",
+      "relation": "theo",
+      "type_source": "CERTIFICATE",
+      "type_target": "DEMAND"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Bằng tốt nghiệp",
+      "relation": "chỉ_được_nhận",
+      "type_source": "STUDENT",
+      "type_target": "DEGREE"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thủ tục",
+      "relation": "hoàn_tất",
+      "type_source": "STUDENT",
+      "type_target": "PROCEDURE"
+    },
+    {
+      "source": "thủ tục",
+      "target": "Trường",
+      "relation": "theo_yêu_cầu_của",
+      "type_source": "PROCEDURE",
+      "type_target": "ORGANIZATION"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bản sao bằng tốt nghiệp",
+      "relation": "có_thể_đăng_ký_nhận_thêm",
+      "type_source": "STUDENT",
+      "type_target": "DEGREE_COPY"
+    },
+    {
+      "source": "sinh viên",
+      "target": "bản sao phụ lục văn bằng",
+      "relation": "có_thể_đăng_ký_nhận_thêm",
+      "type_source": "STUDENT",
+      "type_target": "DOCUMENT_COPY"
+    },
+    {
+      "source": "đăng ký",
+      "target": "Phòng Đào tạo",
+      "relation": "tại",
+      "type_source": "ACTION",
+      "type_target": "DEPARTMENT"
+    },
+    {
+      "source": "bản sao bằng tốt nghiệp",
+      "target": "nhu cầu cá nhân",
+      "relation": "theo",
+      "type_source": "DEGREE_COPY",
+      "type_target": "DEMAND"
+    },
+    {
+      "source": "bản sao phụ lục văn bằng",
+      "target": "nhu cầu cá nhân",
+      "relation": "theo",
+      "type_source": "DOCUMENT_COPY",
+      "type_target": "DEMAND"
+    },
+    {
+      "source": "Bằng tốt nghiệp đại học",
+      "target": "ngành đào tạo",
+      "relation": "cấp_theo",
+      "type_source": "DEGREE",
+      "type_target": "MAJOR"
+    },
+    {
+      "source": "xếp loại tốt nghiệp",
+      "target": "ĐTBCTL",
+      "relation": "xác_định_căn_cứ_vào",
+      "type_source": "GRADUATION_RANK",
+      "type_target": "GPA"
+    },
+    {
+      "source": "xếp loại tốt nghiệp",
+      "target": "mức",
+      "relation": "theo",
+      "type_source": "GRADUATION_RANK",
+      "type_target": "LEVEL"
+    },
+    {
+      "source": "Loại xuất sắc",
+      "target": "ĐTBCTL",
+      "relation": "là",
+      "type_source": "RANK",
+      "type_target": "GPA"
+    },
+    {
+      "source": "ĐTBCTL",
+      "target": "3,60",
+      "relation": "từ",
+      "type_source": "GPA",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "ĐTBCTL",
+      "target": "4,00",
+      "relation": "đến",
+      "type_source": "GPA",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "Loại giỏi",
+      "target": "ĐTBCTL",
+      "relation": "là",
+      "type_source": "RANK",
+      "type_target": "GPA"
+    },
+    {
+      "source": "ĐTBCTL",
+      "target": "3,20",
+      "relation": "từ",
+      "type_source": "GPA",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "ĐTBCTL",
+      "target": "3,59",
+      "relation": "đến",
+      "type_source": "GPA",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "Loại khá",
+      "target": "ĐTBCTL",
+      "relation": "là",
+      "type_source": "RANK",
+      "type_target": "GPA"
+    },
+    {
+      "source": "ĐTBCTL",
+      "target": "2,50",
+      "relation": "từ",
+      "type_source": "GPA",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "ĐTBCTL",
+      "target": "3,19",
+      "relation": "đến",
+      "type_source": "GPA",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "Loại trung bình",
+      "target": "ĐTBCTL",
+      "relation": "là",
+      "type_source": "RANK",
+      "type_target": "GPA"
+    },
+    {
+      "source": "ĐTBCTL",
+      "target": "2,00",
+      "relation": "từ",
+      "type_source": "GPA",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "ĐTBCTL",
+      "target": "2,49",
+      "relation": "đến",
+      "type_source": "GPA",
+      "type_target": "GRADE"
+    },
+    {
+      "source": "hạng tốt nghiệp",
+      "target": "sinh viên",
+      "relation": "của",
+      "type_source": "GRADUATION_RANK",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "hạng tốt nghiệp",
+      "target": "một mức",
+      "relation": "bị_giảm",
+      "type_source": "GRADUATION_RANK",
+      "type_target": "LEVEL"
+    },
+    {
+      "source": "mức giảm",
+      "target": "loại xuất sắc và giỏi",
+      "relation": "của",
+      "type_source": "LEVEL",
+      "type_target": "RANK_GROUP"
+    },
+    {
+      "source": "mức giảm",
+      "target": "trường hợp",
+      "relation": "nếu_rơi_vào",
+      "type_source": "LEVEL",
+      "type_target": "CASE"
+    },
+    {
+      "source": "trường hợp",
+      "target": "khối lượng học phần học lại",
+      "relation": "có",
+      "type_source": "CASE",
+      "type_target": "COURSE_COMPONENT"
+    },
+    {
+      "source": "học phần học lại",
+      "target": "học phần bắt buộc",
+      "relation": "là",
+      "type_source": "COURSE_COMPONENT",
+      "type_target": "COURSE_TYPE"
+    },
+    {
+      "source": "khối lượng học phần học lại",
+      "target": "5%",
+      "relation": "vượt_quá",
+      "type_source": "COURSE_COMPONENT",
+      "type_target": "PERCENTAGE"
+    },
+    {
+      "source": "5%",
+      "target": "tổng số tín chỉ quy định",
+      "relation": "của",
+      "type_source": "PERCENTAGE",
+      "type_target": "CREDIT"
+    },
+    {
+      "source": "tổng số tín chỉ quy định",
+      "target": "toàn CTĐT",
+      "relation": "cho",
+      "type_source": "CREDIT",
+      "type_target": "PROGRAM"
+    },
+    {
+      "source": "trường hợp",
+      "target": "kỷ luật",
+      "relation": "đã_bị",
+      "type_source": "CASE",
+      "type_target": "DISCIPLINE"
+    },
+    {
+      "source": "kỷ luật",
+      "target": "mức cảnh cáo",
+      "relation": "từ",
+      "type_source": "DISCIPLINE",
+      "type_target": "LEVEL"
+    },
+    {
+      "source": "kỷ luật",
+      "target": "thời gian học",
+      "relation": "trong",
+      "type_source": "DISCIPLINE",
+      "type_target": "DURATION"
+    }
+  ]
+}

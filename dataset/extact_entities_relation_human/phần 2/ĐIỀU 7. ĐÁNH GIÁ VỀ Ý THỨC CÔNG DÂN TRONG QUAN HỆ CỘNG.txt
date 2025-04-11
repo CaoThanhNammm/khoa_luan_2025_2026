@@ -1,0 +1,313 @@
+{
+  "entities": [
+    {
+      "name": "ĐIỀU 7",
+      "type": "article"
+    },
+    {
+      "name": "ĐÁNH GIÁ VỀ Ý THỨC CÔNG DÂN TRONG QUAN HỆ CỘNG ĐỒNG",
+      "type": "process"
+    },
+    {
+      "name": "Ý THỨC CÔNG DÂN",
+      "type": "concept"
+    },
+    {
+      "name": "QUAN HỆ CỘNG ĐỒNG",
+      "type": "concept"
+    },
+    {
+      "name": "Các tiêu chí",
+      "type": "category"
+    },
+    {
+      "name": "điểm đánh giá",
+      "type": "score"
+    },
+    {
+      "name": "Ý thức chấp hành và tham gia tuyên truyền các chủ trương của Đảng, chính sách, pháp luật của Nhà nước",
+      "type": "evaluation_criterion"
+    },
+    {
+      "name": "chủ trương của Đảng",
+      "type": "policy"
+    },
+    {
+      "name": "Đảng",
+      "type": "organization"
+    },
+    {
+      "name": "chính sách, pháp luật của Nhà nước",
+      "type": "policy_law"
+    },
+    {
+      "name": "Nhà nước",
+      "type": "organization"
+    },
+    {
+      "name": "cộng đồng",
+      "type": "community"
+    },
+    {
+      "name": "Ý thức tham gia các hoạt động xã hội có thành tích được ghi nhận, biểu dương, khen thưởng",
+      "type": "evaluation_criterion"
+    },
+    {
+      "name": "hoạt động xã hội",
+      "type": "activity"
+    },
+    {
+      "name": "thành tích",
+      "type": "achievement"
+    },
+    {
+      "name": "ghi nhận",
+      "type": "recognition"
+    },
+    {
+      "name": "biểu dương",
+      "type": "commendation"
+    },
+    {
+      "name": "khen thưởng",
+      "type": "reward"
+    },
+    {
+      "name": "Có tinh thần chia sẻ, giúp đỡ người thân, người có khó khăn, hoạn nạn",
+      "type": "evaluation_criterion"
+    },
+    {
+      "name": "tinh thần chia sẻ",
+      "type": "attitude"
+    },
+    {
+      "name": "tinh thần giúp đỡ",
+      "type": "attitude"
+    },
+    {
+      "name": "người thân",
+      "type": "category"
+    },
+    {
+      "name": "người có khó khăn, hoạn nạn",
+      "type": "category"
+    },
+    {
+      "name": "Khung điểm đánh giá",
+      "type": "scoring_range"
+    },
+    {
+      "name": "0",
+      "type": "score_value"
+    },
+    {
+      "name": "25 điểm",
+      "type": "score_value"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "ĐIỀU 7",
+      "target": "ĐÁNH GIÁ VỀ Ý THỨC CÔNG DÂN TRONG QUAN HỆ CỘNG ĐỒNG",
+      "type_source": "article",
+      "type_target": "process",
+      "relation": "quy_định_về"
+    },
+    {
+      "source": "ĐÁNH GIÁ VỀ Ý THỨC CÔNG DÂN TRONG QUAN HỆ CỘNG ĐỒNG",
+      "target": "Ý THỨC CÔNG DÂN",
+      "type_source": "process",
+      "type_target": "concept",
+      "relation": "đánh_giá"
+    },
+    {
+      "source": "ĐÁNH GIÁ VỀ Ý THỨC CÔNG DÂN TRONG QUAN HỆ CỘNG ĐỒNG",
+      "target": "QUAN HỆ CỘNG ĐỒNG",
+      "type_source": "process",
+      "type_target": "concept",
+      "relation": "diễn_ra_trong"
+    },
+    {
+      "source": "ĐÁNH GIÁ VỀ Ý THỨC CÔNG DÂN TRONG QUAN HỆ CỘNG ĐỒNG",
+      "target": "Các tiêu chí",
+      "type_source": "process",
+      "type_target": "category",
+      "relation": "dựa_trên"
+    },
+    {
+      "source": "Các tiêu chí",
+      "target": "điểm đánh giá",
+      "type_source": "category",
+      "type_target": "score",
+      "relation": "dùng_để_xác_định"
+    },
+    {
+      "source": "Các tiêu chí",
+      "target": "Ý thức chấp hành và tham gia tuyên truyền các chủ trương của Đảng, chính sách, pháp luật của Nhà nước",
+      "type_source": "category",
+      "type_target": "evaluation_criterion",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "Các tiêu chí",
+      "target": "Ý thức tham gia các hoạt động xã hội có thành tích được ghi nhận, biểu dương, khen thưởng",
+      "type_source": "category",
+      "type_target": "evaluation_criterion",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "Các tiêu chí",
+      "target": "Có tinh thần chia sẻ, giúp đỡ người thân, người có khó khăn, hoạn nạn",
+      "type_source": "category",
+      "type_target": "evaluation_criterion",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "Ý thức chấp hành và tham gia tuyên truyền các chủ trương của Đảng, chính sách, pháp luật của Nhà nước",
+      "target": "chủ trương của Đảng",
+      "type_source": "evaluation_criterion",
+      "type_target": "policy",
+      "relation": "liên_quan_đến_việc_chấp_hành"
+    },
+    {
+      "source": "Ý thức chấp hành và tham gia tuyên truyền các chủ trương của Đảng, chính sách, pháp luật của Nhà nước",
+      "target": "chủ trương của Đảng",
+      "type_source": "evaluation_criterion",
+      "type_target": "policy",
+      "relation": "liên_quan_đến_việc_tham_gia_tuyên_truyền"
+    },
+    {
+      "source": "chủ trương của Đảng",
+      "target": "Đảng",
+      "type_source": "policy",
+      "type_target": "organization",
+      "relation": "của"
+    },
+    {
+      "source": "Ý thức chấp hành và tham gia tuyên truyền các chủ trương của Đảng, chính sách, pháp luật của Nhà nước",
+      "target": "chính sách, pháp luật của Nhà nước",
+      "type_source": "evaluation_criterion",
+      "type_target": "policy_law",
+      "relation": "liên_quan_đến_việc_chấp_hành"
+    },
+    {
+      "source": "Ý thức chấp hành và tham gia tuyên truyền các chủ trương của Đảng, chính sách, pháp luật của Nhà nước",
+      "target": "chính sách, pháp luật của Nhà nước",
+      "type_source": "evaluation_criterion",
+      "type_target": "policy_law",
+      "relation": "liên_quan_đến_việc_tham_gia_tuyên_truyền"
+    },
+    {
+      "source": "chính sách, pháp luật của Nhà nước",
+      "target": "Nhà nước",
+      "type_source": "policy_law",
+      "type_target": "organization",
+      "relation": "của"
+    },
+    {
+      "source": "Ý thức chấp hành và tham gia tuyên truyền các chủ trương của Đảng, chính sách, pháp luật của Nhà nước",
+      "target": "cộng đồng",
+      "type_source": "evaluation_criterion",
+      "type_target": "community",
+      "relation": "trong"
+    },
+    {
+      "source": "Ý thức tham gia các hoạt động xã hội có thành tích được ghi nhận, biểu dương, khen thưởng",
+      "target": "hoạt động xã hội",
+      "type_source": "evaluation_criterion",
+      "type_target": "activity",
+      "relation": "liên_quan_đến_việc_tham_gia"
+    },
+    {
+      "source": "hoạt động xã hội",
+      "target": "thành tích",
+      "type_source": "activity",
+      "type_target": "achievement",
+      "relation": "có"
+    },
+    {
+      "source": "thành tích",
+      "target": "ghi nhận",
+      "type_source": "achievement",
+      "type_target": "recognition",
+      "relation": "được"
+    },
+    {
+      "source": "thành tích",
+      "target": "biểu dương",
+      "type_source": "achievement",
+      "type_target": "commendation",
+      "relation": "được"
+    },
+    {
+      "source": "thành tích",
+      "target": "khen thưởng",
+      "type_source": "achievement",
+      "type_target": "reward",
+      "relation": "được"
+    },
+    {
+      "source": "Có tinh thần chia sẻ, giúp đỡ người thân, người có khó khăn, hoạn nạn",
+      "target": "tinh thần chia sẻ",
+      "type_source": "evaluation_criterion",
+      "type_target": "attitude",
+      "relation": "liên_quan_đến"
+    },
+    {
+      "source": "Có tinh thần chia sẻ, giúp đỡ người thân, người có khó khăn, hoạn nạn",
+      "target": "tinh thần giúp đỡ",
+      "type_source": "evaluation_criterion",
+      "type_target": "attitude",
+      "relation": "liên_quan_đến"
+    },
+    {
+      "source": "tinh thần chia sẻ",
+      "target": "người thân",
+      "type_source": "attitude",
+      "type_target": "category",
+      "relation": "hướng_tới"
+    },
+    {
+      "source": "tinh thần chia sẻ",
+      "target": "người có khó khăn, hoạn nạn",
+      "type_source": "attitude",
+      "type_target": "category",
+      "relation": "hướng_tới"
+    },
+    {
+      "source": "tinh thần giúp đỡ",
+      "target": "người thân",
+      "type_source": "attitude",
+      "type_target": "category",
+      "relation": "hướng_tới"
+    },
+    {
+      "source": "tinh thần giúp đỡ",
+      "target": "người có khó khăn, hoạn nạn",
+      "type_source": "attitude",
+      "type_target": "category",
+      "relation": "hướng_tới"
+    },
+    {
+      "source": "ĐÁNH GIÁ VỀ Ý THỨC CÔNG DÂN TRONG QUAN HỆ CỘNG ĐỒNG",
+      "target": "Khung điểm đánh giá",
+      "type_source": "process",
+      "type_target": "scoring_range",
+      "relation": "sử_dụng"
+    },
+    {
+      "source": "Khung điểm đánh giá",
+      "target": "0",
+      "type_source": "scoring_range",
+      "type_target": "score_value",
+      "relation": "từ"
+    },
+    {
+      "source": "Khung điểm đánh giá",
+      "target": "25 điểm",
+      "type_source": "scoring_range",
+      "type_target": "score_value",
+      "relation": "đến"
+    }
+  ]
+}

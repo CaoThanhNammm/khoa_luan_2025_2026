@@ -1,0 +1,550 @@
+{
+  "entities": [
+    {
+      "name": "sinh viên",
+      "type": "PERSON_GROUP"
+    },
+    {
+      "name": "trách nhiệm",
+      "type": "RESPONSIBILITY"
+    },
+    {
+      "name": "độ chính xác",
+      "type": "ACCURACY"
+    },
+    {
+      "name": "điểm thi",
+      "type": "EXAM_SCORE"
+    },
+    {
+      "name": "khoa",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "bản in",
+      "type": "MEDIUM"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "điều chỉnh",
+      "type": "ACTION"
+    },
+    {
+      "name": "điểm bộ phận",
+      "type": "GRADE"
+    },
+    {
+      "name": "giảng viên giảng dạy",
+      "type": "PERSON"
+    },
+    {
+      "name": "học phần",
+      "type": "COURSE"
+    },
+    {
+      "name": "đơn",
+      "type": "DOCUMENT"
+    },
+    {
+      "name": "Trưởng Bộ môn",
+      "type": "DEPARTMENT_HEAD"
+    },
+    {
+      "name": "điểm thi kết thúc học phần",
+      "type": "EXAM_SCORE"
+    },
+    {
+      "name": "điểm học phần",
+      "type": "COURSE_GRADE"
+    },
+    {
+      "name": "sai lệch",
+      "type": "ERROR"
+    },
+    {
+      "name": "bảng điểm tổng kết",
+      "type": "GRADE_SHEET"
+    },
+    {
+      "name": "phòng Đào tạo",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "giấy hẹn",
+      "type": "APPOINTMENT_LETTER"
+    },
+    {
+      "name": "thời hạn",
+      "type": "DURATION"
+    },
+    {
+      "name": "cơ sở dữ liệu",
+      "type": "DATABASE"
+    },
+    {
+      "name": "01 (một) tuần",
+      "type": "DURATION"
+    },
+    {
+      "name": "phúc khảo điểm thi kết thúc học phần",
+      "type": "ACTION"
+    },
+    {
+      "name": "khoa chuyên môn",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "3 ngày",
+      "type": "DURATION"
+    },
+    {
+      "name": "ngày công bố điểm",
+      "type": "DATE"
+    },
+    {
+      "name": "bộ môn quản lý môn học",
+      "type": "DEPARTMENT"
+    },
+    {
+      "name": "giáo viên chấm phúc khảo",
+      "type": "PERSON"
+    },
+    {
+      "name": "kết quả",
+      "type": "RESULT"
+    },
+    {
+      "name": "bảng điểm",
+      "type": "GRADE_SHEET"
+    },
+    {
+      "name": "khiếu nại",
+      "type": "COMPLAINT"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "sinh viên",
+      "target": "trách nhiệm",
+      "type_source": "PERSON_GROUP",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "kiểm tra",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "kiểm tra",
+      "target": "độ chính xác",
+      "type_source": "ACTION",
+      "type_target": "ACCURACY",
+      "relation": "VỀ"
+    },
+    {
+      "source": "độ chính xác",
+      "target": "điểm thi",
+      "type_source": "ACCURACY",
+      "type_target": "EXAM_SCORE",
+      "relation": "CỦA"
+    },
+    {
+      "source": "điểm thi",
+      "target": "khoa",
+      "type_source": "EXAM_SCORE",
+      "type_target": "DEPARTMENT",
+      "relation": "CÔNG_BỐ_TẠI"
+    },
+    {
+      "source": "điểm thi",
+      "target": "bản in",
+      "type_source": "EXAM_SCORE",
+      "type_target": "MEDIUM",
+      "relation": "GIỮA"
+    },
+    {
+      "source": "bản in",
+      "target": "Phòng Đào tạo",
+      "type_source": "MEDIUM",
+      "type_target": "DEPARTMENT",
+      "relation": "TẠI"
+    },
+    {
+      "source": "kiểm tra",
+      "target": "điều chỉnh",
+      "type_source": "ACTION",
+      "type_target": "ACTION",
+      "relation": "ĐỂ"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thắc mắc",
+      "type_source": "PERSON_GROUP",
+      "type_target": "CONCEPT",
+      "relation": "KHI_CÓ"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "điểm bộ phận",
+      "type_source": "CONCEPT",
+      "type_target": "GRADE",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "giảng viên giảng dạy",
+      "type_source": "CONCEPT",
+      "type_target": "PERSON",
+      "relation": "VỚI"
+    },
+    {
+      "source": "giảng viên giảng dạy",
+      "target": "học phần",
+      "type_source": "PERSON",
+      "type_target": "COURSE",
+      "relation": "GIẢNG_DẠY"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "giải quyết thỏa đáng",
+      "type_source": "CONCEPT",
+      "type_target": "ACTION",
+      "relation": "KHÔNG_ĐƯỢC"
+    },
+    {
+      "source": "sinh viên",
+      "target": "quyền viết đơn",
+      "type_source": "PERSON_GROUP",
+      "type_target": "RIGHT",
+      "relation": "CÓ"
+    },
+    {
+      "source": "quyền viết đơn",
+      "target": "đơn",
+      "type_source": "RIGHT",
+      "type_target": "DOCUMENT",
+      "relation": "LÀ"
+    },
+    {
+      "source": "đơn",
+      "target": "Trưởng Bộ môn",
+      "type_source": "DOCUMENT",
+      "type_target": "DEPARTMENT_HEAD",
+      "relation": "GỬI_CHO"
+    },
+    {
+      "source": "Trưởng Bộ môn",
+      "target": "trách nhiệm",
+      "type_source": "DEPARTMENT_HEAD",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "giải quyết",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "trả lời",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "trả lời",
+      "target": "thắc mắc",
+      "type_source": "ACTION",
+      "type_target": "CONCEPT",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "điểm thi kết thúc học phần",
+      "type_source": "CONCEPT",
+      "type_target": "EXAM_SCORE",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "điểm học phần",
+      "type_source": "CONCEPT",
+      "type_target": "COURSE_GRADE",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "sai lệch",
+      "type_source": "CONCEPT",
+      "type_target": "ERROR",
+      "relation": "KHI_CÓ"
+    },
+    {
+      "source": "sai lệch",
+      "target": "điểm học phần",
+      "type_source": "ERROR",
+      "type_target": "COURSE_GRADE",
+      "relation": "GIỮA"
+    },
+    {
+      "source": "điểm học phần",
+      "target": "khoa",
+      "type_source": "COURSE_GRADE",
+      "type_target": "DEPARTMENT",
+      "relation": "CÔNG_BỐ_Ở"
+    },
+    {
+      "source": "điểm học phần",
+      "target": "điểm học phần",
+      "type_source": "COURSE_GRADE",
+      "type_target": "COURSE_GRADE",
+      "relation": "SO_VỚI"
+    },
+    {
+      "source": "điểm học phần",
+      "target": "bảng điểm tổng kết",
+      "type_source": "COURSE_GRADE",
+      "type_target": "GRADE_SHEET",
+      "relation": "TRONG"
+    },
+    {
+      "source": "bảng điểm tổng kết",
+      "target": "phòng Đào tạo",
+      "type_source": "GRADE_SHEET",
+      "type_target": "DEPARTMENT",
+      "relation": "CÔNG_BỐ_BỞI"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DOCUMENT",
+      "relation": "VIẾT"
+    },
+    {
+      "source": "sinh viên",
+      "target": "Phòng Đào tạo",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DEPARTMENT",
+      "relation": "GỬI_CHO"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "trách nhiệm",
+      "type_source": "DEPARTMENT",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "giải quyết",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "trả lời",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "trả lời",
+      "target": "thắc mắc",
+      "type_source": "ACTION",
+      "type_target": "CONCEPT",
+      "relation": "VỀ"
+    },
+    {
+      "source": "thắc mắc",
+      "target": "sinh viên",
+      "type_source": "CONCEPT",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "trả lời",
+      "target": "thời hạn",
+      "type_source": "ACTION",
+      "type_target": "DURATION",
+      "relation": "THEO"
+    },
+    {
+      "source": "thời hạn",
+      "target": "giấy hẹn",
+      "type_source": "DURATION",
+      "type_target": "APPOINTMENT_LETTER",
+      "relation": "GHI_TRONG"
+    },
+    {
+      "source": "sai sót",
+      "target": "điểm học phần",
+      "type_source": "ERROR",
+      "type_target": "COURSE_GRADE",
+      "relation": "THỰC_SỰ_CÓ"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "trách nhiệm",
+      "type_source": "DEPARTMENT",
+      "type_target": "RESPONSIBILITY",
+      "relation": "CÓ"
+    },
+    {
+      "source": "trách nhiệm",
+      "target": "điều chỉnh",
+      "type_source": "RESPONSIBILITY",
+      "type_target": "ACTION",
+      "relation": "BAO_GỒM"
+    },
+    {
+      "source": "điều chỉnh",
+      "target": "cơ sở dữ liệu",
+      "type_source": "ACTION",
+      "type_target": "DATABASE",
+      "relation": "TRONG"
+    },
+    {
+      "source": "cơ sở dữ liệu",
+      "target": "thời gian",
+      "type_source": "DATABASE",
+      "type_target": "DURATION",
+      "relation": "TRONG"
+    },
+    {
+      "source": "thời gian",
+      "target": "01 (một) tuần",
+      "type_source": "DURATION",
+      "type_target": "DURATION",
+      "relation": "LÀ"
+    },
+    {
+      "source": "trường hợp",
+      "target": "phúc khảo điểm thi kết thúc học phần",
+      "type_source": "SITUATION",
+      "type_target": "ACTION",
+      "relation": "TRƯỜNG_HỢP"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đơn",
+      "type_source": "PERSON_GROUP",
+      "type_target": "DOCUMENT",
+      "relation": "NỘP"
+    },
+    {
+      "source": "đơn",
+      "target": "khoa chuyên môn",
+      "type_source": "DOCUMENT",
+      "type_target": "DEPARTMENT",
+      "relation": "TẠI"
+    },
+    {
+      "source": "khoa chuyên môn",
+      "target": "thời gian",
+      "type_source": "DEPARTMENT",
+      "type_target": "DURATION",
+      "relation": "TRONG_VÒNG"
+    },
+    {
+      "source": "thời gian",
+      "target": "3 ngày",
+      "type_source": "DURATION",
+      "type_target": "DURATION",
+      "relation": "LÀ"
+    },
+    {
+      "source": "thời gian",
+      "target": "ngày công bố điểm",
+      "type_source": "DURATION",
+      "type_target": "DATE",
+      "relation": "KỂ_TỪ"
+    },
+    {
+      "source": "Trưởng bộ môn",
+      "target": "bộ môn quản lý môn học",
+      "type_source": "DEPARTMENT_HEAD",
+      "type_target": "DEPARTMENT",
+      "relation": "CỦA"
+    },
+    {
+      "source": "Trưởng bộ môn",
+      "target": "giáo viên chấm phúc khảo",
+      "type_source": "DEPARTMENT_HEAD",
+      "type_target": "PERSON",
+      "relation": "PHÂN_CÔNG"
+    },
+    {
+      "source": "giáo viên chấm phúc khảo",
+      "target": "chấm phúc khảo",
+      "type_source": "PERSON",
+      "type_target": "ACTION",
+      "relation": "CHẤM"
+    },
+    {
+      "source": "công bố",
+      "target": "sinh viên",
+      "type_source": "ACTION",
+      "type_target": "PERSON_GROUP",
+      "relation": "CHO"
+    },
+    {
+      "source": "công bố",
+      "target": "kết quả",
+      "type_source": "ACTION",
+      "type_target": "RESULT",
+      "relation": "KẾT_QUẢ"
+    },
+    {
+      "source": "công bố",
+      "target": "thời gian",
+      "type_source": "ACTION",
+      "type_target": "DURATION",
+      "relation": "CHẬM_NHẤT"
+    },
+    {
+      "source": "thời gian",
+      "target": "3 ngày",
+      "type_source": "DURATION",
+      "type_target": "DURATION",
+      "relation": "LÀ"
+    },
+    {
+      "source": "thời gian",
+      "target": "ngày nhận đơn",
+      "type_source": "DURATION",
+      "type_target": "DATE",
+      "relation": "KỂ_TỪ"
+    },
+    {
+      "source": "bảng điểm",
+      "target": "phòng Đào tạo",
+      "type_source": "GRADE_SHEET",
+      "type_target": "DEPARTMENT",
+      "relation": "CHUYỂN_VỀ"
+    },
+    {
+      "source": "khiếu nại",
+      "target": "điểm thi học phần",
+      "type_source": "COMPLAINT",
+      "type_target": "EXAM_SCORE",
+      "relation": "LIÊN_QUAN_ĐẾN"
+    },
+    {
+      "source": "khiếu nại",
+      "target": "giải quyết",
+      "type_source": "COMPLAINT",
+      "type_target": "ACTION",
+      "relation": "KHÔNG_ĐƯỢC"
+    }
+  ]
+}

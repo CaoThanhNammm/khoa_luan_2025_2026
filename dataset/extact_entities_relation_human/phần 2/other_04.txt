@@ -1,0 +1,55 @@
+
+{
+  "entities": [
+    {
+      "name": "Sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "hoàn cảnh khó khăn",
+      "type": "DIFFICULT_CIRCUMSTANCES"
+    },
+    {
+      "name": "vượt khó",
+      "type": "OVERCOME_DIFFICULTIES"
+    },
+    {
+      "name": "học tập",
+      "type": "STUDY"
+    },
+    {
+      "name": "rèn luyện",
+      "type": "PRACTICE"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sinh viên",
+      "target": "hoàn cảnh khó khăn",
+      "relation": "có",
+      "type_source": "STUDENT",
+      "type_target": "DIFFICULT_CIRCUMSTANCES"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "vượt khó",
+      "relation": "cố_gắng",
+      "type_source": "STUDENT",
+      "type_target": "OVERCOME_DIFFICULTIES"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "học tập",
+      "relation": "vươn_lên_trong",
+      "type_source": "STUDENT",
+      "type_target": "STUDY"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "rèn luyện",
+      "relation": "vươn_lên_trong",
+      "type_source": "STUDENT",
+      "type_target": "PRACTICE"
+    }
+  ]
+}

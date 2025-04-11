@@ -1,0 +1,874 @@
+{
+  "entities": [
+    {
+      "name": "khen thưởng",
+      "type": "reward"
+    },
+    {
+      "name": "sinh viên tốt nghiệp",
+      "type": "graduating_student"
+    },
+    {
+      "name": "điều kiện chung",
+      "type": "general_condition"
+    },
+    {
+      "name": "xét khen thưởng",
+      "type": "reward_consideration"
+    },
+    {
+      "name": "sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "mức kỷ luật",
+      "type": "discipline_level"
+    },
+    {
+      "name": "toàn khóa học",
+      "type": "entire_course"
+    },
+    {
+      "name": "hạ bậc",
+      "type": "demotion"
+    },
+    {
+      "name": "xét tốt nghiệp",
+      "type": "graduation_consideration"
+    },
+    {
+      "name": "học phần thi lại",
+      "type": "retake_course"
+    },
+    {
+      "name": "5%",
+      "type": "percentage"
+    },
+    {
+      "name": "tổng số tín chỉ",
+      "type": "total_credits"
+    },
+    {
+      "name": "hệ Vừa làm vừa học",
+      "type": "part_time_system"
+    },
+    {
+      "name": "công nhận",
+      "type": "recognition"
+    },
+    {
+      "name": "điều kiện",
+      "type": "condition"
+    },
+    {
+      "name": "cấp bằng tốt nghiệp",
+      "type": "graduation_degree_awarding"
+    },
+    {
+      "name": "điểm trung bình học tập tích lũy",
+      "type": "gpa"
+    },
+    {
+      "name": "ĐTBTL",
+      "type": "gpa_acronym"
+    },
+    {
+      "name": "khá trở lên",
+      "type": "good_or_better"
+    },
+    {
+      "name": "điểm rèn luyện",
+      "type": "training_score"
+    },
+    {
+      "name": "loại tốt trở lên",
+      "type": "very_good_or_better"
+    },
+    {
+      "name": "thời gian thiết kế chương trình đào tạo",
+      "type": "designed_program_duration"
+    },
+    {
+      "name": "Tiêu chuẩn",
+      "type": "standard"
+    },
+    {
+      "name": "danh hiệu khen thưởng",
+      "type": "reward_title"
+    },
+    {
+      "name": "sinh viên tốt nghiệp hệ chính quy",
+      "type": "full_time_graduating_student"
+    },
+    {
+      "name": "hệ chính quy",
+      "type": "full_time_system"
+    },
+    {
+      "name": "Danh hiệu tốt nghiệp Thủ khoa",
+      "type": "valedictorian_title"
+    },
+    {
+      "name": "Danh hiệu tốt nghiệp Á khoa toàn khóa",
+      "type": "salutatorian_title"
+    },
+    {
+      "name": "Thủ khoa",
+      "type": "valedictorian"
+    },
+    {
+      "name": "Á khoa",
+      "type": "salutatorian"
+    },
+    {
+      "name": "toàn khóa",
+      "type": "whole_course"
+    },
+    {
+      "name": "ngành học",
+      "type": "major"
+    },
+    {
+      "name": "khóa học",
+      "type": "course"
+    },
+    {
+      "name": "xếp loại rèn luyện",
+      "type": "training_classification"
+    },
+    {
+      "name": "Việc xét danh hiệu tốt nghiệp",
+      "type": "title_consideration"
+    },
+    {
+      "name": "số lượng sinh viên tốt nghiệp",
+      "type": "graduating_student_count"
+    },
+    {
+      "name": "90 sinh viên",
+      "type": "student_count"
+    },
+    {
+      "name": "01 Thủ khoa",
+      "type": "valedictorian_quantity"
+    },
+    {
+      "name": "sinh viên có ĐTBTL cao nhất",
+      "type": "highest_gpa_student"
+    },
+    {
+      "name": "01 Á khoa",
+      "type": "salutatorian_quantity"
+    },
+    {
+      "name": "sinh viên có ĐTBTL cao thứ hai",
+      "type": "second_highest_gpa_student"
+    },
+    {
+      "name": "Từ 25 đến 89 sinh viên",
+      "type": "student_count_range"
+    },
+    {
+      "name": "25 sinh viên",
+      "type": "student_count"
+    },
+    {
+      "name": "dưới 25 sinh viên",
+      "type": "student_count_threshold"
+    },
+    {
+      "name": "danh hiệu Thủ khoa, Á khoa",
+      "type": "valedictorian_salutatorian_title"
+    },
+    {
+      "name": "ĐTBTL bằng nhau",
+      "type": "equal_gpa"
+    },
+    {
+      "name": "xếp loại rèn luyện giống nhau",
+      "type": "same_training_classification"
+    },
+    {
+      "name": "số điểm rèn luyện",
+      "type": "training_score_count"
+    },
+    {
+      "name": "đồng Thủ khoa, Á khoa",
+      "type": "co_valedictorian_salutatorian"
+    },
+    {
+      "name": "Danh hiệu tốt nghiệp loại Xuất sắc",
+      "type": "excellent_graduation_title"
+    },
+    {
+      "name": "loại Xuất sắc",
+      "type": "excellent_grade"
+    },
+    {
+      "name": "Danh hiệu tốt nghiệp loại Giỏi",
+      "type": "good_graduation_title"
+    },
+    {
+      "name": "loại Giỏi",
+      "type": "good_grade"
+    },
+    {
+      "name": "trường hợp đặc biệt",
+      "type": "special_case"
+    },
+    {
+      "name": "Hội đồng khen thưởng và kỷ luật sinh viên",
+      "type": "student_reward_discipline_council"
+    },
+    {
+      "name": "hệ vừa làm vừa học",
+      "type": "part_time_system"
+    },
+    {
+      "name": "đợt tốt nghiệp đầu tiên",
+      "type": "first_graduation_batch"
+    },
+    {
+      "name": "khối lớp",
+      "type": "cohort"
+    },
+    {
+      "name": "60 sinh viên",
+      "type": "student_count"
+    },
+    {
+      "name": "Từ 25 đến 59 sinh viên",
+      "type": "student_count_range"
+    },
+    {
+      "name": "59 sinh viên",
+      "type": "student_count"
+    },
+    {
+      "name": "nghiên cứu khoa học",
+      "type": "scientific_research"
+    },
+    {
+      "name": "xếp loại giỏi",
+      "type": "good_classification"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "khen thưởng",
+      "target": "sinh viên tốt nghiệp",
+      "relation": "dành_cho",
+      "type_source": "reward",
+      "type_target": "graduating_student"
+    },
+    {
+      "source": "điều kiện chung",
+      "target": "xét khen thưởng",
+      "relation": "cho",
+      "type_source": "general_condition",
+      "type_target": "reward_consideration"
+    },
+    {
+      "source": "xét khen thưởng",
+      "target": "sinh viên tốt nghiệp",
+      "relation": "đối_với",
+      "type_source": "reward_consideration",
+      "type_target": "graduating_student"
+    },
+    {
+      "source": "sinh viên",
+      "target": "mức kỷ luật",
+      "relation": "chịu",
+      "type_source": "student",
+      "type_target": "discipline_level"
+    },
+    {
+      "source": "mức kỷ luật",
+      "target": "toàn khóa học",
+      "relation": "trong",
+      "type_source": "discipline_level",
+      "type_target": "entire_course"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hạ bậc",
+      "relation": "không_bị",
+      "type_source": "student",
+      "type_target": "demotion"
+    },
+    {
+      "source": "hạ bậc",
+      "target": "xét tốt nghiệp",
+      "relation": "khi",
+      "type_source": "demotion",
+      "type_target": "graduation_consideration"
+    },
+    {
+      "source": "học phần thi lại",
+      "target": "sinh viên",
+      "relation": "của",
+      "type_source": "retake_course",
+      "type_target": "student"
+    },
+    {
+      "source": "học phần thi lại",
+      "target": "5%",
+      "relation": "không_vượt_quá",
+      "type_source": "retake_course",
+      "type_target": "percentage"
+    },
+    {
+      "source": "5%",
+      "target": "tổng số tín chỉ",
+      "relation": "của",
+      "type_source": "percentage",
+      "type_target": "total_credits"
+    },
+    {
+      "source": "tổng số tín chỉ",
+      "target": "hệ Vừa làm vừa học",
+      "relation": "của",
+      "type_source": "total_credits",
+      "type_target": "part_time_system"
+    },
+    {
+      "source": "sinh viên",
+      "target": "công nhận",
+      "relation": "đã_được",
+      "type_source": "student",
+      "type_target": "recognition"
+    },
+    {
+      "source": "sinh viên",
+      "target": "điều kiện",
+      "relation": "đủ",
+      "type_source": "student",
+      "type_target": "condition"
+    },
+    {
+      "source": "điều kiện",
+      "target": "cấp bằng tốt nghiệp",
+      "relation": "cấp",
+      "type_source": "condition",
+      "type_target": "graduation_degree_awarding"
+    },
+    {
+      "source": "điểm trung bình học tập tích lũy",
+      "target": "ĐTBTL",
+      "relation": "là_viết_tắt_của",
+      "type_source": "gpa",
+      "type_target": "gpa_acronym"
+    },
+    {
+      "source": "ĐTBTL",
+      "target": "khá trở lên",
+      "relation": "từ",
+      "type_source": "gpa_acronym",
+      "type_target": "good_or_better"
+    },
+    {
+      "source": "ĐTBTL",
+      "target": "điểm rèn luyện",
+      "relation": "và",
+      "type_source": "gpa_acronym",
+      "type_target": "training_score"
+    },
+    {
+      "source": "điểm rèn luyện",
+      "target": "loại tốt trở lên",
+      "relation": "từ",
+      "type_source": "training_score",
+      "type_target": "very_good_or_better"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thời gian thiết kế chương trình đào tạo",
+      "relation": "trước",
+      "type_source": "student",
+      "type_target": "designed_program_duration"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thời gian thiết kế chương trình đào tạo",
+      "relation": "đúng_hoặc",
+      "type_source": "student",
+      "type_target": "designed_program_duration"
+    },
+    {
+      "source": "sinh viên tốt nghiệp hệ chính quy",
+      "target": "danh hiệu khen thưởng",
+      "relation": "dành_cho",
+      "type_source": "full_time_graduating_student",
+      "type_target": "reward_title"
+    },
+    {
+      "source": "sinh viên tốt nghiệp hệ chính quy",
+      "target": "hệ chính quy",
+      "relation": "thuộc",
+      "type_source": "full_time_graduating_student",
+      "type_target": "full_time_system"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Á khoa toàn khóa",
+      "target": "Danh hiệu tốt nghiệp Thủ khoa",
+      "relation": "và",
+      "type_source": "salutatorian_title",
+      "type_target": "valedictorian_title"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Thủ khoa",
+      "target": "Thủ khoa",
+      "relation": "là",
+      "type_source": "valedictorian_title",
+      "type_target": "valedictorian"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Á khoa toàn khóa",
+      "target": "Á khoa",
+      "relation": "là",
+      "type_source": "salutatorian_title",
+      "type_target": "salutatorian"
+    },
+    {
+      "source": "Á khoa toàn khóa",
+      "target": "toàn khóa",
+      "relation": "thuộc",
+      "type_source": "salutatorian_title",
+      "type_target": "whole_course"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Thủ khoa",
+      "target": "ngành học",
+      "relation": "theo",
+      "type_source": "valedictorian_title",
+      "type_target": "major"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Thủ khoa",
+      "target": "khóa học",
+      "relation": "theo",
+      "type_source": "valedictorian_title",
+      "type_target": "course"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Thủ khoa",
+      "target": "sinh viên",
+      "relation": "dành_cho",
+      "type_source": "valedictorian_title",
+      "type_target": "student"
+    },
+    {
+      "source": "sinh viên",
+      "target": "ĐTBTL",
+      "relation": "đạt",
+      "type_source": "student",
+      "type_target": "gpa_acronym"
+    },
+    {
+      "source": "ĐTBTL",
+      "target": "khá trở lên",
+      "relation": "từ_loại",
+      "type_source": "gpa_acronym",
+      "type_target": "good_or_better"
+    },
+    {
+      "source": "ĐTBTL",
+      "target": "xếp loại rèn luyện",
+      "relation": "và",
+      "type_source": "gpa_acronym",
+      "type_target": "training_classification"
+    },
+    {
+      "source": "xếp loại rèn luyện",
+      "target": "loại tốt trở lên",
+      "relation": "từ",
+      "type_source": "training_classification",
+      "type_target": "very_good_or_better"
+    },
+    {
+      "source": "Việc xét danh hiệu tốt nghiệp",
+      "target": "số lượng sinh viên tốt nghiệp",
+      "relation": "căn_cứ_vào",
+      "type_source": "title_consideration",
+      "type_target": "graduating_student_count"
+    },
+    {
+      "source": "số lượng sinh viên tốt nghiệp",
+      "target": "ngành",
+      "relation": "theo",
+      "type_source": "graduating_student_count",
+      "type_target": "major"
+    },
+    {
+      "source": "số lượng sinh viên tốt nghiệp",
+      "target": "khóa",
+      "relation": "theo",
+      "type_source": "graduating_student_count",
+      "type_target": "course"
+    },
+    {
+      "source": "90 sinh viên",
+      "target": "01 Thủ khoa",
+      "relation": "xét",
+      "type_source": "student_count",
+      "type_target": "valedictorian_quantity"
+    },
+    {
+      "source": "90 sinh viên",
+      "target": "01 Á khoa",
+      "relation": "xét",
+      "type_source": "student_count",
+      "type_target": "salutatorian_quantity"
+    },
+    {
+      "source": "01 Thủ khoa",
+      "target": "sinh viên có ĐTBTL cao nhất",
+      "relation": "là",
+      "type_source": "valedictorian_quantity",
+      "type_target": "highest_gpa_student"
+    },
+    {
+      "source": "01 Á khoa",
+      "target": "sinh viên có ĐTBTL cao thứ hai",
+      "relation": "là",
+      "type_source": "salutatorian_quantity",
+      "type_target": "second_highest_gpa_student"
+    },
+    {
+      "source": "Từ 25 đến 89 sinh viên",
+      "target": "01 Thủ khoa",
+      "relation": "xét",
+      "type_source": "student_count_range",
+      "type_target": "valedictorian_quantity"
+    },
+    {
+      "source": "dưới 25 sinh viên",
+      "target": "danh hiệu Thủ khoa, Á khoa",
+      "relation": "không_xét",
+      "type_source": "student_count_threshold",
+      "type_target": "valedictorian_salutatorian_title"
+    },
+    {
+      "source": "sinh viên",
+      "target": "ĐTBTL bằng nhau",
+      "relation": "có",
+      "type_source": "student",
+      "type_target": "equal_gpa"
+    },
+    {
+      "source": "sinh viên",
+      "target": "xếp loại rèn luyện giống nhau",
+      "relation": "và",
+      "type_source": "student",
+      "type_target": "same_training_classification"
+    },
+    {
+      "source": "xét",
+      "target": "số điểm rèn luyện",
+      "relation": "đến",
+      "type_source": "RELATION",
+      "type_target": "training_score_count"
+    },
+    {
+      "source": "công nhận",
+      "target": "đồng Thủ khoa, Á khoa",
+      "relation": "đồng",
+      "type_source": "recognition",
+      "type_target": "co_valedictorian_salutatorian"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp loại Xuất sắc",
+      "target": "sinh viên",
+      "relation": "dành_cho",
+      "type_source": "excellent_graduation_title",
+      "type_target": "student"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp loại Xuất sắc",
+      "target": "loại Xuất sắc",
+      "relation": "loại",
+      "type_source": "excellent_graduation_title",
+      "type_target": "excellent_grade"
+    },
+    {
+      "source": "loại Xuất sắc",
+      "target": "xếp loại rèn luyện",
+      "relation": "và",
+      "type_source": "excellent_grade",
+      "type_target": "training_classification"
+    },
+    {
+      "source": "xếp loại rèn luyện",
+      "target": "loại Xuất sắc",
+      "relation": "loại",
+      "type_source": "training_classification",
+      "type_target": "excellent_grade"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp loại Giỏi",
+      "target": "sinh viên",
+      "relation": "dành_cho",
+      "type_source": "good_graduation_title",
+      "type_target": "student"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp loại Giỏi",
+      "target": "thành tích",
+      "relation": "khen_thưởng_khi_có",
+      "type_source": "good_graduation_title",
+      "type_target": "achievement"
+    },
+    {
+      "source": "thành tích",
+      "target": "hai trường hợp",
+      "relation": "thuộc",
+      "type_source": "achievement",
+      "type_target": "case"
+    },
+    {
+      "source": "ĐTBTL",
+      "target": "loại Xuất sắc",
+      "relation": "xếp_loại",
+      "type_source": "gpa_acronym",
+      "type_target": "excellent_grade"
+    },
+    {
+      "source": "loại Xuất sắc",
+      "target": "xếp loại rèn luyện",
+      "relation": "và",
+      "type_source": "excellent_grade",
+      "type_target": "training_classification"
+    },
+    {
+      "source": "xếp loại rèn luyện",
+      "target": "tốt hoặc khá",
+      "relation": "loại",
+      "type_source": "training_classification",
+      "type_target": "good_or_better"
+    },
+    {
+      "source": "ĐTBTL",
+      "target": "loại giỏi",
+      "relation": "xếp_loại",
+      "type_source": "gpa_acronym",
+      "type_target": "good_grade"
+    },
+    {
+      "source": "loại giỏi",
+      "target": "xếp loại rèn luyện",
+      "relation": "và",
+      "type_source": "good_grade",
+      "type_target": "training_classification"
+    },
+    {
+      "source": "xếp loại rèn luyện",
+      "target": "loại tốt trở lên",
+      "relation": "loại",
+      "type_source": "training_classification",
+      "type_target": "very_good_or_better"
+    },
+    {
+      "source": "trường hợp đặc biệt",
+      "target": "Hội đồng khen thưởng và kỷ luật sinh viên",
+      "relation": "do",
+      "type_source": "special_case",
+      "type_target": "student_reward_discipline_council"
+    },
+    {
+      "source": "Hội đồng khen thưởng và kỷ luật sinh viên",
+      "target": "xem xét",
+      "relation": "xem_xét_và",
+      "type_source": "student_reward_discipline_council",
+      "type_target": "RELATION"
+    },
+    {
+      "source": "Hội đồng khen thưởng và kỷ luật sinh viên",
+      "target": "quyết định",
+      "relation": "quyết_định",
+      "type_source": "student_reward_discipline_council",
+      "type_target": "RELATION"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Thủ khoa",
+      "target": "sinh viên tốt nghiệp hệ vừa làm vừa học",
+      "relation": "dành_cho",
+      "type_source": "valedictorian_title",
+      "type_target": "part_time_graduating_student"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Á khoa",
+      "target": "sinh viên tốt nghiệp hệ vừa làm vừa học",
+      "relation": "dành_cho",
+      "type_source": "salutatorian_title",
+      "type_target": "part_time_graduating_student"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Thủ khoa",
+      "target": "đợt tốt nghiệp đầu tiên",
+      "relation": "trong",
+      "type_source": "valedictorian_title",
+      "type_target": "first_graduation_batch"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Thủ khoa",
+      "target": "khối lớp",
+      "relation": "theo",
+      "type_source": "valedictorian_title",
+      "type_target": "cohort"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp Thủ khoa",
+      "target": "sinh viên",
+      "relation": "dành_cho",
+      "type_source": "valedictorian_title",
+      "type_target": "student"
+    },
+    {
+      "source": "sinh viên",
+      "target": "ĐTBTL",
+      "relation": "đạt",
+      "type_source": "student",
+      "type_target": "gpa_acronym"
+    },
+    {
+      "source": "ĐTBTL",
+      "target": "khá trở lên",
+      "relation": "từ_loại",
+      "type_source": "gpa_acronym",
+      "type_target": "good_or_better"
+    },
+    {
+      "source": "Việc xét danh hiệu tốt nghiệp",
+      "target": "số lượng sinh viên tốt nghiệp",
+      "relation": "căn_cứ_vào",
+      "type_source": "title_consideration",
+      "type_target": "graduating_student_count"
+    },
+    {
+      "source": "số lượng sinh viên tốt nghiệp",
+      "target": "khối lớp",
+      "relation": "theo",
+      "type_source": "graduating_student_count",
+      "type_target": "cohort"
+    },
+    {
+      "source": "Đợt tốt nghiệp",
+      "target": "60 sinh viên",
+      "relation": "có_từ",
+      "type_source": "graduation_batch",
+      "type_target": "student_count"
+    },
+    {
+      "source": "60 sinh viên",
+      "target": "01 Thủ khoa",
+      "relation": "xét",
+      "type_source": "student_count",
+      "type_target": "valedictorian_quantity"
+    },
+    {
+      "source": "60 sinh viên",
+      "target": "01 Á khoa",
+      "relation": "xét",
+      "type_source": "student_count",
+      "type_target": "salutatorian_quantity"
+    },
+    {
+      "source": "Đợt tốt nghiệp",
+      "target": "Từ 25 đến 59 sinh viên",
+      "relation": "có_từ",
+      "type_source": "graduation_batch",
+      "type_target": "student_count_range"
+    },
+    {
+      "source": "Từ 25 đến 59 sinh viên",
+      "target": "01 Thủ khoa",
+      "relation": "xét",
+      "type_source": "student_count_range",
+      "type_target": "valedictorian_quantity"
+    },
+    {
+      "source": "Đợt tốt nghiệp",
+      "target": "dưới 25 sinh viên",
+      "relation": "có",
+      "type_source": "graduation_batch",
+      "type_target": "student_count_threshold"
+    },
+    {
+      "source": "dưới 25 sinh viên",
+      "target": "danh hiệu Thủ khoa, Á khoa",
+      "relation": "không_xét",
+      "type_source": "student_count_threshold",
+      "type_target": "valedictorian_salutatorian_title"
+    },
+    {
+      "source": "sinh viên",
+      "target": "ĐTBTL bằng nhau",
+      "relation": "có",
+      "type_source": "student",
+      "type_target": "equal_gpa"
+    },
+    {
+      "source": "ưu tiên chọn",
+      "target": "sinh viên",
+      "relation": "sinh_viên",
+      "type_source": "prioritize_selection",
+      "type_target": "student"
+    },
+    {
+      "source": "sinh viên",
+      "target": "nghiên cứu khoa học",
+      "relation": "có_thành_tích_trong",
+      "type_source": "student",
+      "type_target": "scientific_research"
+    },
+    {
+      "source": "sinh viên",
+      "target": "đồng Thủ khoa, Á khoa",
+      "relation": "hoặc",
+      "type_source": "student",
+      "type_target": "co_valedictorian_salutatorian"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp loại Xuất sắc",
+      "target": "sinh viên",
+      "relation": "dành_cho",
+      "type_source": "excellent_graduation_title",
+      "type_target": "student"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp loại Xuất sắc",
+      "target": "ĐTBTL",
+      "relation": "khi_có",
+      "type_source": "excellent_graduation_title",
+      "type_target": "gpa_acronym"
+    },
+    {
+      "source": "ĐTBTL",
+      "target": "loại Xuất sắc",
+      "relation": "xếp_loại",
+      "type_source": "gpa_acronym",
+      "type_target": "excellent_grade"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp loại Giỏi",
+      "target": "sinh viên",
+      "relation": "dành_cho",
+      "type_source": "good_graduation_title",
+      "type_target": "student"
+    },
+    {
+      "source": "Danh hiệu tốt nghiệp loại Giỏi",
+      "target": "ĐTBTL",
+      "relation": "khi_có",
+      "type_source": "good_graduation_title",
+      "type_target": "gpa_acronym"
+    },
+    {
+      "source": "ĐTBTL",
+      "target": "xếp loại giỏi",
+      "relation": "xếp_loại",
+      "type_source": "gpa_acronym",
+      "type_target": "good_classification"
+    }
+  ]
+}

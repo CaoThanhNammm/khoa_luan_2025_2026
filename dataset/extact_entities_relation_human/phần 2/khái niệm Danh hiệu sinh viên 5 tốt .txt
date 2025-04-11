@@ -1,0 +1,246 @@
+{
+  "entities": [
+    {
+      "name": "Danh hiệu “Sinh viên 5 tốt”",
+      "type": "TITLE"
+    },
+    {
+      "name": "sinh viên Việt Nam",
+      "type": "VIETNAMESE_STUDENT"
+    },
+    {
+      "name": "sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "trường Đại học Nông Lâm TP.HCM",
+      "type": "UNIVERSITY"
+    },
+    {
+      "name": "TP.HCM",
+      "type": "CITY"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "uy tín",
+      "type": "PRESTIGE"
+    },
+    {
+      "name": "minh chứng",
+      "type": "EVIDENCE"
+    },
+    {
+      "name": "động lực",
+      "type": "MOTIVATION"
+    },
+    {
+      "name": "sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "lý tưởng",
+      "type": "IDEAL"
+    },
+    {
+      "name": "hành trang",
+      "type": "PREPARATION"
+    },
+    {
+      "name": "lập thân",
+      "type": "CAREER_ESTABLISHMENT"
+    },
+    {
+      "name": "lập nghiệp",
+      "type": "BUSINESS_ESTABLISHMENT"
+    },
+    {
+      "name": "hạn chế",
+      "type": "LIMITATION"
+    },
+    {
+      "name": "yếu kém",
+      "type": "WEAKNESS"
+    },
+    {
+      "name": "bản thân",
+      "type": "SELF"
+    },
+    {
+      "name": "danh hiệu",
+      "type": "TITLE"
+    },
+    {
+      "name": "sinh viên",
+      "type": "STUDENT"
+    },
+    {
+      "name": "05 tiêu chí",
+      "type": "CRITERIA"
+    },
+    {
+      "name": "Đạo đức tốt",
+      "type": "MORALITY"
+    },
+    {
+      "name": "Học tập tốt",
+      "type": "STUDY"
+    },
+    {
+      "name": "Thể lực tốt",
+      "type": "PHYSICAL_STRENGTH"
+    },
+    {
+      "name": "Tình nguyện tốt",
+      "type": "VOLUNTEERING"
+    },
+    {
+      "name": "Hội nhập tốt",
+      "type": "INTEGRATION"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Danh hiệu “Sinh viên 5 tốt”",
+      "target": "sinh viên Việt Nam",
+      "relation": "của",
+      "type_source": "TITLE",
+      "type_target": "VIETNAMESE_STUDENT"
+    },
+    {
+      "source": "sinh viên trường Đại học Nông Lâm TP.HCM",
+      "target": "sinh viên Việt Nam",
+      "relation": "thuộc",
+      "type_source": "UNIVERSITY",
+      "type_target": "VIETNAMESE_STUDENT"
+    },
+    {
+      "source": "Danh hiệu “Sinh viên 5 tốt”",
+      "target": "Sinh viên",
+      "relation": "là",
+      "type_source": "TITLE",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "Danh hiệu “Sinh viên 5 tốt”",
+      "target": "uy tín",
+      "relation": "là",
+      "type_source": "TITLE",
+      "type_target": "PRESTIGE"
+    },
+    {
+      "source": "Danh hiệu “Sinh viên 5 tốt”",
+      "target": "minh chứng",
+      "relation": "là",
+      "type_source": "TITLE",
+      "type_target": "EVIDENCE"
+    },
+    {
+      "source": "Danh hiệu “Sinh viên 5 tốt”",
+      "target": "động lực",
+      "relation": "là",
+      "type_source": "TITLE",
+      "type_target": "MOTIVATION"
+    },
+    {
+      "source": "động lực",
+      "target": "sinh viên",
+      "relation": "cho",
+      "type_source": "MOTIVATION",
+      "type_target": "STUDENT"
+    },
+    {
+      "source": "hành trang",
+      "target": "lập thân",
+      "relation": "dùng_cho",
+      "type_source": "PREPARATION",
+      "type_target": "CAREER_ESTABLISHMENT"
+    },
+    {
+      "source": "hành trang",
+      "target": "lập nghiệp",
+      "relation": "dùng_cho",
+      "type_source": "PREPARATION",
+      "type_target": "BUSINESS_ESTABLISHMENT"
+    },
+    {
+      "source": "hạn chế",
+      "target": "bản thân",
+      "relation": "của",
+      "type_source": "LIMITATION",
+      "type_target": "SELF"
+    },
+    {
+      "source": "yếu kém",
+      "target": "bản thân",
+      "relation": "của",
+      "type_source": "WEAKNESS",
+      "type_target": "SELF"
+    },
+    {
+      "source": "sinh viên",
+      "target": "hạn chế",
+      "relation": "khắc_phục",
+      "type_source": "STUDENT",
+      "type_target": "LIMITATION"
+    },
+    {
+      "source": "sinh viên",
+      "target": "yếu kém",
+      "relation": "khắc_phục",
+      "type_source": "STUDENT",
+      "type_target": "WEAKNESS"
+    },
+    {
+      "source": "sinh viên",
+      "target": "danh hiệu",
+      "relation": "đạt_được",
+      "type_source": "STUDENT",
+      "type_target": "TITLE"
+    },
+    {
+      "source": "danh hiệu",
+      "target": "05 tiêu chí",
+      "relation": "yêu_cầu",
+      "type_source": "TITLE",
+      "type_target": "CRITERIA"
+    },
+    {
+      "source": "05 tiêu chí",
+      "target": "Đạo đức tốt",
+      "relation": "bao_gồm",
+      "type_source": "CRITERIA",
+      "type_target": "MORALITY"
+    },
+    {
+      "source": "05 tiêu chí",
+      "target": "Học tập tốt",
+      "relation": "bao_gồm",
+      "type_source": "CRITERIA",
+      "type_target": "STUDY"
+    },
+    {
+      "source": "05 tiêu chí",
+      "target": "Thể lực tốt",
+      "relation": "bao_gồm",
+      "type_source": "CRITERIA",
+      "type_target": "PHYSICAL_STRENGTH"
+    },
+    {
+      "source": "05 tiêu chí",
+      "target": "Tình nguyện tốt",
+      "relation": "bao_gồm",
+      "type_source": "CRITERIA",
+      "type_target": "VOLUNTEERING"
+    },
+    {
+      "source": "05 tiêu chí",
+      "target": "Hội nhập tốt",
+      "relation": "bao_gồm",
+      "type_source": "CRITERIA",
+      "type_target": "INTEGRATION"
+    }
+  ]
+}

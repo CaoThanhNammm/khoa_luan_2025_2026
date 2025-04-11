@@ -1,0 +1,238 @@
+{
+  "entities": [
+    {
+      "name": "Quỹ Tín dụng học tập dành cho sinh viên",
+      "type": "loan_fund"
+    },
+    {
+      "name": "sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "năm 1998",
+      "type": "date"
+    },
+    {
+      "name": "sinh viên có hoàn cảnh khó khăn",
+      "type": "disadvantaged_student"
+    },
+    {
+      "name": "vay vốn",
+      "type": "loan"
+    },
+    {
+      "name": "Ngân hàng Chính sách Xã hội",
+      "type": "organization"
+    },
+    {
+      "name": "NHCSXH",
+      "type": "organization_abbreviation"
+    },
+    {
+      "name": "Quỹ",
+      "type": "loan_fund"
+    },
+    {
+      "name": "Vốn vay",
+      "type": "loan_capital"
+    },
+    {
+      "name": "sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "chi phí",
+      "type": "expense"
+    },
+    {
+      "name": "việc học tập",
+      "type": "learning_activity"
+    },
+    {
+      "name": "sinh hoạt",
+      "type": "daily_life"
+    },
+    {
+      "name": "thời gian",
+      "type": "time"
+    },
+    {
+      "name": "trường",
+      "type": "university"
+    },
+    {
+      "name": "tiền học phí",
+      "type": "tuition_fee"
+    },
+    {
+      "name": "chi phí mua sắm phương tiện học tập",
+      "type": "learning_material_cost"
+    },
+    {
+      "name": "sách vở",
+      "type": "study_materials"
+    },
+    {
+      "name": "chi phí ăn, ở, đi lại",
+      "type": "living_cost"
+    },
+    {
+      "name": "Trường Đại học Nông Lâm TP.HCM",
+      "type": "university"
+    },
+    {
+      "name": "hồ sơ",
+      "type": "application_document"
+    },
+    {
+      "name": "3.000 sinh viên",
+      "type": "quantity_student"
+    },
+    {
+      "name": "hồ sơ thủ tục vay vốn học tập",
+      "type": "loan_application_procedure"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Quỹ Tín dụng học tập dành cho sinh viên",
+      "target": "năm 1998",
+      "relation": "thành_lập_năm",
+      "type_source": "loan_fund",
+      "type_target": "date"
+    },
+    {
+      "source": "Quỹ Tín dụng học tập dành cho sinh viên",
+      "target": "sinh viên có hoàn cảnh khó khăn",
+      "relation": "dành_cho",
+      "type_source": "loan_fund",
+      "type_target": "disadvantaged_student"
+    },
+    {
+      "source": "sinh viên có hoàn cảnh khó khăn",
+      "target": "vay vốn",
+      "relation": "vay",
+      "type_source": "disadvantaged_student",
+      "type_target": "loan"
+    },
+    {
+      "source": "vay vốn",
+      "target": "học tập",
+      "relation": "để",
+      "type_source": "loan",
+      "type_target": "learning_activity"
+    },
+    {
+      "source": "Quỹ",
+      "target": "Ngân hàng Chính sách Xã hội",
+      "relation": "quản_lý_bởi",
+      "type_source": "loan_fund",
+      "type_target": "organization"
+    },
+    {
+      "source": "Quỹ",
+      "target": "NHCSXH",
+      "relation": "quản_lý_bởi",
+      "type_source": "loan_fund",
+      "type_target": "organization_abbreviation"
+    },
+    {
+      "source": "Vốn vay",
+      "target": "Quỹ",
+      "relation": "từ",
+      "type_source": "loan_capital",
+      "type_target": "loan_fund"
+    },
+    {
+      "source": "Vốn vay",
+      "target": "sinh viên",
+      "relation": "giúp",
+      "type_source": "loan_capital",
+      "type_target": "student"
+    },
+    {
+      "source": "sinh viên",
+      "target": "chi phí",
+      "relation": "trang_trải",
+      "type_source": "student",
+      "type_target": "expense"
+    },
+    {
+      "source": "chi phí",
+      "target": "việc học tập",
+      "relation": "cho",
+      "type_source": "expense",
+      "type_target": "learning_activity"
+    },
+    {
+      "source": "chi phí",
+      "target": "sinh hoạt",
+      "relation": "cho",
+      "type_source": "expense",
+      "type_target": "daily_life"
+    },
+    {
+      "source": "sinh viên",
+      "target": "thời gian",
+      "relation": "trong",
+      "type_source": "student",
+      "type_target": "time"
+    },
+    {
+      "source": "thời gian",
+      "target": "trường",
+      "relation": "tại",
+      "type_source": "time",
+      "type_target": "university"
+    },
+    {
+      "source": "chi phí",
+      "target": "tiền học phí",
+      "relation": "gồm",
+      "type_source": "expense",
+      "type_target": "tuition_fee"
+    },
+    {
+      "source": "chi phí",
+      "target": "chi phí mua sắm phương tiện học tập",
+      "relation": "gồm",
+      "type_source": "expense",
+      "type_target": "learning_material_cost"
+    },
+    {
+      "source": "chi phí",
+      "target": "sách vở",
+      "relation": "gồm",
+      "type_source": "expense",
+      "type_target": "study_materials"
+    },
+    {
+      "source": "chi phí",
+      "target": "chi phí ăn, ở, đi lại",
+      "relation": "gồm",
+      "type_source": "expense",
+      "type_target": "living_cost"
+    },
+    {
+      "source": "Trường Đại học Nông Lâm TP.HCM",
+      "target": "hồ sơ",
+      "relation": "xác_nhận",
+      "type_source": "university",
+      "type_target": "application_document"
+    },
+    {
+      "source": "hồ sơ",
+      "target": "3.000 sinh viên",
+      "relation": "cho",
+      "type_source": "application_document",
+      "type_target": "quantity_student"
+    },
+    {
+      "source": "3.000 sinh viên",
+      "target": "hồ sơ thủ tục vay vốn học tập",
+      "relation": "làm",
+      "type_source": "quantity_student",
+      "type_target": "loan_application_procedure"
+    }
+  ]
+}

@@ -4,12 +4,15 @@ from PreProcessing.PreProcessing import PreProcessing
 pre_processing = PreProcessing()
 from dotenv import load_dotenv
 load_dotenv()
+import json
 
-def add_entities_relationship(json_string, part):
+def add_entities_relationship(json_string, type_part, part):
     json_string = list(map(lambda s: s.lower(), json_string))
+    print(json_string)
     json = []
     # đổi từ string sang json
     for s in json_string:
+        print(s)
         json.append(pre_processing.string_to_json(s))
 
     entities = []
@@ -18,45 +21,17 @@ def add_entities_relationship(json_string, part):
     for j in json:
         entities.extend(j['entities'])
         relationships.extend(j['relationships'])
+
+    # change_to_json = json.loads(json_string)
+    #
+    # entities = change_to_json['entities']
+    # relationships = change_to_json['relationships']
+
     print(entities)
     neo.add_entities(entities)
 
-    neo.add_relationships(relationships, part)
+    neo.add_relationships(relationships, type_part, part)
     print("thêm hoàn tất")
-
-def get_path(type, part):
-    result = neo.get_path(type, part)
-    i = 1
-
-    for record in result:
-        print(i)
-
-        path = []
-        relationships = record['relationship']
-        for rel in relationships:
-            # Lấy thông tin từ Relationship
-            start_node = rel.start_node
-            end_node = rel.end_node
-            rel_type = rel.type
-
-            # Lấy thông tin từ start_node
-            start_node_labels = list(start_node.labels)[0]
-            start_node_name = start_node.get("name")
-
-            # Lấy thông tin từ end_node
-            end_node_labels = list(end_node.labels)[0]
-            end_node_name = end_node.get("name")
-
-            path.append({
-                "source": start_node_name,
-                "type_source": start_node_labels,
-                "target": end_node_name,
-                "type_target": end_node_labels,
-                "relation": rel_type,
-
-            })
-        i += 1
-        print(path)
 
 
 def get_owned_entities(type, part, relation):
@@ -90,13 +65,6 @@ def get_owned_entities(type, part, relation):
         i += 1
         print(connect)
 
-def jaccard_similarity(str1, str2):
-    set1 = set(str1.lower().split())
-    set2 = set(str2.lower().split())
-    intersection = len(set1 & set2)
-    union = len(set1 | set2)
-    return intersection / union if union != 0 else 0
-
 
 if __name__ == "__main__":
     # Thay đổi thông tin kết nối theo cấu hình Neo4j của bạn
@@ -108,266 +76,307 @@ if __name__ == "__main__":
     neo = Neo4j(uri, user, password)
 
     # 1. Thêm các entities và relationships cấp cao
-    # neo.add_entities_relation_highest()
+    neo.add_entities_relation_highest()
 
     # 2. thêm entities và relationship vào neo4j
+    type_part = "article"
+
+    json_string = []
+
+    part = []
     json_string = [
-    """{
+        """{
   "entities": [
-    {"name": "Trường Đại học Nông Lâm TP.HCM", "type": "organization"},
-    {"name": "giảng dạy trực tuyến", "type": "teaching_method"},
-    {"name": "giảng dạy online – offline", "type": "teaching_method"},
-    {"name": "30%", "type": "percentage"},
-    {"name": "chương trình đào tạo", "type": "event"},
-    {"name": "dịch bệnh", "type": "event"},
-    {"name": "thiên tai", "type": "event"},
-    {"name": "Hiệu trưởng", "type": "person"},
-    {"name": "Hệ thống Đào tạo trực tuyến", "type": "system"},
-    {"name": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh", "type": "organization"},
-    {"name": "e-Learning – NLU", "type": "system"},
-    {"name": "cổng đào tạo trực tuyến", "type": "platform"},
-    {"name": "hệ thống quản lý học tập", "type": "platform"},
-    {"name": "học liệu điện tử", "type": "document"},
-    {"name": "diễn đàn trao đổi", "type": "platform"},
-    {"name": "thảo luận trực tuyến", "type": "event"},
-    {"name": "hệ thống kiểm tra, đánh giá sinh viên", "type": "system"},
-    {"name": "giảng viên", "type": "person"},
-    {"name": "Edmodo", "type": "platform"},
-    {"name": "Zoom", "type": "platform"},
-    {"name": "Google meet", "type": "platform"},
-    {"name": "Microsoft team", "type": "platform"},
-    {"name": "Skype", "type": "platform"},
-    {"name": "máy tính", "type": "device"},
-    {"name": "thiết bị di động thông minh", "type": "device"},
-    {"name": "học phần", "type": "event"},
-    {"name": "sinh viên", "type": "person"},
-    {"name": "chuẩn đầu ra", "type": "criteria"},
-    {"name": "thang điểm 10", "type": "data"},
-    {"name": "đề cương chi tiết", "type": "document"},
-    {"name": "50%", "type": "percentage"},
-    {"name": "Khoa", "type": "organization"},
-    {"name": "Bộ môn", "type": "organization"},
-    {"name": "thi cuối kỳ", "type": "event"},
-    {"name": "Trưởng Khoa", "type": "person"},
-    {"name": "ngân hàng câu hỏi", "type": "document"},
-    {"name": "đề thi", "type": "document"},
-    {"name": "đáp án", "type": "document"},
-    {"name": "hướng dẫn chấm thi", "type": "document"},
-    {"name": "thực hành", "type": "teaching_method"},
-    {"name": "thực tập", "type": "teaching_method"},
-    {"name": "thi tay nghề", "type": "event"},
-    {"name": "nghiệp vụ", "type": "event"},
-    {"name": "thao tác kỹ thuật", "type": "event"},
-    {"name": "thiên tai", "type": "event"},
-    {"name": "dịch bệnh", "type": "event"},
-    {"name": "đồ án", "type": "assignment"},
-    {"name": "tiểu luận", "type": "assignment"},
-    {"name": "khóa luận", "type": "assignment"},
-    {"name": "hội đồng chuyên môn", "type": "organization"},
-    {"name": "3 thành viên", "type": "data"},
-    {"name": "tài khoản", "type": "account"},
-    {"name": "lớp học", "type": "event"},
-    {"name": "diễn đàn thảo luận", "type": "platform"},
-    {"name": "tài liệu học tập", "type": "document"},
-    {"name": "hồ sơ cá nhân", "type": "document"},
-    {"name": "hình đại diện", "type": "image"},
-    {"name": "chữ ký", "type": "document"},
-    {"name": "đường link lớp học", "type": "link"},
-    {"name": "nhiệm vụ", "type": "task"},
-    {"name": "giảng viên", "type": "person"},
-    {"name": "05 - 10 phút", "type": "time"},
-    {"name": "email", "type": "email_address"},
-    {"name": "micro", "type": "device"},
-    {"name": "camera", "type": "device"},
-    {"name": "Raise hand", "type": "feature"},
-    {"name": "Lower hand", "type": "feature"},
-    {"name": "màn hình cá nhân", "type": "device"}
+    {
+      "name": "giấy tờ",
+      "type": "document"
+    },
+    {
+      "name": "Vay vốn ngân hàng chính sách xã hội",
+      "type": "document_type"
+    },
+    {
+      "name": "ngân hàng chính sách xã hội",
+      "type": "organization"
+    },
+    {
+      "name": "Tạm hoãn nghĩa vụ quân sự",
+      "type": "document_type"
+    },
+    {
+      "name": "Đi xe buýt",
+      "type": "document_type"
+    },
+    {
+      "name": "Bổ sung hồ sơ nhận trợ cấp",
+      "type": "document_type"
+    },
+    {
+      "name": "Bổ sung hồ sơ làm lại thẻ sinh viên",
+      "type": "document_type"
+    },
+    {
+      "name": "thẻ sinh viên",
+      "type": "student_card"
+    },
+    {
+      "name": "Bổ sung hồ sơ thuế cho người thân",
+      "type": "document_type"
+    },
+    {
+      "name": "thuế",
+      "type": "tax_document"
+    },
+    {
+      "name": "người thân",
+      "type": "relative"
+    },
+    {
+      "name": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+      "type": "document_type"
+    },
+    {
+      "name": "ký túc xá",
+      "type": "dormitory_document"
+    },
+    {
+      "name": "Đại học Quốc gia TP.HCM",
+      "type": "university"
+    },
+    {
+      "name": "Bổ sung hồ sơ thi học kỳ, thi acces",
+      "type": "document_type"
+    },
+    {
+      "name": "thi học kỳ",
+      "type": "exam_document"
+    },
+    {
+      "name": "thi acces",
+      "type": "exam_document"
+    },
+    {
+      "name": "Bổ sung hồ sơ lý lịch cá nhân",
+      "type": "document_type"
+    },
+    {
+      "name": "lý lịch cá nhân",
+      "type": "personal_profile"
+    },
+    {
+      "name": "Bổ sung hồ sơ nhận học bổng",
+      "type": "document_type"
+    },
+    {
+      "name": "học bổng",
+      "type": "scholarship_document"
+    },
+    {
+      "name": "Bổ sung hồ sơ giảm trừ gia cảnh",
+      "type": "document_type"
+    },
+    {
+      "name": "giảm trừ gia cảnh",
+      "type": "family_deduction_document"
+    },
+    {
+      "name": "Bổ sung hồ sơ đi làm, đi thực tập",
+      "type": "document_type"
+    },
+    {
+      "name": "đi làm",
+      "type": "work_document"
+    },
+    {
+      "name": "đi thực tập",
+      "type": "internship_document"
+    }
   ],
   "relationships": [
-    {"source": "Trường Đại học Nông Lâm TP.HCM", "target": "giảng dạy trực tuyến", "relation": "TĂNG_CƯỜNG", "type_source": "organization", "type_target": "teaching_method"},
-    {"source": "Trường Đại học Nông Lâm TP.HCM", "target": "giảng dạy online – offline", "relation": "ÁP_DỤNG", "type_source": "organization", "type_target": "teaching_method"},
-    {"source": "giảng dạy online", "target": "30%", "relation": "KHÔNG_VƯỢT_QUÁ", "type_source": "teaching_method", "type_target": "percentage"},
-    {"source": "giảng dạy online", "target": "số giờ tín chỉ", "relation": "CỦA", "type_source": "teaching_method", "type_target": "data"},
-    {"source": "giảng dạy online", "target": "chương trình đào tạo", "relation": "CỦA", "type_source": "teaching_method", "type_target": "event"},
-    {"source": "dịch bệnh", "target": "Hiệu trưởng", "relation": "CHỈ_ĐẠO", "type_source": "event", "type_target": "person"},
-    {"source": "thiên tai", "target": "Hiệu trưởng", "relation": "CHỈ_ĐẠO", "type_source": "event", "type_target": "person"},
-    {"source": "trường hợp đặc biệt", "target": "Hiệu trưởng", "relation": "CHỈ_ĐẠO", "type_source": "concept", "type_target": "person"},
-    {"source": "Hiệu trưởng", "target": "văn bản", "relation": "CÓ", "type_source": "person", "type_target": "document"},
-    {"source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh", "target": "Hệ thống Đào tạo trực tuyến", "relation": "TẠI", "type_source": "organization", "type_target": "system"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "e-Learning – NLU", "relation": "LÀ", "type_source": "system", "type_target": "system"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "trang thiết bị", "relation": "BAO_GỒM", "type_source": "system", "type_target": "device"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "cơ sở hạ tầng kỹ thuật", "relation": "BAO_GỒM", "type_source": "system", "type_target": "infrastructure"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "cơ sở dữ liệu", "relation": "BAO_GỒM", "type_source": "system", "type_target": "data"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "nguồn nhân lực", "relation": "BAO_GỒM", "type_source": "system", "type_target": "resource"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "tài nguyên hỗ trợ", "relation": "BAO_GỒM", "type_source": "system", "type_target": "resource"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "giảng dạy", "relation": "PHỤC_VỤ", "type_source": "system", "type_target": "activity"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "học tập", "relation": "PHỤC_VỤ", "type_source": "system", "type_target": "activity"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "cổng đào tạo trực tuyến", "relation": "BAO_GỒM", "type_source": "system", "type_target": "platform"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "hệ thống quản lý học tập", "relation": "BAO_GỒM", "type_source": "system", "type_target": "platform"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "học liệu điện tử", "relation": "BAO_GỒM", "type_source": "system", "type_target": "document"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "diễn đàn trao đổi", "relation": "BAO_GỒM", "type_source": "system", "type_target": "platform"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "thảo luận trực tuyến", "relation": "BAO_GỒM", "type_source": "system", "type_target": "event"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "hệ thống kiểm tra, đánh giá sinh viên", "relation": "BAO_GỒM", "type_source": "system", "type_target": "system"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "giảng viên", "relation": "BAO_GỒM", "type_source": "system", "type_target": "person"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "quản trị hệ thống", "relation": "BAO_GỒM", "type_source": "system", "type_target": "activity"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "Edmodo", "relation": "PHÁT_TRIỂN_TRÊN", "type_source": "system", "type_target": "platform"},
-    {"source": "Hệ thống Đào tạo trực tuyến", "target": "quy định pháp luật", "relation": "ĐẢM_BẢO", "type_source": "system", "type_target": "regulation"},
-    {"source": "giảng dạy", "target": "Zoom", "relation": "TRÊN", "type_source": "activity", "type_target": "platform"},
-    {"source": "giảng dạy", "target": "Google meet", "relation": "TRÊN", "type_source": "activity", "type_target": "platform"},
-    {"source": "giảng dạy", "target": "Microsoft team", "relation": "TRÊN", "type_source": "activity", "type_target": "platform"},
-    {"source": "giảng dạy", "target": "Skype", "relation": "TRÊN", "type_source": "activity", "type_target": "platform"},
-    {"source": "giảng viên", "target": "công cụ", "relation": "CHỌN", "type_source": "person", "type_target": "tool"},
-    {"source": "giảng viên", "target": "lớp học", "relation": "ĐĂNG_KÝ", "type_source": "person", "type_target": "event"},
-    {"source": "giảng viên", "target": "sinh viên", "relation": "THÔNG_BÁO", "type_source": "person", "type_target": "person"},
-    {"source": "kiểm tra", "target": "đánh giá", "relation": "KẾT_HỢP", "type_source": "activity", "type_target": "activity"},
-    {"source": "đánh giá trực tuyến", "target": "nghiêm túc", "relation": "PHẢI", "type_source": "activity", "type_target": "concept"},
-    {"source": "đánh giá trực tuyến", "target": "đầy đủ", "relation": "PHẢI", "type_source": "activity", "type_target": "concept"},
-    {"source": "đánh giá trực tuyến", "target": "mức độ chuyên cần", "relation": "ĐÁNH_GIÁ", "type_source": "activity", "type_target": "data"},
-    {"source": "đánh giá trực tuyến", "target": "năng lực", "relation": "ĐÁNH_GIÁ", "type_source": "activity", "type_target": "concept"},
-    {"source": "đánh giá trực tuyến", "target": "chuẩn đầu ra", "relation": "ĐÁNH_GIÁ", "type_source": "activity", "type_target": "criteria"},
-    {"source": "học phần", "target": "điểm đánh giá", "relation": "TÍNH_LÀ_THÀNH_PHẦN", "type_source": "event", "type_target": "data"},
-    {"source": "điểm thành phần", "target": "thang điểm 10", "relation": "THEO", "type_source": "data", "type_target": "data"},
-    {"source": "điểm thành phần", "target": "đề cương chi tiết", "relation": "ĐƯỢC_QUY_ĐỊNH_TRONG", "type_source": "data", "type_target": "document"},
-    {"source": "điểm đánh giá", "target": "50%", "relation": "KHÔNG_QUÁ", "type_source": "data", "type_target": "percentage"},
-    {"source": "Khoa", "target": "thi cuối kỳ", "relation": "TỔ_CHỨC", "type_source": "organization", "type_target": "event"},
-    {"source": "Bộ môn", "target": "thi cuối kỳ", "relation": "TỔ_CHỨC", "type_source": "organization", "type_target": "event"},
-    {"source": "Trưởng Khoa", "target": "thi cuối kỳ", "relation": "ĐỀ_XUẤT", "type_source": "person", "type_target": "event"},
-    {"source": "Hiệu trưởng", "target": "thi cuối kỳ", "relation": "QUYẾT_ĐỊNH", "type_source": "person", "type_target": "event"},
-    {"source": "thi trực tuyến", "target": "trang thiết bị", "relation": "CẦN", "type_source": "event", "type_target": "device"},
-    {"source": "thi trực tuyến", "target": "phần mềm", "relation": "CẦN", "type_source": "event", "type_target": "software"},
-    {"source": "thi trực tuyến", "target": "ngân hàng câu hỏi", "relation": "CẦN", "type_source": "event", "type_target": "document"},
-    {"source": "Hiệu trưởng", "target": "văn bản", "relation": "BAN_HÀNH", "type_source": "person", "type_target": "document"},
-    {"source": "thi cuối kỳ", "target": "thực hành", "relation": "KHÔNG_TỔ_CHỨC", "type_source": "event", "type_target": "teaching_method"},
-    {"source": "thi cuối kỳ", "target": "thực tập", "relation": "KHÔNG_TỔ_CHỨC", "type_source": "event", "type_target": "teaching_method"},
-    {"source": "Trưởng Khoa", "target": "trường hợp đặc biệt", "relation": "ĐỀ_XUẤT", "type_source": "person", "type_target": "concept"},
-    {"source": "Hiệu trưởng", "target": "trường hợp đặc biệt", "relation": "QUYẾT_ĐỊNH", "type_source": "person", "type_target": "concept"},
-    {"source": "thiên tai", "target": "bảo vệ", "relation": "TỔ_CHỨC", "type_source": "event", "type_target": "event"},
-    {"source": "dịch bệnh", "target": "bảo vệ", "relation": "TỔ_CHỨC", "type_source": "event", "type_target": "event"},
-    {"source": "trường hợp bất khả kháng", "target": "bảo vệ", "relation": "TỔ_CHỨC", "type_source": "concept", "type_target": "event"},
-    {"source": "Hiệu trưởng", "target": "bảo vệ", "relation": "QUYẾT_ĐỊNH", "type_source": "person", "type_target": "event"},
-    {"source": "Trưởng khoa", "target": "bảo vệ", "relation": "ĐỀ_XUẤT", "type_source": "person", "type_target": "event"},
-    {"source": "bảo vệ", "target": "hội đồng chuyên môn", "relation": "THÔNG_QUA", "type_source": "event", "type_target": "organization"},
-    {"source": "bảo vệ", "target": "thành viên hội đồng", "relation": "ĐƯỢC_ĐỒNG_THUẬN", "type_source": "event", "type_target": "person"},
-    {"source": "bảo vệ", "target": "sinh viên", "relation": "ĐƯỢC_ĐỒNG_THUẬN", "type_source": "event", "type_target": "person"},
-    {"source": "bảo vệ", "target": "ghi hình", "relation": "ĐƯỢC", "type_source": "event", "type_target": "activity"},
-    {"source": "bảo vệ", "target": "ghi âm", "relation": "ĐƯỢC", "type_source": "event", "type_target": "activity"},
-    {"source": "sinh viên", "target": "tài khoản", "relation": "ĐƯỢC_CUNG_CẤP", "type_source": "person", "type_target": "account"},
-    {"source": "sinh viên", "target": "hướng dẫn", "relation": "ĐƯỢC", "type_source": "person", "type_target": "document"},
-    {"source": "sinh viên", "target": "hỗ trợ", "relation": "ĐƯỢC", "type_source": "person", "type_target": "activity"},
-    {"source": "sinh viên", "target": "lớp học", "relation": "TRUY_CẬP", "type_source": "person", "type_target": "event"},
-    {"source": "sinh viên", "target": "học tập", "relation": "THAM_GIA", "type_source": "person", "type_target": "activity"},
-    {"source": "sinh viên", "target": "diễn đàn thảo luận", "relation": "THAM_GIA", "type_source": "person", "type_target": "platform"},
-    {"source": "sinh viên", "target": "tài liệu học tập", "relation": "ĐƯỢC_CUNG_CẤP", "type_source": "person", "type_target": "document"},
-    {"source": "sinh viên", "target": "thông tin", "relation": "BỔ_SUNG", "type_source": "person", "type_target": "data"},
-    {"source": "sinh viên", "target": "hồ sơ cá nhân", "relation": "BỔ_SUNG_VÀO", "type_source": "person", "type_target": "document"},
-    {"source": "sinh viên", "target": "hình đại diện", "relation": "SỞ_HỮU", "type_source": "person", "type_target": "image"},
-    {"source": "sinh viên", "target": "chữ ký", "relation": "SỞ_HỮU", "type_source": "person", "type_target": "document"},
-    {"source": "hình đại diện", "target": "đường dẫn", "relation": "KHÔNG_KÈM", "type_source": "image", "type_target": "link"},
-    {"source": "sinh viên", "target": "đường link lớp học", "relation": "GIỮ_BÍ_MẬT", "type_source": "person", "type_target": "link"},
-    {"source": "sinh viên", "target": "tài khoản", "relation": "BẢO_VỆ", "type_source": "person", "type_target": "account"},
-    {"source": "sinh viên", "target": "thông tin", "relation": "CHỊU_TRÁCH_NHIỆM", "type_source": "person", "type_target": "data"},
-    {"source": "sinh viên", "target": "tài khoản", "relation": "CHỊU_TRÁCH_NHIỆM", "type_source": "person", "type_target": "account"},
-    {"source": "sinh viên", "target": "nhiệm vụ", "relation": "HOÀN_THÀNH", "type_source": "person", "type_target": "task"},
-    {"source": "sinh viên", "target": "lớp", "relation": "ĐĂNG_NHẬP", "type_source": "person", "type_target": "event"},
-    {"source": "sinh viên", "target": "05 - 10 phút", "relation": "TRƯỚC", "type_source": "person", "type_target": "time"},
-    {"source": "sinh viên", "target": "email", "relation": "BẰNG", "type_source": "person", "type_target": "email_address"},
-    {"source": "sinh viên", "target": "micro", "relation": "KIỂM_TRA", "type_source": "person", "type_target": "device"},
-    {"source": "sinh viên", "target": "camera", "relation": "KIỂM_TRA", "type_source": "person", "type_target": "device"},
-    {"source": "sinh viên", "target": "Raise hand", "relation": "NHẤN", "type_source": "person", "type_target": "feature"},
-    {"source": "sinh viên", "target": "micro", "relation": "MỞ", "type_source": "person", "type_target": "device"},
-    {"source": "sinh viên", "target": "micro", "relation": "TẮT", "type_source": "person", "type_target": "device"},
-    {"source": "sinh viên", "target": "Lower hand", "relation": "BẤM", "type_source": "person", "type_target": "feature"},
-    {"source": "sinh viên", "target": "buổi học", "relation": "THAM_GIA", "type_source": "person", "type_target": "event"},
-    {"source": "sinh viên", "target": "trang phục", "relation": "MẶC", "type_source": "person", "type_target": "concept"},
-    {"source": "sinh viên", "target": "thái độ", "relation": "CÓ", "type_source": "person", "type_target": "concept"},
-    {"source": "sinh viên", "target": "không gian học tập", "relation": "ĐẢM_BẢO", "type_source": "person", "type_target": "concept"},
-    {"source": "sinh viên", "target": "màn hình cá nhân", "relation": "CHIA_SẺ", "type_source": "person", "type_target": "device"},
-    {"source": "giảng viên", "target": "màn hình cá nhân", "relation": "ĐỒNG_Ý", "type_source": "person", "type_target": "device"}
+    {
+      "source": "Vay vốn ngân hàng chính sách xã hội",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "ngân hàng chính sách xã hội",
+      "target": "Vay vốn ngân hàng chính sách xã hội",
+      "relation": "của",
+      "type_source": "organization",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Tạm hoãn nghĩa vụ quân sự",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "Đi xe buýt",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "Bổ sung hồ sơ nhận trợ cấp",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "Bổ sung hồ sơ làm lại thẻ sinh viên",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "thẻ sinh viên",
+      "target": "Bổ sung hồ sơ làm lại thẻ sinh viên",
+      "relation": "của",
+      "type_source": "student_card",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ thuế cho người thân",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "thuế",
+      "target": "Bổ sung hồ sơ thuế cho người thân",
+      "relation": "của",
+      "type_source": "tax_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "người thân",
+      "target": "Bổ sung hồ sơ thuế cho người thân",
+      "relation": "cho",
+      "type_source": "relative",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "ký túc xá",
+      "target": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+      "relation": "của",
+      "type_source": "dormitory_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Đại học Quốc gia TP.HCM",
+      "target": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+      "relation": "của",
+      "type_source": "university",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ thi học kỳ, thi acces",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "thi học kỳ",
+      "target": "Bổ sung hồ sơ thi học kỳ, thi acces",
+      "relation": "của",
+      "type_source": "exam_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "thi acces",
+      "target": "Bổ sung hồ sơ thi học kỳ, thi acces",
+      "relation": "của",
+      "type_source": "exam_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ lý lịch cá nhân",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "lý lịch cá nhân",
+      "target": "Bổ sung hồ sơ lý lịch cá nhân",
+      "relation": "của",
+      "type_source": "personal_profile",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ nhận học bổng",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "học bổng",
+      "target": "Bổ sung hồ sơ nhận học bổng",
+      "relation": "của",
+      "type_source": "scholarship_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ giảm trừ gia cảnh",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "giảm trừ gia cảnh",
+      "target": "Bổ sung hồ sơ giảm trừ gia cảnh",
+      "relation": "của",
+      "type_source": "family_deduction_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ đi làm, đi thực tập",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "đi làm",
+      "target": "Bổ sung hồ sơ đi làm, đi thực tập",
+      "relation": "của",
+      "type_source": "work_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "đi thực tập",
+      "target": "Bổ sung hồ sơ đi làm, đi thực tập",
+      "relation": "của",
+      "type_source": "internship_document",
+      "type_target": "document_type"
+    }
   ]
-}"""
+}
+"""
     ]
-    # part = "quy định về việc đào tạo trực tuyến"
-    # add_entities_relationship(json_string, part)
+    part = "các loại giấy tờ được xác nhận"
 
-    # lấy path từ một part
-    # ví dụ: lấy path của "các khoa - ngành đào tạo"
-    # lấy path của "giá trị cốt lõi"
-    type = "part"
-    part = "các đơn vị trong trường"
-    # get_path(type, part)
-
-    query = "trường nông lâm có bao nhiêu phòng ban"
-    # 1. dùng llm trích xuất entites và relation
-    # 2. dùng llm tạo cypher query
-    # 3. dùng cypher truy vấn vào neo4j
-    # 4. trả về kết quả
-    # get_owned_entities("organization", "trường đại học nông lâm tp.hồ chí minh", "sở_hữu")
-
-    cypher_queries = [
-        # Trường Đại học Nông Lâm TP.HCM
-        'MATCH (o:organization {name: "trường đại học nông lâm tp.hcm"})-[r:địa_chỉ]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "trường đại học nông lâm tp.hcm"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "trường đại học nông lâm tp.hcm"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "trường đại học nông lâm tp.hcm"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "trường đại học nông lâm tp.hcm"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "trường đại học nông lâm tp.hcm"})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "trường đại học nông lâm tp.hcm"})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "trường đại học nông lâm tp.hcm"})-[r:email]->(e) RETURN o AS source, r AS relationship, e AS target',
-
-        # Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Ninh Thuận
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"})-[r:địa_chỉ]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"})-[r:địa_chỉ]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại ninh thuận"})-[r:email]->(e) RETURN o AS source, r AS relationship, e AS target',
-
-        # Phân hiệu Trường Đại học Nông Lâm TP.HCM tại Gia Lai
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"})-[r:địa_chỉ]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"})-[r:tọa_lạc_tại]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"})-[r:thuộc]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"})-[r:số_điện_thoại]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"})-[r:website]->(e) RETURN o AS source, r AS relationship, e AS target',
-        'MATCH (o:organization {name: "phân hiệu trường đại học nông lâm tp.hcm tại gia lai"})-[r:email]->(e) RETURN o AS source, r AS relationship, e AS target'
-    ]
-    # print(len(cypher_queries))
-    # cypher_string = ""
-    # for i, query in enumerate(cypher_queries, 1):
-    #     print(i, " ", query)
-    #     try:
-    #         cypher_string += neo.run_cypher_query(query) +"\n"
-    #     except Exception as e:
-    #         continue
-    # print(cypher_string)
-
-    all_nodes = neo.get_all_nodes()
-    all_nodes_and_relationships = neo.get_all_nodes_and_relationships()
-    # print(len(all_nodes))
-    # print(all_nodes)
-
-    search_source_text = "ngành đào tạo"
-    search_rel_text = "chương_trình_đào_tạo_tại"
-    search_target_text = "Phân hiệu Ninh thuan"
-
-    for connect in all_nodes_and_relationships:
-        source = connect['source']
-        relation = connect['relation']
-        target = connect['target']
-
-        source_score = jaccard_similarity(search_source_text, source)
-        relation_score = jaccard_similarity(search_rel_text, relation)
-        target_score = jaccard_similarity(search_target_text, target)
-
-        # if target_score > 0.4:
-        #     print(f"{target}: {target_score}, {relation}: {relation_score}, {target}: {target_score}")
-
-        if relation_score > 0.4:
-            print(f"{source}: {source_score}, {relation}: {relation_score}, {target}: {target_score}")
+    add_entities_relationship(json_string, type_part, part)
+    # for i in range(len(json_string)):
+    #     add_entities_relationship(json_string[i], type_part, part[i])
 
     # Đóng kết nối
     neo.close()
@@ -380,8 +389,22 @@ if __name__ == "__main__":
 # MATCH (n)
 # DETACH DELETE n;
 
+# bac 2
+# MATCH (first:part {name: 'phần 3: hỗ trợ và dịch vụ'})-[:bao_gồm]->(second:section {name: 'trung tâm dịch vụ sinh viên'})-[r*1..3]->(e)
+# RETURN r as relation, e as target
+
+# bac 3
+# MATCH (first:part {name: 'phần 3: hỗ trợ và dịch vụ'})-[:bao_gồm]->(second:section {name: 'vay vốn học tập từ ngân hàng chính sách xã hội dành cho sinh viên'})-[:bao_gồm]->(four:article {name: 'thông tin về vay vốn học tập từ ngân hàng chính sách xã hội dành cho sinh viên'})-[r*1..3]->(e)
+# RETURN r as relation, e as target
+
+# bac 4
+# MATCH (first:part {name: 'phần 3: hỗ trợ và dịch vụ'})-[:bao_gồm]->(second:section {name: 'quy định phân cấp giải quyết thắc mắc của sinh viên'})-[:bao_gồm]->(third:part {name: 'ngoài ra ưu tiên xét chọn những sinh viên đạt ít nhất 01 trong các các tiêu chuẩn sau'})-[:bao_gồm]->(four:article {name: 'ưu tiên 6'})-[r*1..3]->(e)
+# RETURN r as relation, e as target
 
 
+# xoa tat ca cac node tu node co san
+# MATCH (a:article {name: 'phương thức cho vay tiền sinh viên'})-[r]->(b)
+# DETACH DELETE b
 
 
 

@@ -1,0 +1,866 @@
+{
+  "entities": [
+    {
+      "name": "Trường",
+      "type": "organization"
+    },
+    {
+      "name": "Khoa",
+      "type": "organization_unit"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "role"
+    },
+    {
+      "name": "CTĐT ngành/chuyên ngành",
+      "type": "document_plan"
+    },
+    {
+      "name": "Quy định về công tác học vụ",
+      "type": "document_rule"
+    },
+    {
+      "name": "CVHT",
+      "type": "role"
+    },
+    {
+      "name": "Lớp chuyên ngành",
+      "type": "group_class"
+    },
+    {
+      "name": "KHHT",
+      "type": "document_plan"
+    },
+    {
+      "name": "Quy định của Trường",
+      "type": "document_rule"
+    },
+    {
+      "name": "Học kỳ",
+      "type": "academic_term"
+    },
+    {
+      "name": "06 tuần",
+      "type": "time_duration"
+    },
+    {
+      "name": "Phòng Đào tạo",
+      "type": "organization_unit"
+    },
+    {
+      "name": "Học phần",
+      "type": "academic_unit"
+    },
+    {
+      "name": "TKB",
+      "type": "document_schedule"
+    },
+    {
+      "name": "Lớp học phần",
+      "type": "group_class"
+    },
+    {
+      "name": "Sĩ số lớp học phần",
+      "type": "metric"
+    },
+    {
+      "name": "Danh sách các lớp học phần đủ điều kiện tổ chức giảng dạy",
+      "type": "document_list"
+    },
+    {
+      "name": "01 tuần",
+      "type": "time_duration"
+    },
+    {
+      "name": "Bắt đầu học kỳ",
+      "type": "time_point"
+    },
+    {
+      "name": "Kế hoạch chung của trường",
+      "type": "document_plan"
+    },
+    {
+      "name": "Học kỳ mới",
+      "type": "academic_term"
+    },
+    {
+      "name": "KHHT đã được phê duyệt",
+      "type": "document_plan_status"
+    },
+    {
+      "name": "Khoản 5 Điều 8",
+      "type": "reference"
+    },
+    {
+      "name": "Học phần mới",
+      "type": "academic_unit_status"
+    },
+    {
+      "name": "Học phần chưa đạt",
+      "type": "academic_unit_status"
+    },
+    {
+      "name": "Học lại",
+      "type": "action"
+    },
+    {
+      "name": "Học phần đã đạt",
+      "type": "academic_unit_status"
+    },
+    {
+      "name": "Cải thiện điểm",
+      "type": "action"
+    },
+    {
+      "name": "Số lượng tín chỉ",
+      "type": "metric"
+    },
+    {
+      "name": "Tín chỉ",
+      "type": "unit"
+    },
+    {
+      "name": "Học kỳ chính",
+      "type": "academic_term"
+    },
+    {
+      "name": "14 tín chỉ",
+      "type": "credit_limit"
+    },
+    {
+      "name": "28 tín chỉ",
+      "type": "credit_limit"
+    },
+    {
+      "name": "Thời gian hoàn thành khóa học",
+      "type": "duration"
+    },
+    {
+      "name": "Sinh viên ở học kỳ cuối",
+      "type": "role_status"
+    },
+    {
+      "name": "Tự ý bỏ học",
+      "type": "status"
+    },
+    {
+      "name": "Học kỳ phụ",
+      "type": "academic_term"
+    },
+    {
+      "name": "12 tín chỉ",
+      "type": "credit_limit"
+    },
+    {
+      "name": "Sinh viên mới trúng tuyển",
+      "type": "role_status"
+    },
+    {
+      "name": "Học kỳ đầu tiên",
+      "type": "academic_term"
+    },
+    {
+      "name": "Lịch học",
+      "type": "document_schedule"
+    },
+    {
+      "name": "Quy trình đăng ký học phần",
+      "type": "process"
+    },
+    {
+      "name": "Bước 1",
+      "type": "process_step"
+    },
+    {
+      "name": "Bước 2",
+      "type": "process_step"
+    },
+    {
+      "name": "Bước 3",
+      "type": "process_step"
+    },
+    {
+      "name": "Bước 4",
+      "type": "process_step"
+    },
+    {
+      "name": "Khoa/Bộ môn",
+      "type": "organization_unit"
+    },
+    {
+      "name": "Nhu cầu của sinh viên",
+      "type": "metric_demand"
+    },
+    {
+      "name": "Website đăng ký học phần",
+      "type": "system_location"
+    },
+    {
+      "name": "Kết quả đăng ký học phần",
+      "type": "document_result"
+    },
+    {
+      "name": "Thời khóa biểu",
+      "type": "document_schedule"
+    },
+    {
+      "name": "Rút bớt học phần",
+      "type": "action"
+    },
+    {
+      "name": "Tuần lễ thứ 4",
+      "type": "time_point"
+    },
+    {
+      "name": "Tuần lễ thứ 2",
+      "type": "time_point"
+    },
+    {
+      "name": "Học phí",
+      "type": "finance"
+    },
+    {
+      "name": "Điểm R",
+      "type": "grade"
+    },
+    {
+      "name": "Bảng điểm học kỳ",
+      "type": "document_record"
+    },
+    {
+      "name": "Không đi học",
+      "type": "status_action"
+    },
+    {
+      "name": "Không dự thi kết thúc học phần",
+      "type": "status_action"
+    },
+    {
+      "name": "Điểm F",
+      "type": "grade"
+    },
+    {
+      "name": "Đăng ký học lại",
+      "type": "action"
+    },
+    {
+      "name": "Đăng ký học cải thiện điểm",
+      "type": "action"
+    },
+    {
+      "name": "Điểm cao nhất",
+      "type": "grade_rule"
+    },
+    {
+      "name": "Học phần không thuộc CTĐT",
+      "type": "academic_unit_status"
+    },
+    {
+      "name": "Chứng nhận",
+      "type": "document"
+    },
+    {
+      "name": "Điểm trung bình học kỳ",
+      "type": "metric"
+    },
+    {
+      "name": "Xét tốt nghiệp",
+      "type": "process"
+    },
+    {
+       "name": "Đầu khóa học",
+       "type": "time_point"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Khoa",
+      "target": "Sinh viên",
+      "type_source": "organization_unit",
+      "type_target": "role",
+      "relation": "cung_cấp_cho"
+    },
+    {
+      "source": "Khoa",
+      "target": "CTĐT ngành/chuyên ngành",
+      "type_source": "organization_unit",
+      "type_target": "document_plan",
+      "relation": "cung_cấp"
+    },
+    {
+      "source": "Khoa",
+      "target": "Quy định về công tác học vụ",
+      "type_source": "organization_unit",
+      "type_target": "document_rule",
+      "relation": "cung_cấp"
+    },
+     {
+      "source": "Khoa",
+      "target": "CVHT",
+      "type_source": "organization_unit",
+      "type_target": "role",
+      "relation": "bố_trí"
+    },
+     {
+      "source": "CVHT",
+      "target": "Lớp chuyên ngành",
+      "type_source": "role",
+      "type_target": "group_class",
+      "relation": "phụ_trách"
+    },
+     {
+      "source": "CVHT",
+      "target": "Sinh viên",
+      "type_source": "role",
+      "type_target": "role",
+      "relation": "quản_lý"
+    },
+     {
+      "source": "CVHT",
+      "target": "Sinh viên",
+      "type_source": "role",
+      "type_target": "role",
+      "relation": "tư_vấn_xây_dựng_khht_cho"
+    },
+     {
+      "source": "CVHT",
+      "target": "Sinh viên",
+      "type_source": "role",
+      "type_target": "role",
+      "relation": "tư_vấn_thực_hiện_khht_cho"
+    },
+    {
+      "source": "KHHT",
+      "target": "Quy định của Trường",
+      "type_source": "document_plan",
+      "type_target": "document_rule",
+      "relation": "phải_tuân_theo"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "Sinh viên",
+      "type_source": "organization_unit",
+      "type_target": "role",
+      "relation": "thông_báo_cho"
+    },
+     {
+      "source": "Phòng Đào tạo",
+      "target": "Học phần",
+      "type_source": "organization_unit",
+      "type_target": "academic_unit",
+      "relation": "thông_báo"
+    },
+     {
+      "source": "Phòng Đào tạo",
+      "target": "TKB",
+      "type_source": "organization_unit",
+      "type_target": "document_schedule",
+      "relation": "thông_báo"
+    },
+    {
+        "source": "TKB",
+        "target": "Học phần",
+        "type_source": "document_schedule",
+        "type_target": "academic_unit",
+        "relation": "của"
+    },
+    {
+        "source": "Phòng Đào tạo",
+        "target": "Học kỳ",
+        "type_source": "organization_unit",
+        "type_target": "academic_term",
+        "relation": "thông_báo_trước"
+    },
+     {
+        "source": "Phòng Đào tạo",
+        "target": "06 tuần",
+        "type_source": "organization_unit",
+        "type_target": "time_duration",
+        "relation": "thông_báo_trước_ít_nhất"
+    },
+    {
+        "source": "Sinh viên",
+        "target": "Lớp học phần",
+        "type_source": "role",
+        "type_target": "group_class",
+        "relation": "đăng_ký"
+    },
+     {
+        "source": "Sinh viên",
+        "target": "Phòng Đào tạo",
+        "type_source": "role",
+        "type_target": "organization_unit",
+        "relation": "đăng_ký_theo_hướng_dẫn_của"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "Danh sách các lớp học phần đủ điều kiện tổ chức giảng dạy",
+      "type_source": "organization_unit",
+      "type_target": "document_list",
+      "relation": "công_bố"
+    },
+     {
+      "source": "Danh sách các lớp học phần đủ điều kiện tổ chức giảng dạy",
+      "target": "Sĩ số lớp học phần",
+      "type_source": "document_list",
+      "type_target": "metric",
+      "relation": "dựa_trên"
+    },
+     {
+      "source": "Phòng Đào tạo",
+      "target": "Bắt đầu học kỳ",
+      "type_source": "organization_unit",
+      "type_target": "time_point",
+      "relation": "công_bố_trước"
+    },
+    {
+      "source": "Phòng Đào tạo",
+      "target": "01 tuần",
+      "type_source": "organization_unit",
+      "type_target": "time_duration",
+      "relation": "công_bố_trước_ít_nhất"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Học phần",
+      "type_source": "role",
+      "type_target": "academic_unit",
+      "relation": "phải_đăng_ký"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Kế hoạch chung của trường",
+      "type_source": "role",
+      "type_target": "document_plan",
+      "relation": "phải_đăng_ký_theo"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Học kỳ mới",
+      "type_source": "role",
+      "type_target": "academic_term",
+      "relation": "phải_đăng_ký_trước"
+    },
+    {
+      "source": "Học phần",
+      "target": "KHHT đã được phê duyệt",
+      "type_source": "academic_unit",
+      "type_target": "document_plan_status",
+      "relation": "phải_theo"
+    },
+    {
+        "source": "KHHT đã được phê duyệt",
+        "target": "Khoản 5 Điều 8",
+        "type_source": "document_plan_status",
+        "type_target": "reference",
+        "relation": "tham_chiếu_tới"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Học phần mới",
+      "type_source": "role",
+      "type_target": "academic_unit_status",
+      "relation": "đăng_ký"
+    },
+     {
+      "source": "Sinh viên",
+      "target": "Học phần chưa đạt",
+      "type_source": "role",
+      "type_target": "academic_unit_status",
+      "relation": "đăng_ký"
+    },
+    {
+        "source": "Sinh viên",
+        "target": "Học lại",
+        "type_source": "role",
+        "type_target": "action",
+        "relation": "thực_hiện"
+    },
+     {
+      "source": "Sinh viên",
+      "target": "Học phần đã đạt",
+      "type_source": "role",
+      "type_target": "academic_unit_status",
+      "relation": "đăng_ký"
+    },
+      {
+        "source": "Sinh viên",
+        "target": "Cải thiện điểm",
+        "type_source": "role",
+        "type_target": "action",
+        "relation": "thực_hiện"
+    },
+     {
+      "source": "Học kỳ chính",
+      "target": "14 tín chỉ",
+      "type_source": "academic_term",
+      "type_target": "credit_limit",
+      "relation": "có_tối_thiểu"
+    },
+     {
+      "source": "Học kỳ chính",
+      "target": "28 tín chỉ",
+      "type_source": "academic_term",
+      "type_target": "credit_limit",
+      "relation": "có_tối_đa"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Thời gian hoàn thành khóa học",
+      "type_source": "role",
+      "type_target": "duration",
+      "relation": "có_thể_rút_ngắn"
+    },
+     {
+      "source": "Sinh viên",
+      "target": "Tự ý bỏ học",
+      "type_source": "role",
+      "type_target": "status",
+      "relation": "bị_coi_là"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "14 tín chỉ",
+      "type_source": "role",
+      "type_target": "credit_limit",
+      "relation": "đăng_ký_dưới_mức_tối_thiểu"
+    },
+    {
+      "source": "Quy định về tín chỉ tối thiểu",
+      "target": "Sinh viên ở học kỳ cuối",
+      "type_source": "document_rule",
+      "type_target": "role_status",
+      "relation": "ngoại_trừ"
+    },
+     {
+      "source": "Học kỳ phụ",
+      "target": "12 tín chỉ",
+      "type_source": "academic_term",
+      "type_target": "credit_limit",
+      "relation": "có_tối_đa"
+    },
+     {
+      "source": "Sinh viên mới trúng tuyển",
+      "target": "Học kỳ đầu tiên",
+      "type_source": "role_status",
+      "type_target": "academic_term",
+      "relation": "không_đăng_ký_học_phần_cho"
+    },
+    {
+      "source": "Trường",
+      "target": "Sinh viên mới trúng tuyển",
+      "type_source": "organization",
+      "type_target": "role_status",
+      "relation": "bố_trí_lịch_học_cho"
+    },
+    {
+      "source": "Lịch học",
+      "target": "CTĐT ngành/chuyên ngành",
+      "type_source": "document_schedule",
+      "type_target": "document_plan",
+      "relation": "theo"
+    },
+     {
+      "source": "Quy trình đăng ký học phần",
+      "target": "Bước 1",
+      "type_source": "process",
+      "type_target": "process_step",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "Quy trình đăng ký học phần",
+      "target": "Bước 2",
+      "type_source": "process",
+      "type_target": "process_step",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "Quy trình đăng ký học phần",
+      "target": "Bước 3",
+      "type_source": "process",
+      "type_target": "process_step",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "Quy trình đăng ký học phần",
+      "target": "Bước 4",
+      "type_source": "process",
+      "type_target": "process_step",
+      "relation": "bao_gồm"
+    },
+     {
+      "source": "Bước 1",
+      "target": "Phòng Đào tạo",
+      "type_source": "process_step",
+      "type_target": "organization_unit",
+      "relation": "thực_hiện_bởi"
+    },
+     {
+      "source": "Bước 2",
+      "target": "Khoa/Bộ môn",
+      "type_source": "process_step",
+      "type_target": "organization_unit",
+      "relation": "thực_hiện_bởi"
+    },
+    {
+      "source": "Khoa/Bộ môn",
+      "target": "Nhu cầu của sinh viên",
+      "type_source": "organization_unit",
+      "type_target": "metric_demand",
+      "relation": "dựa_trên"
+    },
+    {
+      "source": "Bước 3",
+      "target": "Sinh viên",
+      "type_source": "process_step",
+      "type_target": "role",
+      "relation": "thực_hiện_bởi"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "KHHT",
+      "type_source": "role",
+      "type_target": "document_plan",
+      "relation": "dựa_vào"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "TKB",
+      "type_source": "role",
+      "type_target": "document_schedule",
+      "relation": "dựa_vào"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Website đăng ký học phần",
+      "type_source": "role",
+      "type_target": "system_location",
+      "relation": "đăng_ký_tại"
+    },
+     {
+      "source": "Bước 4",
+      "target": "Phòng Đào tạo",
+      "type_source": "process_step",
+      "type_target": "organization_unit",
+      "relation": "công_bố_kết_quả_bởi"
+    },
+      {
+      "source": "Bước 4",
+      "target": "Sinh viên",
+      "type_source": "process_step",
+      "type_target": "role",
+      "relation": "xem_kết_quả_bởi"
+    },
+     {
+      "source": "Sinh viên",
+      "target": "Kết quả đăng ký học phần",
+      "type_source": "role",
+      "type_target": "document_result",
+      "relation": "xem"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Thời khóa biểu",
+      "type_source": "role",
+      "type_target": "document_schedule",
+      "relation": "xem_và_in"
+    },
+     {
+      "source": "Sinh viên",
+      "target": "Website đăng ký học phần",
+      "type_source": "role",
+      "type_target": "system_location",
+      "relation": "xem_tại"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Rút bớt học phần",
+      "type_source": "role",
+      "type_target": "action",
+      "relation": "có_thể_thực_hiện"
+    },
+    {
+      "source": "Rút bớt học phần",
+      "target": "Website đăng ký học phần",
+      "type_source": "action",
+      "type_target": "system_location",
+      "relation": "thực_hiện_tại"
+    },
+     {
+      "source": "Rút bớt học phần",
+      "target": "Tuần lễ thứ 4",
+      "type_source": "action",
+      "type_target": "time_point",
+      "relation": "có_hạn_chót_là"
+    },
+     {
+      "source": "Rút bớt học phần",
+      "target": "Học kỳ chính",
+      "type_source": "action",
+      "type_target": "academic_term",
+      "relation": "áp_dụng_cho"
+    },
+    {
+      "source": "Rút bớt học phần",
+      "target": "Tuần lễ thứ 2",
+      "type_source": "action",
+      "type_target": "time_point",
+      "relation": "có_hạn_chót_là"
+    },
+    {
+      "source": "Rút bớt học phần",
+      "target": "Học kỳ phụ",
+      "type_source": "action",
+      "type_target": "academic_term",
+      "relation": "áp_dụng_cho"
+    },
+    {
+      "source": "Số lượng tín chỉ",
+      "target": "14 tín chỉ",
+      "type_source": "metric",
+      "type_target": "credit_limit",
+      "relation": "không_dưới"
+    },
+    {
+      "source": "Số lượng tín chỉ",
+      "target": "Học kỳ chính",
+      "type_source": "metric",
+      "type_target": "academic_term",
+      "relation": "áp_dụng_sau_rút_học_phần_cho"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Học phí",
+      "type_source": "role",
+      "type_target": "finance",
+      "relation": "không_được_hoàn_trả"
+    },
+     {
+      "source": "Học phần",
+      "target": "Rút bớt học phần",
+      "type_source": "academic_unit",
+      "type_target": "action",
+      "relation": "đã_rút_trong"
+    },
+    {
+      "source": "Học phần",
+      "target": "Điểm R",
+      "type_source": "academic_unit",
+      "type_target": "grade",
+      "relation": "nhận"
+    },
+    {
+      "source": "Điểm R",
+      "target": "Bảng điểm học kỳ",
+      "type_source": "grade",
+      "type_target": "document_record",
+      "relation": "ghi_nhận_trong"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Không đi học",
+      "type_source": "role",
+      "type_target": "status_action",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Không dự thi kết thúc học phần",
+      "type_source": "role",
+      "type_target": "status_action",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Điểm F",
+      "type_source": "role",
+      "type_target": "grade",
+      "relation": "bị_nhận"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Học phí",
+      "type_source": "role",
+      "type_target": "finance",
+      "relation": "phải_đóng"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Học phần",
+      "type_source": "role",
+      "type_target": "academic_unit",
+      "relation": "phải_đóng_học_phí_cho"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Đăng ký học lại",
+      "type_source": "role",
+      "type_target": "action",
+      "relation": "phải_thực_hiện"
+    },
+     {
+      "source": "Đăng ký học lại",
+      "target": "Học phần",
+      "type_source": "action",
+      "type_target": "academic_unit",
+      "relation": "cho"
+    },
+     {
+      "source": "Học phần",
+      "target": "Điểm F",
+      "type_source": "academic_unit",
+      "type_target": "grade",
+      "relation": "có"
+    },
+     {
+      "source": "Sinh viên",
+      "target": "Đăng ký học cải thiện điểm",
+      "type_source": "role",
+      "type_target": "action",
+      "relation": "có_thể_thực_hiện"
+    },
+    {
+      "source": "Đăng ký học cải thiện điểm",
+      "target": "Học phần đã đạt",
+      "type_source": "action",
+      "type_target": "academic_unit_status",
+      "relation": "cho"
+    },
+    {
+      "source": "Học phần",
+      "target": "Điểm cao nhất",
+      "type_source": "academic_unit",
+      "type_target": "grade_rule",
+      "relation": "lấy_điểm_là"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Học phần không thuộc CTĐT",
+      "type_source": "role",
+      "type_target": "academic_unit_status",
+      "relation": "có_thể_đăng_ký"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Chứng nhận",
+      "type_source": "role",
+      "type_target": "document",
+      "relation": "để_có"
+    },
+    {
+      "source": "Học phần không thuộc CTĐT",
+      "target": "Điểm trung bình học kỳ",
+      "type_source": "academic_unit_status",
+      "type_target": "metric",
+      "relation": "không_tính_vào"
+    },
+    {
+      "source": "Học phần không thuộc CTĐT",
+      "target": "Xét tốt nghiệp",
+      "type_source": "academic_unit_status",
+      "type_target": "process",
+      "relation": "không_dùng_để"
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "entities": [
+    {
+      "name": "ĐÁNH GIÁ VỀ Ý THỨC VÀ KẾT QUẢ KHI THAM GIA CÔNG TÁC CÁN BỘ LỚP, CÁC ĐOÀN THỂ, TỔ CHỨC TRONG CƠ SỞ GIÁO DỤC ĐẠI HỌC HOẶC NGƯỜI HỌC ĐẠT ĐƯỢC THÀNH TÍCH ĐẶC BIỆT TRONG HỌC TẬP, RÈN LUYỆN",
+      "type": "title"
+    },
+    {
+      "name": "tiêu chí",
+      "type": "criterion"
+    },
+    {
+      "name": "điểm đánh giá",
+      "type": "assessment_score"
+    },
+    {
+      "name": "Ý thức",
+      "type": "awareness"
+    },
+    {
+      "name": "tinh thần",
+      "type": "spirit"
+    },
+    {
+      "name": "thái độ",
+      "type": "attitude"
+    },
+    {
+      "name": "uy tín",
+      "type": "prestige"
+    },
+    {
+      "name": "hiệu quả công việc",
+      "type": "work_efficiency"
+    },
+    {
+      "name": "người học",
+      "type": "learner"
+    },
+    {
+      "name": "nhiệm vụ quản lý lớp",
+      "type": "class_management_task"
+    },
+    {
+      "name": "lớp",
+      "type": "class"
+    },
+    {
+      "name": "tổ chức Đảng",
+      "type": "party_organization"
+    },
+    {
+      "name": "Đoàn thanh niên",
+      "type": "youth_union"
+    },
+    {
+      "name": "Hội sinh viên",
+      "type": "student_association"
+    },
+    {
+      "name": "tổ chức khác",
+      "type": "other_organization"
+    },
+    {
+      "name": "cơ sở giáo dục đại học",
+      "type": "higher_education_institution"
+    },
+    {
+      "name": "Kỹ năng tổ chức",
+      "type": "organizational_skill"
+    },
+    {
+      "name": "quản lý lớp",
+      "type": "class_management"
+    },
+    {
+      "name": "quản lý các tổ chức Đảng, Đoàn thanh niên, Hội sinh viên",
+      "type": "organization_management"
+    },
+    {
+      "name": "Hỗ trợ",
+      "type": "support"
+    },
+    {
+      "name": "tham gia tích cực",
+      "type": "active_participation"
+    },
+    {
+      "name": "hoạt động chung của lớp",
+      "type": "general_class_activities"
+    },
+    {
+      "name": "tập thể",
+      "type": "collective"
+    },
+    {
+      "name": "khoa",
+      "type": "faculty"
+    },
+    {
+      "name": "Người học",
+      "type": "learner"
+    },
+    {
+      "name": "thành tích đặc biệt",
+      "type": "special_achievement"
+    },
+    {
+      "name": "học tập",
+      "type": "learning"
+    },
+    {
+      "name": "rèn luyện",
+      "type": "training"
+    },
+    {
+      "name": "Khung điểm đánh giá",
+      "type": "assessment_scale"
+    },
+    {
+      "name": "0",
+      "type": "score"
+    },
+    {
+      "name": "10 điểm",
+      "type": "score"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "ĐÁNH GIÁ VỀ Ý THỨC VÀ KẾT QUẢ KHI THAM GIA CÔNG TÁC CÁN BỘ LỚP, CÁC ĐOÀN THỂ, TỔ CHỨC TRONG CƠ SỞ GIÁO DỤC ĐẠI HỌC HOẶC NGƯỜI HỌC ĐẠT ĐƯỢC THÀNH TÍCH ĐẶC BIỆT TRONG HỌC TẬP, RÈN LUYỆN",
+      "target": "Ý thức",
+      "relation": "đánh_giá_về",
+      "type_source": "title",
+      "type_target": "awareness"
+    },
+    {
+      "source": "ĐÁNH GIÁ VỀ Ý THỨC VÀ KẾT QUẢ KHI THAM GIA CÔNG TÁC CÁN BỘ LỚP, CÁC ĐOÀN THỂ, TỔ CHỨC TRONG CƠ SỞ GIÁO DỤC ĐẠI HỌC HOẶC NGƯỜI HỌC ĐẠT ĐƯỢC THÀNH TÍCH ĐẶC BIỆT TRONG HỌC TẬP, RÈN LUYỆN",
+      "target": "kết quả",
+      "relation": "đánh_giá_về",
+      "type_source": "title",
+      "type_target": "RELATION"
+    },
+    {
+      "source": "Ý thức",
+      "target": "công tác cán bộ lớp",
+      "relation": "tham_gia",
+      "type_source": "awareness",
+      "type_target": "class_officer_work"
+    },
+    {
+      "source": "Ý thức",
+      "target": "các đoàn thể",
+      "relation": "tham_gia",
+      "type_source": "awareness",
+      "type_target": "mass_organization"
+    },
+    {
+      "source": "Ý thức",
+      "target": "tổ chức",
+      "relation": "tham_gia",
+      "type_source": "awareness",
+      "type_target": "organization"
+    },
+    {
+      "source": "tổ chức",
+      "target": "cơ sở giáo dục đại học",
+      "relation": "trong",
+      "type_source": "organization",
+      "type_target": "higher_education_institution"
+    },
+    {
+      "source": "người học",
+      "target": "thành tích đặc biệt",
+      "relation": "đạt_được",
+      "type_source": "learner",
+      "type_target": "special_achievement"
+    },
+    {
+      "source": "thành tích đặc biệt",
+      "target": "học tập",
+      "relation": "trong",
+      "type_source": "special_achievement",
+      "type_target": "learning"
+    },
+    {
+      "source": "thành tích đặc biệt",
+      "target": "rèn luyện",
+      "relation": "trong",
+      "type_source": "special_achievement",
+      "type_target": "training"
+    },
+    {
+      "source": "tiêu chí",
+      "target": "điểm đánh giá",
+      "relation": "xác_định",
+      "type_source": "criterion",
+      "type_target": "assessment_score"
+    },
+    {
+      "source": "Ý thức",
+      "target": "người học",
+      "relation": "của",
+      "type_source": "awareness",
+      "type_target": "learner"
+    },
+    {
+      "source": "tinh thần",
+      "target": "người học",
+      "relation": "của",
+      "type_source": "spirit",
+      "type_target": "learner"
+    },
+    {
+      "source": "thái độ",
+      "target": "người học",
+      "relation": "của",
+      "type_source": "attitude",
+      "type_target": "learner"
+    },
+    {
+      "source": "uy tín",
+      "target": "người học",
+      "relation": "của",
+      "type_source": "prestige",
+      "type_target": "learner"
+    },
+    {
+      "source": "hiệu quả công việc",
+      "target": "người học",
+      "relation": "của",
+      "type_source": "work_efficiency",
+      "type_target": "learner"
+    },
+    {
+      "source": "người học",
+      "target": "nhiệm vụ quản lý lớp",
+      "relation": "phân_công",
+      "type_source": "learner",
+      "type_target": "class_management_task"
+    },
+    {
+      "source": "nhiệm vụ quản lý lớp",
+      "target": "lớp",
+      "relation": "quản_lý",
+      "type_source": "class_management_task",
+      "type_target": "class"
+    },
+    {
+      "source": "nhiệm vụ quản lý lớp",
+      "target": "tổ chức Đảng",
+      "relation": "quản_lý",
+      "type_source": "class_management_task",
+      "type_target": "party_organization"
+    },
+    {
+      "source": "nhiệm vụ quản lý lớp",
+      "target": "Đoàn thanh niên",
+      "relation": "quản_lý",
+      "type_source": "class_management_task",
+      "type_target": "youth_union"
+    },
+    {
+      "source": "nhiệm vụ quản lý lớp",
+      "target": "Hội sinh viên",
+      "relation": "quản_lý",
+      "type_source": "class_management_task",
+      "type_target": "student_association"
+    },
+    {
+      "source": "nhiệm vụ quản lý lớp",
+      "target": "tổ chức khác",
+      "relation": "quản_lý",
+      "type_source": "class_management_task",
+      "type_target": "other_organization"
+    },
+    {
+      "source": "tổ chức khác",
+      "target": "cơ sở giáo dục đại học",
+      "relation": "trong",
+      "type_source": "other_organization",
+      "type_target": "higher_education_institution"
+    },
+    {
+      "source": "Kỹ năng tổ chức",
+      "target": "quản lý lớp",
+      "relation": "quản_lý",
+      "type_source": "organizational_skill",
+      "type_target": "class_management"
+    },
+    {
+      "source": "Kỹ năng tổ chức",
+      "target": "quản lý các tổ chức Đảng, Đoàn thanh niên, Hội sinh viên",
+      "relation": "quản_lý",
+      "type_source": "organizational_skill",
+      "type_target": "organization_management"
+    },
+    {
+      "source": "quản lý các tổ chức Đảng, Đoàn thanh niên, Hội sinh viên",
+      "target": "tổ chức Đảng",
+      "relation": "quản_lý",
+      "type_source": "organization_management",
+      "type_target": "party_organization"
+    },
+    {
+      "source": "quản lý các tổ chức Đảng, Đoàn thanh niên, Hội sinh viên",
+      "target": "Đoàn thanh niên",
+      "relation": "quản_lý",
+      "type_source": "organization_management",
+      "type_target": "youth_union"
+    },
+    {
+      "source": "quản lý các tổ chức Đảng, Đoàn thanh niên, Hội sinh viên",
+      "target": "Hội sinh viên",
+      "relation": "quản_lý",
+      "type_source": "organization_management",
+      "type_target": "student_association"
+    },
+    {
+      "source": "quản lý các tổ chức Đảng, Đoàn thanh niên, Hội sinh viên",
+      "target": "tổ chức khác",
+      "relation": "quản_lý",
+      "type_source": "organization_management",
+      "type_target": "other_organization"
+    },
+    {
+      "source": "tổ chức khác",
+      "target": "cơ sở giáo dục đại học",
+      "relation": "trong",
+      "type_source": "other_organization",
+      "type_target": "higher_education_institution"
+    },
+    {
+      "source": "Hỗ trợ",
+      "target": "hoạt động chung của lớp",
+      "relation": "tham_gia",
+      "type_source": "support",
+      "type_target": "general_class_activities"
+    },
+    {
+      "source": "tham gia tích cực",
+      "target": "hoạt động chung của lớp",
+      "relation": "tham_gia",
+      "type_source": "active_participation",
+      "type_target": "general_class_activities"
+    },
+    {
+      "source": "hoạt động chung của lớp",
+      "target": "lớp",
+      "relation": "của",
+      "type_source": "general_class_activities",
+      "type_target": "class"
+    },
+    {
+      "source": "hoạt động chung của lớp",
+      "target": "tập thể",
+      "relation": "của",
+      "type_source": "general_class_activities",
+      "type_target": "collective"
+    },
+    {
+      "source": "hoạt động chung của lớp",
+      "target": "khoa",
+      "relation": "của",
+      "type_source": "general_class_activities",
+      "type_target": "faculty"
+    },
+    {
+      "source": "hoạt động chung của lớp",
+      "target": "cơ sở giáo dục đại học",
+      "relation": "của",
+      "type_source": "general_class_activities",
+      "type_target": "higher_education_institution"
+    },
+    {
+      "source": "Người học",
+      "target": "thành tích đặc biệt",
+      "relation": "đạt_được",
+      "type_source": "learner",
+      "type_target": "special_achievement"
+    },
+    {
+      "source": "thành tích đặc biệt",
+      "target": "học tập",
+      "relation": "trong",
+      "type_source": "special_achievement",
+      "type_target": "learning"
+    },
+    {
+      "source": "thành tích đặc biệt",
+      "target": "rèn luyện",
+      "relation": "trong",
+      "type_source": "special_achievement",
+      "type_target": "training"
+    },
+    {
+      "source": "Khung điểm đánh giá",
+      "target": "0",
+      "relation": "từ_đến",
+      "type_source": "assessment_scale",
+      "type_target": "score"
+    },
+    {
+      "source": "Khung điểm đánh giá",
+      "target": "10 điểm",
+      "relation": "từ_đến",
+      "type_source": "assessment_scale",
+      "type_target": "score"
+    }
+  ]
+}

@@ -1,0 +1,459 @@
+{
+  "entities": [
+    {
+      "name": "Sinh viên",
+      "type": "role"
+    },
+    {
+      "name": "Nhà giáo",
+      "type": "role"
+    },
+    {
+      "name": "Cán bộ",
+      "type": "role"
+    },
+    {
+      "name": "Nhân viên nhà trường",
+      "type": "role"
+    },
+    {
+      "name": "Nhà trường",
+      "type": "organization"
+    },
+    {
+      "name": "Phòng thi",
+      "type": "location"
+    },
+    {
+      "name": "Tiểu luận",
+      "type": "document"
+    },
+    {
+      "name": "Đồ án",
+      "type": "document"
+    },
+    {
+      "name": "Khóa luận tốt nghiệp",
+      "type": "document"
+    },
+    {
+      "name": "Giờ học",
+      "type": "time_period"
+    },
+    {
+      "name": "Lớp",
+      "type": "location"
+    },
+    {
+      "name": "Pháp luật",
+      "type": "concept"
+    },
+    {
+      "name": "Trường",
+      "type": "organization"
+    },
+    {
+      "name": "Nơi công cộng",
+      "type": "location"
+    },
+    {
+      "name": "Vũ khí",
+      "type": "prohibited_item"
+    },
+    {
+      "name": "Chất nổ",
+      "type": "prohibited_item"
+    },
+    {
+      "name": "Chất ma tuý",
+      "type": "prohibited_item"
+    },
+    {
+      "name": "Hóa chất cấm sử dụng",
+      "type": "prohibited_item"
+    },
+    {
+      "name": "Tài liệu, ấn phẩm, thông tin phản động, đồi trụy",
+      "type": "prohibited_item"
+    },
+    {
+      "name": "Tài liệu cấm khác",
+      "type": "prohibited_item"
+    },
+    {
+      "name": "Nhà nước",
+      "type": "organization"
+    },
+    {
+      "name": "Hoạt động mê tín dị đoan",
+      "type": "prohibited_activity"
+    },
+    {
+      "name": "Hoạt động tôn giáo trong nhà trường",
+      "type": "prohibited_activity"
+    },
+    {
+      "name": "Hành vi vi phạm đạo đức",
+      "type": "prohibited_activity"
+    },
+    {
+      "name": "Hoạt động mang tính chất chính trị trái pháp luật",
+      "type": "prohibited_activity"
+    },
+    {
+      "name": "Hoạt động tập thể mang danh nghĩa nhà trường",
+      "type": "activity"
+    },
+    {
+      "name": "Hiệu trưởng",
+      "type": "role"
+    },
+    {
+      "name": "Bài viết, hình ảnh có nội dung xuyên tạc, dung tục, xâm phạm quyền con người hoặc kích động biểu tình trái pháp luật, gây rối, chống phá Đảng, Nhà nước",
+      "type": "prohibited_content"
+    },
+    {
+      "name": "Đảng",
+      "type": "organization"
+    },
+    {
+      "name": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
+      "type": "prohibited_action"
+    },
+    {
+      "name": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
+      "type": "prohibited_action"
+    },
+    {
+      "name": "Hành vi bị cấm 3: Sử dụng chất kích thích/say xỉn trong môi trường học tập",
+      "type": "prohibited_action"
+    },
+    {
+      "name": "Hành vi bị cấm 4: Tụ tập/biểu tình/khiếu kiện trái pháp luật; Gây rối trật tự",
+      "type": "prohibited_action"
+    },
+    {
+      "name": "Hành vi bị cấm 5: Đua xe/cổ vũ đua xe trái phép",
+      "type": "prohibited_action"
+    },
+    {
+      "name": "Hành vi bị cấm 6: Đánh bạc",
+      "type": "prohibited_action"
+    },
+    {
+      "name": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "type": "prohibited_action"
+    },
+    {
+      "name": "Hành vi bị cấm 8: Hoạt động chính trị trái pháp luật; Hoạt động tập thể không phép",
+      "type": "prohibited_action"
+    },
+    {
+      "name": "Hành vi bị cấm 9: Đăng tải/chia sẻ nội dung xấu/chống phá",
+      "type": "prohibited_action"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sinh viên",
+      "target": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
+      "type_source": "role",
+      "type_target": "prohibited_action",
+      "relation": "bị_cấm_thực_hiện"
+    },
+    {
+      "source": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
+      "target": "Nhà giáo",
+      "type_source": "prohibited_action",
+      "type_target": "role",
+      "relation": "đối_tượng_bị_tác_động"
+    },
+    {
+      "source": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
+      "target": "Cán bộ",
+      "type_source": "prohibited_action",
+      "type_target": "role",
+      "relation": "đối_tượng_bị_tác_động"
+    },
+    {
+      "source": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
+      "target": "Nhân viên nhà trường",
+      "type_source": "prohibited_action",
+      "type_target": "role",
+      "relation": "đối_tượng_bị_tác_động"
+    },
+    {
+      "source": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
+      "target": "Sinh viên",
+      "type_source": "prohibited_action",
+      "type_target": "role",
+      "relation": "đối_tượng_bị_tác_động"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
+      "type_source": "role",
+      "type_target": "prohibited_action",
+      "relation": "bị_cấm_thực_hiện"
+    },
+    {
+      "source": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
+      "target": "Phòng thi",
+      "type_source": "prohibited_action",
+      "type_target": "location",
+      "relation": "liên_quan_đến"
+    },
+     {
+      "source": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
+      "target": "Tiểu luận",
+      "type_source": "prohibited_action",
+      "type_target": "document",
+      "relation": "liên_quan_đến"
+    },
+     {
+      "source": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
+      "target": "Đồ án",
+      "type_source": "prohibited_action",
+      "type_target": "document",
+      "relation": "liên_quan_đến"
+    },
+     {
+      "source": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
+      "target": "Khóa luận tốt nghiệp",
+      "type_source": "prohibited_action",
+      "type_target": "document",
+      "relation": "liên_quan_đến"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Hành vi bị cấm 3: Sử dụng chất kích thích/say xỉn trong môi trường học tập",
+      "type_source": "role",
+      "type_target": "prohibited_action",
+      "relation": "bị_cấm_thực_hiện"
+    },
+    {
+      "source": "Hành vi bị cấm 3: Sử dụng chất kích thích/say xỉn trong môi trường học tập",
+      "target": "Giờ học",
+      "type_source": "prohibited_action",
+      "type_target": "time_period",
+      "relation": "thực_hiện_trong"
+    },
+     {
+      "source": "Hành vi bị cấm 3: Sử dụng chất kích thích/say xỉn trong môi trường học tập",
+      "target": "Lớp",
+      "type_source": "prohibited_action",
+      "type_target": "location",
+      "relation": "thực_hiện_tại"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Hành vi bị cấm 4: Tụ tập/biểu tình/khiếu kiện trái pháp luật; Gây rối trật tự",
+      "type_source": "role",
+      "type_target": "prohibited_action",
+      "relation": "bị_cấm_thực_hiện"
+    },
+    {
+      "source": "Hành vi bị cấm 4: Tụ tập/biểu tình/khiếu kiện trái pháp luật; Gây rối trật tự",
+      "target": "Pháp luật",
+      "type_source": "prohibited_action",
+      "type_target": "concept",
+      "relation": "vi_phạm"
+    },
+    {
+      "source": "Hành vi bị cấm 4: Tụ tập/biểu tình/khiếu kiện trái pháp luật; Gây rối trật tự",
+      "target": "Trường",
+      "type_source": "prohibited_action",
+      "type_target": "organization",
+      "relation": "thực_hiện_tại"
+    },
+    {
+      "source": "Hành vi bị cấm 4: Tụ tập/biểu tình/khiếu kiện trái pháp luật; Gây rối trật tự",
+      "target": "Nơi công cộng",
+      "type_source": "prohibited_action",
+      "type_target": "location",
+      "relation": "thực_hiện_tại"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Hành vi bị cấm 5: Đua xe/cổ vũ đua xe trái phép",
+      "type_source": "role",
+      "type_target": "prohibited_action",
+      "relation": "bị_cấm_thực_hiện"
+    },
+    {
+      "source": "Hành vi bị cấm 5: Đua xe/cổ vũ đua xe trái phép",
+      "target": "Pháp luật",
+      "type_source": "prohibited_action",
+      "type_target": "concept",
+      "relation": "vi_phạm"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Hành vi bị cấm 6: Đánh bạc",
+      "type_source": "role",
+      "type_target": "prohibited_action",
+      "relation": "bị_cấm_thực_hiện"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "type_source": "role",
+      "type_target": "prohibited_action",
+      "relation": "bị_cấm_thực_hiện"
+    },
+    {
+      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "target": "Vũ khí",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_item",
+      "relation": "liên_quan_đến"
+    },
+    {
+      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "target": "Chất nổ",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_item",
+      "relation": "liên_quan_đến"
+    },
+    {
+      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "target": "Chất ma tuý",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_item",
+      "relation": "liên_quan_đến"
+    },
+    {
+      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "target": "Hóa chất cấm sử dụng",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_item",
+      "relation": "liên_quan_đến"
+    },
+    {
+      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "target": "Tài liệu, ấn phẩm, thông tin phản động, đồi trụy",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_item",
+      "relation": "liên_quan_đến"
+    },
+    {
+      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "target": "Tài liệu cấm khác",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_item",
+      "relation": "liên_quan_đến"
+    },
+     {
+      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "target": "Hoạt động mê tín dị đoan",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_activity",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "target": "Hoạt động tôn giáo trong nhà trường",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_activity",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "target": "Hành vi vi phạm đạo đức",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_activity",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
+      "target": "Nhà nước",
+      "type_source": "prohibited_action",
+      "type_target": "organization",
+      "relation": "quy_định_bởi"
+    },
+     {
+      "source": "Hoạt động tôn giáo trong nhà trường",
+      "target": "Nhà trường",
+      "type_source": "prohibited_activity",
+      "type_target": "organization",
+      "relation": "thực_hiện_tại"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Hành vi bị cấm 8: Hoạt động chính trị trái pháp luật; Hoạt động tập thể không phép",
+      "type_source": "role",
+      "type_target": "prohibited_action",
+      "relation": "bị_cấm_thực_hiện"
+    },
+     {
+      "source": "Hành vi bị cấm 8: Hoạt động chính trị trái pháp luật; Hoạt động tập thể không phép",
+      "target": "Hoạt động mang tính chất chính trị trái pháp luật",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_activity",
+      "relation": "bao_gồm"
+    },
+     {
+      "source": "Hoạt động mang tính chất chính trị trái pháp luật",
+      "target": "Pháp luật",
+      "type_source": "prohibited_activity",
+      "type_target": "concept",
+      "relation": "vi_phạm"
+    },
+     {
+      "source": "Hành vi bị cấm 8: Hoạt động chính trị trái pháp luật; Hoạt động tập thể không phép",
+      "target": "Hoạt động tập thể mang danh nghĩa nhà trường",
+      "type_source": "prohibited_action",
+      "type_target": "activity",
+      "relation": "bao_gồm"
+    },
+     {
+      "source": "Hoạt động tập thể mang danh nghĩa nhà trường",
+      "target": "Nhà trường",
+      "type_source": "activity",
+      "type_target": "organization",
+      "relation": "mang_danh_nghĩa"
+    },
+    {
+      "source": "Hoạt động tập thể mang danh nghĩa nhà trường",
+      "target": "Hiệu trưởng",
+      "type_source": "activity",
+      "type_target": "role",
+      "relation": "yêu_cầu_phê_duyệt_bởi"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Hành vi bị cấm 9: Đăng tải/chia sẻ nội dung xấu/chống phá",
+      "type_source": "role",
+      "type_target": "prohibited_action",
+      "relation": "bị_cấm_thực_hiện"
+    },
+     {
+      "source": "Hành vi bị cấm 9: Đăng tải/chia sẻ nội dung xấu/chống phá",
+      "target": "Bài viết, hình ảnh có nội dung xuyên tạc, dung tục, xâm phạm quyền con người hoặc kích động biểu tình trái pháp luật, gây rối, chống phá Đảng, Nhà nước",
+      "type_source": "prohibited_action",
+      "type_target": "prohibited_content",
+      "relation": "liên_quan_đến"
+    },
+     {
+      "source": "Bài viết, hình ảnh có nội dung xuyên tạc, dung tục, xâm phạm quyền con người hoặc kích động biểu tình trái pháp luật, gây rối, chống phá Đảng, Nhà nước",
+      "target": "Pháp luật",
+      "type_source": "prohibited_content",
+      "type_target": "concept",
+      "relation": "vi_phạm"
+    },
+     {
+      "source": "Bài viết, hình ảnh có nội dung xuyên tạc, dung tục, xâm phạm quyền con người hoặc kích động biểu tình trái pháp luật, gây rối, chống phá Đảng, Nhà nước",
+      "target": "Đảng",
+      "type_source": "prohibited_content",
+      "type_target": "organization",
+      "relation": "chống_phá"
+    },
+     {
+      "source": "Bài viết, hình ảnh có nội dung xuyên tạc, dung tục, xâm phạm quyền con người hoặc kích động biểu tình trái pháp luật, gây rối, chống phá Đảng, Nhà nước",
+      "target": "Nhà nước",
+      "type_source": "prohibited_content",
+      "type_target": "organization",
+      "relation": "chống_phá"
+    }
+  ]
+}

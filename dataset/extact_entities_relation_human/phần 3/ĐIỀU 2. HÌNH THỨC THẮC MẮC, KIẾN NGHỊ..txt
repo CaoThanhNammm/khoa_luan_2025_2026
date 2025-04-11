@@ -1,0 +1,128 @@
+{
+  "entities": [
+    {
+      "name": "thắc mắc, kiến nghị",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sinh viên",
+      "type": "PERSON_GROUP"
+    },
+    {
+      "name": "người có thẩm quyền",
+      "type": "PERSON"
+    },
+    {
+      "name": "trao đổi trực tiếp",
+      "type": "METHOD"
+    },
+    {
+      "name": "gửi thư qua email",
+      "type": "METHOD"
+    },
+    {
+      "name": "viết đơn",
+      "type": "METHOD"
+    },
+    {
+      "name": "minh chứng cụ thể",
+      "type": "EVIDENCE"
+    },
+    {
+      "name": "bản in",
+      "type": "MEDIUM"
+    },
+    {
+      "name": "photocopy",
+      "type": "MEDIUM"
+    },
+    {
+      "name": "trực tuyến trên website",
+      "type": "METHOD"
+    },
+    {
+      "name": "website",
+      "type": "PLATFORM"
+    },
+    {
+      "name": "Nhà Trường",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "điện thoại",
+      "type": "COMMUNICATION_CHANNEL"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "thắc mắc, kiến nghị",
+      "target": "sinh viên",
+      "type_source": "CONCEPT",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "thắc mắc, kiến nghị",
+      "target": "người có thẩm quyền",
+      "type_source": "CONCEPT",
+      "type_target": "PERSON",
+      "relation": "CHUYỂN_TỚI"
+    },
+    {
+      "source": "gửi thư qua email",
+      "target": "email",
+      "type_source": "METHOD",
+      "type_target": "COMMUNICATION_CHANNEL",
+      "relation": "QUA"
+    },
+    {
+      "source": "viết đơn",
+      "target": "minh chứng cụ thể",
+      "type_source": "METHOD",
+      "type_target": "EVIDENCE",
+      "relation": "KÈM_THEO"
+    },
+    {
+      "source": "minh chứng cụ thể",
+      "target": "bản in",
+      "type_source": "EVIDENCE",
+      "type_target": "MEDIUM",
+      "relation": "BẰNG"
+    },
+    {
+      "source": "minh chứng cụ thể",
+      "target": "photocopy",
+      "type_source": "EVIDENCE",
+      "type_target": "MEDIUM",
+      "relation": "BẰNG"
+    },
+    {
+      "source": "trực tuyến trên website",
+      "target": "website",
+      "type_source": "METHOD",
+      "type_target": "PLATFORM",
+      "relation": "TRÊN"
+    },
+    {
+      "source": "Nhà Trường",
+      "target": "hình thức thắc mắc, kiến nghị",
+      "type_source": "ORGANIZATION",
+      "type_target": "CONCEPT",
+      "relation": "KHÔNG_CHẤP_NHẬN"
+    },
+    {
+      "source": "hình thức thắc mắc, kiến nghị",
+      "target": "sinh viên",
+      "type_source": "CONCEPT",
+      "type_target": "PERSON_GROUP",
+      "relation": "CỦA"
+    },
+    {
+      "source": "hình thức thắc mắc, kiến nghị",
+      "target": "điện thoại",
+      "type_source": "CONCEPT",
+      "type_target": "COMMUNICATION_CHANNEL",
+      "relation": "QUA"
+    }
+  ]
+}

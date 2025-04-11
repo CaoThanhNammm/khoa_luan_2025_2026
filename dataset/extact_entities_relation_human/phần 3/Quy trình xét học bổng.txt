@@ -1,0 +1,170 @@
+{
+  "entities": [
+    {
+      "name": "Phòng Công tác sinh viên",
+      "type": "organization_department"
+    },
+    {
+      "name": "Học kỳ",
+      "type": "time_period"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "person_type"
+    },
+    {
+      "name": "Học bổng khuyến khích học tập",
+      "type": "scholarship"
+    },
+    {
+      "name": "Hội đồng xét duyệt",
+      "type": "committee"
+    },
+    {
+      "name": "Danh sách",
+      "type": "document_list"
+    },
+    {
+      "name": "Khối học bổng",
+      "type": "scholarship_group"
+    },
+    {
+      "name": "Loại học bổng",
+      "type": "scholarship_category"
+    },
+    {
+      "name": "Điểm trung bình chung học bổng",
+      "type": "academic_score"
+    },
+    {
+      "name": "Điểm rèn luyện",
+      "type": "conduct_score"
+    },
+    {
+      "name": "Số tín chỉ đã học trong học kỳ",
+      "type": "academic_metric"
+    },
+    {
+      "name": "Điểm trung bình chung tích lũy",
+      "type": "academic_score"
+    },
+    {
+      "name": "Quỹ học bổng khuyến khích học tập",
+      "type": "fund"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Phòng Công tác sinh viên",
+      "target": "Danh sách",
+      "type_source": "organization_department",
+      "type_target": "document_list",
+      "relation": "lập"
+    },
+    {
+      "source": "Danh sách",
+      "target": "Sinh viên",
+      "type_source": "document_list",
+      "type_target": "person_type",
+      "relation": "liệt_kê"
+    },
+     {
+      "source": "Sinh viên",
+      "target": "Học bổng khuyến khích học tập",
+      "type_source": "person_type",
+      "type_target": "scholarship",
+      "relation": "đủ_điều_kiện_xét"
+    },
+    {
+      "source": "Phòng Công tác sinh viên",
+      "target": "Hội đồng xét duyệt",
+      "type_source": "organization_department",
+      "type_target": "committee",
+      "relation": "trình_danh_sách_cho"
+    },
+    {
+      "source": "Danh sách",
+      "target": "Khối học bổng",
+      "type_source": "document_list",
+      "type_target": "scholarship_group",
+      "relation": "lập_theo"
+    },
+    {
+      "source": "Danh sách",
+      "target": "Loại học bổng",
+      "type_source": "document_list",
+      "type_target": "scholarship_category",
+      "relation": "xếp_theo_thứ_tự_ưu_tiên"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Loại học bổng",
+      "type_source": "person_type",
+      "type_target": "scholarship_category",
+      "relation": "đạt"
+    },
+    {
+      "source": "Danh sách",
+      "target": "Điểm trung bình chung học bổng",
+      "type_source": "document_list",
+      "type_target": "academic_score",
+      "relation": "xếp_ưu_tiên_theo"
+    },
+    {
+      "source": "Danh sách",
+      "target": "Điểm rèn luyện",
+      "type_source": "document_list",
+      "type_target": "conduct_score",
+      "relation": "xếp_ưu_tiên_theo"
+    },
+    {
+      "source": "Danh sách",
+      "target": "Số tín chỉ đã học trong học kỳ",
+      "type_source": "document_list",
+      "type_target": "academic_metric",
+      "relation": "xếp_ưu_tiên_theo"
+    },
+    {
+      "source": "Danh sách",
+      "target": "Điểm trung bình chung tích lũy",
+      "type_source": "document_list",
+      "type_target": "academic_score",
+      "relation": "xếp_ưu_tiên_theo"
+    },
+    {
+      "source": "Hội đồng xét duyệt",
+      "target": "Quỹ học bổng khuyến khích học tập",
+      "type_source": "committee",
+      "type_target": "fund",
+      "relation": "căn_cứ_vào"
+    },
+     {
+      "source": "Hội đồng xét duyệt",
+      "target": "Khối học bổng",
+      "type_source": "committee",
+      "type_target": "scholarship_group",
+      "relation": "xét_cho"
+    },
+    {
+      "source": "Quỹ học bổng khuyến khích học tập",
+      "target": "Khối học bổng",
+      "type_source": "fund",
+      "type_target": "scholarship_group",
+      "relation": "cấp_cho"
+    },
+    {
+      "source": "Hội đồng xét duyệt",
+      "target": "Danh sách",
+      "type_source": "committee",
+      "type_target": "document_list",
+      "relation": "xét_theo_thứ_tự_ưu_tiên"
+    },
+     {
+      "source": "Hội đồng xét duyệt",
+      "target": "Quỹ học bổng khuyến khích học tập",
+      "type_source": "committee",
+      "type_target": "fund",
+      "relation": "xét_đến_khi_hết"
+    }
+  ]
+}

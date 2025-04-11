@@ -1,0 +1,80 @@
+{
+  "entities": [
+    {
+      "name": "Mức tiền hỗ trợ vay vốn sinh viên",
+      "type": "loan_amount"
+    },
+    {
+      "name": "4.000.000 đ/tháng/sinh viên",
+      "type": "currency_amount"
+    },
+    {
+      "name": "Lãi suất",
+      "type": "interest_rate"
+    },
+    {
+      "name": "sinh viên",
+      "type": "student"
+    },
+    {
+      "name": "0,65%/tháng",
+      "type": "interest_rate_percentage"
+    },
+    {
+      "name": "lãi suất nợ quá hạn",
+      "type": "overdue_interest_rate"
+    },
+    {
+      "name": "130%",
+      "type": "percentage"
+    },
+    {
+      "name": "lãi suất khi cho vay",
+      "type": "loan_interest_rate"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Mức tiền hỗ trợ vay vốn sinh viên",
+      "target": "4.000.000 đ/tháng/sinh viên",
+      "relation": "là",
+      "type_source": "loan_amount",
+      "type_target": "currency_amount"
+    },
+    {
+      "source": "Lãi suất",
+      "target": "sinh viên",
+      "relation": "cho_vay_ưu_đãi_đối_với",
+      "type_source": "interest_rate",
+      "type_target": "student"
+    },
+    {
+      "source": "Lãi suất",
+      "target": "0,65%/tháng",
+      "relation": "là",
+      "type_source": "interest_rate",
+      "type_target": "interest_rate_percentage"
+    },
+    {
+      "source": "lãi suất nợ quá hạn",
+      "target": "130%",
+      "relation": "tính_bằng",
+      "type_source": "overdue_interest_rate",
+      "type_target": "percentage"
+    },
+    {
+      "source": "lãi suất nợ quá hạn",
+      "target": "lãi suất khi cho vay",
+      "relation": "tính_bằng",
+      "type_source": "overdue_interest_rate",
+      "type_target": "loan_interest_rate"
+    },
+      {
+      "source": "130%",
+      "target": "lãi suất khi cho vay",
+      "relation": "của",
+      "type_source": "percentage",
+      "type_target": "loan_interest_rate"
+    }
+  ]
+}

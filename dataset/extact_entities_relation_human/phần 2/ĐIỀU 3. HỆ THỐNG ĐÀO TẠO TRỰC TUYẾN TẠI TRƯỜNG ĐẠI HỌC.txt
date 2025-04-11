@@ -1,0 +1,317 @@
+{
+  "entities": [
+    {
+      "name": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "e-Learning – NLU",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "cổng đào tạo trực tuyến",
+      "type": "SYSTEM_COMPONENT"
+    },
+    {
+      "name": "hệ thống quản lý học tập",
+      "type": "SYSTEM_COMPONENT"
+    },
+    {
+      "name": "học liệu điện tử",
+      "type": "RESOURCE"
+    },
+    {
+      "name": "diễn đàn trao đổi",
+      "type": "INTERACTION_METHOD"
+    },
+    {
+      "name": "thảo luận trực tuyến",
+      "type": "INTERACTION_METHOD"
+    },
+    {
+      "name": "hệ thống kiểm tra",
+      "type": "SYSTEM_COMPONENT"
+    },
+    {
+      "name": "đánh giá sinh viên",
+      "type": "ACTIVITY"
+    },
+    {
+      "name": "giảng viên",
+      "type": "PERSON"
+    },
+    {
+      "name": "quản trị hệ thống",
+      "type": "PERSON"
+    },
+    {
+      "name": "Edmodo",
+      "type": "PLATFORM"
+    },
+    {
+      "name": "Zoom",
+      "type": "PLATFORM"
+    },
+    {
+      "name": "Google meet",
+      "type": "PLATFORM"
+    },
+    {
+      "name": "Microsoft team",
+      "type": "PLATFORM"
+    },
+    {
+      "name": "Skype",
+      "type": "PLATFORM"
+    },
+    {
+      "name": "máy tính",
+      "type": "DEVICE"
+    },
+    {
+      "name": "mạng",
+      "type": "INFRASTRUCTURE"
+    },
+    {
+      "name": "thiết bị di động thông minh",
+      "type": "DEVICE"
+    },
+    {
+      "name": "sinh viên",
+      "type": "PERSON"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+      "target": "e-Learning – NLU",
+      "type_source": "ORGANIZATION",
+      "type_target": "SYSTEM",
+      "relation": "có_hệ_thống"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "cổng đào tạo trực tuyến",
+      "type_source": "SYSTEM",
+      "type_target": "SYSTEM_COMPONENT",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "hệ thống quản lý học tập",
+      "type_source": "SYSTEM",
+      "type_target": "SYSTEM_COMPONENT",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "học liệu điện tử",
+      "type_source": "SYSTEM",
+      "type_target": "RESOURCE",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "diễn đàn trao đổi",
+      "type_source": "SYSTEM",
+      "type_target": "INTERACTION_METHOD",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "thảo luận trực tuyến",
+      "type_source": "SYSTEM",
+      "type_target": "INTERACTION_METHOD",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "hệ thống kiểm tra",
+      "type_source": "SYSTEM",
+      "type_target": "SYSTEM_COMPONENT",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "đánh giá sinh viên",
+      "type_source": "SYSTEM",
+      "type_target": "ACTIVITY",
+      "relation": "phục_vụ_cho"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "giảng viên",
+      "type_source": "SYSTEM",
+      "type_target": "PERSON",
+      "relation": "phục_vụ_cho"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "quản trị hệ thống",
+      "type_source": "SYSTEM",
+      "type_target": "PERSON",
+      "relation": "phục_vụ_cho"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "Edmodo",
+      "type_source": "SYSTEM",
+      "type_target": "PLATFORM",
+      "relation": "phát_triển_trên_nền_tảng"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "Zoom",
+      "type_source": "SYSTEM",
+      "type_target": "PLATFORM",
+      "relation": "có_thể_dạy_học_trực_tuyến_trên"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "Google meet",
+      "type_source": "SYSTEM",
+      "type_target": "PLATFORM",
+      "relation": "có_thể_dạy_học_trực_tuyến_trên"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "Microsoft team",
+      "type_source": "SYSTEM",
+      "type_target": "PLATFORM",
+      "relation": "có_thể_dạy_học_trực_tuyến_trên"
+    },
+    {
+      "source": "e-Learning – NLU",
+      "target": "Skype",
+      "type_source": "SYSTEM",
+      "type_target": "PLATFORM",
+      "relation": "có_thể_dạy_học_trực_tuyến_trên"
+    },
+    {
+      "source": "Zoom",
+      "target": "công cụ",
+      "type_source": "PLATFORM",
+      "type_target": "UNKNOWN",
+      "relation": "là_một_số"
+    },
+    {
+      "source": "Google meet",
+      "target": "công cụ",
+      "type_source": "PLATFORM",
+      "type_target": "UNKNOWN",
+      "relation": "là_một_số"
+    },
+    {
+      "source": "Microsoft team",
+      "target": "công cụ",
+      "type_source": "PLATFORM",
+      "type_target": "UNKNOWN",
+      "relation": "là_một_số"
+    },
+    {
+      "source": "Skype",
+      "target": "công cụ",
+      "type_source": "PLATFORM",
+      "type_target": "UNKNOWN",
+      "relation": "là_một_số"
+    },
+    {
+      "source": "công cụ",
+      "target": "trao đổi",
+      "type_source": "UNKNOWN",
+      "type_target": "ACTIVITY",
+      "relation": "để"
+    },
+    {
+      "source": "công cụ",
+      "target": "giảng viên",
+      "type_source": "UNKNOWN",
+      "type_target": "PERSON",
+      "relation": "giữa"
+    },
+    {
+      "source": "công cụ",
+      "target": "sinh viên",
+      "type_source": "UNKNOWN",
+      "type_target": "PERSON",
+      "relation": "giữa"
+    },
+    {
+      "source": "công cụ",
+      "target": "lên lớp",
+      "type_source": "UNKNOWN",
+      "type_target": "ACTIVITY",
+      "relation": "để"
+    },
+    {
+      "source": "công cụ",
+      "target": "thảo luận trực tuyến",
+      "type_source": "UNKNOWN",
+      "type_target": "ACTIVITY",
+      "relation": "để"
+    },
+    {
+      "source": "công cụ",
+      "target": "máy tính",
+      "type_source": "UNKNOWN",
+      "type_target": "DEVICE",
+      "relation": "trên"
+    },
+    {
+      "source": "công cụ",
+      "target": "thiết bị di động thông minh",
+      "type_source": "UNKNOWN",
+      "type_target": "DEVICE",
+      "relation": "trên"
+    },
+    {
+      "source": "máy tính",
+      "target": "mạng",
+      "type_source": "DEVICE",
+      "type_target": "INFRASTRUCTURE",
+      "relation": "có_kết_nối"
+    },
+    {
+      "source": "thiết bị di động thông minh",
+      "target": "mạng",
+      "type_source": "DEVICE",
+      "type_target": "INFRASTRUCTURE",
+      "relation": "có_kết_nối"
+    },
+    {
+      "source": "giảng viên",
+      "target": "công cụ",
+      "type_source": "PERSON",
+      "type_target": "UNKNOWN",
+      "relation": "chọn"
+    },
+    {
+      "source": "giảng viên",
+      "target": "lớp học",
+      "type_source": "PERSON",
+      "type_target": "EVENT",
+      "relation": "đăng_ký"
+    },
+    {
+      "source": "giảng viên",
+      "target": "sinh viên",
+      "type_source": "PERSON",
+      "type_target": "PERSON",
+      "relation": "thông_báo_cho"
+    },
+    {
+      "source": "giảng viên",
+      "target": "lớp học",
+      "type_source": "PERSON",
+      "type_target": "EVENT",
+      "relation": "tham_gia"
+    },
+    {
+      "source": "sinh viên",
+      "target": "lớp học",
+      "type_source": "PERSON",
+      "type_target": "EVENT",
+      "relation": "tham_gia"
+    }
+  ]
+}

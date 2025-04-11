@@ -1,0 +1,209 @@
+{
+  "entities": [
+    {
+      "name": "ĐÁNH GIÁ VỀ Ý THỨC THAM GIA CÁC HOẠT ĐỘNG CHÍNH TRỊ, XÃ HỘI, VĂN HÓA, VĂN NGHỆ, THỂ THAO, PHÒNG CHỐNG TỘI PHẠM VÀ CÁC TỆ NẠN XÃ HỘI",
+      "type": "title"
+    },
+    {
+      "name": "tiêu chí",
+      "type": "criterion"
+    },
+    {
+      "name": "điểm đánh giá",
+      "type": "assessment_score"
+    },
+    {
+      "name": "Ý thức",
+      "type": "awareness"
+    },
+    {
+      "name": "hiệu quả",
+      "type": "effectiveness"
+    },
+    {
+      "name": "hoạt động rèn luyện",
+      "type": "training_activity"
+    },
+    {
+      "name": "chính trị",
+      "type": "political"
+    },
+    {
+      "name": "xã hội",
+      "type": "social"
+    },
+    {
+      "name": "văn hóa",
+      "type": "cultural"
+    },
+    {
+      "name": "văn nghệ",
+      "type": "artistic"
+    },
+    {
+      "name": "thể thao",
+      "type": "sports"
+    },
+    {
+      "name": "hoạt động công ích",
+      "type": "public_interest_activity"
+    },
+    {
+      "name": "hoạt động tình nguyện",
+      "type": "volunteer_activity"
+    },
+    {
+      "name": "công tác xã hội",
+      "type": "social_work"
+    },
+    {
+      "name": "tuyên truyền",
+      "type": "propaganda"
+    },
+    {
+      "name": "phòng chống tội phạm",
+      "type": "crime_prevention"
+    },
+    {
+      "name": "tội phạm",
+      "type": "crime"
+    },
+    {
+      "name": "tệ nạn xã hội",
+      "type": "social_evil"
+    },
+    {
+      "name": "Khung điểm đánh giá",
+      "type": "assessment_scale"
+    },
+    {
+      "name": "0",
+      "type": "score"
+    },
+    {
+      "name": "20 điểm",
+      "type": "score"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "tiêu chí",
+      "target": "điểm đánh giá",
+      "relation": "để_xác_định",
+      "type_source": "criterion",
+      "type_target": "assessment_score"
+    },
+    {
+      "source": "Ý thức",
+      "target": "hoạt động rèn luyện",
+      "relation": "tham_gia",
+      "type_source": "awareness",
+      "type_target": "training_activity"
+    },
+    {
+      "source": "hiệu quả",
+      "target": "hoạt động rèn luyện",
+      "relation": "tham_gia",
+      "type_source": "effectiveness",
+      "type_target": "training_activity"
+    },
+    {
+      "source": "hoạt động rèn luyện",
+      "target": "chính trị",
+      "relation": "về",
+      "type_source": "training_activity",
+      "type_target": "political"
+    },
+    {
+      "source": "hoạt động rèn luyện",
+      "target": "xã hội",
+      "relation": "về",
+      "type_source": "training_activity",
+      "type_target": "social"
+    },
+    {
+      "source": "hoạt động rèn luyện",
+      "target": "văn hóa",
+      "relation": "về",
+      "type_source": "training_activity",
+      "type_target": "cultural"
+    },
+    {
+      "source": "hoạt động rèn luyện",
+      "target": "văn nghệ",
+      "relation": "về",
+      "type_source": "training_activity",
+      "type_target": "artistic"
+    },
+    {
+      "source": "hoạt động rèn luyện",
+      "target": "thể thao",
+      "relation": "về",
+      "type_source": "training_activity",
+      "type_target": "sports"
+    },
+    {
+      "source": "Ý thức",
+      "target": "hoạt động công ích",
+      "relation": "tham_gia",
+      "type_source": "awareness",
+      "type_target": "public_interest_activity"
+    },
+    {
+      "source": "Ý thức",
+      "target": "hoạt động tình nguyện",
+      "relation": "tham_gia",
+      "type_source": "awareness",
+      "type_target": "volunteer_activity"
+    },
+    {
+      "source": "Ý thức",
+      "target": "công tác xã hội",
+      "relation": "tham_gia",
+      "type_source": "awareness",
+      "type_target": "social_work"
+    },
+    {
+      "source": "Tham gia",
+      "target": "tuyên truyền",
+      "relation": "tham_gia",
+      "type_source": "RELATION",
+      "type_target": "propaganda"
+    },
+    {
+      "source": "Tham gia",
+      "target": "phòng chống tội phạm",
+      "relation": "tham_gia",
+      "type_source": "RELATION",
+      "type_target": "crime_prevention"
+    },
+    {
+      "source": "phòng chống tội phạm",
+      "target": "tội phạm",
+      "relation": "phòng_chống",
+      "type_source": "crime_prevention",
+      "type_target": "crime"
+    },
+    {
+      "source": "phòng chống tội phạm",
+      "target": "tệ nạn xã hội",
+      "relation": "và",
+      "type_source": "crime_prevention",
+      "type_target": "social_evil"
+    },
+    {
+      "source": "Khung điểm đánh giá",
+      "target": "0",
+      "relation": "từ_đến",
+      "type_source": "assessment_scale",
+      "type_target": "score"
+    },
+    {
+      "source": "Khung điểm đánh giá",
+      "target": "20 điểm",
+      "relation": "từ_đến",
+      "type_source": "assessment_scale",
+      "type_target": "score"
+    }
+  ]
+}

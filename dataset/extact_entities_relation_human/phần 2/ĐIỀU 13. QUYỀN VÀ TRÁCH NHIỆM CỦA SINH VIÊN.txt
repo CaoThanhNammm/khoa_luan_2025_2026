@@ -1,0 +1,538 @@
+{
+  "entities": [
+    {
+      "name": "ĐIỀU 13",
+      "type": "article"
+    },
+    {
+      "name": "Sinh viên",
+      "type": "role"
+    },
+    {
+      "name": "tài khoản",
+      "type": "account"
+    },
+    {
+      "name": "lớp học",
+      "type": "virtual_location"
+    },
+    {
+      "name": "diễn đàn thảo luận",
+      "type": "platform_feature"
+    },
+    {
+      "name": "tài liệu học tập",
+      "type": "document"
+    },
+    {
+      "name": "hồ sơ cá nhân",
+      "type": "profile"
+    },
+    {
+      "name": "hình đại diện",
+      "type": "image"
+    },
+    {
+      "name": "tên thật",
+      "type": "personal_information"
+    },
+    {
+      "name": "chữ ký",
+      "type": "personal_information"
+    },
+    {
+      "name": "đường dẫn",
+      "type": "link"
+    },
+    {
+      "name": "hình thật",
+      "type": "image_type"
+    },
+    {
+      "name": "thuần phong mỹ tục",
+      "type": "cultural_standard"
+    },
+    {
+      "name": "dân tộc",
+      "type": "group"
+    },
+    {
+      "name": "đường link lớp học",
+      "type": "link"
+    },
+    {
+      "name": "người khác",
+      "type": "person"
+    },
+    {
+      "name": "hệ thống",
+      "type": "system"
+    },
+    {
+      "name": "quy định",
+      "type": "regulation"
+    },
+    {
+      "name": "nhiệm vụ",
+      "type": "task"
+    },
+    {
+      "name": "giảng viên",
+      "type": "role"
+    },
+    {
+      "name": "hệ thống đào tạo trực tuyến",
+      "type": "system"
+    },
+    {
+      "name": "thời hạn",
+      "type": "time_limit"
+    },
+    {
+      "name": "05 - 10 phút",
+      "type": "time_duration"
+    },
+    {
+      "name": "thời gian bắt đầu buổi học",
+      "type": "time_point"
+    },
+    {
+      "name": "tài khoản email sinh viên",
+      "type": "account"
+    },
+    {
+      "name": "trường",
+      "type": "organization"
+    },
+    {
+      "name": "micro",
+      "type": "device"
+    },
+    {
+      "name": "camera",
+      "type": "device"
+    },
+    {
+      "name": "nút giơ tay (Raise hand)",
+      "type": "button_ui"
+    },
+    {
+      "name": "nút Lower hand",
+      "type": "button_ui"
+    },
+    {
+      "name": "các buổi học",
+      "type": "event"
+    },
+    {
+      "name": "Trang phục lịch sự nghiêm túc",
+      "type": "dress_code"
+    },
+    {
+      "name": "thái độ chuẩn mực",
+      "type": "behavior"
+    },
+    {
+      "name": "lớp học trực tuyến",
+      "type": "virtual_location"
+    },
+    {
+      "name": "việc khác",
+      "type": "activity"
+    },
+    {
+      "name": "giờ học",
+      "type": "time_period"
+    },
+    {
+      "name": "không gian học tập yên tĩnh",
+      "type": "environment_condition"
+    },
+    {
+      "name": "tiếng ồn",
+      "type": "sound"
+    },
+    {
+      "name": "màn hình cá nhân",
+      "type": "screen"
+    },
+    {
+      "name": "nội dung không liên quan đến bài học",
+      "type": "content"
+    },
+    {
+      "name": "cửa sổ trao đổi",
+      "type": "platform_feature"
+    },
+    {
+      "name": "việc giảng bài",
+      "type": "activity"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sinh viên",
+      "target": "tài khoản",
+      "type_source": "role",
+      "type_target": "account",
+      "relation": "được_cung_cấp"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "tài khoản",
+      "type_source": "role",
+      "type_target": "account",
+      "relation": "được_hướng_dẫn_sử_dụng"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "tài khoản",
+      "type_source": "role",
+      "type_target": "account",
+      "relation": "được_hỗ_trợ_sử_dụng"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "lớp học",
+      "type_source": "role",
+      "type_target": "virtual_location",
+      "relation": "có_quyền_truy_cập_vào"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "lớp học",
+      "type_source": "role",
+      "type_target": "virtual_location",
+      "relation": "tham_gia_học_tập_trong"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "diễn đàn thảo luận",
+      "type_source": "role",
+      "type_target": "platform_feature",
+      "relation": "tham_gia_vào"
+    },
+    {
+      "source": "diễn đàn thảo luận",
+      "target": "lớp học",
+      "type_source": "platform_feature",
+      "type_target": "virtual_location",
+      "relation": "thuộc"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "lớp học",
+      "type_source": "role",
+      "type_target": "virtual_location",
+      "relation": "đăng_ký"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "tài liệu học tập",
+      "type_source": "role",
+      "type_target": "document",
+      "relation": "được_cung_cấp"
+    },
+    {
+      "source": "tài liệu học tập",
+      "target": "lớp học",
+      "type_source": "document",
+      "type_target": "virtual_location",
+      "relation": "của"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "hồ sơ cá nhân",
+      "type_source": "role",
+      "type_target": "profile",
+      "relation": "có_quyền_bổ_sung_thông_tin_trong"
+    },
+    {
+      "source": "hình đại diện",
+      "target": "hồ sơ cá nhân",
+      "type_source": "image",
+      "type_target": "profile",
+      "relation": "là_thông_tin_trong"
+    },
+    {
+      "source": "tên thật",
+      "target": "hồ sơ cá nhân",
+      "type_source": "personal_information",
+      "type_target": "profile",
+      "relation": "là_thông_tin_trong"
+    },
+    {
+      "source": "chữ ký",
+      "target": "hồ sơ cá nhân",
+      "type_source": "personal_information",
+      "type_target": "profile",
+      "relation": "là_thông_tin_trong"
+    },
+    {
+      "source": "hình đại diện",
+      "target": "Sinh viên",
+      "type_source": "image",
+      "type_target": "role",
+      "relation": "thuộc_sở_hữu_riêng_của"
+    },
+    {
+      "source": "tên thật",
+      "target": "Sinh viên",
+      "type_source": "personal_information",
+      "type_target": "role",
+      "relation": "thuộc_sở_hữu_riêng_của"
+    },
+    {
+      "source": "chữ ký",
+      "target": "Sinh viên",
+      "type_source": "personal_information",
+      "type_target": "role",
+      "relation": "thuộc_sở_hữu_riêng_của"
+    },
+    {
+      "source": "hình đại diện",
+      "target": "đường dẫn",
+      "type_source": "image",
+      "type_target": "link",
+      "relation": "không_được_kèm"
+    },
+    {
+      "source": "chữ ký",
+      "target": "đường dẫn",
+      "type_source": "personal_information",
+      "type_target": "link",
+      "relation": "không_được_kèm"
+    },
+    {
+      "source": "hình đại diện",
+      "target": "hình thật",
+      "type_source": "image",
+      "type_target": "image_type",
+      "relation": "phải_là"
+    },
+    {
+      "source": "hình đại diện",
+      "target": "thuần phong mỹ tục",
+      "type_source": "image",
+      "type_target": "cultural_standard",
+      "relation": "không_vi_phạm"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "đường link lớp học",
+      "type_source": "role",
+      "type_target": "link",
+      "relation": "phải_giữ_bí_mật"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "đường link lớp học",
+      "type_source": "role",
+      "type_target": "link",
+      "relation": "không_chia_sẻ_cho"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "người khác",
+      "type_source": "role",
+      "type_target": "person",
+      "relation": "không_chia_sẻ_đường_link_lớp_học_cho"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "tài khoản",
+      "type_source": "role",
+      "type_target": "account",
+      "relation": "phải_tự_bảo_vệ"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "hệ thống",
+      "type_source": "role",
+      "type_target": "system",
+      "relation": "chịu_trách_nhiệm_về_thông_tin_đưa_lên"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "tài khoản",
+      "type_source": "role",
+      "type_target": "account",
+      "relation": "chịu_trách_nhiệm_về_việc_để_người_khác_sử_dụng"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "nhiệm vụ",
+      "type_source": "role",
+      "type_target": "task",
+      "relation": "phải_hoàn_thành"
+    },
+    {
+      "source": "nhiệm vụ",
+      "target": "giảng viên",
+      "type_source": "task",
+      "type_target": "role",
+      "relation": "được_giao_bởi"
+    },
+    {
+      "source": "nhiệm vụ",
+      "target": "hệ thống đào tạo trực tuyến",
+      "type_source": "task",
+      "type_target": "system",
+      "relation": "trên"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "thời hạn",
+      "type_source": "role",
+      "type_target": "time_limit",
+      "relation": "phải_hoàn_thành_nhiệm_vụ_theo_đúng"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "lớp học",
+      "type_source": "role",
+      "type_target": "virtual_location",
+      "relation": "phải_đăng_nhập_vào"
+    },
+    {
+        "source": "Sinh viên",
+        "target": "thời gian bắt đầu buổi học",
+        "type_source": "role",
+        "type_target": "time_point",
+        "relation": "phải_đăng_nhập_trước"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "tài khoản email sinh viên",
+      "type_source": "role",
+      "type_target": "account",
+      "relation": "đăng_nhập_bằng"
+    },
+    {
+      "source": "tài khoản email sinh viên",
+      "target": "trường",
+      "type_source": "account",
+      "type_target": "organization",
+      "relation": "do_cấp"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "micro",
+      "type_source": "role",
+      "type_target": "device",
+      "relation": "phải_kiểm_tra"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "camera",
+      "type_source": "role",
+      "type_target": "device",
+      "relation": "phải_kiểm_tra"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "micro",
+      "type_source": "role",
+      "type_target": "device",
+      "relation": "phải_tắt_khi_lớp_học_bắt_đầu"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "nút giơ tay (Raise hand)",
+      "type_source": "role",
+      "type_target": "button_ui",
+      "relation": "phải_nhấn_khi_muốn_phát_biểu"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "micro",
+      "type_source": "role",
+      "type_target": "device",
+      "relation": "chỉ_mở_khi_được_cho_phép"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "micro",
+      "type_source": "role",
+      "type_target": "device",
+      "relation": "phải_tắt_sau_khi_trao_đổi_xong"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "nút Lower hand",
+      "type_source": "role",
+      "type_target": "button_ui",
+      "relation": "phải_bấm_sau_khi_trao_đổi_xong"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "các buổi học",
+      "type_source": "role",
+      "type_target": "event",
+      "relation": "phải_tham_gia_đầy_đủ"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "Trang phục lịch sự nghiêm túc",
+      "type_source": "role",
+      "type_target": "dress_code",
+      "relation": "phải_mặc"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "thái độ chuẩn mực",
+      "type_source": "role",
+      "type_target": "behavior",
+      "relation": "phải_có_khi_tham_gia_lớp_học_trực_tuyến"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "việc khác",
+      "type_source": "role",
+      "type_target": "activity",
+      "relation": "không_làm_trong_giờ_học"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "không gian học tập yên tĩnh",
+      "type_source": "role",
+      "type_target": "environment_condition",
+      "relation": "phải_đảm_bảo"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "màn hình cá nhân",
+      "type_source": "role",
+      "type_target": "screen",
+      "relation": "chỉ_chia_sẻ_khi_được_sự_đồng_ý_của_giảng_viên"
+    },
+    {
+      "source": "Sinh viên",
+      "target": "nội dung không liên quan đến bài học",
+      "type_source": "role",
+      "type_target": "content",
+      "relation": "không_bàn_luận_trên_cửa_sổ_trao_đổi"
+    },
+    {
+      "source": "bàn luận nội dung không liên quan",
+      "target": "việc giảng bài",
+      "type_source": "activity",
+      "type_target": "activity",
+      "relation": "làm_gián_đoạn"
+    },
+    {
+      "source": "bàn luận nội dung không liên quan",
+      "target": "lớp học",
+      "type_source": "activity",
+      "type_target": "virtual_location",
+      "relation": "ảnh_hưởng_tới"
+    },
+    {
+        "source": "ĐIỀU 13",
+        "target": "Sinh viên",
+        "type_source": "article",
+        "type_target": "role",
+        "relation": "quy_định_quyền_và_trách_nhiệm_của"
+    }
+  ]
+}

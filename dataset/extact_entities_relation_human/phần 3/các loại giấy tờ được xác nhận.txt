@@ -1,0 +1,285 @@
+{
+  "entities": [
+    {
+      "name": "giấy tờ",
+      "type": "document"
+    },
+    {
+      "name": "Vay vốn ngân hàng chính sách xã hội",
+      "type": "document_type"
+    },
+    {
+      "name": "ngân hàng chính sách xã hội",
+      "type": "organization"
+    },
+    {
+      "name": "Tạm hoãn nghĩa vụ quân sự",
+      "type": "document_type"
+    },
+    {
+      "name": "Đi xe buýt",
+      "type": "document_type"
+    },
+    {
+      "name": "Bổ sung hồ sơ nhận trợ cấp",
+      "type": "document_type"
+    },
+    {
+      "name": "Bổ sung hồ sơ làm lại thẻ sinh viên",
+      "type": "document_type"
+    },
+    {
+      "name": "thẻ sinh viên",
+      "type": "student_card"
+    },
+    {
+      "name": "Bổ sung hồ sơ thuế cho người thân",
+      "type": "document_type"
+    },
+    {
+      "name": "thuế",
+      "type": "tax_document"
+    },
+    {
+      "name": "người thân",
+      "type": "relative"
+    },
+    {
+      "name": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+      "type": "document_type"
+    },
+    {
+      "name": "ký túc xá",
+      "type": "dormitory_document"
+    },
+    {
+      "name": "Đại học Quốc gia TP.HCM",
+      "type": "university"
+    },
+    {
+      "name": "Bổ sung hồ sơ thi học kỳ, thi acces",
+      "type": "document_type"
+    },
+    {
+      "name": "thi học kỳ",
+      "type": "exam_document"
+    },
+    {
+      "name": "thi acces",
+      "type": "exam_document"
+    },
+    {
+      "name": "Bổ sung hồ sơ lý lịch cá nhân",
+      "type": "document_type"
+    },
+    {
+      "name": "lý lịch cá nhân",
+      "type": "personal_profile"
+    },
+    {
+      "name": "Bổ sung hồ sơ nhận học bổng",
+      "type": "document_type"
+    },
+    {
+      "name": "học bổng",
+      "type": "scholarship_document"
+    },
+    {
+      "name": "Bổ sung hồ sơ giảm trừ gia cảnh",
+      "type": "document_type"
+    },
+    {
+      "name": "giảm trừ gia cảnh",
+      "type": "family_deduction_document"
+    },
+    {
+      "name": "Bổ sung hồ sơ đi làm, đi thực tập",
+      "type": "document_type"
+    },
+    {
+      "name": "đi làm",
+      "type": "work_document"
+    },
+    {
+      "name": "đi thực tập",
+      "type": "internship_document"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Vay vốn ngân hàng chính sách xã hội",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "ngân hàng chính sách xã hội",
+      "target": "Vay vốn ngân hàng chính sách xã hội",
+      "relation": "của",
+      "type_source": "organization",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Tạm hoãn nghĩa vụ quân sự",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "Đi xe buýt",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "Bổ sung hồ sơ nhận trợ cấp",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "Bổ sung hồ sơ làm lại thẻ sinh viên",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "thẻ sinh viên",
+      "target": "Bổ sung hồ sơ làm lại thẻ sinh viên",
+      "relation": "của",
+      "type_source": "student_card",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ thuế cho người thân",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "thuế",
+      "target": "Bổ sung hồ sơ thuế cho người thân",
+      "relation": "của",
+      "type_source": "tax_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "người thân",
+      "target": "Bổ sung hồ sơ thuế cho người thân",
+      "relation": "cho",
+      "type_source": "relative",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "ký túc xá",
+      "target": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+      "relation": "của",
+      "type_source": "dormitory_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Đại học Quốc gia TP.HCM",
+      "target": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+      "relation": "của",
+      "type_source": "university",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ thi học kỳ, thi acces",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "thi học kỳ",
+      "target": "Bổ sung hồ sơ thi học kỳ, thi acces",
+      "relation": "của",
+      "type_source": "exam_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "thi acces",
+      "target": "Bổ sung hồ sơ thi học kỳ, thi acces",
+      "relation": "của",
+      "type_source": "exam_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ lý lịch cá nhân",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "lý lịch cá nhân",
+      "target": "Bổ sung hồ sơ lý lịch cá nhân",
+      "relation": "của",
+      "type_source": "personal_profile",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ nhận học bổng",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "học bổng",
+      "target": "Bổ sung hồ sơ nhận học bổng",
+      "relation": "của",
+      "type_source": "scholarship_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ giảm trừ gia cảnh",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "giảm trừ gia cảnh",
+      "target": "Bổ sung hồ sơ giảm trừ gia cảnh",
+      "relation": "của",
+      "type_source": "family_deduction_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "Bổ sung hồ sơ đi làm, đi thực tập",
+      "target": "giấy tờ",
+      "relation": "là_loại",
+      "type_source": "document_type",
+      "type_target": "document"
+    },
+    {
+      "source": "đi làm",
+      "target": "Bổ sung hồ sơ đi làm, đi thực tập",
+      "relation": "của",
+      "type_source": "work_document",
+      "type_target": "document_type"
+    },
+    {
+      "source": "đi thực tập",
+      "target": "Bổ sung hồ sơ đi làm, đi thực tập",
+      "relation": "của",
+      "type_source": "internship_document",
+      "type_target": "document_type"
+    }
+  ]
+}
