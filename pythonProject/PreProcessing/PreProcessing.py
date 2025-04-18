@@ -23,6 +23,7 @@ class PreProcessing:
     def string_to_json(self, text):
         removed_special = text.replace("```", "").replace("json", "")
         removed_special = removed_special.strip()
+
         return json.loads(removed_special)
 
     def text_preprocessing_vietnamese(self, text):
@@ -54,5 +55,4 @@ class PreProcessing:
         filtered_words = [word for word in output if word not in stop_words]
         result_string = ' '.join(filtered_words)
         return result_string
-
 

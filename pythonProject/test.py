@@ -113,16 +113,25 @@
 # asyncio.run(run_conversation())
 
 
-
 import pandas as pd
-try:
-    qa = pd.read_csv('qa.csv')
-    rows = list(qa.itertuples())[447:]
-    for row in rows:
-        print(row.question)
-except FileNotFoundError:
-    print("File 'qa.csv' không tồn tại, bỏ qua phần đọc file.")
+# try:
+#     qa = pd.read_csv('qa_human.csv')
+#     rows = list(qa.itertuples())[809:]
+#     for row in rows:
+#         print(row.question)
+# except FileNotFoundError:
+#     print("File 'qa.csv' không tồn tại, bỏ qua phần đọc file.")
 
 
+
+qa_human = pd.read_csv('qa_human.csv')
+my_qa_human = pd.read_csv(r"C:\Users\Nam\Desktop\my_qa_human.csv")
+
+loop_range = min(len(qa_human), len(my_qa_human))
+
+for i in range(loop_range):
+    if not my_qa_human.values[i][1] == qa_human.values[i][0]:
+        print(my_qa_human.values[i][0])
+        print(my_qa_human.values[i][1])
 
 

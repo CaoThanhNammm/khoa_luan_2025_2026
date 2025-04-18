@@ -23,8 +23,8 @@ if __name__ == "__main__":
     gemini = Gemini(model_name, api_key)
     chat = Chat(t, gemini, pre_processing)
     # 2. câu hỏi
-    rows = list(qa.itertuples())[0:]
-    file_name = f'my_qa_3.csv'
+    rows = list(qa.itertuples())[1839:]
+    file_name = f'my_qa_2.csv'
     for row in rows:
         question = row.question
 

@@ -40,7 +40,7 @@ Câu hỏi: {question}
 Tài liệu khả thi: {references}
 Yêu cầu:
 1. Phải sử dụng đầy đủ tài liệu khả thi để trả lời câu hỏi, không tóm tắt.
-2. Trả lời ngắn gọn theo tài liệu được cung cấp. Nếu không có thông tin thì trả lời 'Không có thông tin' và không thêm bất cứ thông tin gì.
+2. Diễn đạt lại câu trả lời theo tài liệu được cung cấp và câu hỏi. Nếu không có thông tin thì trả lời 'Không có thông tin' và không thêm bất cứ thông tin gì.
 """
 
 def valid_stsv():
@@ -249,6 +249,7 @@ def predict_question_belong_to(question):
     Lưu ý: 
     1. Tất cả câu hỏi đều nằm trong mục lục trên, không có chuyện không có.
     2. Các cấp bậc trùng nhau không được liên kết với nhau.
+    3. Câu Cypher query BUỘC GIỐNG THEO MẪU.
 """
 
 # dùng để trích xuất entities và relationship cho câu hỏi
@@ -377,14 +378,24 @@ Câu hỏi: {question}
 
 def summary_answer():
     return """
-bạn là một trợ lý hữu ích, tuân theo khuôn mẫu:
-1. Nhiệm vụ của bạn là dựa vào các câu trả lời được cung cấp, hãy diễn đạt lại theo ngôn ngữ tự nhiên một cách hoàn chỉnh.
+Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu:
+1. Nhiệm vụ của bạn là dựa vào câu hỏi và câu trả lời, hãy diễn đạt lại theo ngôn ngữ tự nhiên một cách hoàn chỉnh.
 2, không thêm, bớt hoặc chỉnh sửa nội dung.
 3. Tự động trình bày lại dữ liệu cho dễ nhìn.
 4. Nếu có liệt kê thì hãy đánh số thứ tự và in đậm.
+6. Nếu không có thông tin thì trả lời không có thông tin. Nếu có thông tin thì diễn đạt lại câu trả lời.
+5. Chỉ phản hổi lại câu trả lời, không phản hổi lại câu hỏi.
 
 Câu hỏi: {question}
 Câu trả lời: {answer}
+"""
+
+def separate_question():
+    return """
+Bạn là một chuyên gia phân tích câu hỏi. 
+Từ câu hỏi mà tôi cung cấp. Nhiệm vụ của bạn là hãy phân tích câu hỏi ra thành nhiều phần khác nhau(nếu có). 
+Trả về dưới dạng json gồm các thuộc tính question 1, question 2, question 3,...
+Câu hỏi: {question}
 """
 
 

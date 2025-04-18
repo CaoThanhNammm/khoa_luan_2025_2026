@@ -1,8 +1,11 @@
+import json
 import time
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.stats import spearmanr
-import os
+from scipy.stats import rankdata
+import os 
+import numpy as np
 from dotenv import load_dotenv
 from LLM.Gemini import Gemini
 load_dotenv()
@@ -28,15 +31,24 @@ def mrr(y_true, y_pred):
         return 0
 
 # Tính cosine similarity
-def cosine_similarity_score(v1, v2):
-    print(v1)
-    print(v2)
-    return cosine_similarity([v1], [v2])[0][0]
+def cosine_similarity(vector1, vector2):
+    # Tính tích vô hướng
+    dot_product = np.dot(vector1, vector2)
+    # Tính độ dài (norm) của từng vector
+    norm1 = np.linalg.norm(vector1)
+    norm2 = np.linalg.norm(vector2)
+    # Tính cosine similarity
+    if norm1 == 0 or norm2 == 0:
+        return 0.0  # Tránh chia cho 0
+    return dot_product / (norm1 * norm2)
 
 # Tính Spearman cosine similarity
-def spearman_cosine(vecs1, vecs2):
-    cosines = [cosine_similarity_score(v1, v2) for v1, v2 in zip(vecs1, vecs2)]
-    return spearmanr(cosines)
+def spearman_cosine(vector1, vector2):
+    # Chuyển vector thành thứ hạng (rank)
+    rank1 = rankdata(vector1, method='average')
+    rank2 = rankdata(vector2, method='average')
+    # Tính cosine similarity trên vector thứ hạng
+    return cosine_similarity(rank1, rank2)
 
 # Hàm đánh giá mô hình trên các câu hỏi
 def evaluate_model(model, data, top_k=20):
@@ -78,34 +90,75 @@ def evaluate_model(model, data, top_k=20):
     }
 
 # Đánh giá chỉ sử dụng LLM
-model_name = os.getenv("model")
-prompt = """
-Hãy sử dụng những dữ liệu đã được huấn luyện của bạn để trả lời các câu hỏi. 
-Trả lời ngắn gọn, súc tích. Nếu không biết hoặc không thể truy cập thì hãy trở lời tôi không biết hoặc không thể truy cập
-Nếu biết thì hãy trả lời theo dạng sau:
-name: Tên của bệnh/dị tật
-type: Loại, được xác định là một "disease" (bệnh).
-    + disease
-    + gene/protein
-    + molecular_function
-    + drug
-    + pathway
-    + anatomy
-    + effect/phenotype
-    + biological_process
-    + cellular_component
-    + exposure
-source: Nguồn thông tin đến từ cơ sở dữ liệu, một cơ sở dữ liệu về các bệnh hiếm gặp.
-details: Nói về chi tiết hơn bệnh/dị tật
-"""
-api_key = os.getenv("API_KEY")
-gemini = Gemini(api_key)
-model = gemini.load_model(model_name, prompt)
-dataset = pd.read_csv('dataset/prime/prime_auto_qa.csv')
+# prompt = """
+# Hãy sử dụng những dữ liệu đã được huấn luyện của bạn để trả lời các câu hỏi.
+# Trả lời ngắn gọn, súc tích. Nếu không biết hoặc không thể truy cập thì hãy trở lời tôi không biết hoặc không thể truy cập
+# Nếu biết thì hãy trả lời theo dạng sau:
+# name: Tên của bệnh/dị tật
+# type: # Loại, được xác định là một "disease" (bệnh).
+#     + disease
+#     + gene/protein
+#     + molecular_function
+#     + drug
+#     + pathway
+#     + anatomy
+#     + effect/phenotype
+#     + biological_process
+#     + cellular_component
+#     + exposure
+# source: Nguồn thông tin đến từ cơ sở dữ liệu, một cơ sở dữ liệu về các bệnh hiếm gặp.
+# details: Nói về chi tiết hơn bệnh/dị tật
+# """
 
-evaluation_results = evaluate_model(model, dataset)
-for metric, score in evaluation_results.items():
-    print(f"{metric}: {score:.4f}")
+api_key = os.getenv("API_KEY")
+model_name = os.getenv("MODEL")
+gemini = Gemini(model_name, api_key)
+
+# dataset = pd.read_csv('dataset/prime/prime_auto_qa.csv')
+#
+# evaluation_results = evaluate_model(model, dataset)
+# for metric, score in evaluation_results.items():
+#     print(f"{metric}: {score:.4f}")
+
+
+qa_truth = pd.read_csv('qa_human.csv')
+my_qa = pd.read_csv('D:\PycharmProjects\pythonProject\my_qa_human.csv')
+
+answer_truth = qa_truth.answer
+answer_predict = my_qa.answer
+
+question_truth = qa_truth.question
+question_predict = my_qa.question
+
+similarity_score = 0
+spearman_score = 0
+for i in range(len(answer_truth)):
+    embed_truth = gemini.encode(json.loads(answer_truth[i]))
+    embed_predict = gemini.encode(answer_predict[i])
+
+    similarity_score += cosine_similarity(embed_truth, embed_predict)
+    spearman_score += spearman_cosine(embed_truth, embed_predict)
+    print(f'{i}: {cosine_similarity(embed_truth, embed_predict)} and {spearman_cosine(embed_truth, embed_predict)}')
+
+print(f'similarity_score: {similarity_score/len(answer_truth)}')
+print(f'spearman_score: {spearman_score/len(answer_truth)}')
+
+
+
+# benchmark data my_qa.csv
+# similarity_score: 0.8015445589374844
+# spearman_score: 0.9464503249841755
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,7 @@
 import os
-from KnowledgeGraphDatabase import Neo4j
 from PreProcessing.PreProcessing import PreProcessing
+from knowledge_graph.KnowledgeGraphDatabase import Neo4j
+
 pre_processing = PreProcessing()
 from dotenv import load_dotenv
 load_dotenv()

@@ -1,5 +1,4 @@
 from neo4j import GraphDatabase
-import re
 
 class Neo4j:
     def __init__(self, uri, user, password):

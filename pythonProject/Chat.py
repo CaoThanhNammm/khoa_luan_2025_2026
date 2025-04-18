@@ -2,6 +2,8 @@ from LLM import prompt
 from ModelLLM.EmbeddingFactory import EmbeddingFactory
 from VectorDatabase.Qdrant import Qdrant
 from dotenv import load_dotenv
+from concurrent.futures import ThreadPoolExecutor
+from knowledge_graph.create_entities_relationship_kb import pre_processing
 load_dotenv()
 from langchain_core.prompts import PromptTemplate
 import os
@@ -31,6 +33,15 @@ class Chat:
         self.neo = Neo4j(uri, user, password)
         self.pre_processing = pre_processing
 
+    # def answer_parent(self, question):
+        # separate_question = self.separate_question(question)
+        # answer_child = ''
+        # for attr in separate_question:
+        #     question_child = separate_question[attr]
+        #     answer_child += f'{question}: {self.answer_child(question_child)}\n'
+        #
+        # return self.summary_answer(question, answer_child)
+
     def answer(self, question):
         question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
         feedback = ""
@@ -58,6 +69,81 @@ class Chat:
             print(f"Continuing feedback: {feedback}")
             print("-" * 2000)
         return potential_answer
+
+    def answer_parent(self, question):
+        # Tách câu hỏi thành các câu hỏi con
+        separate_question = self.separate_question(question)
+        answer_child_list = []
+
+        # Hàm phụ để gọi answer_child với một câu hỏi con
+        def process_child_question(attr_question_pair):
+            attr, question_child = attr_question_pair
+            print(f'question_child: {question_child}')
+            answer = self.answer_child(question_child)
+            return (attr, f"{question}: {answer}")
+
+        # Chạy song song các câu hỏi con
+        with ThreadPoolExecutor() as executor:
+            # Tạo danh sách các cặp (attr, question_child)
+            question_pairs = [(attr, separate_question[attr]) for attr in separate_question]
+            # Gửi các câu hỏi con để xử lý song song
+            results = executor.map(process_child_question, question_pairs)
+            # Thu thập kết quả
+            answer_child_list = list(results)
+
+        # Sắp xếp kết quả theo attr để đảm bảo thứ tự (nếu cần)
+        answer_child_list.sort(key=lambda x: x[0])  # Sắp xếp theo attr
+        # Tổng hợp các câu trả lời con thành chuỗi
+        answer_child = "\n".join(result[1] for result in answer_child_list)
+
+        # Tổng hợp câu trả lời cuối cùng
+        return self.summary_answer(question, answer_child)
+
+    def answer_child(self, question):
+        question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
+        feedback = ""
+        potential_answer = ""
+        print(f"Question nhỏ: {question}")
+        for i in range(self.t):
+            print(f"Step {i}, initial feedback: {feedback}")
+
+            action = self.agent(question, feedback)
+            print(f"Action: {action}")
+
+            references = self.retrieval_bank(question_pre_processing, action)
+            print(f"Available references: {references}")
+
+            potential_answer = self.generator(question_pre_processing, references)
+            print(f"Answer: {potential_answer}")
+
+            validator = self.valid(question, potential_answer)
+            print(f"valid: {validator}")
+            if "yes" in validator:
+                print(f"Final answer: {potential_answer}")
+                return potential_answer
+
+            feedback = self.commentor(question, potential_answer, references, action)
+            print(f"Continuing feedback: {feedback}")
+            print("-" * 2000)
+        return potential_answer
+
+    def summary_answer(self, question, answer):
+        prompt_template = PromptTemplate(
+            input_variables=["question", 'answer'],
+            template=prompt.summary_answer()
+        )
+        formatted_prompt = prompt_template.format(question=question, answer=answer)
+        return self.gemini.generator(formatted_prompt)
+
+    def separate_question(self, question):
+        prompt_template = PromptTemplate(
+            input_variables=["question"],
+            template=prompt.separate_question()
+        )
+        formatted_prompt = prompt_template.format(question=question)
+        answer = self.gemini.generator(formatted_prompt)
+        answer_json = pre_processing.string_to_json(answer)
+        return answer_json
 
     def agent(self, question, feedback):
         return self.first_decision(question) if not feedback else self.reflection(question, feedback)
