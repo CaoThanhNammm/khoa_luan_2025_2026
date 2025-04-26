@@ -11,8 +11,12 @@ import os
 import pdfplumber
 
 class Qdrant:
-    def __init__(self, host, port, model_1024, model_768, model_512, model_late_interaction, collection_name):
-        self.client = QdrantClient(host=host, port=port)
+    def __init__(self, host, api, model_1024, model_768, model_512, model_late_interaction, collection_name):
+        # self.client = QdrantClient(host=host, port=port)
+        self.client = QdrantClient(
+            url=host,
+            api_key=api,
+        )
         self.collection_name = collection_name
         self.model_1024 = model_1024
         self.model_768 = model_768
@@ -183,14 +187,14 @@ class Qdrant:
             collection_name= self.collection_name,
             prefetch=models.Prefetch(
                 # prefetch=models.Prefetch(
-                #     # prefetch=models.Prefetch(
-                #     #     query=text_embedded_512,
-                #     #     using="matryoshka-512dim",
-                #     #     limit=150,
-                #     # ),
+                #     prefetch=models.Prefetch(
+                #         query=text_embedded_512,
+                #         using="matryoshka-512dim",
+                #         limit=200,
+                #     ),
                 #     query=text_embedded_768,
                 #     using="matryoshka-768dim",
-                #     limit=75,
+                #     limit=100,
                 # ),
                 query=text_embedded_1024,
                 using="matryoshka-1024dim",
@@ -198,18 +202,18 @@ class Qdrant:
             ),
             query=embedded_late_interaction,
             using="late_interaction",
-            limit=3,
+            limit=10,
         ).points
 
     def re_ranking(self, query, passages):
         client = NVIDIARerank(
             model="nvidia/llama-3.2-nv-rerankqa-1b-v2",
             api_key=os.getenv("API_KEY_RERANKING"),
+            top_n=len(passages)
         )
 
         response = client.compress_documents(
             query=query,
             documents=[Document(page_content=passage) for passage in passages]
         )
-
         return response

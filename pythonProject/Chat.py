@@ -8,7 +8,7 @@ load_dotenv()
 from langchain_core.prompts import PromptTemplate
 import os
 from knowledge_graph.KnowledgeGraphDatabase import Neo4j
-
+import numpy as np
 
 class Chat:
     def __init__(self, t, gemini, pre_processing):
@@ -16,10 +16,12 @@ class Chat:
         self.t = t
 
         self._initialize_embedding_models()
+        host = 'https://0d9e031b-a61d-479b-8a5e-1b1aeeba93a0.us-west-1-0.aws.cloud.qdrant.io:6333'
+        api = os.getenv("API_KEY_QDRANT")
 
         self.qdrant = Qdrant(
-            "localhost",
-            6333,
+            host,
+            api,
             self.model_1024,
             self.model_768,
             self.model_512,
@@ -32,15 +34,6 @@ class Chat:
         password = os.getenv("PASSWORD")
         self.neo = Neo4j(uri, user, password)
         self.pre_processing = pre_processing
-
-    # def answer_parent(self, question):
-        # separate_question = self.separate_question(question)
-        # answer_child = ''
-        # for attr in separate_question:
-        #     question_child = separate_question[attr]
-        #     answer_child += f'{question}: {self.answer_child(question_child)}\n'
-        #
-        # return self.summary_answer(question, answer_child)
 
     def answer(self, question):
         question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
@@ -56,7 +49,7 @@ class Chat:
             references = self.retrieval_bank(question_pre_processing, action)
             print(f"Available references: {references}")
 
-            potential_answer = self.generator(question_pre_processing, references)
+            potential_answer = self.generator(question, references)
             print(f"Answer: {potential_answer}")
 
             validator = self.valid(question, potential_answer)
@@ -68,7 +61,7 @@ class Chat:
             feedback = self.commentor(question, potential_answer, references, action)
             print(f"Continuing feedback: {feedback}")
             print("-" * 2000)
-        return potential_answer
+        return self.summary_answer(question, feedback)
 
     def answer_parent(self, question):
         # Tách câu hỏi thành các câu hỏi con
@@ -155,16 +148,29 @@ class Chat:
         # llm dự đoán câu hỏi thuộc phần nào để thu hẹp nội dung cần truy xuất
         query = self.gemini.generator(prompt.predict_question_belong_to(question))
         query = query.replace("```", "").replace("cypher", "")
-
         print('query:', query)
         path = self.neo.get_path(query)
         references_node = self.neo.get_relationship(path)
 
-        results = ""
+        results = []
         for r in references_node:
-            results += r + '\n'
+            source_node = r['source_node']
+            relation_type = r['relation_type']
+            target_node = r['target_node']
+            text = f'{source_node} {relation_type} {target_node}'
+            results.append(text)
 
-        return results
+        re_ranking_query_text = self.qdrant.re_ranking(question, results)
+        reference = ""
+
+        for i in range(len(re_ranking_query_text)):
+            logit = re_ranking_query_text[i].metadata['relevance_score']
+            text = re_ranking_query_text[i].page_content
+            if logit >= 1:
+                print(f"{logit}: {text}")
+                reference += f'{text}\n'
+
+        return reference
 
     def retrieval_text(self, question):
         embeddings = self.embed_question(question)
@@ -178,10 +184,11 @@ class Chat:
         for i in range(len(re_ranking_query_text)):
             logit = re_ranking_query_text[i].metadata['relevance_score']
             text = re_ranking_query_text[i].page_content
-            print(f"{logit}: {text}")
+            # print(f"{logit}: {text}")
             reference += f'{text}\n'
 
-        return reference
+        print(f"{re_ranking_query_text[0].metadata['relevance_score']}: {re_ranking_query_text[0].page_content}")
+        return re_ranking_query_text[0].page_content
 
     def embed_question(self, question):
         return (
@@ -273,6 +280,17 @@ class Chat:
 
     def set_gemini(self, gemini):
         self.gemini = gemini
+
+    def cosine_similarity(self, vector1, vector2):
+        # Tính tích vô hướng
+        dot_product = np.dot(vector1, vector2)
+        # Tính độ dài (norm) của từng vector
+        norm1 = np.linalg.norm(vector1)
+        norm2 = np.linalg.norm(vector2)
+        # Tính cosine similarity
+        if norm1 == 0 or norm2 == 0:
+            return 0.0  # Tránh chia cho 0
+        return dot_product / (norm1 * norm2)
 
 
 

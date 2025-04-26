@@ -12,7 +12,7 @@ from PreProcessing.PreProcessing import PreProcessing
 import pandas as pd
 
 if __name__ == "__main__":
-    qa = pd.read_csv(r'D:/PycharmProjects/pythonProject/qa_human.csv')
+    qa = pd.read_csv(r'D:/PycharmProjects/pythonProject/qa_human_hybrid.csv')
     # 1. khởi tạo gemini và chat
     model_name = os.getenv('MODEL')
     api_key = os.getenv('API_KEY')
@@ -23,46 +23,53 @@ if __name__ == "__main__":
     gemini = Gemini(model_name, api_key)
     chat = Chat(t, gemini, pre_processing)
     # 2. câu hỏi
-    rows = list(qa.itertuples())[1839:]
-    file_name = f'my_qa_2.csv'
+    rows = list(qa.itertuples())[191:]
+    file_name = f'my_qa_hybrid_1.csv'
+
     for row in rows:
         question = row.question
-
         if question == 'nan':
             continue
-        time.sleep(60)
+
+        prompt_template = PromptTemplate(
+            input_variables=["question"],
+            template=prompt.separate_question()
+        )
+        formatted_prompt = prompt_template.format(question=question)
+        answer = gemini.generator(formatted_prompt)
+        separate_question = pre_processing.string_to_json(answer)
         print(f'question: {question}')
-        try:
-            answer = chat.answer(question)
-            new_row = pd.DataFrame({
-                'question': [question],
-                'answer': [answer]
-            })
-
-            # Thêm vào DataFrame chính
-            my_qa = pd.concat([my_qa, new_row], ignore_index=True)
-            if len(my_qa) % 2 == 0:
-                print(my_qa)
-                print("save")
-                my_qa.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
-        except:
-            gemini = Gemini(model_name, api_key)
-            chat = Chat(t, gemini, pre_processing)
+        answer_child = ""
+        for attr in separate_question:
             time.sleep(60)
+            question_child = separate_question[attr]
 
-            answer = chat.answer(question)
-            new_row = pd.DataFrame({
-                'question': [question],
-                'answer': [answer]
-            })
+            try:
+                answer_child += chat.answer(question_child)
+            except:
+                time.sleep(60)
+                gemini = Gemini(model_name, api_key)
+                chat = Chat(t, gemini, pre_processing)
+                answer_child += chat.answer(question_child)
 
-            # Thêm vào DataFrame chính
-            my_qa = pd.concat([my_qa, new_row], ignore_index=True)
-            if len(my_qa) % 2 == 0:
-                print(my_qa)
-                print("save")
-                my_qa.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
 
+            prompt_template = PromptTemplate(
+                input_variables=["question", 'answer'],
+                template=prompt.summary_answer()
+            )
+            formatted_prompt = prompt_template.format(question=question, answer=answer_child)
+            answer_child = gemini.generator(formatted_prompt)
+
+        new_row = pd.DataFrame({
+            'question': [question],
+            'answer': [answer_child]
+        })
+
+        my_qa = pd.concat([my_qa, new_row], ignore_index=True)
+        if len(my_qa) % 2 == 0:
+            print(my_qa)
+            print("save")
+            my_qa.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
 
     my_qa.to_csv(r"C:\Users\Nam\Desktop\my_qa_final.csv", encoding='utf-8-sig')
 

@@ -426,7 +426,19 @@ class Neo4j:
             source_node = last_relation.nodes[0]['name']
             relation_type = last_relation.type
             target_node = last_relation.nodes[1]['name']
+
+            embed_source_node = last_relation.nodes[0]['embedding']
+            embed_target_node = last_relation.nodes[1]['embedding']
+
             if source_node is not None:
-                references_relationship.append(f"{source_node} {relation_type} {target_node}")
+                references_relationship.append(
+                    {
+                        'source_node': source_node,
+                        'relation_type': relation_type,
+                        'target_node': target_node,
+                        'embed_source_node': embed_source_node,
+                        'embed_target_node': embed_target_node,
+                    }
+                )
 
         return references_relationship

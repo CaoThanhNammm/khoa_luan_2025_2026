@@ -34,21 +34,19 @@ feedback: {feedback}
 
 def generator_stsv():
     return """
-Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. 
-Nhiệm vụ của bạn là dựa vào câu hỏi và các tài liệu khả thi mà tôi cung cấp để trả lời câu hỏi:
+Bạn là một chuyên gia trả lời câu hỏi từ tài liệu có sẵn, tuân theo khuôn mẫu.
+Nhiệm vụ của bạn là dựa trên các tài liệu khả thi mà tôi cung cấp. để trả lời câu hỏi.
 Câu hỏi: {question}
 Tài liệu khả thi: {references}
-Yêu cầu:
-1. Phải sử dụng đầy đủ tài liệu khả thi để trả lời câu hỏi, không tóm tắt.
-2. Diễn đạt lại câu trả lời theo tài liệu được cung cấp và câu hỏi. Nếu không có thông tin thì trả lời 'Không có thông tin' và không thêm bất cứ thông tin gì.
 """
-
+# Nếu không có thông tin thì nói 'không có thông tin'. Không giải thích gì thêm.
 def valid_stsv():
     return """
 Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu.
 Câu hỏi: {question}
 Câu trả lời: {answer}
 Nhiệm vụ của bạn là:
+1. Hãy phân tích đối tượng của câu trả lời là gì(who, how much...)
 1. Hãy phân tích câu trả lời có đúng với câu hỏi hay không, nếu đúng thì trả lời 'yes', nếu không thì 'no'.
 2. Nếu câu trả lời 'Không có thông tin' thì hãy trả lời 'no'
 Trả lời 1 trong 2 từ 'yes' hoặc 'no'. Trả lời không quá 2 từ"""
@@ -120,7 +118,7 @@ def predict_question_belong_to(question):
         section: các khoa - ngành đào tạo
         section: tuần sinh hoạt công dân sinh viên  
         section: hoạt động phong trào sinh viên  
-        section: câu lạc bộ (clb) đội, nhóm  
+        section: câu lạc bộ (clb) - đội, nhóm  
         section: cơ sở đào tạo  
     part: phần 2: học tập và rèn luyện
         section: quy chế sinh viên  
@@ -250,6 +248,22 @@ def predict_question_belong_to(question):
     1. Tất cả câu hỏi đều nằm trong mục lục trên, không có chuyện không có.
     2. Các cấp bậc trùng nhau không được liên kết với nhau.
     3. Câu Cypher query BUỘC GIỐNG THEO MẪU.
+    
+    Ví dụ 1:
+    - MATCH (first:part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:bao_gồm]->(second:section {{name: 'quá trình hình thành và phát triển'}})-[r*1..3]->(e)
+      RETURN r as relation, e as target
+    Ví dụ 2:
+    - MATCH (first:part {{name: 'phần 2: học tập và rèn luyện'}})-[:bao_gồm]->(second:section {{name: 'quy chế sinh viên'}})-[:bao_gồm]->(third:part {{name: 'chương 2: quyền và nghĩa vụ của sinh viên'}})-[:bao_gồm]->(fourth:article {{name: 'điều 4: quyền của sinh viên'}})-[r*1..3]->(e)
+      RETURN r as relation, e as target
+    Ví dụ 3:
+    - MATCH (first:part {{name: 'phần 2: học tập và rèn luyện'}})-[:bao_gồm]->(second:section {{name: 'quy chế học vụ'}})-[:bao_gồm]->(third:part {{name: 'chương 2: lập kế hoạch và tổ chức giảng dạy'}})-[:bao_gồm]->(fourth:article {{name: 'điều 9: tổ chức đăng ký học tập'}})-[r*1..3]->(e)
+      RETURN r as relation, e as target
+    Ví dụ 4:
+    - MATCH (first:part {{name: 'phần 3: hỗ trợ và dịch vụ'}})-[:bao_gồm]->(second:section {{name: 'quy định phân cấp giải quyết thắc mắc của sinh viên'}})-[:bao_gồm]->(third:article {{name: 'điều 2: hình thức thắc mắc, kiến nghị'}})-[r*1..3]->(e)
+      RETURN r as relation, e as target
+    Ví dụ 5:
+    - MATCH (first:part {{name: 'phần 3: hỗ trợ và dịch vụ'}})-[:bao_gồm]->(second:section {{name: 'quy trình xác nhận hồ sơ sinh viên'}})-[:bao_gồm]->(third:article {{name: 'các loại giấy tờ được xác nhận'}})-[r*1..3]->(e)
+      RETURN r as relation, e as target
 """
 
 # dùng để trích xuất entities và relationship cho câu hỏi
@@ -353,8 +367,8 @@ def rewrite_question(question):
 def summary_document():
     return """
 Bạn là một chuyên gia trích xuất chủ đề quan trọng trong văn bản. nhiệm vụ của bạn là hãy trích xuất chủ đề quan trọng theo các yêu cầu sau đây:
-1. Nội dung không quá 2 dòng
-2. Chỉ trích xuất các nội dung chính được nhắc đến trong đoạn văn
+1. Nội dung không quá 2 dòng, phù hợp để tăng thêm ngữ cảnh thì truy xuất thông qua vector embedding.
+2. Chỉ trích xuất các nội dung chính được nhắc đến trong đoạn văn.
 Văn bản: {paragraph}
     """
 
@@ -394,7 +408,13 @@ def separate_question():
     return """
 Bạn là một chuyên gia phân tích câu hỏi. 
 Từ câu hỏi mà tôi cung cấp. Nhiệm vụ của bạn là hãy phân tích câu hỏi ra thành nhiều phần khác nhau(nếu có). 
-Trả về dưới dạng json gồm các thuộc tính question 1, question 2, question 3,...
+Trả về dưới dạng json gồm các thuộc tính:
+{{
+    'question 1': '...',
+    'question 2': '...',
+    'question 3': '...',
+    ...
+}}
 Câu hỏi: {question}
 """
 

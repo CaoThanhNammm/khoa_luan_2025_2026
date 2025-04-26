@@ -114,6 +114,9 @@
 
 
 import pandas as pd
+
+from LLM.Gemini import Gemini
+
 # try:
 #     qa = pd.read_csv('qa_human.csv')
 #     rows = list(qa.itertuples())[809:]
@@ -122,16 +125,36 @@ import pandas as pd
 # except FileNotFoundError:
 #     print("File 'qa.csv' không tồn tại, bỏ qua phần đọc file.")
 
+# qa_human = pd.read_csv('qa_human.csv')
+# my_qa_human = pd.read_csv(r"C:\Users\Nam\Desktop\my_qa_human.csv")
+#
+# loop_range = min(len(qa_human), len(my_qa_human))
+#
+# for i in range(loop_range):
+#     if not my_qa_human.values[i][1] == qa_human.values[i][0]:
+#         print(my_qa_human.values[i][0])
+#         print(my_qa_human.values[i][1])
 
 
-qa_human = pd.read_csv('qa_human.csv')
-my_qa_human = pd.read_csv(r"C:\Users\Nam\Desktop\my_qa_human.csv")
+gemini = Gemini('gemini-1.5-flash', 'AIzaSyDjcvFiSVJak5WYP7HDYj6KDJz5K71MCfg')
+print(gemini.generator('''Bạn là một chuyên gia trả lời câu hỏi từ tài liệu có sẵn, tuân theo khuôn mẫu.
+Nhiệm vụ của bạn là dựa trên các tài liệu khả thi mà tôi cung cấp. để trả lời câu hỏi.
+Nếu không có thông tin thì nói 'không có thông tin'. Không giải thích gì thêm.
+Câu hỏi: "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh được thành lập vào năm nào?"
+Tài liệu khả thi: "Quá trình hình thành và phát triển
+Trường Đại học Nông Lâm Thành phố Hồ Chí Minh (Nong Lam University - NLU) là một trường đa ngành, trực thuộc Bộ Giáo dục và Đào tạo, tọa lạc trên khu đất rộng 118 ha, thuộc Thành phố Thủ Đức, Thành phố Hồ Chí Minh và Thành phố Dĩ An - Tỉnh Bình Dương. Trải qua gần 70 năm xây dựng và phát triển, Trường đã đạt nhiều thành tích xuất sắc về đào tạo, nghiên cứu và ứng dụng khoa học kỹ thuật nông lâm ngư nghiệp, chuyển giao công nghệ, quan hệ quốc tế. Trường đã vinh dự được nhận Huân chương Lao động Hạng ba, Huân chương Lao động Hạng nhất, Huân chương Độc lập Hạng ba...
 
-loop_range = min(len(qa_human), len(my_qa_human))
+Trường Quốc gia Nông Lâm Mục Blao (1955)
 
-for i in range(loop_range):
-    if not my_qa_human.values[i][1] == qa_human.values[i][0]:
-        print(my_qa_human.values[i][0])
-        print(my_qa_human.values[i][1])
+Trường Cao đẳng Nông Lâm Súc (1963)
 
+Học viện Quốc gia Nông nghiệp Sài Gòn (1972)
+
+Trường Đại học Nông nghiệp 4 (1975)
+
+Trường Đại học Nông Lâm nghiệp TP. Hồ Chí Minh (1985)
+
+Trường Đại học Nông Lâm (thành viên của Đại học Quốc gia TP. Hồ Chí Minh) (1995)
+
+Trường Đại học Nông Lâm TP. Hồ Chí Minh (2000)-Đại học Nông Lâm Thành phố Hồ Chí Minh (NLU): lịch sử hình thành và phát triển gần 70 năm, đạt nhiều thành tích trong đào tạo, nghiên cứu và ứng dụng khoa học kỹ thuật nông lâm ngư nghiệp.  Các giai đoạn đổi tên của trường được liệt kê."'''))
 

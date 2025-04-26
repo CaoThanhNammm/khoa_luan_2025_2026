@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.stats import spearmanr
 from scipy.stats import rankdata
-import os 
+import os
 import numpy as np
 from dotenv import load_dotenv
 from LLM.Gemini import Gemini
@@ -109,57 +109,89 @@ def evaluate_model(model, data, top_k=20):
 # source: Nguồn thông tin đến từ cơ sở dữ liệu, một cơ sở dữ liệu về các bệnh hiếm gặp.
 # details: Nói về chi tiết hơn bệnh/dị tật
 # """
-
+#
 api_key = os.getenv("API_KEY")
 model_name = os.getenv("MODEL")
 gemini = Gemini(model_name, api_key)
-
-# dataset = pd.read_csv('dataset/prime/prime_auto_qa.csv')
 #
-# evaluation_results = evaluate_model(model, dataset)
-# for metric, score in evaluation_results.items():
-#     print(f"{metric}: {score:.4f}")
+# # dataset = pd.read_csv('dataset/prime/prime_auto_qa.csv')
+# #
+# # evaluation_results = evaluate_model(model, dataset)
+# # for metric, score in evaluation_results.items():
+# #     print(f"{metric}: {score:.4f}")
+#
+#
+# qa_truth = pd.read_csv('qa_human.csv')
+# my_qa = pd.read_csv('D:\PycharmProjects\pythonProject\my_qa_human.csv')
+#
+# answer_truth = qa_truth.answer
+# answer_predict = my_qa.answer
+#
+# question_truth = qa_truth.question
+# question_predict = my_qa.question
+#
+# similarity_score = 0
+# spearman_score = 0
+# df = pd.DataFrame()
+# file_name = 'evaluation_1.csv'
+#
+# for i in range(0, len(question_truth)):
+#     embed_truth = gemini.encode(json.loads(answer_truth[i]))
+#     embed_predict = gemini.encode(answer_predict[i])
+#
+#     similarity_score += cosine_similarity(embed_truth, embed_predict)
+#     spearman_score += spearman_cosine(embed_truth, embed_predict)
+#     new_row = pd.DataFrame({
+#         'embed_truth': [embed_truth],
+#         'embed_predict': [embed_predict]
+#     })
+#     df = pd.concat([df, new_row], ignore_index=True)
+#     if len(df) % 10 == 0:
+#         print(df)
+#         print("save")
+#         df.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
+#
+#     print(f'{i}: {cosine_similarity(embed_truth, embed_predict)} and {spearman_cosine(embed_truth, embed_predict)}')
+#
+# print(f'similarity_score: {similarity_score/len(answer_truth)}')
+# print(f'spearman_score: {spearman_score/len(answer_truth)}')
 
+truth = pd.read_csv('qa_human_hybrid.csv')
+predict = pd.read_csv('my_qa_human_hybrid.csv')
 
-qa_truth = pd.read_csv('qa_human.csv')
-my_qa = pd.read_csv('D:\PycharmProjects\pythonProject\my_qa_human.csv')
-
-answer_truth = qa_truth.answer
-answer_predict = my_qa.answer
-
-question_truth = qa_truth.question
-question_predict = my_qa.question
-
+embeds_truth = truth.answer
+embeds_predict = predict.answer
 similarity_score = 0
 spearman_score = 0
-for i in range(len(answer_truth)):
-    embed_truth = gemini.encode(json.loads(answer_truth[i]))
-    embed_predict = gemini.encode(answer_predict[i])
 
-    similarity_score += cosine_similarity(embed_truth, embed_predict)
-    spearman_score += spearman_cosine(embed_truth, embed_predict)
-    print(f'{i}: {cosine_similarity(embed_truth, embed_predict)} and {spearman_cosine(embed_truth, embed_predict)}')
+for i in range(len(embeds_truth)):
+    print(i)
+    encode_truth = gemini.encode(embeds_truth[i])
+    encode_predict = gemini.encode(embeds_predict[i])
 
-print(f'similarity_score: {similarity_score/len(answer_truth)}')
-print(f'spearman_score: {spearman_score/len(answer_truth)}')
+    similarity_score += cosine_similarity(encode_truth, encode_predict)
+    spearman_score += spearman_cosine(encode_truth, encode_predict)
+
+print(f'similarity_score: {similarity_score/len(embeds_truth)}')
+print(f'spearman_score: {spearman_score/len(embeds_truth)}')
 
 
 
-# benchmark data my_qa.csv
+# benchmark data my_qa.csv embedding 004
 # similarity_score: 0.8015445589374844
 # spearman_score: 0.9464503249841755
 
+# benchmark data my_qa_human.csv embedding 004
+# similarity_score: 0.7749737597910906
+# spearman_score: 0.9395749651892696
 
+# benchmark data my_qa_human.csv intfloat/multilingual-e5-large
+# similarity_score: 0.8570323586463928
+# spearman_score: 0.9635358473051144
 
-
-
-
-
-
-
-
-
-
+# benchmark data my_qa_human_hybrid.csv intfloat/multilingual-e5-large
+# similarity_score: 0.892623782157898
+# spearman_score: 0.9722299487490241
 
 
 
