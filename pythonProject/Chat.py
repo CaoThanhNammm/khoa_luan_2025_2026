@@ -37,31 +37,42 @@ class Chat:
 
     def answer(self, question):
         question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
-        feedback = ""
-        potential_answer = ""
+        # feedback = ""
+        # potential_answer = ""
+
+        # action = ""
+
         print(f"Question nhỏ: {question}")
-        for i in range(self.t):
-            print(f"Step {i}, initial feedback: {feedback}")
+        references = self.retrieval_bank(question_pre_processing, "")
+        print(f"Available references: {references}")
 
-            action = self.agent(question, feedback)
-            print(f"Action: {action}")
+        potential_answer = self.generator(question, references)
+        print(f"Answer: {potential_answer}")
 
-            references = self.retrieval_bank(question_pre_processing, action)
-            print(f"Available references: {references}")
+        # for i in range(self.t):
+        #     print(f"Step {i}, initial feedback: {feedback}")
+        #
+        #     action = self.agent(question, feedback)
+        #     print(f"Action: {action}")
+        #
+        #     references = self.retrieval_bank(question_pre_processing, action)
+        #     print(f"Available references: {references}")
+        #
+        #     potential_answer = self.generator(question, references)
+        #     print(f"Answer: {potential_answer}")
+        #
+        #     validator = self.valid(question, potential_answer)
+        #     print(f"valid: {validator}")
+        #     if "yes" in validator:
+        #         print(f"Final answer: {potential_answer}")
+        #         return potential_answer
+        #
+        #     feedback = self.commentor(question, potential_answer, references, action)
+        #     print(f"Continuing feedback: {feedback}")
+        #     print("-" * 2000)
 
-            potential_answer = self.generator(question, references)
-            print(f"Answer: {potential_answer}")
-
-            validator = self.valid(question, potential_answer)
-            print(f"valid: {validator}")
-            if "yes" in validator:
-                print(f"Final answer: {potential_answer}")
-                return potential_answer
-
-            feedback = self.commentor(question, potential_answer, references, action)
-            print(f"Continuing feedback: {feedback}")
-            print("-" * 2000)
-        return self.summary_answer(question, feedback)
+        # return self.summary_answer(question, feedback)
+        return potential_answer
 
     def answer_parent(self, question):
         # Tách câu hỏi thành các câu hỏi con
@@ -141,8 +152,11 @@ class Chat:
     def agent(self, question, feedback):
         return self.first_decision(question) if not feedback else self.reflection(question, feedback)
 
+    # def retrieval_bank(self, question, action):
+    #     return self.retrieval_graph(question) if 'graph' in action else self.retrieval_text(question)
+
     def retrieval_bank(self, question, action):
-        return self.retrieval_graph(question) if 'graph' in action else self.retrieval_text(question)
+        return self.retrieval_graph(question)
 
     def retrieval_graph(self, question):
         # llm dự đoán câu hỏi thuộc phần nào để thu hẹp nội dung cần truy xuất

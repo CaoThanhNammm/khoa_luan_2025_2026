@@ -156,42 +156,56 @@ gemini = Gemini(model_name, api_key)
 # print(f'similarity_score: {similarity_score/len(answer_truth)}')
 # print(f'spearman_score: {spearman_score/len(answer_truth)}')
 
-truth = pd.read_csv('qa_human_hybrid.csv')
-predict = pd.read_csv('my_qa_human_hybrid.csv')
+# ----------------------------------------------------------------------------------------
+# truth = pd.read_csv('qa_human_hybrid.csv')
+# predict = pd.read_csv('my_qa_hybrid_rag.csv')
+#
+# embeds_truth = truth.answer
+# embeds_predict = predict.answer
+# similarity_score = 0
+# spearman_score = 0
+#
+# for i in range(len(embeds_truth)):
+#     print(i)
+#     encode_truth = gemini.encode(embeds_truth[i])
+#     encode_predict = gemini.encode(embeds_predict[i])
+#
+#     similarity_score += cosine_similarity(encode_truth, encode_predict)
+#     spearman_score += spearman_cosine(encode_truth, encode_predict)
+#
+# print(f'similarity_score: {similarity_score/len(embeds_truth)}')
+# print(f'spearman_score: {spearman_score/len(embeds_truth)}')
 
-embeds_truth = truth.answer
-embeds_predict = predict.answer
-similarity_score = 0
-spearman_score = 0
-
-for i in range(len(embeds_truth)):
-    print(i)
-    encode_truth = gemini.encode(embeds_truth[i])
-    encode_predict = gemini.encode(embeds_predict[i])
-
-    similarity_score += cosine_similarity(encode_truth, encode_predict)
-    spearman_score += spearman_cosine(encode_truth, encode_predict)
-
-print(f'similarity_score: {similarity_score/len(embeds_truth)}')
-print(f'spearman_score: {spearman_score/len(embeds_truth)}')
 
 
-
-# benchmark data my_qa.csv embedding 004
+# benchmark data my_qa.csv embedding 004 (RAG + GRAG + LLM)
 # similarity_score: 0.8015445589374844
 # spearman_score: 0.9464503249841755
 
-# benchmark data my_qa_human.csv embedding 004
+# benchmark data my_qa_human.csv embedding 004 (RAG + GRAG + LLM)
 # similarity_score: 0.7749737597910906
 # spearman_score: 0.9395749651892696
 
-# benchmark data my_qa_human.csv intfloat/multilingual-e5-large
+# benchmark data my_qa_human.csv intfloat/multilingual-e5-large (RAG + GRAG + LLM)
 # similarity_score: 0.8570323586463928
 # spearman_score: 0.9635358473051144
 
-# benchmark data my_qa_human_hybrid.csv intfloat/multilingual-e5-large
+# benchmark data my_qa_human_hybrid.csv intfloat/multilingual-e5-large (RAG + GRAG + LLM)
 # similarity_score: 0.892623782157898
 # spearman_score: 0.9722299487490241
+
+# benchmark data my_qa_human_hybrid.csv intfloat/multilingual-e5-large (RAG + LLM)
+# similarity_score: 0.8894450664520264
+# spearman_score: 0.9713068594485564
+# -----------------------------------------------------------------------------------------------
+
+a = 'Trường được thành lập vào năm 1955 với tên gọi Trường Đại học Nông Lâm và hiện nay nằm ở Thành phố Thủ Đức, Thành phố Hồ Chí Minh và Thành phố Dĩ An - Tỉnh Bình Dương.'
+b = 'Trường được thành lập vào năm 1234 với tên gọi Trường Đại học Nông Lâm và hiện nay nằm ở Mỹ'
+a_encode = gemini.encode(a)
+b_encode = gemini.encode(b)
+
+similarity_score = cosine_similarity(a_encode, b_encode)
+print(similarity_score)
 
 
 
