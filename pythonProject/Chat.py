@@ -74,6 +74,36 @@ class Chat:
         # return self.summary_answer(question, feedback)
         return potential_answer
 
+    def answer_flask(self, question):
+        question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
+        feedback = ""
+        potential_answer = ""
+        action = ""
+
+        for i in range(self.t):
+            print(f"Step {i}, initial feedback: {feedback}")
+
+            action = self.agent(question, feedback)
+            print(f"Action: {action}")
+
+            references = self.retrieval_bank_flask(question_pre_processing, action)
+            print(f"Available references: {references}")
+
+            potential_answer = self.generator(question, references)
+            print(f"Answer: {potential_answer}")
+
+            validator = self.valid(question, potential_answer)
+            print(f"valid: {validator}")
+            if "yes" in validator:
+                print(f"Final answer: {potential_answer}")
+                return potential_answer
+
+            feedback = self.commentor(question, potential_answer, references, action)
+            print(f"Continuing feedback: {feedback}")
+            print("-" * 2000)
+
+        return self.summary_answer(question, feedback)
+
     def answer_parent(self, question):
         # Tách câu hỏi thành các câu hỏi con
         separate_question = self.separate_question(question)
@@ -152,8 +182,8 @@ class Chat:
     def agent(self, question, feedback):
         return self.first_decision(question) if not feedback else self.reflection(question, feedback)
 
-    # def retrieval_bank(self, question, action):
-    #     return self.retrieval_graph(question) if 'graph' in action else self.retrieval_text(question)
+    def retrieval_bank_flask(self, question, action):
+        return self.retrieval_graph(question) if 'graph' in action else self.retrieval_text(question)
 
     def retrieval_bank(self, question, action):
         return self.retrieval_graph(question)
@@ -180,7 +210,7 @@ class Chat:
         for i in range(len(re_ranking_query_text)):
             logit = re_ranking_query_text[i].metadata['relevance_score']
             text = re_ranking_query_text[i].page_content
-            if logit >= 1:
+            if logit >= 0:
                 print(f"{logit}: {text}")
                 reference += f'{text}\n'
 

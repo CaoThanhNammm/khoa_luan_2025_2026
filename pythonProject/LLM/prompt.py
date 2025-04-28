@@ -34,22 +34,29 @@ feedback: {feedback}
 
 def generator_stsv():
     return """
-Bạn là một chuyên gia trả lời câu hỏi từ tài liệu có sẵn, tuân theo khuôn mẫu.
-Nhiệm vụ của bạn là dựa trên các tài liệu khả thi mà tôi cung cấp. để trả lời câu hỏi.
+Bạn là chuyên gia trả lời câu hỏi dựa trên tài liệu cung cấp, tuân theo khuôn mẫu. Nhiệm vụ:
+1. Trả lời chính xác dựa trên tài liệu, không thêm, bớt, chỉnh sửa nội dung.
+2. Trình bày rõ ràng, liệt kê (nếu có) đánh số thứ tự và in đậm.
+3. Nếu thiếu thông tin, trả lời: "Không có thông tin". Nếu có, diễn đạt lại.
+4. Chỉ trả lời, không giải thích thêm.
+
 Câu hỏi: {question}
-Tài liệu khả thi: {references}
+Tài liệu: {references}
 """
 # Nếu không có thông tin thì nói 'không có thông tin'. Không giải thích gì thêm.
 def valid_stsv():
     return """
-Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu.
+Bạn là trợ lý phân tích câu trả lời theo khuôn mẫu.
+
 Câu hỏi: {question}
 Câu trả lời: {answer}
-Nhiệm vụ của bạn là:
-1. Hãy phân tích đối tượng của câu trả lời là gì(who, how much...)
-1. Hãy phân tích câu trả lời có đúng với câu hỏi hay không, nếu đúng thì trả lời 'yes', nếu không thì 'no'.
-2. Nếu câu trả lời 'Không có thông tin' thì hãy trả lời 'no'
-Trả lời 1 trong 2 từ 'yes' hoặc 'no'. Trả lời không quá 2 từ"""
+
+Nhiệm vụ:
+1. Xác định đối tượng của câu trả lời (ai, bao nhiêu...).
+2. Kiểm tra câu trả lời có khớp với câu hỏi không:
+2.1 Nếu khớp, trả lời "yes".
+2.2 Nếu không khớp hoặc câu trả lời là "Không có thông tin", trả lời "no".
+Trả lời: Chỉ 1 từ ("yes" hoặc "no")."""
 
 def commentor_stsv():
     return """
@@ -103,10 +110,10 @@ def extract_question_from_text():
 def predict_question_belong_to(question):
     return f"""
     Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. Nhiệm vụ của bạn: 
-    Đầu tiên, cần dự đoán câu hỏi sau nằm trong phần nào dưới đây mà tôi cung cấp:
+    Đầu tiên, cần dự đoán câu hỏi sau nằm trong phần nào trong mục lục mà tôi cung cấp:
 
     câu hỏi cần dự đoán: {question}
-    Dưới đây là mục lục mà bạn cần dự đoán:
+    Mục lục:
     "part: phần 1: nlu - định hướng trường đại học nghiên cứu
         section: quá trình hình thành và phát triển  
         section: sứ mạng  
@@ -231,6 +238,8 @@ def predict_question_belong_to(question):
             article: căn cứ để xét học bổng khuyến khích học tập  
             article: mức học bổng khuyến khích học tập  
             article: quy trình xét học bổng"
+    
+    Mô tả mục lục: mục lục gồm 3 chương. Mỗi chương có các cấu trúc khác nhau. Được tổ chức theo dạng phân cấp giống như thư mục.
             
     Thứ hai, sau khi xác định thuộc phần nào, bạn sẽ phải trả về câu cypher query theo mô tả sau:
     1. các phần như part, section, article được dùng làm "type"(tất cả đều ghi thường, tiếng anh)
@@ -241,19 +250,24 @@ def predict_question_belong_to(question):
     RETURN r as relation, e as target
     
     Trong đó:
-        1. Bạn có thể tùy chỉnh các cấp độ của first, second, third hoặc fourth tùy thuộc vào cấp bậc mà bạn dự đoán
+        1. Bạn có thể tùy chỉnh các cấp độ của first, second, third hoặc fourth tùy thuộc vào cấp bậc mà bạn dự đoán.
         2. -[r*1..3]->(e) phải luôn có.
+        3. các phần đồng cấp không được nối tiếp nhau. second là con của first, third là con của second và fourth là con của third.
     Trả lời không giải thích gì thêm, chỉ trả về cypher query theo y hệt mẫu mà tôi cung cấp.
     Lưu ý: 
     1. Tất cả câu hỏi đều nằm trong mục lục trên, không có chuyện không có.
     2. Các cấp bậc trùng nhau không được liên kết với nhau.
-    3. Câu Cypher query BUỘC GIỐNG THEO MẪU.
+    3. CÂU CYPHER QUERY BUỘC GIỐNG THEO MẪU.
     
     Ví dụ 1:
     - MATCH (first:part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:bao_gồm]->(second:section {{name: 'quá trình hình thành và phát triển'}})-[r*1..3]->(e)
       RETURN r as relation, e as target
+    - MATCH (first:part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:bao_gồm]->(second:section {{name: 'câu lạc bộ (clb) - đội, nhóm'}})-[r*1..3]->(e)
+      RETURN r as relation, e as target
     Ví dụ 2:
     - MATCH (first:part {{name: 'phần 2: học tập và rèn luyện'}})-[:bao_gồm]->(second:section {{name: 'quy chế sinh viên'}})-[:bao_gồm]->(third:part {{name: 'chương 2: quyền và nghĩa vụ của sinh viên'}})-[:bao_gồm]->(fourth:article {{name: 'điều 4: quyền của sinh viên'}})-[r*1..3]->(e)
+      RETURN r as relation, e as target
+    - MATCH (first:part {{name: 'phần 2: học tập và rèn luyện'}})-[:bao_gồm]->(second:section {{name: 'quy chế sinh viên'}})-[:bao_gồm]->(third:part {{name: 'chương 2: quyền và nghĩa vụ của sinh viên'}})-[:bao_gồm]->(fourth:article {{name: 'điều 5: nghĩa vụ của sinh viên'}})-[r*1..3]->(e)
       RETURN r as relation, e as target
     Ví dụ 3:
     - MATCH (first:part {{name: 'phần 2: học tập và rèn luyện'}})-[:bao_gồm]->(second:section {{name: 'quy chế học vụ'}})-[:bao_gồm]->(third:part {{name: 'chương 2: lập kế hoạch và tổ chức giảng dạy'}})-[:bao_gồm]->(fourth:article {{name: 'điều 9: tổ chức đăng ký học tập'}})-[r*1..3]->(e)
@@ -372,33 +386,14 @@ Bạn là một chuyên gia trích xuất chủ đề quan trọng trong văn b�
 Văn bản: {paragraph}
     """
 
-def criteria_complete_question():
-    return """
-Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. 
-Hãy phân tích câu hỏi và trả lời các điểm sau:
-Phạm vi của câu hỏi là rộng hay hẹp? (Rộng: liên quan đến nhiều khía cạnh hoặc không giới hạn thời gian; Hẹp: giới hạn trong một khía cạnh hoặc thời điểm cụ thể).
-Trả lời 1 trong 2 từ "rộng" hoặc "hẹp". Trả lời không quá 2 từ
-
-Nếu là 'hẹp' hãy ghi lại câu hỏi.
-Nếu là 'rộng' hãy trích xuất 2 tiêu chí để hoàn thành câu trả lời một cách đầy đủ và chi tiết nhất. 
-Hãy trả về dưới dạng json như sau:
-{{
-'criteria': [
-<<gồm 1 hoặc 2 tiêu chí duy nhất. Không quá 10 từ. Mỗi tiêu chí chỉ 1 tiêu chí duy nhất>>
-]
-}}
-Câu hỏi: {question}
-"""
-
 def summary_answer():
     return """
-Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu:
-1. Nhiệm vụ của bạn là dựa vào câu hỏi và câu trả lời, hãy diễn đạt lại theo ngôn ngữ tự nhiên một cách hoàn chỉnh.
-2, không thêm, bớt hoặc chỉnh sửa nội dung.
-3. Tự động trình bày lại dữ liệu cho dễ nhìn.
-4. Nếu có liệt kê thì hãy đánh số thứ tự và in đậm.
-6. Nếu không có thông tin thì trả lời không có thông tin. Nếu có thông tin thì diễn đạt lại câu trả lời.
-5. Chỉ phản hổi lại câu trả lời, không phản hổi lại câu hỏi.
+Bạn là trợ lý hữu ích, tuân theo khuôn mẫu.
+Nhiệm vụ: Dựa trên câu hỏi và câu trả lời, diễn đạt lại bằng ngôn ngữ tự nhiên, hoàn chỉnh.
+1. Không thêm, bớt, chỉnh sửa nội dung.
+2. Trình bày rõ ràng, liệt kê (nếu có) đánh số thứ tự và in đậm.
+3. Nếu câu trả lời là "Không có thông tin", giữ nguyên. Nếu có thông tin, diễn đạt lại.
+4. Chỉ trả lời, không lặp lại câu hỏi.
 
 Câu hỏi: {question}
 Câu trả lời: {answer}
@@ -406,8 +401,7 @@ Câu trả lời: {answer}
 
 def separate_question():
     return """
-Bạn là một chuyên gia phân tích câu hỏi. 
-Từ câu hỏi mà tôi cung cấp. Nhiệm vụ của bạn là hãy phân tích câu hỏi ra thành nhiều phần khác nhau(nếu có). 
+Bạn là một chuyên gia phân tích câu hỏi. Dựa vào câu hỏi mà tôi cung cấp. Nhiệm vụ của bạn là tách câu hỏi ra thành nhiều phần khác nhau(nếu có).
 Trả về dưới dạng json gồm các thuộc tính:
 {{
     'question 1': '...',
