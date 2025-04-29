@@ -23,7 +23,6 @@ if __name__ == "__main__":
     gemini = Gemini(model_name, api_key)
     chat = Chat(t, gemini, pre_processing)
     # 2. câu hỏi
-    chat.retrieval_graph("Đội nào thuộc khoa Lâm nghiệp có khẩu hiệu “Nhiệt huyết – Đoàn kết – Hành động”?")
     rows = list(qa.itertuples())[104:]
     file_name = f'my_qa_hybrid_grag_1.csv'
 

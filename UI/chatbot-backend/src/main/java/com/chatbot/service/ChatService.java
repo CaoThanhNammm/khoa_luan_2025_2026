@@ -20,7 +20,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,11 +38,8 @@ public class ChatService {
     @Autowired
     private UserService userService;
 
-    @Value("${gemini.api.url}")
-    private String geminiApiUrl;
-    
-    @Value("${gemini.api.key}")
-    private String geminiApiKey;
+    @Value("${chatbot.api.url}")
+    private String flaskApiUrl;
 
     private final WebClient webClient;
     private final ObjectMapper objectMapper;
@@ -56,7 +52,7 @@ public class ChatService {
     public List<ConversationDto> getUserConversations(Long userId) {
         User user = userService.getUserById(userId);
         List<Conversation> conversations = conversationRepository.findByUserOrderByCreatedAtDesc(user);
-        
+
         return conversations.stream()
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
@@ -67,160 +63,133 @@ public class ChatService {
         if (conversation == null) {
             return null;
         }
-        
+
         return convertToDto(conversation);
     }
 
     @Transactional
     public ConversationDto startNewConversation(Long userId, String userMessage) {
         User user = userService.getUserById(userId);
-        
+
         // Create new conversation
         Conversation conversation = new Conversation();
         conversation.setTitle(generateTitle(userMessage));
         conversation.setUser(user);
         conversation.setCreatedAt(LocalDateTime.now());
         conversation = conversationRepository.save(conversation);
-        
+
         // Add user message
         Message userMessageEntity = new Message();
         userMessageEntity.setContent(userMessage);
         userMessageEntity.setType(Message.MessageType.USER);
         userMessageEntity.setConversation(conversation);
         userMessageEntity = messageRepository.save(userMessageEntity);
-        
+
         // Get bot response from external API
         String botResponse = getChatbotResponse(userMessage);
-        
+
         // Add bot response
         Message botMessageEntity = new Message();
         botMessageEntity.setContent(botResponse);
         botMessageEntity.setType(Message.MessageType.BOT);
         botMessageEntity.setConversation(conversation);
         botMessageEntity = messageRepository.save(botMessageEntity);
-        
+
         // Return conversation with messages
         conversation.setMessages(List.of(userMessageEntity, botMessageEntity));
-        
+
         return convertToDto(conversation);
     }
 
     @Transactional
     public MessageDto sendMessage(Long conversationId, String userMessage, Long userId) {
         Conversation conversation = conversationRepository.findById(conversationId).orElse(null);
-        
+
         if (conversation == null || !conversation.getUser().getId().equals(userId)) {
             return null;
         }
-        
+
         // Add user message
         Message userMessageEntity = new Message();
         userMessageEntity.setContent(userMessage);
         userMessageEntity.setType(Message.MessageType.USER);
         userMessageEntity.setConversation(conversation);
         userMessageEntity = messageRepository.save(userMessageEntity);
-        
+
         // Get bot response from external API
         String botResponse = getChatbotResponse(userMessage);
-        
+
         // Add bot response
         Message botMessageEntity = new Message();
         botMessageEntity.setContent(botResponse);
         botMessageEntity.setType(Message.MessageType.BOT);
         botMessageEntity.setConversation(conversation);
         botMessageEntity = messageRepository.save(botMessageEntity);
-        
+
         return convertToMessageDto(botMessageEntity);
     }
-    
+
     @Transactional
     public boolean deleteConversation(Long conversationId, Long userId) {
         Conversation conversation = conversationRepository.findById(conversationId).orElse(null);
-        
+
         // Check if conversation exists and belongs to the user
         if (conversation == null || !conversation.getUser().getId().equals(userId)) {
             return false;
         }
-        
+
         // Delete the conversation
         conversationRepository.delete(conversation);
-        
+
         return true;
     }
-    
+
     private String getChatbotResponse(String userMessage) {
         try {
-            logger.info("Preparing request to Gemini API for message: {}", userMessage);
-            
-            // Create Gemini API request payload according to the API documentation
+            logger.info("Preparing request to Flask API for message: {}", userMessage);
+
+            // Create Flask API request payload
             Map<String, Object> requestBody = new HashMap<>();
-            
-            // Format message in proper Gemini 1.5 format
-            Map<String, Object> textPart = new HashMap<>();
-            textPart.put("text", userMessage);
-            
-            List<Map<String, Object>> parts = new ArrayList<>();
-            parts.add(textPart);
-            
-            Map<String, Object> content = new HashMap<>();
-            content.put("parts", parts);
-            
-            requestBody.put("contents", List.of(content));
-            
-            // Add configuration parameters
-            Map<String, Object> generationConfig = new HashMap<>();
-            generationConfig.put("temperature", 0.7);
-            generationConfig.put("maxOutputTokens", 1024);
-            requestBody.put("generationConfig", generationConfig);
-            
+            requestBody.put("question", userMessage);
+
             // For debugging - log the request
-            logger.info("Sending request to Gemini API: {}", objectMapper.writeValueAsString(requestBody));
-            
-            // Build the full URL with API key
-            String fullUrl = geminiApiUrl + "?key=" + geminiApiKey;
-            logger.info("Calling Gemini API at: {}", fullUrl.replaceAll(geminiApiKey, "API_KEY_HIDDEN"));
-            
+            logger.info("Sending request to Flask API: {}", objectMapper.writeValueAsString(requestBody));
+
             try {
-                // Call Gemini API with API key in query parameter
+                // Call Flask API
                 String response = webClient.post()
-                        .uri(fullUrl)
+                        .uri(flaskApiUrl)
                         .contentType(MediaType.APPLICATION_JSON)
                         .bodyValue(requestBody)
                         .retrieve()
                         .bodyToMono(String.class)
-                        .doOnNext(resp -> logger.info("Received response from Gemini: {}", resp))
+                        .doOnNext(resp -> logger.info("Received response from Flask API: {}", resp))
                         .flatMap(rawResponse -> {
                             try {
                                 // Parse the JSON response
                                 JsonNode rootNode = objectMapper.readTree(rawResponse);
-                                
-                                // Navigate the response structure
-                                if (rootNode.has("candidates") && rootNode.get("candidates").size() > 0) {
-                                    JsonNode candidate = rootNode.get("candidates").get(0);
-                                    if (candidate.has("content") && candidate.get("content").has("parts")) {
-                                        JsonNode parts1 = candidate.get("content").get("parts");
-                                        if (parts1.size() > 0 && parts1.get(0).has("text")) {
-                                            return Mono.just(parts1.get(0).get("text").asText());
-                                        }
-                                    }
+
+                                // Check for success and return response
+                                if (rootNode.has("response") && "success".equals(rootNode.path("status").asText())) {
+                                    return Mono.just(rootNode.get("response").asText());
                                 }
-                                
-                                logger.warn("Could not parse Gemini API response: {}", rawResponse);
+
+                                logger.warn("Could not parse Flask API response: {}", rawResponse);
                                 return Mono.just(getSimulatedResponse(userMessage));
                             } catch (Exception e) {
-                                logger.error("Error parsing Gemini API response", e);
+                                logger.error("Error parsing Flask API response", e);
                                 return Mono.just(getSimulatedResponse(userMessage));
                             }
                         })
                         .onErrorResume(e -> {
-                            logger.error("Error calling Gemini API: {}", e.getMessage());
+                            logger.error("Error calling Flask API: {}", e.getMessage());
                             return Mono.just(getSimulatedResponse(userMessage));
                         })
                         .block();
-                        
+
                 return response != null ? response : getSimulatedResponse(userMessage);
             } catch (Exception e) {
-                logger.error("Exception in Gemini API call: {}", e.getMessage());
+                logger.error("Exception in Flask API call: {}", e.getMessage());
                 return getSimulatedResponse(userMessage);
             }
         } catch (Exception e) {
@@ -230,11 +199,11 @@ public class ChatService {
     }
 
     /**
-     * Generate a simulated response if Gemini API is unavailable or fails
+     * Generate a simulated response if Flask API is unavailable or fails
      */
     private String getSimulatedResponse(String userMessage) {
         logger.info("Falling back to simulated response for: {}", userMessage);
-        
+
         String lowerCase = userMessage.toLowerCase();
         if (lowerCase.contains("hello") || lowerCase.contains("hi") || lowerCase.contains("hey")) {
             return "Hello! How can I help you today?";
@@ -266,7 +235,7 @@ public class ChatService {
             return "I'd like to provide more information on that, but I'm currently operating in a simplified mode. Can I help you with something else in the meantime?";
         }
     }
-    
+
     private String generateTitle(String message) {
         // Generate a title based on the first message
         if (message.length() <= 30) {
@@ -274,21 +243,21 @@ public class ChatService {
         }
         return message.substring(0, 27) + "...";
     }
-    
+
     private ConversationDto convertToDto(Conversation conversation) {
         ConversationDto dto = new ConversationDto();
         dto.setId(conversation.getId());
         dto.setTitle(conversation.getTitle());
         dto.setCreatedAt(conversation.getCreatedAt());
-        
+
         List<Message> messages = messageRepository.findByConversationOrderByTimestampAsc(conversation);
         dto.setMessages(messages.stream()
                 .map(this::convertToMessageDto)
                 .collect(Collectors.toList()));
-                
+
         return dto;
     }
-    
+
     private MessageDto convertToMessageDto(Message message) {
         MessageDto dto = new MessageDto();
         dto.setId(message.getId());

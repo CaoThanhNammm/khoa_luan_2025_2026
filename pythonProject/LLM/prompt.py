@@ -238,7 +238,8 @@ def predict_question_belong_to(question):
             article: căn cứ để xét học bổng khuyến khích học tập  
             article: mức học bổng khuyến khích học tập  
             article: quy trình xét học bổng"
-    
+
+        
     Mô tả mục lục: mục lục gồm 3 chương. Mỗi chương có các cấu trúc khác nhau. Được tổ chức theo dạng phân cấp giống như thư mục.
             
     Thứ hai, sau khi xác định thuộc phần nào, bạn sẽ phải trả về câu cypher query theo mô tả sau:
@@ -246,38 +247,29 @@ def predict_question_belong_to(question):
     2. các phần nội dung là phần "name"(tất cả đều ghi thường, tiếng việt)
     
     Cypher query:
-    MATCH (first:hãy điền type {{name: 'hãy điền name'}})-[:bao_gồm]->(second:hãy điền type {{name: 'hãy điền name'}})-[:bao_gồm]->(third:hãy điền type {{name: 'hãy điền name'}})-[r*1..3]->(e)
+    MATCH (first:<type> {{name: '<name>'}})-[:bao_gồm]->(second:<type> {{name: '<name>'}})-[:bao_gồm]->(third:<type> {{name: '<name>'}})-[r*1..3]->(e)
     RETURN r as relation, e as target
     
     Trong đó:
-        1. Bạn có thể tùy chỉnh các cấp độ của first, second, third hoặc fourth tùy thuộc vào cấp bậc mà bạn dự đoán.
-        2. -[r*1..3]->(e) phải luôn có.
-        3. các phần đồng cấp không được nối tiếp nhau. second là con của first, third là con của second và fourth là con của third.
-    Trả lời không giải thích gì thêm, chỉ trả về cypher query theo y hệt mẫu mà tôi cung cấp.
-    Lưu ý: 
-    1. Tất cả câu hỏi đều nằm trong mục lục trên, không có chuyện không có.
-    2. Các cấp bậc trùng nhau không được liên kết với nhau.
-    3. CÂU CYPHER QUERY BUỘC GIỐNG THEO MẪU.
-    
-    Ví dụ 1:
-    - MATCH (first:part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:bao_gồm]->(second:section {{name: 'quá trình hình thành và phát triển'}})-[r*1..3]->(e)
-      RETURN r as relation, e as target
-    - MATCH (first:part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:bao_gồm]->(second:section {{name: 'câu lạc bộ (clb) - đội, nhóm'}})-[r*1..3]->(e)
-      RETURN r as relation, e as target
-    Ví dụ 2:
-    - MATCH (first:part {{name: 'phần 2: học tập và rèn luyện'}})-[:bao_gồm]->(second:section {{name: 'quy chế sinh viên'}})-[:bao_gồm]->(third:part {{name: 'chương 2: quyền và nghĩa vụ của sinh viên'}})-[:bao_gồm]->(fourth:article {{name: 'điều 4: quyền của sinh viên'}})-[r*1..3]->(e)
-      RETURN r as relation, e as target
-    - MATCH (first:part {{name: 'phần 2: học tập và rèn luyện'}})-[:bao_gồm]->(second:section {{name: 'quy chế sinh viên'}})-[:bao_gồm]->(third:part {{name: 'chương 2: quyền và nghĩa vụ của sinh viên'}})-[:bao_gồm]->(fourth:article {{name: 'điều 5: nghĩa vụ của sinh viên'}})-[r*1..3]->(e)
-      RETURN r as relation, e as target
-    Ví dụ 3:
-    - MATCH (first:part {{name: 'phần 2: học tập và rèn luyện'}})-[:bao_gồm]->(second:section {{name: 'quy chế học vụ'}})-[:bao_gồm]->(third:part {{name: 'chương 2: lập kế hoạch và tổ chức giảng dạy'}})-[:bao_gồm]->(fourth:article {{name: 'điều 9: tổ chức đăng ký học tập'}})-[r*1..3]->(e)
-      RETURN r as relation, e as target
-    Ví dụ 4:
-    - MATCH (first:part {{name: 'phần 3: hỗ trợ và dịch vụ'}})-[:bao_gồm]->(second:section {{name: 'quy định phân cấp giải quyết thắc mắc của sinh viên'}})-[:bao_gồm]->(third:article {{name: 'điều 2: hình thức thắc mắc, kiến nghị'}})-[r*1..3]->(e)
-      RETURN r as relation, e as target
-    Ví dụ 5:
-    - MATCH (first:part {{name: 'phần 3: hỗ trợ và dịch vụ'}})-[:bao_gồm]->(second:section {{name: 'quy trình xác nhận hồ sơ sinh viên'}})-[:bao_gồm]->(third:article {{name: 'các loại giấy tờ được xác nhận'}})-[r*1..3]->(e)
-      RETURN r as relation, e as target
+        - type: Là loại của mục (part, section, hoặc article, viết thường, tiếng Anh).
+        - name: Là nội dung của mục (viết thường, tiếng Việt, đúng như trong mục lục).
+        - Các cấp (first, second, third, hoặc fourth) phải được sắp xếp theo thứ tự phân cấp (second là con của first, third là con của second, fourth là con của third).
+        - Phần -[r*1..3]->(e) phải luôn có.
+        - Các mục đồng cấp (ví dụ: hai section hoặc 2 part hoặc 2 article) không được nối tiếp nhau trong query.
+
+    Lưu ý:
+    - Mọi câu hỏi đều thuộc mục lục, không có trường hợp không tìm thấy.
+    - Query phải đúng định dạng mẫu, không giải thích thêm.
+    - câu cypher query buộc phải có từ second trở lên.
+    - CHỈ PHẢN HỒI VỀ CYPHER QUERY VÀ KHÔNG GIẢI THÍCH GÌ THÊM.
+
+    Ví dụ:
+    Câu hỏi về "quyền của sinh viên":
+    MATCH (first:part {{name: 'phần 2: học tập và rèn luyện'}})-[:bao_gồm]->(second:section {{name: 'quy chế sinh viên'}})-[:bao_gồm]->(third:part {{name: 'chương 2: quyền và nghĩa vụ của sinh viên'}})-[:bao_gồm]->(fourth:article {{name: 'điều 4: quyền của sinh viên'}})-[r*1..3]->(e)
+    RETURN r as relation, e as target
+    Câu hỏi về "quá trình hình thành và phát triển":
+    MATCH (first:part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:bao_gồm]->(second:section {{name: 'quá trình hình thành và phát triển'}})-[r*1..3]->(e)
+    RETURN r as relation, e as target
 """
 
 # dùng để trích xuất entities và relationship cho câu hỏi
@@ -346,6 +338,11 @@ def extract_text_from_paragraph(paragraph):
 7. có thể thêm các từ để bổ sung ý nghĩa cho 1 câu như "khu vực A có email kva@gmai..com", "Khư vực B có số điện thoại 0901231212"
 Dưới đây là văn bản lớn mà tôi cung cấp:
 {paragraph}"""
+
+def answer_by_context():
+    return """
+hãy dựa vào ngữ cảnh của các câu trả lời trước để trả lời câu hỏi {question}. Nếu không có ngữ cảnh để trả lời thì phản hổi 'Không có thông tin' và không giải thích gì thêm.        
+"""
 
 def chunking(paragraph):
     return f"""

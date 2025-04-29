@@ -157,24 +157,24 @@ gemini = Gemini(model_name, api_key)
 # print(f'spearman_score: {spearman_score/len(answer_truth)}')
 
 # ----------------------------------------------------------------------------------------
-# truth = pd.read_csv('qa_human_hybrid.csv')
-# predict = pd.read_csv('my_qa_hybrid_rag.csv')
-#
-# embeds_truth = truth.answer
-# embeds_predict = predict.answer
-# similarity_score = 0
-# spearman_score = 0
-#
-# for i in range(len(embeds_truth)):
-#     print(i)
-#     encode_truth = gemini.encode(embeds_truth[i])
-#     encode_predict = gemini.encode(embeds_predict[i])
-#
-#     similarity_score += cosine_similarity(encode_truth, encode_predict)
-#     spearman_score += spearman_cosine(encode_truth, encode_predict)
-#
-# print(f'similarity_score: {similarity_score/len(embeds_truth)}')
-# print(f'spearman_score: {spearman_score/len(embeds_truth)}')
+truth = pd.read_csv('qa_human_hybrid.csv')
+predict = pd.read_csv('my_qa_hybrid_grag.csv')
+
+embeds_truth = truth.answer
+embeds_predict = predict.answer
+similarity_score = 0
+spearman_score = 0
+
+for i in range(len(embeds_truth)):
+    print(i)
+    encode_truth = gemini.encode(embeds_truth[i])
+    encode_predict = gemini.encode(embeds_predict[i])
+
+    similarity_score += cosine_similarity(encode_truth, encode_predict)
+    spearman_score += spearman_cosine(encode_truth, encode_predict)
+
+print(f'similarity_score: {similarity_score/len(embeds_truth)}')
+print(f'spearman_score: {spearman_score/len(embeds_truth)}')
 
 
 
@@ -197,15 +197,20 @@ gemini = Gemini(model_name, api_key)
 # benchmark data my_qa_human_hybrid.csv intfloat/multilingual-e5-large (RAG + LLM)
 # similarity_score: 0.8894450664520264
 # spearman_score: 0.9713068594485564
+
+# benchmark data my_qa_human_hybrid.csv intfloat/multilingual-e5-large (GRAG + LLM)
+# similarity_score: 0.8492812514305115
+# spearman_score: 0.9616331415421461
+
 # -----------------------------------------------------------------------------------------------
-
-a = 'Trường được thành lập vào năm 1955 với tên gọi Trường Đại học Nông Lâm và hiện nay nằm ở Thành phố Thủ Đức, Thành phố Hồ Chí Minh và Thành phố Dĩ An - Tỉnh Bình Dương.'
-b = 'Trường được thành lập vào năm 1234 với tên gọi Trường Đại học Nông Lâm và hiện nay nằm ở Mỹ'
-a_encode = gemini.encode(a)
-b_encode = gemini.encode(b)
-
-similarity_score = cosine_similarity(a_encode, b_encode)
-print(similarity_score)
+#
+# a = 'Trường được thành lập vào năm 1955 với tên gọi Trường Đại học Nông Lâm và hiện nay nằm ở Thành phố Thủ Đức, Thành phố Hồ Chí Minh và Thành phố Dĩ An - Tỉnh Bình Dương.'
+# b = 'Trường được thành lập vào năm 1234 với tên gọi Trường Đại học Nông Lâm và hiện nay nằm ở Mỹ'
+# a_encode = gemini.encode(a)
+# b_encode = gemini.encode(b)
+#
+# similarity_score = cosine_similarity(a_encode, b_encode)
+# print(similarity_score)
 
 
 

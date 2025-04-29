@@ -75,6 +75,14 @@ class Chat:
         return potential_answer
 
     def answer_flask(self, question):
+        first_answer = self.answer_by_context(question)
+        validator = self.valid(question, first_answer)
+        print(f"valid: {validator}")
+        if "yes" in validator:
+            print(f"Final answer: {first_answer}")
+            return first_answer
+
+
         question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
         feedback = ""
         potential_answer = ""
@@ -103,6 +111,16 @@ class Chat:
             print("-" * 2000)
 
         return self.summary_answer(question, feedback)
+
+
+    def answer_by_context(self, question):
+        prompt_template = PromptTemplate(
+            input_variables=["question"],
+            template=prompt.answer_by_context()
+        )
+        formatted_prompt = prompt_template.format(question=question)
+
+        return self.gemini.generator(formatted_prompt)
 
     def answer_parent(self, question):
         # Tách câu hỏi thành các câu hỏi con
@@ -210,9 +228,10 @@ class Chat:
         for i in range(len(re_ranking_query_text)):
             logit = re_ranking_query_text[i].metadata['relevance_score']
             text = re_ranking_query_text[i].page_content
-            if logit >= 0:
-                print(f"{logit}: {text}")
-                reference += f'{text}\n'
+            reference += f'{text}\n'
+            # if logit >= 0:
+            #     print(f"{logit}: {text}")
+            #     reference += f'{text}\n'
 
         return reference
 
