@@ -22,15 +22,59 @@ Loại quan hệ: "website, có, là, tôn_trọng, theo, hủy, in, dưới, b�
 
 Câu hỏi: {question}
 Các có tài liệu để trả lời câu hỏi đã cho và mục tiêu là tìm kiếm các tài liệu hữu ích. Mỗi thực thể trong biểu đồ tri thức được liên kết với một tài liệu. 
-Dựa trên các thực thể và quan hệ đã trích xuất, 'graph' hay 'text' hữu ích hơn để thu hẹp không gian tìm kiếm? Bạn phải trả lời bằng một trong hai từ, không quá hai từ."""
+Dựa trên các thực thể và quan hệ đã trích xuất, Hãy phản hồi theo dạng sau
+{{
+"extracted": {{
+    "entities": [
+        {{
+            "entity": "",
+            "type: ""
+        }},
+        {{
+            "entity": "",
+            "type: ""
+        }}
+        ,...
+    ],
+    "relations":[
+        {{
+            "source" : "",
+            "target" : "",
+            "relation" : "",
+        }},
+        {{
+            "source" : "",
+            "target" : "",
+            "relation" : "",
+        }},
+        ...
+    ]
+}},
+"retriever": "<chỉ trả lời 'graph' hoặc 'text'. Không quá 2 từ>"
+}}."""
 
 def reflection_stsv():
     return """
-Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. Hãy phản hồi dựa trên yêu cầu sau:
-1. Nếu feedback là 'Tài liệu đã truy xuất không đúng. Mô-đun truy xuất hiện tại có thể không hữu ích để thu hẹp không gian tìm kiếm.' thì hãy sử dụng nguồn truy xuất khác với bước trước đó. Nếu trước đó dùng 'graph' thì chuyển sang 'text' và ngược lại, Bạn phải trả lời bằng một trong hai từ. Trả lời không quá hai từ.
-Câu hỏi: {question}
+Tài liệu đã truy xuất không đúng.
 feedback: {feedback}
-"""
+Câu hỏi: {question}
+
+Tài liệu đã truy xuất không đúng. Trả lời lại dựa trên các thực thể chủ đề mới được trích xuất và các mối quan hệ hữu ích.
+Hãy phản hồi theo dạng sau:
+{{
+"extracted": {{
+    "entities": {{
+        "entity": "",
+        "type: ""
+    }},
+    "relations":{{
+        "source" : "",
+        "target" : "",
+        "relation" : "",
+    }}
+}},
+"retriever": "<chỉ trả lời 'graph' hoặc 'text'. Không quá 2 từ>"
+}}."""
 
 def generator_stsv():
     return """
@@ -43,7 +87,7 @@ Bạn là chuyên gia trả lời câu hỏi dựa trên tài liệu cung cấp,
 Câu hỏi: {question}
 Tài liệu: {references}
 """
-# Nếu không có thông tin thì nói 'không có thông tin'. Không giải thích gì thêm.
+
 def valid_stsv():
     return """
 Bạn là trợ lý phân tích câu trả lời theo khuôn mẫu.
@@ -52,18 +96,19 @@ Câu hỏi: {question}
 Câu trả lời: {answer}
 
 Nhiệm vụ:
-1. Xác định đối tượng của câu trả lời (ai, bao nhiêu...).
+1. Xác định đối tượng của câu trả lời (what, who, where, how, why).
 2. Kiểm tra câu trả lời có khớp với câu hỏi không:
 2.1 Nếu khớp, trả lời "yes".
-2.2 Nếu không khớp hoặc câu trả lời là "Không có thông tin", trả lời "no".
+2.2 Nếu 'không có thông tin' hoặc câu trả lời không thỏa mãn thì trả lời 'no'.
 Trả lời: Chỉ 1 từ ("yes" hoặc "no")."""
 
 def commentor_stsv():
     return """
 Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu.
 Câu hỏi: {question}
-Tài liệu khả thi: {references}
-Nếu tài liệu khả thi không thể trả lời câu hỏi thì phản hồi 'Tài liệu đã truy xuất không đúng. Mô-đun truy xuất hiện tại {current_module} có thể không hữu ích để thu hẹp không gian tìm kiếm.'
+Thực thế chủ đề: {entities}
+Quan hệ hữu ích: {relationship}
+Vui lòng chỉ ra thực thể hoặc quan hệ được trích xuất sai từ câu hỏi, nếu có.
 """
 
 def extract_entities_relationship_from_text():
@@ -247,16 +292,17 @@ def predict_question_belong_to(question):
     2. các phần nội dung là phần "name"(tất cả đều ghi thường, tiếng việt)
     
     Cypher query:
-    MATCH (first:<type> {{name: '<name>'}})-[:bao_gồm]->(second:<type> {{name: '<name>'}})-[:bao_gồm]->(third:<type> {{name: '<name>'}})-[r*1..3]->(e)
-    RETURN r as relation, e as target
+    MATCH (first:<type> {{name: '<name>'}})-[:bao_gồm]->(second:<type> {{name: '<name>'}})-[:bao_gồm]->(third:<type> {{name: '<name>'}})-[r*1..<n>]->(e)
+    RETURN r AS relation, [first, e] AS target
     
     Trong đó:
-        - type: Là loại của mục (part, section, hoặc article, viết thường, tiếng Anh).
-        - name: Là nội dung của mục (viết thường, tiếng Việt, đúng như trong mục lục).
+        - <type>: Là loại của mục (part, section, hoặc article, viết thường, tiếng Anh).
+        - <name>: Là nội dung của mục (viết thường, tiếng Việt, đúng như trong mục lục).
         - Các cấp (first, second, third, hoặc fourth) phải được sắp xếp theo thứ tự phân cấp (second là con của first, third là con của second, fourth là con của third).
+        - <n>: Là độ sâu cần truy vấn. Nếu câu hỏi là tóm tắt, tổng quan thì n = 3. Nếu câu hỏi cần chi tiết thì n = 3
         - Phần -[r*1..3]->(e) phải luôn có.
         - Các mục đồng cấp (ví dụ: hai section hoặc 2 part hoặc 2 article) không được nối tiếp nhau trong query.
-
+        
     Lưu ý:
     - Mọi câu hỏi đều thuộc mục lục, không có trường hợp không tìm thấy.
     - Query phải đúng định dạng mẫu, không giải thích thêm.
@@ -266,10 +312,10 @@ def predict_question_belong_to(question):
     Ví dụ:
     Câu hỏi về "quyền của sinh viên":
     MATCH (first:part {{name: 'phần 2: học tập và rèn luyện'}})-[:bao_gồm]->(second:section {{name: 'quy chế sinh viên'}})-[:bao_gồm]->(third:part {{name: 'chương 2: quyền và nghĩa vụ của sinh viên'}})-[:bao_gồm]->(fourth:article {{name: 'điều 4: quyền của sinh viên'}})-[r*1..3]->(e)
-    RETURN r as relation, e as target
+    RETURN r AS relation, [first, e] AS target
     Câu hỏi về "quá trình hình thành và phát triển":
     MATCH (first:part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:bao_gồm]->(second:section {{name: 'quá trình hình thành và phát triển'}})-[r*1..3]->(e)
-    RETURN r as relation, e as target
+    RETURN r AS relation, [first, e] AS target
 """
 
 # dùng để trích xuất entities và relationship cho câu hỏi

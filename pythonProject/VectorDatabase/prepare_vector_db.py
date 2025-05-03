@@ -1,10 +1,6 @@
 import os
-import time
 from dotenv import load_dotenv
-from langchain_core.prompts import PromptTemplate
-from LLM import prompt
 load_dotenv()
-from LLM.Gemini import Gemini
 from ModelLLM.EmbeddingFactory import EmbeddingFactory
 from PreProcessing.PreProcessing import PreProcessing
 from VectorDatabase.Qdrant import Qdrant

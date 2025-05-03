@@ -92,7 +92,7 @@ def gemini_endpoint():
         question = f"Câu hỏi: {question}"
 
         # Gọi Gemini API
-        answer = chat.answer_flask(question)
+        answer = chat.answer(question)
 
         # Trả về kết quả
         app.logger.info("Request processed successfully")

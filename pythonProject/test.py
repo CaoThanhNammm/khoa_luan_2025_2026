@@ -1,4 +1,5 @@
-import google.generativeai as genai
-genai.configure(api_key='AIzaSyAndwhiQHj1Tdo82CT0idA1RpkkoSG87Dw')
-model = genai.GenerativeModel('gemini-1.5-flash')
-print(model.generate_content("Hello").text)
+relationship = {'extracted': {'entities': {'entity': 'website', 'type': 'website'}, 'relations': {'source': 'khoa thủy sản', 'target': 'website', 'relation': 'có'}}, 'retriever': 'graph'}
+relationship = relationship['extracted']['relations']
+
+question = " ".join(f"{r['source']} {r['relation']} {r['target']}" for r in relationship)
+print(question)

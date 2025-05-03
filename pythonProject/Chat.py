@@ -11,12 +11,15 @@ from knowledge_graph.KnowledgeGraphDatabase import Neo4j
 import numpy as np
 
 class Chat:
-    def __init__(self, t, gemini, pre_processing):
-        self.gemini = gemini
+    def __init__(self, t, gemini_agent, gemini_generator, gemini_valid, gemini_commentor, pre_processing):
+        self.gemini_agent = gemini_agent
+        self.gemini_generator = gemini_generator
+        self.gemini_valid = gemini_valid
+        self.gemini_commentor = gemini_commentor
         self.t = t
 
         self._initialize_embedding_models()
-        host = 'https://0d9e031b-a61d-479b-8a5e-1b1aeeba93a0.us-west-1-0.aws.cloud.qdrant.io:6333'
+        host = os.getenv('HOST_QDRANT')
         api = os.getenv("API_KEY_QDRANT")
 
         self.qdrant = Qdrant(
@@ -36,65 +39,28 @@ class Chat:
         self.pre_processing = pre_processing
 
     def answer(self, question):
-        question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
-        # feedback = ""
-        # potential_answer = ""
+        # sử dụng ngữ cảnh của các câu trả lời trước đó để trả lời
+        # first_answer = self.answer_by_context(question)
+        # validator = self.valid(question, first_answer)
+        # print(f"valid: {validator}")
+        # if "yes" in validator:
+        #     print(f"Final answer: {first_answer}")
+        #     return first_answer
 
-        # action = ""
-
-        print(f"Question nhỏ: {question}")
-        references = self.retrieval_bank(question_pre_processing, "")
-        print(f"Available references: {references}")
-
-        potential_answer = self.generator(question, references)
-        print(f"Answer: {potential_answer}")
-
-        # for i in range(self.t):
-        #     print(f"Step {i}, initial feedback: {feedback}")
-        #
-        #     action = self.agent(question, feedback)
-        #     print(f"Action: {action}")
-        #
-        #     references = self.retrieval_bank(question_pre_processing, action)
-        #     print(f"Available references: {references}")
-        #
-        #     potential_answer = self.generator(question, references)
-        #     print(f"Answer: {potential_answer}")
-        #
-        #     validator = self.valid(question, potential_answer)
-        #     print(f"valid: {validator}")
-        #     if "yes" in validator:
-        #         print(f"Final answer: {potential_answer}")
-        #         return potential_answer
-        #
-        #     feedback = self.commentor(question, potential_answer, references, action)
-        #     print(f"Continuing feedback: {feedback}")
-        #     print("-" * 2000)
-
-        # return self.summary_answer(question, feedback)
-        return potential_answer
-
-    def answer_flask(self, question):
-        first_answer = self.answer_by_context(question)
-        validator = self.valid(question, first_answer)
-        print(f"valid: {validator}")
-        if "yes" in validator:
-            print(f"Final answer: {first_answer}")
-            return first_answer
-
-
-        question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
+        # nếu không có câu trả thì mới truy xuất
         feedback = ""
-        potential_answer = ""
-        action = ""
 
         for i in range(self.t):
             print(f"Step {i}, initial feedback: {feedback}")
 
-            action = self.agent(question, feedback)
+            entities, relationship, action = self.agent(question, feedback)
             print(f"Action: {action}")
 
-            references = self.retrieval_bank_flask(question_pre_processing, action)
+            if len(relationship) != 0:
+                question = " ".join(f"{r['source']} {r['relation']} {r['target']}" for r in relationship)
+
+            question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
+            references = self.retrieval_bank(question_pre_processing, action)
             print(f"Available references: {references}")
 
             potential_answer = self.generator(question, references)
@@ -103,14 +69,12 @@ class Chat:
             validator = self.valid(question, potential_answer)
             print(f"valid: {validator}")
             if "yes" in validator:
-                print(f"Final answer: {potential_answer}")
                 return potential_answer
 
-            feedback = self.commentor(question, potential_answer, references, action)
-            print(f"Continuing feedback: {feedback}")
+            feedback = self.commentor(question, references, action)
             print("-" * 2000)
 
-        return self.summary_answer(question, feedback)
+        return "không có thông tin"
 
 
     def answer_by_context(self, question):
@@ -120,7 +84,19 @@ class Chat:
         )
         formatted_prompt = prompt_template.format(question=question)
 
-        return self.gemini.generator(formatted_prompt)
+        return self.gemini_agent.generator(formatted_prompt)
+
+    def answer_s2s(self, question):
+        separate_question = self.separate_question(question)
+        answer_final = ''
+        for attr in separate_question:
+            question_child = separate_question[attr]
+            print(f'question child: {question_child}')
+            answer_child = self.answer(question_child)
+            answer_final += f'{question_child}: {answer_child}'
+
+
+        return self.summary_answer(question, answer_final)
 
     def answer_parent(self, question):
         # Tách câu hỏi thành các câu hỏi con
@@ -131,7 +107,7 @@ class Chat:
         def process_child_question(attr_question_pair):
             attr, question_child = attr_question_pair
             print(f'question_child: {question_child}')
-            answer = self.answer_child(question_child)
+            answer = self.answer(question_child)
             return (attr, f"{question}: {answer}")
 
         # Chạy song song các câu hỏi con
@@ -151,33 +127,6 @@ class Chat:
         # Tổng hợp câu trả lời cuối cùng
         return self.summary_answer(question, answer_child)
 
-    def answer_child(self, question):
-        question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
-        feedback = ""
-        potential_answer = ""
-        print(f"Question nhỏ: {question}")
-        for i in range(self.t):
-            print(f"Step {i}, initial feedback: {feedback}")
-
-            action = self.agent(question, feedback)
-            print(f"Action: {action}")
-
-            references = self.retrieval_bank(question_pre_processing, action)
-            print(f"Available references: {references}")
-
-            potential_answer = self.generator(question_pre_processing, references)
-            print(f"Answer: {potential_answer}")
-
-            validator = self.valid(question, potential_answer)
-            print(f"valid: {validator}")
-            if "yes" in validator:
-                print(f"Final answer: {potential_answer}")
-                return potential_answer
-
-            feedback = self.commentor(question, potential_answer, references, action)
-            print(f"Continuing feedback: {feedback}")
-            print("-" * 2000)
-        return potential_answer
 
     def summary_answer(self, question, answer):
         prompt_template = PromptTemplate(
@@ -185,7 +134,7 @@ class Chat:
             template=prompt.summary_answer()
         )
         formatted_prompt = prompt_template.format(question=question, answer=answer)
-        return self.gemini.generator(formatted_prompt)
+        return self.gemini_agent.generator(formatted_prompt)
 
     def separate_question(self, question):
         prompt_template = PromptTemplate(
@@ -193,47 +142,35 @@ class Chat:
             template=prompt.separate_question()
         )
         formatted_prompt = prompt_template.format(question=question)
-        answer = self.gemini.generator(formatted_prompt)
+        answer = self.gemini_agent.generator(formatted_prompt)
         answer_json = pre_processing.string_to_json(answer)
         return answer_json
 
     def agent(self, question, feedback):
-        return self.first_decision(question) if not feedback else self.reflection(question, feedback)
+        print(f'question {question}')
+        agent = self.first_decision(question) if not feedback else self.reflection(question, feedback)
+        agent = pre_processing.string_to_json(agent)
+        print(agent)
+        entities_relationship = agent['extracted']
 
-    def retrieval_bank_flask(self, question, action):
-        return self.retrieval_graph(question) if 'graph' in action else self.retrieval_text(question)
+        action = agent['retriever']
+        relationship = entities_relationship['relations']
+        entities = entities_relationship['entities']
+
+        return entities, relationship, action
 
     def retrieval_bank(self, question, action):
-        return self.retrieval_graph(question)
+        return self.retrieval_graph(question) if 'graph' in action else self.retrieval_text(question)
 
     def retrieval_graph(self, question):
         # llm dự đoán câu hỏi thuộc phần nào để thu hẹp nội dung cần truy xuất
-        query = self.gemini.generator(prompt.predict_question_belong_to(question))
+        query = self.gemini_agent.generator(prompt.predict_question_belong_to(question))
         query = query.replace("```", "").replace("cypher", "")
         print('query:', query)
         path = self.neo.get_path(query)
-        references_node = self.neo.get_relationship(path)
+        references_node = self.neo.get_triplet(path)
 
-        results = []
-        for r in references_node:
-            source_node = r['source_node']
-            relation_type = r['relation_type']
-            target_node = r['target_node']
-            text = f'{source_node} {relation_type} {target_node}'
-            results.append(text)
-
-        re_ranking_query_text = self.qdrant.re_ranking(question, results)
-        reference = ""
-
-        for i in range(len(re_ranking_query_text)):
-            logit = re_ranking_query_text[i].metadata['relevance_score']
-            text = re_ranking_query_text[i].page_content
-            reference += f'{text}\n'
-            # if logit >= 0:
-            #     print(f"{logit}: {text}")
-            #     reference += f'{text}\n'
-
-        return reference
+        return references_node
 
     def retrieval_text(self, question):
         embeddings = self.embed_question(question)
@@ -242,16 +179,20 @@ class Chat:
         for result in results:
             json_query_text.append(result.payload["text"])
 
-        re_ranking_query_text = self.qdrant.re_ranking(question, json_query_text)
-        reference = ""
-        for i in range(len(re_ranking_query_text)):
-            logit = re_ranking_query_text[i].metadata['relevance_score']
-            text = re_ranking_query_text[i].page_content
-            # print(f"{logit}: {text}")
-            reference += f'{text}\n'
+        try:
+            re_ranking_query_text = self.qdrant.re_ranking(question, json_query_text)
 
-        print(f"{re_ranking_query_text[0].metadata['relevance_score']}: {re_ranking_query_text[0].page_content}")
-        return re_ranking_query_text[0].page_content
+            reference = ""
+            for i in range(len(re_ranking_query_text)):
+                logit = re_ranking_query_text[i].metadata['relevance_score']
+                text = re_ranking_query_text[i].page_content
+                if logit > 0:
+                    reference += f'{text}\n'
+
+            print(f"{re_ranking_query_text[0].metadata['relevance_score']}: {re_ranking_query_text[0].page_content}")
+            return reference
+        except:
+            return json_query_text
 
     def embed_question(self, question):
         return (
@@ -269,7 +210,7 @@ class Chat:
         )
         formatted_prompt = prompt_template.format(question=question)
 
-        return self.gemini.generator(formatted_prompt).lower()
+        return self.gemini_agent.generator(formatted_prompt).lower()
 
 
     def reflection(self, question, feedback):
@@ -279,7 +220,7 @@ class Chat:
         )
         formatted_prompt = prompt_template.format(question=question, feedback=feedback)
 
-        return self.gemini.generator(formatted_prompt).lower()
+        return self.gemini_agent.generator(formatted_prompt).lower()
 
     def generator(self, question, references):
         prompt_template = PromptTemplate(
@@ -288,7 +229,7 @@ class Chat:
         )
         formatted_prompt = prompt_template.format(question=question, references=references)
 
-        return self.gemini.generator(formatted_prompt)
+        return self.gemini_generator.generator(formatted_prompt)
 
     def valid(self, question, answer):
         prompt_template = PromptTemplate(
@@ -297,16 +238,16 @@ class Chat:
         )
         formatted_prompt = prompt_template.format(question=question, answer=answer)
 
-        return self.gemini.generator(formatted_prompt).lower()
+        return self.gemini_valid.generator(formatted_prompt).lower()
 
-    def commentor(self, question, answer, references, current_module):
+    def commentor(self, question, entities, relationship):
         prompt_template = PromptTemplate(
-            input_variables=["question", "answer", "references", "current_module"],
+            input_variables=["question", "entities", "relationship"],
             template=prompt.commentor_stsv()
         )
-        formatted_prompt = prompt_template.format(question=question, answer=answer, references=references, current_module=current_module)
+        formatted_prompt = prompt_template.format(question=question, entities=entities, relationship=relationship)
 
-        return self.gemini.generator(formatted_prompt)
+        return self.gemini_commentor.generator(formatted_prompt)
 
     @staticmethod
     def _get_env():
@@ -339,10 +280,6 @@ class Chat:
         self.model_embed_768, self.tokenizer_768 = self.model_768.load_model()
         self.model_embed_1024, self.tokenizer_1024 = self.model_1024.load_model()
         self.model_embed_late_interaction, self.tokenizer_late_interaction = self.model_late_interaction.load_model()
-
-
-    def set_gemini(self, gemini):
-        self.gemini = gemini
 
     def cosine_similarity(self, vector1, vector2):
         # Tính tích vô hướng
