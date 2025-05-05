@@ -1,3 +1,5 @@
+import pandas as pd
+from sentence_transformers import CrossEncoder
 from LLM import prompt
 from ModelLLM.EmbeddingFactory import EmbeddingFactory
 from VectorDatabase.Qdrant import Qdrant
@@ -49,6 +51,7 @@ class Chat:
 
         # nếu không có câu trả thì mới truy xuất
         feedback = ""
+        # new_question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
 
         for i in range(self.t):
             print(f"Step {i}, initial feedback: {feedback}")
@@ -57,10 +60,14 @@ class Chat:
             print(f"Action: {action}")
 
             if len(relationship) != 0:
-                question = " ".join(f"{r['source']} {r['relation']} {r['target']}" for r in relationship)
+                new_question = self.join_relations(relationship)
+            else:
+                new_question = question
 
-            question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(question.strip())
-            references = self.retrieval_bank(question_pre_processing, action)
+            print(f'New question: {new_question}')
+            new_question_pre_processing = self.pre_processing.text_preprocessing_vietnamese(new_question.strip())
+
+            references = self.retrieval_bank(new_question_pre_processing, action)
             print(f"Available references: {references}")
 
             potential_answer = self.generator(question, references)
@@ -68,10 +75,11 @@ class Chat:
 
             validator = self.valid(question, potential_answer)
             print(f"valid: {validator}")
+
             if "yes" in validator:
                 return potential_answer
 
-            feedback = self.commentor(question, references, action)
+            feedback = self.commentor(question, entities, relationship, action, references)
             print("-" * 2000)
 
         return "không có thông tin"
@@ -150,7 +158,7 @@ class Chat:
         print(f'question {question}')
         agent = self.first_decision(question) if not feedback else self.reflection(question, feedback)
         agent = pre_processing.string_to_json(agent)
-        print(agent)
+
         entities_relationship = agent['extracted']
 
         action = agent['retriever']
@@ -164,13 +172,32 @@ class Chat:
 
     def retrieval_graph(self, question):
         # llm dự đoán câu hỏi thuộc phần nào để thu hẹp nội dung cần truy xuất
-        query = self.gemini_agent.generator(prompt.predict_question_belong_to(question))
+        prompt_template = PromptTemplate(
+            input_variables=["question"],
+            template=prompt.predict_question_belong_to()
+        )
+        formatted_prompt = prompt_template.format(question=question)
+
+        query = self.gemini_agent.generator(formatted_prompt)
         query = query.replace("```", "").replace("cypher", "")
         print('query:', query)
         path = self.neo.get_path(query)
         references_node = self.neo.get_triplet(path)
 
-        return references_node
+        reranker_model = CrossEncoder('DiTy/cross-encoder-russian-msmarco', max_length=512)
+        documents = []
+        for i in references_node:
+            documents.append(f'{i['source_node']} {i['relation_type']} {i['target_node']}')
+
+        scores = reranker_model.rank(question, documents)
+        res = []
+        for item in scores:
+            corpus_id = item['corpus_id']
+            score = item['score']
+            name = documents[corpus_id] if corpus_id < len(documents) else "Không tìm thấy tài liệu"
+            res.append(f"score: {score}, name: {name}")
+
+        return res
 
     def retrieval_text(self, question):
         embeddings = self.embed_question(question)
@@ -189,7 +216,6 @@ class Chat:
                 if logit > 0:
                     reference += f'{text}\n'
 
-            print(f"{re_ranking_query_text[0].metadata['relevance_score']}: {re_ranking_query_text[0].page_content}")
             return reference
         except:
             return json_query_text
@@ -240,12 +266,12 @@ class Chat:
 
         return self.gemini_valid.generator(formatted_prompt).lower()
 
-    def commentor(self, question, entities, relationship):
+    def commentor(self, question, entities, relationship, action, references):
         prompt_template = PromptTemplate(
-            input_variables=["question", "entities", "relationship"],
+            input_variables=["question", "entities", "relationship", "action", "references"],
             template=prompt.commentor_stsv()
         )
-        formatted_prompt = prompt_template.format(question=question, entities=entities, relationship=relationship)
+        formatted_prompt = prompt_template.format(question=question, entities=entities, relationship=relationship, action=action, references=references)
 
         return self.gemini_commentor.generator(formatted_prompt)
 
@@ -280,6 +306,21 @@ class Chat:
         self.model_embed_768, self.tokenizer_768 = self.model_768.load_model()
         self.model_embed_1024, self.tokenizer_1024 = self.model_1024.load_model()
         self.model_embed_late_interaction, self.tokenizer_late_interaction = self.model_late_interaction.load_model()
+
+    def join_relations(self, relations):
+        if not relations:
+            return ""
+
+        # Bắt đầu với source của quan hệ đầu tiên
+        result = [relations[0]["source"]]
+
+        # Duyệt qua từng quan hệ để thêm relation và target
+        for rel in relations:
+            result.append(rel["relation"])
+            result.append(rel["target"])
+
+        # Nối các thành phần thành chuỗi, loại bỏ các phần tử rỗng
+        return " ".join(item for item in result if item)
 
     def cosine_similarity(self, vector1, vector2):
         # Tính tích vô hướng

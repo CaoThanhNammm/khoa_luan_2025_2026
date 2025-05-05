@@ -1,2717 +1,592 @@
 {
   "entities": [
     {
-      "name": "đi học muộn",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "giờ thực tập",
-      "type": "TIME"
-    },
-    {
-      "name": "nghỉ học không phép",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "nghỉ quá số ngày quy định",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "5",
-      "type": "NUMBER"
-    },
-    {
-      "name": "10",
-      "type": "NUMBER"
-    },
-    {
-      "name": "điểm rèn luyện",
-      "type": "POINT"
-    },
-    {
-      "name": "mức độ vi phạm",
-      "type": "LEVEL_OF_VIOLATION"
-    },
-    {
-      "name": "Mất trật tự",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "làm việc riêng",
-      "type": "VIOLATION"
+      "name": "học sinh/sinh viên",
+      "type": "person"
     },
     {
       "name": "giờ học",
-      "type": "TIME"
+      "type": "time"
     },
     {
-      "name": "giờ tự học",
-      "type": "TIME"
+      "name": "giờ thực tập",
+      "type": "time"
     },
     {
-      "name": "Vô lễ",
-      "type": "VIOLATION"
+      "name": "điểm rèn luyện",
+      "type": "score_type"
     },
     {
-      "name": "thầy cô giáo",
-      "type": "TEACHER_STAFF"
+      "name": "thầy",
+      "type": "person"
     },
     {
-      "name": "cán bộ viên chức nhà trường",
-      "type": "STAFF"
+      "name": "cô giáo",
+      "type": "person"
     },
     {
-      "name": "mức độ nghiêm trọng",
-      "type": "LEVEL_OF_SERIOUSNESS"
-    },
-    {
-      "name": "hình thức xử lý",
-      "type": "PENALTY_FORM"
+      "name": "CBVC nhà trường",
+      "type": "person"
     },
     {
       "name": "khiển trách",
-      "type": "PENALTY"
+      "type": "punishment"
     },
     {
       "name": "buộc thôi học",
-      "type": "PENALTY"
-    },
-    {
-      "name": "Học hộ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "nhờ người khác học hộ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "Thi hộ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "kiểm tra hộ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "nhờ người khác thi",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "nhờ người khác kiểm tra hộ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "làm hộ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "nhờ làm hộ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "sao chép tiểu luận",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "tiểu luận",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "đồ án",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "khóa luận tốt nghiệp",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "Hành vi này",
-      "type": "ACTION"
-    },
-    {
-      "name": "lần vi phạm đầu tiên",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "lần thứ hai",
-      "type": "SECOND_TIME"
-    },
-    {
-      "name": "mức độ xử lý cụ thể",
-      "type": "SPECIFIC_PENALTY_LEVEL"
-    },
-    {
-      "name": "Tổ chức cho người khác học hộ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "Tổ chức cho người khác thi hộ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "Tổ chức cho người khác kiểm tra hộ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "tổ chức làm hộ tiểu luận",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "đồ án",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "khóa luận tốt nghiệp",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "Đối với hành vi vi phạm lần đầu",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Mang tài liệu vào phòng thi",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "phòng thi",
-      "type": "LOCATION"
-    },
-    {
-      "name": "đưa đề thi ra ngoài",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "ném tài liệu vào phòng thi",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "vẽ bậy vào bài thi",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "bài thi",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "bỏ thi không có lý do chính đáng",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "hình thức gian lận khác",
-      "type": "FRAUD_FORM"
-    },
-    {
-      "name": "học tập",
-      "type": "STUDY"
+      "type": "punishment"
     },
     {
       "name": "thi",
-      "type": "EXAM"
+      "type": "activity"
     },
     {
       "name": "kiểm tra",
-      "type": "EXAM"
+      "type": "activity"
     },
     {
-      "name": "Sinh viên",
-      "type": "STUDENT"
+      "name": "tiểu luận",
+      "type": "academic_work"
     },
     {
-      "name": "đình chỉ thi",
-      "type": "PENALTY"
+      "name": "đồ án",
+      "type": "academic_work"
     },
     {
-      "name": "hạ điểm rèn luyện",
-      "type": "PENALTY"
+      "name": "khóa luận tốt nghiệp",
+      "type": "academic_work"
     },
     {
-      "name": "mức Trung bình",
-      "type": "LEVEL"
+      "name": "đình chỉ có thời hạn",
+      "type": "punishment"
     },
     {
-      "name": "Cố tình chậm nộp học phí",
-      "type": "VIOLATION"
+      "name": "cơ quan chức năng",
+      "type": "organization"
+    },
+    {
+      "name": "phòng thi",
+      "type": "location"
+    },
+    {
+      "name": "bậc Trung bình",
+      "type": "rating"
     },
     {
       "name": "học phí",
-      "type": "FEE"
+      "type": "fee"
     },
     {
       "name": "bảo hiểm y tế",
-      "type": "INSURANCE"
-    },
-    {
-      "name": "quy định của nhà trường",
-      "type": "SCHOOL_REGULATION"
-    },
-    {
-      "name": "nhà trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "lý do chính đáng",
-      "type": "JUSTIFICATION"
-    },
-    {
-      "name": "hình thức xử lý",
-      "type": "PENALTY_FORM"
-    },
-    {
-      "name": "nhắc nhở",
-      "type": "PENALTY"
-    },
-    {
-      "name": "Làm hư hỏng tài sản",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "tài sản",
-      "type": "PROPERTY"
-    },
-    {
-      "name": "ký túc xá (KTX)",
-      "type": "LOCATION"
+      "type": "fee"
     },
     {
       "name": "KTX",
-      "type": "LOCATION"
+      "type": "location"
     },
     {
-      "name": "tài sản khác của trường",
-      "type": "PROPERTY"
+      "name": "tài sản",
+      "type": "property"
     },
     {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "hình thức xử lý",
-      "type": "PENALTY_FORM"
-    },
-    {
-      "name": "đồng thời sinh viên phải bồi thường thiệt hại",
-      "type": "COMPENSATION"
-    },
-    {
-      "name": "Uống rượu",
-      "type": "VIOLATION"
+      "name": "rượu",
+      "type": "substance"
     },
     {
       "name": "bia",
-      "type": "ALCOHOL"
+      "type": "substance"
     },
     {
-      "name": "say rượu",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "bia",
-      "type": "ALCOHOL"
-    },
-    {
-      "name": "đến lớp",
-      "type": "CLASS"
-    },
-    {
-      "name": "Hành vi này",
-      "type": "ACTION"
-    },
-    {
-      "name": "lần vi phạm đầu tiên",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "lần thứ tư",
-      "type": "FOURTH_TIME"
-    },
-    {
-      "name": "Mức độ xử lý cụ thể",
-      "type": "SPECIFIC_PENALTY_LEVEL"
-    },
-    {
-      "name": "Hút thuốc lá",
-      "type": "VIOLATION"
+      "name": "thuốc lá",
+      "type": "substance"
     },
     {
       "name": "phòng họp",
-      "type": "LOCATION"
+      "type": "location"
     },
     {
       "name": "phòng thí nghiệm",
-      "type": "LOCATION"
-    },
-    {
-      "name": "nơi cấm hút thuốc",
-      "type": "LOCATION"
-    },
-    {
-      "name": "quy định",
-      "type": "REGULATION"
-    },
-    {
-      "name": "lần vi phạm thứ 3",
-      "type": "THIRD_TIME_VIOLATION"
-    },
-    {
-      "name": "hình thức xử lý",
-      "type": "PENALTY_FORM"
+      "type": "location"
     },
     {
       "name": "cảnh cáo",
-      "type": "PENALTY"
+      "type": "punishment"
     },
     {
-      "name": "Đánh bạc",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "mọi hình thức",
-      "type": "ALL_FORMS"
-    },
-    {
-      "name": "Hành vi này",
-      "type": "ACTION"
-    },
-    {
-      "name": "lần vi phạm đầu tiên",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "lần thứ tư",
-      "type": "FOURTH_TIME"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Tàng trữ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "lưu hành",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "truy cập",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "sử dụng",
-      "type": "VIOLATION"
+      "name": "đánh bạc",
+      "type": "violation"
     },
     {
       "name": "sản phẩm văn hóa đồi trụy",
-      "type": "CULTURAL_PRODUCT"
+      "type": "prohibited_item"
     },
     {
-      "name": "tham gia các hoạt động mê tín dị đoan",
-      "type": "VIOLATION"
+      "name": "hoạt động mê tín dị đoan",
+      "type": "prohibited_activity"
     },
     {
       "name": "hoạt động tôn giáo trái phép",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "Hành vi này",
-      "type": "ACTION"
-    },
-    {
-      "name": "lần vi phạm đầu tiên",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "lần thứ tư",
-      "type": "FOURTH_TIME"
-    },
-    {
-      "name": "vi phạm nghiêm trọng",
-      "type": "SERIOUS_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Buôn bán",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "vận chuyển",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "tàng trữ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "lôi kéo người khác sử dụng ma túy",
-      "type": "VIOLATION"
+      "type": "prohibited_activity"
     },
     {
       "name": "ma túy",
-      "type": "DRUG"
+      "type": "prohibited_substance"
     },
     {
-      "name": "Đối với hành vi vi phạm lần đầu",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Sử dụng ma túy",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "Hành vi này",
-      "type": "ACTION"
-    },
-    {
-      "name": "quy định về xử lý sinh viên liên quan đến ma túy",
-      "type": "REGULATION"
-    },
-    {
-      "name": "Chửa chấp",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "môi giới mại dâm",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "Đối với hành vi vi phạm lần đầu",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Lấy cắp tài sản",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "tài sản",
-      "type": "PROPERTY"
-    },
-    {
-      "name": "chứa chấp",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "tiêu thụ tài sản do lấy cắp mà có",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "hình thức xử lý",
-      "type": "PENALTY_FORM"
-    },
-    {
-      "name": "cảnh cáo",
-      "type": "PENALTY"
-    },
-    {
-      "name": "buộc thôi học",
-      "type": "PENALTY"
-    },
-    {
-      "name": "vi phạm nghiêm trọng",
-      "type": "SERIOUS_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Chửa chấp",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "buôn bán vũ khí",
-      "type": "VIOLATION"
+      "name": "mại dâm",
+      "type": "prohibited_activity"
     },
     {
       "name": "vũ khí",
-      "type": "WEAPON"
+      "type": "prohibited_item"
     },
     {
       "name": "chất nổ",
-      "type": "EXPLOSIVE"
+      "type": "prohibited_item"
     },
     {
       "name": "hàng cấm",
-      "type": "PROHIBITED_GOODS"
-    },
-    {
-      "name": "quy định của Nhà nước",
-      "type": "STATE_REGULATION"
-    },
-    {
-      "name": "Nhà nước",
-      "type": "GOVERNMENT"
-    },
-    {
-      "name": "Đối với hành vi vi phạm lần đầu",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Đưa phần tử xấu vào trong trường",
-      "type": "VIOLATION"
+      "type": "prohibited_item"
     },
     {
       "name": "phần tử xấu",
-      "type": "BAD_ELEMENT"
-    },
-    {
-      "name": "trong trường",
-      "type": "LOCATION"
-    },
-    {
-      "name": "KTX",
-      "type": "LOCATION"
-    },
-    {
-      "name": "an ninh",
-      "type": "SECURITY"
-    },
-    {
-      "name": "trật tự trong nhà trường",
-      "type": "ORDER"
-    },
-    {
-      "name": "nhà trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "hình thức xử lý",
-      "type": "PENALTY_FORM"
-    },
-    {
-      "name": "cảnh cáo",
-      "type": "PENALTY"
-    },
-    {
-      "name": "buộc thôi học",
-      "type": "PENALTY"
-    },
-    {
-      "name": "Đánh nhau",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "tổ chức đánh nhau",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "tham gia tổ chức đánh nhau",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "Hành vi này",
-      "type": "ACTION"
-    },
-    {
-      "name": "lần vi phạm đầu tiên",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "lần thứ ba",
-      "type": "THIRD_TIME"
-    },
-    {
-      "name": "vi phạm nghiêm trọng",
-      "type": "SERIOUS_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Kích động",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "lôi kéo người khác biểu tình",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "biểu tình",
-      "type": "PROTEST"
-    },
-    {
-      "name": "viết truyền đơn",
-      "type": "VIOLATION"
+      "type": "person"
     },
     {
       "name": "truyền đơn",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "áp phích trái pháp luật",
-      "type": "VIOLATION"
+      "type": "document"
     },
     {
       "name": "áp phích",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Hành vi này",
-      "type": "ACTION"
-    },
-    {
-      "name": "lần vi phạm đầu tiên",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "lần thứ hai",
-      "type": "SECOND_TIME"
-    },
-    {
-      "name": "vi phạm nghiêm trọng",
-      "type": "SERIOUS_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Tham gia biểu tình",
-      "type": "VIOLATION"
+      "type": "document"
     },
     {
       "name": "biểu tình",
-      "type": "PROTEST"
+      "type": "prohibited_activity"
     },
     {
       "name": "tụ tập đông người",
-      "type": "VIOLATION"
+      "type": "prohibited_activity"
     },
     {
-      "name": "khiếu kiện trái quy định của pháp luật",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Hành vi này",
-      "type": "ACTION"
-    },
-    {
-      "name": "lần vi phạm đầu tiên",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "lần thứ tư",
-      "type": "FOURTH_TIME"
-    },
-    {
-      "name": "vi phạm nghiêm trọng",
-      "type": "SERIOUS_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Đăng tải",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "bình luận",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "chia sẻ",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "bài viết",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "hình ảnh",
-      "type": "IMAGE"
-    },
-    {
-      "name": "nội dung tục tĩu",
-      "type": "CONTENT"
-    },
-    {
-      "name": "bạo lực",
-      "type": "CONTENT"
-    },
-    {
-      "name": "đồi trụy",
-      "type": "CONTENT"
-    },
-    {
-      "name": "xâm phạm an ninh quốc gia",
-      "type": "CONTENT"
-    },
-    {
-      "name": "chống phá Đảng và Nhà nước",
-      "type": "CONTENT"
-    },
-    {
-      "name": "Đảng",
-      "type": "POLITICAL_ORGANIZATION"
-    },
-    {
-      "name": "Nhà nước",
-      "type": "GOVERNMENT"
-    },
-    {
-      "name": "xuyên tạc",
-      "type": "CONTENT"
-    },
-    {
-      "name": "vu khống",
-      "type": "CONTENT"
-    },
-    {
-      "name": "xúc phạm uy tín của tổ chức",
-      "type": "CONTENT"
-    },
-    {
-      "name": "danh dự và nhân phẩm của cá nhân",
-      "type": "CONTENT"
-    },
-    {
-      "name": "cá nhân",
-      "type": "PERSON"
+      "name": "khiếu kiện",
+      "type": "activity"
     },
     {
       "name": "mạng Internet",
-      "type": "INTERNET"
+      "type": "platform"
     },
     {
-      "name": "hình thức xử lý",
-      "type": "PENALTY_FORM"
+      "name": "Đảng",
+      "type": "organization"
     },
     {
-      "name": "khiển trách",
-      "type": "PENALTY"
+      "name": "Nhà nước",
+      "type": "organization"
     },
     {
-      "name": "buộc thôi học",
-      "type": "PENALTY"
+      "name": "an ninh quốc gia",
+      "type": "concept"
     },
     {
-      "name": "vi phạm nghiêm trọng",
-      "type": "SERIOUS_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Có hành động quấy rối",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "dâm ô",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "xâm phạm nhân phẩm",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "đời tư của người khác",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "người khác",
-      "type": "PERSON"
-    },
-    {
-      "name": "hình thức xử lý",
-      "type": "PENALTY_FORM"
-    },
-    {
-      "name": "khiển trách",
-      "type": "PENALTY"
-    },
-    {
-      "name": "buộc thôi học",
-      "type": "PENALTY"
-    },
-    {
-      "name": "vi phạm nghiêm trọng",
-      "type": "SERIOUS_VIOLATION"
-    },
-    {
-      "name": "trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "cơ quan chức năng có thẩm quyền",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quy định của pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "Vi phạm các quy định về an toàn giao thông",
-      "type": "VIOLATION"
-    },
-    {
-      "name": "quy định về an toàn giao thông",
-      "type": "TRAFFIC_SAFETY_REGULATIONS"
-    },
-    {
-      "name": "hình thức xử lý",
-      "type": "PENALTY_FORM"
-    },
-    {
-      "name": "khiển trách",
-      "type": "PENALTY"
-    },
-    {
-      "name": "buộc thôi học",
-      "type": "PENALTY"
-    },
-    {
-      "name": "Sử dụng hồ sơ",
-      "type": "VIOLATION"
+      "name": "an toàn giao thông",
+      "type": "regulation"
     },
     {
       "name": "hồ sơ",
-      "type": "DOCUMENT"
+      "type": "document"
     },
     {
       "name": "văn bằng",
-      "type": "CERTIFICATE"
+      "type": "document"
     },
     {
-      "name": "chứng chỉ giả",
-      "type": "FAKE_CERTIFICATE"
-    },
-    {
-      "name": "điều kiện trúng tuyển",
-      "type": "CONDITION"
-    },
-    {
-      "name": "điều kiện tốt nghiệp",
-      "type": "CONDITION"
-    },
-    {
-      "name": "lần vi phạm đầu tiên",
-      "type": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "name": "văn bằng tốt nghiệp",
-      "type": "DEGREE"
-    },
-    {
-      "name": "Các hành vi vi phạm khác",
-      "type": "OTHER_VIOLATIONS"
-    },
-    {
-      "name": "mức độ vi phạm",
-      "type": "LEVEL_OF_VIOLATION"
+      "name": "chứng chỉ",
+      "type": "document"
     },
     {
       "name": "nhà trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "hình thức xử lý",
-      "type": "PENALTY_FORM"
-    },
-    {
-      "name": "nhắc nhở",
-      "type": "PENALTY"
-    },
-    {
-      "name": "phê bình",
-      "type": "PENALTY"
-    },
-    {
-      "name": "trừ điểm rèn luyện",
-      "type": "PENALTY"
-    },
-    {
-      "name": "kỷ luật",
-      "type": "DISCIPLINE"
-    },
-    {
-      "name": "khiển trách",
-      "type": "PENALTY"
-    },
-    {
-      "name": "buộc thôi học",
-      "type": "PENALTY"
+      "type": "organization"
     }
   ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "đi học muộn",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "giờ thực tập",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "TIME"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nghỉ học không phép",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nghỉ quá số ngày quy định",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "mức độ vi phạm",
-      "target": "điểm rèn luyện",
-      "relation": "áp_dụng_hình_thức_xử_lý",
-      "type_source": "LEVEL_OF_VIOLATION",
-      "type_target": "POINT"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Mất trật tự",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "làm việc riêng",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
+      "source": "học sinh/sinh viên",
       "target": "giờ học",
-      "relation": "trong",
-      "type_source": "STUDENT",
-      "type_target": "TIME"
+      "type_source": "person",
+      "type_target": "time",
+      "relation": "đến_muộn"
     },
     {
-      "source": "sinh viên",
+      "source": "học sinh/sinh viên",
       "target": "giờ thực tập",
-      "relation": "trong",
-      "type_source": "STUDENT",
-      "type_target": "TIME"
+      "type_source": "person",
+      "type_target": "time",
+      "relation": "đến_muộn"
     },
     {
-      "source": "sinh viên",
-      "target": "giờ tự học",
-      "relation": "trong",
-      "type_source": "STUDENT",
-      "type_target": "TIME"
-    },
-    {
-      "source": "mức độ vi phạm",
+      "source": "học sinh/sinh viên",
       "target": "điểm rèn luyện",
-      "relation": "áp_dụng_hình_thức_xử_lý",
-      "type_source": "LEVEL_OF_VIOLATION",
-      "type_target": "POINT"
+      "type_source": "person",
+      "type_target": "score_type",
+      "relation": "bị_trừ"
     },
     {
-      "source": "sinh viên",
-      "target": "Vô lễ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
+      "source": "học sinh/sinh viên",
+      "target": "thầy",
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "vô_lễ_với"
     },
     {
-      "source": "Vô lễ",
-      "target": "thầy cô giáo",
-      "relation": "với",
-      "type_source": "VIOLATION",
-      "type_target": "TEACHER_STAFF"
+      "source": "học sinh/sinh viên",
+      "target": "cô giáo",
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "vô_lễ_với"
     },
     {
-      "source": "Vô lễ",
-      "target": "cán bộ viên chức nhà trường",
-      "relation": "với",
-      "type_source": "VIOLATION",
-      "type_target": "STAFF"
+      "source": "học sinh/sinh viên",
+      "target": "CBVC nhà trường",
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "vô_lễ_với"
     },
     {
-      "source": "mức độ nghiêm trọng",
-      "target": "hình thức xử lý",
-      "relation": "quyết_định",
-      "type_source": "LEVEL_OF_SERIOUSNESS",
-      "type_target": "PENALTY_FORM"
-    },
-    {
-      "source": "hình thức xử lý",
+      "source": "học sinh/sinh viên",
       "target": "khiển trách",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
+      "type_source": "person",
+      "type_target": "punishment",
+      "relation": "bị_xử_lý"
     },
     {
-      "source": "hình thức xử lý",
+      "source": "học sinh/sinh viên",
       "target": "buộc thôi học",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
+      "type_source": "person",
+      "type_target": "punishment",
+      "relation": "bị_xử_lý"
     },
     {
-      "source": "sinh viên",
-      "target": "Học hộ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nhờ người khác học hộ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "mức độ nghiêm trọng",
-      "target": "hình thức xử lý",
-      "relation": "quyết_định",
-      "type_source": "LEVEL_OF_SERIOUSNESS",
-      "type_target": "PENALTY_FORM"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "khiển trách",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "buộc thôi học",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Thi hộ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "kiểm tra hộ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nhờ người khác thi",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nhờ người khác kiểm tra hộ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "làm hộ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nhờ làm hộ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "sao chép tiểu luận",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "sao chép đồ án",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "sao chép khóa luận tốt nghiệp",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần vi phạm đầu tiên",
-      "relation": "xử_lý_từ",
-      "type_source": "ACTION",
-      "type_target": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần thứ hai",
-      "relation": "xử_lý_đến",
-      "type_source": "ACTION",
-      "type_target": "SECOND_TIME"
-    },
-    {
-      "source": "mức độ nghiêm trọng",
-      "target": "mức độ xử lý cụ thể",
-      "relation": "quyết_định",
-      "type_source": "LEVEL_OF_SERIOUSNESS",
-      "type_target": "SPECIFIC_PENALTY_LEVEL"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Tổ chức cho người khác học hộ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Tổ chức cho người khác thi hộ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Tổ chức cho người khác kiểm tra hộ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tổ chức làm hộ tiểu luận",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tổ chức làm hộ đồ án",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tổ chức làm hộ khóa luận tốt nghiệp",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "hành vi vi phạm lần đầu",
-      "target": "trường",
-      "relation": "xử_lý_bởi",
-      "type_source": "FIRST_TIME_VIOLATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "chuyển_giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Mang tài liệu vào phòng thi",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Mang tài liệu vào phòng thi",
-      "target": "phòng thi",
-      "relation": "ở",
-      "type_source": "VIOLATION",
-      "type_target": "LOCATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đưa đề thi ra ngoài",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "ném tài liệu vào phòng thi",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "ném tài liệu vào phòng thi",
-      "target": "phòng thi",
-      "relation": "ở",
-      "type_source": "VIOLATION",
-      "type_target": "LOCATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "vẽ bậy vào bài thi",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "bỏ thi không có lý do chính đáng",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "hình thức gian lận khác",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "FRAUD_FORM"
-    },
-    {
-      "source": "hình thức gian lận khác",
-      "target": "học tập",
-      "relation": "trong",
-      "type_source": "FRAUD_FORM",
-      "type_target": "STUDY"
-    },
-    {
-      "source": "hình thức gian lận khác",
+      "source": "học sinh/sinh viên",
       "target": "thi",
-      "relation": "trong",
-      "type_source": "FRAUD_FORM",
-      "type_target": "EXAM"
+      "type_source": "person",
+      "type_target": "activity",
+      "relation": "thực_hiện"
     },
     {
-      "source": "hình thức gian lận khác",
+      "source": "học sinh/sinh viên",
       "target": "kiểm tra",
-      "relation": "trong",
-      "type_source": "FRAUD_FORM",
-      "type_target": "EXAM"
+      "type_source": "person",
+      "type_target": "activity",
+      "relation": "thực_hiện"
     },
     {
-      "source": "Sinh viên",
-      "target": "đình chỉ thi",
-      "relation": "bị_phạt",
-      "type_source": "STUDENT",
-      "type_target": "PENALTY"
+      "source": "học sinh/sinh viên",
+      "target": "tiểu luận",
+      "type_source": "person",
+      "type_target": "academic_work",
+      "relation": "làm"
     },
     {
-      "source": "Sinh viên",
-      "target": "hạ điểm rèn luyện",
-      "relation": "bị_phạt",
-      "type_source": "STUDENT",
-      "type_target": "PENALTY"
+      "source": "học sinh/sinh viên",
+      "target": "đồ án",
+      "type_source": "person",
+      "type_target": "academic_work",
+      "relation": "làm"
     },
     {
-      "source": "hạ điểm rèn luyện",
-      "target": "mức Trung bình",
-      "relation": "xuống_mức",
-      "type_source": "PENALTY",
-      "type_target": "LEVEL"
+      "source": "học sinh/sinh viên",
+      "target": "khóa luận tốt nghiệp",
+      "type_source": "person",
+      "type_target": "academic_work",
+      "relation": "làm"
     },
     {
-      "source": "sinh viên",
-      "target": "Cố tình chậm nộp học phí",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
+      "source": "học sinh/sinh viên",
+      "target": "đình chỉ có thời hạn",
+      "type_source": "person",
+      "type_target": "punishment",
+      "relation": "bị_xử_lý"
     },
     {
-      "source": "sinh viên",
-      "target": "Cố tình chậm nộp bảo hiểm y tế",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
+      "source": "cơ quan chức năng",
+      "target": "học sinh/sinh viên",
+      "type_source": "organization",
+      "type_target": "person",
+      "relation": "xử_lý"
     },
     {
-      "source": "Cố tình chậm nộp học phí",
-      "target": "quy định của nhà trường",
-      "relation": "theo",
-      "type_source": "VIOLATION",
-      "type_target": "SCHOOL_REGULATION"
+      "source": "học sinh/sinh viên",
+      "target": "phòng thi",
+      "type_source": "person",
+      "type_target": "location",
+      "relation": "mang_tài_liệu_vào"
     },
     {
-      "source": "Cố tình chậm nộp bảo hiểm y tế",
-      "target": "quy định của nhà trường",
-      "relation": "theo",
-      "type_source": "VIOLATION",
-      "type_target": "SCHOOL_REGULATION"
+      "source": "học sinh/sinh viên",
+      "target": "bậc Trung bình",
+      "type_source": "person",
+      "type_target": "rating",
+      "relation": "bị_hạ_điểm_xuống"
     },
     {
-      "source": "hình thức xử lý",
-      "target": "nhắc nhở",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
+      "source": "học sinh/sinh viên",
+      "target": "học phí",
+      "type_source": "person",
+      "type_target": "fee",
+      "relation": "chậm_nộp"
     },
     {
-      "source": "hình thức xử lý",
-      "target": "khiển trách",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
+      "source": "học sinh/sinh viên",
+      "target": "bảo hiểm y tế",
+      "type_source": "person",
+      "type_target": "fee",
+      "relation": "chậm_nộp"
     },
     {
-      "source": "hình thức xử lý",
-      "target": "buộc thôi học",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Làm hư hỏng tài sản",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "tài sản",
-      "target": "ký túc xá (KTX)",
-      "relation": "ở",
-      "type_source": "PROPERTY",
-      "type_target": "LOCATION"
-    },
-    {
-      "source": "tài sản",
+      "source": "học sinh/sinh viên",
       "target": "KTX",
-      "relation": "ở",
-      "type_source": "PROPERTY",
-      "type_target": "LOCATION"
+      "type_source": "person",
+      "type_target": "location",
+      "relation": "ở_trong"
     },
     {
-      "source": "tài sản khác của trường",
-      "target": "trường",
-      "relation": "của",
-      "type_source": "PROPERTY",
-      "type_target": "ORGANIZATION"
+      "source": "học sinh/sinh viên",
+      "target": "tài sản",
+      "type_source": "person",
+      "type_target": "property",
+      "relation": "làm_hư_hỏng"
     },
     {
-      "source": "hình thức xử lý",
-      "target": "khiển trách",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
+      "source": "học sinh/sinh viên",
+      "target": "cảnh cáo",
+      "type_source": "person",
+      "type_target": "punishment",
+      "relation": "bị_xử_lý"
     },
     {
-      "source": "hình thức xử lý",
-      "target": "buộc thôi học",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
+      "source": "học sinh/sinh viên",
+      "target": "rượu",
+      "type_source": "person",
+      "type_target": "substance",
+      "relation": "sử_dụng"
     },
     {
-      "source": "sinh viên",
-      "target": "đồng thời sinh viên phải bồi thường thiệt hại",
-      "relation": "bị_phạt",
-      "type_source": "STUDENT",
-      "type_target": "COMPENSATION"
+      "source": "học sinh/sinh viên",
+      "target": "bia",
+      "type_source": "person",
+      "type_target": "substance",
+      "relation": "sử_dụng"
     },
     {
-      "source": "sinh viên",
-      "target": "Uống rượu",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
+      "source": "học sinh/sinh viên",
+      "target": "thuốc lá",
+      "type_source": "person",
+      "type_target": "substance",
+      "relation": "hút"
     },
     {
-      "source": "sinh viên",
-      "target": "Uống bia",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Uống rượu",
+      "source": "thuốc lá",
       "target": "giờ học",
-      "relation": "trong",
-      "type_source": "VIOLATION",
-      "type_target": "TIME"
+      "type_source": "substance",
+      "type_target": "time",
+      "relation": "bị_cấm_trong"
     },
     {
-      "source": "Uống bia",
-      "target": "giờ học",
-      "relation": "trong",
-      "type_source": "VIOLATION",
-      "type_target": "TIME"
-    },
-    {
-      "source": "sinh viên",
-      "target": "say rượu",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "say bia",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "say rượu",
-      "target": "đến lớp",
-      "relation": "khi",
-      "type_source": "VIOLATION",
-      "type_target": "CLASS"
-    },
-    {
-      "source": "say bia",
-      "target": "đến lớp",
-      "relation": "khi",
-      "type_source": "VIOLATION",
-      "type_target": "CLASS"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần vi phạm đầu tiên",
-      "relation": "xử_lý_từ",
-      "type_source": "ACTION",
-      "type_target": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần thứ tư",
-      "relation": "xử_lý_đến",
-      "type_source": "ACTION",
-      "type_target": "FOURTH_TIME"
-    },
-    {
-      "source": "Mức độ xử lý cụ thể",
-      "target": "số lần vi phạm",
-      "relation": "tăng_theo",
-      "type_source": "SPECIFIC_PENALTY_LEVEL",
-      "type_target": "NUMBER"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Hút thuốc lá",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Hút thuốc lá",
-      "target": "giờ học",
-      "relation": "trong",
-      "type_source": "VIOLATION",
-      "type_target": "TIME"
-    },
-    {
-      "source": "Hút thuốc lá",
+      "source": "thuốc lá",
       "target": "phòng họp",
-      "relation": "trong",
-      "type_source": "VIOLATION",
-      "type_target": "LOCATION"
+      "type_source": "substance",
+      "type_target": "location",
+      "relation": "bị_cấm_trong"
     },
     {
-      "source": "Hút thuốc lá",
+      "source": "thuốc lá",
       "target": "phòng thí nghiệm",
-      "relation": "trong",
-      "type_source": "VIOLATION",
-      "type_target": "LOCATION"
+      "type_source": "substance",
+      "type_target": "location",
+      "relation": "bị_cấm_trong"
     },
     {
-      "source": "Hút thuốc lá",
-      "target": "nơi cấm hút thuốc",
-      "relation": "ở",
-      "type_source": "VIOLATION",
-      "type_target": "LOCATION"
+      "source": "học sinh/sinh viên",
+      "target": "đánh bạc",
+      "type_source": "person",
+      "type_target": "violation",
+      "relation": "thực_hiện"
     },
     {
-      "source": "Hút thuốc lá",
-      "target": "quy định",
-      "relation": "theo",
-      "type_source": "VIOLATION",
-      "type_target": "REGULATION"
-    },
-    {
-      "source": "lần vi phạm thứ 3",
-      "target": "hình thức xử lý",
-      "relation": "áp_dụng",
-      "type_source": "THIRD_TIME_VIOLATION",
-      "type_target": "PENALTY_FORM"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "khiển trách",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "cảnh cáo",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Đánh bạc",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Đánh bạc",
-      "target": "mọi hình thức",
-      "relation": "dưới",
-      "type_source": "VIOLATION",
-      "type_target": "ALL_FORMS"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần vi phạm đầu tiên",
-      "relation": "xử_lý_từ",
-      "type_source": "ACTION",
-      "type_target": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần thứ tư",
-      "relation": "xử_lý_đến",
-      "type_source": "ACTION",
-      "type_target": "FOURTH_TIME"
-    },
-    {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "chuyển_giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Tàng trữ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "lưu hành",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "truy cập",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "sử dụng",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
+      "source": "học sinh/sinh viên",
       "target": "sản phẩm văn hóa đồi trụy",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "CULTURAL_PRODUCT"
+      "type_source": "person",
+      "type_target": "prohibited_item",
+      "relation": "tàng_trữ"
     },
     {
-      "source": "sinh viên",
-      "target": "tham gia các hoạt động mê tín dị đoan",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
+      "source": "học sinh/sinh viên",
+      "target": "hoạt động mê tín dị đoan",
+      "type_source": "person",
+      "type_target": "prohibited_activity",
+      "relation": "tham_gia"
     },
     {
-      "source": "sinh viên",
+      "source": "học sinh/sinh viên",
       "target": "hoạt động tôn giáo trái phép",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
+      "type_source": "person",
+      "type_target": "prohibited_activity",
+      "relation": "tham_gia"
     },
     {
-      "source": "Hành vi này",
-      "target": "lần vi phạm đầu tiên",
-      "relation": "xử_lý_từ",
-      "type_source": "ACTION",
-      "type_target": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần thứ tư",
-      "relation": "xử_lý_đến",
-      "type_source": "ACTION",
-      "type_target": "FOURTH_TIME"
-    },
-    {
-      "source": "vi phạm nghiêm trọng",
-      "target": "trường",
-      "relation": "chuyển_giao_cho",
-      "type_source": "SERIOUS_VIOLATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "chuyển_giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Buôn bán",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "vận chuyển",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tàng trữ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "lôi kéo người khác sử dụng ma túy",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "lôi kéo người khác sử dụng ma túy",
+      "source": "học sinh/sinh viên",
       "target": "ma túy",
-      "relation": "sử_dụng",
-      "type_source": "VIOLATION",
-      "type_target": "DRUG"
+      "type_source": "person",
+      "type_target": "prohibited_substance",
+      "relation": "buôn_bán"
     },
     {
-      "source": "hành vi vi phạm lần đầu",
-      "target": "trường",
-      "relation": "giao_cho",
-      "type_source": "FIRST_TIME_VIOLATION",
-      "type_target": "ORGANIZATION"
+      "source": "học sinh/sinh viên",
+      "target": "ma túy",
+      "type_source": "person",
+      "type_target": "prohibited_substance",
+      "relation": "sử_dụng"
     },
     {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
+      "source": "học sinh/sinh viên",
+      "target": "mại dâm",
+      "type_source": "person",
+      "type_target": "prohibited_activity",
+      "relation": "môi_giới"
     },
     {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Sử dụng ma túy",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "quy định về xử lý sinh viên liên quan đến ma túy",
-      "relation": "xử_lý_theo",
-      "type_source": "ACTION",
-      "type_target": "REGULATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Chửa chấp",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "môi giới mại dâm",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "hành vi vi phạm lần đầu",
-      "target": "trường",
-      "relation": "giao_cho",
-      "type_source": "FIRST_TIME_VIOLATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Lấy cắp tài sản",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "chứa chấp",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tiêu thụ tài sản do lấy cắp mà có",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "mức độ",
-      "target": "hình thức xử lý",
-      "relation": "quyết_định",
-      "type_source": "LEVEL_OF_VIOLATION",
-      "type_target": "PENALTY_FORM"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "cảnh cáo",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "buộc thôi học",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "vi phạm nghiêm trọng",
-      "target": "trường",
-      "relation": "giao_cho",
-      "type_source": "SERIOUS_VIOLATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Chửa chấp",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "buôn bán vũ khí",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "buôn bán chất nổ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "buôn bán hàng cấm",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "buôn bán vũ khí",
+      "source": "học sinh/sinh viên",
       "target": "vũ khí",
-      "relation": "về",
-      "type_source": "VIOLATION",
-      "type_target": "WEAPON"
+      "type_source": "person",
+      "type_target": "prohibited_item",
+      "relation": "buôn_bán"
     },
     {
-      "source": "buôn bán chất nổ",
+      "source": "học sinh/sinh viên",
       "target": "chất nổ",
-      "relation": "về",
-      "type_source": "VIOLATION",
-      "type_target": "EXPLOSIVE"
+      "type_source": "person",
+      "type_target": "prohibited_item",
+      "relation": "buôn_bán"
     },
     {
-      "source": "buôn bán hàng cấm",
+      "source": "học sinh/sinh viên",
       "target": "hàng cấm",
-      "relation": "về",
-      "type_source": "VIOLATION",
-      "type_target": "PROHIBITED_GOODS"
+      "type_source": "person",
+      "type_target": "prohibited_item",
+      "relation": "buôn_bán"
     },
     {
-      "source": "buôn bán hàng cấm",
-      "target": "quy định của Nhà nước",
-      "relation": "theo",
-      "type_source": "VIOLATION",
-      "type_target": "STATE_REGULATION"
+      "source": "học sinh/sinh viên",
+      "target": "phần tử xấu",
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "đưa_vào"
     },
     {
-      "source": "hành vi vi phạm lần đầu",
-      "target": "trường",
-      "relation": "giao_cho",
-      "type_source": "FIRST_TIME_VIOLATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Đưa phần tử xấu vào trong trường",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Đưa phần tử xấu vào trong trường",
-      "target": "trong trường",
-      "relation": "ở",
-      "type_source": "VIOLATION",
-      "type_target": "LOCATION"
-    },
-    {
-      "source": "Đưa phần tử xấu vào trong trường",
+      "source": "phần tử xấu",
       "target": "KTX",
-      "relation": "ở",
-      "type_source": "VIOLATION",
-      "type_target": "LOCATION"
+      "type_source": "person",
+      "type_target": "location",
+      "relation": "được_đưa_vào"
     },
     {
-      "source": "Đưa phần tử xấu vào trong trường",
-      "target": "an ninh",
-      "relation": "gây_ảnh_hưởng_xấu_đến",
-      "type_source": "VIOLATION",
-      "type_target": "SECURITY"
+      "source": "học sinh/sinh viên",
+      "target": "truyền đơn",
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "viết"
     },
     {
-      "source": "Đưa phần tử xấu vào trong trường",
-      "target": "trật tự trong nhà trường",
-      "relation": "gây_ảnh_hưởng_xấu_đến",
-      "type_source": "VIOLATION",
-      "type_target": "ORDER"
+      "source": "học sinh/sinh viên",
+      "target": "áp phích",
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "viết"
     },
     {
-      "source": "mức độ",
-      "target": "hình thức xử lý",
-      "relation": "quyết_định",
-      "type_source": "LEVEL_OF_VIOLATION",
-      "type_target": "PENALTY_FORM"
+      "source": "học sinh/sinh viên",
+      "target": "biểu tình",
+      "type_source": "person",
+      "type_target": "prohibited_activity",
+      "relation": "tham_gia"
     },
     {
-      "source": "hình thức xử lý",
-      "target": "cảnh cáo",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "buộc thôi học",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Đánh nhau",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tổ chức đánh nhau",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tham gia tổ chức đánh nhau",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần vi phạm đầu tiên",
-      "relation": "xử_lý_từ",
-      "type_source": "ACTION",
-      "type_target": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần thứ ba",
-      "relation": "xử_lý_đến",
-      "type_source": "ACTION",
-      "type_target": "THIRD_TIME"
-    },
-    {
-      "source": "vi phạm nghiêm trọng",
-      "target": "trường",
-      "relation": "giao_cho",
-      "type_source": "SERIOUS_VIOLATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Kích động",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "lôi kéo người khác biểu tình",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "viết truyền đơn",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "áp phích trái pháp luật",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "áp phích trái pháp luật",
-      "target": "pháp luật",
-      "relation": "trái",
-      "type_source": "VIOLATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần vi phạm đầu tiên",
-      "relation": "xử_lý_từ",
-      "type_source": "ACTION",
-      "type_target": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần thứ hai",
-      "relation": "xử_lý_đến",
-      "type_source": "ACTION",
-      "type_target": "SECOND_TIME"
-    },
-    {
-      "source": "vi phạm nghiêm trọng",
-      "target": "trường",
-      "relation": "giao_cho",
-      "type_source": "SERIOUS_VIOLATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Tham gia biểu tình",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
+      "source": "học sinh/sinh viên",
       "target": "tụ tập đông người",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
+      "type_source": "person",
+      "type_target": "prohibited_activity",
+      "relation": "tham_gia"
     },
     {
-      "source": "sinh viên",
-      "target": "khiếu kiện trái quy định của pháp luật",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
+      "source": "học sinh/sinh viên",
+      "target": "khiếu kiện",
+      "type_source": "person",
+      "type_target": "activity",
+      "relation": "thực_hiện"
     },
     {
-      "source": "khiếu kiện trái quy định của pháp luật",
-      "target": "quy định của pháp luật",
-      "relation": "trái",
-      "type_source": "VIOLATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần vi phạm đầu tiên",
-      "relation": "xử_lý_từ",
-      "type_source": "ACTION",
-      "type_target": "FIRST_TIME_VIOLATION"
-    },
-    {
-      "source": "Hành vi này",
-      "target": "lần thứ tư",
-      "relation": "xử_lý_đến",
-      "type_source": "ACTION",
-      "type_target": "FOURTH_TIME"
-    },
-    {
-      "source": "vi phạm nghiêm trọng",
-      "target": "trường",
-      "relation": "giao_cho",
-      "type_source": "SERIOUS_VIOLATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Đăng tải",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "bình luận",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "chia sẻ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Đăng tải",
-      "target": "bài viết",
-      "relation": "về",
-      "type_source": "VIOLATION",
-      "type_target": "DOCUMENT"
-    },
-    {
-      "source": "Đăng tải",
-      "target": "hình ảnh",
-      "relation": "về",
-      "type_source": "VIOLATION",
-      "type_target": "IMAGE"
-    },
-    {
-      "source": "bài viết",
-      "target": "nội dung tục tĩu",
-      "relation": "có",
-      "type_source": "DOCUMENT",
-      "type_target": "CONTENT"
-    },
-    {
-      "source": "bài viết",
-      "target": "nội dung bạo lực",
-      "relation": "có",
-      "type_source": "DOCUMENT",
-      "type_target": "CONTENT"
-    },
-    {
-      "source": "bài viết",
-      "target": "nội dung đồi trụy",
-      "relation": "có",
-      "type_source": "DOCUMENT",
-      "type_target": "CONTENT"
-    },
-    {
-      "source": "bài viết",
-      "target": "nội dung xâm phạm an ninh quốc gia",
-      "relation": "có",
-      "type_source": "DOCUMENT",
-      "type_target": "CONTENT"
-    },
-    {
-      "source": "bài viết",
-      "target": "nội dung chống phá Đảng và Nhà nước",
-      "relation": "có",
-      "type_source": "DOCUMENT",
-      "type_target": "CONTENT"
-    },
-    {
-      "source": "nội dung chống phá Đảng và Nhà nước",
-      "target": "Đảng",
-      "relation": "chống_phá",
-      "type_source": "CONTENT",
-      "type_target": "POLITICAL_ORGANIZATION"
-    },
-    {
-      "source": "nội dung chống phá Đảng và Nhà nước",
-      "target": "Nhà nước",
-      "relation": "chống_phá",
-      "type_source": "CONTENT",
-      "type_target": "GOVERNMENT"
-    },
-    {
-      "source": "bài viết",
-      "target": "nội dung xuyên tạc",
-      "relation": "có",
-      "type_source": "DOCUMENT",
-      "type_target": "CONTENT"
-    },
-    {
-      "source": "bài viết",
-      "target": "nội dung vu khống",
-      "relation": "có",
-      "type_source": "DOCUMENT",
-      "type_target": "CONTENT"
-    },
-    {
-      "source": "bài viết",
-      "target": "nội dung xúc phạm uy tín của tổ chức",
-      "relation": "có",
-      "type_source": "DOCUMENT",
-      "type_target": "CONTENT"
-    },
-    {
-      "source": "bài viết",
-      "target": "nội dung danh dự và nhân phẩm của cá nhân",
-      "relation": "có",
-      "type_source": "DOCUMENT",
-      "type_target": "CONTENT"
-    },
-    {
-      "source": "bài viết",
+      "source": "học sinh/sinh viên",
       "target": "mạng Internet",
-      "relation": "trên",
-      "type_source": "DOCUMENT",
-      "type_target": "INTERNET"
+      "type_source": "person",
+      "type_target": "platform",
+      "relation": "sử_dụng"
     },
     {
-      "source": "hình thức xử lý",
-      "target": "khiển trách",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
+      "source": "học sinh/sinh viên",
+      "target": "Đảng",
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "chống_phá"
     },
     {
-      "source": "hình thức xử lý",
-      "target": "buộc thôi học",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
+      "source": "học sinh/sinh viên",
+      "target": "Nhà nước",
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "chống_phá" 
     },
     {
-      "source": "vi phạm nghiêm trọng",
-      "target": "trường",
-      "relation": "giao_cho",
-      "type_source": "SERIOUS_VIOLATION",
-      "type_target": "ORGANIZATION"
+      "source": "học sinh/sinh viên",
+      "target": "an ninh quốc gia",
+      "type_source": "person",
+      "type_target": "concept",
+      "relation": "xâm_phạm"
     },
     {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
+      "source": "học sinh/sinh viên",
+      "target": "an toàn giao thông",
+      "type_source": "person",
+      "type_target": "regulation",
+      "relation": "vi_phạm"
     },
     {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
+      "source": "học sinh/sinh viên",
+      "target": "hồ sơ",
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "sử_dụng"
     },
     {
-      "source": "sinh viên",
-      "target": "Có hành động quấy rối",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
+      "source": "học sinh/sinh viên",
+      "target": "văn bằng",
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "sử_dụng"
     },
     {
-      "source": "sinh viên",
-      "target": "Có hành động dâm ô",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Có hành động xâm phạm nhân phẩm",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Có hành động quấy rối",
-      "target": "người khác",
-      "relation": "với",
-      "type_source": "VIOLATION",
-      "type_target": "PERSON"
-    },
-    {
-      "source": "Có hành động dâm ô",
-      "target": "người khác",
-      "relation": "với",
-      "type_source": "VIOLATION",
-      "type_target": "PERSON"
-    },
-    {
-      "source": "Có hành động xâm phạm nhân phẩm",
-      "target": "người khác",
-      "relation": "với",
-      "type_source": "VIOLATION",
-      "type_target": "PERSON"
-    },
-    {
-      "source": "Có hành động xâm phạm nhân phẩm",
-      "target": "đời tư của người khác",
-      "relation": "xâm_phạm",
-      "type_source": "VIOLATION",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "khiển trách",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "buộc thôi học",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "vi phạm nghiêm trọng",
-      "target": "trường",
-      "relation": "giao_cho",
-      "type_source": "SERIOUS_VIOLATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "trường",
-      "target": "cơ quan chức năng có thẩm quyền",
-      "relation": "giao_cho",
-      "type_source": "ORGANIZATION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "cơ quan chức năng có thẩm quyền",
-      "target": "quy định của pháp luật",
-      "relation": "xử_lý_theo",
-      "type_source": "ORGANIZATION",
-      "type_target": "LAW"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Vi phạm các quy định về an toàn giao thông",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Vi phạm các quy định về an toàn giao thông",
-      "target": "quy định về an toàn giao thông",
-      "relation": "là",
-      "type_source": "VIOLATION",
-      "type_target": "TRAFFIC_SAFETY_REGULATIONS"
-    },
-    {
-      "source": "mức độ nghiêm trọng của vi phạm",
-      "target": "hình thức xử lý",
-      "relation": "quyết_định",
-      "type_source": "LEVEL_OF_SERIOUSNESS",
-      "type_target": "PENALTY_FORM"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "khiển trách",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "buộc thôi học",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Sử dụng hồ sơ",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Sử dụng văn bằng",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Sử dụng chứng chỉ giả",
-      "relation": "bị_phạt_vì",
-      "type_source": "STUDENT",
-      "type_target": "VIOLATION"
-    },
-    {
-      "source": "Sử dụng hồ sơ",
-      "target": "điều kiện trúng tuyển",
-      "relation": "để_đáp_ứng",
-      "type_source": "VIOLATION",
-      "type_target": "CONDITION"
-    },
-    {
-      "source": "Sử dụng văn bằng",
-      "target": "điều kiện trúng tuyển",
-      "relation": "để_đáp_ứng",
-      "type_source": "VIOLATION",
-      "type_target": "CONDITION"
-    },
-    {
-      "source": "Sử dụng chứng chỉ giả",
-      "target": "điều kiện trúng tuyển",
-      "relation": "để_đáp_ứng",
-      "type_source": "VIOLATION",
-      "type_target": "CONDITION"
-    },
-    {
-      "source": "Sử dụng hồ sơ",
-      "target": "điều kiện tốt nghiệp",
-      "relation": "để_đáp_ứng",
-      "type_source": "VIOLATION",
-      "type_target": "CONDITION"
-    },
-    {
-      "source": "Sử dụng văn bằng",
-      "target": "điều kiện tốt nghiệp",
-      "relation": "để_đáp_ứng",
-      "type_source": "VIOLATION",
-      "type_target": "CONDITION"
-    },
-    {
-      "source": "Sử dụng chứng chỉ giả",
-      "target": "điều kiện tốt nghiệp",
-      "relation": "để_đáp_ứng",
-      "type_source": "VIOLATION",
-      "type_target": "CONDITION"
-    },
-    {
-      "source": "lần vi phạm đầu tiên",
-      "target": "văn bằng tốt nghiệp",
-      "relation": "thu_hồi_nếu_đã_cấp",
-      "type_source": "FIRST_TIME_VIOLATION",
-      "type_target": "DEGREE"
-    },
-    {
-      "source": "văn bằng tốt nghiệp",
-      "target": "hủy bỏ",
-      "relation": "bị",
-      "type_source": "DEGREE",
-      "type_target": "PENALTY"
+      "source": "học sinh/sinh viên",
+      "target": "chứng chỉ",
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "sử_dụng"
     },
     {
       "source": "nhà trường",
-      "target": "Các hành vi vi phạm khác",
-      "relation": "xem_xét",
-      "type_source": "ORGANIZATION",
-      "type_target": "OTHER_VIOLATIONS"
-    },
-    {
-      "source": "mức độ vi phạm",
-      "target": "hình thức xử lý",
-      "relation": "áp_dụng",
-      "type_source": "LEVEL_OF_VIOLATION",
-      "type_target": "PENALTY_FORM"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "nhắc nhở",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "phê bình",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "trừ điểm rèn luyện",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "hình thức xử lý",
-      "target": "kỷ luật",
-      "relation": "là",
-      "type_source": "PENALTY_FORM",
-      "type_target": "DISCIPLINE"
-    },
-    {
-      "source": "kỷ luật",
-      "target": "khiển trách",
-      "relation": "từ",
-      "type_source": "DISCIPLINE",
-      "type_target": "PENALTY"
-    },
-    {
-      "source": "kỷ luật",
-      "target": "buộc thôi học",
-      "relation": "đến",
-      "type_source": "DISCIPLINE",
-      "type_target": "PENALTY"
+      "target": "học sinh/sinh viên",
+      "type_source": "organization",
+      "type_target": "person",
+      "relation": "xem_xét"
     }
   ]
 }
