@@ -1,230 +1,424 @@
 {
-  "entities": [
-    {
-      "name": "Sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "cha",
-      "type": "father"
-    },
-    {
-      "name": "mẹ",
-      "type": "mother"
-    },
-    {
-      "name": "người còn lại",
-      "type": "parent"
-    },
-    {
-      "name": "khả năng lao động",
-      "type": "labor_ability"
-    },
-    {
-      "name": "thành viên hộ gia đình",
-      "type": "family_member"
-    },
-    {
-      "name": "hộ cận nghèo",
-      "type": "near_poor_household"
-    },
-    {
-      "name": "hộ nghèo",
-      "type": "poor_household"
-    },
-    {
-      "name": "hộ có mức sống trung bình",
-      "type": "average_income_household"
-    },
-    {
-      "name": "chuẩn quy định của pháp luật",
-      "type": "legal_standard"
-    },
-    {
-      "name": "gia đình",
-      "type": "family"
-    },
-    {
-      "name": "khó khăn về tài chính",
-      "type": "financial_difficulty"
-    },
-    {
-      "name": "bệnh tật",
-      "type": "illness"
-    },
-    {
-      "name": "tai nạn",
-      "type": "accident"
-    },
-    {
-      "name": "hỏa hoạn",
-      "type": "fire"
-    },
-    {
-      "name": "thiên tai",
-      "type": "natural_disaster"
-    },
-    {
-      "name": "dịch bệnh",
-      "type": "epidemic"
-    },
-    {
-      "name": "thời gian theo học",
-      "type": "study_period"
-    },
-    {
-      "name": "xác nhận",
-      "type": "confirmation"
-    },
-    {
-      "name": "Ủy ban nhân dân xã, phường, thị trấn",
-      "type": "local_authority"
-    },
-    {
-      "name": "nơi học sinh, sinh viên cư trú",
-      "type": "residence_area"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh viên",
-      "target": "cha",
-      "relation": "mồ_côi_cả",
+      "source": {
+        "name": "Sinh viên",
+        "type": "student",
+        "description": "Đối tượng sinh viên được xem xét theo các tiêu chí hoàn cảnh gia đình.",
+        "academic_status": "Đang trong thời gian theo học",
+        "eligibility_group_context": "Hoàn cảnh mồ côi cha mẹ"
+      },
+      "target": {
+        "name": "cha",
+        "type": "parent",
+        "gender": "Nam",
+        "role_in_family": "Người cha của sinh viên",
+        "condition_context": "Được xem xét trong trường hợp sinh viên mồ côi"
+      },
       "type_source": "student",
-      "type_target": "father"
+      "type_target": "parent",
+      "relation": "mồ_côi"
     },
     {
-      "source": "Sinh viên",
-      "target": "mẹ",
-      "relation": "mồ_côi_cả",
+      "source": {
+        "name": "Sinh viên",
+        "type": "student",
+        "description": "Đối tượng sinh viên được xem xét theo các tiêu chí hoàn cảnh gia đình.",
+        "academic_status": "Đang trong thời gian theo học",
+        "eligibility_group_context": "Hoàn cảnh mồ côi cha mẹ"
+      },
+      "target": {
+        "name": "mẹ",
+        "type": "parent",
+        "gender": "Nữ",
+        "role_in_family": "Người mẹ của sinh viên",
+        "condition_context": "Được xem xét trong trường hợp sinh viên mồ côi"
+      },
       "type_source": "student",
-      "type_target": "mother"
+      "type_target": "parent",
+      "relation": "mồ_côi"
     },
     {
-      "source": "Sinh viên",
-      "target": "cha",
-      "relation": "mồ_côi",
-      "type_source": "student",
-      "type_target": "father"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "mẹ",
-      "relation": "mồ_côi",
-      "type_source": "student",
-      "type_target": "mother"
-    },
-    {
-      "source": "người còn lại",
-      "target": "khả năng lao động",
-      "relation": "không_có",
+      "source": {
+        "name": "mẹ",
+        "type": "parent",
+        "gender": "Nữ",
+        "role_in_family": "Người mẹ của sinh viên (người còn lại sau khi cha mất)",
+        "student_context": "Sinh viên mồ côi cha",
+        "economic_implication": "Ảnh hưởng đến khả năng nuôi dưỡng gia đình"
+      },
+      "target": {
+        "name": "khả năng lao động",
+        "type": "personal_capacity",
+        "definition": "Năng lực làm việc để tạo ra thu nhập",
+        "assessment_criteria": "Đánh giá tình trạng sức khỏe và điều kiện làm việc",
+        "relevance": "Yếu tố xác định hoàn cảnh khó khăn của gia đình sinh viên"
+      },
       "type_source": "parent",
-      "type_target": "labor_ability"
+      "type_target": "personal_capacity",
+      "relation": "không_có"
     },
     {
-      "source": "Sinh viên",
-      "target": "thành viên hộ gia đình",
-      "relation": "là",
+      "source": {
+        "name": "cha",
+        "type": "parent",
+        "gender": "Nam",
+        "role_in_family": "Người cha của sinh viên (người còn lại sau khi mẹ mất)",
+        "student_context": "Sinh viên mồ côi mẹ",
+        "economic_implication": "Ảnh hưởng đến khả năng nuôi dưỡng gia đình"
+      },
+      "target": {
+        "name": "khả năng lao động",
+        "type": "personal_capacity",
+        "definition": "Năng lực làm việc để tạo ra thu nhập",
+        "assessment_criteria": "Đánh giá tình trạng sức khỏe và điều kiện làm việc",
+        "relevance": "Yếu tố xác định hoàn cảnh khó khăn của gia đình sinh viên"
+      },
+      "type_source": "parent",
+      "type_target": "personal_capacity",
+      "relation": "không_có"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "type": "student",
+        "description": "Đối tượng sinh viên được xem xét theo các tiêu chí hoàn cảnh gia đình.",
+        "household_membership_status": "Là thành viên của hộ gia đình",
+        "eligibility_context": "Thuộc hộ nghèo, cận nghèo hoặc mức sống trung bình"
+      },
+      "target": {
+        "name": "hộ gia đình",
+        "type": "household",
+        "classification_basis": "Theo chuẩn quy định của pháp luật",
+        "student_relation": "Hộ gia đình có sinh viên là thành viên",
+        "economic_status_indicator": "Thể hiện mức sống của gia đình sinh viên"
+      },
       "type_source": "student",
-      "type_target": "family_member"
+      "type_target": "household",
+      "relation": "là_thành_viên_của"
     },
     {
-      "source": "thành viên hộ gia đình",
-      "target": "hộ cận nghèo",
-      "relation": "thuộc",
-      "type_source": "family_member",
-      "type_target": "near_poor_household"
+      "source": {
+        "name": "hộ gia đình",
+        "type": "household",
+        "classification_basis": "Theo chuẩn quy định của pháp luật",
+        "student_relation": "Hộ gia đình có sinh viên là thành viên",
+        "economic_status_indicator": "Thể hiện mức sống của gia đình sinh viên"
+      },
+      "target": {
+        "name": "hộ cận nghèo",
+        "type": "household_poverty_category",
+        "definition_standard": "Theo chuẩn quy định của pháp luật",
+        "implication_for_student": "Là một trong các điều kiện để sinh viên được xét duyệt",
+        "category_type": "Phân loại mức độ khó khăn kinh tế"
+      },
+      "type_source": "household",
+      "type_target": "household_poverty_category",
+      "relation": "thuộc_diện"
     },
     {
-      "source": "thành viên hộ gia đình",
-      "target": "hộ nghèo",
-      "relation": "thuộc",
-      "type_source": "family_member",
-      "type_target": "poor_household"
+      "source": {
+        "name": "hộ gia đình",
+        "type": "household",
+        "classification_basis": "Theo chuẩn quy định của pháp luật",
+        "student_relation": "Hộ gia đình có sinh viên là thành viên",
+        "economic_status_indicator": "Thể hiện mức sống của gia đình sinh viên"
+      },
+      "target": {
+        "name": "hộ nghèo",
+        "type": "household_poverty_category",
+        "definition_standard": "Theo chuẩn quy định của pháp luật",
+        "implication_for_student": "Là một trong các điều kiện để sinh viên được xét duyệt",
+        "category_type": "Phân loại mức độ khó khăn kinh tế"
+      },
+      "type_source": "household",
+      "type_target": "household_poverty_category",
+      "relation": "thuộc_diện"
     },
     {
-      "source": "thành viên hộ gia đình",
-      "target": "hộ có mức sống trung bình",
-      "relation": "thuộc",
-      "type_source": "family_member",
-      "type_target": "average_income_household"
+      "source": {
+        "name": "hộ gia đình",
+        "type": "household",
+        "classification_basis": "Theo chuẩn quy định của pháp luật",
+        "student_relation": "Hộ gia đình có sinh viên là thành viên",
+        "economic_status_indicator": "Thể hiện mức sống của gia đình sinh viên"
+      },
+      "target": {
+        "name": "hộ có mức sống trung bình",
+        "type": "household_living_standard_category",
+        "definition_standard": "Theo chuẩn quy định của pháp luật",
+        "implication_for_student": "Là một trong các điều kiện để sinh viên được xét duyệt",
+        "category_type": "Phân loại mức sống"
+      },
+      "type_source": "household",
+      "type_target": "household_living_standard_category",
+      "relation": "thuộc_diện"
     },
     {
-      "source": "hộ có mức sống trung bình",
-      "target": "chuẩn quy định của pháp luật",
-      "relation": "theo",
-      "type_source": "average_income_household",
-      "type_target": "legal_standard"
+      "source": {
+        "name": "hộ cận nghèo",
+        "type": "household_poverty_category",
+        "description": "Hộ gia đình có mức thu nhập gần ngưỡng nghèo.",
+        "policy_relevance": "Đối tượng của các chính sách hỗ trợ xã hội",
+        "determination_method": "Dựa trên các tiêu chí quốc gia hoặc địa phương"
+      },
+      "target": {
+        "name": "chuẩn quy định của pháp luật",
+        "type": "legal_standard",
+        "purpose": "Cung cấp cơ sở pháp lý để xác định các nhóm đối tượng",
+        "issuing_authority_level": "Cơ quan nhà nước có thẩm quyền",
+        "application_scope": "Áp dụng cho việc phân loại hộ gia đình và các chính sách liên quan"
+      },
+      "type_source": "household_poverty_category",
+      "type_target": "legal_standard",
+      "relation": "phân_loại_theo"
     },
     {
-      "source": "gia đình",
-      "target": "Sinh viên",
-      "relation": "của",
-      "type_source": "family",
-      "type_target": "student"
+      "source": {
+        "name": "hộ nghèo",
+        "type": "household_poverty_category",
+        "description": "Hộ gia đình có mức thu nhập dưới ngưỡng nghèo.",
+        "policy_relevance": "Đối tượng ưu tiên của các chính sách hỗ trợ xã hội",
+        "determination_method": "Dựa trên các tiêu chí quốc gia hoặc địa phương"
+      },
+      "target": {
+        "name": "chuẩn quy định của pháp luật",
+        "type": "legal_standard",
+        "purpose": "Cung cấp cơ sở pháp lý để xác định các nhóm đối tượng",
+        "issuing_authority_level": "Cơ quan nhà nước có thẩm quyền",
+        "application_scope": "Áp dụng cho việc phân loại hộ gia đình và các chính sách liên quan"
+      },
+      "type_source": "household_poverty_category",
+      "type_target": "legal_standard",
+      "relation": "phân_loại_theo"
     },
     {
-      "source": "gia đình",
-      "target": "khó khăn về tài chính",
-      "relation": "gặp",
-      "type_source": "family",
-      "type_target": "financial_difficulty"
+      "source": {
+        "name": "hộ có mức sống trung bình",
+        "type": "household_living_standard_category",
+        "description": "Hộ gia đình có mức thu nhập và chi tiêu ở mức trung bình.",
+        "policy_relevance": "Có thể là đối tượng của một số chính sách hỗ trợ nhất định",
+        "determination_method": "Dựa trên các tiêu chí quốc gia hoặc địa phương về mức sống"
+      },
+      "target": {
+        "name": "chuẩn quy định của pháp luật",
+        "type": "legal_standard",
+        "purpose": "Cung cấp cơ sở pháp lý để xác định các nhóm đối tượng",
+        "issuing_authority_level": "Cơ quan nhà nước có thẩm quyền",
+        "application_scope": "Áp dụng cho việc phân loại hộ gia đình và các chính sách liên quan"
+      },
+      "type_source": "household_living_standard_category",
+      "type_target": "legal_standard",
+      "relation": "phân_loại_theo"
     },
     {
-      "source": "khó khăn về tài chính",
-      "target": "bệnh tật",
-      "relation": "do",
-      "type_source": "financial_difficulty",
-      "type_target": "illness"
+      "source": {
+        "name": "gia đình của sinh viên",
+        "type": "family_unit",
+        "student_relation": "Gia đình trực tiếp của sinh viên đang theo học",
+        "financial_status_context": "Gặp khó khăn về tài chính",
+        "verification_requirement": "Cần có xác nhận từ chính quyền địa phương"
+      },
+      "target": {
+        "name": "khó khăn về tài chính",
+        "type": "financial_hardship",
+        "description": "Tình trạng thiếu hụt tài chính ảnh hưởng đến đời sống và học tập",
+        "causal_factors_mentioned": "Bệnh tật, tai nạn, hỏa hoạn, thiên tai, dịch bệnh",
+        "temporal_aspect": "Xảy ra trong thời gian sinh viên theo học"
+      },
+      "type_source": "family_unit",
+      "type_target": "financial_hardship",
+      "relation": "gặp_phải"
     },
     {
-      "source": "khó khăn về tài chính",
-      "target": "tai nạn",
-      "relation": "do",
-      "type_source": "financial_difficulty",
-      "type_target": "accident"
+      "source": {
+        "name": "khó khăn về tài chính",
+        "type": "financial_hardship",
+        "description": "Tình trạng thiếu hụt tài chính ảnh hưởng đến đời sống và học tập",
+        "affected_party": "Gia đình của sinh viên",
+        "consequence": "Ảnh hưởng đến khả năng trang trải chi phí học tập của sinh viên"
+      },
+      "target": {
+        "name": "bệnh tật",
+        "type": "cause_of_hardship",
+        "nature_of_cause": "Vấn đề sức khỏe nghiêm trọng",
+        "impact_type": "Gây tốn kém chi phí chữa trị, giảm khả năng lao động",
+        "relevance_to_student": "Là một trong các nguyên nhân khiến gia đình sinh viên gặp khó khăn"
+      },
+      "type_source": "financial_hardship",
+      "type_target": "cause_of_hardship",
+      "relation": "gây_ra_bởi"
     },
     {
-      "source": "khó khăn về tài chính",
-      "target": "hỏa hoạn",
-      "relation": "do",
-      "type_source": "financial_difficulty",
-      "type_target": "fire"
+      "source": {
+        "name": "khó khăn về tài chính",
+        "type": "financial_hardship",
+        "description": "Tình trạng thiếu hụt tài chính ảnh hưởng đến đời sống và học tập",
+        "affected_party": "Gia đình của sinh viên",
+        "consequence": "Ảnh hưởng đến khả năng trang trải chi phí học tập của sinh viên"
+      },
+      "target": {
+        "name": "tai nạn",
+        "type": "cause_of_hardship",
+        "nature_of_cause": "Sự cố bất ngờ gây thương tích hoặc thiệt hại tài sản",
+        "impact_type": "Gây tốn kém chi phí khắc phục, giảm khả năng lao động",
+        "relevance_to_student": "Là một trong các nguyên nhân khiến gia đình sinh viên gặp khó khăn"
+      },
+      "type_source": "financial_hardship",
+      "type_target": "cause_of_hardship",
+      "relation": "gây_ra_bởi"
     },
     {
-      "source": "khó khăn về tài chính",
-      "target": "thiên tai",
-      "relation": "do",
-      "type_source": "financial_difficulty",
-      "type_target": "natural_disaster"
+      "source": {
+        "name": "khó khăn về tài chính",
+        "type": "financial_hardship",
+        "description": "Tình trạng thiếu hụt tài chính ảnh hưởng đến đời sống và học tập",
+        "affected_party": "Gia đình của sinh viên",
+        "consequence": "Ảnh hưởng đến khả năng trang trải chi phí học tập của sinh viên"
+      },
+      "target": {
+        "name": "hỏa hoạn",
+        "type": "cause_of_hardship",
+        "nature_of_cause": "Sự cố cháy nổ gây thiệt hại tài sản",
+        "impact_type": "Gây mất mát tài sản, tốn kém chi phí sửa chữa, xây dựng lại",
+        "relevance_to_student": "Là một trong các nguyên nhân khiến gia đình sinh viên gặp khó khăn"
+      },
+      "type_source": "financial_hardship",
+      "type_target": "cause_of_hardship",
+      "relation": "gây_ra_bởi"
     },
     {
-      "source": "khó khăn về tài chính",
-      "target": "dịch bệnh",
-      "relation": "do",
-      "type_source": "financial_difficulty",
-      "type_target": "epidemic"
+      "source": {
+        "name": "khó khăn về tài chính",
+        "type": "financial_hardship",
+        "description": "Tình trạng thiếu hụt tài chính ảnh hưởng đến đời sống và học tập",
+        "affected_party": "Gia đình của sinh viên",
+        "consequence": "Ảnh hưởng đến khả năng trang trải chi phí học tập của sinh viên"
+      },
+      "target": {
+        "name": "thiên tai",
+        "type": "cause_of_hardship",
+        "nature_of_cause": "Thảm họa tự nhiên như bão, lũ, hạn hán",
+        "impact_type": "Gây thiệt hại về người và tài sản, ảnh hưởng sản xuất",
+        "relevance_to_student": "Là một trong các nguyên nhân khiến gia đình sinh viên gặp khó khăn"
+      },
+      "type_source": "financial_hardship",
+      "type_target": "cause_of_hardship",
+      "relation": "gây_ra_bởi"
     },
     {
-      "source": "khó khăn về tài chính",
-      "target": "thời gian theo học",
-      "relation": "trong",
-      "type_source": "financial_difficulty",
-      "type_target": "study_period"
+      "source": {
+        "name": "khó khăn về tài chính",
+        "type": "financial_hardship",
+        "description": "Tình trạng thiếu hụt tài chính ảnh hưởng đến đời sống và học tập",
+        "affected_party": "Gia đình của sinh viên",
+        "consequence": "Ảnh hưởng đến khả năng trang trải chi phí học tập của sinh viên"
+      },
+      "target": {
+        "name": "dịch bệnh",
+        "type": "cause_of_hardship",
+        "nature_of_cause": "Bệnh truyền nhiễm lây lan rộng trong cộng đồng",
+        "impact_type": "Ảnh hưởng sức khỏe, gây gián đoạn hoạt động kinh tế, tốn kém chi phí y tế",
+        "relevance_to_student": "Là một trong các nguyên nhân khiến gia đình sinh viên gặp khó khăn"
+      },
+      "type_source": "financial_hardship",
+      "type_target": "cause_of_hardship",
+      "relation": "gây_ra_bởi"
     },
     {
-      "source": "xác nhận",
-      "target": "Ủy ban nhân dân xã, phường, thị trấn",
-      "relation": "của",
-      "type_source": "confirmation",
-      "type_target": "local_authority"
+      "source": {
+        "name": "khó khăn về tài chính",
+        "type": "financial_hardship",
+        "description": "Tình trạng thiếu hụt tài chính của gia đình sinh viên",
+        "verification_needed": "Cần xác nhận của UBND cấp xã",
+        "list_of_causes": "Bệnh tật, tai nạn, hỏa hoạn, thiên tai, dịch bệnh"
+      },
+      "target": {
+        "name": "thời gian theo học",
+        "type": "academic_period",
+        "student_association": "Khoảng thời gian sinh viên đang học tập tại trường",
+        "relevance_to_hardship": "Khó khăn tài chính xảy ra trong giai đoạn này",
+        "significance": "Điều kiện thời gian để xét duyệt hoàn cảnh"
+      },
+      "type_source": "financial_hardship",
+      "type_target": "academic_period",
+      "relation": "xảy_ra_trong"
     },
     {
-      "source": "Ủy ban nhân dân xã, phường, thị trấn",
-      "target": "nơi học sinh, sinh viên cư trú",
-      "relation": "tại",
-      "type_source": "local_authority",
-      "type_target": "residence_area"
+      "source": {
+        "name": "Sinh viên",
+        "type": "student",
+        "description": "Đối tượng sinh viên có gia đình gặp khó khăn tài chính.",
+        "documentation_requirement": "Cần có giấy xác nhận của chính quyền địa phương",
+        "purpose_of_documentation": "Chứng minh hoàn cảnh khó khăn để được xem xét hỗ trợ"
+      },
+      "target": {
+        "name": "xác nhận của UBND cấp xã",
+        "type": "official_confirmation_document",
+        "issuing_authority": "Ủy ban nhân dân xã, phường, thị trấn",
+        "content_purpose": "Chứng thực tình trạng khó khăn tài chính của gia đình sinh viên",
+        "basis_for_issuance": "Tình hình thực tế tại nơi cư trú"
+      },
+      "type_source": "student",
+      "type_target": "official_confirmation_document",
+      "relation": "cần_có"
+    },
+    {
+      "source": {
+        "name": "xác nhận của UBND cấp xã",
+        "type": "official_confirmation_document",
+        "purpose": "Chứng thực hoàn cảnh khó khăn của gia đình sinh viên",
+        "validity_context": "Sử dụng cho mục đích xét duyệt chính sách hỗ trợ",
+        "required_information": "Thông tin về tình trạng khó khăn và nguyên nhân"
+      },
+      "target": {
+        "name": "Ủy ban nhân dân xã, phường, thị trấn",
+        "type": "local_government_authority",
+        "authority_level": "Cấp cơ sở (xã, phường, thị trấn)",
+        "responsibility": "Xác nhận các thông tin dân sự, hoàn cảnh cư dân tại địa phương",
+        "location_relevance": "Hoạt động tại nơi sinh viên cư trú"
+      },
+      "type_source": "official_confirmation_document",
+      "type_target": "local_government_authority",
+      "relation": "được_cấp_bởi"
+    },
+    {
+      "source": {
+        "name": "Ủy ban nhân dân xã, phường, thị trấn",
+        "type": "local_government_authority",
+        "authority_level": "Cấp cơ sở (xã, phường, thị trấn)",
+        "key_function_in_context": "Xác nhận hoàn cảnh gia đình cho sinh viên",
+        "administrative_scope": "Quản lý hành chính tại địa phương"
+      },
+      "target": {
+        "name": "nơi cư trú của sinh viên",
+        "type": "student_residence_location",
+        "description": "Địa chỉ thường trú hoặc tạm trú của học sinh, sinh viên",
+        "relevance_for_confirmation": "Cơ sở để UBND địa phương thực hiện việc xác nhận",
+        "jurisdictional_link": "Thuộc địa bàn quản lý của UBND cấp xã tương ứng"
+      },
+      "type_source": "local_government_authority",
+      "type_target": "student_residence_location",
+      "relation": "có_thẩm_quyền_tại"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "type": "student",
+        "context_for_residence": "Địa điểm sinh sống được dùng để xác nhận hoàn cảnh",
+        "document_relation": "Cần xác nhận từ UBND tại nơi cư trú",
+        "policy_implication": "Thông tin cư trú là một phần của hồ sơ xét duyệt"
+      },
+      "target": {
+        "name": "nơi cư trú của sinh viên",
+        "type": "student_residence_location",
+        "description": "Địa chỉ thường trú hoặc tạm trú của học sinh, sinh viên",
+        "authority_verification_point": "Địa điểm UBND xã/phường/thị trấn có thẩm quyền xác nhận",
+        "importance": "Thông tin cần thiết cho việc quản lý và xác minh sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "student_residence_location",
+      "relation": "cư_trú_tại"
     }
   ]
 }

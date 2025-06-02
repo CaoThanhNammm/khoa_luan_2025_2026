@@ -1,442 +1,230 @@
 {
-  "entities": [
-    {
-      "name": "Hội nhập tốt",
-      "type": "INTEGRATION"
-    },
-    {
-      "name": "tiêu chuẩn",
-      "type": "CRITERIA"
-    },
-    {
-      "name": "Chứng chỉ ngoại ngữ",
-      "type": "FOREIGN_LANGUAGE_CERTIFICATE"
-    },
-    {
-      "name": "chứng chỉ B1",
-      "type": "CERTIFICATE"
-    },
-    {
-      "name": "TOEIC 450",
-      "type": "CERTIFICATE"
-    },
-    {
-      "name": "TOEFL 450 PBT",
-      "type": "CERTIFICATE"
-    },
-    {
-      "name": "IELTS 4.5",
-      "type": "CERTIFICATE"
-    },
-    {
-      "name": "sinh viên khối ngành ngoại ngữ",
-      "type": "FOREIGN_LANGUAGE_STUDENT"
-    },
-    {
-      "name": "chương trình đào tạo tiên tiến",
-      "type": "ADVANCED_TRAINING_PROGRAM"
-    },
-    {
-      "name": "điểm trung bình chung",
-      "type": "GPA"
-    },
-    {
-      "name": "môn chuyên ngành",
-      "type": "MAJOR_SUBJECT"
-    },
-    {
-      "name": "năm học",
-      "type": "SCHOOL_YEAR"
-    },
-    {
-      "name": "7.0/10",
-      "type": "SCORE"
-    },
-    {
-      "name": "thành viên đội tuyển",
-      "type": "TEAM_MEMBER"
-    },
-    {
-      "name": "cá nhân",
-      "type": "INDIVIDUAL"
-    },
-    {
-      "name": "cuộc thi về ngoại ngữ",
-      "type": "FOREIGN_LANGUAGE_COMPETITION"
-    },
-    {
-      "name": "cuộc thi chuyên về ngoại ngữ",
-      "type": "SPECIALIZED_FOREIGN_LANGUAGE_COMPETITION"
-    },
-    {
-      "name": "các cấp",
-      "type": "LEVELS"
-    },
-    {
-      "name": "cuộc thi cấp khoa/bộ môn",
-      "type": "DEPARTMENT_LEVEL_COMPETITION"
-    },
-    {
-      "name": "cấp trường",
-      "type": "SCHOOL_LEVEL"
-    },
-    {
-      "name": "giải khuyến khích",
-      "type": "ENCOURAGEMENT_PRIZE"
-    },
-    {
-      "name": "câu lạc bộ",
-      "type": "CLUB"
-    },
-    {
-      "name": "đội",
-      "type": "TEAM"
-    },
-    {
-      "name": "nhóm",
-      "type": "GROUP"
-    },
-    {
-      "name": "về ngoại ngữ",
-      "type": "FOREIGN_LANGUAGE"
-    },
-    {
-      "name": "nhà trường",
-      "type": "SCHOOL"
-    },
-    {
-      "name": "thời gian sinh hoạt",
-      "type": "ACTIVITY_TIME"
-    },
-    {
-      "name": "06 tháng",
-      "type": "DURATION"
-    },
-    {
-      "name": "thành viên chính thức",
-      "type": "OFFICIAL_MEMBER"
-    },
-    {
-      "name": "chương trình giao lưu",
-      "type": "EXCHANGE_PROGRAM"
-    },
-    {
-      "name": "chương trình hợp tác",
-      "type": "COOPERATION_PROGRAM"
-    },
-    {
-      "name": "thanh niên",
-      "type": "YOUTH"
-    },
-    {
-      "name": "sinh viên quốc tế",
-      "type": "INTERNATIONAL_STUDENT"
-    },
-    {
-      "name": "trong nước",
-      "type": "DOMESTIC"
-    },
-    {
-      "name": "ngoài nước",
-      "type": "OVERSEAS"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "tin học đại cương",
-      "type": "BASIC_INFORMATICS"
-    },
-    {
-      "name": "chứng chỉ",
-      "type": "CERTIFICATE"
-    },
-    {
-      "name": "chứng chỉ A tin học",
-      "type": "IT_CERTIFICATE_A"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "chứng chỉ B1",
-      "relation": "đạt",
-      "type_source": "STUDENT",
-      "type_target": "CERTIFICATE"
+      "source": {
+        "name": "Đạt chứng chỉ B1 trở lên",
+        "type": "language_proficiency_achievement",
+        "level": "B1",
+        "framework": "CEFR",
+        "condition": "trở lên"
+      },
+      "target": {
+        "name": "Đạt TOEIC 450",
+        "type": "language_test_achievement",
+        "test_name": "TOEIC",
+        "score": 450,
+        "unit": "điểm"
+      },
+      "type_source": "language_proficiency_achievement",
+      "type_target": "language_test_achievement",
+      "relation": "HOẶC_TƯƠNG_ĐƯƠNG_VỚI"
     },
     {
-      "source": "sinh viên",
-      "target": "TOEIC 450",
-      "relation": "đạt",
-      "type_source": "STUDENT",
-      "type_target": "CERTIFICATE"
+      "source": {
+        "name": "Đạt chứng chỉ B1 trở lên",
+        "type": "language_proficiency_achievement",
+        "level": "B1",
+        "framework": "CEFR",
+        "condition": "trở lên"
+      },
+      "target": {
+        "name": "Đạt TOEFL 450 PBT",
+        "type": "language_test_achievement",
+        "test_name": "TOEFL",
+        "score": 450,
+        "format": "PBT",
+        "unit": "điểm"
+      },
+      "type_source": "language_proficiency_achievement",
+      "type_target": "language_test_achievement",
+      "relation": "HOẶC_TƯƠNG_ĐƯƠNG_VỚI"
     },
     {
-      "source": "sinh viên",
-      "target": "TOEFL 450 PBT",
-      "relation": "đạt",
-      "type_source": "STUDENT",
-      "type_target": "CERTIFICATE"
+      "source": {
+        "name": "Đạt chứng chỉ B1 trở lên",
+        "type": "language_proficiency_achievement",
+        "level": "B1",
+        "framework": "CEFR",
+        "condition": "trở lên"
+      },
+      "target": {
+        "name": "Đạt IELTS 4.5",
+        "type": "language_test_achievement",
+        "test_name": "IELTS",
+        "score": 4.5,
+        "unit": "điểm"
+      },
+      "type_source": "language_proficiency_achievement",
+      "type_target": "language_test_achievement",
+      "relation": "HOẶC_TƯƠNG_ĐƯƠNG_VỚI"
     },
     {
-      "source": "sinh viên",
-      "target": "IELTS 4.5",
-      "relation": "đạt",
-      "type_source": "STUDENT",
-      "type_target": "CERTIFICATE"
+      "source": {
+        "name": "sinh viên khối ngành ngoại ngữ",
+        "type": "student_group",
+        "specialization": "khối ngành ngoại ngữ",
+        "context": "Đối với"
+      },
+      "target": {
+        "name": "điểm trung bình chung các môn chuyên ngành",
+        "type": "academic_metric",
+        "metric_description": "điểm trung bình chung",
+        "subject_scope": "các môn chuyên ngành",
+        "time_frame": "trong năm học"
+      },
+      "type_source": "student_group",
+      "type_target": "academic_metric",
+      "relation": "CÓ_YÊU_CẦU_VỀ"
     },
     {
-      "source": "sinh viên khối ngành ngoại ngữ",
-      "target": "chương trình đào tạo tiên tiến",
-      "relation": "thuộc",
-      "type_source": "FOREIGN_LANGUAGE_STUDENT",
-      "type_target": "ADVANCED_TRAINING_PROGRAM"
+      "source": {
+        "name": "chương trình đào tạo tiên tiến",
+        "type": "academic_program_type",
+        "program_attribute": "tiên tiến",
+        "context": "Đối với sinh viên"
+      },
+      "target": {
+        "name": "điểm trung bình chung các môn chuyên ngành",
+        "type": "academic_metric",
+        "metric_description": "điểm trung bình chung",
+        "subject_scope": "các môn chuyên ngành",
+        "time_frame": "trong năm học"
+      },
+      "type_source": "academic_program_type",
+      "type_target": "academic_metric",
+      "relation": "CÓ_YÊU_CẦU_VỀ"
     },
     {
-      "source": "sinh viên khối ngành ngoại ngữ",
-      "target": "điểm trung bình chung",
-      "relation": "yêu_cầu_đạt",
-      "type_source": "FOREIGN_LANGUAGE_STUDENT",
-      "type_target": "GPA"
+      "source": {
+        "name": "điểm trung bình chung các môn chuyên ngành",
+        "type": "academic_metric",
+        "metric_description": "điểm trung bình chung",
+        "subject_scope": "các môn chuyên ngành",
+        "time_frame": "trong năm học"
+      },
+      "target": {
+        "name": "7.0/10",
+        "type": "score_threshold",
+        "minimum_value": 7.0,
+        "scale": 10,
+        "unit": "điểm",
+        "condition": "trở lên"
+      },
+      "type_source": "academic_metric",
+      "type_target": "score_threshold",
+      "relation": "YÊU_CẦU_ĐẠT_TỪ"
     },
     {
-      "source": "điểm trung bình chung",
-      "target": "môn chuyên ngành",
-      "relation": "của",
-      "type_source": "GPA",
-      "type_target": "MAJOR_SUBJECT"
+      "source": {
+        "name": "cuộc thi cấp khoa/bộ môn về ngoại ngữ",
+        "type": "competition",
+        "level": "khoa/bộ môn",
+        "subject": "ngoại ngữ",
+        "context": "Đối với"
+      },
+      "target": {
+        "name": "giải khuyến khích",
+        "type": "award_level",
+        "award_rank": "khuyến khích",
+        "minimum_requirement": "trở lên"
+      },
+      "type_source": "competition",
+      "type_target": "award_level",
+      "relation": "YÊU_CẦU_GIẢI_THƯỞNG_TỪ"
     },
     {
-      "source": "môn chuyên ngành",
-      "target": "năm học",
-      "relation": "trong",
-      "type_source": "MAJOR_SUBJECT",
-      "type_target": "SCHOOL_YEAR"
+      "source": {
+        "name": "cuộc thi cấp trường về ngoại ngữ",
+        "type": "competition",
+        "level": "trường",
+        "subject": "ngoại ngữ",
+        "context": "Đối với"
+      },
+      "target": {
+        "name": "giải khuyến khích",
+        "type": "award_level",
+        "award_rank": "khuyến khích",
+        "minimum_requirement": "trở lên"
+      },
+      "type_source": "competition",
+      "type_target": "award_level",
+      "relation": "YÊU_CẦU_GIẢI_THƯỞNG_TỪ"
     },
     {
-      "source": "điểm trung bình chung",
-      "target": "7.0/10",
-      "relation": "từ",
-      "type_source": "GPA",
-      "type_target": "SCORE"
+      "source": {
+        "name": "Tham gia sinh hoạt tích cực trong 01 câu lạc bộ, đội, nhóm về ngoại ngữ",
+        "type": "participation_activity",
+        "activity_description": "sinh hoạt tích cực",
+        "organization_type": "câu lạc bộ, đội, nhóm",
+        "subject_focus": "ngoại ngữ",
+        "scope": "trong hoặc ngoài nhà trường",
+        "quantity": "01"
+      },
+      "target": {
+        "name": "06 tháng",
+        "type": "duration",
+        "value": 6,
+        "unit": "tháng",
+        "condition": "ít nhất",
+        "reference_time": "tính đến nay"
+      },
+      "type_source": "participation_activity",
+      "type_target": "duration",
+      "relation": "YÊU_CẦU_THỜI_GIAN_TỐI_THIỂU"
     },
     {
-      "source": "thành viên đội tuyển",
-      "target": "cuộc thi về ngoại ngữ",
-      "relation": "tham_gia",
-      "type_source": "TEAM_MEMBER",
-      "type_target": "FOREIGN_LANGUAGE_COMPETITION"
+      "source": {
+        "name": "Tham gia các chương trình giao lưu, hợp tác với thanh niên, sinh viên quốc tế",
+        "type": "participation_activity",
+        "program_category": "giao lưu, hợp tác quốc tế",
+        "target_participants": "thanh niên, sinh viên quốc tế",
+        "geographical_scope": "trong và ngoài nước"
+      },
+      "target": {
+        "name": "thành viên chính thức",
+        "type": "membership_status",
+        "status_level": "chính thức",
+        "context_description": "tham gia chương trình"
+      },
+      "type_source": "participation_activity",
+      "type_target": "membership_status",
+      "relation": "YÊU_CẦU_TƯ_CÁCH_LÀ"
     },
     {
-      "source": "cá nhân",
-      "target": "cuộc thi về ngoại ngữ",
-      "relation": "tham_gia",
-      "type_source": "INDIVIDUAL",
-      "type_target": "FOREIGN_LANGUAGE_COMPETITION"
+      "source": {
+        "name": "Hoàn thành việc học tin học đại cương (có chứng chỉ)",
+        "type": "academic_achievement",
+        "course_name": "tin học đại cương",
+        "status": "hoàn thành",
+        "proof_of_completion": "chứng chỉ"
+      },
+      "target": {
+        "name": "Ưu tiên",
+        "type": "benefit",
+        "benefit_type": "ưu tiên",
+        "context_description": "Đối với sinh viên"
+      },
+      "type_source": "academic_achievement",
+      "type_target": "benefit",
+      "relation": "LÀ_ĐIỀU_KIỆN_ĐỂ_NHẬN_ƯU_TIÊN"
     },
     {
-      "source": "thành viên đội tuyển",
-      "target": "cuộc thi chuyên về ngoại ngữ",
-      "relation": "tham_gia",
-      "type_source": "TEAM_MEMBER",
-      "type_target": "SPECIALIZED_FOREIGN_LANGUAGE_COMPETITION"
-    },
-    {
-      "source": "cá nhân",
-      "target": "cuộc thi chuyên về ngoại ngữ",
-      "relation": "tham_gia",
-      "type_source": "INDIVIDUAL",
-      "type_target": "SPECIALIZED_FOREIGN_LANGUAGE_COMPETITION"
-    },
-    {
-      "source": "cuộc thi về ngoại ngữ",
-      "target": "các cấp",
-      "relation": "cấp",
-      "type_source": "FOREIGN_LANGUAGE_COMPETITION",
-      "type_target": "LEVELS"
-    },
-    {
-      "source": "cuộc thi chuyên về ngoại ngữ",
-      "target": "các cấp",
-      "relation": "cấp",
-      "type_source": "SPECIALIZED_FOREIGN_LANGUAGE_COMPETITION",
-      "type_target": "LEVELS"
-    },
-    {
-      "source": "cuộc thi cấp khoa/bộ môn",
-      "target": "giải khuyến khích",
-      "relation": "đạt_từ",
-      "type_source": "DEPARTMENT_LEVEL_COMPETITION",
-      "type_target": "ENCOURAGEMENT_PRIZE"
-    },
-    {
-      "source": "cuộc thi cấp trường",
-      "target": "giải khuyến khích",
-      "relation": "đạt_từ",
-      "type_source": "SCHOOL_LEVEL",
-      "type_target": "ENCOURAGEMENT_PRIZE"
-    },
-    {
-      "source": "sinh viên",
-      "target": "câu lạc bộ",
-      "relation": "tham_gia_sinh_hoạt_trong",
-      "type_source": "STUDENT",
-      "type_target": "CLUB"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đội",
-      "relation": "tham_gia_sinh_hoạt_trong",
-      "type_source": "STUDENT",
-      "type_target": "TEAM"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nhóm",
-      "relation": "tham_gia_sinh_hoạt_trong",
-      "type_source": "STUDENT",
-      "type_target": "GROUP"
-    },
-    {
-      "source": "câu lạc bộ",
-      "target": "về ngoại ngữ",
-      "relation": "về",
-      "type_source": "CLUB",
-      "type_target": "FOREIGN_LANGUAGE"
-    },
-    {
-      "source": "đội",
-      "target": "về ngoại ngữ",
-      "relation": "về",
-      "type_source": "TEAM",
-      "type_target": "FOREIGN_LANGUAGE"
-    },
-    {
-      "source": "nhóm",
-      "target": "về ngoại ngữ",
-      "relation": "về",
-      "type_source": "GROUP",
-      "type_target": "FOREIGN_LANGUAGE"
-    },
-    {
-      "source": "câu lạc bộ",
-      "target": "nhà trường",
-      "relation": "trong_hoặc_ngoài",
-      "type_source": "CLUB",
-      "type_target": "SCHOOL"
-    },
-    {
-      "source": "đội",
-      "target": "nhà trường",
-      "relation": "trong_hoặc_ngoài",
-      "type_source": "TEAM",
-      "type_target": "SCHOOL"
-    },
-    {
-      "source": "nhóm",
-      "target": "nhà trường",
-      "relation": "trong_hoặc_ngoài",
-      "type_source": "GROUP",
-      "type_target": "SCHOOL"
-    },
-    {
-      "source": "sinh viên",
-      "target": "thời gian sinh hoạt",
-      "relation": "yêu_cầu_có",
-      "type_source": "STUDENT",
-      "type_target": "ACTIVITY_TIME"
-    },
-    {
-      "source": "thời gian sinh hoạt",
-      "target": "06 tháng",
-      "relation": "ít_nhất",
-      "type_source": "ACTIVITY_TIME",
-      "type_target": "DURATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "thành viên chính thức",
-      "relation": "là",
-      "type_source": "STUDENT",
-      "type_target": "OFFICIAL_MEMBER"
-    },
-    {
-      "source": "thành viên chính thức",
-      "target": "chương trình giao lưu",
-      "relation": "tham_gia",
-      "type_source": "OFFICIAL_MEMBER",
-      "type_target": "EXCHANGE_PROGRAM"
-    },
-    {
-      "source": "thành viên chính thức",
-      "target": "chương trình hợp tác",
-      "relation": "tham_gia",
-      "type_source": "OFFICIAL_MEMBER",
-      "type_target": "COOPERATION_PROGRAM"
-    },
-    {
-      "source": "chương trình giao lưu",
-      "target": "thanh niên",
-      "relation": "với",
-      "type_source": "EXCHANGE_PROGRAM",
-      "type_target": "YOUTH"
-    },
-    {
-      "source": "chương trình giao lưu",
-      "target": "sinh viên quốc tế",
-      "relation": "với",
-      "type_source": "EXCHANGE_PROGRAM",
-      "type_target": "INTERNATIONAL_STUDENT"
-    },
-    {
-      "source": "chương trình hợp tác",
-      "target": "thanh niên",
-      "relation": "với",
-      "type_source": "COOPERATION_PROGRAM",
-      "type_target": "YOUTH"
-    },
-    {
-      "source": "chương trình hợp tác",
-      "target": "sinh viên quốc tế",
-      "relation": "với",
-      "type_source": "COOPERATION_PROGRAM",
-      "type_target": "INTERNATIONAL_STUDENT"
-    },
-    {
-      "source": "sinh viên quốc tế",
-      "target": "trong nước",
-      "relation": "ở",
-      "type_source": "INTERNATIONAL_STUDENT",
-      "type_target": "DOMESTIC"
-    },
-    {
-      "source": "sinh viên quốc tế",
-      "target": "ngoài nước",
-      "relation": "ở",
-      "type_source": "INTERNATIONAL_STUDENT",
-      "type_target": "OVERSEAS"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tin học đại cương",
-      "relation": "ưu_tiên_hoàn_thành_việc_học",
-      "type_source": "STUDENT",
-      "type_target": "BASIC_INFORMATICS"
-    },
-    {
-      "source": "sinh viên",
-      "target": "chứng chỉ A tin học",
-      "relation": "ưu_tiên_đạt",
-      "type_source": "STUDENT",
-      "type_target": "IT_CERTIFICATE_A"
-    },
-    {
-      "source": "tin học đại cương",
-      "target": "chứng chỉ",
-      "relation": "có",
-      "type_source": "BASIC_INFORMATICS",
-      "type_target": "CERTIFICATE"
+      "source": {
+        "name": "Đạt chứng chỉ A tin học trở lên (hoặc tương đương)",
+        "type": "certificate_achievement",
+        "certificate_type": "chứng chỉ A tin học",
+        "level_requirement": "A trở lên hoặc tương đương",
+        "field": "tin học"
+      },
+      "target": {
+        "name": "Ưu tiên",
+        "type": "benefit",
+        "benefit_type": "ưu tiên",
+        "context_description": "Đối với sinh viên"
+      },
+      "type_source": "certificate_achievement",
+      "type_target": "benefit",
+      "relation": "LÀ_ĐIỀU_KIỆN_ĐỂ_NHẬN_ƯU_TIÊN"
     }
   ]
 }

@@ -1,211 +1,123 @@
 {
-  "entities": [
-    {
-      "name": "lòng yêu nước",
-      "type": "IDEOLOGY"
-    },
-    {
-      "name": "mục tiêu",
-      "type": "GOAL"
-    },
-    {
-      "name": "lý tưởng cách mạng",
-      "type": "IDEOLOGY"
-    },
-    {
-      "name": "Đảng",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "pháp luật",
-      "type": "LAW"
-    },
-    {
-      "name": "quy chế",
-      "type": "REGULATION"
-    },
-    {
-      "name": "nội quy",
-      "type": "RULE"
-    },
-    {
-      "name": "trường",
-      "type": "SCHOOL"
-    },
-    {
-      "name": "lớp",
-      "type": "CLASS"
-    },
-    {
-      "name": "quy định",
-      "type": "REGULATION"
-    },
-    {
-      "name": "địa phương cư trú",
-      "type": "LOCATION"
-    },
-    {
-      "name": "nơi công cộng",
-      "type": "PUBLIC_PLACE"
-    },
-    {
-      "name": "thái độ cư xử đúng mực",
-      "type": "BEHAVIOR"
-    },
-    {
-      "name": "thân thiện",
-      "type": "BEHAVIOR"
-    },
-    {
-      "name": "hòa nhã",
-      "type": "BEHAVIOR"
-    },
-    {
-      "name": "người xung quanh",
-      "type": "PEOPLE"
-    },
-    {
-      "name": "Điểm rèn luyện",
-      "type": "POINT"
-    },
-    {
-      "name": "85 điểm",
-      "type": "SCORE"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "lòng yêu nước",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "IDEOLOGY"
+      "source": {
+        "name": "lý tưởng cách mạng",
+        "type": "concept"
+      },
+      "target": {
+        "name": "Đảng",
+        "type": "organization"
+      },
+      "type_source": "concept",
+      "type_target": "organization",
+      "relation": "CỦA"
     },
     {
-      "source": "sinh viên",
-      "target": "mục tiêu",
-      "relation": "trung_thành_với",
-      "type_source": "STUDENT",
-      "type_target": "GOAL"
+      "source": {
+        "name": "mục tiêu",
+        "type": "concept"
+      },
+      "target": {
+        "name": "Đảng",
+        "type": "organization"
+      },
+      "type_source": "concept",
+      "type_target": "organization",
+      "relation": "CỦA"
     },
     {
-      "source": "sinh viên",
-      "target": "lý tưởng cách mạng",
-      "relation": "trung_thành_với",
-      "type_source": "STUDENT",
-      "type_target": "IDEOLOGY"
+      "source": {
+        "name": "quy chế",
+        "type": "rule"
+      },
+      "target": {
+        "name": "trường",
+        "type": "organization"
+      },
+      "type_source": "rule",
+      "type_target": "organization",
+      "relation": "CỦA"
     },
     {
-      "source": "lý tưởng cách mạng",
-      "target": "Đảng",
-      "relation": "của",
-      "type_source": "IDEOLOGY",
-      "type_target": "ORGANIZATION"
+      "source": {
+        "name": "nội quy",
+        "type": "rule"
+      },
+      "target": {
+        "name": "trường",
+        "type": "organization"
+      },
+      "type_source": "rule",
+      "type_target": "organization",
+      "relation": "CỦA"
     },
     {
-      "source": "sinh viên",
-      "target": "pháp luật",
-      "relation": "không_vi_phạm",
-      "type_source": "STUDENT",
-      "type_target": "LAW"
+      "source": {
+        "name": "quy chế",
+        "type": "rule"
+      },
+      "target": {
+        "name": "lớp",
+        "type": "organization"
+      },
+      "type_source": "rule",
+      "type_target": "organization",
+      "relation": "CỦA"
     },
     {
-      "source": "sinh viên",
-      "target": "quy chế",
-      "relation": "không_vi_phạm",
-      "type_source": "STUDENT",
-      "type_target": "REGULATION"
+      "source": {
+        "name": "nội quy",
+        "type": "rule"
+      },
+      "target": {
+        "name": "lớp",
+        "type": "organization"
+      },
+      "type_source": "rule",
+      "type_target": "organization",
+      "relation": "CỦA"
     },
     {
-      "source": "sinh viên",
-      "target": "nội quy",
-      "relation": "không_vi_phạm",
-      "type_source": "STUDENT",
-      "type_target": "RULE"
+      "source": {
+        "name": "quy định",
+        "type": "rule"
+      },
+      "target": {
+        "name": "địa phương cư trú",
+        "type": "location"
+      },
+      "type_source": "rule",
+      "type_target": "location",
+      "relation": "CỦA"
     },
     {
-      "source": "quy chế",
-      "target": "trường",
-      "relation": "của",
-      "type_source": "REGULATION",
-      "type_target": "SCHOOL"
+      "source": {
+        "name": "quy định",
+        "type": "rule"
+      },
+      "target": {
+        "name": "nơi công cộng",
+        "type": "location"
+      },
+      "type_source": "rule",
+      "type_target": "location",
+      "relation": "CỦA"
     },
     {
-      "source": "nội quy",
-      "target": "trường",
-      "relation": "của",
-      "type_source": "RULE",
-      "type_target": "SCHOOL"
-    },
-    {
-      "source": "quy chế",
-      "target": "lớp",
-      "relation": "của",
-      "type_source": "REGULATION",
-      "type_target": "CLASS"
-    },
-    {
-      "source": "nội quy",
-      "target": "lớp",
-      "relation": "của",
-      "type_source": "RULE",
-      "type_target": "CLASS"
-    },
-    {
-      "source": "sinh viên",
-      "target": "quy định",
-      "relation": "không_vi_phạm",
-      "type_source": "STUDENT",
-      "type_target": "REGULATION"
-    },
-    {
-      "source": "quy định",
-      "target": "địa phương cư trú",
-      "relation": "của",
-      "type_source": "REGULATION",
-      "type_target": "LOCATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nơi công cộng",
-      "relation": "không_vi_phạm",
-      "type_source": "STUDENT",
-      "type_target": "PUBLIC_PLACE"
-    },
-    {
-      "source": "sinh viên",
-      "target": "thái độ cư xử đúng mực",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "BEHAVIOR"
-    },
-    {
-      "source": "sinh viên",
-      "target": "thân thiện",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "BEHAVIOR"
-    },
-    {
-      "source": "sinh viên",
-      "target": "hòa nhã",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "BEHAVIOR"
-    },
-    {
-      "source": "sinh viên",
-      "target": "người xung quanh",
-      "relation": "sẵn_sàng_giúp_đỡ",
-      "type_source": "STUDENT",
-      "type_target": "PEOPLE"
-    },
-    {
-      "source": "Điểm rèn luyện",
-      "target": "85 điểm",
-      "relation": "đạt_từ",
-      "type_source": "POINT",
-      "type_target": "SCORE"
+      "source": {
+        "name": "Điểm rèn luyện",
+        "type": "score_type"
+      },
+      "target": {
+        "name": "85 điểm",
+        "type": "score_value",
+        "value": 85,
+        "unit": "điểm"
+      },
+      "type_source": "score_type",
+      "type_target": "score_value",
+      "relation": "ĐẠT_TỪ"
     }
   ]
 }

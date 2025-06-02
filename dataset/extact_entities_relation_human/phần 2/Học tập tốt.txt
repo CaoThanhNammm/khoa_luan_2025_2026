@@ -1,688 +1,293 @@
 {
-  "entities": [
-    {
-      "name": "động cơ học tập",
-      "type": "MOTIVATION"
-    },
-    {
-      "name": "thái độ học tập",
-      "type": "ATTITUDE"
-    },
-    {
-      "name": "quy chế",
-      "type": "REGULATION"
-    },
-    {
-      "name": "thi cử",
-      "type": "EXAM"
-    },
-    {
-      "name": "môn",
-      "type": "SUBJECT"
-    },
-    {
-      "name": "học phần",
-      "type": "CREDIT_MODULE"
-    },
-    {
-      "name": "tín chỉ",
-      "type": "CREDIT"
-    },
-    {
-      "name": "năm học",
-      "type": "SCHOOL_YEAR"
-    },
-    {
-      "name": "Điểm trung bình tích lũy",
-      "type": "GPA"
-    },
-    {
-      "name": "điểm trung bình học kỳ",
-      "type": "SEMESTER_GPA"
-    },
-    {
-      "name": "7.3/10",
-      "type": "SCORE"
-    },
-    {
-      "name": "2.9/4.0",
-      "type": "SCORE"
-    },
-    {
-      "name": "môn",
-      "type": "SUBJECT"
-    },
-    {
-      "name": "điểm F",
-      "type": "GRADE_F"
-    },
-    {
-      "name": "sinh viên năm nhất",
-      "type": "FRESHMAN"
-    },
-    {
-      "name": "điểm đầu vào",
-      "type": "ENTRANCE_SCORE"
-    },
-    {
-      "name": "21 điểm",
-      "type": "SCORE"
-    },
-    {
-      "name": "môn",
-      "type": "SUBJECT"
-    },
-    {
-      "name": "6 điểm",
-      "type": "SCORE"
-    },
-    {
-      "name": "đề tài nghiên cứu khoa học",
-      "type": "RESEARCH_PROJECT"
-    },
-    {
-      "name": "năm học",
-      "type": "SCHOOL_YEAR"
-    },
-    {
-      "name": "cấp khoa/bộ môn",
-      "type": "DEPARTMENT_LEVEL"
-    },
-    {
-      "name": "đề tài nghiên cứu khoa học sinh viên",
-      "type": "STUDENT_RESEARCH_PROJECT"
-    },
-    {
-      "name": "giải thưởng sinh viên nghiên cứu khoa học Euréka",
-      "type": "AWARD"
-    },
-    {
-      "name": "giải thưởng nghiên cứu khoa học",
-      "type": "AWARD"
-    },
-    {
-      "name": "cấp thành phố",
-      "type": "CITY_LEVEL"
-    },
-    {
-      "name": "trung ương",
-      "type": "CENTRAL_LEVEL"
-    },
-    {
-      "name": "thành viên đội tuyển",
-      "type": "TEAM_MEMBER"
-    },
-    {
-      "name": "cá nhân",
-      "type": "INDIVIDUAL"
-    },
-    {
-      "name": "cuộc thi học thuật",
-      "type": "ACADEMIC_COMPETITION"
-    },
-    {
-      "name": "cấp khoa/bộ môn",
-      "type": "DEPARTMENT_LEVEL"
-    },
-    {
-      "name": "giải khuyến khích",
-      "type": "ENCOURAGEMENT_PRIZE"
-    },
-    {
-      "name": "cấp trường",
-      "type": "SCHOOL_LEVEL"
-    },
-    {
-      "name": "vòng chung kết",
-      "type": "FINAL_ROUND"
-    },
-    {
-      "name": "giải khuyến khích",
-      "type": "ENCOURAGEMENT_PRIZE"
-    },
-    {
-      "name": "cấp thành phố",
-      "type": "CITY_LEVEL"
-    },
-    {
-      "name": "cấp quốc gia",
-      "type": "NATIONAL_LEVEL"
-    },
-    {
-      "name": "quốc tế",
-      "type": "INTERNATIONAL_LEVEL"
-    },
-    {
-      "name": "Hiệp hội ngành nghề",
-      "type": "ASSOCIATION"
-    },
-    {
-      "name": "cơ quan thông tấn báo chí",
-      "type": "MEDIA_AGENCY"
-    },
-    {
-      "name": "vòng thi sơ loại",
-      "type": "PRELIMINARY_ROUND"
-    },
-    {
-      "name": "thành viên CLB học thuật",
-      "type": "ACADEMIC_CLUB_MEMBER"
-    },
-    {
-      "name": "cấp khoa/bộ môn",
-      "type": "DEPARTMENT_LEVEL"
-    },
-    {
-      "name": "thời gian sinh hoạt",
-      "type": "ACTIVITY_TIME"
-    },
-    {
-      "name": "06 tháng",
-      "type": "DURATION"
-    },
-    {
-      "name": "hoạt động",
-      "type": "ACTIVITY"
-    },
-    {
-      "name": "CLB",
-      "type": "CLUB"
-    },
-    {
-      "name": "bài viết",
-      "type": "ARTICLE"
-    },
-    {
-      "name": "lĩnh vực chuyên môn",
-      "type": "MAJOR"
-    },
-    {
-      "name": "sản phẩm",
-      "type": "PRODUCT"
-    },
-    {
-      "name": "cơ quan truyền thông",
-      "type": "MEDIA_AGENCY"
-    },
-    {
-      "name": "báo",
-      "type": "NEWSPAPER"
-    },
-    {
-      "name": "tạp chí khoa học",
-      "type": "SCIENTIFIC_JOURNAL"
-    },
-    {
-      "name": "trường",
-      "type": "SCHOOL"
-    },
-    {
-      "name": "bài tham luận",
-      "type": "PAPER"
-    },
-    {
-      "name": "hội thảo khoa học",
-      "type": "SCIENTIFIC_CONFERENCE"
-    },
-    {
-      "name": "cấp khoa/bộ môn",
-      "type": "DEPARTMENT_LEVEL"
-    },
-    {
-      "name": "sản phẩm",
-      "type": "PRODUCT"
-    },
-    {
-      "name": "cuộc thi",
-      "type": "COMPETITION"
-    },
-    {
-      "name": "sáng tạo",
-      "type": "CREATIVITY"
-    },
-    {
-      "name": "khoa học ứng dụng",
-      "type": "APPLIED_SCIENCE"
-    },
-    {
-      "name": "đời sống",
-      "type": "LIFE"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "động cơ học tập",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "MOTIVATION"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn bắt buộc 2.1",
+        "description": "Yêu cầu về phẩm chất học tập"
+      },
+      "target": {
+        "name": "Động cơ học tập",
+        "requirement": "Đúng đắn",
+        "assessment_area": "Phẩm chất cá nhân"
+      },
+      "type_source": "student",
+      "type_target": "learning_ethic",
+      "relation": "phải_có"
     },
     {
-      "source": "sinh viên",
-      "target": "thái độ học tập",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "ATTITUDE"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn bắt buộc 2.1",
+        "description": "Yêu cầu về phẩm chất học tập"
+      },
+      "target": {
+        "name": "Thái độ học tập",
+        "requirement": "Đúng đắn",
+        "assessment_area": "Phẩm chất cá nhân"
+      },
+      "type_source": "student",
+      "type_target": "learning_ethic",
+      "relation": "phải_có"
     },
     {
-      "source": "sinh viên",
-      "target": "quy chế",
-      "relation": "không_vi_phạm_trong",
-      "type_source": "STUDENT",
-      "type_target": "REGULATION"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn bắt buộc 2.1",
+        "activity": "Thi cử"
+      },
+      "target": {
+        "name": "Quy chế thi cử",
+        "stipulation": "Không vi phạm",
+        "scope": "Trong quá trình thi cử"
+      },
+      "type_source": "student",
+      "type_target": "examination_regulation",
+      "relation": "không_vi_phạm"
     },
     {
-      "source": "quy chế",
-      "target": "thi cử",
-      "relation": "trong",
-      "type_source": "REGULATION",
-      "type_target": "EXAM"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn bắt buộc 2.1",
+        "academic_period": "Trong năm học"
+      },
+      "target": {
+        "name": "Môn học, học phần hoặc tín chỉ",
+        "status_prohibited": "Nợ",
+        "relevance": "Kết quả học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_item_status",
+      "relation": "không_nợ"
     },
     {
-      "source": "sinh viên",
-      "target": "môn",
-      "relation": "không_nợ",
-      "type_source": "STUDENT",
-      "type_target": "SUBJECT"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn bắt buộc 2.1",
+        "academic_assessment": "Điểm trung bình"
+      },
+      "target": {
+        "name": "Điểm trung bình tích lũy hoặc học kỳ gần nhất",
+        "min_gpa_scale_10": "7.3",
+        "min_gpa_scale_4": "2.9",
+        "condition": "Không có môn nào bị điểm F"
+      },
+      "type_source": "student",
+      "type_target": "gpa_requirement",
+      "relation": "phải_đạt"
     },
     {
-      "source": "sinh viên",
-      "target": "học phần",
-      "relation": "không_nợ",
-      "type_source": "STUDENT",
-      "type_target": "CREDIT_MODULE"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn bắt buộc 2.1",
+        "academic_assessment": "Kết quả môn học"
+      },
+      "target": {
+        "name": "Điểm F",
+        "condition": "Không có môn nào bị điểm F",
+        "scope": "Tất cả các môn học"
+      },
+      "type_source": "student",
+      "type_target": "grade_status",
+      "relation": "không_có_môn_điểm_f"
     },
     {
-      "source": "sinh viên",
-      "target": "tín chỉ",
-      "relation": "không_nợ",
-      "type_source": "STUDENT",
-      "type_target": "CREDIT"
+      "source": {
+        "name": "Sinh viên năm nhất",
+        "context": "Tiêu chuẩn bắt buộc 2.1",
+        "admission_criteria": "Điểm đầu vào"
+      },
+      "target": {
+        "name": "Điểm đầu vào",
+        "min_score_required": "21 điểm trở lên",
+        "scope": "Tuyển sinh đại học"
+      },
+      "type_source": "student",
+      "type_target": "entrance_score_requirement",
+      "relation": "phải_đạt_điểm_đầu_vào"
     },
     {
-      "source": "môn",
-      "target": "năm học",
-      "relation": "trong",
-      "type_source": "SUBJECT",
-      "type_target": "SCHOOL_YEAR"
+      "source": {
+        "name": "Sinh viên năm nhất",
+        "context": "Tiêu chuẩn bắt buộc 2.1",
+        "academic_assessment": "Kết quả môn học"
+      },
+      "target": {
+        "name": "Môn học có điểm dưới 6",
+        "condition": "Không có môn nào dưới 6 điểm",
+        "scope": "Tất cả các môn học"
+      },
+      "type_source": "student",
+      "type_target": "low_grade_policy_adherence",
+      "relation": "không_có_môn_dưới_điểm_quy_định"
     },
     {
-      "source": "học phần",
-      "target": "năm học",
-      "relation": "trong",
-      "type_source": "CREDIT_MODULE",
-      "type_target": "SCHOOL_YEAR"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "activity": "Nghiên cứu khoa học"
+      },
+      "target": {
+        "name": "Đề tài nghiên cứu khoa học",
+        "status": "Đã hoặc đang được xét",
+        "level": "Cấp khoa/bộ môn trở lên",
+        "period": "Trong năm học"
+      },
+      "type_source": "student",
+      "type_target": "research_project",
+      "relation": "ưu_tiên_nếu_tham_gia"
     },
     {
-      "source": "tín chỉ",
-      "target": "năm học",
-      "relation": "trong",
-      "type_source": "CREDIT",
-      "type_target": "SCHOOL_YEAR"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "activity": "Tham gia giải thưởng NCKH"
+      },
+      "target": {
+        "name": "Giải thưởng sinh viên nghiên cứu khoa học Euréka",
+        "submission_type": "Đề tài nghiên cứu khoa học sinh viên",
+        "scope": "Nghiên cứu khoa học"
+      },
+      "type_source": "student",
+      "type_target": "academic_award",
+      "relation": "ưu_tiên_nếu_có_đề_tài_dự_thi"
     },
     {
-      "source": "Điểm trung bình tích lũy",
-      "target": "7.3/10",
-      "relation": "đạt_từ",
-      "type_source": "GPA",
-      "type_target": "SCORE"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "activity": "Tham gia giải thưởng NCKH"
+      },
+      "target": {
+        "name": "Giải thưởng nghiên cứu khoa học cấp thành phố",
+        "submission_type": "Đề tài nghiên cứu khoa học sinh viên",
+        "level": "Cấp thành phố"
+      },
+      "type_source": "student",
+      "type_target": "academic_award",
+      "relation": "ưu_tiên_nếu_có_đề_tài_dự_thi"
     },
     {
-      "source": "Điểm trung bình tích lũy",
-      "target": "2.9/4.0",
-      "relation": "đạt_từ",
-      "type_source": "GPA",
-      "type_target": "SCORE"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "activity": "Tham gia giải thưởng NCKH"
+      },
+      "target": {
+        "name": "Giải thưởng nghiên cứu khoa học cấp trung ương",
+        "submission_type": "Đề tài nghiên cứu khoa học sinh viên",
+        "level": "Cấp trung ương"
+      },
+      "type_source": "student",
+      "type_target": "academic_award",
+      "relation": "ưu_tiên_nếu_có_đề_tài_dự_thi"
     },
     {
-      "source": "điểm trung bình học kỳ",
-      "target": "7.3/10",
-      "relation": "đạt_từ",
-      "type_source": "SEMESTER_GPA",
-      "type_target": "SCORE"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "role": "Thành viên đội tuyển hoặc cá nhân"
+      },
+      "target": {
+        "name": "Cuộc thi học thuật cấp khoa/bộ môn",
+        "achievement_required": "Đạt từ giải khuyến khích trở lên",
+        "competition_type": "Học thuật"
+      },
+      "type_source": "student",
+      "type_target": "academic_competition",
+      "relation": "ưu_tiên_nếu_tham_gia_đạt_giải"
     },
     {
-      "source": "điểm trung bình học kỳ",
-      "target": "2.9/4.0",
-      "relation": "đạt_từ",
-      "type_source": "SEMESTER_GPA",
-      "type_target": "SCORE"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "role": "Thành viên đội tuyển hoặc cá nhân"
+      },
+      "target": {
+        "name": "Cuộc thi học thuật cấp trường (hoặc tương đương)",
+        "achievement_required": "Tham gia dự thi tại vòng chung kết hoặc đạt giải khuyến khích trở lên",
+        "competition_type": "Học thuật"
+      },
+      "type_source": "student",
+      "type_target": "academic_competition",
+      "relation": "ưu_tiên_nếu_tham_gia_chung_kết_hoặc_đạt_giải"
     },
     {
-      "source": "sinh viên",
-      "target": "môn",
-      "relation": "không_bị_điểm",
-      "type_source": "STUDENT",
-      "type_target": "SUBJECT"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "role": "Thành viên đội tuyển hoặc cá nhân"
+      },
+      "target": {
+        "name": "Cuộc thi học thuật cấp thành phố, quốc gia, quốc tế",
+        "organizers": "Hiệp hội ngành nghề, các cơ quan thông tấn báo chí",
+        "achievement_required": "Tham gia và vượt qua vòng thi sơ loại",
+        "competition_type": "Học thuật"
+      },
+      "type_source": "student",
+      "type_target": "academic_competition",
+      "relation": "ưu_tiên_nếu_vượt_qua_vòng_sơ_loại"
     },
     {
-      "source": "điểm F",
-      "target": "môn",
-      "relation": "của",
-      "type_source": "GRADE_F",
-      "type_target": "SUBJECT"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "activity": "Sinh hoạt CLB"
+      },
+      "target": {
+        "name": "CLB học thuật",
+        "level": "Cấp khoa/bộ môn trở lên",
+        "min_duration": "06 tháng",
+        "participation_quality": "Tham gia tích cực các hoạt động"
+      },
+      "type_source": "student",
+      "type_target": "academic_club",
+      "relation": "ưu_tiên_nếu_là_thành_viên_tích_cực"
     },
     {
-      "source": "sinh viên năm nhất",
-      "target": "điểm đầu vào",
-      "relation": "yêu_cầu",
-      "type_source": "FRESHMAN",
-      "type_target": "ENTRANCE_SCORE"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "activity": "Viết bài chuyên môn"
+      },
+      "target": {
+        "name": "Bài viết về lĩnh vực chuyên môn đang theo học",
+        "quantity_min": "01 bài",
+        "publication_venues": "Sản phẩm của các cơ quan truyền thông uy tín hoặc các báo, tạp chí khoa học chuyên ngành của trường"
+      },
+      "type_source": "student",
+      "type_target": "published_article",
+      "relation": "ưu_tiên_nếu_có_bài_viết_đăng_tải"
     },
     {
-      "source": "điểm đầu vào",
-      "target": "21 điểm",
-      "relation": "trên",
-      "type_source": "ENTRANCE_SCORE",
-      "type_target": "SCORE"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "activity": "Tham gia hội thảo khoa học"
+      },
+      "target": {
+        "name": "Bài tham luận tham gia hội thảo khoa học",
+        "quantity_min": "01 bài",
+        "conference_level": "Cấp khoa/bộ môn trở lên"
+      },
+      "type_source": "student",
+      "type_target": "conference_paper",
+      "relation": "ưu_tiên_nếu_có_bài_tham_luận_hội_thảo"
     },
     {
-      "source": "sinh viên năm nhất",
-      "target": "môn",
-      "relation": "không_có_điểm_dưới",
-      "type_source": "FRESHMAN",
-      "type_target": "SUBJECT"
-    },
-    {
-      "source": "môn",
-      "target": "6 điểm",
-      "relation": "dưới",
-      "type_source": "SUBJECT",
-      "type_target": "SCORE"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đề tài nghiên cứu khoa học",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "RESEARCH_PROJECT"
-    },
-    {
-      "source": "đề tài nghiên cứu khoa học",
-      "target": "năm học",
-      "relation": "trong",
-      "type_source": "RESEARCH_PROJECT",
-      "type_target": "SCHOOL_YEAR"
-    },
-    {
-      "source": "đề tài nghiên cứu khoa học",
-      "target": "cấp khoa/bộ môn",
-      "relation": "xét_từ",
-      "type_source": "RESEARCH_PROJECT",
-      "type_target": "DEPARTMENT_LEVEL"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đề tài nghiên cứu khoa học sinh viên",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "STUDENT_RESEARCH_PROJECT"
-    },
-    {
-      "source": "đề tài nghiên cứu khoa học sinh viên",
-      "target": "giải thưởng sinh viên nghiên cứu khoa học Euréka",
-      "relation": "tham_gia_giải_thưởng",
-      "type_source": "STUDENT_RESEARCH_PROJECT",
-      "type_target": "AWARD"
-    },
-    {
-      "source": "đề tài nghiên cứu khoa học sinh viên",
-      "target": "giải thưởng nghiên cứu khoa học",
-      "relation": "tham_gia_giải_thưởng",
-      "type_source": "STUDENT_RESEARCH_PROJECT",
-      "type_target": "AWARD"
-    },
-    {
-      "source": "giải thưởng nghiên cứu khoa học",
-      "target": "cấp thành phố",
-      "relation": "cấp",
-      "type_source": "AWARD",
-      "type_target": "CITY_LEVEL"
-    },
-    {
-      "source": "giải thưởng nghiên cứu khoa học",
-      "target": "trung ương",
-      "relation": "cấp",
-      "type_source": "AWARD",
-      "type_target": "CENTRAL_LEVEL"
-    },
-    {
-      "source": "thành viên đội tuyển",
-      "target": "cuộc thi học thuật",
-      "relation": "tham_gia",
-      "type_source": "TEAM_MEMBER",
-      "type_target": "ACADEMIC_COMPETITION"
-    },
-    {
-      "source": "cá nhân",
-      "target": "cuộc thi học thuật",
-      "relation": "tham_gia",
-      "type_source": "INDIVIDUAL",
-      "type_target": "ACADEMIC_COMPETITION"
-    },
-    {
-      "source": "cuộc thi học thuật",
-      "target": "cấp khoa/bộ môn",
-      "relation": "cấp",
-      "type_source": "ACADEMIC_COMPETITION",
-      "type_target": "DEPARTMENT_LEVEL"
-    },
-    {
-      "source": "cuộc thi học thuật",
-      "target": "giải khuyến khích",
-      "relation": "đạt_từ",
-      "type_source": "ACADEMIC_COMPETITION",
-      "type_target": "ENCOURAGEMENT_PRIZE"
-    },
-    {
-      "source": "cuộc thi học thuật",
-      "target": "cấp trường",
-      "relation": "cấp",
-      "type_source": "ACADEMIC_COMPETITION",
-      "type_target": "SCHOOL_LEVEL"
-    },
-    {
-      "source": "cuộc thi học thuật",
-      "target": "vòng chung kết",
-      "relation": "tham_gia_dự_thi_tại",
-      "type_source": "ACADEMIC_COMPETITION",
-      "type_target": "FINAL_ROUND"
-    },
-    {
-      "source": "cuộc thi học thuật",
-      "target": "giải khuyến khích",
-      "relation": "đạt",
-      "type_source": "ACADEMIC_COMPETITION",
-      "type_target": "ENCOURAGEMENT_PRIZE"
-    },
-    {
-      "source": "cuộc thi học thuật",
-      "target": "cấp thành phố",
-      "relation": "cấp",
-      "type_source": "ACADEMIC_COMPETITION",
-      "type_target": "CITY_LEVEL"
-    },
-    {
-      "source": "cuộc thi học thuật",
-      "target": "cấp quốc gia",
-      "relation": "cấp",
-      "type_source": "ACADEMIC_COMPETITION",
-      "type_target": "NATIONAL_LEVEL"
-    },
-    {
-      "source": "cuộc thi học thuật",
-      "target": "quốc tế",
-      "relation": "cấp",
-      "type_source": "ACADEMIC_COMPETITION",
-      "type_target": "INTERNATIONAL_LEVEL"
-    },
-    {
-      "source": "cuộc thi học thuật",
-      "target": "vòng thi sơ loại",
-      "relation": "vượt_qua",
-      "type_source": "ACADEMIC_COMPETITION",
-      "type_target": "PRELIMINARY_ROUND"
-    },
-    {
-      "source": "Hiệp hội ngành nghề",
-      "target": "cuộc thi học thuật",
-      "relation": "tổ_chức",
-      "type_source": "ASSOCIATION",
-      "type_target": "ACADEMIC_COMPETITION"
-    },
-    {
-      "source": "cơ quan thông tấn báo chí",
-      "target": "cuộc thi học thuật",
-      "relation": "tổ_chức",
-      "type_source": "MEDIA_AGENCY",
-      "type_target": "ACADEMIC_COMPETITION"
-    },
-    {
-      "source": "thành viên CLB học thuật",
-      "target": "CLB học thuật",
-      "relation": "của",
-      "type_source": "ACADEMIC_CLUB_MEMBER",
-      "type_target": "ACADEMIC_CLUB"
-    },
-    {
-      "source": "CLB học thuật",
-      "target": "cấp khoa/bộ môn",
-      "relation": "cấp",
-      "type_source": "CLUB",
-      "type_target": "DEPARTMENT_LEVEL"
-    },
-    {
-      "source": "thành viên CLB học thuật",
-      "target": "thời gian sinh hoạt",
-      "relation": "có",
-      "type_source": "ACADEMIC_CLUB_MEMBER",
-      "type_target": "ACTIVITY_TIME"
-    },
-    {
-      "source": "thời gian sinh hoạt",
-      "target": "06 tháng",
-      "relation": "ít_nhất",
-      "type_source": "ACTIVITY_TIME",
-      "type_target": "DURATION"
-    },
-    {
-      "source": "thành viên CLB học thuật",
-      "target": "hoạt động",
-      "relation": "tham_gia",
-      "type_source": "ACADEMIC_CLUB_MEMBER",
-      "type_target": "ACTIVITY"
-    },
-    {
-      "source": "hoạt động",
-      "target": "CLB",
-      "relation": "trong",
-      "type_source": "ACTIVITY",
-      "type_target": "CLUB"
-    },
-    {
-      "source": "sinh viên",
-      "target": "bài viết",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "ARTICLE"
-    },
-    {
-      "source": "bài viết",
-      "target": "lĩnh vực chuyên môn",
-      "relation": "về",
-      "type_source": "ARTICLE",
-      "type_target": "MAJOR"
-    },
-    {
-      "source": "bài viết",
-      "target": "sản phẩm",
-      "relation": "đăng_tải_trên",
-      "type_source": "ARTICLE",
-      "type_target": "PRODUCT"
-    },
-    {
-      "source": "sản phẩm",
-      "target": "cơ quan truyền thông",
-      "relation": "của",
-      "type_source": "PRODUCT",
-      "type_target": "MEDIA_AGENCY"
-    },
-    {
-      "source": "sản phẩm",
-      "target": "báo",
-      "relation": "của",
-      "type_source": "PRODUCT",
-      "type_target": "NEWSPAPER"
-    },
-    {
-      "source": "sản phẩm",
-      "target": "tạp chí khoa học",
-      "relation": "của",
-      "type_source": "PRODUCT",
-      "type_target": "SCIENTIFIC_JOURNAL"
-    },
-    {
-      "source": "tạp chí khoa học",
-      "target": "trường",
-      "relation": "của",
-      "type_source": "SCIENTIFIC_JOURNAL",
-      "type_target": "SCHOOL"
-    },
-    {
-      "source": "sinh viên",
-      "target": "bài tham luận",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "PAPER"
-    },
-    {
-      "source": "bài tham luận",
-      "target": "hội thảo khoa học",
-      "relation": "tham_gia",
-      "type_source": "PAPER",
-      "type_target": "SCIENTIFIC_CONFERENCE"
-    },
-    {
-      "source": "hội thảo khoa học",
-      "target": "cấp khoa/bộ môn",
-      "relation": "cấp",
-      "type_source": "SCIENTIFIC_CONFERENCE",
-      "type_target": "DEPARTMENT_LEVEL"
-    },
-    {
-      "source": "sinh viên",
-      "target": "sản phẩm",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "PRODUCT"
-    },
-    {
-      "source": "sản phẩm",
-      "target": "cuộc thi",
-      "relation": "trưng_bày_triển_lãm_trong",
-      "type_source": "PRODUCT",
-      "type_target": "COMPETITION"
-    },
-    {
-      "source": "sản phẩm",
-      "target": "đời sống",
-      "relation": "ứng_dụng_vào",
-      "type_source": "PRODUCT",
-      "type_target": "LIFE"
-    },
-    {
-      "source": "cuộc thi",
-      "target": "sáng tạo",
-      "relation": "về",
-      "type_source": "COMPETITION",
-      "type_target": "CREATIVITY"
-    },
-    {
-      "source": "cuộc thi",
-      "target": "khoa học ứng dụng",
-      "relation": "về",
-      "type_source": "COMPETITION",
-      "type_target": "APPLIED_SCIENCE"
+      "source": {
+        "name": "Sinh viên",
+        "context": "Tiêu chuẩn khác 2.2 (Ưu tiên)",
+        "activity": "Sáng tạo, khoa học ứng dụng"
+      },
+      "target": {
+        "name": "Sản phẩm được trưng bày, triển lãm hoặc ứng dụng vào đời sống",
+        "quantity_min": "01 sản phẩm",
+        "event_context": "Trong các cuộc thi về sáng tạo, khoa học ứng dụng"
+      },
+      "type_source": "student",
+      "type_target": "showcased_product",
+      "relation": "ưu_tiên_nếu_có_sản_phẩm_trưng_bày_ứng_dụng"
     }
   ]
 }

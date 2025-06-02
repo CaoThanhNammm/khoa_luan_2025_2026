@@ -1,246 +1,160 @@
 {
-  "entities": [
-    {
-      "name": "Danh hiệu “Sinh viên 5 tốt”",
-      "type": "TITLE"
-    },
-    {
-      "name": "sinh viên Việt Nam",
-      "type": "VIETNAMESE_STUDENT"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "trường Đại học Nông Lâm TP.HCM",
-      "type": "UNIVERSITY"
-    },
-    {
-      "name": "TP.HCM",
-      "type": "CITY"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "uy tín",
-      "type": "PRESTIGE"
-    },
-    {
-      "name": "minh chứng",
-      "type": "EVIDENCE"
-    },
-    {
-      "name": "động lực",
-      "type": "MOTIVATION"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "lý tưởng",
-      "type": "IDEAL"
-    },
-    {
-      "name": "hành trang",
-      "type": "PREPARATION"
-    },
-    {
-      "name": "lập thân",
-      "type": "CAREER_ESTABLISHMENT"
-    },
-    {
-      "name": "lập nghiệp",
-      "type": "BUSINESS_ESTABLISHMENT"
-    },
-    {
-      "name": "hạn chế",
-      "type": "LIMITATION"
-    },
-    {
-      "name": "yếu kém",
-      "type": "WEAKNESS"
-    },
-    {
-      "name": "bản thân",
-      "type": "SELF"
-    },
-    {
-      "name": "danh hiệu",
-      "type": "TITLE"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "05 tiêu chí",
-      "type": "CRITERIA"
-    },
-    {
-      "name": "Đạo đức tốt",
-      "type": "MORALITY"
-    },
-    {
-      "name": "Học tập tốt",
-      "type": "STUDY"
-    },
-    {
-      "name": "Thể lực tốt",
-      "type": "PHYSICAL_STRENGTH"
-    },
-    {
-      "name": "Tình nguyện tốt",
-      "type": "VOLUNTEERING"
-    },
-    {
-      "name": "Hội nhập tốt",
-      "type": "INTEGRATION"
-    }
-  ],
   "relationships": [
     {
-      "source": "Danh hiệu “Sinh viên 5 tốt”",
-      "target": "sinh viên Việt Nam",
-      "relation": "của",
-      "type_source": "TITLE",
-      "type_target": "VIETNAMESE_STUDENT"
+      "source": {
+        "name": "Sinh viên 5 tốt",
+        "honorific_status": "Danh hiệu cao quý",
+        "reputation": "Có uy tín",
+        "significance_role": "Minh chứng, động lực cho sinh viên",
+        "student_development_aim": "Tự giáo dục, tự rèn luyện, tự trau dồi lý tưởng, trang bị hành trang"
+      },
+      "target": {
+        "name": "sinh viên Việt Nam",
+        "scope": "Nói chung",
+        "nationality": "Việt Nam",
+        "category": "Sinh viên"
+      },
+      "type_source": "award_title",
+      "type_target": "student_group",
+      "relation": "là_danh_hiệu_của"
     },
     {
-      "source": "sinh viên trường Đại học Nông Lâm TP.HCM",
-      "target": "sinh viên Việt Nam",
-      "relation": "thuộc",
-      "type_source": "UNIVERSITY",
-      "type_target": "VIETNAMESE_STUDENT"
+      "source": {
+        "name": "Sinh viên 5 tốt",
+        "honorific_status": "Danh hiệu cao quý",
+        "reputation": "Có uy tín",
+        "significance_role": "Minh chứng, động lực cho sinh viên",
+        "student_development_aim": "Tự giáo dục, tự rèn luyện, tự trau dồi lý tưởng, trang bị hành trang"
+      },
+      "target": {
+        "name": "sinh viên trường Đại học Nông Lâm TP.HCM",
+        "scope": "Nói riêng",
+        "institution": "Đại học Nông Lâm TP.HCM",
+        "category": "Sinh viên"
+      },
+      "type_source": "award_title",
+      "type_target": "student_group",
+      "relation": "là_danh_hiệu_của"
     },
     {
-      "source": "Danh hiệu “Sinh viên 5 tốt”",
-      "target": "Sinh viên",
-      "relation": "là",
-      "type_source": "TITLE",
-      "type_target": "STUDENT"
+      "source": {
+        "name": "sinh viên trường Đại học Nông Lâm TP.HCM",
+        "institution_affiliation": "Đại học Nông Lâm TP.HCM",
+        "student_body_context": "Đối tượng của danh hiệu Sinh viên 5 tốt",
+        "location_context": "TP.HCM"
+      },
+      "target": {
+        "name": "Đại học Nông Lâm TP.HCM",
+        "organization_type": "Trường Đại học",
+        "city": "TP.HCM",
+        "student_award_relevance": "Có sinh viên là đối tượng của danh hiệu Sinh viên 5 tốt"
+      },
+      "type_source": "student_group",
+      "type_target": "educational_organization",
+      "relation": "là_sinh_viên_của_trường"
     },
     {
-      "source": "Danh hiệu “Sinh viên 5 tốt”",
-      "target": "uy tín",
-      "relation": "là",
-      "type_source": "TITLE",
-      "type_target": "PRESTIGE"
+      "source": {
+        "name": "sinh viên",
+        "self_development_actions": "Tự giáo dục, tự rèn luyện, tự trau dồi lý tưởng",
+        "preparation_for_life": "Trang bị những hành trang cơ bản để lập thân, lập nghiệp",
+        "self_improvement": "Khắc phục những hạn chế, yếu kém của bản thân",
+        "objective": "Đạt được danh hiệu Sinh viên 5 tốt"
+      },
+      "target": {
+        "name": "05 tiêu chí",
+        "quantity": 5,
+        "component_list": "Đạo đức tốt - Học tập tốt - Thể lực tốt - Tình nguyện tốt - Hội nhập tốt",
+        "award_association": "Sinh viên 5 tốt"
+      },
+      "type_source": "student_role",
+      "type_target": "criteria_set",
+      "relation": "phải_hoàn_thiện"
     },
     {
-      "source": "Danh hiệu “Sinh viên 5 tốt”",
-      "target": "minh chứng",
-      "relation": "là",
-      "type_source": "TITLE",
-      "type_target": "EVIDENCE"
+      "source": {
+        "name": "05 tiêu chí",
+        "quantity": 5,
+        "component_list": "Đạo đức tốt - Học tập tốt - Thể lực tốt - Tình nguyện tốt - Hội nhập tốt",
+        "award_association": "Sinh viên 5 tốt"
+      },
+      "target": {
+        "name": "Đạo đức tốt",
+        "criterion_category": "Thành phần của 05 tiêu chí",
+        "related_award": "Sinh viên 5 tốt",
+        "domain_focus": "Đạo đức"
+      },
+      "type_source": "criteria_set",
+      "type_target": "individual_criterion",
+      "relation": "bao_gồm"
     },
     {
-      "source": "Danh hiệu “Sinh viên 5 tốt”",
-      "target": "động lực",
-      "relation": "là",
-      "type_source": "TITLE",
-      "type_target": "MOTIVATION"
+      "source": {
+        "name": "05 tiêu chí",
+        "quantity": 5,
+        "component_list": "Đạo đức tốt - Học tập tốt - Thể lực tốt - Tình nguyện tốt - Hội nhập tốt",
+        "award_association": "Sinh viên 5 tốt"
+      },
+      "target": {
+        "name": "Học tập tốt",
+        "criterion_category": "Thành phần của 05 tiêu chí",
+        "related_award": "Sinh viên 5 tốt",
+        "domain_focus": "Học tập"
+      },
+      "type_source": "criteria_set",
+      "type_target": "individual_criterion",
+      "relation": "bao_gồm"
     },
     {
-      "source": "động lực",
-      "target": "sinh viên",
-      "relation": "cho",
-      "type_source": "MOTIVATION",
-      "type_target": "STUDENT"
+      "source": {
+        "name": "05 tiêu chí",
+        "quantity": 5,
+        "component_list": "Đạo đức tốt - Học tập tốt - Thể lực tốt - Tình nguyện tốt - Hội nhập tốt",
+        "award_association": "Sinh viên 5 tốt"
+      },
+      "target": {
+        "name": "Thể lực tốt",
+        "criterion_category": "Thành phần của 05 tiêu chí",
+        "related_award": "Sinh viên 5 tốt",
+        "domain_focus": "Thể lực"
+      },
+      "type_source": "criteria_set",
+      "type_target": "individual_criterion",
+      "relation": "bao_gồm"
     },
     {
-      "source": "hành trang",
-      "target": "lập thân",
-      "relation": "dùng_cho",
-      "type_source": "PREPARATION",
-      "type_target": "CAREER_ESTABLISHMENT"
+      "source": {
+        "name": "05 tiêu chí",
+        "quantity": 5,
+        "component_list": "Đạo đức tốt - Học tập tốt - Thể lực tốt - Tình nguyện tốt - Hội nhập tốt",
+        "award_association": "Sinh viên 5 tốt"
+      },
+      "target": {
+        "name": "Tình nguyện tốt",
+        "criterion_category": "Thành phần của 05 tiêu chí",
+        "related_award": "Sinh viên 5 tốt",
+        "domain_focus": "Tình nguyện"
+      },
+      "type_source": "criteria_set",
+      "type_target": "individual_criterion",
+      "relation": "bao_gồm"
     },
     {
-      "source": "hành trang",
-      "target": "lập nghiệp",
-      "relation": "dùng_cho",
-      "type_source": "PREPARATION",
-      "type_target": "BUSINESS_ESTABLISHMENT"
-    },
-    {
-      "source": "hạn chế",
-      "target": "bản thân",
-      "relation": "của",
-      "type_source": "LIMITATION",
-      "type_target": "SELF"
-    },
-    {
-      "source": "yếu kém",
-      "target": "bản thân",
-      "relation": "của",
-      "type_source": "WEAKNESS",
-      "type_target": "SELF"
-    },
-    {
-      "source": "sinh viên",
-      "target": "hạn chế",
-      "relation": "khắc_phục",
-      "type_source": "STUDENT",
-      "type_target": "LIMITATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "yếu kém",
-      "relation": "khắc_phục",
-      "type_source": "STUDENT",
-      "type_target": "WEAKNESS"
-    },
-    {
-      "source": "sinh viên",
-      "target": "danh hiệu",
-      "relation": "đạt_được",
-      "type_source": "STUDENT",
-      "type_target": "TITLE"
-    },
-    {
-      "source": "danh hiệu",
-      "target": "05 tiêu chí",
-      "relation": "yêu_cầu",
-      "type_source": "TITLE",
-      "type_target": "CRITERIA"
-    },
-    {
-      "source": "05 tiêu chí",
-      "target": "Đạo đức tốt",
-      "relation": "bao_gồm",
-      "type_source": "CRITERIA",
-      "type_target": "MORALITY"
-    },
-    {
-      "source": "05 tiêu chí",
-      "target": "Học tập tốt",
-      "relation": "bao_gồm",
-      "type_source": "CRITERIA",
-      "type_target": "STUDY"
-    },
-    {
-      "source": "05 tiêu chí",
-      "target": "Thể lực tốt",
-      "relation": "bao_gồm",
-      "type_source": "CRITERIA",
-      "type_target": "PHYSICAL_STRENGTH"
-    },
-    {
-      "source": "05 tiêu chí",
-      "target": "Tình nguyện tốt",
-      "relation": "bao_gồm",
-      "type_source": "CRITERIA",
-      "type_target": "VOLUNTEERING"
-    },
-    {
-      "source": "05 tiêu chí",
-      "target": "Hội nhập tốt",
-      "relation": "bao_gồm",
-      "type_source": "CRITERIA",
-      "type_target": "INTEGRATION"
+      "source": {
+        "name": "05 tiêu chí",
+        "quantity": 5,
+        "component_list": "Đạo đức tốt - Học tập tốt - Thể lực tốt - Tình nguyện tốt - Hội nhập tốt",
+        "award_association": "Sinh viên 5 tốt"
+      },
+      "target": {
+        "name": "Hội nhập tốt",
+        "criterion_category": "Thành phần của 05 tiêu chí",
+        "related_award": "Sinh viên 5 tốt",
+        "domain_focus": "Hội nhập"
+      },
+      "type_source": "criteria_set",
+      "type_target": "individual_criterion",
+      "relation": "bao_gồm"
     }
   ]
 }

@@ -1,459 +1,868 @@
 {
-  "entities": [
-    {
-      "name": "Sinh viên",
-      "type": "role"
-    },
-    {
-      "name": "Nhà giáo",
-      "type": "role"
-    },
-    {
-      "name": "Cán bộ",
-      "type": "role"
-    },
-    {
-      "name": "Nhân viên nhà trường",
-      "type": "role"
-    },
-    {
-      "name": "Nhà trường",
-      "type": "organization"
-    },
-    {
-      "name": "Phòng thi",
-      "type": "location"
-    },
-    {
-      "name": "Tiểu luận",
-      "type": "document"
-    },
-    {
-      "name": "Đồ án",
-      "type": "document"
-    },
-    {
-      "name": "Khóa luận tốt nghiệp",
-      "type": "document"
-    },
-    {
-      "name": "Giờ học",
-      "type": "time_period"
-    },
-    {
-      "name": "Lớp",
-      "type": "location"
-    },
-    {
-      "name": "Pháp luật",
-      "type": "concept"
-    },
-    {
-      "name": "Trường",
-      "type": "organization"
-    },
-    {
-      "name": "Nơi công cộng",
-      "type": "location"
-    },
-    {
-      "name": "Vũ khí",
-      "type": "prohibited_item"
-    },
-    {
-      "name": "Chất nổ",
-      "type": "prohibited_item"
-    },
-    {
-      "name": "Chất ma tuý",
-      "type": "prohibited_item"
-    },
-    {
-      "name": "Hóa chất cấm sử dụng",
-      "type": "prohibited_item"
-    },
-    {
-      "name": "Tài liệu, ấn phẩm, thông tin phản động, đồi trụy",
-      "type": "prohibited_item"
-    },
-    {
-      "name": "Tài liệu cấm khác",
-      "type": "prohibited_item"
-    },
-    {
-      "name": "Nhà nước",
-      "type": "organization"
-    },
-    {
-      "name": "Hoạt động mê tín dị đoan",
-      "type": "prohibited_activity"
-    },
-    {
-      "name": "Hoạt động tôn giáo trong nhà trường",
-      "type": "prohibited_activity"
-    },
-    {
-      "name": "Hành vi vi phạm đạo đức",
-      "type": "prohibited_activity"
-    },
-    {
-      "name": "Hoạt động mang tính chất chính trị trái pháp luật",
-      "type": "prohibited_activity"
-    },
-    {
-      "name": "Hoạt động tập thể mang danh nghĩa nhà trường",
-      "type": "activity"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "role"
-    },
-    {
-      "name": "Bài viết, hình ảnh có nội dung xuyên tạc, dung tục, xâm phạm quyền con người hoặc kích động biểu tình trái pháp luật, gây rối, chống phá Đảng, Nhà nước",
-      "type": "prohibited_content"
-    },
-    {
-      "name": "Đảng",
-      "type": "organization"
-    },
-    {
-      "name": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
-      "type": "prohibited_action"
-    },
-    {
-      "name": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
-      "type": "prohibited_action"
-    },
-    {
-      "name": "Hành vi bị cấm 3: Sử dụng chất kích thích/say xỉn trong môi trường học tập",
-      "type": "prohibited_action"
-    },
-    {
-      "name": "Hành vi bị cấm 4: Tụ tập/biểu tình/khiếu kiện trái pháp luật; Gây rối trật tự",
-      "type": "prohibited_action"
-    },
-    {
-      "name": "Hành vi bị cấm 5: Đua xe/cổ vũ đua xe trái phép",
-      "type": "prohibited_action"
-    },
-    {
-      "name": "Hành vi bị cấm 6: Đánh bạc",
-      "type": "prohibited_action"
-    },
-    {
-      "name": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "type": "prohibited_action"
-    },
-    {
-      "name": "Hành vi bị cấm 8: Hoạt động chính trị trái pháp luật; Hoạt động tập thể không phép",
-      "type": "prohibited_action"
-    },
-    {
-      "name": "Hành vi bị cấm 9: Đăng tải/chia sẻ nội dung xấu/chống phá",
-      "type": "prohibited_action"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh viên",
-      "target": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
-      "type_source": "role",
-      "type_target": "prohibited_action",
-      "relation": "bị_cấm_thực_hiện"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Nhà giáo",
+        "profession": "Người giảng dạy",
+        "affiliation": "Nhà trường",
+        "status": "Được bảo vệ theo quy định"
+      },
+      "type_source": "student",
+      "type_target": "teacher",
+      "relation": "bị_cấm_xúc_phạm_nhân_phẩm_danh_dự"
     },
     {
-      "source": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
-      "target": "Nhà giáo",
-      "type_source": "prohibited_action",
-      "type_target": "role",
-      "relation": "đối_tượng_bị_tác_động"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Nhà giáo",
+        "profession": "Người giảng dạy",
+        "affiliation": "Nhà trường",
+        "status": "Được bảo vệ theo quy định"
+      },
+      "type_source": "student",
+      "type_target": "teacher",
+      "relation": "bị_cấm_xâm_phạm_thân_thể"
     },
     {
-      "source": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
-      "target": "Cán bộ",
-      "type_source": "prohibited_action",
-      "type_target": "role",
-      "relation": "đối_tượng_bị_tác_động"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Cán bộ, nhân viên nhà trường",
+        "profession": "Nhân sự quản lý, phục vụ",
+        "affiliation": "Nhà trường",
+        "status": "Được bảo vệ theo quy định"
+      },
+      "type_source": "student",
+      "type_target": "school_staff",
+      "relation": "bị_cấm_xúc_phạm_nhân_phẩm_danh_dự"
     },
     {
-      "source": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
-      "target": "Nhân viên nhà trường",
-      "type_source": "prohibited_action",
-      "type_target": "role",
-      "relation": "đối_tượng_bị_tác_động"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Cán bộ, nhân viên nhà trường",
+        "profession": "Nhân sự quản lý, phục vụ",
+        "affiliation": "Nhà trường",
+        "status": "Được bảo vệ theo quy định"
+      },
+      "type_source": "student",
+      "type_target": "school_staff",
+      "relation": "bị_cấm_xâm_phạm_thân_thể"
     },
     {
-      "source": "Hành vi bị cấm 1: Xúc phạm/xâm phạm người khác",
-      "target": "Sinh viên",
-      "type_source": "prohibited_action",
-      "type_target": "role",
-      "relation": "đối_tượng_bị_tác_động"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Sinh viên khác",
+        "role": "Bạn học",
+        "affiliation": "Nhà trường",
+        "status": "Được bảo vệ theo quy định"
+      },
+      "type_source": "student",
+      "type_target": "other_student",
+      "relation": "bị_cấm_xúc_phạm_nhân_phẩm_danh_dự"
     },
     {
-      "source": "Sinh viên",
-      "target": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
-      "type_source": "role",
-      "type_target": "prohibited_action",
-      "relation": "bị_cấm_thực_hiện"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Sinh viên khác",
+        "role": "Bạn học",
+        "affiliation": "Nhà trường",
+        "status": "Được bảo vệ theo quy định"
+      },
+      "type_source": "student",
+      "type_target": "other_student",
+      "relation": "bị_cấm_xâm_phạm_thân_thể"
     },
     {
-      "source": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
-      "target": "Phòng thi",
-      "type_source": "prohibited_action",
-      "type_target": "location",
-      "relation": "liên_quan_đến"
-    },
-     {
-      "source": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
-      "target": "Tiểu luận",
-      "type_source": "prohibited_action",
-      "type_target": "document",
-      "relation": "liên_quan_đến"
-    },
-     {
-      "source": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
-      "target": "Đồ án",
-      "type_source": "prohibited_action",
-      "type_target": "document",
-      "relation": "liên_quan_đến"
-    },
-     {
-      "source": "Hành vi bị cấm 2: Gian lận học tập/thi cử",
-      "target": "Khóa luận tốt nghiệp",
-      "type_source": "prohibited_action",
-      "type_target": "document",
-      "relation": "liên_quan_đến"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Quay cóp",
+        "description": "Hành vi gian lận trong thi cử, kiểm tra bằng cách xem tài liệu hoặc bài làm của người khác",
+        "context": "Thi cử, kiểm tra",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "cheating_act",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Sinh viên",
-      "target": "Hành vi bị cấm 3: Sử dụng chất kích thích/say xỉn trong môi trường học tập",
-      "type_source": "role",
-      "type_target": "prohibited_action",
-      "relation": "bị_cấm_thực_hiện"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Mang tài liệu vào phòng thi",
+        "description": "Hành vi gian lận bằng cách mang tài liệu không được phép vào phòng thi",
+        "item_involved": "Tài liệu không được phép",
+        "location": "Phòng thi",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "cheating_act",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 3: Sử dụng chất kích thích/say xỉn trong môi trường học tập",
-      "target": "Giờ học",
-      "type_source": "prohibited_action",
-      "type_target": "time_period",
-      "relation": "thực_hiện_trong"
-    },
-     {
-      "source": "Hành vi bị cấm 3: Sử dụng chất kích thích/say xỉn trong môi trường học tập",
-      "target": "Lớp",
-      "type_source": "prohibited_action",
-      "type_target": "location",
-      "relation": "thực_hiện_tại"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Hành vi bị cấm 4: Tụ tập/biểu tình/khiếu kiện trái pháp luật; Gây rối trật tự",
-      "type_source": "role",
-      "type_target": "prohibited_action",
-      "relation": "bị_cấm_thực_hiện"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Xin điểm",
+        "description": "Hành vi không trung thực nhằm tác động để có điểm số cao hơn thực tế",
+        "method": "Nài nỉ, gây áp lực hoặc hình thức khác",
+        "objective": "Cải thiện điểm số một cách bất chính",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_misconduct",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 4: Tụ tập/biểu tình/khiếu kiện trái pháp luật; Gây rối trật tự",
-      "target": "Pháp luật",
-      "type_source": "prohibited_action",
-      "type_target": "concept",
-      "relation": "vi_phạm"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Học hộ người khác",
+        "description": "Học thay cho một sinh viên khác",
+        "scope_of_impersonation": "Quá trình học tập",
+        "beneficiary": "Người khác",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_impersonation",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 4: Tụ tập/biểu tình/khiếu kiện trái pháp luật; Gây rối trật tự",
-      "target": "Trường",
-      "type_source": "prohibited_action",
-      "type_target": "organization",
-      "relation": "thực_hiện_tại"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Thi hộ người khác",
+        "description": "Thi thay cho một sinh viên khác",
+        "scope_of_impersonation": "Kỳ thi, kiểm tra",
+        "beneficiary": "Người khác",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_impersonation",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 4: Tụ tập/biểu tình/khiếu kiện trái pháp luật; Gây rối trật tự",
-      "target": "Nơi công cộng",
-      "type_source": "prohibited_action",
-      "type_target": "location",
-      "relation": "thực_hiện_tại"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Thực tập hộ người khác",
+        "description": "Thực tập thay cho một sinh viên khác",
+        "scope_of_impersonation": "Quá trình thực tập",
+        "beneficiary": "Người khác",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_impersonation",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Sinh viên",
-      "target": "Hành vi bị cấm 5: Đua xe/cổ vũ đua xe trái phép",
-      "type_source": "role",
-      "type_target": "prohibited_action",
-      "relation": "bị_cấm_thực_hiện"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Trực hộ người khác",
+        "description": "Thực hiện ca trực thay cho một sinh viên khác (nếu có)",
+        "scope_of_impersonation": "Ca trực được phân công",
+        "beneficiary": "Người khác",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_impersonation",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 5: Đua xe/cổ vũ đua xe trái phép",
-      "target": "Pháp luật",
-      "type_source": "prohibited_action",
-      "type_target": "concept",
-      "relation": "vi_phạm"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Nhờ người khác học hộ",
+        "description": "Yêu cầu hoặc thuê người khác học thay mình",
+        "type_of_request": "Học thay",
+        "impersonator": "Người khác",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "requesting_academic_fraud",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Sinh viên",
-      "target": "Hành vi bị cấm 6: Đánh bạc",
-      "type_source": "role",
-      "type_target": "prohibited_action",
-      "relation": "bị_cấm_thực_hiện"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Nhờ người khác thi hộ",
+        "description": "Yêu cầu hoặc thuê người khác thi thay mình",
+        "type_of_request": "Thi thay",
+        "impersonator": "Người khác",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "requesting_academic_fraud",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Sinh viên",
-      "target": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "type_source": "role",
-      "type_target": "prohibited_action",
-      "relation": "bị_cấm_thực_hiện"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Nhờ người khác thực tập hộ",
+        "description": "Yêu cầu hoặc thuê người khác thực tập thay mình",
+        "type_of_request": "Thực tập thay",
+        "impersonator": "Người khác",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "requesting_academic_fraud",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "target": "Vũ khí",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_item",
-      "relation": "liên_quan_đến"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Nhờ người khác trực hộ",
+        "description": "Yêu cầu hoặc thuê người khác trực thay mình (nếu có)",
+        "type_of_request": "Trực thay",
+        "impersonator": "Người khác",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "requesting_academic_fraud",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "target": "Chất nổ",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_item",
-      "relation": "liên_quan_đến"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Sao chép tiểu luận, đồ án, khóa luận tốt nghiệp",
+        "description": "Sử dụng toàn bộ hoặc một phần sản phẩm học thuật của người khác mà không ghi nguồn",
+        "academic_work_type": "Tiểu luận, đồ án, khóa luận tốt nghiệp",
+        "nature_of_fraud": "Đạo văn",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "plagiarism",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "target": "Chất ma tuý",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_item",
-      "relation": "liên_quan_đến"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Nhờ làm hộ tiểu luận, đồ án, khóa luận tốt nghiệp",
+        "description": "Yêu cầu người khác thực hiện toàn bộ hoặc phần lớn sản phẩm học thuật cho mình",
+        "academic_work_type": "Tiểu luận, đồ án, khóa luận tốt nghiệp",
+        "nature_of_fraud": "Thuê làm bài",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "contract_cheating",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "target": "Hóa chất cấm sử dụng",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_item",
-      "relation": "liên_quan_đến"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Làm hộ tiểu luận, đồ án, khóa luận tốt nghiệp",
+        "description": "Thực hiện sản phẩm học thuật cho người khác",
+        "academic_work_type": "Tiểu luận, đồ án, khóa luận tốt nghiệp",
+        "role_in_fraud": "Người làm hộ",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "ghostwriting_academic_work",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "target": "Tài liệu, ấn phẩm, thông tin phản động, đồi trụy",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_item",
-      "relation": "liên_quan_đến"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Tổ chức thi hộ",
+        "description": "Lập kế hoạch, sắp xếp cho việc thi hộ diễn ra",
+        "activity_organized": "Thi hộ",
+        "role_in_fraud": "Người tổ chức",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "organizing_exam_fraud",
+      "relation": "bị_cấm_tổ_chức_hoặc_tham_gia_tổ_chức"
     },
     {
-      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "target": "Tài liệu cấm khác",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_item",
-      "relation": "liên_quan_đến"
-    },
-     {
-      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "target": "Hoạt động mê tín dị đoan",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_activity",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "target": "Hoạt động tôn giáo trong nhà trường",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_activity",
-      "relation": "bao_gồm"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Các hành vi gian lận khác trong học tập",
+        "description": "Bao gồm các hình thức gian lận không được liệt kê cụ thể nhưng có bản chất tương tự",
+        "scope": "Học tập, thi cử, nghiên cứu",
+        "category": "Gian lận học tập"
+      },
+      "type_source": "student",
+      "type_target": "other_academic_fraud",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "target": "Hành vi vi phạm đạo đức",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_activity",
-      "relation": "bao_gồm"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Hút thuốc trong giờ học",
+        "context_location": "Trong giờ học",
+        "prohibited_substance": "Thuốc lá",
+        "environment": "Lớp học, phòng học"
+      },
+      "type_source": "student",
+      "type_target": "prohibited_act_during_class",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hành vi bị cấm 7: Liên quan vật phẩm/chất/thông tin cấm; Hoạt động mê tín/tôn giáo/vi phạm đạo đức",
-      "target": "Nhà nước",
-      "type_source": "prohibited_action",
-      "type_target": "organization",
-      "relation": "quy_định_bởi"
-    },
-     {
-      "source": "Hoạt động tôn giáo trong nhà trường",
-      "target": "Nhà trường",
-      "type_source": "prohibited_activity",
-      "type_target": "organization",
-      "relation": "thực_hiện_tại"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Hành vi bị cấm 8: Hoạt động chính trị trái pháp luật; Hoạt động tập thể không phép",
-      "type_source": "role",
-      "type_target": "prohibited_action",
-      "relation": "bị_cấm_thực_hiện"
-    },
-     {
-      "source": "Hành vi bị cấm 8: Hoạt động chính trị trái pháp luật; Hoạt động tập thể không phép",
-      "target": "Hoạt động mang tính chất chính trị trái pháp luật",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_activity",
-      "relation": "bao_gồm"
-    },
-     {
-      "source": "Hoạt động mang tính chất chính trị trái pháp luật",
-      "target": "Pháp luật",
-      "type_source": "prohibited_activity",
-      "type_target": "concept",
-      "relation": "vi_phạm"
-    },
-     {
-      "source": "Hành vi bị cấm 8: Hoạt động chính trị trái pháp luật; Hoạt động tập thể không phép",
-      "target": "Hoạt động tập thể mang danh nghĩa nhà trường",
-      "type_source": "prohibited_action",
-      "type_target": "activity",
-      "relation": "bao_gồm"
-    },
-     {
-      "source": "Hoạt động tập thể mang danh nghĩa nhà trường",
-      "target": "Nhà trường",
-      "type_source": "activity",
-      "type_target": "organization",
-      "relation": "mang_danh_nghĩa"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Uống rượu, bia trong giờ học",
+        "context_location": "Trong giờ học",
+        "prohibited_substance": "Rượu, bia",
+        "environment": "Lớp học, phòng học"
+      },
+      "type_source": "student",
+      "type_target": "prohibited_act_during_class",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Hoạt động tập thể mang danh nghĩa nhà trường",
-      "target": "Hiệu trưởng",
-      "type_source": "activity",
-      "type_target": "role",
-      "relation": "yêu_cầu_phê_duyệt_bởi"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Say rượu, bia khi đến lớp",
+        "condition_arrival": "Say xỉn do rượu, bia",
+        "context_location": "Khi đến lớp học",
+        "expected_state": "Tỉnh táo"
+      },
+      "type_source": "student",
+      "type_target": "prohibited_state_in_class",
+      "relation": "bị_cấm"
     },
     {
-      "source": "Sinh viên",
-      "target": "Hành vi bị cấm 9: Đăng tải/chia sẻ nội dung xấu/chống phá",
-      "type_source": "role",
-      "type_target": "prohibited_action",
-      "relation": "bị_cấm_thực_hiện"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Tụ tập đông người trái pháp luật",
+        "legality": "Trái pháp luật",
+        "activity_nature": "Tập trung đông người không được phép",
+        "potential_consequence": "Gây mất trật tự công cộng"
+      },
+      "type_source": "student",
+      "type_target": "illegal_gathering",
+      "relation": "bị_cấm_tham_gia"
     },
-     {
-      "source": "Hành vi bị cấm 9: Đăng tải/chia sẻ nội dung xấu/chống phá",
-      "target": "Bài viết, hình ảnh có nội dung xuyên tạc, dung tục, xâm phạm quyền con người hoặc kích động biểu tình trái pháp luật, gây rối, chống phá Đảng, Nhà nước",
-      "type_source": "prohibited_action",
-      "type_target": "prohibited_content",
-      "relation": "liên_quan_đến"
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Biểu tình trái pháp luật",
+        "legality": "Trái pháp luật",
+        "activity_nature": "Thể hiện ý kiến tập thể vi phạm quy định",
+        "potential_consequence": "Gây rối an ninh"
+      },
+      "type_source": "student",
+      "type_target": "illegal_protest",
+      "relation": "bị_cấm_tham_gia"
     },
-     {
-      "source": "Bài viết, hình ảnh có nội dung xuyên tạc, dung tục, xâm phạm quyền con người hoặc kích động biểu tình trái pháp luật, gây rối, chống phá Đảng, Nhà nước",
-      "target": "Pháp luật",
-      "type_source": "prohibited_content",
-      "type_target": "concept",
-      "relation": "vi_phạm"
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Khiếu kiện trái pháp luật",
+        "legality": "Trái pháp luật",
+        "activity_nature": "Khiếu nại không đúng trình tự, quy định của pháp luật",
+        "potential_consequence": "Ảnh hưởng trật tự xã hội"
+      },
+      "type_source": "student",
+      "type_target": "illegal_complaint_procedure",
+      "relation": "bị_cấm_tham_gia"
     },
-     {
-      "source": "Bài viết, hình ảnh có nội dung xuyên tạc, dung tục, xâm phạm quyền con người hoặc kích động biểu tình trái pháp luật, gây rối, chống phá Đảng, Nhà nước",
-      "target": "Đảng",
-      "type_source": "prohibited_content",
-      "type_target": "organization",
-      "relation": "chống_phá"
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "An ninh, trật tự trong trường",
+        "location_context": "Trong khuôn viên nhà trường",
+        "importance": "Đảm bảo môi trường học tập an toàn, lành mạnh",
+        "desired_state": "Ổn định, an toàn"
+      },
+      "type_source": "student",
+      "type_target": "school_security_and_order",
+      "relation": "bị_cấm_gây_rối"
     },
-     {
-      "source": "Bài viết, hình ảnh có nội dung xuyên tạc, dung tục, xâm phạm quyền con người hoặc kích động biểu tình trái pháp luật, gây rối, chống phá Đảng, Nhà nước",
-      "target": "Nhà nước",
-      "type_source": "prohibited_content",
-      "type_target": "organization",
-      "relation": "chống_phá"
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "An ninh, trật tự nơi công cộng",
+        "location_context": "Các địa điểm công cộng bên ngoài nhà trường",
+        "importance": "Duy trì trật tự xã hội chung",
+        "desired_state": "Ổn định, an toàn"
+      },
+      "type_source": "student",
+      "type_target": "public_security_and_order",
+      "relation": "bị_cấm_gây_rối"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Đua xe trái phép",
+        "legality": "Trái phép",
+        "activity_nature": "Điều khiển phương tiện tốc độ cao gây nguy hiểm",
+        "risk_factor": "Tai nạn giao thông, mất trật tự công cộng"
+      },
+      "type_source": "student",
+      "type_target": "illegal_street_racing",
+      "relation": "bị_cấm_tham_gia"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Đua xe trái phép",
+        "legality": "Trái phép",
+        "activity_nature": "Điều khiển phương tiện tốc độ cao gây nguy hiểm",
+        "role_prohibited": "Người cổ vũ, khuyến khích"
+      },
+      "type_source": "student",
+      "type_target": "illegal_street_racing",
+      "relation": "bị_cấm_cổ_vũ"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Đánh bạc",
+        "definition": "Tham gia các trò chơi may rủi ăn tiền hoặc hiện vật",
+        "scope": "Dưới mọi hình thức",
+        "social_consequence": "Gây tệ nạn xã hội, ảnh hưởng học tập"
+      },
+      "type_source": "student",
+      "type_target": "gambling",
+      "relation": "bị_cấm"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Vũ khí",
+        "item_category": "Công cụ, phương tiện nguy hiểm",
+        "regulation_status": "Kiểm soát đặc biệt bởi Nhà nước",
+        "intended_use_prohibited": "Mọi mục đích trái phép"
+      },
+      "type_source": "student",
+      "type_target": "weapon",
+      "relation": "bị_cấm_sản_xuất_buôn_bán_vận_chuyển_phát_tán_tàng_trữ_sử_dụng_lôi_kéo_sử_dụng"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Chất nổ",
+        "item_category": "Vật liệu có khả năng gây nổ nguy hiểm",
+        "regulation_status": "Kiểm soát đặc biệt bởi Nhà nước",
+        "intended_use_prohibited": "Mọi mục đích trái phép"
+      },
+      "type_source": "student",
+      "type_target": "explosive_substance",
+      "relation": "bị_cấm_sản_xuất_buôn_bán_vận_chuyển_phát_tán_tàng_trữ_sử_dụng_lôi_kéo_sử_dụng"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Các chất ma tuý",
+        "item_category": "Chất gây nghiện, chất hướng thần bị cấm",
+        "regulation_status": "Luật phòng chống ma túy",
+        "health_social_impact": "Nguy hại cho sức khỏe và trật tự xã hội"
+      },
+      "type_source": "student",
+      "type_target": "narcotic_drug",
+      "relation": "bị_cấm_sản_xuất_buôn_bán_vận_chuyển_phát_tán_tàng_trữ_sử_dụng_lôi_kéo_sử_dụng"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Các loại hóa chất cấm sử dụng",
+        "item_category": "Hóa chất độc hại, nguy hiểm bị cấm",
+        "regulation_status": "Danh mục cấm của Nhà nước",
+        "risk_description": "Nguy cơ cho sức khỏe con người và môi trường"
+      },
+      "type_source": "student",
+      "type_target": "prohibited_chemical",
+      "relation": "bị_cấm_sản_xuất_buôn_bán_vận_chuyển_phát_tán_tàng_trữ_sử_dụng_lôi_kéo_sử_dụng"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Các tài liệu, ấn phẩm, thông tin phản động, đồi trụy",
+        "item_category": "Nội dung văn hóa phẩm độc hại, bị cấm",
+        "content_nature": "Phản động, chống phá nhà nước, đồi trụy, trái thuần phong mỹ tục",
+        "regulation_status": "Quy định của Nhà nước về thông tin và văn hóa"
+      },
+      "type_source": "student",
+      "type_target": "subversive_or_pornographic_material",
+      "relation": "bị_cấm_sản_xuất_buôn_bán_vận_chuyển_phát_tán_tàng_trữ_sử_dụng_lôi_kéo_sử_dụng"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Các tài liệu cấm khác theo quy định của Nhà nước",
+        "item_category": "Tài liệu, ấn phẩm bị cấm lưu hành theo luật định",
+        "basis_of_prohibition": "Các quy định cụ thể của pháp luật Nhà nước",
+        "scope": "Không giới hạn trong các loại đã nêu"
+      },
+      "type_source": "student",
+      "type_target": "other_state_prohibited_documents",
+      "relation": "bị_cấm_sản_xuất_buôn_bán_vận_chuyển_phát_tán_tàng_trữ_sử_dụng_lôi_kéo_sử_dụng"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Các hoạt động mê tín dị đoan",
+        "activity_category": "Hoạt động xã hội không lành mạnh",
+        "nature_description": "Dựa trên niềm tin vô căn cứ, gây ảnh hưởng tiêu cực",
+        "context_of_prohibition": "Trong và ngoài nhà trường"
+      },
+      "type_source": "student",
+      "type_target": "superstitious_activity",
+      "relation": "bị_cấm_tổ_chức_tham_gia_truyền_bá"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Các hoạt động tôn giáo trong nhà trường",
+        "activity_category": "Hoạt động tín ngưỡng, tôn giáo",
+        "restriction_context": "Không được thực hiện trong môi trường nhà trường",
+        "school_environment_nature": "Môi trường giáo dục thế tục, không truyền bá tôn giáo"
+      },
+      "type_source": "student",
+      "type_target": "religious_activity_in_school_premises",
+      "relation": "bị_cấm_tổ_chức_tham_gia_truyền_bá"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Các hành vi vi phạm đạo đức khác",
+        "activity_category": "Hành vi ứng xử",
+        "nature_description": "Không phù hợp với chuẩn mực đạo đức xã hội và văn hóa học đường",
+        "scope_of_violation": "Không giới hạn cụ thể, bao gồm các hành vi chưa được liệt kê"
+      },
+      "type_source": "student",
+      "type_target": "other_ethical_violation",
+      "relation": "bị_cấm"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Các hoạt động mang tính chất chính trị trái pháp luật",
+        "legality_status": "Trái pháp luật",
+        "activity_nature": "Hoạt động chính trị không được phép theo quy định",
+        "potential_consequence": "Ảnh hưởng đến an ninh chính trị, trật tự xã hội"
+      },
+      "type_source": "student",
+      "type_target": "illegal_political_activity",
+      "relation": "bị_cấm_thành_lập_tham_gia"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Các hoạt động tập thể mang danh nghĩa nhà trường khi chưa được Hiệu trưởng cho phép",
+        "authorization_requirement": "Sự cho phép của Hiệu trưởng",
+        "condition_for_prohibition": "Chưa được Hiệu trưởng đồng ý",
+        "representation_aspect": "Sử dụng danh nghĩa của nhà trường"
+      },
+      "type_source": "student",
+      "type_target": "unauthorized_school_affiliated_activity",
+      "relation": "bị_cấm_tổ_chức_tham_gia"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Bài viết, hình ảnh có nội dung xuyên tạc",
+        "content_type": "Xuyên tạc sự thật, thông tin sai lệch",
+        "medium_type": "Bài viết, hình ảnh",
+        "potential_impact": "Gây hiểu lầm, tổn hại uy tín, danh dự"
+      },
+      "type_source": "student",
+      "type_target": "defamatory_or_misleading_content",
+      "relation": "bị_cấm_đăng_tải_bình_luận_chia_sẻ"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Bài viết, hình ảnh có nội dung dung tục",
+        "content_type": "Dung tục, thiếu văn hóa, trái thuần phong mỹ tục",
+        "medium_type": "Bài viết, hình ảnh",
+        "potential_impact": "Ảnh hưởng tiêu cực đến văn hóa, đạo đức"
+      },
+      "type_source": "student",
+      "type_target": "obscene_or_vulgar_content",
+      "relation": "bị_cấm_đăng_tải_bình_luận_chia_sẻ"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Bài viết, hình ảnh xâm phạm quyền con người",
+        "content_type": "Vi phạm các quyền cơ bản của con người",
+        "medium_type": "Bài viết, hình ảnh",
+        "target_of_violation": "Cá nhân, nhóm người"
+      },
+      "type_source": "student",
+      "type_target": "human_rights_violating_content",
+      "relation": "bị_cấm_đăng_tải_bình_luận_chia_sẻ"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Bài viết, hình ảnh kích động biểu tình trái pháp luật",
+        "content_type": "Kêu gọi, cổ vũ, xúi giục tham gia biểu tình trái quy định pháp luật",
+        "medium_type": "Bài viết, hình ảnh",
+        "intended_action_incited": "Biểu tình trái pháp luật"
+      },
+      "type_source": "student",
+      "type_target": "content_inciting_illegal_protest",
+      "relation": "bị_cấm_đăng_tải_bình_luận_chia_sẻ"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Bài viết, hình ảnh gây rối",
+        "content_type": "Gây mất trật tự công cộng, bất ổn xã hội",
+        "medium_type": "Bài viết, hình ảnh",
+        "potential_impact": "Ảnh hưởng đến an ninh, trật tự"
+      },
+      "type_source": "student",
+      "type_target": "disruptive_or_disorderly_content",
+      "relation": "bị_cấm_đăng_tải_bình_luận_chia_sẻ"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học tại trường",
+        "obligation": "Tuân thủ nội quy",
+        "category": "Thành viên nhà trường"
+      },
+      "target": {
+        "name": "Bài viết, hình ảnh chống phá Đảng, Nhà nước",
+        "content_type": "Chống lại đường lối, chủ trương của Đảng, chính sách, pháp luật của Nhà nước",
+        "medium_type": "Bài viết, hình ảnh",
+        "target_of_opposition": "Đảng Cộng sản Việt Nam, Nhà nước Cộng hòa Xã hội Chủ nghĩa Việt Nam"
+      },
+      "type_source": "student",
+      "type_target": "anti_party_or_state_content",
+      "relation": "bị_cấm_đăng_tải_bình_luận_chia_sẻ"
     }
   ]
 }

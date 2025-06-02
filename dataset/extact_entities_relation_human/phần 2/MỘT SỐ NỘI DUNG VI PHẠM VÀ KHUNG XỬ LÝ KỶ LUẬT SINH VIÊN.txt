@@ -1,592 +1,691 @@
 {
-  "entities": [
-    {
-      "name": "học sinh/sinh viên",
-      "type": "person"
-    },
-    {
-      "name": "giờ học",
-      "type": "time"
-    },
-    {
-      "name": "giờ thực tập",
-      "type": "time"
-    },
-    {
-      "name": "điểm rèn luyện",
-      "type": "score_type"
-    },
-    {
-      "name": "thầy",
-      "type": "person"
-    },
-    {
-      "name": "cô giáo",
-      "type": "person"
-    },
-    {
-      "name": "CBVC nhà trường",
-      "type": "person"
-    },
-    {
-      "name": "khiển trách",
-      "type": "punishment"
-    },
-    {
-      "name": "buộc thôi học",
-      "type": "punishment"
-    },
-    {
-      "name": "thi",
-      "type": "activity"
-    },
-    {
-      "name": "kiểm tra",
-      "type": "activity"
-    },
-    {
-      "name": "tiểu luận",
-      "type": "academic_work"
-    },
-    {
-      "name": "đồ án",
-      "type": "academic_work"
-    },
-    {
-      "name": "khóa luận tốt nghiệp",
-      "type": "academic_work"
-    },
-    {
-      "name": "đình chỉ có thời hạn",
-      "type": "punishment"
-    },
-    {
-      "name": "cơ quan chức năng",
-      "type": "organization"
-    },
-    {
-      "name": "phòng thi",
-      "type": "location"
-    },
-    {
-      "name": "bậc Trung bình",
-      "type": "rating"
-    },
-    {
-      "name": "học phí",
-      "type": "fee"
-    },
-    {
-      "name": "bảo hiểm y tế",
-      "type": "fee"
-    },
-    {
-      "name": "KTX",
-      "type": "location"
-    },
-    {
-      "name": "tài sản",
-      "type": "property"
-    },
-    {
-      "name": "rượu",
-      "type": "substance"
-    },
-    {
-      "name": "bia",
-      "type": "substance"
-    },
-    {
-      "name": "thuốc lá",
-      "type": "substance"
-    },
-    {
-      "name": "phòng họp",
-      "type": "location"
-    },
-    {
-      "name": "phòng thí nghiệm",
-      "type": "location"
-    },
-    {
-      "name": "cảnh cáo",
-      "type": "punishment"
-    },
-    {
-      "name": "đánh bạc",
-      "type": "violation"
-    },
-    {
-      "name": "sản phẩm văn hóa đồi trụy",
-      "type": "prohibited_item"
-    },
-    {
-      "name": "hoạt động mê tín dị đoan",
-      "type": "prohibited_activity"
-    },
-    {
-      "name": "hoạt động tôn giáo trái phép",
-      "type": "prohibited_activity"
-    },
-    {
-      "name": "ma túy",
-      "type": "prohibited_substance"
-    },
-    {
-      "name": "mại dâm",
-      "type": "prohibited_activity"
-    },
-    {
-      "name": "vũ khí",
-      "type": "prohibited_item"
-    },
-    {
-      "name": "chất nổ",
-      "type": "prohibited_item"
-    },
-    {
-      "name": "hàng cấm",
-      "type": "prohibited_item"
-    },
-    {
-      "name": "phần tử xấu",
-      "type": "person"
-    },
-    {
-      "name": "truyền đơn",
-      "type": "document"
-    },
-    {
-      "name": "áp phích",
-      "type": "document"
-    },
-    {
-      "name": "biểu tình",
-      "type": "prohibited_activity"
-    },
-    {
-      "name": "tụ tập đông người",
-      "type": "prohibited_activity"
-    },
-    {
-      "name": "khiếu kiện",
-      "type": "activity"
-    },
-    {
-      "name": "mạng Internet",
-      "type": "platform"
-    },
-    {
-      "name": "Đảng",
-      "type": "organization"
-    },
-    {
-      "name": "Nhà nước",
-      "type": "organization"
-    },
-    {
-      "name": "an ninh quốc gia",
-      "type": "concept"
-    },
-    {
-      "name": "an toàn giao thông",
-      "type": "regulation"
-    },
-    {
-      "name": "hồ sơ",
-      "type": "document"
-    },
-    {
-      "name": "văn bằng",
-      "type": "document"
-    },
-    {
-      "name": "chứng chỉ",
-      "type": "document"
-    },
-    {
-      "name": "nhà trường",
-      "type": "organization"
-    }
-  ],
   "relationships": [
     {
-      "source": "học sinh/sinh viên",
-      "target": "giờ học",
-      "type_source": "person",
-      "type_target": "time",
-      "relation": "đến_muộn"
+      "source": {
+        "name": "Đi học, đi thực tập muộn hoặc nghỉ học không có lý do chính đáng",
+        "context_note": "Không có lý do chính đáng",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Khiển trách",
+        "point_penalty": "5-10 điểm rèn luyện"
+      },
+      "type_source": "attendance_violation",
+      "type_target": "disciplinary_measure",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "giờ thực tập",
-      "type_source": "person",
-      "type_target": "time",
-      "relation": "đến_muộn"
+      "source": {
+        "name": "Mất trật tự, làm việc riêng trong giờ học, giờ thực tập hoặc tự học",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Khiển trách",
+        "point_penalty": "5-10 điểm rèn luyện"
+      },
+      "type_source": "disruptive_behavior",
+      "type_target": "disciplinary_measure",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "điểm rèn luyện",
-      "type_source": "person",
-      "type_target": "score_type",
-      "relation": "bị_trừ"
+      "source": {
+        "name": "Vô lễ với thầy cô giáo, cán bộ viên chức nhà trường",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Khiển trách"
+      },
+      "type_source": "disrespectful_conduct",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "thầy",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "vô_lễ_với"
+      "source": {
+        "name": "Vô lễ với thầy cô giáo, cán bộ viên chức nhà trường",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Buộc thôi học"
+      },
+      "type_source": "disrespectful_conduct",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "cô giáo",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "vô_lễ_với"
+      "source": {
+        "name": "Nhờ người khác học thay",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Khiển trách"
+      },
+      "type_source": "academic_dishonesty",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "CBVC nhà trường",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "vô_lễ_với"
+      "source": {
+        "name": "Nhờ người khác học thay",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Buộc thôi học"
+      },
+      "type_source": "academic_dishonesty",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "khiển trách",
-      "type_source": "person",
-      "type_target": "punishment",
-      "relation": "bị_xử_lý"
+      "source": {
+        "name": "Gian lận thi cử hoặc học thuật hộ",
+        "description_violation": "Thi, kiểm tra thay hoặc nhờ người khác thi, kiểm tra thay; làm bài, nộp bài, kiểm tra, tiểu luận, đồ án, khóa luận tốt nghiệp hộ",
+        "occurrence_frequency": "Lần 1"
+      },
+      "target": {
+        "name": "Bị xử lý",
+        "consequence_detail": "Hình thức xử lý cụ thể không được nêu rõ"
+      },
+      "type_source": "academic_dishonesty",
+      "type_target": "unspecified_disciplinary_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "buộc thôi học",
-      "type_source": "person",
-      "type_target": "punishment",
-      "relation": "bị_xử_lý"
+      "source": {
+        "name": "Gian lận thi cử hoặc học thuật hộ",
+        "description_violation": "Thi, kiểm tra thay hoặc nhờ người khác thi, kiểm tra thay; làm bài, nộp bài, kiểm tra, tiểu luận, đồ án, khóa luận tốt nghiệp hộ",
+        "occurrence_frequency": "Lần 2"
+      },
+      "target": {
+        "name": "Bị xử lý nghiêm trọng hơn",
+        "consequence_detail": "Mức độ xử lý tăng nặng so với lần 1"
+      },
+      "type_source": "academic_dishonesty",
+      "type_target": "aggravated_disciplinary_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "thi",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "thực_hiện"
+      "source": {
+        "name": "Tổ chức gian lận thi cử hoặc học thuật hộ",
+        "description_violation": "Tổ chức thi, kiểm tra thay; tổ chức làm bài tiểu luận, đồ án, khóa luận tốt nghiệp hộ",
+        "occurrence_frequency": "Lần 1"
+      },
+      "target": {
+        "name": "Bị xử lý",
+        "consequence_detail": "Hình thức xử lý cụ thể không được nêu rõ"
+      },
+      "type_source": "organizing_academic_dishonesty",
+      "type_target": "unspecified_disciplinary_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "kiểm tra",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "thực_hiện"
+      "source": {
+        "name": "Tổ chức gian lận thi cử hoặc học thuật hộ",
+        "description_violation": "Tổ chức thi, kiểm tra thay; tổ chức làm bài tiểu luận, đồ án, khóa luận tốt nghiệp hộ",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "organizing_academic_dishonesty",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "tiểu luận",
-      "type_source": "person",
-      "type_target": "academic_work",
-      "relation": "làm"
+      "source": {
+        "name": "Gian lận trong thi cử hoặc không nộp bài",
+        "description_violation": "Mang tài liệu vào phòng thi, phòng kiểm tra để gian lận; ném tài liệu vào phòng thi, vứt bài thi, bài kiểm tra; có hành vi gian lận khác trong thi, kiểm tra hoặc cố tình không nộp bài thi, bài kiểm tra"
+      },
+      "target": {
+        "name": "Hạ điểm rèn luyện",
+        "point_penalty": "Xuống mức Trung bình"
+      },
+      "type_source": "academic_dishonesty",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "đồ án",
-      "type_source": "person",
-      "type_target": "academic_work",
-      "relation": "làm"
+      "source": {
+        "name": "Không đóng học phí, bảo hiểm y tế",
+        "context_note": "Không có lý do chính đáng",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Nhắc nhở"
+      },
+      "type_source": "financial_violation",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "khóa luận tốt nghiệp",
-      "type_source": "person",
-      "type_target": "academic_work",
-      "relation": "làm"
+      "source": {
+        "name": "Không đóng học phí, bảo hiểm y tế",
+        "context_note": "Không có lý do chính đáng",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Khiển trách"
+      },
+      "type_source": "financial_violation",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "đình chỉ có thời hạn",
-      "type_source": "person",
-      "type_target": "punishment",
-      "relation": "bị_xử_lý"
+      "source": {
+        "name": "Không đóng học phí, bảo hiểm y tế",
+        "context_note": "Không có lý do chính đáng",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Buộc thôi học"
+      },
+      "type_source": "financial_violation",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "cơ quan chức năng",
-      "target": "học sinh/sinh viên",
-      "type_source": "organization",
-      "type_target": "person",
-      "relation": "xử_lý"
+      "source": {
+        "name": "Làm hư hỏng tài sản trường/ký túc xá",
+        "location_context": "Trong ký túc xá và các tài sản khác của trường",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Khiển trách"
+      },
+      "type_source": "property_damage",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "phòng thi",
-      "type_source": "person",
-      "type_target": "location",
-      "relation": "mang_tài_liệu_vào"
+      "source": {
+        "name": "Làm hư hỏng tài sản trường/ký túc xá",
+        "location_context": "Trong ký túc xá và các tài sản khác của trường",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Buộc thôi học"
+      },
+      "type_source": "property_damage",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "bậc Trung bình",
-      "type_source": "person",
-      "type_target": "rating",
-      "relation": "bị_hạ_điểm_xuống"
+      "source": {
+        "name": "Làm hư hỏng tài sản trường/ký túc xá",
+        "location_context": "Trong ký túc xá và các tài sản khác của trường",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Bồi thường thiệt hại",
+        "restitution_info": "Phải bồi thường thiệt hại"
+      },
+      "type_source": "property_damage",
+      "type_target": "restitution_obligation",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "học phí",
-      "type_source": "person",
-      "type_target": "fee",
-      "relation": "chậm_nộp"
+      "source": {
+        "name": "Uống rượu, bia trong giờ học hoặc say khi đến trường",
+        "occurrence_frequency": "Lần 1",
+        "context_note": "Trong giờ học; say rượu, bia khi đến trường"
+      },
+      "target": {
+        "name": "Bị xử lý",
+        "consequence_detail": "Hình thức xử lý cụ thể không được nêu rõ"
+      },
+      "type_source": "substance_abuse",
+      "type_target": "unspecified_disciplinary_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "bảo hiểm y tế",
-      "type_source": "person",
-      "type_target": "fee",
-      "relation": "chậm_nộp"
+      "source": {
+        "name": "Hút thuốc lá nơi cấm",
+        "context_note": "Trong giờ học, trong phòng học, phòng thi nghiêm hoặc tại những nơi cấm hút thuốc theo quy định",
+        "occurrence_frequency": "Từ lần 3 trở lên"
+      },
+      "target": {
+        "name": "Khiển trách"
+      },
+      "type_source": "regulatory_violation",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "KTX",
-      "type_source": "person",
-      "type_target": "location",
-      "relation": "ở_trong"
+      "source": {
+        "name": "Hút thuốc lá nơi cấm",
+        "context_note": "Trong giờ học, trong phòng học, phòng thi nghiêm hoặc tại những nơi cấm hút thuốc theo quy định",
+        "occurrence_frequency": "Từ lần 3 trở lên"
+      },
+      "target": {
+        "name": "Cảnh cáo"
+      },
+      "type_source": "regulatory_violation",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "tài sản",
-      "type_source": "person",
-      "type_target": "property",
-      "relation": "làm_hư_hỏng"
+      "source": {
+        "name": "Đánh bạc",
+        "description_violation": "Dưới mọi hình thức",
+        "occurrence_frequency": "Lần 1"
+      },
+      "target": {
+        "name": "Bị xử lý",
+        "consequence_detail": "Hình thức xử lý cụ thể không được nêu rõ"
+      },
+      "type_source": "gambling",
+      "type_target": "unspecified_disciplinary_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "cảnh cáo",
-      "type_source": "person",
-      "type_target": "punishment",
-      "relation": "bị_xử_lý"
+      "source": {
+        "name": "Đánh bạc",
+        "description_violation": "Dưới mọi hình thức",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "gambling",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "rượu",
-      "type_source": "person",
-      "type_target": "substance",
-      "relation": "sử_dụng"
+      "source": {
+        "name": "Hoạt động văn hóa/tôn giáo trái phép",
+        "description_violation": "Tàng trữ, lưu hành, truy cập, sử dụng sản phẩm văn hóa đồi trụy; hoặc tham gia các hoạt động mê tín dị đoan, hoạt động tôn giáo trái pháp luật",
+        "occurrence_frequency": "Lần 1"
+      },
+      "target": {
+        "name": "Bị xử lý",
+        "consequence_detail": "Hình thức xử lý cụ thể không được nêu rõ"
+      },
+      "type_source": "illegal_content_activity",
+      "type_target": "unspecified_disciplinary_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "bia",
-      "type_source": "person",
-      "type_target": "substance",
-      "relation": "sử_dụng"
+      "source": {
+        "name": "Hoạt động văn hóa/tôn giáo trái phép",
+        "description_violation": "Tàng trữ, lưu hành, truy cập, sử dụng sản phẩm văn hóa đồi trụy; hoặc tham gia các hoạt động mê tín dị đoan, hoạt động tôn giáo trái pháp luật",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "illegal_content_activity",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "thuốc lá",
-      "type_source": "person",
-      "type_target": "substance",
-      "relation": "hút"
+      "source": {
+        "name": "Liên quan ma túy (buôn bán, vận chuyển, tàng trữ, lôi kéo)",
+        "description_violation": "Buôn bán, vận chuyển, tàng trữ, lôi kéo người khác sử dụng ma túy",
+        "occurrence_frequency": "Lần 1"
+      },
+      "target": {
+        "name": "Bị xử lý",
+        "consequence_detail": "Hình thức xử lý cụ thể không được nêu rõ"
+      },
+      "type_source": "drug_offense",
+      "type_target": "unspecified_disciplinary_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "thuốc lá",
-      "target": "giờ học",
-      "type_source": "substance",
-      "type_target": "time",
-      "relation": "bị_cấm_trong"
+      "source": {
+        "name": "Liên quan ma túy (buôn bán, vận chuyển, tàng trữ, lôi kéo)",
+        "description_violation": "Buôn bán, vận chuyển, tàng trữ, lôi kéo người khác sử dụng ma túy",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "drug_offense",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "thuốc lá",
-      "target": "phòng họp",
-      "type_source": "substance",
-      "type_target": "location",
-      "relation": "bị_cấm_trong"
+      "source": {
+        "name": "Sử dụng ma túy"
+      },
+      "target": {
+        "name": "Bị xử lý kỷ luật",
+        "consequence_detail": "Đối với sinh viên liên quan đến ma túy"
+      },
+      "type_source": "drug_offense",
+      "type_target": "disciplinary_measure",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "thuốc lá",
-      "target": "phòng thí nghiệm",
-      "type_source": "substance",
-      "type_target": "location",
-      "relation": "bị_cấm_trong"
+      "source": {
+        "name": "Chứa chấp, môi giới mại dâm"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "prostitution_offense",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "đánh bạc",
-      "type_source": "person",
-      "type_target": "violation",
-      "relation": "thực_hiện"
+      "source": {
+        "name": "Trộm cắp hoặc liên quan tài sản trộm cắp",
+        "description_violation": "Lấy cắp tài sản, chứa chấp, tiêu thụ tài sản do lấy cắp mà có",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Cảnh cáo"
+      },
+      "type_source": "theft",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "sản phẩm văn hóa đồi trụy",
-      "type_source": "person",
-      "type_target": "prohibited_item",
-      "relation": "tàng_trữ"
+      "source": {
+        "name": "Trộm cắp hoặc liên quan tài sản trộm cắp",
+        "description_violation": "Lấy cắp tài sản, chứa chấp, tiêu thụ tài sản do lấy cắp mà có",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Buộc thôi học"
+      },
+      "type_source": "theft",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "hoạt động mê tín dị đoan",
-      "type_source": "person",
-      "type_target": "prohibited_activity",
-      "relation": "tham_gia"
+      "source": {
+        "name": "Trộm cắp hoặc liên quan tài sản trộm cắp",
+        "description_violation": "Lấy cắp tài sản, chứa chấp, tiêu thụ tài sản do lấy cắp mà có",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "theft",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "hoạt động tôn giáo trái phép",
-      "type_source": "person",
-      "type_target": "prohibited_activity",
-      "relation": "tham_gia"
+      "source": {
+        "name": "Liên quan vũ khí, chất nổ, hàng cấm",
+        "description_violation": "Chứa chấp, buôn bán vũ khí, chất nổ và hàng cấm theo quy định của Nhà nước",
+        "occurrence_frequency": "Lần 1"
+      },
+      "target": {
+        "name": "Bị xử lý",
+        "consequence_detail": "Hình thức xử lý cụ thể không được nêu rõ"
+      },
+      "type_source": "weapon_offense",
+      "type_target": "unspecified_disciplinary_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "ma túy",
-      "type_source": "person",
-      "type_target": "prohibited_substance",
-      "relation": "buôn_bán"
+      "source": {
+        "name": "Liên quan vũ khí, chất nổ, hàng cấm",
+        "description_violation": "Chứa chấp, buôn bán vũ khí, chất nổ và hàng cấm theo quy định của Nhà nước",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "weapon_offense",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "ma túy",
-      "type_source": "person",
-      "type_target": "prohibited_substance",
-      "relation": "sử_dụng"
+      "source": {
+        "name": "Đưa phần tử xấu vào trường/ký túc xá",
+        "description_violation": "Gây ảnh hưởng xấu đến an ninh, trật tự trong nhà trường",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Cảnh cáo"
+      },
+      "type_source": "security_breach",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "mại dâm",
-      "type_source": "person",
-      "type_target": "prohibited_activity",
-      "relation": "môi_giới"
+      "source": {
+        "name": "Đưa phần tử xấu vào trường/ký túc xá",
+        "description_violation": "Gây ảnh hưởng xấu đến an ninh, trật tự trong nhà trường",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Buộc thôi học"
+      },
+      "type_source": "security_breach",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "vũ khí",
-      "type_source": "person",
-      "type_target": "prohibited_item",
-      "relation": "buôn_bán"
+      "source": {
+        "name": "Đánh nhau hoặc tổ chức/tham gia đánh nhau",
+        "description_violation": "Đánh nhau, tổ chức hoặc tham gia tổ chức đánh nhau",
+        "occurrence_frequency": "Lần 1"
+      },
+      "target": {
+        "name": "Bị xử lý",
+        "consequence_detail": "Hình thức xử lý cụ thể không được nêu rõ"
+      },
+      "type_source": "physical_assault",
+      "type_target": "unspecified_disciplinary_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "chất nổ",
-      "type_source": "person",
-      "type_target": "prohibited_item",
-      "relation": "buôn_bán"
+      "source": {
+        "name": "Đánh nhau hoặc tổ chức/tham gia đánh nhau",
+        "description_violation": "Đánh nhau, tổ chức hoặc tham gia tổ chức đánh nhau",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "physical_assault",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "hàng cấm",
-      "type_source": "person",
-      "type_target": "prohibited_item",
-      "relation": "buôn_bán"
+      "source": {
+        "name": "Kích động/lôi kéo hoạt động trái pháp luật",
+        "description_violation": "Kích động, lôi kéo người khác biểu tình, viết truyền đơn, áp phích trái pháp luật",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "incitement_offense",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "phần tử xấu",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "đưa_vào"
+      "source": {
+        "name": "Tham gia hoạt động trái pháp luật",
+        "description_violation": "Tham gia biểu tình, tụ tập đông người; khiếu kiện trái quy định của pháp luật",
+        "occurrence_frequency": "Lần 1"
+      },
+      "target": {
+        "name": "Bị xử lý",
+        "consequence_detail": "Hình thức xử lý cụ thể không được nêu rõ"
+      },
+      "type_source": "illegal_assembly",
+      "type_target": "unspecified_disciplinary_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "phần tử xấu",
-      "target": "KTX",
-      "type_source": "person",
-      "type_target": "location",
-      "relation": "được_đưa_vào"
+      "source": {
+        "name": "Tham gia hoạt động trái pháp luật",
+        "description_violation": "Tham gia biểu tình, tụ tập đông người; khiếu kiện trái quy định của pháp luật",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "illegal_assembly",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "truyền đơn",
-      "type_source": "person",
-      "type_target": "document",
-      "relation": "viết"
+      "source": {
+        "name": "Đăng tải/chia sẻ nội dung xấu trên Internet",
+        "description_violation": "Đăng tải, bình luận, chia sẻ bài viết, hình ảnh có nội dung tục tĩu, bạo lực, đồi trụy, xuyên tạc an ninh quốc gia, chống phá Đảng và Nhà nước, xúc phạm, vu khống tổ chức/cá nhân trên mạng Internet",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Khiển trách"
+      },
+      "type_source": "online_misconduct",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "áp phích",
-      "type_source": "person",
-      "type_target": "document",
-      "relation": "viết"
+      "source": {
+        "name": "Đăng tải/chia sẻ nội dung xấu trên Internet",
+        "description_violation": "Đăng tải, bình luận, chia sẻ bài viết, hình ảnh có nội dung tục tĩu, bạo lực, đồi trụy, xuyên tạc an ninh quốc gia, chống phá Đảng và Nhà nước, xúc phạm, vu khống tổ chức/cá nhân trên mạng Internet",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Buộc thôi học"
+      },
+      "type_source": "online_misconduct",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "biểu tình",
-      "type_source": "person",
-      "type_target": "prohibited_activity",
-      "relation": "tham_gia"
+      "source": {
+        "name": "Đăng tải/chia sẻ nội dung xấu trên Internet",
+        "description_violation": "Đăng tải, bình luận, chia sẻ bài viết, hình ảnh có nội dung tục tĩu, bạo lực, đồi trụy, xuyên tạc an ninh quốc gia, chống phá Đảng và Nhà nước, xúc phạm, vu khống tổ chức/cá nhân trên mạng Internet",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "online_misconduct",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "tụ tập đông người",
-      "type_source": "person",
-      "type_target": "prohibited_activity",
-      "relation": "tham_gia"
+      "source": {
+        "name": "Quấy rối, dâm ô, xâm phạm nhân phẩm/đời tư",
+        "description_violation": "Có hành động quấy rối, dâm ô, xâm phạm nhân phẩm, đời tư của người khác",
+        "severity_level": "Nghiêm trọng"
+      },
+      "target": {
+        "name": "Chuyển cho cơ quan chức năng xử lý",
+        "legal_referral_info": "Nhà trường sẽ chuyển cho cơ quan chức năng xử lý theo quy định của pháp luật"
+      },
+      "type_source": "harassment",
+      "type_target": "legal_referral",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "khiếu kiện",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "thực_hiện"
+      "source": {
+        "name": "Vi phạm quy định an toàn giao thông",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Khiển trách"
+      },
+      "type_source": "traffic_offense",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "mạng Internet",
-      "type_source": "person",
-      "type_target": "platform",
-      "relation": "sử_dụng"
+      "source": {
+        "name": "Vi phạm quy định an toàn giao thông",
+        "severity_assessment": "Tùy vào mức độ vi phạm"
+      },
+      "target": {
+        "name": "Buộc thôi học"
+      },
+      "type_source": "traffic_offense",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "Đảng",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "chống_phá"
+      "source": {
+        "name": "Sử dụng hồ sơ, văn bằng, chứng chỉ giả",
+        "description_violation": "Làm điều kiện trúng tuyển hoặc điều kiện tốt nghiệp",
+        "occurrence_frequency": "Lần 1"
+      },
+      "target": {
+        "name": "Thu hồi, hủy bỏ văn bằng tốt nghiệp",
+        "consequence_detail": "Văn bằng tốt nghiệp nếu đã được cấp sẽ bị thu hồi, hủy bỏ"
+      },
+      "type_source": "document_fraud",
+      "type_target": "degree_revocation_action",
+      "relation": "dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "Nhà nước",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "chống_phá" 
+      "source": {
+        "name": "Các vi phạm khác",
+        "severity_assessment": "Tùy vào mức độ, nhà trường sẽ xem xét"
+      },
+      "target": {
+        "name": "Nhắc nhở"
+      },
+      "type_source": "other_violation",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "an ninh quốc gia",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "xâm_phạm"
+      "source": {
+        "name": "Các vi phạm khác",
+        "severity_assessment": "Tùy vào mức độ, nhà trường sẽ xem xét"
+      },
+      "target": {
+        "name": "Phê bình"
+      },
+      "type_source": "other_violation",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "an toàn giao thông",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "vi_phạm"
+      "source": {
+        "name": "Các vi phạm khác",
+        "severity_assessment": "Tùy vào mức độ, nhà trường sẽ xem xét"
+      },
+      "target": {
+        "name": "Trừ Điểm rèn luyện"
+      },
+      "type_source": "other_violation",
+      "type_target": "point_penalty_action",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "hồ sơ",
-      "type_source": "person",
-      "type_target": "document",
-      "relation": "sử_dụng"
+      "source": {
+        "name": "Các vi phạm khác",
+        "severity_assessment": "Tùy vào mức độ, nhà trường sẽ xem xét"
+      },
+      "target": {
+        "name": "Khiển trách"
+      },
+      "type_source": "other_violation",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     },
     {
-      "source": "học sinh/sinh viên",
-      "target": "văn bằng",
-      "type_source": "person",
-      "type_target": "document",
-      "relation": "sử_dụng"
-    },
-    {
-      "source": "học sinh/sinh viên",
-      "target": "chứng chỉ",
-      "type_source": "person",
-      "type_target": "document",
-      "relation": "sử_dụng"
-    },
-    {
-      "source": "nhà trường",
-      "target": "học sinh/sinh viên",
-      "type_source": "organization",
-      "type_target": "person",
-      "relation": "xem_xét"
+      "source": {
+        "name": "Các vi phạm khác",
+        "severity_assessment": "Tùy vào mức độ, nhà trường sẽ xem xét"
+      },
+      "target": {
+        "name": "Buộc thôi học"
+      },
+      "type_source": "other_violation",
+      "type_target": "disciplinary_measure",
+      "relation": "có_thể_dẫn_đến"
     }
   ]
 }

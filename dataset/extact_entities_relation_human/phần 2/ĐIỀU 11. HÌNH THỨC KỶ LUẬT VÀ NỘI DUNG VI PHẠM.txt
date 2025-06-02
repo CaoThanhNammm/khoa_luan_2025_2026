@@ -1,350 +1,276 @@
 {
-  "entities": [
-    {
-      "name": "ĐIỀU 11",
-      "type": "article"
-    },
-    {
-      "name": "sinh viên",
-      "type": "role"
-    },
-    {
-      "name": "nhắc nhở",
-      "type": "disciplinary_action"
-    },
-    {
-      "name": "phê bình",
-      "type": "disciplinary_action"
-    },
-    {
-      "name": "Khiển trách",
-      "type": "disciplinary_action"
-    },
-    {
-      "name": "vi phạm lần đầu mức độ nhẹ",
-      "type": "violation_condition"
-    },
-    {
-      "name": "Cảnh cáo",
-      "type": "disciplinary_action"
-    },
-    {
-      "name": "tái phạm sau khiển trách",
-      "type": "violation_condition"
-    },
-    {
-      "name": "vi phạm mức độ nhẹ thường xuyên",
-      "type": "violation_condition"
-    },
-    {
-      "name": "vi phạm lần đầu mức độ nghiêm trọng",
-      "type": "violation_condition"
-    },
-    {
-      "name": "Đình chỉ học tập có thời hạn",
-      "type": "disciplinary_action"
-    },
-    {
-      "name": "vi phạm kỷ luật khi đang bị cảnh cáo",
-      "type": "violation_condition"
-    },
-    {
-      "name": "vi phạm nghiêm trọng các hành vi sinh viên không được làm",
-      "type": "violation_condition"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "role"
-    },
-    {
-      "name": "quy chế đào tạo",
-      "type": "regulation"
-    },
-    {
-      "name": "đình chỉ một học kỳ",
-      "type": "disciplinary_measure"
-    },
-    {
-      "name": "đình chỉ một năm học",
-      "type": "disciplinary_measure"
-    },
-    {
-      "name": "Buộc thôi học",
-      "type": "disciplinary_action"
-    },
-    {
-      "name": "vi phạm kỷ luật khi đang bị đình chỉ học tập",
-      "type": "violation_condition"
-    },
-    {
-      "name": "vi phạm lần đầu mức độ đặc biệt nghiêm trọng",
-      "type": "violation_condition"
-    },
-    {
-      "name": "cơ sở giáo dục đại học",
-      "type": "organization"
-    },
-    {
-      "name": "xã hội",
-      "type": "society"
-    },
-    {
-      "name": "vi phạm pháp luật bị xử phạt tù giam",
-      "type": "violation_condition"
-    },
-    {
-      "name": "hồ sơ quản lý sinh viên",
-      "type": "document"
-    },
-    {
-      "name": "gia đình sinh viên",
-      "type": "group"
-    },
-    {
-      "name": "Nhà trường",
-      "type": "organization"
-    },
-    {
-      "name": "địa phương",
-      "type": "location"
-    },
-    {
-      "name": "khung xử lý kỷ luật",
-      "type": "guideline"
-    },
-    {
-      "name": "Phụ lục",
-      "type": "document_section"
-    },
-    {
-      "name": "Quy chế này",
-      "type": "regulation"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "nhắc nhở",
-      "type_source": "role",
-      "type_target": "disciplinary_action",
-      "relation": "có_thể_bị"
-    },
-    {
-      "source": "sinh viên",
-      "target": "phê bình",
-      "type_source": "role",
-      "type_target": "disciplinary_action",
-      "relation": "có_thể_bị"
-    },
-    {
-      "source": "Khiển trách",
-      "target": "sinh viên",
+      "source": {
+        "name": "Khiển trách",
+        "entity_type": "disciplinary_action",
+        "application_condition": "áp dụng đối với sinh viên có hành vi vi phạm lần đầu nhưng ở mức độ nhẹ"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "entity_type": "person",
+        "violation_status": "có hành vi vi phạm lần đầu nhưng ở mức độ nhẹ"
+      },
       "type_source": "disciplinary_action",
-      "type_target": "role",
+      "type_target": "person",
       "relation": "áp_dụng_cho"
     },
     {
-      "source": "Khiển trách",
-      "target": "vi phạm lần đầu mức độ nhẹ",
+      "source": {
+        "name": "Cảnh cáo",
+        "entity_type": "disciplinary_action",
+        "application_condition": "áp dụng đối với sinh viên đã bị khiển trách mà tái phạm hoặc vi phạm ở mức độ nhẹ nhưng hành vi vi phạm có tính chất thường xuyên hoặc mới vi phạm lần đầu nhưng mức độ nghiêm trọng"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "entity_type": "person",
+        "violation_status": "đã bị khiển trách mà tái phạm, hoặc vi phạm mức độ nhẹ (thường xuyên), hoặc vi phạm lần đầu (mức độ nghiêm trọng)"
+      },
       "type_source": "disciplinary_action",
-      "type_target": "violation_condition",
-      "relation": "áp_dụng_khi"
-    },
-    {
-      "source": "Cảnh cáo",
-      "target": "sinh viên",
-      "type_source": "disciplinary_action",
-      "type_target": "role",
+      "type_target": "person",
       "relation": "áp_dụng_cho"
     },
     {
-      "source": "Cảnh cáo",
-      "target": "tái phạm sau khiển trách",
+      "source": {
+        "name": "Đình chỉ học tập có thời hạn",
+        "entity_type": "disciplinary_action",
+        "application_condition": "áp dụng đối với những sinh viên đang trong thời gian bị cảnh cáo mà vẫn vi phạm kỷ luật hoặc vi phạm nghiêm trọng các hành vi sinh viên không được làm",
+        "duration_determination": "thời hạn do Hiệu trưởng quyết định theo quy chế đào tạo",
+        "duration_options": "đình chỉ một học kỳ, đình chỉ một năm học"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "entity_type": "person",
+        "violation_status": "đang trong thời gian bị cảnh cáo mà vẫn vi phạm kỷ luật hoặc vi phạm nghiêm trọng các hành vi sinh viên không được làm"
+      },
       "type_source": "disciplinary_action",
-      "type_target": "violation_condition",
-      "relation": "áp_dụng_khi"
-    },
-    {
-      "source": "Cảnh cáo",
-      "target": "vi phạm mức độ nhẹ thường xuyên",
-      "type_source": "disciplinary_action",
-      "type_target": "violation_condition",
-      "relation": "áp_dụng_khi"
-    },
-    {
-      "source": "Cảnh cáo",
-      "target": "vi phạm lần đầu mức độ nghiêm trọng",
-      "type_source": "disciplinary_action",
-      "type_target": "violation_condition",
-      "relation": "áp_dụng_khi"
-    },
-    {
-      "source": "Đình chỉ học tập có thời hạn",
-      "target": "sinh viên",
-      "type_source": "disciplinary_action",
-      "type_target": "role",
+      "type_target": "person",
       "relation": "áp_dụng_cho"
     },
     {
-      "source": "Đình chỉ học tập có thời hạn",
-      "target": "vi phạm kỷ luật khi đang bị cảnh cáo",
-      "type_source": "disciplinary_action",
-      "type_target": "violation_condition",
-      "relation": "áp_dụng_khi"
-    },
-    {
-      "source": "Đình chỉ học tập có thời hạn",
-      "target": "vi phạm nghiêm trọng các hành vi sinh viên không được làm",
-      "type_source": "disciplinary_action",
-      "type_target": "violation_condition",
-      "relation": "áp_dụng_khi"
-    },
-    {
-      "source": "Hiệu trưởng",
-      "target": "Đình chỉ học tập có thời hạn",
-      "type_source": "role",
-      "type_target": "disciplinary_action",
-      "relation": "quyết_định_thời_hạn"
-    },
-    {
-      "source": "Hiệu trưởng",
-      "target": "quy chế đào tạo",
-      "type_source": "role",
-      "type_target": "regulation",
+      "source": {
+        "name": "Hiệu trưởng",
+        "entity_type": "person",
+        "responsibility": "quyết định thời hạn đình chỉ học tập",
+        "decision_basis": "quy chế đào tạo"
+      },
+      "target": {
+        "name": "Quy chế đào tạo",
+        "entity_type": "document",
+        "purpose": "cung cấp căn cứ cho quyết định thời hạn đình chỉ học tập"
+      },
+      "type_source": "person",
+      "type_target": "document",
       "relation": "căn_cứ_vào"
     },
     {
-      "source": "Đình chỉ học tập có thời hạn",
-      "target": "đình chỉ một học kỳ",
+      "source": {
+        "name": "Buộc thôi học",
+        "entity_type": "disciplinary_action",
+        "application_condition": "áp dụng đối với sinh viên đang trong thời gian bị đình chỉ học tập mà vẫn tiếp tục vi phạm kỷ luật hoặc vi phạm lần đầu nhưng có tính chất và mức độ vi phạm đặc biệt nghiêm trọng, gây ảnh hưởng xấu đến cơ sở giáo dục đại học và xã hội; vi phạm pháp luật bị xử phạt tù giam"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "entity_type": "person",
+        "violation_status": "đang trong thời gian bị đình chỉ học tập mà vẫn tiếp tục vi phạm kỷ luật, hoặc vi phạm lần đầu đặc biệt nghiêm trọng, hoặc vi phạm pháp luật bị xử phạt tù giam"
+      },
       "type_source": "disciplinary_action",
-      "type_target": "disciplinary_measure",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Đình chỉ học tập có thời hạn",
-      "target": "đình chỉ một năm học",
-      "type_source": "disciplinary_action",
-      "type_target": "disciplinary_measure",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Buộc thôi học",
-      "target": "sinh viên",
-      "type_source": "disciplinary_action",
-      "type_target": "role",
+      "type_target": "person",
       "relation": "áp_dụng_cho"
     },
     {
-      "source": "Buộc thôi học",
-      "target": "vi phạm kỷ luật khi đang bị đình chỉ học tập",
+      "source": {
+        "name": "Cảnh cáo",
+        "entity_type": "disciplinary_action",
+        "administrative_procedure": "được lưu vào hồ sơ quản lý sinh viên"
+      },
+      "target": {
+        "name": "Hồ sơ quản lý sinh viên",
+        "entity_type": "record",
+        "record_content": "hình thức kỷ luật của sinh viên từ cảnh cáo trở lên"
+      },
       "type_source": "disciplinary_action",
-      "type_target": "violation_condition",
-      "relation": "áp_dụng_khi"
+      "type_target": "record",
+      "relation": "được_lưu_vào"
     },
     {
-      "source": "Buộc thôi học",
-      "target": "vi phạm lần đầu mức độ đặc biệt nghiêm trọng",
+      "source": {
+        "name": "Đình chỉ học tập có thời hạn",
+        "entity_type": "disciplinary_action",
+        "administrative_procedure": "được lưu vào hồ sơ quản lý sinh viên"
+      },
+      "target": {
+        "name": "Hồ sơ quản lý sinh viên",
+        "entity_type": "record",
+        "record_content": "hình thức kỷ luật của sinh viên từ cảnh cáo trở lên"
+      },
       "type_source": "disciplinary_action",
-      "type_target": "violation_condition",
-      "relation": "áp_dụng_khi"
+      "type_target": "record",
+      "relation": "được_lưu_vào"
     },
     {
-      "source": "Buộc thôi học",
-      "target": "vi phạm pháp luật bị xử phạt tù giam",
+      "source": {
+        "name": "Buộc thôi học",
+        "entity_type": "disciplinary_action",
+        "administrative_procedure": "được lưu vào hồ sơ quản lý sinh viên"
+      },
+      "target": {
+        "name": "Hồ sơ quản lý sinh viên",
+        "entity_type": "record",
+        "record_content": "hình thức kỷ luật của sinh viên từ cảnh cáo trở lên"
+      },
       "type_source": "disciplinary_action",
-      "type_target": "violation_condition",
-      "relation": "áp_dụng_khi"
+      "type_target": "record",
+      "relation": "được_lưu_vào"
     },
     {
-      "source": "vi phạm lần đầu mức độ đặc biệt nghiêm trọng",
-      "target": "cơ sở giáo dục đại học",
-      "type_source": "violation_condition",
+      "source": {
+        "name": "Cảnh cáo",
+        "entity_type": "disciplinary_action",
+        "notification_procedure": "thông báo cho gia đình sinh viên"
+      },
+      "target": {
+        "name": "Gia đình sinh viên",
+        "entity_type": "group",
+        "information_recipient_type": "gia đình của sinh viên bị kỷ luật"
+      },
+      "type_source": "disciplinary_action",
+      "type_target": "group",
+      "relation": "thông_báo_cho"
+    },
+    {
+      "source": {
+        "name": "Đình chỉ học tập có thời hạn",
+        "entity_type": "disciplinary_action",
+        "notification_procedure": "thông báo cho gia đình sinh viên"
+      },
+      "target": {
+        "name": "Gia đình sinh viên",
+        "entity_type": "group",
+        "information_recipient_type": "gia đình của sinh viên bị kỷ luật"
+      },
+      "type_source": "disciplinary_action",
+      "type_target": "group",
+      "relation": "thông_báo_cho"
+    },
+    {
+      "source": {
+        "name": "Buộc thôi học",
+        "entity_type": "disciplinary_action",
+        "notification_procedure": "thông báo cho gia đình sinh viên"
+      },
+      "target": {
+        "name": "Gia đình sinh viên",
+        "entity_type": "group",
+        "information_recipient_type": "gia đình của sinh viên bị kỷ luật"
+      },
+      "type_source": "disciplinary_action",
+      "type_target": "group",
+      "relation": "thông_báo_cho"
+    },
+    {
+      "source": {
+        "name": "Nhà trường",
+        "entity_type": "organization",
+        "action_taken": "gửi thông báo",
+        "condition_for_action": "sinh viên bị kỷ luật mức đình chỉ học tập có thời hạn",
+        "purpose_of_notification": "phối hợp quản lý, giáo dục"
+      },
+      "target": {
+        "name": "Địa phương",
+        "entity_type": "organization",
+        "recipient_role": "nhận thông báo về sinh viên bị đình chỉ học tập",
+        "coordination_task": "phối hợp quản lý, giáo dục sinh viên"
+      },
+      "type_source": "organization",
       "type_target": "organization",
-      "relation": "gây_ảnh_hưởng_xấu_đến"
+      "relation": "gửi_thông_báo_cho"
     },
     {
-      "source": "vi phạm lần đầu mức độ đặc biệt nghiêm trọng",
-      "target": "xã hội",
-      "type_source": "violation_condition",
-      "type_target": "society",
-      "relation": "gây_ảnh_hưởng_xấu_đến"
+      "source": {
+        "name": "Nhà trường",
+        "entity_type": "organization",
+        "action_taken": "gửi thông báo",
+        "condition_for_action": "sinh viên bị kỷ luật mức buộc thôi học",
+        "purpose_of_notification": "phối hợp quản lý, giáo dục"
+      },
+      "target": {
+        "name": "Địa phương",
+        "entity_type": "organization",
+        "recipient_role": "nhận thông báo về sinh viên bị buộc thôi học",
+        "coordination_task": "phối hợp quản lý, giáo dục sinh viên"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "gửi_thông_báo_cho"
     },
     {
-      "source": "Cảnh cáo",
-      "target": "hồ sơ quản lý sinh viên",
-      "type_source": "disciplinary_action",
-      "type_target": "document",
-      "relation": "lưu_vào"
-    },
-    {
-      "source": "Đình chỉ học tập có thời hạn",
-      "target": "hồ sơ quản lý sinh viên",
-      "type_source": "disciplinary_action",
-      "type_target": "document",
-      "relation": "lưu_vào"
-    },
-    {
-      "source": "Buộc thôi học",
-      "target": "hồ sơ quản lý sinh viên",
-      "type_source": "disciplinary_action",
-      "type_target": "document",
-      "relation": "lưu_vào"
-    },
-    {
-      "source": "Cảnh cáo",
-      "target": "gia đình sinh viên",
-      "type_source": "disciplinary_action",
-      "type_target": "group",
-      "relation": "thông_báo_cho"
-    },
-    {
-      "source": "Đình chỉ học tập có thời hạn",
-      "target": "gia đình sinh viên",
-      "type_source": "disciplinary_action",
-      "type_target": "group",
-      "relation": "thông_báo_cho"
-    },
-    {
-      "source": "Buộc thôi học",
-      "target": "gia đình sinh viên",
-      "type_source": "disciplinary_action",
-      "type_target": "group",
-      "relation": "thông_báo_cho"
-    },
-    {
-      "source": "Nhà trường",
-      "target": "gia đình sinh viên",
+      "source": {
+        "name": "Nhà trường",
+        "entity_type": "organization",
+        "action_taken": "gửi thông báo",
+        "condition_for_action": "sinh viên bị kỷ luật mức đình chỉ học tập có thời hạn",
+        "purpose_of_notification": "phối hợp quản lý, giáo dục"
+      },
+      "target": {
+        "name": "Gia đình sinh viên",
+        "entity_type": "group",
+        "recipient_role": "nhận thông báo về sinh viên bị đình chỉ học tập",
+        "coordination_task": "phối hợp quản lý, giáo dục sinh viên"
+      },
       "type_source": "organization",
       "type_target": "group",
-      "relation": "thông_báo_về_kỷ_luật_nặng_cho"
+      "relation": "gửi_thông_báo_cho"
     },
     {
-      "source": "Nhà trường",
-      "target": "địa phương",
+      "source": {
+        "name": "Nhà trường",
+        "entity_type": "organization",
+        "action_taken": "gửi thông báo",
+        "condition_for_action": "sinh viên bị kỷ luật mức buộc thôi học",
+        "purpose_of_notification": "phối hợp quản lý, giáo dục"
+      },
+      "target": {
+        "name": "Gia đình sinh viên",
+        "entity_type": "group",
+        "recipient_role": "nhận thông báo về sinh viên bị buộc thôi học",
+        "coordination_task": "phối hợp quản lý, giáo dục sinh viên"
+      },
       "type_source": "organization",
-      "type_target": "location",
-      "relation": "thông_báo_về_kỷ_luật_nặng_cho"
+      "type_target": "group",
+      "relation": "gửi_thông_báo_cho"
     },
     {
-      "source": "khung xử lý kỷ luật",
-      "target": "Phụ lục",
-      "type_source": "guideline",
+      "source": {
+        "name": "Nội dung vi phạm và khung xử lý kỷ luật",
+        "entity_type": "regulation_content",
+        "description": "chi tiết các hành vi vi phạm và các mức xử lý kỷ luật tương ứng"
+      },
+      "target": {
+        "name": "Phụ lục",
+        "entity_type": "document_section",
+        "content_details": "cung cấp chi tiết nội dung vi phạm và khung xử lý kỷ luật",
+        "attachment_status": "kèm theo Quy chế này"
+      },
+      "type_source": "regulation_content",
       "type_target": "document_section",
       "relation": "thực_hiện_theo"
     },
     {
-      "source": "Phụ lục",
-      "target": "Quy chế này",
+      "source": {
+        "name": "Phụ lục",
+        "entity_type": "document_section",
+        "content_summary": "chứa nội dung vi phạm và khung xử lý kỷ luật"
+      },
+      "target": {
+        "name": "Quy chế này",
+        "entity_type": "document",
+        "document_title": "Quy chế Công tác sinh viên (ngầm định)",
+        "purpose_of_appendix": "bổ sung chi tiết cho quy chế"
+      },
       "type_source": "document_section",
-      "type_target": "regulation",
+      "type_target": "document",
       "relation": "kèm_theo"
-    },
-    {
-        "source": "ĐIỀU 11",
-        "target": "Quy chế này",
-        "type_source": "article",
-        "type_target": "regulation",
-        "relation": "là_phần_của"
     }
   ]
 }

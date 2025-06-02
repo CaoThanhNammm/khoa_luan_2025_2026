@@ -1,25 +1,21 @@
 {
-  "entities": [
-    {
-      "name": "Kênh đăng ký",
-      "type": "registration_channel"
-    },
-    {
-      "name": "Đăng ký trực tuyến",
-      "type": "registration_method"
-    },
-    {
-      "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
-      "type": "website"
-    }
-  ],
   "relationships": [
     {
-      "source": "Đăng ký trực tuyến",
-      "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
-      "relation": "tại_địa_chỉ",
-      "type_source": "registration_method",
-      "type_target": "website"
+      "source": {
+        "name": "Đăng ký trực tuyến",
+        "activity_type": "Đăng ký",
+        "execution_mode": "Trực tuyến",
+        "location_reference": "Tại địa chỉ được cung cấp trong văn bản"
+      },
+      "target": {
+        "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+        "address_nature": "Địa chỉ web",
+        "intended_use": "Dùng cho việc đăng ký trực tuyến",
+        "full_hyperlink": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php"
+      },
+      "type_source": "online_activity",
+      "type_target": "url",
+      "relation": "thực_hiện_tại"
     }
   ]
 }

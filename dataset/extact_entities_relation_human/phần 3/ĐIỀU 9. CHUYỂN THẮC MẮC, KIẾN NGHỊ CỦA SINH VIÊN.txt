@@ -1,54 +1,19 @@
 {
-  "entities": [
-    {
-      "name": "thắc mắc, kiến nghị",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "sinh viên",
-      "type": "PERSON_GROUP"
-    },
-    {
-      "name": "giải quyết thỏa đáng",
-      "type": "ACTION"
-    },
-    {
-      "name": "đơn",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "Ban giám hiệu",
-      "type": "ORGANIZATION"
-    }
-  ],
   "relationships": [
     {
-      "source": "thắc mắc, kiến nghị",
-      "target": "sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
-    },
-    {
-      "source": "thắc mắc, kiến nghị",
-      "target": "giải quyết thỏa đáng",
-      "type_source": "CONCEPT",
-      "type_target": "ACTION",
-      "relation": "CHƯA_ĐƯỢC_GIẢI_QUYẾT_THỎA_ĐÁNG"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đơn",
-      "type_source": "PERSON_GROUP",
-      "type_target": "DOCUMENT",
-      "relation": "CHUYỂN"
-    },
-    {
-      "source": "đơn",
-      "target": "Ban giám hiệu",
-      "type_source": "DOCUMENT",
-      "type_target": "ORGANIZATION",
-      "relation": "TỚI"
+      "source": {
+        "name": "sinh viên",
+        "reason_for_appeal": "những thắc mắc, kiến nghị không được giải quyết thỏa đáng",
+        "action_option": "chuyển đơn"
+      },
+      "target": {
+        "name": "Ban giám hiệu",
+        "authority_level": "cấp quản lý cao",
+        "appeal_recipient_role": "nơi tiếp nhận đơn giải quyết khiếu nại"
+      },
+      "type_source": "student",
+      "type_target": "management_board",
+      "relation": "có_thể_chuyển_đơn_tới"
     }
   ]
 }

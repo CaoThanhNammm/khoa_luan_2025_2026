@@ -1,397 +1,702 @@
 {
-  "entities": [
-    {
-      "name": "Quỹ học bổng khuyến khích học tập",
-      "type": "SCHOLARSHIP_FUND"
-    },
-    {
-      "name": "chương trình đại trà",
-      "type": "PROGRAM_TYPE"
-    },
-    {
-      "name": "8%",
-      "type": "PERCENTAGE"
-    },
-    {
-      "name": "tổng thu học phí chương trình đại trà",
-      "type": "TUITION_FEE"
-    },
-    {
-      "name": "chương trình tiên tiến",
-      "type": "PROGRAM_TYPE"
-    },
-    {
-      "name": "chương trình chất lượng cao",
-      "type": "PROGRAM_TYPE"
-    },
-    {
-      "name": "3%",
-      "type": "PERCENTAGE"
-    },
-    {
-      "name": "tổng thu học phí của chương trình",
-      "type": "TUITION_FEE"
-    },
-    {
-      "name": "Quỹ học bổng khuyến khích học tập toàn trường",
-      "type": "SCHOLARSHIP_FUND"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "PERSON"
-    },
-    {
-      "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type": "LOCATION"
-    },
-    {
-      "name": "Chương trình đại trà khối ngành 1",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Chương trình đại trà khối ngành 3",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Chương trình đại trà khối ngành 4",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Chương trình đại trà khối ngành 5",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Chương trình đại trà khối ngành 7",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Chương trình chất lượng cao khối ngành 3",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Chương trình chất lượng cao khối ngành 4",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Chương trình chất lượng cao khối ngành 5",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Chương trình tiên tiến ngành Công nghệ thực phẩm",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Chương trình tiên tiến ngành Chăn nuôi thú y",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Phân hiệu Gia Lai",
-      "type": "LOCATION"
-    },
-    {
-      "name": "Phân hiệu Ninh Thuận",
-      "type": "LOCATION"
-    },
-    {
-      "name": "Khối cao đẳng",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "từng khối học bổng trong nhóm",
-      "type": "SCHOLARSHIP_GROUP"
-    },
-    {
-      "name": "công thức",
-      "type": "FORMULA"
-    },
-    {
-      "name": "Số tiền học bổng của mỗi khối (qi)",
-      "type": "SCHOLARSHIP_AMOUNT"
-    },
-    {
-      "name": "tổng số tiền học bổng của cả nhóm (Q)",
-      "type": "TOTAL_SCHOLARSHIP_FUND"
-    },
-    {
-      "name": "tổng số sinh viên của cả nhóm (N)",
-      "type": "TOTAL_STUDENT_NUMBER"
-    },
-    {
-      "name": "số lượng sinh viên của riêng khối đó (ni)",
-      "type": "STUDENT_NUMBER"
-    },
-    {
-      "name": "khối học bổng thứ i",
-      "type": "SCHOLARSHIP_GROUP"
-    },
-    {
-      "name": "toàn bộ nhóm học bổng",
-      "type": "SCHOLARSHIP_GROUP"
-    },
-    {
-      "name": "tất cả các khối học bổng trong nhóm",
-      "type": "SCHOLARSHIP_GROUP"
-    }
-  ],
   "relationships": [
     {
-      "source": "Quỹ học bổng khuyến khích học tập",
-      "target": "chương trình đại trà",
-      "type_source": "SCHOLARSHIP_FUND",
-      "type_target": "PROGRAM_TYPE",
-      "relation": "CỦA"
+      "source": {
+        "name": "Quỹ học bổng khuyến khích học tập của chương trình đại trà",
+        "program_type": "Chương trình đại trà",
+        "funding_source_percentage": "8%",
+        "description": "Quỹ học bổng dành cho sinh viên theo học chương trình đại trà"
+      },
+      "target": {
+        "name": "8% tổng thu học phí chương trình đại trà",
+        "percentage_value": "8%",
+        "basis_of_calculation": "tổng thu học phí chương trình đại trà",
+        "related_program": "Chương trình đại trà"
+      },
+      "type_source": "scholarship_fund",
+      "type_target": "tuition_fee_percentage_source",
+      "relation": "được_bố_trí_từ"
     },
     {
-      "source": "Quỹ học bổng khuyến khích học tập",
-      "target": "8%",
-      "type_source": "SCHOLARSHIP_FUND",
-      "type_target": "PERCENTAGE",
-      "relation": "ĐƯỢC_BỐ_TRÍ_BẰNG"
+      "source": {
+        "name": "Quỹ học bổng khuyến khích học tập của chương trình tiên tiến",
+        "program_type": "Chương trình tiên tiến",
+        "funding_source_percentage": "3%",
+        "description": "Quỹ học bổng dành cho sinh viên theo học chương trình tiên tiến"
+      },
+      "target": {
+        "name": "3% tổng thu học phí của chương trình tiên tiến",
+        "percentage_value": "3%",
+        "basis_of_calculation": "tổng thu học phí của chương trình tiên tiến",
+        "related_program": "Chương trình tiên tiến"
+      },
+      "type_source": "scholarship_fund",
+      "type_target": "tuition_fee_percentage_source",
+      "relation": "được_bố_trí_từ"
     },
     {
-      "source": "8%",
-      "target": "tổng thu học phí chương trình đại trà",
-      "type_source": "PERCENTAGE",
-      "type_target": "TUITION_FEE",
-      "relation": "CỦA"
+      "source": {
+        "name": "Quỹ học bổng khuyến khích học tập của chương trình chất lượng cao",
+        "program_type": "Chương trình chất lượng cao",
+        "funding_source_percentage": "3%",
+        "description": "Quỹ học bổng dành cho sinh viên theo học chương trình chất lượng cao"
+      },
+      "target": {
+        "name": "3% tổng thu học phí của chương trình chất lượng cao",
+        "percentage_value": "3%",
+        "basis_of_calculation": "tổng thu học phí của chương trình chất lượng cao",
+        "related_program": "Chương trình chất lượng cao"
+      },
+      "type_source": "scholarship_fund",
+      "type_target": "tuition_fee_percentage_source",
+      "relation": "được_bố_trí_từ"
     },
     {
-      "source": "Quỹ học bổng khuyến khích học tập",
-      "target": "chương trình tiên tiến",
-      "type_source": "SCHOLARSHIP_FUND",
-      "type_target": "PROGRAM_TYPE",
-      "relation": "CỦA"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Quỹ học bổng khuyến khích học tập toàn trường",
+        "scope_description": "Toàn bộ trường học",
+        "allocation_basis_function": "Căn cứ cho việc phân bổ quỹ cho các nhóm",
+        "management_authority_detail": "Do Hiệu trưởng quản lý và phân bổ"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_fund",
+      "relation": "sử_dụng_làm_căn_cứ_phân_bổ"
     },
     {
-      "source": "Quỹ học bổng khuyến khích học tập",
-      "target": "chương trình chất lượng cao",
-      "type_source": "SCHOLARSHIP_FUND",
-      "type_target": "PROGRAM_TYPE",
-      "relation": "CỦA"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 1 (CS TPHCM)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 1",
+        "campus_affiliation": "Cơ sở chính tại Thành phố Hồ Chí Minh"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Quỹ học bổng khuyến khích học tập",
-      "target": "3%",
-      "type_source": "SCHOLARSHIP_FUND",
-      "type_target": "PERCENTAGE",
-      "relation": "ĐƯỢC_BỐ_TRÍ_BẰNG"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 1 (CS TPHCM)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 1",
+        "description": "Nhóm nhận học bổng tại Cơ sở chính TPHCM"
+      },
+      "target": {
+        "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+        "campus_type_description": "Cơ sở đào tạo chính",
+        "city_location": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "3%",
-      "target": "tổng thu học phí của chương trình",
-      "type_source": "PERCENTAGE",
-      "type_target": "TUITION_FEE",
-      "relation": "CỦA"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 3 (CS TPHCM)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 3",
+        "campus_affiliation": "Cơ sở chính tại Thành phố Hồ Chí Minh"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Hiệu trưởng",
-      "target": "Quỹ học bổng khuyến khích học tập toàn trường",
-      "type_source": "PERSON",
-      "type_target": "SCHOLARSHIP_FUND",
-      "relation": "CĂN_CỨ_TRÊN"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 3 (CS TPHCM)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 3",
+        "description": "Nhóm nhận học bổng tại Cơ sở chính TPHCM"
+      },
+      "target": {
+        "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+        "campus_type_description": "Cơ sở đào tạo chính",
+        "city_location": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Hiệu trưởng",
-      "target": "quỹ học bổng",
-      "type_source": "PERSON",
-      "type_target": "SCHOLARSHIP_FUND",
-      "relation": "BỐ_TRÍ"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 4 (CS TPHCM)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 4",
+        "campus_affiliation": "Cơ sở chính tại Thành phố Hồ Chí Minh"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "quỹ học bổng",
-      "target": "từng nhóm",
-      "type_source": "SCHOLARSHIP_FUND",
-      "type_target": "GROUP",
-      "relation": "CHO"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 4 (CS TPHCM)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 4",
+        "description": "Nhóm nhận học bổng tại Cơ sở chính TPHCM"
+      },
+      "target": {
+        "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+        "campus_type_description": "Cơ sở đào tạo chính",
+        "city_location": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Chương trình đại trà khối ngành 1",
-      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 5 (CS TPHCM)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 5",
+        "campus_affiliation": "Cơ sở chính tại Thành phố Hồ Chí Minh"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Chương trình đại trà khối ngành 3",
-      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 5 (CS TPHCM)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 5",
+        "description": "Nhóm nhận học bổng tại Cơ sở chính TPHCM"
+      },
+      "target": {
+        "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+        "campus_type_description": "Cơ sở đào tạo chính",
+        "city_location": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Chương trình đại trà khối ngành 4",
-      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 7 (CS TPHCM)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 7",
+        "campus_affiliation": "Cơ sở chính tại Thành phố Hồ Chí Minh"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Chương trình đại trà khối ngành 5",
-      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 7 (CS TPHCM)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 7",
+        "description": "Nhóm nhận học bổng tại Cơ sở chính TPHCM"
+      },
+      "target": {
+        "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+        "campus_type_description": "Cơ sở đào tạo chính",
+        "city_location": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Chương trình đại trà khối ngành 7",
-      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình chất lượng cao khối ngành 3 (CS TPHCM)",
+        "program_system": "Chương trình chất lượng cao",
+        "major_group_code": "khối ngành 3",
+        "campus_affiliation": "Cơ sở chính tại Thành phố Hồ Chí Minh"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Chương trình chất lượng cao khối ngành 3",
-      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Chương trình chất lượng cao khối ngành 3 (CS TPHCM)",
+        "program_system": "Chương trình chất lượng cao",
+        "major_group_code": "khối ngành 3",
+        "description": "Nhóm nhận học bổng tại Cơ sở chính TPHCM"
+      },
+      "target": {
+        "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+        "campus_type_description": "Cơ sở đào tạo chính",
+        "city_location": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Chương trình chất lượng cao khối ngành 4",
-      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình chất lượng cao khối ngành 4 (CS TPHCM)",
+        "program_system": "Chương trình chất lượng cao",
+        "major_group_code": "khối ngành 4",
+        "campus_affiliation": "Cơ sở chính tại Thành phố Hồ Chí Minh"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Chương trình chất lượng cao khối ngành 5",
-      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Chương trình chất lượng cao khối ngành 4 (CS TPHCM)",
+        "program_system": "Chương trình chất lượng cao",
+        "major_group_code": "khối ngành 4",
+        "description": "Nhóm nhận học bổng tại Cơ sở chính TPHCM"
+      },
+      "target": {
+        "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+        "campus_type_description": "Cơ sở đào tạo chính",
+        "city_location": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Chương trình tiên tiến ngành Công nghệ thực phẩm",
-      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình chất lượng cao khối ngành 5 (CS TPHCM)",
+        "program_system": "Chương trình chất lượng cao",
+        "major_group_code": "khối ngành 5",
+        "campus_affiliation": "Cơ sở chính tại Thành phố Hồ Chí Minh"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Chương trình tiên tiến ngành Chăn nuôi thú y",
-      "target": "Cơ sở chính tại Thành phố Hồ Chí Minh",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Chương trình chất lượng cao khối ngành 5 (CS TPHCM)",
+        "program_system": "Chương trình chất lượng cao",
+        "major_group_code": "khối ngành 5",
+        "description": "Nhóm nhận học bổng tại Cơ sở chính TPHCM"
+      },
+      "target": {
+        "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+        "campus_type_description": "Cơ sở đào tạo chính",
+        "city_location": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Chương trình đại trà khối ngành 3",
-      "target": "Phân hiệu Gia Lai",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình tiên tiến ngành Công nghệ thực phẩm (CS TPHCM)",
+        "program_system": "Chương trình tiên tiến",
+        "major_field": "Công nghệ thực phẩm",
+        "campus_affiliation": "Cơ sở chính tại Thành phố Hồ Chí Minh"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Chương trình đại trà khối ngành 5",
-      "target": "Phân hiệu Gia Lai",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Chương trình tiên tiến ngành Công nghệ thực phẩm (CS TPHCM)",
+        "program_system": "Chương trình tiên tiến",
+        "major_field": "Công nghệ thực phẩm",
+        "description": "Nhóm nhận học bổng tại Cơ sở chính TPHCM"
+      },
+      "target": {
+        "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+        "campus_type_description": "Cơ sở đào tạo chính",
+        "city_location": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Chương trình đại trà khối ngành 1",
-      "target": "Phân hiệu Ninh Thuận",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình tiên tiến ngành Chăn nuôi thú y (CS TPHCM)",
+        "program_system": "Chương trình tiên tiến",
+        "major_field": "Chăn nuôi thú y",
+        "campus_affiliation": "Cơ sở chính tại Thành phố Hồ Chí Minh"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Chương trình đại trà khối ngành 3",
-      "target": "Phân hiệu Ninh Thuận",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Chương trình tiên tiến ngành Chăn nuôi thú y (CS TPHCM)",
+        "program_system": "Chương trình tiên tiến",
+        "major_field": "Chăn nuôi thú y",
+        "description": "Nhóm nhận học bổng tại Cơ sở chính TPHCM"
+      },
+      "target": {
+        "name": "Cơ sở chính tại Thành phố Hồ Chí Minh",
+        "campus_type_description": "Cơ sở đào tạo chính",
+        "city_location": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Chương trình đại trà khối ngành 4",
-      "target": "Phân hiệu Ninh Thuận",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 3 (PH Gia Lai)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 3",
+        "campus_affiliation": "Phân hiệu Gia Lai"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Chương trình đại trà khối ngành 5",
-      "target": "Phân hiệu Ninh Thuận",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 3 (PH Gia Lai)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 3",
+        "description": "Nhóm nhận học bổng tại Phân hiệu Gia Lai"
+      },
+      "target": {
+        "name": "Phân hiệu Gia Lai",
+        "campus_type_description": "Phân hiệu đào tạo",
+        "province_location": "Gia Lai",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Chương trình đại trà khối ngành 7",
-      "target": "Phân hiệu Ninh Thuận",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 5 (PH Gia Lai)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 5",
+        "campus_affiliation": "Phân hiệu Gia Lai"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Khối cao đẳng",
-      "target": "Phân hiệu Ninh Thuận",
-      "type_source": "PROGRAM",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 5 (PH Gia Lai)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 5",
+        "description": "Nhóm nhận học bổng tại Phân hiệu Gia Lai"
+      },
+      "target": {
+        "name": "Phân hiệu Gia Lai",
+        "campus_type_description": "Phân hiệu đào tạo",
+        "province_location": "Gia Lai",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Quỹ học bổng khuyến khích học tập",
-      "target": "từng khối học bổng trong nhóm",
-      "type_source": "SCHOLARSHIP_FUND",
-      "type_target": "SCHOLARSHIP_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 1 (PH Ninh Thuận)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 1",
+        "campus_affiliation": "Phân hiệu Ninh Thuận"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Quỹ học bổng khuyến khích học tập",
-      "target": "công thức",
-      "type_source": "SCHOLARSHIP_FUND",
-      "type_target": "FORMULA",
-      "relation": "XÁC_ĐỊNH_THEO"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 1 (PH Ninh Thuận)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 1",
+        "description": "Nhóm nhận học bổng tại Phân hiệu Ninh Thuận"
+      },
+      "target": {
+        "name": "Phân hiệu Ninh Thuận",
+        "campus_type_description": "Phân hiệu đào tạo",
+        "province_location": "Ninh Thuận",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "Số tiền học bổng của mỗi khối (qi)",
-      "target": "tổng số tiền học bổng của cả nhóm (Q)",
-      "type_source": "SCHOLARSHIP_AMOUNT",
-      "type_target": "TOTAL_SCHOLARSHIP_FUND",
-      "relation": "TÍNH_BẰNG_CÁCH_LẤY"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 3 (PH Ninh Thuận)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 3",
+        "campus_affiliation": "Phân hiệu Ninh Thuận"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "tổng số tiền học bổng của cả nhóm (Q)",
-      "target": "tổng số sinh viên của cả nhóm (N)",
-      "type_source": "TOTAL_SCHOLARSHIP_FUND",
-      "type_target": "TOTAL_STUDENT_NUMBER",
-      "relation": "CHIA_CHO"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 3 (PH Ninh Thuận)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 3",
+        "description": "Nhóm nhận học bổng tại Phân hiệu Ninh Thuận"
+      },
+      "target": {
+        "name": "Phân hiệu Ninh Thuận",
+        "campus_type_description": "Phân hiệu đào tạo",
+        "province_location": "Ninh Thuận",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "tổng số sinh viên của cả nhóm (N)",
-      "target": "số lượng sinh viên của riêng khối đó (ni)",
-      "type_source": "TOTAL_STUDENT_NUMBER",
-      "type_target": "STUDENT_NUMBER",
-      "relation": "NHÂN_VỚI"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 4 (PH Ninh Thuận)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 4",
+        "campus_affiliation": "Phân hiệu Ninh Thuận"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "Số tiền học bổng của mỗi khối (qi)",
-      "target": "khối học bổng thứ i",
-      "type_source": "SCHOLARSHIP_AMOUNT",
-      "type_target": "SCHOLARSHIP_GROUP",
-      "relation": "LÀ"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 4 (PH Ninh Thuận)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 4",
+        "description": "Nhóm nhận học bổng tại Phân hiệu Ninh Thuận"
+      },
+      "target": {
+        "name": "Phân hiệu Ninh Thuận",
+        "campus_type_description": "Phân hiệu đào tạo",
+        "province_location": "Ninh Thuận",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "tổng số tiền học bổng của cả nhóm (Q)",
-      "target": "toàn bộ nhóm học bổng",
-      "type_source": "TOTAL_SCHOLARSHIP_FUND",
-      "type_target": "SCHOLARSHIP_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 5 (PH Ninh Thuận)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 5",
+        "campus_affiliation": "Phân hiệu Ninh Thuận"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
     },
     {
-      "source": "số lượng sinh viên của riêng khối đó (ni)",
-      "target": "khối học bổng thứ i",
-      "type_source": "STUDENT_NUMBER",
-      "type_target": "SCHOLARSHIP_GROUP",
-      "relation": "TRONG"
+      "source": {
+        "name": "Chương trình đại trà khối ngành 5 (PH Ninh Thuận)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 5",
+        "description": "Nhóm nhận học bổng tại Phân hiệu Ninh Thuận"
+      },
+      "target": {
+        "name": "Phân hiệu Ninh Thuận",
+        "campus_type_description": "Phân hiệu đào tạo",
+        "province_location": "Ninh Thuận",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
     },
     {
-      "source": "tổng số lượng sinh viên của tất cả các khối học bổng trong nhóm (N)",
-      "target": "tất cả các khối học bổng trong nhóm",
-      "type_source": "TOTAL_STUDENT_NUMBER",
-      "type_target": "SCHOLARSHIP_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Chương trình đại trà khối ngành 7 (PH Ninh Thuận)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 7",
+        "campus_affiliation": "Phân hiệu Ninh Thuận"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
+    },
+    {
+      "source": {
+        "name": "Chương trình đại trà khối ngành 7 (PH Ninh Thuận)",
+        "program_system": "Chương trình đại trà",
+        "major_group_code": "khối ngành 7",
+        "description": "Nhóm nhận học bổng tại Phân hiệu Ninh Thuận"
+      },
+      "target": {
+        "name": "Phân hiệu Ninh Thuận",
+        "campus_type_description": "Phân hiệu đào tạo",
+        "province_location": "Ninh Thuận",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
+    },
+    {
+      "source": {
+        "name": "Hiệu trưởng",
+        "title": "Hiệu trưởng",
+        "institutional_role": "Người quản lý cấp cao",
+        "key_function": "Phân bổ quỹ học bổng"
+      },
+      "target": {
+        "name": "Khối cao đẳng (PH Ninh Thuận)",
+        "program_level": "Cao đẳng",
+        "major_group_code": "Không xác định",
+        "campus_affiliation": "Phân hiệu Ninh Thuận"
+      },
+      "type_source": "university_personnel_role",
+      "type_target": "scholarship_recipient_group",
+      "relation": "bố_trí_quỹ_học_bổng_cho"
+    },
+    {
+      "source": {
+        "name": "Khối cao đẳng (PH Ninh Thuận)",
+        "program_level": "Cao đẳng",
+        "major_group_code": "Không xác định",
+        "description": "Nhóm nhận học bổng tại Phân hiệu Ninh Thuận"
+      },
+      "target": {
+        "name": "Phân hiệu Ninh Thuận",
+        "campus_type_description": "Phân hiệu đào tạo",
+        "province_location": "Ninh Thuận",
+        "country": "Việt Nam"
+      },
+      "type_source": "scholarship_recipient_group",
+      "type_target": "campus",
+      "relation": "được_triển_khai_tại"
+    },
+    {
+      "source": {
+        "name": "Quỹ học bổng khuyến khích học tập của từng khối học bổng trong nhóm",
+        "fund_level_description": "Quỹ học bổng cho từng khối cụ thể trong một nhóm lớn",
+        "calculation_dependency_info": "Được xác định theo công thức cụ thể",
+        "scope_of_application": "từng khối học bổng trong nhóm"
+      },
+      "target": {
+        "name": "Công thức xác định quỹ học bổng KKHT của khối trong nhóm",
+        "formula_expression_text": "lấy quỹ của khối học bổng thứ i chia cho tổng số lượng sinh viên của nhóm sau đó nhân với số lượng sinh viên của khối học bổng thứ i",
+        "input_parameter_1": "quỹ của khối học bổng thứ i",
+        "input_parameter_2": "tổng số lượng sinh viên của nhóm",
+        "input_parameter_3": "số lượng sinh viên của khối học bổng thứ i"
+      },
+      "type_source": "scholarship_fund_block_level",
+      "type_target": "calculation_formula",
+      "relation": "được_xác_định_theo"
     }
   ]
 }

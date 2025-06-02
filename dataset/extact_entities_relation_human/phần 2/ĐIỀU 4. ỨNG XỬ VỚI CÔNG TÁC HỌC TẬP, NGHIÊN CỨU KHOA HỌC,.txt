@@ -1,421 +1,738 @@
 {
-  "entities": [
-    {
-      "name": "Quy chế đào tạo",
-      "type": "REGULATION"
-    },
-    {
-      "name": "Quy chế công tác HSSV",
-      "type": "REGULATION"
-    },
-    {
-      "name": "Quy định đối với HSSV nội ngoại trú",
-      "type": "REGULATION"
-    },
-    {
-      "name": "Quy định về việc thực hiện nếp sống văn hóa học đường đối với người học",
-      "type": "REGULATION"
-    },
-    {
-      "name": "Quy định về giờ giấc học tập",
-      "type": "REGULATION"
-    },
-    {
-      "name": "HSSV",
-      "type": "STUDENT"
-    },
-    {
-      "name": "người học",
-      "type": "STUDENT"
-    },
-    {
-      "name": "thầy cô",
-      "type": "TEACHER"
-    },
-    {
-      "name": "bài tập",
-      "type": "ASSIGNMENT"
-    },
-    {
-      "name": "đề tài",
-      "type": "PROJECT"
-    },
-    {
-      "name": "kiến thức",
-      "type": "KNOWLEDGE"
-    },
-    {
-      "name": "thực tế cuộc sống",
-      "type": "REALITY"
-    },
-    {
-      "name": "học tập",
-      "type": "STUDY"
-    },
-    {
-      "name": "thi",
-      "type": "EXAM"
-    },
-    {
-      "name": "kiểm tra",
-      "type": "TEST"
-    },
-    {
-      "name": "quy chế",
-      "type": "REGULATION"
-    },
-    {
-      "name": "quy định",
-      "type": "REGULATION"
-    },
-    {
-      "name": "nội quy",
-      "type": "RULE"
-    },
-    {
-      "name": "Bộ Giáo dục và Đào tạo",
-      "type": "EDUCATION_ORGANIZATION"
-    },
-    {
-      "name": "nhà trường",
-      "type": "SCHOOL"
-    },
-    {
-      "name": "hoạt động học tập",
-      "type": "STUDY_ACTIVITY"
-    },
-    {
-      "name": "hoạt động xã hội",
-      "type": "SOCIAL_ACTIVITY"
-    },
-    {
-      "name": "phong trào thi đua",
-      "type": "COMPETITION"
-    },
-    {
-      "name": "tổ chức đoàn thể",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "trường",
-      "type": "SCHOOL"
-    },
-    {
-      "name": "hoạt động nghiên cứu khoa học",
-      "type": "RESEARCH_ACTIVITY"
-    },
-    {
-      "name": "hoạt động khởi nghiệp",
-      "type": "STARTUP_ACTIVITY"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "hoạt động phục vụ cộng đồng",
-      "type": "COMMUNITY_ACTIVITY"
-    },
-    {
-      "name": "đền ơn đáp nghĩa",
-      "type": "GRATITUDE_ACTIVITY"
-    },
-    {
-      "name": "kỹ năng sống",
-      "type": "LIFE_SKILL"
-    },
-    {
-      "name": "kỹ năng học tập",
-      "type": "STUDY_SKILL"
-    }
-  ],
   "relationships": [
     {
-      "source": "người học",
-      "target": "Quy chế đào tạo",
-      "relation": "tuân_thủ",
-      "type_source": "STUDENT",
-      "type_target": "REGULATION"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "expectation": "thực hiện nghiêm túc các quy định"
+      },
+      "target": {
+        "name": "Quy chế đào tạo",
+        "entity_type": "regulation",
+        "category": "đào tạo",
+        "compliance_level_expected": "nghiêm túc"
+      },
+      "type_source": "person",
+      "type_target": "regulation",
+      "relation": "phải_thực_hiện_nghiêm_túc"
     },
     {
-      "source": "người học",
-      "target": "Quy chế công tác HSSV",
-      "relation": "tuân_thủ",
-      "type_source": "STUDENT",
-      "type_target": "REGULATION"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "expectation": "thực hiện nghiêm túc các quy định"
+      },
+      "target": {
+        "name": "Quy chế công tác HSSV",
+        "entity_type": "regulation",
+        "category": "công tác học sinh sinh viên",
+        "compliance_level_expected": "nghiêm túc"
+      },
+      "type_source": "person",
+      "type_target": "regulation",
+      "relation": "phải_thực_hiện_nghiêm_túc"
     },
     {
-      "source": "người học",
-      "target": "Quy định đối với HSSV nội ngoại trú",
-      "relation": "tuân_thủ",
-      "type_source": "STUDENT",
-      "type_target": "REGULATION"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "expectation": "thực hiện nghiêm túc các quy định"
+      },
+      "target": {
+        "name": "Quy định đối với HSSV nội ngoại trú",
+        "entity_type": "regulation",
+        "target_audience": "HSSV nội trú, HSSV ngoại trú",
+        "scope_of_application": "nội trú và ngoại trú",
+        "compliance_level_expected": "nghiêm túc"
+      },
+      "type_source": "person",
+      "type_target": "regulation",
+      "relation": "phải_thực_hiện_nghiêm_túc"
     },
     {
-      "source": "người học",
-      "target": "Quy định về việc thực hiện nếp sống văn hóa học đường đối với người học",
-      "relation": "tuân_thủ",
-      "type_source": "STUDENT",
-      "type_target": "REGULATION"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "expectation": "thực hiện nghiêm túc các quy định"
+      },
+      "target": {
+        "name": "Quy định về việc thực hiện nếp sống văn hóa học đường đối với người học",
+        "entity_type": "regulation",
+        "focus_area": "nếp sống văn hóa học đường",
+        "target_subject": "người học",
+        "compliance_level_expected": "nghiêm túc"
+      },
+      "type_source": "person",
+      "type_target": "regulation",
+      "relation": "phải_thực_hiện_nghiêm_túc"
     },
     {
-      "source": "người học",
-      "target": "Quy định về giờ giấc học tập",
-      "relation": "tuân_thủ",
-      "type_source": "STUDENT",
-      "type_target": "REGULATION"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "expectation": "thực hiện nghiêm túc các quy định"
+      },
+      "target": {
+        "name": "Quy định về giờ giấc học tập",
+        "entity_type": "regulation",
+        "focus_area": "giờ giấc học tập",
+        "includes_content": "giờ tự học",
+        "compliance_level_expected": "nghiêm túc"
+      },
+      "type_source": "person",
+      "type_target": "regulation",
+      "relation": "phải_thực_hiện_nghiêm_túc"
     },
     {
-      "source": "người học",
-      "target": "kiến thức",
-      "relation": "tiếp_nhận",
-      "type_source": "STUDENT",
-      "type_target": "KNOWLEDGE"
+      "source": {
+        "name": "Quy định về giờ giấc học tập",
+        "entity_type": "regulation",
+        "focus_area": "giờ giấc học tập"
+      },
+      "target": {
+        "name": "Giờ tự học",
+        "entity_type": "study_period",
+        "type_of_study": "tự học",
+        "context": "một phần của giờ giấc học tập"
+      },
+      "type_source": "regulation",
+      "type_target": "study_period",
+      "relation": "bao_gồm"
     },
     {
-      "source": "thầy cô",
-      "target": "kiến thức",
-      "relation": "giảng_dạy",
-      "type_source": "TEACHER",
-      "type_target": "KNOWLEDGE"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "required_attitude": "tự học, tự giác, tích cực, chủ động"
+      },
+      "target": {
+        "name": "Ý thức tự học",
+        "entity_type": "student_quality",
+        "manifestation": "tự giác học tập",
+        "importance": "cần thiết cho việc tiếp nhận kiến thức"
+      },
+      "type_source": "person",
+      "type_target": "student_quality",
+      "relation": "phải_có"
     },
     {
-      "source": "người học",
-      "target": "thảo luận",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "STUDY"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "required_attitude": "tự giác, tích cực, chủ động"
+      },
+      "target": {
+        "name": "Ý thức tự giác",
+        "entity_type": "student_quality",
+        "context_application": "trong quá trình tiếp nhận kiến thức",
+        "behavior_example": "tự giác sửa chữa lỗi lầm"
+      },
+      "type_source": "person",
+      "type_target": "student_quality",
+      "relation": "phải_có"
     },
     {
-      "source": "người học",
-      "target": "tranh luận",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "STUDY"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "required_attitude": "tích cực, chủ động"
+      },
+      "target": {
+        "name": "Ý thức tích cực",
+        "entity_type": "student_quality",
+        "context_application": "trong quá trình tiếp nhận kiến thức",
+        "behavior_example": "tham gia thảo luận, vận dụng kiến thức"
+      },
+      "type_source": "person",
+      "type_target": "student_quality",
+      "relation": "phải_có"
     },
     {
-      "source": "người học",
-      "target": "bài tập",
-      "relation": "hoàn_thành",
-      "type_source": "STUDENT",
-      "type_target": "ASSIGNMENT"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "required_attitude": "chủ động"
+      },
+      "target": {
+        "name": "Ý thức chủ động",
+        "entity_type": "student_quality",
+        "context_application": "trong quá trình tiếp nhận kiến thức",
+        "behavior_example": "chủ động trong học tập"
+      },
+      "type_source": "person",
+      "type_target": "student_quality",
+      "relation": "phải_có"
     },
     {
-      "source": "người học",
-      "target": "đề tài",
-      "relation": "hoàn_thành",
-      "type_source": "STUDENT",
-      "type_target": "PROJECT"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "action_required": "lắng nghe giảng bài"
+      },
+      "target": {
+        "name": "Thầy cô",
+        "entity_type": "person_role",
+        "primary_role": "giảng viên",
+        "activity": "giảng bài"
+      },
+      "type_source": "person",
+      "type_target": "person_role",
+      "relation": "phải_lắng_nghe_giảng_bài_từ"
     },
     {
-      "source": "người học",
-      "target": "kiến thức",
-      "relation": "vận_dụng_vào",
-      "type_source": "STUDENT",
-      "type_target": "KNOWLEDGE"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "participation_manner": "tích cực"
+      },
+      "target": {
+        "name": "Thảo luận trên lớp",
+        "entity_type": "academic_activity",
+        "location": "trên lớp",
+        "type_of_activity": "thảo luận"
+      },
+      "type_source": "person",
+      "type_target": "academic_activity",
+      "relation": "phải_tham_gia_tích_cực_vào"
     },
     {
-      "source": "kiến thức",
-      "target": "thực tế cuộc sống",
-      "relation": "vận_dụng_vào",
-      "type_source": "KNOWLEDGE",
-      "type_target": "REALITY"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "participation_manner": "tích cực"
+      },
+      "target": {
+        "name": "Tranh luận trên lớp",
+        "entity_type": "academic_activity",
+        "location": "trên lớp",
+        "type_of_activity": "tranh luận"
+      },
+      "type_source": "person",
+      "type_target": "academic_activity",
+      "relation": "phải_tham_gia_tích_cực_vào"
     },
     {
-      "source": "người học",
-      "target": "học tập",
-      "relation": "trung_thực_trong",
-      "type_source": "STUDENT",
-      "type_target": "STUDY"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "task_completion_standard": "tốt và đúng thời hạn"
+      },
+      "target": {
+        "name": "Các bài tập",
+        "entity_type": "academic_task",
+        "status": "được giao",
+        "nature_of_task": "bài tập học thuật"
+      },
+      "type_source": "person",
+      "type_target": "academic_task",
+      "relation": "phải_hoàn_thành"
     },
     {
-      "source": "người học",
-      "target": "thi",
-      "relation": "trung_thực_trong",
-      "type_source": "STUDENT",
-      "type_target": "EXAM"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "task_completion_standard": "tốt và đúng thời hạn"
+      },
+      "target": {
+        "name": "Đề tài được giao",
+        "entity_type": "academic_task",
+        "status": "được giao",
+        "nature_of_task": "đề tài nghiên cứu/học thuật"
+      },
+      "type_source": "person",
+      "type_target": "academic_task",
+      "relation": "phải_hoàn_thành"
     },
     {
-      "source": "người học",
-      "target": "kiểm tra",
-      "relation": "trung_thực_trong",
-      "type_source": "STUDENT",
-      "type_target": "TEST"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "application_manner": "tích cực, sáng tạo"
+      },
+      "target": {
+        "name": "Kiến thức",
+        "entity_type": "knowledge",
+        "application_context": "thực tế cuộc sống",
+        "type_of_knowledge": "đã học"
+      },
+      "type_source": "person",
+      "type_target": "knowledge",
+      "relation": "phải_vận_dụng_vào"
     },
     {
-      "source": "người học",
-      "target": "học tập",
-      "relation": "nghiêm_túc_trong",
-      "type_source": "STUDENT",
-      "type_target": "STUDY"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "required_trait": "trung thực"
+      },
+      "target": {
+        "name": "Học tập",
+        "entity_type": "process",
+        "scope": "quá trình học tập",
+        "expected_behavior": "trung thực"
+      },
+      "type_source": "person",
+      "type_target": "process",
+      "relation": "phải_trung_thực_trong"
     },
     {
-      "source": "người học",
-      "target": "thi",
-      "relation": "nghiêm_túc_trong",
-      "type_source": "STUDENT",
-      "type_target": "EXAM"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "required_trait": "nghiêm túc"
+      },
+      "target": {
+        "name": "Học tập",
+        "entity_type": "process",
+        "scope": "quá trình học tập",
+        "expected_behavior": "nghiêm túc"
+      },
+      "type_source": "person",
+      "type_target": "process",
+      "relation": "phải_nghiêm_túc_trong"
     },
     {
-      "source": "người học",
-      "target": "kiểm tra",
-      "relation": "nghiêm_túc_trong",
-      "type_source": "STUDENT",
-      "type_target": "TEST"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "required_trait": "trung thực"
+      },
+      "target": {
+        "name": "Thi",
+        "entity_type": "examination",
+        "type_of_assessment": "kỳ thi",
+        "expected_behavior": "trung thực"
+      },
+      "type_source": "person",
+      "type_target": "examination",
+      "relation": "phải_trung_thực_khi"
     },
     {
-      "source": "người học",
-      "target": "quy chế",
-      "relation": "vi_phạm",
-      "type_source": "STUDENT",
-      "type_target": "REGULATION"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "required_trait": "nghiêm túc"
+      },
+      "target": {
+        "name": "Thi",
+        "entity_type": "examination",
+        "type_of_assessment": "kỳ thi",
+        "expected_behavior": "nghiêm túc"
+      },
+      "type_source": "person",
+      "type_target": "examination",
+      "relation": "phải_nghiêm_túc_khi"
     },
     {
-      "source": "người học",
-      "target": "quy định",
-      "relation": "vi_phạm",
-      "type_source": "STUDENT",
-      "type_target": "REGULATION"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "required_trait": "trung thực"
+      },
+      "target": {
+        "name": "Kiểm tra",
+        "entity_type": "examination",
+        "type_of_assessment": "bài kiểm tra",
+        "expected_behavior": "trung thực"
+      },
+      "type_source": "person",
+      "type_target": "examination",
+      "relation": "phải_trung_thực_khi"
     },
     {
-      "source": "người học",
-      "target": "nội quy",
-      "relation": "vi_phạm",
-      "type_source": "STUDENT",
-      "type_target": "RULE"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "required_trait": "nghiêm túc"
+      },
+      "target": {
+        "name": "Kiểm tra",
+        "entity_type": "examination",
+        "type_of_assessment": "bài kiểm tra",
+        "expected_behavior": "nghiêm túc"
+      },
+      "type_source": "person",
+      "type_target": "examination",
+      "relation": "phải_nghiêm_túc_khi"
     },
     {
-      "source": "quy chế",
-      "target": "Bộ Giáo dục và Đào tạo",
-      "relation": "của",
-      "type_source": "REGULATION",
-      "type_target": "EDUCATION_ORGANIZATION"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "action_if_violated": "tự giác sửa chữa lỗi lầm"
+      },
+      "target": {
+        "name": "Lỗi lầm",
+        "entity_type": "mistake",
+        "cause_context": "khi vi phạm quy chế, quy định, nội quy",
+        "expected_response": "tự giác sửa chữa"
+      },
+      "type_source": "person",
+      "type_target": "mistake",
+      "relation": "phải_tự_giác_sửa_chữa"
     },
     {
-      "source": "quy định",
-      "target": "Bộ Giáo dục và Đào tạo",
-      "relation": "của",
-      "type_source": "REGULATION",
-      "type_target": "EDUCATION_ORGANIZATION"
+      "source": {
+        "name": "Lỗi lầm",
+        "entity_type": "mistake",
+        "description": "sai phạm của người học"
+      },
+      "target": {
+        "name": "Quy chế",
+        "entity_type": "regulation",
+        "issuing_authority_example": "Bộ Giáo dục và Đào tạo, nhà trường"
+      },
+      "type_source": "mistake",
+      "type_target": "regulation",
+      "relation": "phát_sinh_khi_vi_phạm"
     },
     {
-      "source": "nội quy",
-      "target": "Bộ Giáo dục và Đào tạo",
-      "relation": "của",
-      "type_source": "RULE",
-      "type_target": "EDUCATION_ORGANIZATION"
+      "source": {
+        "name": "Lỗi lầm",
+        "entity_type": "mistake",
+        "description": "sai phạm của người học"
+      },
+      "target": {
+        "name": "Quy định",
+        "entity_type": "regulation",
+        "issuing_authority_example": "Bộ Giáo dục và Đào tạo, nhà trường"
+      },
+      "type_source": "mistake",
+      "type_target": "regulation",
+      "relation": "phát_sinh_khi_vi_phạm"
     },
     {
-      "source": "quy chế",
-      "target": "nhà trường",
-      "relation": "của",
-      "type_source": "REGULATION",
-      "type_target": "SCHOOL"
+      "source": {
+        "name": "Lỗi lầm",
+        "entity_type": "mistake",
+        "description": "sai phạm của người học"
+      },
+      "target": {
+        "name": "Nội quy",
+        "entity_type": "regulation",
+        "issuing_authority_example": "Bộ Giáo dục và Đào tạo, nhà trường"
+      },
+      "type_source": "mistake",
+      "type_target": "regulation",
+      "relation": "phát_sinh_khi_vi_phạm"
     },
     {
-      "source": "quy định",
-      "target": "nhà trường",
-      "relation": "của",
-      "type_source": "REGULATION",
-      "type_target": "SCHOOL"
+      "source": {
+        "name": "Quy chế",
+        "entity_type": "regulation",
+        "type_of_document": "văn bản quy phạm"
+      },
+      "target": {
+        "name": "Bộ Giáo dục và Đào tạo",
+        "entity_type": "organization",
+        "organization_type": "cơ quan nhà nước",
+        "role_in_education": "quản lý giáo dục"
+      },
+      "type_source": "regulation",
+      "type_target": "organization",
+      "relation": "của"
     },
     {
-      "source": "nội quy",
-      "target": "nhà trường",
-      "relation": "của",
-      "type_source": "RULE",
-      "type_target": "SCHOOL"
+      "source": {
+        "name": "Quy chế",
+        "entity_type": "regulation",
+        "type_of_document": "văn bản quy phạm"
+      },
+      "target": {
+        "name": "Nhà trường",
+        "entity_type": "organization",
+        "organization_type": "cơ sở giáo dục",
+        "role_in_education": "tổ chức đào tạo"
+      },
+      "type_source": "regulation",
+      "type_target": "organization",
+      "relation": "của"
     },
     {
-      "source": "người học",
-      "target": "hoạt động học tập",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "STUDY_ACTIVITY"
+      "source": {
+        "name": "Quy định",
+        "entity_type": "regulation",
+        "type_of_document": "văn bản quy phạm"
+      },
+      "target": {
+        "name": "Bộ Giáo dục và Đào tạo",
+        "entity_type": "organization",
+        "organization_type": "cơ quan nhà nước",
+        "role_in_education": "quản lý giáo dục"
+      },
+      "type_source": "regulation",
+      "type_target": "organization",
+      "relation": "của"
     },
     {
-      "source": "người học",
-      "target": "hoạt động xã hội",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "SOCIAL_ACTIVITY"
+      "source": {
+        "name": "Quy định",
+        "entity_type": "regulation",
+        "type_of_document": "văn bản quy phạm"
+      },
+      "target": {
+        "name": "Nhà trường",
+        "entity_type": "organization",
+        "organization_type": "cơ sở giáo dục",
+        "role_in_education": "tổ chức đào tạo"
+      },
+      "type_source": "regulation",
+      "type_target": "organization",
+      "relation": "của"
     },
     {
-      "source": "người học",
-      "target": "phong trào thi đua",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "COMPETITION"
+      "source": {
+        "name": "Nội quy",
+        "entity_type": "regulation",
+        "type_of_document": "văn bản quy phạm"
+      },
+      "target": {
+        "name": "Bộ Giáo dục và Đào tạo",
+        "entity_type": "organization",
+        "organization_type": "cơ quan nhà nước",
+        "role_in_education": "quản lý giáo dục"
+      },
+      "type_source": "regulation",
+      "type_target": "organization",
+      "relation": "của"
     },
     {
-      "source": "tổ chức đoàn thể",
-      "target": "trường",
-      "relation": "trong",
-      "type_source": "ORGANIZATION",
-      "type_target": "SCHOOL"
+      "source": {
+        "name": "Nội quy",
+        "entity_type": "regulation",
+        "type_of_document": "văn bản quy phạm"
+      },
+      "target": {
+        "name": "Nhà trường",
+        "entity_type": "organization",
+        "organization_type": "cơ sở giáo dục",
+        "role_in_education": "tổ chức đào tạo"
+      },
+      "type_source": "regulation",
+      "type_target": "organization",
+      "relation": "của"
     },
     {
-      "source": "tổ chức đoàn thể",
-      "target": "hoạt động học tập",
-      "relation": "phát_động",
-      "type_source": "ORGANIZATION",
-      "type_target": "STUDY_ACTIVITY"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "participation_expectation": "đầy đủ, nhiệt tình"
+      },
+      "target": {
+        "name": "Hoạt động học tập",
+        "entity_type": "activity",
+        "category": "học tập",
+        "scope": "mọi hoạt động"
+      },
+      "type_source": "person",
+      "type_target": "activity",
+      "relation": "phải_tham_gia_vào"
     },
     {
-      "source": "tổ chức đoàn thể",
-      "target": "hoạt động xã hội",
-      "relation": "phát_động",
-      "type_source": "ORGANIZATION",
-      "type_target": "SOCIAL_ACTIVITY"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "participation_expectation": "đầy đủ, nhiệt tình"
+      },
+      "target": {
+        "name": "Hoạt động xã hội",
+        "entity_type": "activity",
+        "category": "xã hội",
+        "scope": "mọi hoạt động"
+      },
+      "type_source": "person",
+      "type_target": "activity",
+      "relation": "phải_tham_gia_vào"
     },
     {
-      "source": "tổ chức đoàn thể",
-      "target": "phong trào thi đua",
-      "relation": "phát_động",
-      "type_source": "ORGANIZATION",
-      "type_target": "COMPETITION"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "participation_expectation": "đầy đủ, nhiệt tình"
+      },
+      "target": {
+        "name": "Các phong trào thi đua",
+        "entity_type": "activity_event",
+        "category": "thi đua",
+        "initiator_type": "các tổ chức đoàn thể trong trường"
+      },
+      "type_source": "person",
+      "type_target": "activity_event",
+      "relation": "phải_tham_gia_vào"
     },
     {
-      "source": "người học",
-      "target": "hoạt động nghiên cứu khoa học",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "RESEARCH_ACTIVITY"
+      "source": {
+        "name": "Các phong trào thi đua",
+        "entity_type": "activity_event",
+        "category": "thi đua"
+      },
+      "target": {
+        "name": "Các tổ chức đoàn thể",
+        "entity_type": "organization_type",
+        "location_context": "trong trường",
+        "role": "phát động phong trào"
+      },
+      "type_source": "activity_event",
+      "type_target": "organization_type",
+      "relation": "do_phát_động_bởi"
     },
     {
-      "source": "sinh viên",
-      "target": "hoạt động khởi nghiệp",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "STARTUP_ACTIVITY"
+      "source": {
+        "name": "Các tổ chức đoàn thể",
+        "entity_type": "organization_type",
+        "typical_examples": "Đoàn Thanh niên, Hội Sinh viên"
+      },
+      "target": {
+        "name": "Trường",
+        "entity_type": "organization",
+        "organization_type": "cơ sở giáo dục",
+        "context_description": "nơi các tổ chức đoàn thể hoạt động"
+      },
+      "type_source": "organization_type",
+      "type_target": "organization",
+      "relation": "hoạt_động_trong"
     },
     {
-      "source": "người học",
-      "target": "hoạt động phục vụ cộng đồng",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "COMMUNITY_ACTIVITY"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "participation_expectation": "tích cực"
+      },
+      "target": {
+        "name": "Các hoạt động nghiên cứu khoa học",
+        "entity_type": "research_activity",
+        "field": "khoa học",
+        "nature": "nghiên cứu"
+      },
+      "type_source": "person",
+      "type_target": "research_activity",
+      "relation": "phải_tham_gia_vào"
     },
     {
-      "source": "người học",
-      "target": "đền ơn đáp nghĩa",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "GRATITUDE_ACTIVITY"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "participation_expectation": "tích cực"
+      },
+      "target": {
+        "name": "Hoạt động khởi nghiệp trong sinh viên",
+        "entity_type": "startup_activity",
+        "target_group": "sinh viên",
+        "field": "khởi nghiệp"
+      },
+      "type_source": "person",
+      "type_target": "startup_activity",
+      "relation": "phải_tham_gia_vào"
     },
     {
-      "source": "người học",
-      "target": "kỹ năng sống",
-      "relation": "rèn_luyện",
-      "type_source": "STUDENT",
-      "type_target": "LIFE_SKILL"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "participation_expectation": "tích cực"
+      },
+      "target": {
+        "name": "Các hoạt động phục vụ cộng đồng",
+        "entity_type": "community_service_activity",
+        "purpose": "phục vụ cộng đồng",
+        "nature": "tình nguyện, công ích"
+      },
+      "type_source": "person",
+      "type_target": "community_service_activity",
+      "relation": "phải_tham_gia_vào"
     },
     {
-      "source": "người học",
-      "target": "kỹ năng học tập",
-      "relation": "rèn_luyện",
-      "type_source": "STUDENT",
-      "type_target": "STUDY_SKILL"
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "participation_expectation": "tích cực"
+      },
+      "target": {
+        "name": "Hoạt động đền ơn đáp nghĩa",
+        "entity_type": "gratitude_activity",
+        "purpose": "thể hiện lòng biết ơn",
+        "nature": "hoạt động xã hội, văn hóa"
+      },
+      "type_source": "person",
+      "type_target": "gratitude_activity",
+      "relation": "phải_tham_gia_vào"
+    },
+    {
+      "source": {
+        "name": "Người học",
+        "entity_type": "person",
+        "role": "học sinh/sinh viên",
+        "self_improvement_focus": "kỹ năng sống và học tập"
+      },
+      "target": {
+        "name": "Ý thức tự rèn luyện",
+        "entity_type": "student_quality",
+        "focus_areas": "kỹ năng sống, học tập",
+        "nature": "tự giác rèn luyện bản thân"
+      },
+      "type_source": "person",
+      "type_target": "student_quality",
+      "relation": "phải_có"
+    },
+    {
+      "source": {
+        "name": "Ý thức tự rèn luyện",
+        "entity_type": "student_quality",
+        "nature": "tự giác rèn luyện bản thân"
+      },
+      "target": {
+        "name": "Kỹ năng sống",
+        "entity_type": "skill_set",
+        "description": "các kỹ năng cần thiết cho cuộc sống",
+        "development_method": "tự rèn luyện"
+      },
+      "type_source": "student_quality",
+      "type_target": "skill_set",
+      "relation": "hướng_tới_việc_rèn_luyện"
+    },
+    {
+      "source": {
+        "name": "Ý thức tự rèn luyện",
+        "entity_type": "student_quality",
+        "nature": "tự giác rèn luyện bản thân"
+      },
+      "target": {
+        "name": "Học tập",
+        "entity_type": "field_of_skill",
+        "description": "kỹ năng và phương pháp học tập hiệu quả",
+        "development_method": "tự rèn luyện"
+      },
+      "type_source": "student_quality",
+      "type_target": "field_of_skill",
+      "relation": "hướng_tới_việc_rèn_luyện"
     }
   ]
 }

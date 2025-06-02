@@ -1,213 +1,244 @@
 {
-  "entities": [
-    {
-      "name": "dịch vụ ATM của BIDV",
-      "type": "ATM_SERVICE"
-    },
-    {
-      "name": "BIDV",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "Thanh toán",
-      "type": "PAYMENT"
-    },
-    {
-      "name": "Tài khoản thanh toán",
-      "type": "BANK_ACCOUNT"
-    },
-    {
-      "name": "Học phí– Lệ phí thi",
-      "type": "PAYMENT_TYPE"
-    },
-    {
-      "name": "Nhà cung cấp dịch vụ",
-      "type": "SERVICE_PROVIDER"
-    },
-    {
-      "name": "Trường Đại học Nông Lâm TP.HCM",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "Mã sinh viên",
-      "type": "STUDENT_ID"
-    },
-    {
-      "name": "Mã Khách hàng",
-      "type": "CUSTOMER_ID"
-    },
-    {
-      "name": "Người nộp tiền",
-      "type": "PAYER"
-    },
-    {
-      "name": "ký tự chữ cái",
-      "type": "CHARACTER"
-    },
-    {
-      "name": "hai bên màn hình",
-      "type": "SCREEN"
-    },
-    {
-      "name": "ký tự chữ số",
-      "type": "NUMBER"
-    },
-    {
-      "name": "bàn phím",
-      "type": "KEYBOARD"
-    },
-    {
-      "name": "thông tin thanh toán",
-      "type": "PAYMENT_INFO"
-    },
-    {
-      "name": "nút “Có”",
-      "type": "BUTTON"
-    },
-    {
-      "name": "giao dịch thanh toán",
-      "type": "PAYMENT_TRANSACTION"
-    },
-    {
-      "name": "phản hồi kết quả",
-      "type": "FEEDBACK_RESULT"
-    },
-    {
-      "name": "biên lai",
-      "type": "RECEIPT"
-    },
-    {
-      "name": "ATM",
-      "type": "ATM"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "hình thức chuyển khoản",
-      "type": "TRANSFER_METHOD"
-    }
-  ],
   "relationships": [
     {
-      "source": "dịch vụ ATM của BIDV",
-      "target": "BIDV",
-      "relation": "CỦA",
-      "type_source": "ATM_SERVICE",
-      "type_target": "ORGANIZATION"
+      "source": {
+        "name": "Người nộp tiền",
+        "action_verb": "Đăng nhập",
+        "purpose_context": "Thanh toán học phí",
+        "step_reference": "Bước 1"
+      },
+      "target": {
+        "name": "Dịch vụ ATM của BIDV",
+        "provider_name": "BIDV",
+        "service_type": "Ngân hàng tự động"
+      },
+      "type_source": "payer",
+      "type_target": "atm_service",
+      "relation": "đăng_nhập_sử_dụng"
     },
     {
-      "source": "Thanh toán",
-      "target": "dịch vụ ATM của BIDV",
-      "relation": "SỬ_DỤNG",
-      "type_source": "PAYMENT",
-      "type_target": "ATM_SERVICE"
+      "source": {
+        "name": "Dịch vụ ATM của BIDV",
+        "description": "Hệ thống ATM cho giao dịch",
+        "access_point": "Máy ATM"
+      },
+      "target": {
+        "name": "BIDV",
+        "role_description": "Ngân hàng cung cấp dịch vụ",
+        "service_area": "Tài chính - Ngân hàng"
+      },
+      "type_source": "atm_service",
+      "type_target": "bank",
+      "relation": "cung_cấp_bởi"
     },
     {
-      "source": "Tài khoản thanh toán",
-      "target": "Thanh toán",
-      "relation": "CHỌN",
-      "type_source": "BANK_ACCOUNT",
-      "type_target": "PAYMENT"
+      "source": {
+        "name": "Người nộp tiền",
+        "interaction_type": "Chọn menu",
+        "device_interface": "Màn hình ATM",
+        "step_reference": "Bước 2"
+      },
+      "target": {
+        "name": "Menu Thanh toán",
+        "menu_purpose": "Truy cập chức năng thanh toán",
+        "display_location": "Giao diện ATM"
+      },
+      "type_source": "payer",
+      "type_target": "atm_menu_item",
+      "relation": "chọn"
     },
     {
-      "source": "Học phí– Lệ phí thi",
-      "target": "Thanh toán",
-      "relation": "CHỌN",
-      "type_source": "PAYMENT_TYPE",
-      "type_target": "PAYMENT"
+      "source": {
+        "name": "Người nộp tiền",
+        "interaction_type": "Chọn tài khoản",
+        "objective": "Xác định nguồn tiền",
+        "step_reference": "Bước 3"
+      },
+      "target": {
+        "name": "Tài khoản thanh toán",
+        "account_function": "Nguồn tiền cho giao dịch",
+        "selection_context": "Trong quy trình thanh toán"
+      },
+      "type_source": "payer",
+      "type_target": "bank_account",
+      "relation": "chọn"
     },
     {
-      "source": "Nhà cung cấp dịch vụ",
-      "target": "Học phí– Lệ phí thi",
-      "relation": "CHỌN",
-      "type_source": "SERVICE_PROVIDER",
-      "type_target": "PAYMENT_TYPE"
+      "source": {
+        "name": "Người nộp tiền",
+        "interaction_type": "Chọn loại dịch vụ",
+        "device_interface": "Màn hình ATM",
+        "step_reference": "Bước 4"
+      },
+      "target": {
+        "name": "Menu Học phí– Lệ phí thi",
+        "represents_service": "Thanh toán phí giáo dục",
+        "navigation_path": "Trong menu Thanh toán"
+      },
+      "type_source": "payer",
+      "type_target": "atm_menu_item",
+      "relation": "chọn"
     },
     {
-      "source": "Trường Đại học Nông Lâm TP.HCM",
-      "target": "Nhà cung cấp dịch vụ",
-      "relation": "LÀ",
-      "type_source": "ORGANIZATION",
-      "type_target": "SERVICE_PROVIDER"
+      "source": {
+        "name": "Người nộp tiền",
+        "interaction_type": "Chọn đơn vị thụ hưởng",
+        "selection_source": "Từ danh sách trên ATM",
+        "step_reference": "Bước 5"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "role_type": "Nhà cung cấp dịch vụ",
+        "identification_on_atm": "Tên trường",
+        "recipient_of_funds": "Học phí"
+      },
+      "type_source": "payer",
+      "type_target": "educational_institution",
+      "relation": "chọn_nhà_cung_cấp_dịch_vụ"
     },
     {
-      "source": "Mã sinh viên",
-      "target": "Mã Khách hàng",
-      "relation": "NHẬP_VÀO",
-      "type_source": "STUDENT_ID",
-      "type_target": "CUSTOMER_ID"
+      "source": {
+        "name": "Người nộp tiền",
+        "interaction_type": "Nhập dữ liệu",
+        "input_method_detail": "Ký tự chữ và số từ màn hình và bàn phím ATM",
+        "step_reference": "Bước 6"
+      },
+      "target": {
+        "name": "Mã sinh viên",
+        "identifier_nature": "Định danh người học",
+        "purpose_in_payment": "Liên kết thanh toán với sinh viên"
+      },
+      "type_source": "payer",
+      "type_target": "student_identifier",
+      "relation": "nhập"
     },
     {
-      "source": "Người nộp tiền",
-      "target": "ký tự chữ cái",
-      "relation": "CHỌN",
-      "type_source": "PAYER",
-      "type_target": "CHARACTER"
+      "source": {
+        "name": "Mã sinh viên",
+        "data_format_description": "Ký tự chữ và số",
+        "input_guidance": "Theo hướng dẫn trên màn hình ATM"
+      },
+      "target": {
+        "name": "Mục Mã Khách hàng",
+        "field_label_text": "Mã Khách hàng",
+        "field_location_description": "Giao diện nhập liệu ATM",
+        "function_description": "Tiếp nhận mã định danh để xử lý giao dịch"
+      },
+      "type_source": "student_identifier",
+      "type_target": "input_field",
+      "relation": "được_nhập_vào_trường"
     },
     {
-      "source": "ký tự chữ cái",
-      "target": "hai bên màn hình",
-      "relation": "Ở",
-      "type_source": "CHARACTER",
-      "type_target": "SCREEN"
+      "source": {
+        "name": "Người nộp tiền",
+        "action_verb": "Kiểm tra",
+        "objective": "Xác minh tính chính xác của thông tin",
+        "step_reference": "Bước 7"
+      },
+      "target": {
+        "name": "Thông tin thanh toán",
+        "data_content_summary": "Chi tiết giao dịch như số tiền, người thụ hưởng, mã sinh viên",
+        "display_medium_description": "Màn hình ATM",
+        "purpose_of_display_text": "Để người dùng xác nhận trước khi hoàn tất"
+      },
+      "type_source": "payer",
+      "type_target": "payment_information",
+      "relation": "kiểm_tra"
     },
     {
-      "source": "Người nộp tiền",
-      "target": "ký tự chữ số",
-      "relation": "CHỌN",
-      "type_source": "PAYER",
-      "type_target": "NUMBER"
+      "source": {
+        "name": "Người nộp tiền",
+        "action_verb": "Xác nhận",
+        "confirmation_method_detail": "Chọn nút 'Có' trên ATM",
+        "step_reference": "Bước 7"
+      },
+      "target": {
+        "name": "Giao dịch thanh toán",
+        "transaction_subject_matter_text": "Học phí",
+        "status_update_on_action": "Từ trạng thái chờ sang đang xử lý hoặc hoàn tất"
+      },
+      "type_source": "payer",
+      "type_target": "financial_transaction",
+      "relation": "xác_nhận"
     },
     {
-      "source": "ký tự chữ số",
-      "target": "bàn phím",
-      "relation": "TRÊN",
-      "type_source": "NUMBER",
-      "type_target": "KEYBOARD"
+      "source": {
+        "name": "Người nộp tiền",
+        "action_verb": "Nhận",
+        "information_channel_device": "Màn hình ATM",
+        "step_reference": "Bước 8"
+      },
+      "target": {
+        "name": "Phản hồi kết quả",
+        "originating_system_name": "BIDV",
+        "content_description_text": "Thông báo trạng thái giao dịch (thành công hoặc thất bại)"
+      },
+      "type_source": "payer",
+      "type_target": "transaction_response",
+      "relation": "nhận"
     },
     {
-      "source": "thông tin thanh toán",
-      "target": "Thanh toán",
-      "relation": "KIỂM_TRA",
-      "type_source": "PAYMENT_INFO",
-      "type_target": "PAYMENT"
+      "source": {
+        "name": "Phản hồi kết quả",
+        "purpose_for_payer_text": "Thông báo cho người dùng về kết quả giao dịch",
+        "delivery_channel_description": "Hệ thống ATM"
+      },
+      "target": {
+        "name": "BIDV",
+        "role_in_process_text": "Đơn vị xử lý giao dịch và cung cấp kết quả",
+        "communication_method_description": "Qua mạng lưới ATM"
+      },
+      "type_source": "transaction_response",
+      "type_target": "bank",
+      "relation": "từ"
     },
     {
-      "source": "nút “Có”",
-      "target": "thông tin thanh toán",
-      "relation": "CHỌN",
-      "type_source": "BUTTON",
-      "type_target": "PAYMENT_INFO"
+      "source": {
+        "name": "Người nộp tiền",
+        "action_verb": "In",
+        "location_of_action_text": "Tại máy ATM",
+        "step_reference": "Bước 8"
+      },
+      "target": {
+        "name": "Biên lai",
+        "document_function_text": "Bằng chứng giao dịch",
+        "physical_medium_text": "Giấy in",
+        "issuing_device_name": "ATM"
+      },
+      "type_source": "payer",
+      "type_target": "receipt",
+      "relation": "in"
     },
     {
-      "source": "giao dịch thanh toán",
-      "target": "nút “Có”",
-      "relation": "XÁC_NHẬN",
-      "type_source": "PAYMENT_TRANSACTION",
-      "type_target": "BUTTON"
+      "source": {
+        "name": "Biên lai",
+        "issuance_context_description": "Sau khi giao dịch hoàn tất",
+        "user_utility_text": "Lưu trữ làm bằng chứng thanh toán"
+      },
+      "target": {
+        "name": "ATM",
+        "specific_function_used_text": "Chức năng in biên lai",
+        "operating_bank_name": "BIDV",
+        "device_category_text": "Máy giao dịch tự động"
+      },
+      "type_source": "receipt",
+      "type_target": "automated_teller_machine",
+      "relation": "từ"
     },
     {
-      "source": "phản hồi kết quả",
-      "target": "BIDV",
-      "relation": "CỦA",
-      "type_source": "FEEDBACK_RESULT",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "biên lai",
-      "target": "ATM",
-      "relation": "TỪ",
-      "type_source": "RECEIPT",
-      "type_target": "ATM"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "hình thức chuyển khoản",
-      "relation": "KHÔNG_ĐÓNG_BẰNG",
-      "type_source": "STUDENT",
-      "type_target": "TRANSFER_METHOD"
+      "source": {
+        "name": "Sinh viên",
+        "payment_obligation_text": "Nghĩa vụ đóng học phí",
+        "constraint_source_text": "Lưu ý trong hướng dẫn thanh toán"
+      },
+      "target": {
+        "name": "Hình thức chuyển khoản",
+        "payment_method_description_text": "Phương thức chuyển tiền trực tiếp giữa các tài khoản ngân hàng",
+        "applicability_status_text": "Không được chấp nhận cho thanh toán học phí này"
+      },
+      "type_source": "student",
+      "type_target": "payment_method",
+      "relation": "không_thanh_toán_học_phí_bằng"
     }
   ]
 }

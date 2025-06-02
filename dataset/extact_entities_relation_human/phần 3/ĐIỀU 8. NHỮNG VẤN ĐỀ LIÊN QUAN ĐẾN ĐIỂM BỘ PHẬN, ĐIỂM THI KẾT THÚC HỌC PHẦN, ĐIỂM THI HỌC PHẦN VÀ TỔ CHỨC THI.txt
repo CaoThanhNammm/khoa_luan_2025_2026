@@ -1,550 +1,381 @@
 {
-  "entities": [
-    {
-      "name": "sinh viên",
-      "type": "PERSON_GROUP"
-    },
-    {
-      "name": "trách nhiệm",
-      "type": "RESPONSIBILITY"
-    },
-    {
-      "name": "độ chính xác",
-      "type": "ACCURACY"
-    },
-    {
-      "name": "điểm thi",
-      "type": "EXAM_SCORE"
-    },
-    {
-      "name": "khoa",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "bản in",
-      "type": "MEDIUM"
-    },
-    {
-      "name": "Phòng Đào tạo",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "điều chỉnh",
-      "type": "ACTION"
-    },
-    {
-      "name": "điểm bộ phận",
-      "type": "GRADE"
-    },
-    {
-      "name": "giảng viên giảng dạy",
-      "type": "PERSON"
-    },
-    {
-      "name": "học phần",
-      "type": "COURSE"
-    },
-    {
-      "name": "đơn",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "Trưởng Bộ môn",
-      "type": "DEPARTMENT_HEAD"
-    },
-    {
-      "name": "điểm thi kết thúc học phần",
-      "type": "EXAM_SCORE"
-    },
-    {
-      "name": "điểm học phần",
-      "type": "COURSE_GRADE"
-    },
-    {
-      "name": "sai lệch",
-      "type": "ERROR"
-    },
-    {
-      "name": "bảng điểm tổng kết",
-      "type": "GRADE_SHEET"
-    },
-    {
-      "name": "phòng Đào tạo",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "giấy hẹn",
-      "type": "APPOINTMENT_LETTER"
-    },
-    {
-      "name": "thời hạn",
-      "type": "DURATION"
-    },
-    {
-      "name": "cơ sở dữ liệu",
-      "type": "DATABASE"
-    },
-    {
-      "name": "01 (một) tuần",
-      "type": "DURATION"
-    },
-    {
-      "name": "phúc khảo điểm thi kết thúc học phần",
-      "type": "ACTION"
-    },
-    {
-      "name": "khoa chuyên môn",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "3 ngày",
-      "type": "DURATION"
-    },
-    {
-      "name": "ngày công bố điểm",
-      "type": "DATE"
-    },
-    {
-      "name": "bộ môn quản lý môn học",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "giáo viên chấm phúc khảo",
-      "type": "PERSON"
-    },
-    {
-      "name": "kết quả",
-      "type": "RESULT"
-    },
-    {
-      "name": "bảng điểm",
-      "type": "GRADE_SHEET"
-    },
-    {
-      "name": "khiếu nại",
-      "type": "COMPLAINT"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "trách nhiệm",
-      "type_source": "PERSON_GROUP",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "duty": "Thường xuyên kiểm tra điểm thi",
+        "purpose_of_check": "Kịp thời điều chỉnh"
+      },
+      "target": {
+        "name": "Điểm thi",
+        "data_category": "Học tập",
+        "attribute_to_check": "Độ chính xác",
+        "importance": "Cần điều chỉnh nếu sai"
+      },
+      "type_source": "student",
+      "type_target": "exam_score",
+      "relation": "có_trách_nhiệm_kiểm_tra_độ_chính_xác_của"
     },
     {
-      "source": "trách nhiệm",
-      "target": "kiểm tra",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACTION",
-      "relation": "BAO_GỒM"
+      "source": {
+        "name": "Điểm thi",
+        "information_context": "Dùng để sinh viên kiểm tra độ chính xác",
+        "source_description": "Điểm được công bố",
+        "comparison_basis": "Một trong các nguồn để đối chiếu"
+      },
+      "target": {
+        "name": "Khoa",
+        "role_in_data_dissemination": "Nơi công bố điểm",
+        "data_provided_description": "Thông tin điểm thi",
+        "organizational_level": "Đơn vị học thuật"
+      },
+      "type_source": "exam_score",
+      "type_target": "academic_department",
+      "relation": "có_thông_tin_công_bố_tại"
     },
     {
-      "source": "kiểm tra",
-      "target": "độ chính xác",
-      "type_source": "ACTION",
-      "type_target": "ACCURACY",
-      "relation": "VỀ"
+      "source": {
+        "name": "Điểm thi",
+        "information_context": "Dùng để sinh viên kiểm tra độ chính xác",
+        "source_description": "Bản in điểm",
+        "comparison_basis": "Một trong các nguồn để đối chiếu"
+      },
+      "target": {
+        "name": "Phòng Đào tạo",
+        "role_in_data_dissemination": "Nơi cung cấp bản in điểm",
+        "data_provided_format": "Bản in",
+        "organizational_level": "Đơn vị quản lý đào tạo"
+      },
+      "type_source": "exam_score",
+      "type_target": "academic_affairs_office",
+      "relation": "có_bản_in_tại"
     },
     {
-      "source": "độ chính xác",
-      "target": "điểm thi",
-      "type_source": "ACCURACY",
-      "type_target": "EXAM_SCORE",
-      "relation": "CỦA"
+      "source": {
+        "name": "Sinh viên",
+        "status_condition": "Khi có thắc mắc về điểm bộ phận",
+        "initial_interaction_with": "Giảng viên giảng dạy học phần",
+        "escalation_path_if_unresolved": "Viết đơn gửi Trưởng Bộ môn"
+      },
+      "target": {
+        "name": "Điểm bộ phận",
+        "score_type_description": "Thành phần của điểm học phần",
+        "subject_of_query": "Thắc mắc của sinh viên",
+        "initial_resolution_authority": "Giảng viên giảng dạy học phần"
+      },
+      "type_source": "student",
+      "type_target": "component_score",
+      "relation": "có_thắc_mắc_về"
     },
     {
-      "source": "điểm thi",
-      "target": "khoa",
-      "type_source": "EXAM_SCORE",
-      "type_target": "DEPARTMENT",
-      "relation": "CÔNG_BỐ_TẠI"
+      "source": {
+        "name": "Thắc mắc về điểm bộ phận",
+        "originator_role": "Sinh viên",
+        "subject_matter_description": "Điểm thành phần học phần",
+        "initial_recipient_role": "Giảng viên giảng dạy học phần",
+        "resolution_status_with_initial_recipient": "Không được giải quyết thỏa đáng (khả năng)"
+      },
+      "target": {
+        "name": "Giảng viên giảng dạy học phần",
+        "role_description": "Người dạy và chấm điểm bộ phận",
+        "responsibility_description": "Giải quyết thắc mắc ban đầu về điểm bộ phận",
+        "outcome_if_resolution_fails": "Sinh viên có quyền gửi đơn lên Trưởng Bộ môn"
+      },
+      "type_source": "query",
+      "type_target": "lecturer",
+      "relation": "được_nêu_với"
     },
     {
-      "source": "điểm thi",
-      "target": "bản in",
-      "type_source": "EXAM_SCORE",
-      "type_target": "MEDIUM",
-      "relation": "GIỮA"
+      "source": {
+        "name": "Sinh viên",
+        "condition_for_action_description": "Thắc mắc về điểm bộ phận không được giảng viên giải quyết thỏa đáng",
+        "action_taken_description": "Viết đơn",
+        "recipient_of_application_description": "Trưởng Bộ môn",
+        "entitlement": "Có quyền"
+      },
+      "target": {
+        "name": "Trưởng Bộ môn",
+        "role_in_dispute_resolution": "Cấp quản lý giải quyết khiếu nại/thắc mắc",
+        "receives_document_name": "Đơn của sinh viên",
+        "subsequent_responsibility_description": "Giải quyết và trả lời thắc mắc"
+      },
+      "type_source": "student",
+      "type_target": "head_of_department_section",
+      "relation": "có_quyền_nộp_đơn_cho"
     },
     {
-      "source": "bản in",
-      "target": "Phòng Đào tạo",
-      "type_source": "MEDIUM",
-      "type_target": "DEPARTMENT",
-      "relation": "TẠI"
+      "source": {
+        "name": "Trưởng Bộ môn",
+        "responsibility_scope": "Giải quyết và trả lời thắc mắc cho sinh viên",
+        "input_for_action": "Đơn từ sinh viên (về điểm bộ phận)",
+        "output_action": "Trả lời cho sinh viên"
+      },
+      "target": {
+        "name": "Thắc mắc của sinh viên về điểm bộ phận",
+        "current_resolution_authority": "Trưởng Bộ môn",
+        "submission_method_to_current_authority": "Đơn",
+        "expected_resolution_outcome": "Giải quyết và trả lời"
+      },
+      "type_source": "head_of_department_section",
+      "type_target": "query",
+      "relation": "có_trách_nhiệm_giải_quyết_và_trả_lời"
     },
     {
-      "source": "kiểm tra",
-      "target": "điều chỉnh",
-      "type_source": "ACTION",
-      "type_target": "ACTION",
-      "relation": "ĐỂ"
+      "source": {
+        "name": "Sinh viên",
+        "reason_for_query_description": "Có sai lệch giữa điểm học phần đã công bố ở Khoa và điểm trong bảng điểm tổng kết PĐT",
+        "action_taken_description": "Viết đơn và gửi trực tiếp",
+        "recipient_department_name": "Phòng Đào tạo"
+      },
+      "target": {
+        "name": "Điểm thi kết thúc học phần/Điểm học phần",
+        "issue_description": "Có sai lệch giữa các nguồn công bố",
+        "query_recipient_department": "Phòng Đào tạo",
+        "resolution_initiation_method": "Đơn của sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "course_score_issue",
+      "relation": "có_thắc_mắc_về"
     },
     {
-      "source": "sinh viên",
-      "target": "thắc mắc",
-      "type_source": "PERSON_GROUP",
-      "type_target": "CONCEPT",
-      "relation": "KHI_CÓ"
+      "source": {
+        "name": "Điểm học phần đã công bố ở Khoa",
+        "announcement_location_description": "Khoa",
+        "comparison_target_description": "Điểm học phần trong bảng điểm tổng kết do PĐT công bố",
+        "issue_type_observed": "Sai lệch (khả năng)"
+      },
+      "target": {
+        "name": "Điểm học phần trong bảng điểm tổng kết",
+        "document_context_description": "Bảng điểm tổng kết",
+        "announcing_body_name": "Phòng Đào tạo",
+        "comparison_source_description": "Điểm học phần đã công bố ở Khoa"
+      },
+      "type_source": "announced_score",
+      "type_target": "transcript_score",
+      "relation": "có_sai_lệch_với"
     },
     {
-      "source": "thắc mắc",
-      "target": "điểm bộ phận",
-      "type_source": "CONCEPT",
-      "type_target": "GRADE",
-      "relation": "VỀ"
+      "source": {
+        "name": "Sinh viên",
+        "reason_for_action_description": "Thắc mắc về sai lệch điểm học phần",
+        "action_process_description": "Viết đơn và gửi trực tiếp",
+        "recipient_department_name": "Phòng Đào tạo"
+      },
+      "target": {
+        "name": "Phòng Đào tạo",
+        "role_in_process_description": "Giải quyết thắc mắc về sai lệch điểm học phần",
+        "receives_from_role": "Sinh viên (trực tiếp)",
+        "response_commitment_description": "Giải quyết và trả lời theo giấy hẹn"
+      },
+      "type_source": "student",
+      "type_target": "academic_affairs_office",
+      "relation": "viết_đơn_và_gửi_trực_tiếp_cho"
     },
     {
-      "source": "thắc mắc",
-      "target": "giảng viên giảng dạy",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON",
-      "relation": "VỚI"
+      "source": {
+        "name": "Phòng Đào tạo",
+        "primary_responsibility_description": "Giải quyết và trả lời những thắc mắc của sinh viên",
+        "subject_of_query_handled_description": "Sai lệch điểm học phần",
+        "response_timeline_reference_document": "Giấy hẹn"
+      },
+      "target": {
+        "name": "Thắc mắc của sinh viên về sai lệch điểm",
+        "current_resolver_department_name": "Phòng Đào tạo",
+        "expected_action_from_resolver": "Giải quyết và trả lời",
+        "response_timeline_document_name": "Giấy hẹn"
+      },
+      "type_source": "academic_affairs_office",
+      "type_target": "query",
+      "relation": "có_trách_nhiệm_giải_quyết_và_trả_lời"
     },
     {
-      "source": "giảng viên giảng dạy",
-      "target": "học phần",
-      "type_source": "PERSON",
-      "type_target": "COURSE",
-      "relation": "GIẢNG_DẠY"
+      "source": {
+        "name": "Việc trả lời thắc mắc của Phòng Đào tạo",
+        "actor_name": "Phòng Đào tạo",
+        "action_type_description": "Trả lời thắc mắc",
+        "recipient_group_description": "Sinh viên"
+      },
+      "target": {
+        "name": "Giấy hẹn",
+        "content_information_description": "Thời hạn trả lời thắc mắc",
+        "issuing_authority_implied": "Phòng Đào tạo",
+        "purpose_of_document_description": "Thông báo và cam kết thời hạn"
+      },
+      "type_source": "response_action",
+      "type_target": "appointment_document",
+      "relation": "theo_thời_hạn_trong"
     },
     {
-      "source": "thắc mắc",
-      "target": "giải quyết thỏa đáng",
-      "type_source": "CONCEPT",
-      "type_target": "ACTION",
-      "relation": "KHÔNG_ĐƯỢC"
+      "source": {
+        "name": "Phòng Đào tạo",
+        "condition_for_duty_description": "Nếu thực sự có sai sót về điểm học phần",
+        "action_required_description": "Điều chỉnh điểm học phần",
+        "adjustment_location_description": "Cơ sở dữ liệu",
+        "adjustment_timeframe_value": "01 tuần"
+      },
+      "target": {
+        "name": "Sai sót về điểm học phần",
+        "status_if_confirmed_description": "Cần được điều chỉnh",
+        "adjustment_agent_name": "Phòng Đào tạo",
+        "location_of_data_storage": "Cơ sở dữ liệu"
+      },
+      "type_source": "academic_affairs_office",
+      "type_target": "score_error",
+      "relation": "có_trách_nhiệm_điều_chỉnh"
     },
     {
-      "source": "sinh viên",
-      "target": "quyền viết đơn",
-      "type_source": "PERSON_GROUP",
-      "type_target": "RIGHT",
-      "relation": "CÓ"
+      "source": {
+        "name": "Hành động điều chỉnh điểm học phần",
+        "actor_name": "Phòng Đào tạo",
+        "reason_for_action": "Do có sai sót",
+        "timeframe_for_action": "01 tuần"
+      },
+      "target": {
+        "name": "Cơ sở dữ liệu",
+        "system_type_description": "Hệ thống lưu trữ dữ liệu điểm",
+        "data_modified_description": "Điểm học phần",
+        "modifying_agent_name": "Phòng Đào tạo"
+      },
+      "type_source": "data_adjustment_action",
+      "type_target": "database_system",
+      "relation": "thực_hiện_trong"
     },
     {
-      "source": "quyền viết đơn",
-      "target": "đơn",
-      "type_source": "RIGHT",
-      "type_target": "DOCUMENT",
-      "relation": "LÀ"
+      "source": {
+        "name": "Hành động điều chỉnh điểm học phần",
+        "actor_name": "Phòng Đào tạo",
+        "data_location_description": "Cơ sở dữ liệu",
+        "condition_for_action_description": "Nếu có sai sót"
+      },
+      "target": {
+        "name": "01 tuần",
+        "duration_type_description": "Khoảng thời gian",
+        "context_description": "Thời gian để Phòng Đào tạo điều chỉnh sai sót điểm",
+        "time_unit": "Tuần"
+      },
+      "type_source": "data_adjustment_action",
+      "type_target": "time_period",
+      "relation": "trong_thời_gian"
     },
     {
-      "source": "đơn",
-      "target": "Trưởng Bộ môn",
-      "type_source": "DOCUMENT",
-      "type_target": "DEPARTMENT_HEAD",
-      "relation": "GỬI_CHO"
+      "source": {
+        "name": "Sinh viên",
+        "action_performed_description": "Nộp đơn",
+        "application_purpose_description": "Phúc khảo điểm thi kết thúc học phần",
+        "submission_deadline_information": "Trong vòng 3 ngày kể từ ngày công bố điểm"
+      },
+      "target": {
+        "name": "Khoa chuyên môn",
+        "role_description_text": "Nơi tiếp nhận đơn phúc khảo",
+        "document_type_handled_description": "Đơn phúc khảo điểm thi kết thúc học phần",
+        "related_authority_name": "Trưởng bộ môn quản lý môn học"
+      },
+      "type_source": "student",
+      "type_target": "specialized_faculty",
+      "relation": "nộp_đơn_phúc_khảo_tại"
     },
     {
-      "source": "Trưởng Bộ môn",
-      "target": "trách nhiệm",
-      "type_source": "DEPARTMENT_HEAD",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Hành động nộp đơn phúc khảo",
+        "actor_role_description": "Sinh viên",
+        "submission_location_name": "Khoa chuyên môn",
+        "time_limit_value_text": "3 ngày"
+      },
+      "target": {
+        "name": "Ngày công bố điểm",
+        "event_description_text": "Ngày điểm thi được công bố",
+        "timing_significance_text": "Mốc bắt đầu tính hạn nộp đơn phúc khảo",
+        "relevant_duration_after_event": "3 ngày"
+      },
+      "type_source": "application_submission_action",
+      "type_target": "announcement_date",
+      "relation": "nộp_trong_vòng_3_ngày_kể_từ"
     },
     {
-      "source": "trách nhiệm",
-      "target": "giải quyết",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACTION",
-      "relation": "BAO_GỒM"
+      "source": {
+        "name": "Trưởng bộ môn quản lý môn học",
+        "role_function_description": "Quản lý môn học và quy trình phúc khảo",
+        "action_1_description": "Phân công giáo viên chấm phúc khảo",
+        "action_2_description": "Công bố kết quả phúc khảo cho sinh viên"
+      },
+      "target": {
+        "name": "Giáo viên (chấm phúc khảo)",
+        "assigned_role_description": "Người thực hiện chấm phúc khảo",
+        "assigning_authority_name": "Trưởng bộ môn quản lý môn học",
+        "primary_task_description": "Chấm điểm phúc khảo"
+      },
+      "type_source": "head_of_subject_department",
+      "type_target": "teacher",
+      "relation": "phân_công_chấm_phúc_khảo_cho"
     },
     {
-      "source": "trách nhiệm",
-      "target": "trả lời",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACTION",
-      "relation": "BAO_GỒM"
+      "source": {
+        "name": "Trưởng bộ môn quản lý môn học",
+        "action_description_text": "Công bố kết quả phúc khảo",
+        "result_recipient_role": "Sinh viên",
+        "announcement_deadline_information": "Chậm nhất 3 ngày kể từ ngày nhận đơn"
+      },
+      "target": {
+        "name": "Sinh viên (người phúc khảo)",
+        "current_status_description": "Đã nộp đơn và chờ kết quả phúc khảo",
+        "receives_information_type_description": "Kết quả phúc khảo",
+        "information_provider_name": "Trưởng bộ môn quản lý môn học"
+      },
+      "type_source": "head_of_subject_department",
+      "type_target": "student",
+      "relation": "công_bố_kết_quả_phúc_khảo_cho"
     },
     {
-      "source": "trả lời",
-      "target": "thắc mắc",
-      "type_source": "ACTION",
-      "type_target": "CONCEPT",
-      "relation": "VỀ"
+      "source": {
+        "name": "Hành động công bố kết quả phúc khảo",
+        "actor_role_description": "Trưởng bộ môn quản lý môn học",
+        "result_recipient_role_description": "Sinh viên",
+        "time_limit_value_text": "3 ngày (chậm nhất)"
+      },
+      "target": {
+        "name": "Ngày nhận đơn phúc khảo",
+        "event_description_text": "Ngày Trưởng bộ môn nhận đơn phúc khảo của sinh viên",
+        "timing_significance_for_response_text": "Mốc bắt đầu tính hạn công bố kết quả phúc khảo",
+        "relevant_duration_after_event_text": "3 ngày"
+      },
+      "type_source": "result_announcement_action",
+      "type_target": "application_receipt_date",
+      "relation": "công_bố_chậm_nhất_3_ngày_kể_từ"
     },
     {
-      "source": "thắc mắc",
-      "target": "điểm thi kết thúc học phần",
-      "type_source": "CONCEPT",
-      "type_target": "EXAM_SCORE",
-      "relation": "VỀ"
+      "source": {
+        "name": "Bảng điểm",
+        "document_status_description": "Đã hoàn tất xử lý ở Khoa/Bộ môn",
+        "transfer_destination_name": "Phòng Đào tạo",
+        "consequence_of_transfer_text": "Mọi khiếu nại liên quan đến điểm thi học phần sẽ không được giải quyết"
+      },
+      "target": {
+        "name": "Phòng Đào tạo",
+        "role_post_transfer_description": "Nơi lưu trữ bảng điểm cuối cùng, đã chốt",
+        "document_received_name": "Bảng điểm",
+        "policy_implication_text": "Không giải quyết khiếu nại điểm thi học phần sau khi nhận bảng điểm"
+      },
+      "type_source": "grade_sheet",
+      "type_target": "academic_affairs_office",
+      "relation": "được_chuyển_về"
     },
     {
-      "source": "thắc mắc",
-      "target": "điểm học phần",
-      "type_source": "CONCEPT",
-      "type_target": "COURSE_GRADE",
-      "relation": "VỀ"
-    },
-    {
-      "source": "thắc mắc",
-      "target": "sai lệch",
-      "type_source": "CONCEPT",
-      "type_target": "ERROR",
-      "relation": "KHI_CÓ"
-    },
-    {
-      "source": "sai lệch",
-      "target": "điểm học phần",
-      "type_source": "ERROR",
-      "type_target": "COURSE_GRADE",
-      "relation": "GIỮA"
-    },
-    {
-      "source": "điểm học phần",
-      "target": "khoa",
-      "type_source": "COURSE_GRADE",
-      "type_target": "DEPARTMENT",
-      "relation": "CÔNG_BỐ_Ở"
-    },
-    {
-      "source": "điểm học phần",
-      "target": "điểm học phần",
-      "type_source": "COURSE_GRADE",
-      "type_target": "COURSE_GRADE",
-      "relation": "SO_VỚI"
-    },
-    {
-      "source": "điểm học phần",
-      "target": "bảng điểm tổng kết",
-      "type_source": "COURSE_GRADE",
-      "type_target": "GRADE_SHEET",
-      "relation": "TRONG"
-    },
-    {
-      "source": "bảng điểm tổng kết",
-      "target": "phòng Đào tạo",
-      "type_source": "GRADE_SHEET",
-      "type_target": "DEPARTMENT",
-      "relation": "CÔNG_BỐ_BỞI"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đơn",
-      "type_source": "PERSON_GROUP",
-      "type_target": "DOCUMENT",
-      "relation": "VIẾT"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Phòng Đào tạo",
-      "type_source": "PERSON_GROUP",
-      "type_target": "DEPARTMENT",
-      "relation": "GỬI_CHO"
-    },
-    {
-      "source": "Phòng Đào tạo",
-      "target": "trách nhiệm",
-      "type_source": "DEPARTMENT",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
-    },
-    {
-      "source": "trách nhiệm",
-      "target": "giải quyết",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACTION",
-      "relation": "BAO_GỒM"
-    },
-    {
-      "source": "trách nhiệm",
-      "target": "trả lời",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACTION",
-      "relation": "BAO_GỒM"
-    },
-    {
-      "source": "trả lời",
-      "target": "thắc mắc",
-      "type_source": "ACTION",
-      "type_target": "CONCEPT",
-      "relation": "VỀ"
-    },
-    {
-      "source": "thắc mắc",
-      "target": "sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
-    },
-    {
-      "source": "trả lời",
-      "target": "thời hạn",
-      "type_source": "ACTION",
-      "type_target": "DURATION",
-      "relation": "THEO"
-    },
-    {
-      "source": "thời hạn",
-      "target": "giấy hẹn",
-      "type_source": "DURATION",
-      "type_target": "APPOINTMENT_LETTER",
-      "relation": "GHI_TRONG"
-    },
-    {
-      "source": "sai sót",
-      "target": "điểm học phần",
-      "type_source": "ERROR",
-      "type_target": "COURSE_GRADE",
-      "relation": "THỰC_SỰ_CÓ"
-    },
-    {
-      "source": "Phòng Đào tạo",
-      "target": "trách nhiệm",
-      "type_source": "DEPARTMENT",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
-    },
-    {
-      "source": "trách nhiệm",
-      "target": "điều chỉnh",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACTION",
-      "relation": "BAO_GỒM"
-    },
-    {
-      "source": "điều chỉnh",
-      "target": "cơ sở dữ liệu",
-      "type_source": "ACTION",
-      "type_target": "DATABASE",
-      "relation": "TRONG"
-    },
-    {
-      "source": "cơ sở dữ liệu",
-      "target": "thời gian",
-      "type_source": "DATABASE",
-      "type_target": "DURATION",
-      "relation": "TRONG"
-    },
-    {
-      "source": "thời gian",
-      "target": "01 (một) tuần",
-      "type_source": "DURATION",
-      "type_target": "DURATION",
-      "relation": "LÀ"
-    },
-    {
-      "source": "trường hợp",
-      "target": "phúc khảo điểm thi kết thúc học phần",
-      "type_source": "SITUATION",
-      "type_target": "ACTION",
-      "relation": "TRƯỜNG_HỢP"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đơn",
-      "type_source": "PERSON_GROUP",
-      "type_target": "DOCUMENT",
-      "relation": "NỘP"
-    },
-    {
-      "source": "đơn",
-      "target": "khoa chuyên môn",
-      "type_source": "DOCUMENT",
-      "type_target": "DEPARTMENT",
-      "relation": "TẠI"
-    },
-    {
-      "source": "khoa chuyên môn",
-      "target": "thời gian",
-      "type_source": "DEPARTMENT",
-      "type_target": "DURATION",
-      "relation": "TRONG_VÒNG"
-    },
-    {
-      "source": "thời gian",
-      "target": "3 ngày",
-      "type_source": "DURATION",
-      "type_target": "DURATION",
-      "relation": "LÀ"
-    },
-    {
-      "source": "thời gian",
-      "target": "ngày công bố điểm",
-      "type_source": "DURATION",
-      "type_target": "DATE",
-      "relation": "KỂ_TỪ"
-    },
-    {
-      "source": "Trưởng bộ môn",
-      "target": "bộ môn quản lý môn học",
-      "type_source": "DEPARTMENT_HEAD",
-      "type_target": "DEPARTMENT",
-      "relation": "CỦA"
-    },
-    {
-      "source": "Trưởng bộ môn",
-      "target": "giáo viên chấm phúc khảo",
-      "type_source": "DEPARTMENT_HEAD",
-      "type_target": "PERSON",
-      "relation": "PHÂN_CÔNG"
-    },
-    {
-      "source": "giáo viên chấm phúc khảo",
-      "target": "chấm phúc khảo",
-      "type_source": "PERSON",
-      "type_target": "ACTION",
-      "relation": "CHẤM"
-    },
-    {
-      "source": "công bố",
-      "target": "sinh viên",
-      "type_source": "ACTION",
-      "type_target": "PERSON_GROUP",
-      "relation": "CHO"
-    },
-    {
-      "source": "công bố",
-      "target": "kết quả",
-      "type_source": "ACTION",
-      "type_target": "RESULT",
-      "relation": "KẾT_QUẢ"
-    },
-    {
-      "source": "công bố",
-      "target": "thời gian",
-      "type_source": "ACTION",
-      "type_target": "DURATION",
-      "relation": "CHẬM_NHẤT"
-    },
-    {
-      "source": "thời gian",
-      "target": "3 ngày",
-      "type_source": "DURATION",
-      "type_target": "DURATION",
-      "relation": "LÀ"
-    },
-    {
-      "source": "thời gian",
-      "target": "ngày nhận đơn",
-      "type_source": "DURATION",
-      "type_target": "DATE",
-      "relation": "KỂ_TỪ"
-    },
-    {
-      "source": "bảng điểm",
-      "target": "phòng Đào tạo",
-      "type_source": "GRADE_SHEET",
-      "type_target": "DEPARTMENT",
-      "relation": "CHUYỂN_VỀ"
-    },
-    {
-      "source": "khiếu nại",
-      "target": "điểm thi học phần",
-      "type_source": "COMPLAINT",
-      "type_target": "EXAM_SCORE",
-      "relation": "LIÊN_QUAN_ĐẾN"
-    },
-    {
-      "source": "khiếu nại",
-      "target": "giải quyết",
-      "type_source": "COMPLAINT",
-      "type_target": "ACTION",
-      "relation": "KHÔNG_ĐƯỢC"
+      "source": {
+        "name": "Khiếu nại liên quan đến điểm thi học phần",
+        "complaint_subject_description": "Điểm thi học phần",
+        "resolution_status_under_condition": "Không được giải quyết",
+        "non_resolution_condition_text": "Khi bảng điểm đã chuyển về Phòng Đào tạo"
+      },
+      "target": {
+        "name": "Phòng Đào tạo",
+        "status_context_description": "Sau khi đã nhận bảng điểm (đã chốt)",
+        "role_in_non_resolution_description": "Đơn vị không giải quyết khiếu nại (trong trường hợp này)",
+        "basis_of_policy_text": "Quy định của nhà trường khi bảng điểm đã chính thức hóa"
+      },
+      "type_source": "complaint",
+      "type_target": "academic_affairs_office",
+      "relation": "không_được_giải_quyết_bởi_khi_bảng_điểm_đã_chuyển_về"
     }
   ]
 }

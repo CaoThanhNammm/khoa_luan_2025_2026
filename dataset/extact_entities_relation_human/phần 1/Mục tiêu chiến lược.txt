@@ -1,503 +1,174 @@
 {
-  "entities": [
-    {
-      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "type": "organization"
-    },
-    {
-      "name": "trường đại học",
-      "type": "type_of_organization"
-    },
-    {
-      "name": "chất lượng",
-      "type": "concept"
-    },
-    {
-      "name": "đào tạo",
-      "type": "activity"
-    },
-    {
-      "name": "nghiên cứu",
-      "type": "activity"
-    },
-    {
-      "name": "chuyển giao công nghệ",
-      "type": "activity"
-    },
-    {
-      "name": "hợp tác quốc tế",
-      "type": "activity"
-    },
-    {
-      "name": "trường đại học tiên tiến",
-      "type": "type_of_organization"
-    },
-    {
-      "name": "khu vực",
-      "type": "location"
-    },
-    {
-      "name": "thế giới",
-      "type": "location"
-    },
-    {
-      "name": "hệ thống quản lý",
-      "type": "concept"
-    },
-    {
-      "name": "quản trị",
-      "type": "concept"
-    },
-    {
-      "name": "nhân sự",
-      "type": "concept"
-    },
-    {
-      "name": "tinh thần sáng tạo",
-      "type": "concept"
-    },
-    {
-      "name": "khởi nghiệp",
-      "type": "activity"
-    },
-    {
-      "name": "tài năng",
-      "type": "concept"
-    },
-    {
-      "name": "nguồn lực",
-      "type": "concept"
-    },
-    {
-      "name": "môi trường học thuật",
-      "type": "concept"
-    },
-    {
-      "name": "nghiên cứu khoa học",
-      "type": "activity"
-    },
-    {
-      "name": "phục vụ cộng đồng",
-      "type": "activity"
-    },
-    {
-      "name": "cơ sở giáo dục đại học",
-      "type": "organization"
-    },
-    {
-      "name": "Việt Nam",
-      "type": "location"
-    },
-    {
-      "name": "hệ thống cơ sở vật chất",
-      "type": "concept"
-    },
-    {
-      "name": "công nghệ thông tin",
-      "type": "concept"
-    },
-    {
-      "name": "đổi mới",
-      "type": "concept"
-    },
-    {
-      "name": "quản lý",
-      "type": "concept"
-    },
-    {
-      "name": "quản trị",
-      "type": "concept"
-    },
-    {
-      "name": "nghiên cứu khoa học",
-      "type": "activity"
-    },
-    {
-      "name": "phục vụ cộng đồng",
-      "type": "activity"
-    },
-    {
-      "name": "Kế hoạch chiến lược giai đoạn 2021-2025",
-      "type": "concept"
-    },
-    {
-      "name": "2035",
-      "type": "time"
-    },
-    {
-      "name": "03 nhóm chiến lược cốt lõi",
-      "type": "quantity"
-    },
-    {
-      "name": "Đào tạo",
-      "type": "strategy"
-    },
-    {
-      "name": "Nghiên cứu và phát triển khoa học công nghệ",
-      "type": "strategy"
-    },
-    {
-      "name": "Phục vụ cộng đồng",
-      "type": "strategy"
-    },
-    {
-      "name": "06 nhóm chiến lược bổ trợ",
-      "type": "quantity"
-    },
-    {
-      "name": "Phát triển nguồn nhân lực",
-      "type": "strategy"
-    },
-    {
-      "name": "Bảo đảm chất lượng giáo dục",
-      "type": "strategy"
-    },
-    {
-      "name": "Hợp tác trong nước và quốc tế",
-      "type": "strategy"
-    },
-    {
-      "name": "Phát triển công nghệ thông tin",
-      "type": "strategy"
-    },
-    {
-      "name": "Đầu tư phát triển cơ sở vật chất",
-      "type": "strategy"
-    },
-    {
-      "name": "Phát triển tài chính",
-      "type": "strategy"
-    }
-  ],
   "relationships": [
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "chất lượng",
-      "relation": "CÓ",
+      "source": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description_vn": "Trường đại học",
+        "mission_summary_vn": "Xây dựng và phát triển thành một trường đại học có chất lượng về đào tạo, nghiên cứu, chuyển giao công nghệ và hợp tác quốc tế; đổi mới hệ thống quản lý, thúc đẩy sáng tạo và khởi nghiệp; xây dựng môi trường học thuật và phục vụ cộng đồng hàng đầu.",
+        "current_strategic_focus_vn": "Thực hiện Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035"
+      },
+      "target": {
+        "name": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "time_period_vn": "giai đoạn 2021-2025",
+        "vision_horizon_vn": "tầm nhìn đến 2035",
+        "role_vn": "Cụ thể hóa mục tiêu chiến lược của Trường Đại học Nông Lâm TP.HCM"
+      },
       "type_source": "organization",
-      "type_target": "concept"
+      "type_target": "strategic_plan",
+      "relation": "có_kế_hoạch_chiến_lược"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "đào tạo",
-      "relation": "VỀ",
-      "type_source": "organization",
-      "type_target": "activity"
+      "source": {
+        "name": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "time_period_vn": "giai đoạn 2021-2025",
+        "vision_horizon_vn": "tầm nhìn đến 2035",
+        "role_vn": "Cụ thể hóa mục tiêu chiến lược của Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Đào tạo",
+        "category_vn": "Nhóm chiến lược cốt lõi",
+        "part_of_plan_name_vn": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "description_vn": "Một trong ba nhóm chiến lược cốt lõi của trường"
+      },
+      "type_source": "strategic_plan",
+      "type_target": "core_strategy_element",
+      "relation": "bao_gồm_chiến_lược_cốt_lõi"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "nghiên cứu",
-      "relation": "VỀ",
-      "type_source": "organization",
-      "type_target": "activity"
+      "source": {
+        "name": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "time_period_vn": "giai đoạn 2021-2025",
+        "vision_horizon_vn": "tầm nhìn đến 2035",
+        "role_vn": "Cụ thể hóa mục tiêu chiến lược của Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Nghiên cứu và phát triển khoa học công nghệ",
+        "category_vn": "Nhóm chiến lược cốt lõi",
+        "part_of_plan_name_vn": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "description_vn": "Một trong ba nhóm chiến lược cốt lõi của trường"
+      },
+      "type_source": "strategic_plan",
+      "type_target": "core_strategy_element",
+      "relation": "bao_gồm_chiến_lược_cốt_lõi"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "chuyển giao công nghệ",
-      "relation": "VỀ",
-      "type_source": "organization",
-      "type_target": "activity"
+      "source": {
+        "name": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "time_period_vn": "giai đoạn 2021-2025",
+        "vision_horizon_vn": "tầm nhìn đến 2035",
+        "role_vn": "Cụ thể hóa mục tiêu chiến lược của Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Phục vụ cộng đồng",
+        "category_vn": "Nhóm chiến lược cốt lõi",
+        "part_of_plan_name_vn": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "description_vn": "Một trong ba nhóm chiến lược cốt lõi của trường"
+      },
+      "type_source": "strategic_plan",
+      "type_target": "core_strategy_element",
+      "relation": "bao_gồm_chiến_lược_cốt_lõi"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "hợp tác quốc tế",
-      "relation": "VỀ",
-      "type_source": "organization",
-      "type_target": "activity"
+      "source": {
+        "name": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "time_period_vn": "giai đoạn 2021-2025",
+        "vision_horizon_vn": "tầm nhìn đến 2035",
+        "role_vn": "Cụ thể hóa mục tiêu chiến lược của Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Phát triển nguồn nhân lực",
+        "category_vn": "Nhóm chiến lược bổ trợ",
+        "part_of_plan_name_vn": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "description_vn": "Một trong sáu nhóm chiến lược bổ trợ của trường"
+      },
+      "type_source": "strategic_plan",
+      "type_target": "supporting_strategy_element",
+      "relation": "bao_gồm_chiến_lược_bổ_trợ"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "trường đại học tiên tiến",
-      "relation": "SÁNH_VAI",
-      "type_source": "organization",
-      "type_target": "type_of_organization"
+      "source": {
+        "name": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "time_period_vn": "giai đoạn 2021-2025",
+        "vision_horizon_vn": "tầm nhìn đến 2035",
+        "role_vn": "Cụ thể hóa mục tiêu chiến lược của Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Bảo đảm chất lượng giáo dục",
+        "category_vn": "Nhóm chiến lược bổ trợ",
+        "part_of_plan_name_vn": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "description_vn": "Một trong sáu nhóm chiến lược bổ trợ của trường"
+      },
+      "type_source": "strategic_plan",
+      "type_target": "supporting_strategy_element",
+      "relation": "bao_gồm_chiến_lược_bổ_trợ"
     },
     {
-      "source": "trường đại học tiên tiến",
-      "target": "khu vực",
-      "relation": "TRONG",
-      "type_source": "type_of_organization",
-      "type_target": "location"
+      "source": {
+        "name": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "time_period_vn": "giai đoạn 2021-2025",
+        "vision_horizon_vn": "tầm nhìn đến 2035",
+        "role_vn": "Cụ thể hóa mục tiêu chiến lược của Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Hợp tác trong nước và quốc tế",
+        "category_vn": "Nhóm chiến lược bổ trợ",
+        "part_of_plan_name_vn": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "description_vn": "Một trong sáu nhóm chiến lược bổ trợ của trường"
+      },
+      "type_source": "strategic_plan",
+      "type_target": "supporting_strategy_element",
+      "relation": "bao_gồm_chiến_lược_bổ_trợ"
     },
     {
-      "source": "trường đại học tiên tiến",
-      "target": "thế giới",
-      "relation": "TRÊN",
-      "type_source": "type_of_organization",
-      "type_target": "location"
+      "source": {
+        "name": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "time_period_vn": "giai đoạn 2021-2025",
+        "vision_horizon_vn": "tầm nhìn đến 2035",
+        "role_vn": "Cụ thể hóa mục tiêu chiến lược của Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Phát triển công nghệ thông tin",
+        "category_vn": "Nhóm chiến lược bổ trợ",
+        "part_of_plan_name_vn": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "description_vn": "Một trong sáu nhóm chiến lược bổ trợ của trường"
+      },
+      "type_source": "strategic_plan",
+      "type_target": "supporting_strategy_element",
+      "relation": "bao_gồm_chiến_lược_bổ_trợ"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "hệ thống quản lý",
-      "relation": "ĐỔI_MỚI",
-      "type_source": "organization",
-      "type_target": "concept"
+      "source": {
+        "name": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "time_period_vn": "giai đoạn 2021-2025",
+        "vision_horizon_vn": "tầm nhìn đến 2035",
+        "role_vn": "Cụ thể hóa mục tiêu chiến lược của Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Đầu tư phát triển cơ sở vật chất",
+        "category_vn": "Nhóm chiến lược bổ trợ",
+        "part_of_plan_name_vn": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "description_vn": "Một trong sáu nhóm chiến lược bổ trợ của trường"
+      },
+      "type_source": "strategic_plan",
+      "type_target": "supporting_strategy_element",
+      "relation": "bao_gồm_chiến_lược_bổ_trợ"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "quản trị",
-      "relation": "ĐỔI_MỚI",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "nhân sự",
-      "relation": "ĐỔI_MỚI",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "tinh thần sáng tạo",
-      "relation": "THÚC_ĐẨY",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "khởi nghiệp",
-      "relation": "THÚC_ĐẨY",
-      "type_source": "organization",
-      "type_target": "activity"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "tài năng",
-      "relation": "PHÁT_HUY",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "nguồn lực",
-      "relation": "PHÁT_HUY",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "môi trường học thuật",
-      "relation": "XÂY_DỰNG",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "nghiên cứu khoa học",
-      "relation": "XÂY_DỰNG",
-      "type_source": "organization",
-      "type_target": "activity"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "phục vụ cộng đồng",
-      "relation": "XÂY_DỰNG",
-      "type_source": "organization",
-      "type_target": "activity"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "cơ sở giáo dục đại học",
-      "relation": "TRỞ_THÀNH",
-      "type_source": "organization",
-      "type_target": "organization"
-    },
-    {
-      "source": "cơ sở giáo dục đại học",
-      "target": "Việt Nam",
-      "relation": "HÀNG_ĐẦU",
-      "type_source": "organization",
-      "type_target": "location"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "hệ thống cơ sở vật chất",
-      "relation": "XÂY_DỰNG",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "công nghệ thông tin",
-      "relation": "XÂY_DỰNG",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "hệ thống cơ sở vật chất",
-      "target": "đổi mới",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "concept"
-    },
-    {
-      "source": "công nghệ thông tin",
-      "target": "đổi mới",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "concept"
-    },
-    {
-      "source": "hệ thống cơ sở vật chất",
-      "target": "quản lý",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "concept"
-    },
-    {
-      "source": "công nghệ thông tin",
-      "target": "quản lý",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "concept"
-    },
-    {
-      "source": "hệ thống cơ sở vật chất",
-      "target": "quản trị",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "concept"
-    },
-    {
-      "source": "công nghệ thông tin",
-      "target": "quản trị",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "concept"
-    },
-    {
-      "source": "hệ thống cơ sở vật chất",
-      "target": "đào tạo",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "activity"
-    },
-    {
-      "source": "công nghệ thông tin",
-      "target": "đào tạo",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "activity"
-    },
-    {
-      "source": "hệ thống cơ sở vật chất",
-      "target": "nghiên cứu khoa học",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "activity"
-    },
-    {
-      "source": "công nghệ thông tin",
-      "target": "nghiên cứu khoa học",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "activity"
-    },
-    {
-      "source": "hệ thống cơ sở vật chất",
-      "target": "phục vụ cộng đồng",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "activity"
-    },
-    {
-      "source": "công nghệ thông tin",
-      "target": "phục vụ cộng đồng",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "concept",
-      "type_target": "activity"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "Kế hoạch chiến lược giai đoạn 2021-2025",
-      "relation": "TRONG",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "Kế hoạch chiến lược giai đoạn 2021-2025",
-      "target": "2035",
-      "relation": "TẦM_NHÌN",
-      "type_source": "concept",
-      "type_target": "time"
-    },
-    {
-      "source": "Kế hoạch chiến lược giai đoạn 2021-2025",
-      "target": "03 nhóm chiến lược cốt lõi",
-      "relation": "CÓ",
-      "type_source": "concept",
-      "type_target": "quantity"
-    },
-    {
-      "source": "03 nhóm chiến lược cốt lõi",
-      "target": "Đào tạo",
-      "relation": "GỒM",
-      "type_source": "quantity",
-      "type_target": "strategy"
-    },
-    {
-      "source": "03 nhóm chiến lược cốt lõi",
-      "target": "Nghiên cứu và phát triển khoa học công nghệ",
-      "relation": "GỒM",
-      "type_source": "quantity",
-      "type_target": "strategy"
-    },
-    {
-      "source": "03 nhóm chiến lược cốt lõi",
-      "target": "Phục vụ cộng đồng",
-      "relation": "GỒM",
-      "type_source": "quantity",
-      "type_target": "strategy"
-    },
-    {
-      "source": "Kế hoạch chiến lược giai đoạn 2021-2025",
-      "target": "06 nhóm chiến lược bổ trợ",
-      "relation": "CÓ",
-      "type_source": "concept",
-      "type_target": "quantity"
-    },
-    {
-      "source": "06 nhóm chiến lược bổ trợ",
-      "target": "Phát triển nguồn nhân lực",
-      "relation": "GỒM",
-      "type_source": "quantity",
-      "type_target": "strategy"
-    },
-    {
-      "source": "06 nhóm chiến lược bổ trợ",
-      "target": "Bảo đảm chất lượng giáo dục",
-      "relation": "GỒM",
-      "type_source": "quantity",
-      "type_target": "strategy"
-    },
-    {
-      "source": "06 nhóm chiến lược bổ trợ",
-      "target": "Hợp tác trong nước và quốc tế",
-      "relation": "GỒM",
-      "type_source": "quantity",
-      "type_target": "strategy"
-    },
-    {
-      "source": "06 nhóm chiến lược bổ trợ",
-      "target": "Phát triển công nghệ thông tin",
-      "relation": "GỒM",
-      "type_source": "quantity",
-      "type_target": "strategy"
-    },
-    {
-      "source": "06 nhóm chiến lược bổ trợ",
-      "target": "Đầu tư phát triển cơ sở vật chất",
-      "relation": "GỒM",
-      "type_source": "quantity",
-      "type_target": "strategy"
-    },
-    {
-      "source": "06 nhóm chiến lược bổ trợ",
-      "target": "Phát triển tài chính",
-      "relation": "GỒM",
-      "type_source": "quantity",
-      "type_target": "strategy"
+      "source": {
+        "name": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "time_period_vn": "giai đoạn 2021-2025",
+        "vision_horizon_vn": "tầm nhìn đến 2035",
+        "role_vn": "Cụ thể hóa mục tiêu chiến lược của Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Phát triển tài chính",
+        "category_vn": "Nhóm chiến lược bổ trợ",
+        "part_of_plan_name_vn": "Kế hoạch chiến lược giai đoạn 2021-2025, tầm nhìn đến 2035",
+        "description_vn": "Một trong sáu nhóm chiến lược bổ trợ của trường"
+      },
+      "type_source": "strategic_plan",
+      "type_target": "supporting_strategy_element",
+      "relation": "bao_gồm_chiến_lược_bổ_trợ"
     }
   ]
 }

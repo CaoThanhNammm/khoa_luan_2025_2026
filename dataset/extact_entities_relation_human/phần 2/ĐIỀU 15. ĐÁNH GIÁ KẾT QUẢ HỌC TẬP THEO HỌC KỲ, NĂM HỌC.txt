@@ -1,1092 +1,733 @@
 {
-  "entities": [
-    {
-      "name": "Điều 15",
-      "type": "regulation_article"
-    },
-    {
-      "name": "Đánh giá kết quả học tập",
-      "type": "process"
-    },
-    {
-      "name": "học kỳ",
-      "type": "time_period"
-    },
-    {
-      "name": "năm học",
-      "type": "time_period"
-    },
-    {
-      "name": "Kết quả học tập",
-      "type": "academic_record"
-    },
-    {
-      "name": "sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "CTĐT",
-      "type": "curriculum"
-    },
-    {
-      "name": "học phần",
-      "type": "course_unit"
-    },
-    {
-      "name": "điểm",
-      "type": "score"
-    },
-    {
-      "name": "học phần đã tích lũy",
-      "type": "accumulated_course_unit"
-    },
-    {
-      "name": "D",
-      "type": "passing_grade"
-    },
-    {
-      "name": "F",
-      "type": "failing_grade"
-    },
-    {
-      "name": "Tổng số tín chỉ tích lũy",
-      "type": "accumulated_credit_total"
-    },
-    {
-      "name": "tín chỉ",
-      "type": "credit"
-    },
-    {
-      "name": "học phần được miễn học",
-      "type": "exempted_course_unit"
-    },
-    {
-      "name": "học phần được công nhận tín chỉ",
-      "type": "recognized_course_unit"
-    },
-    {
-      "name": "điểm trung bình chung học kỳ",
-      "type": "gpa_semester"
-    },
-    {
-      "name": "ĐTBCHK",
-      "type": "gpa_semester"
-    },
-    {
-      "name": "điểm trung bình chung năm học",
-      "type": "gpa_year"
-    },
-    {
-      "name": "ĐTBCNH",
-      "type": "gpa_year"
-    },
-    {
-      "name": "điểm trung bình chung tích lũy",
-      "type": "gpa_cumulative"
-    },
-    {
-      "name": "ĐTBCTL",
-      "type": "gpa_cumulative"
-    },
-    {
-      "name": "điểm học phần",
-      "type": "course_score"
-    },
-    {
-      "name": "trọng số",
-      "type": "weighting_factor"
-    },
-    {
-      "name": "số tín chỉ",
-      "type": "credit_value"
-    },
-    {
-      "name": "học phần điều kiện",
-      "type": "conditional_course_unit"
-    },
-    {
-      "name": "học bổng",
-      "type": "scholarship"
-    },
-    {
-      "name": "khen thưởng",
-      "type": "award"
-    },
-    {
-      "name": "cảnh báo kết quả học tập",
-      "type": "academic_warning"
-    },
-    {
-      "name": "công thức tính",
-      "type": "formula"
-    },
-    {
-      "name": "bước 1",
-      "type": "calculation_step"
-    },
-    {
-      "name": "bước 2",
-      "type": "calculation_step"
-    },
-    {
-      "name": "bước 3",
-      "type": "calculation_step"
-    },
-    {
-      "name": "bước 4",
-      "type": "calculation_step"
-    },
-    {
-      "name": "02 học kỳ chính",
-      "type": "time_period"
-    },
-    {
-      "name": "thời điểm xét",
-      "type": "time_point"
-    },
-    {
-      "name": "xếp loại học lực",
-      "type": "academic_standing_classification"
-    },
-    {
-      "name": "xếp loại tốt nghiệp",
-      "type": "graduation_classification"
-    },
-    {
-      "name": "học chương trình thứ hai",
-      "type": "second_degree_program"
-    },
-    {
-      "name": "điểm chữ",
-      "type": "letter_grade_system"
-    },
-    {
-      "name": "điểm số",
-      "type": "numeric_grade_system"
-    },
-    {
-      "name": "A",
-      "type": "letter_grade"
-    },
-    {
-      "name": "4,0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "B+",
-      "type": "letter_grade"
-    },
-    {
-      "name": "3,5",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "B",
-      "type": "letter_grade"
-    },
-    {
-      "name": "3,0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "C+",
-      "type": "letter_grade"
-    },
-    {
-      "name": "2,5",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "C",
-      "type": "letter_grade"
-    },
-    {
-      "name": "2,0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "D+",
-      "type": "letter_grade"
-    },
-    {
-      "name": "1,5",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "1,0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "0,0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "Khoản 2 Điều này",
-      "type": "regulation_reference"
-    },
-    {
-      "name": "điểm trung bình",
-      "type": "gpa"
-    },
-    {
-      "name": "tiêu chí đánh giá kết quả học tập",
-      "type": "evaluation_criteria"
-    },
-    {
-      "name": "3,60 đến 4,00",
-      "type": "gpa_range"
-    },
-    {
-      "name": "Xuất sắc",
-      "type": "performance_level"
-    },
-    {
-      "name": "3,20 đến 3,59",
-      "type": "gpa_range"
-    },
-    {
-      "name": "Giỏi",
-      "type": "performance_level"
-    },
-    {
-      "name": "2,50 đến 3,19",
-      "type": "gpa_range"
-    },
-    {
-      "name": "Khá",
-      "type": "performance_level"
-    },
-    {
-      "name": "2,00 đến 2,49",
-      "type": "gpa_range"
-    },
-    {
-      "name": "Trung bình",
-      "type": "performance_level"
-    },
-    {
-      "name": "1,00 đến 1,99",
-      "type": "gpa_range"
-    },
-    {
-      "name": "Yếu",
-      "type": "performance_level"
-    },
-    {
-      "name": "Dưới 1,00",
-      "type": "gpa_range"
-    },
-    {
-      "name": "Kém",
-      "type": "performance_level"
-    },
-    {
-      "name": "trình độ năm học",
-      "type": "academic_year_level_classification"
-    },
-    {
-      "name": "số tín chỉ tích lũy được từ đầu khóa học",
-      "type": "accumulated_credit_count"
-    },
-    {
-      "name": "N",
-      "type": "variable"
-    },
-    {
-      "name": "số tín chỉ trung bình một năm học",
-      "type": "average_yearly_credit"
-    },
-    {
-      "name": "kế hoạch học tập chuẩn",
-      "type": "standard_study_plan"
-    },
-    {
-      "name": "M",
-      "type": "variable"
-    },
-    {
-      "name": "Năm thứ nhất",
-      "type": "academic_year_level"
-    },
-    {
-      "name": "Sinh viên ngành Cử nhân",
-      "type": "student_major_group"
-    },
-    {
-      "name": "Bác sĩ Thú y",
-      "type": "student_major_group"
-    },
-    {
-      "name": "30 tín chỉ",
-      "type": "credit_threshold"
-    },
-    {
-      "name": "Sinh viên ngành Kỹ sư",
-      "type": "student_major_group"
-    },
-    {
-      "name": "37 tín chỉ",
-      "type": "credit_threshold"
-    },
-    {
-      "name": "Năm thứ hai",
-      "type": "academic_year_level"
-    },
-    {
-      "name": "30 đến 60 tín chỉ",
-      "type": "credit_range"
-    },
-    {
-      "name": "38 đến 75 tín chỉ",
-      "type": "credit_range"
-    },
-    {
-      "name": "Năm thứ ba",
-      "type": "academic_year_level"
-    },
-    {
-      "name": "60 đến 90 tín chỉ",
-      "type": "credit_range"
-    },
-    {
-      "name": "76 đến 112 tín chỉ",
-      "type": "credit_range"
-    },
-    {
-      "name": "Năm thứ tư",
-      "type": "academic_year_level"
-    },
-    {
-      "name": "90 đến 120 tín chỉ",
-      "type": "credit_range"
-    },
-    {
-      "name": "113 đến 150 tín chỉ",
-      "type": "credit_range"
-    },
-    {
-      "name": "Năm thứ năm",
-      "type": "academic_year_level"
-    },
-    {
-      "name": "120 đến 150 tín chỉ",
-      "type": "credit_range"
-    }
-  ],
   "relationships": [
     {
-      "source": "Điều 15",
-      "target": "Đánh giá kết quả học tập",
-      "type_source": "regulation_article",
-      "type_target": "process",
-      "relation": "quy_định_về"
+      "source": {
+        "name": "Kết quả học tập của sinh viên",
+        "description": "Thành tích học tập tổng thể của sinh viên",
+        "evaluation_scope": "Dựa trên các học phần trong CTĐT"
+      },
+      "target": {
+        "name": "Từng học kỳ",
+        "duration_type": "Đơn vị thời gian học tập",
+        "frequency": "Sau mỗi kỳ học"
+      },
+      "type_source": "student_academic_result",
+      "type_target": "academic_term",
+      "relation": "được_đánh_giá_sau"
     },
     {
-      "source": "Đánh giá kết quả học tập",
-      "target": "Kết quả học tập",
-      "type_source": "process",
-      "type_target": "academic_record",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Kết quả học tập của sinh viên",
+        "description": "Thành tích học tập tổng thể của sinh viên",
+        "evaluation_basis": "Kết quả các học phần đã học và có điểm"
+      },
+      "target": {
+        "name": "Từng năm học",
+        "duration_type": "Đơn vị thời gian học tập",
+        "frequency": "Sau mỗi năm học"
+      },
+      "type_source": "student_academic_result",
+      "type_target": "academic_year",
+      "relation": "được_đánh_giá_sau"
     },
     {
-      "source": "Kết quả học tập",
-      "target": "sinh viên",
-      "type_source": "academic_record",
-      "type_target": "student",
-      "relation": "của"
-    },
-    {
-      "source": "Kết quả học tập",
-      "target": "học kỳ",
-      "type_source": "academic_record",
-      "type_target": "time_period",
-      "relation": "đánh_giá_sau"
-    },
-    {
-      "source": "Kết quả học tập",
-      "target": "năm học",
-      "type_source": "academic_record",
-      "type_target": "time_period",
-      "relation": "đánh_giá_sau"
-    },
-    {
-      "source": "Kết quả học tập",
-      "target": "học phần",
-      "type_source": "academic_record",
-      "type_target": "course_unit",
-      "relation": "dựa_trên_kết_quả"
-    },
-    {
-      "source": "học phần",
-      "target": "CTĐT",
-      "type_source": "course_unit",
-      "type_target": "curriculum",
-      "relation": "nằm_trong_yêu_cầu_của"
-    },
-    {
-      "source": "học phần",
-      "target": "điểm",
-      "type_source": "course_unit",
-      "type_target": "score",
-      "relation": "có"
-    },
-    {
-      "source": "học phần đã tích lũy",
-      "target": "học phần",
-      "type_source": "accumulated_course_unit",
-      "type_target": "course_unit",
-      "relation": "là"
-    },
-    {
-      "source": "học phần",
-      "target": "D",
-      "type_source": "course_unit",
+      "source": {
+        "name": "Học phần đã tích lũy",
+        "definition": "Học phần có kết quả đạt yêu cầu",
+        "credit_status": "Được tính vào tổng số tín chỉ tích lũy"
+      },
+      "target": {
+        "name": "Điểm D",
+        "grade_value_letter": "D",
+        "meaning": "Điểm đạt tối thiểu để tích lũy học phần"
+      },
+      "type_source": "accumulated_module",
       "type_target": "passing_grade",
       "relation": "có_kết_quả_đạt_từ"
     },
     {
-      "source": "học phần",
-      "target": "F",
-      "type_source": "course_unit",
-      "type_target": "failing_grade",
-      "relation": "có_điểm"
+      "source": {
+        "name": "Các học phần có điểm F",
+        "grade_value_letter": "F",
+        "implication": "Không đạt yêu cầu học phần"
+      },
+      "target": {
+        "name": "Quá trình tích lũy học phần",
+        "purpose": "Ghi nhận các học phần hoàn thành thành công",
+        "scope": "Toàn bộ quá trình học"
+      },
+      "type_source": "failed_module",
+      "type_target": "module_accumulation_process",
+      "relation": "không_được_tích_lũy_vào"
     },
     {
-      "source": "F",
-      "target": "học phần",
-      "type_source": "failing_grade",
-      "type_target": "course_unit",
-      "relation": "không_được_tích_lũy_cho"
+      "source": {
+        "name": "Tổng số tín chỉ tích lũy",
+        "definition": "Tổng số tín chỉ của các học phần đã đạt",
+        "calculation_includes": "Học phần tích lũy, miễn học, công nhận"
+      },
+      "target": {
+        "name": "Các học phần đã tích lũy",
+        "status": "Đạt từ điểm D trở lên",
+        "contribution": "Đóng góp vào tổng tín chỉ"
+      },
+      "type_source": "total_accumulated_credits",
+      "type_target": "accumulated_module",
+      "relation": "là_tổng_số_tín_chỉ_của"
     },
     {
-      "source": "Tổng số tín chỉ tích lũy",
-      "target": "tín chỉ",
-      "type_source": "accumulated_credit_total",
-      "type_target": "credit",
-      "relation": "là_tổng_số"
+      "source": {
+        "name": "Tổng số tín chỉ tích lũy",
+        "definition": "Tổng số tín chỉ của các học phần đã đạt",
+        "scope_of_inclusion": "Toàn bộ các tín chỉ được công nhận"
+      },
+      "target": {
+        "name": "Các học phần được miễn học",
+        "status": "Không cần học nhưng vẫn được tính tín chỉ",
+        "origin": "Theo quy định miễn giảm"
+      },
+      "type_source": "total_accumulated_credits",
+      "type_target": "exempted_module",
+      "relation": "tính_cả_tín_chỉ_của"
     },
     {
-      "source": "tín chỉ",
-      "target": "học phần đã tích lũy",
-      "type_source": "credit",
-      "type_target": "accumulated_course_unit",
-      "relation": "của"
+      "source": {
+        "name": "Tổng số tín chỉ tích lũy",
+        "definition": "Tổng số tín chỉ của các học phần đã đạt",
+        "scope_of_inclusion": "Toàn bộ các tín chỉ được công nhận"
+      },
+      "target": {
+        "name": "Các học phần được công nhận tín chỉ",
+        "status": "Tín chỉ từ các học phần tương đương được chấp nhận",
+        "origin": "Theo quy định công nhận tín chỉ"
+      },
+      "type_source": "total_accumulated_credits",
+      "type_target": "recognized_credit_module",
+      "relation": "tính_cả_tín_chỉ_của"
     },
     {
-      "source": "Tổng số tín chỉ tích lũy",
-      "target": "học phần được miễn học",
-      "type_source": "accumulated_credit_total",
-      "type_target": "exempted_course_unit",
-      "relation": "tính_cả"
+      "source": {
+        "name": "Điểm trung bình chung học kỳ (ĐTBCHK)",
+        "abbreviation": "ĐTBCHK",
+        "calculation_period": "Một học kỳ",
+        "components": "Điểm các học phần đã học (kể cả F, điều kiện)",
+        "weighting": "Số tín chỉ của học phần"
+      },
+      "target": {
+        "name": "Điểm học phần",
+        "type": "Kết quả đánh giá học phần",
+        "representation": "Thường là điểm chữ hoặc số"
+      },
+      "type_source": "semester_gpa",
+      "type_target": "module_grade_value",
+      "relation": "được_tính_theo"
     },
     {
-      "source": "Tổng số tín chỉ tích lũy",
-      "target": "học phần được công nhận tín chỉ",
-      "type_source": "accumulated_credit_total",
-      "type_target": "recognized_course_unit",
-      "relation": "tính_cả"
+      "source": {
+        "name": "Điểm trung bình chung học kỳ (ĐTBCHK)",
+        "abbreviation": "ĐTBCHK",
+        "calculation_period": "Một học kỳ",
+        "components": "Điểm các học phần đã học (kể cả F, điều kiện)"
+      },
+      "target": {
+        "name": "Số tín chỉ của học phần",
+        "role": "Trọng số trong tính điểm trung bình",
+        "unit": "Tín chỉ"
+      },
+      "type_source": "semester_gpa",
+      "type_target": "module_credit_value",
+      "relation": "sử_dụng_làm_trọng_số"
     },
     {
-      "source": "ĐTBCHK",
-      "target": "điểm học phần",
-      "type_source": "gpa_semester",
-      "type_target": "course_score",
-      "relation": "tính_theo"
-    },
-    {
-      "source": "ĐTBCHK",
-      "target": "trọng số",
-      "type_source": "gpa_semester",
-      "type_target": "weighting_factor",
-      "relation": "tính_theo"
-    },
-    {
-      "source": "ĐTBCNH",
-      "target": "điểm học phần",
-      "type_source": "gpa_year",
-      "type_target": "course_score",
-      "relation": "tính_theo"
-    },
-    {
-      "source": "ĐTBCNH",
-      "target": "trọng số",
-      "type_source": "gpa_year",
-      "type_target": "weighting_factor",
-      "relation": "tính_theo"
-    },
-    {
-      "source": "ĐTBCTL",
-      "target": "điểm học phần",
-      "type_source": "gpa_cumulative",
-      "type_target": "course_score",
-      "relation": "tính_theo"
-    },
-    {
-      "source": "ĐTBCTL",
-      "target": "trọng số",
-      "type_source": "gpa_cumulative",
-      "type_target": "weighting_factor",
-      "relation": "tính_theo"
-    },
-    {
-      "source": "trọng số",
-      "target": "số tín chỉ",
-      "type_source": "weighting_factor",
-      "type_target": "credit_value",
-      "relation": "là"
-    },
-    {
-      "source": "số tín chỉ",
-      "target": "học phần",
-      "type_source": "credit_value",
-      "type_target": "course_unit",
-      "relation": "của"
-    },
-    {
-      "source": "ĐTBCHK",
-      "target": "học phần",
-      "type_source": "gpa_semester",
-      "type_target": "course_unit",
-      "relation": "tính_trên_điểm_các"
-    },
-    {
-      "source": "ĐTBCHK",
-      "target": "học kỳ",
-      "type_source": "gpa_semester",
-      "type_target": "time_period",
-      "relation": "trong"
-    },
-    {
-      "source": "ĐTBCHK",
-      "target": "F",
-      "type_source": "gpa_semester",
-      "type_target": "failing_grade",
-      "relation": "tính_cả_học_phần_bị"
-    },
-    {
-      "source": "ĐTBCHK",
-      "target": "học phần điều kiện",
-      "type_source": "gpa_semester",
-      "type_target": "conditional_course_unit",
-      "relation": "tính_cả"
-    },
-    {
-      "source": "ĐTBCHK",
-      "target": "đánh giá kết quả học tập",
-      "type_source": "gpa_semester",
-      "type_target": "process",
+      "source": {
+        "name": "Điểm trung bình chung học kỳ (ĐTBCHK)",
+        "abbreviation": "ĐTBCHK",
+        "purpose": "Đánh giá định kỳ",
+        "timing": "Sau mỗi học kỳ"
+      },
+      "target": {
+        "name": "Đánh giá kết quả học tập",
+        "scope": "Sau mỗi học kỳ",
+        "output": "Xác định mức độ hoàn thành"
+      },
+      "type_source": "semester_gpa",
+      "type_target": "academic_result_evaluation_process",
       "relation": "là_cơ_sở_để"
     },
     {
-      "source": "ĐTBCHK",
-      "target": "học bổng",
-      "type_source": "gpa_semester",
-      "type_target": "scholarship",
-      "relation": "là_cơ_sở_để_xét"
-    },
-    {
-      "source": "ĐTBCHK",
-      "target": "khen thưởng",
-      "type_source": "gpa_semester",
-      "type_target": "award",
-      "relation": "là_cơ_sở_để_xét"
-    },
-    {
-      "source": "ĐTBCHK",
-      "target": "cảnh báo kết quả học tập",
-      "type_source": "gpa_semester",
-      "type_target": "academic_warning",
+      "source": {
+        "name": "Điểm trung bình chung học kỳ (ĐTBCHK)",
+        "abbreviation": "ĐTBCHK",
+        "purpose": "Xem xét khen thưởng và hỗ trợ",
+        "timing": "Sau mỗi học kỳ"
+      },
+      "target": {
+        "name": "Xét học bổng",
+        "type_of_consideration": "Hỗ trợ tài chính hoặc khuyến khích",
+        "basis": "Kết quả học tập"
+      },
+      "type_source": "semester_gpa",
+      "type_target": "scholarship_consideration_process",
       "relation": "là_cơ_sở_để"
     },
     {
-      "source": "ĐTBCHK",
-      "target": "công thức tính",
-      "type_source": "gpa_semester",
-      "type_target": "formula",
-      "relation": "tính_theo"
+      "source": {
+        "name": "Điểm trung bình chung học kỳ (ĐTBCHK)",
+        "abbreviation": "ĐTBCHK",
+        "purpose": "Ghi nhận thành tích",
+        "timing": "Sau mỗi học kỳ"
+      },
+      "target": {
+        "name": "Khen thưởng",
+        "type_of_recognition": "Vinh danh thành tích học tập",
+        "basis": "Kết quả học tập xuất sắc/tốt"
+      },
+      "type_source": "semester_gpa",
+      "type_target": "commendation_process",
+      "relation": "là_cơ_sở_để"
     },
     {
-      "source": "công thức tính",
-      "target": "bước 1",
-      "type_source": "formula",
-      "type_target": "calculation_step",
+      "source": {
+        "name": "Điểm trung bình chung học kỳ (ĐTBCHK)",
+        "abbreviation": "ĐTBCHK",
+        "purpose": "Theo dõi và cảnh báo sớm",
+        "timing": "Sau mỗi học kỳ"
+      },
+      "target": {
+        "name": "Cảnh báo kết quả học tập",
+        "reason": "Kết quả học tập không đạt yêu cầu",
+        "action": "Thông báo cho sinh viên để cải thiện"
+      },
+      "type_source": "semester_gpa",
+      "type_target": "academic_warning_process",
+      "relation": "là_cơ_sở_để"
+    },
+    {
+      "source": {
+        "name": "Điểm trung bình chung học kỳ (ĐTBCHK)",
+        "abbreviation": "ĐTBCHK",
+        "full_name_vi": "Điểm trung bình chung học kỳ",
+        "calculation_detail": "Trung bình có trọng số của điểm các học phần sinh viên đã học trong học kỳ."
+      },
+      "target": {
+        "name": "Công thức tính ĐTBCHK",
+        "formula_representation": "ĐTBCHK = (∑(X_i * a_i)) / (∑a_i)",
+        "variable_X_i": "Điểm học phần thứ i",
+        "variable_a_i": "Số tín chỉ của học phần thứ i",
+        "variable_n": "Số học phần sinh viên đăng ký học trong học kỳ"
+      },
+      "type_source": "semester_gpa",
+      "type_target": "gpa_calculation_formula",
+      "relation": "được_tính_theo_công_thức"
+    },
+    {
+      "source": {
+        "name": "Điểm trung bình chung năm học (ĐTBCNH)",
+        "abbreviation": "ĐTBCNH",
+        "calculation_period": "02 học kỳ chính",
+        "components": "Điểm các học phần đã học (kể cả F, điều kiện)",
+        "weighting": "Số tín chỉ của học phần"
+      },
+      "target": {
+        "name": "Điểm các học phần bị điểm F",
+        "grade_value": "F",
+        "status": "Bao gồm trong tính ĐTBCNH"
+      },
+      "type_source": "annual_gpa",
+      "type_target": "failed_module_grade",
       "relation": "bao_gồm"
     },
     {
-      "source": "công thức tính",
-      "target": "bước 2",
-      "type_source": "formula",
-      "type_target": "calculation_step",
+      "source": {
+        "name": "Điểm trung bình chung năm học (ĐTBCNH)",
+        "abbreviation": "ĐTBCNH",
+        "calculation_period": "02 học kỳ chính",
+        "components": "Điểm các học phần đã học (kể cả F, điều kiện)"
+      },
+      "target": {
+        "name": "Học phần điều kiện",
+        "type": "Học phần tiên quyết hoặc bắt buộc",
+        "status": "Bao gồm trong tính ĐTBCNH"
+      },
+      "type_source": "annual_gpa",
+      "type_target": "conditional_module",
       "relation": "bao_gồm"
     },
     {
-      "source": "công thức tính",
-      "target": "bước 3",
-      "type_source": "formula",
-      "type_target": "calculation_step",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "công thức tính",
-      "target": "bước 4",
-      "type_source": "formula",
-      "type_target": "calculation_step",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "ĐTBCNH",
-      "target": "học phần",
-      "type_source": "gpa_year",
-      "type_target": "course_unit",
-      "relation": "tính_trên_điểm_các"
-    },
-    {
-      "source": "ĐTBCNH",
-      "target": "02 học kỳ chính",
-      "type_source": "gpa_year",
-      "type_target": "time_period",
-      "relation": "trong"
-    },
-    {
-      "source": "ĐTBCNH",
-      "target": "F",
-      "type_source": "gpa_year",
-      "type_target": "failing_grade",
-      "relation": "tính_cả_học_phần_bị"
-    },
-    {
-      "source": "ĐTBCNH",
-      "target": "học phần điều kiện",
-      "type_source": "gpa_year",
-      "type_target": "conditional_course_unit",
-      "relation": "tính_cả"
-    },
-    {
-      "source": "ĐTBCTL",
-      "target": "học phần đã tích lũy",
-      "type_source": "gpa_cumulative",
-      "type_target": "accumulated_course_unit",
-      "relation": "tính_trên_điểm_các"
-    },
-    {
-      "source": "ĐTBCTL",
-      "target": "thời điểm xét",
-      "type_source": "gpa_cumulative",
-      "type_target": "time_point",
-      "relation": "tính_đến"
-    },
-    {
-      "source": "ĐTBCTL",
-      "target": "học phần điều kiện",
-      "type_source": "gpa_cumulative",
-      "type_target": "conditional_course_unit",
+      "source": {
+        "name": "Điểm trung bình chung tích lũy (ĐTBCTL)",
+        "abbreviation": "ĐTBCTL",
+        "calculation_period": "Tính đến thời điểm xét",
+        "components": "Điểm các học phần đã tích lũy",
+        "exclusions": "Học phần điều kiện, học phần bị điểm F"
+      },
+      "target": {
+        "name": "Các học phần điều kiện",
+        "status": "Không bao gồm trong tính ĐTBCTL",
+        "reason_for_exclusion": "Theo quy định tính điểm"
+      },
+      "type_source": "cumulative_gpa",
+      "type_target": "conditional_module",
       "relation": "không_bao_gồm"
     },
     {
-      "source": "ĐTBCTL",
-      "target": "F",
-      "type_source": "gpa_cumulative",
-      "type_target": "failing_grade",
-      "relation": "không_bao_gồm_học_phần_bị"
+      "source": {
+        "name": "Điểm trung bình chung tích lũy (ĐTBCTL)",
+        "abbreviation": "ĐTBCTL",
+        "calculation_period": "Tính đến thời điểm xét",
+        "exclusions": "Học phần điều kiện, học phần bị điểm F"
+      },
+      "target": {
+        "name": "Các học phần bị điểm F",
+        "grade_value": "F",
+        "status": "Không bao gồm trong tính ĐTBCTL (sau khi đã tích lũy)"
+      },
+      "type_source": "cumulative_gpa",
+      "type_target": "failed_module",
+      "relation": "không_bao_gồm_điểm_của"
     },
     {
-      "source": "ĐTBCTL",
-      "target": "CTĐT",
-      "type_source": "gpa_cumulative",
+      "source": {
+        "name": "Cách tính Điểm trung bình chung tích lũy (ĐTBCTL)",
+        "basis_description": "Dựa trên thiết kế chương trình đào tạo",
+        "scope_dependency": "Từng ngành/chuyên ngành"
+      },
+      "target": {
+        "name": "Chương trình đào tạo (CTĐT)",
+        "design_specificity": "Thiết kế cho từng ngành/chuyên ngành",
+        "role_in_gpa": "Cung cấp cấu trúc để tính ĐTBCTL"
+      },
+      "type_source": "cumulative_gpa_calculation_method",
       "type_target": "curriculum",
       "relation": "dựa_vào"
     },
     {
-      "source": "ĐTBCTL",
-      "target": "đánh giá kết quả học tập",
-      "type_source": "gpa_cumulative",
-      "type_target": "process",
+      "source": {
+        "name": "Điểm trung bình chung tích lũy (ĐTBCTL)",
+        "abbreviation": "ĐTBCTL",
+        "purpose": "Đánh giá tổng thể và xếp loại",
+        "scope_of_assessment": "Toàn bộ quá trình học"
+      },
+      "target": {
+        "name": "Xếp loại học lực",
+        "basis": "Dựa trên ĐTBCTL (và ĐTBCHK, ĐTBCNH)",
+        "output": "Phân loại học lực sinh viên (Xuất sắc, Giỏi, ...)"
+      },
+      "type_source": "cumulative_gpa",
+      "type_target": "academic_performance_classification_process",
       "relation": "là_cơ_sở_để"
     },
     {
-      "source": "ĐTBCTL",
-      "target": "xếp loại học lực",
-      "type_source": "gpa_cumulative",
-      "type_target": "academic_standing_classification",
+      "source": {
+        "name": "Điểm trung bình chung tích lũy (ĐTBCTL)",
+        "abbreviation": "ĐTBCTL",
+        "purpose": "Xác định kết quả cuối khóa",
+        "application": "Khi sinh viên hoàn thành chương trình học"
+      },
+      "target": {
+        "name": "Xếp loại tốt nghiệp",
+        "basis": "Dựa trên ĐTBCTL và các tiêu chí khác",
+        "output": "Phân loại bằng tốt nghiệp (Xuất sắc, Giỏi, ...)"
+      },
+      "type_source": "cumulative_gpa",
+      "type_target": "graduation_classification_process",
       "relation": "là_cơ_sở_để"
     },
     {
-      "source": "ĐTBCTL",
-      "target": "xếp loại tốt nghiệp",
-      "type_source": "gpa_cumulative",
-      "type_target": "graduation_classification",
-      "relation": "là_cơ_sở_để"
-    },
-    {
-      "source": "ĐTBCTL",
-      "target": "học chương trình thứ hai",
-      "type_source": "gpa_cumulative",
-      "type_target": "second_degree_program",
-      "relation": "là_cơ_sở_để_xét"
-    },
-    {
-      "source": "ĐTBCTL",
-      "target": "cảnh báo kết quả học tập",
-      "type_source": "gpa_cumulative",
-      "type_target": "academic_warning",
-      "relation": "là_cơ_sở_để"
-    },
-    {
-      "source": "điểm chữ",
-      "target": "điểm số",
-      "type_source": "letter_grade_system",
-      "type_target": "numeric_grade_system",
-      "relation": "quy_đổi_về"
-    },
-    {
-      "source": "A",
-      "target": "4,0",
+      "source": {
+        "name": "Điểm chữ A",
+        "letter_value": "A",
+        "description": "Điểm học phần loại A"
+      },
+      "target": {
+        "name": "Điểm số 4,0",
+        "numerical_value": 4.0,
+        "scale": "Hệ 4"
+      },
       "type_source": "letter_grade",
-      "type_target": "grade_point_value",
+      "type_target": "numerical_grade_equivalent",
       "relation": "quy_đổi_thành"
     },
     {
-      "source": "B+",
-      "target": "3,5",
+      "source": {
+        "name": "Điểm chữ B+",
+        "letter_value": "B+",
+        "description": "Điểm học phần loại B+"
+      },
+      "target": {
+        "name": "Điểm số 3,5",
+        "numerical_value": 3.5,
+        "scale": "Hệ 4"
+      },
       "type_source": "letter_grade",
-      "type_target": "grade_point_value",
+      "type_target": "numerical_grade_equivalent",
       "relation": "quy_đổi_thành"
     },
     {
-      "source": "B",
-      "target": "3,0",
+      "source": {
+        "name": "Điểm chữ B",
+        "letter_value": "B",
+        "description": "Điểm học phần loại B"
+      },
+      "target": {
+        "name": "Điểm số 3,0",
+        "numerical_value": 3.0,
+        "scale": "Hệ 4"
+      },
       "type_source": "letter_grade",
-      "type_target": "grade_point_value",
+      "type_target": "numerical_grade_equivalent",
       "relation": "quy_đổi_thành"
     },
     {
-      "source": "C+",
-      "target": "2,5",
+      "source": {
+        "name": "Điểm chữ C+",
+        "letter_value": "C+",
+        "description": "Điểm học phần loại C+"
+      },
+      "target": {
+        "name": "Điểm số 2,5",
+        "numerical_value": 2.5,
+        "scale": "Hệ 4"
+      },
       "type_source": "letter_grade",
-      "type_target": "grade_point_value",
+      "type_target": "numerical_grade_equivalent",
       "relation": "quy_đổi_thành"
     },
     {
-      "source": "C",
-      "target": "2,0",
+      "source": {
+        "name": "Điểm chữ C",
+        "letter_value": "C",
+        "description": "Điểm học phần loại C"
+      },
+      "target": {
+        "name": "Điểm số 2,0",
+        "numerical_value": 2.0,
+        "scale": "Hệ 4"
+      },
       "type_source": "letter_grade",
-      "type_target": "grade_point_value",
+      "type_target": "numerical_grade_equivalent",
       "relation": "quy_đổi_thành"
     },
     {
-      "source": "D+",
-      "target": "1,5",
+      "source": {
+        "name": "Điểm chữ D+",
+        "letter_value": "D+",
+        "description": "Điểm học phần loại D+"
+      },
+      "target": {
+        "name": "Điểm số 1,5",
+        "numerical_value": 1.5,
+        "scale": "Hệ 4"
+      },
       "type_source": "letter_grade",
-      "type_target": "grade_point_value",
+      "type_target": "numerical_grade_equivalent",
       "relation": "quy_đổi_thành"
     },
     {
-      "source": "D",
-      "target": "1,0",
-      "type_source": "passing_grade",
-      "type_target": "grade_point_value",
+      "source": {
+        "name": "Điểm chữ D",
+        "letter_value": "D",
+        "description": "Điểm học phần loại D"
+      },
+      "target": {
+        "name": "Điểm số 1,0",
+        "numerical_value": 1.0,
+        "scale": "Hệ 4"
+      },
+      "type_source": "letter_grade",
+      "type_target": "numerical_grade_equivalent",
       "relation": "quy_đổi_thành"
     },
     {
-      "source": "F",
-      "target": "0,0",
-      "type_source": "failing_grade",
-      "type_target": "grade_point_value",
+      "source": {
+        "name": "Điểm chữ F",
+        "letter_value": "F",
+        "description": "Điểm học phần loại F (không đạt)"
+      },
+      "target": {
+        "name": "Điểm số 0,0",
+        "numerical_value": 0.0,
+        "scale": "Hệ 4"
+      },
+      "type_source": "letter_grade",
+      "type_target": "numerical_grade_equivalent",
       "relation": "quy_đổi_thành"
     },
     {
-      "source": "điểm chữ",
-      "target": "Khoản 2 Điều này",
-      "type_source": "letter_grade_system",
-      "type_target": "regulation_reference",
-      "relation": "không_được_quy_định_tại"
-    },
-    {
-      "source": "điểm chữ",
-      "target": "điểm trung bình",
-      "type_source": "letter_grade_system",
-      "type_target": "gpa",
+      "source": {
+        "name": "Những điểm chữ không được quy định tại Khoản 2 Điều này",
+        "description": "Các loại điểm chữ khác không thuộc bảng quy đổi chuẩn",
+        "status_in_gpa": "Không được tính"
+      },
+      "target": {
+        "name": "Các điểm trung bình học kỳ, năm học hoặc tích lũy",
+        "types_included": "ĐTBCHK, ĐTBCNH, ĐTBCTL",
+        "purpose": "Đo lường kết quả học tập tổng hợp"
+      },
+      "type_source": "unspecified_letter_grade",
+      "type_target": "grade_point_average",
       "relation": "không_được_tính_vào"
     },
     {
-      "source": "học phần",
-      "target": "CTĐT",
-      "type_source": "course_unit",
-      "type_target": "curriculum",
-      "relation": "không_nằm_trong_yêu_cầu_của"
-    },
-    {
-      "source": "học phần",
-      "target": "tiêu chí đánh giá kết quả học tập",
-      "type_source": "course_unit",
-      "type_target": "evaluation_criteria",
+      "source": {
+        "name": "Những học phần không nằm trong yêu cầu của CTĐT",
+        "description": "Các học phần tự chọn thêm ngoài chương trình, hoặc không bắt buộc",
+        "status_in_evaluation": "Không được tính"
+      },
+      "target": {
+        "name": "Các tiêu chí đánh giá kết quả học tập của sinh viên",
+        "purpose": "Đo lường mức độ hoàn thành chương trình đào tạo",
+        "components": "Điểm học phần, điểm trung bình, xếp loại"
+      },
+      "type_source": "extracurricular_module",
+      "type_target": "academic_evaluation_criteria",
       "relation": "không_được_tính_vào"
     },
     {
-      "source": "sinh viên",
-      "target": "ĐTBCHK",
+      "source": {
+        "name": "Xếp loại học lực Xuất sắc",
+        "level_name": "Xuất sắc",
+        "description": "Mức độ hoàn thành chương trình học cao nhất"
+      },
+      "target": {
+        "name": "Khoảng điểm từ 3,60 đến 4,00",
+        "min_gpa": 3.60,
+        "max_gpa": 4.00,
+        "gpa_type_basis": "ĐTBCHK, ĐTBCNH hoặc ĐTBCTL"
+      },
+      "type_source": "academic_performance_level",
+      "type_target": "grade_point_range_for_classification",
+      "relation": "tương_ứng_với"
+    },
+    {
+      "source": {
+        "name": "Xếp loại học lực Giỏi",
+        "level_name": "Giỏi",
+        "description": "Mức độ hoàn thành chương trình học rất tốt"
+      },
+      "target": {
+        "name": "Khoảng điểm từ 3,20 đến 3,59",
+        "min_gpa": 3.20,
+        "max_gpa": 3.59,
+        "gpa_type_basis": "ĐTBCHK, ĐTBCNH hoặc ĐTBCTL"
+      },
+      "type_source": "academic_performance_level",
+      "type_target": "grade_point_range_for_classification",
+      "relation": "tương_ứng_với"
+    },
+    {
+      "source": {
+        "name": "Xếp loại học lực Khá",
+        "level_name": "Khá",
+        "description": "Mức độ hoàn thành chương trình học tốt"
+      },
+      "target": {
+        "name": "Khoảng điểm từ 2,50 đến 3,19",
+        "min_gpa": 2.50,
+        "max_gpa": 3.19,
+        "gpa_type_basis": "ĐTBCHK, ĐTBCNH hoặc ĐTBCTL"
+      },
+      "type_source": "academic_performance_level",
+      "type_target": "grade_point_range_for_classification",
+      "relation": "tương_ứng_với"
+    },
+    {
+      "source": {
+        "name": "Xếp loại học lực Trung bình",
+        "level_name": "Trung bình",
+        "description": "Mức độ hoàn thành chương trình học đạt yêu cầu"
+      },
+      "target": {
+        "name": "Khoảng điểm từ 2,00 đến 2,49",
+        "min_gpa": 2.00,
+        "max_gpa": 2.49,
+        "gpa_type_basis": "ĐTBCHK, ĐTBCNH hoặc ĐTBCTL"
+      },
+      "type_source": "academic_performance_level",
+      "type_target": "grade_point_range_for_classification",
+      "relation": "tương_ứng_với"
+    },
+    {
+      "source": {
+        "name": "Xếp loại học lực Yếu",
+        "level_name": "Yếu",
+        "description": "Mức độ hoàn thành chương trình học dưới yêu cầu"
+      },
+      "target": {
+        "name": "Khoảng điểm từ 1,00 đến 1,99",
+        "min_gpa": 1.00,
+        "max_gpa": 1.99,
+        "gpa_type_basis": "ĐTBCHK, ĐTBCNH hoặc ĐTBCTL"
+      },
+      "type_source": "academic_performance_level",
+      "type_target": "grade_point_range_for_classification",
+      "relation": "tương_ứng_với"
+    },
+    {
+      "source": {
+        "name": "Xếp loại học lực Kém",
+        "level_name": "Kém",
+        "description": "Mức độ hoàn thành chương trình học rất thấp"
+      },
+      "target": {
+        "name": "Khoảng điểm dưới 1,00",
+        "max_gpa": 0.99,
+        "condition": "Dưới 1.00",
+        "gpa_type_basis": "ĐTBCHK, ĐTBCNH hoặc ĐTBCTL"
+      },
+      "type_source": "academic_performance_level",
+      "type_target": "grade_point_range_for_classification",
+      "relation": "tương_ứng_với"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "role_description": "Người học tại cơ sở giáo dục",
+        "classification_target": "Xác định trình độ năm học"
+      },
+      "target": {
+        "name": "Số tín chỉ tích lũy được từ đầu khóa học (N)",
+        "variable_name": "N",
+        "description": "Tổng số tín chỉ sinh viên đã đạt được"
+      },
       "type_source": "student",
-      "type_target": "gpa_semester",
-      "relation": "được_xếp_loại_học_lực_theo"
+      "type_target": "accumulated_credits_n",
+      "relation": "được_xếp_trình_độ_năm_học_căn_cứ_vào"
     },
     {
-      "source": "sinh viên",
-      "target": "ĐTBCNH",
-      "type_source": "student",
-      "type_target": "gpa_year",
-      "relation": "được_xếp_loại_học_lực_theo"
+      "source": {
+        "name": "Trình độ năm thứ 1 (Cử nhân, Bác sĩ Thú y)",
+        "program_type": "Cử nhân, Bác sĩ Thú y",
+        "year_level": "Năm thứ nhất"
+      },
+      "target": {
+        "name": "Tích lũy dưới 30 tín chỉ",
+        "credit_condition": "< 30 tín chỉ",
+        "variable_N_range": "N < 30"
+      },
+      "type_source": "academic_year_level_category",
+      "type_target": "credit_range_for_year_level",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "sinh viên",
-      "target": "ĐTBCTL",
-      "type_source": "student",
-      "type_target": "gpa_cumulative",
-      "relation": "được_xếp_loại_học_lực_theo"
+      "source": {
+        "name": "Trình độ năm thứ 2 (Cử nhân, Bác sĩ Thú y)",
+        "program_type": "Cử nhân, Bác sĩ Thú y",
+        "year_level": "Năm thứ hai"
+      },
+      "target": {
+        "name": "Tích lũy từ 30 đến 60 tín chỉ",
+        "credit_condition": "30 <= N <= 60 tín chỉ",
+        "variable_N_range": "30 <= N <= 60"
+      },
+      "type_source": "academic_year_level_category",
+      "type_target": "credit_range_for_year_level",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "3,60 đến 4,00",
-      "target": "Xuất sắc",
-      "type_source": "gpa_range",
-      "type_target": "performance_level",
-      "relation": "là"
+      "source": {
+        "name": "Trình độ năm thứ 3 (Cử nhân, Bác sĩ Thú y)",
+        "program_type": "Cử nhân, Bác sĩ Thú y",
+        "year_level": "Năm thứ ba"
+      },
+      "target": {
+        "name": "Tích lũy từ 60 đến 90 tín chỉ",
+        "credit_condition": "60 < N <= 90 tín chỉ",
+        "variable_N_range": "60 < N <= 90"
+      },
+      "type_source": "academic_year_level_category",
+      "type_target": "credit_range_for_year_level",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "3,20 đến 3,59",
-      "target": "Giỏi",
-      "type_source": "gpa_range",
-      "type_target": "performance_level",
-      "relation": "là"
+      "source": {
+        "name": "Trình độ năm thứ 4 (Cử nhân, Bác sĩ Thú y)",
+        "program_type": "Cử nhân, Bác sĩ Thú y",
+        "year_level": "Năm thứ tư"
+      },
+      "target": {
+        "name": "Tích lũy từ 90 đến 120 tín chỉ",
+        "credit_condition": "90 < N <= 120 tín chỉ",
+        "variable_N_range": "90 < N <= 120"
+      },
+      "type_source": "academic_year_level_category",
+      "type_target": "credit_range_for_year_level",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "2,50 đến 3,19",
-      "target": "Khá",
-      "type_source": "gpa_range",
-      "type_target": "performance_level",
-      "relation": "là"
+      "source": {
+        "name": "Trình độ năm thứ 5 (Cử nhân, Bác sĩ Thú y)",
+        "program_type": "Cử nhân, Bác sĩ Thú y",
+        "year_level": "Năm thứ năm"
+      },
+      "target": {
+        "name": "Tích lũy từ 120 đến 150 tín chỉ",
+        "credit_condition": "120 < N <= 150 tín chỉ",
+        "variable_N_range": "120 < N <= 150"
+      },
+      "type_source": "academic_year_level_category",
+      "type_target": "credit_range_for_year_level",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "2,00 đến 2,49",
-      "target": "Trung bình",
-      "type_source": "gpa_range",
-      "type_target": "performance_level",
-      "relation": "là"
+      "source": {
+        "name": "Trình độ năm thứ 1 (Kỹ sư)",
+        "program_type": "Kỹ sư",
+        "year_level": "Năm thứ nhất"
+      },
+      "target": {
+        "name": "Tích lũy dưới 37 tín chỉ",
+        "credit_condition": "< 37 tín chỉ",
+        "variable_N_range": "N < 37"
+      },
+      "type_source": "academic_year_level_category",
+      "type_target": "credit_range_for_year_level",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "1,00 đến 1,99",
-      "target": "Yếu",
-      "type_source": "gpa_range",
-      "type_target": "performance_level",
-      "relation": "là"
+      "source": {
+        "name": "Trình độ năm thứ 2 (Kỹ sư)",
+        "program_type": "Kỹ sư",
+        "year_level": "Năm thứ hai"
+      },
+      "target": {
+        "name": "Tích lũy từ 38 đến 75 tín chỉ",
+        "credit_condition": "38 <= N <= 75 tín chỉ",
+        "variable_N_range": "38 <= N <= 75"
+      },
+      "type_source": "academic_year_level_category",
+      "type_target": "credit_range_for_year_level",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "Dưới 1,00",
-      "target": "Kém",
-      "type_source": "gpa_range",
-      "type_target": "performance_level",
-      "relation": "là"
+      "source": {
+        "name": "Trình độ năm thứ 3 (Kỹ sư)",
+        "program_type": "Kỹ sư",
+        "year_level": "Năm thứ ba"
+      },
+      "target": {
+        "name": "Tích lũy từ 76 đến 112 tín chỉ",
+        "credit_condition": "76 <= N <= 112 tín chỉ",
+        "variable_N_range": "76 <= N <= 112"
+      },
+      "type_source": "academic_year_level_category",
+      "type_target": "credit_range_for_year_level",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "sinh viên",
-      "target": "trình độ năm học",
-      "type_source": "student",
-      "type_target": "academic_year_level_classification",
-      "relation": "được_xếp"
-    },
-    {
-      "source": "trình độ năm học",
-      "target": "số tín chỉ tích lũy được từ đầu khóa học",
-      "type_source": "academic_year_level_classification",
-      "type_target": "accumulated_credit_count",
-      "relation": "căn_cứ_vào"
-    },
-    {
-      "source": "số tín chỉ tích lũy được từ đầu khóa học",
-      "target": "N",
-      "type_source": "accumulated_credit_count",
-      "type_target": "variable",
-      "relation": "ký_hiệu_là"
-    },
-    {
-      "source": "trình độ năm học",
-      "target": "số tín chỉ trung bình một năm học",
-      "type_source": "academic_year_level_classification",
-      "type_target": "average_yearly_credit",
-      "relation": "căn_cứ_vào"
-    },
-    {
-      "source": "số tín chỉ trung bình một năm học",
-      "target": "kế hoạch học tập chuẩn",
-      "type_source": "average_yearly_credit",
-      "type_target": "standard_study_plan",
-      "relation": "theo"
-    },
-    {
-      "source": "số tín chỉ trung bình một năm học",
-      "target": "M",
-      "type_source": "average_yearly_credit",
-      "type_target": "variable",
-      "relation": "ký_hiệu_là"
-    },
-    {
-      "source": "Sinh viên ngành Cử nhân",
-      "target": "30 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_threshold",
-      "relation": "cần_tích_lũy_ít_hơn"
-    },
-    {
-       "source": "Bác sĩ Thú y",
-      "target": "30 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_threshold",
-      "relation": "cần_tích_lũy_ít_hơn"
-    },
-    {
-      "source": "30 tín chỉ",
-      "target": "Năm thứ nhất",
-      "type_source": "credit_threshold",
-      "type_target": "academic_year_level",
-      "relation": "để_ở"
-    },
-     {
-      "source": "Sinh viên ngành Kỹ sư",
-      "target": "37 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_threshold",
-      "relation": "cần_tích_lũy_ít_hơn"
-    },
-    {
-      "source": "37 tín chỉ",
-      "target": "Năm thứ nhất",
-      "type_source": "credit_threshold",
-      "type_target": "academic_year_level",
-      "relation": "để_ở"
-    },
-    {
-      "source": "Sinh viên ngành Cử nhân",
-      "target": "30 đến 60 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-     {
-      "source": "Bác sĩ Thú y",
-      "target": "30 đến 60 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-    {
-      "source": "30 đến 60 tín chỉ",
-      "target": "Năm thứ hai",
-      "type_source": "credit_range",
-      "type_target": "academic_year_level",
-      "relation": "để_ở"
-    },
-     {
-      "source": "Sinh viên ngành Kỹ sư",
-      "target": "38 đến 75 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-     {
-      "source": "38 đến 75 tín chỉ",
-      "target": "Năm thứ hai",
-      "type_source": "credit_range",
-      "type_target": "academic_year_level",
-      "relation": "để_ở"
-    },
-      {
-      "source": "Sinh viên ngành Cử nhân",
-      "target": "60 đến 90 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-    {
-      "source": "Bác sĩ Thú y",
-      "target": "60 đến 90 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-     {
-      "source": "60 đến 90 tín chỉ",
-      "target": "Năm thứ ba",
-      "type_source": "credit_range",
-      "type_target": "academic_year_level",
-      "relation": "để_ở"
-    },
-     {
-      "source": "Sinh viên ngành Kỹ sư",
-      "target": "76 đến 112 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-      {
-      "source": "76 đến 112 tín chỉ",
-      "target": "Năm thứ ba",
-      "type_source": "credit_range",
-      "type_target": "academic_year_level",
-      "relation": "để_ở"
-    },
-     {
-      "source": "Sinh viên ngành Cử nhân",
-      "target": "90 đến 120 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-     {
-      "source": "Bác sĩ Thú y",
-      "target": "90 đến 120 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-     {
-      "source": "90 đến 120 tín chỉ",
-      "target": "Năm thứ tư",
-      "type_source": "credit_range",
-      "type_target": "academic_year_level",
-      "relation": "để_ở"
-    },
-     {
-      "source": "Sinh viên ngành Kỹ sư",
-      "target": "113 đến 150 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-    {
-      "source": "113 đến 150 tín chỉ",
-      "target": "Năm thứ tư",
-      "type_source": "credit_range",
-      "type_target": "academic_year_level",
-      "relation": "để_ở"
-    },
-     {
-      "source": "Sinh viên ngành Cử nhân",
-      "target": "120 đến 150 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-     {
-      "source": "Bác sĩ Thú y",
-      "target": "120 đến 150 tín chỉ",
-      "type_source": "student_major_group",
-      "type_target": "credit_range",
-      "relation": "cần_tích_lũy_trong_khoảng"
-    },
-     {
-      "source": "120 đến 150 tín chỉ",
-      "target": "Năm thứ năm",
-      "type_source": "credit_range",
-      "type_target": "academic_year_level",
-      "relation": "để_ở"
+      "source": {
+        "name": "Trình độ năm thứ 4 (Kỹ sư)",
+        "program_type": "Kỹ sư",
+        "year_level": "Năm thứ tư"
+      },
+      "target": {
+        "name": "Tích lũy từ 113 đến 150 tín chỉ",
+        "credit_condition": "113 <= N <= 150 tín chỉ",
+        "variable_N_range": "113 <= N <= 150"
+      },
+      "type_source": "academic_year_level_category",
+      "type_target": "credit_range_for_year_level",
+      "relation": "yêu_cầu"
     }
   ]
 }

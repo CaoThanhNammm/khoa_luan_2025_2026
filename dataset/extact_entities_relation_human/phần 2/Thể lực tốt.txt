@@ -1,160 +1,156 @@
 {
-  "entities": [
-    {
-      "name": "danh hiệu “Thanh niên khỏe”",
-      "type": "TITLE"
-    },
-    {
-      "name": "cấp trường",
-      "type": "SCHOOL_LEVEL"
-    },
-    {
-      "name": "câu lạc bộ thể thao",
-      "type": "SPORTS_CLUB"
-    },
-    {
-      "name": "trong trường",
-      "type": "INSIDE_SCHOOL"
-    },
-    {
-      "name": "ngoài trường",
-      "type": "OUTSIDE_SCHOOL"
-    },
-    {
-      "name": "giấy xác nhận",
-      "type": "CERTIFICATE"
-    },
-    {
-      "name": "ban chủ nhiệm câu lạc bộ",
-      "type": "CLUB_MANAGEMENT_BOARD"
-    },
-    {
-      "name": "thành viên",
-      "type": "MEMBER"
-    },
-    {
-      "name": "nội dung thi đấu",
-      "type": "COMPETITION_CONTENT"
-    },
-    {
-      "name": "hội thao",
-      "type": "SPORTS_MEETING"
-    },
-    {
-      "name": "giải thi đấu thể dục thể thao",
-      "type": "SPORTS_COMPETITION"
-    },
-    {
-      "name": "các cấp",
-      "type": "LEVELS"
-    },
-    {
-      "name": "Hội đồng",
-      "type": "COUNCIL"
-    },
-    {
-      "name": "sinh viên khuyết tật",
-      "type": "DISABLED_STUDENT"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "danh hiệu “Thanh niên khỏe”",
-      "relation": "đạt",
-      "type_source": "STUDENT",
-      "type_target": "TITLE"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người nhận danh hiệu",
+        "achievement_context": "Hoạt động rèn luyện sức khỏe",
+        "status": "Đủ điều kiện",
+        "evaluation_criteria": "Thể chất và thành tích"
+      },
+      "target": {
+        "name": "Danh hiệu “Thanh niên khỏe”",
+        "category": "Danh hiệu cá nhân",
+        "awarding_level": "Cấp trường",
+        "criteria": "Sức khỏe tốt, rèn luyện thể chất",
+        "recognition_scope": "Trong trường học"
+      },
+      "type_source": "student_group",
+      "type_target": "achievement_title",
+      "relation": "đạt_được"
     },
     {
-      "source": "danh hiệu “Thanh niên khỏe”",
-      "target": "cấp trường",
-      "relation": "cấp",
-      "type_source": "TITLE",
-      "type_target": "SCHOOL_LEVEL"
+      "source": {
+        "name": "Danh hiệu “Thanh niên khỏe”",
+        "category": "Danh hiệu cá nhân",
+        "awarded_for": "Thành tích rèn luyện sức khỏe",
+        "recognition_scope": "Trong trường học",
+        "issuer_level": "Cấp trường"
+      },
+      "target": {
+        "name": "Cấp trường",
+        "description": "Phạm vi công nhận và trao tặng trong trường học",
+        "level_type": "Cấp độ tổ chức",
+        "context": "Hoạt động khen thưởng của trường",
+        "authority": "Trường học"
+      },
+      "type_source": "achievement_title",
+      "type_target": "organizational_level",
+      "relation": "thuộc_cấp"
     },
     {
-      "source": "sinh viên",
-      "target": "câu lạc bộ thể thao",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "SPORTS_CLUB"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Thành viên",
+        "activity": "Hoạt động thể thao câu lạc bộ",
+        "location_preference": "Trong và ngoài trường",
+        "verification_needed": "Giấy xác nhận (để được công nhận)"
+      },
+      "target": {
+        "name": "Câu lạc bộ thể thao",
+        "category": "Tổ chức thể thao",
+        "operational_scope": "Trong và ngoài trường",
+        "management_body": "Ban chủ nhiệm câu lạc bộ",
+        "proof_of_membership_issuer": "Ban chủ nhiệm câu lạc bộ"
+      },
+      "type_source": "student_group",
+      "type_target": "sports_club",
+      "relation": "tham_gia"
     },
     {
-      "source": "câu lạc bộ thể thao",
-      "target": "trong trường",
-      "relation": "ở",
-      "type_source": "SPORTS_CLUB",
-      "type_target": "INSIDE_SCHOOL"
+      "source": {
+        "name": "Ban chủ nhiệm câu lạc bộ",
+        "role": "Đơn vị quản lý Câu lạc bộ",
+        "function": "Điều hành và xác nhận hoạt động Câu lạc bộ",
+        "issuing_authority": "Có thẩm quyền cấp giấy xác nhận",
+        "associated_organization": "Câu lạc bộ thể thao"
+      },
+      "target": {
+        "name": "Giấy xác nhận",
+        "document_type": "Văn bản chứng nhận",
+        "purpose": "Xác nhận tư cách thành viên hoặc tham gia hoạt động",
+        "issuer": "Ban chủ nhiệm câu lạc bộ",
+        "recipient_context": "Thành viên câu lạc bộ"
+      },
+      "type_source": "club_management_board",
+      "type_target": "confirmation_document",
+      "relation": "cấp"
     },
     {
-      "source": "câu lạc bộ thể thao",
-      "target": "ngoài trường",
-      "relation": "ở",
-      "type_source": "SPORTS_CLUB",
-      "type_target": "OUTSIDE_SCHOOL"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Vận động viên / Thí sinh",
+        "activity_type": "Thi đấu thể thao",
+        "participation_context": "Hội thao hoặc giải đấu các cấp",
+        "status": "Thành viên đội tuyển hoặc cá nhân thi đấu"
+      },
+      "target": {
+        "name": "Các nội dung thi đấu",
+        "category": "Môn thi hoặc hạng mục thi đấu thể thao",
+        "setting_1": "Hội thao",
+        "setting_2": "Giải thi đấu thể dục thể thao các cấp",
+        "nature": "Hoạt động tranh tài"
+      },
+      "type_source": "student_group",
+      "type_target": "competition_event",
+      "relation": "tham_gia_thi_đấu"
     },
     {
-      "source": "sinh viên",
-      "target": "giấy xác nhận",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "CERTIFICATE"
+      "source": {
+        "name": "Các nội dung thi đấu",
+        "category": "Môn thi hoặc hạng mục thi đấu thể thao",
+        "purpose": "Tranh tài, biểu diễn kỹ năng",
+        "frequency": "Theo lịch trình của sự kiện lớn hơn",
+        "part_of_larger_event": "Đúng"
+      },
+      "target": {
+        "name": "Hội thao",
+        "event_type": "Sự kiện thể thao đa môn, quy mô lớn",
+        "objective": "Khuyến khích phong trào thể thao, giao lưu",
+        "typical_scope": "Cấp trường, ngành, khu vực",
+        "components": "Bao gồm nhiều nội dung thi đấu"
+      },
+      "type_source": "competition_event",
+      "type_target": "sports_festival",
+      "relation": "diễn_ra_trong_khuôn_khổ"
     },
     {
-      "source": "giấy xác nhận",
-      "target": "ban chủ nhiệm câu lạc bộ",
-      "relation": "của",
-      "type_source": "CERTIFICATE",
-      "type_target": "CLUB_MANAGEMENT_BOARD"
+      "source": {
+        "name": "Các nội dung thi đấu",
+        "category": "Môn thi hoặc hạng mục thi đấu thể thao",
+        "purpose": "Tranh tài, xác định thành tích",
+        "format": "Tuân theo luật lệ của từng môn",
+        "part_of_larger_event": "Đúng"
+      },
+      "target": {
+        "name": "Các giải thi đấu thể dục thể thao các cấp",
+        "event_structure": "Hệ thống giải đấu có phân cấp",
+        "objective": "Tuyển chọn, thi đấu đỉnh cao, xếp hạng",
+        "scope": "Từ cấp cơ sở đến cấp quốc gia/quốc tế",
+        "organization_frequency": "Thường niên hoặc định kỳ"
+      },
+      "type_source": "competition_event",
+      "type_target": "multi_level_sports_competition",
+      "relation": "diễn_ra_trong_khuôn_khổ"
     },
     {
-      "source": "ban chủ nhiệm câu lạc bộ",
-      "target": "câu lạc bộ thể thao",
-      "relation": "của",
-      "type_source": "CLUB_MANAGEMENT_BOARD",
-      "type_target": "SPORTS_CLUB"
-    },
-    {
-      "source": "sinh viên",
-      "target": "thành viên",
-      "relation": "là",
-      "type_source": "STUDENT",
-      "type_target": "MEMBER"
-    },
-    {
-      "source": "thành viên",
-      "target": "nội dung thi đấu",
-      "relation": "tham_gia",
-      "type_source": "MEMBER",
-      "type_target": "COMPETITION_CONTENT"
-    },
-    {
-      "source": "nội dung thi đấu",
-      "target": "hội thao",
-      "relation": "tại",
-      "type_source": "COMPETITION_CONTENT",
-      "type_target": "SPORTS_MEETING"
-    },
-    {
-      "source": "nội dung thi đấu",
-      "target": "giải thi đấu thể dục thể thao",
-      "relation": "tại",
-      "type_source": "COMPETITION_CONTENT",
-      "type_target": "SPORTS_COMPETITION"
-    },
-    {
-      "source": "giải thi đấu thể dục thể thao",
-      "target": "các cấp",
-      "relation": "cấp",
-      "type_source": "SPORTS_COMPETITION",
-      "type_target": "LEVELS"
-    },
-    {
-      "source": "Hội đồng",
-      "target": "sinh viên khuyết tật",
-      "relation": "xem_xét",
-      "type_source": "COUNCIL",
-      "type_target": "DISABLED_STUDENT"
+      "source": {
+        "name": "Hội đồng",
+        "role": "Cơ quan xét duyệt, đánh giá",
+        "function": "Đưa ra quyết định dựa trên tiêu chí",
+        "process": "Xem xét trường hợp đặc biệt",
+        "discretion": "Có quyền điều chỉnh hoặc áp dụng quy định linh hoạt"
+      },
+      "target": {
+        "name": "Sinh viên khuyết tật",
+        "description": "Nhóm sinh viên có nhu cầu hỗ trợ đặc biệt",
+        "status_for_consideration": "Đối tượng được xem xét riêng",
+        "reason_for_special_consideration": "Do tình trạng khuyết tật",
+        "expected_outcome": "Đánh giá công bằng, phù hợp với hoàn cảnh"
+      },
+      "type_source": "council",
+      "type_target": "disabled_student",
+      "relation": "xem_xét_riêng_cho"
     }
   ]
 }

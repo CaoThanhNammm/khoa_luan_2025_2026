@@ -1,208 +1,299 @@
 {
-  "entities": [
-    {
-      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "type": "organization"
-    },
-    {
-      "name": "6 giảng đường",
-      "type": "facility"
-    },
-    {
-      "name": "10 trung tâm",
-      "type": "facility"
-    },
-    {
-      "name": "01 viện nghiên cứu và ứng dụng",
-      "type": "facility"
-    },
-    {
-      "name": "01 thư viện trung tâm",
-      "type": "facility"
-    },
-    {
-      "name": "15.000 đầu sách",
-      "type": "quantity"
-    },
-    {
-      "name": "01 bệnh viện thú y",
-      "type": "facility"
-    },
-    {
-      "name": "01 xưởng dược thú y",
-      "type": "facility"
-    },
-    {
-      "name": "01 trại thực nghiệm thủy sản",
-      "type": "facility"
-    },
-    {
-      "name": "04 trung tâm nghiên cứu thí nghiệm",
-      "type": "facility"
-    },
-    {
-      "name": "thư viện điện tử",
-      "type": "facility"
-    },
-    {
-      "name": "6 ký túc xá",
-      "type": "facility"
-    },
-    {
-      "name": "350 phòng",
-      "type": "quantity"
-    },
-    {
-      "name": "3.000 sinh viên",
-      "type": "quantity"
-    },
-    {
-      "name": "1 sân đa môn",
-      "type": "facility"
-    },
-    {
-      "name": "3 sân bóng chuyền",
-      "type": "facility"
-    },
-    {
-      "name": "1 sân bóng đá",
-      "type": "facility"
-    },
-    {
-      "name": "Nhà thi đấu và luyện tập thể thao",
-      "type": "facility"
-    },
-    {
-      "name": "1.000",
-      "type": "quantity"
-    }
-  ],
   "relationships": [
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "6 giảng đường",
-      "relation": "SỞ_HỮU",
+      "source": {
+        "name": "Trường",
+        "entity_type_description": "cơ sở giáo dục",
+        "context": "cung cấp cơ sở vật chất"
+      },
+      "target": {
+        "name": "6 giảng đường",
+        "facility_type": "giảng đường",
+        "quantity": 6,
+        "purpose": "giảng dạy"
+      },
       "type_source": "organization",
-      "type_target": "facility"
+      "type_target": "facility",
+      "relation": "có_cơ_sở_vật_chất"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "10 trung tâm",
-      "relation": "SỞ_HỮU",
+      "source": {
+        "name": "Trường",
+        "entity_type_description": "cơ sở giáo dục",
+        "context": "cung cấp cơ sở vật chất"
+      },
+      "target": {
+        "name": "10 trung tâm",
+        "facility_type": "trung tâm",
+        "quantity": 10,
+        "function": "đa dạng"
+      },
       "type_source": "organization",
-      "type_target": "facility"
+      "type_target": "facility",
+      "relation": "có_cơ_sở_vật_chất"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "01 viện nghiên cứu và ứng dụng",
-      "relation": "SỞ_HỮU",
+      "source": {
+        "name": "Trường",
+        "entity_type_description": "cơ sở giáo dục",
+        "context": "cung cấp cơ sở vật chất"
+      },
+      "target": {
+        "name": "01 viện nghiên cứu và ứng dụng",
+        "facility_type": "viện",
+        "quantity": 1,
+        "specialization": "nghiên cứu và ứng dụng"
+      },
       "type_source": "organization",
-      "type_target": "facility"
+      "type_target": "research_institute",
+      "relation": "có_cơ_sở_vật_chất"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "01 thư viện trung tâm",
-      "relation": "SỞ_HỮU",
+      "source": {
+        "name": "Trường",
+        "entity_type_description": "cơ sở giáo dục",
+        "context": "cung cấp cơ sở vật chất"
+      },
+      "target": {
+        "name": "01 thư viện trung tâm",
+        "facility_type": "thư viện",
+        "quantity": 1,
+        "resource_detail": "trên 15.000 đầu sách"
+      },
       "type_source": "organization",
-      "type_target": "facility"
+      "type_target": "library",
+      "relation": "có_cơ_sở_vật_chất"
     },
     {
-      "source": "01 thư viện trung tâm",
-      "target": "15.000 đầu sách",
-      "relation": "SỐ_LƯỢNG_SÁCH",
-      "type_source": "facility",
-      "type_target": "quantity"
-    },
-    {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "01 bệnh viện thú y",
-      "relation": "SỞ_HỮU",
+      "source": {
+        "name": "Trường",
+        "entity_type_description": "cơ sở giáo dục",
+        "context": "cung cấp cơ sở vật chất"
+      },
+      "target": {
+        "name": "01 bệnh viện thú y",
+        "facility_type": "bệnh viện",
+        "quantity": 1,
+        "specialization": "thú y"
+      },
       "type_source": "organization",
-      "type_target": "facility"
+      "type_target": "facility",
+      "relation": "có_cơ_sở_vật_chất"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "01 xưởng dược thú y",
-      "relation": "SỞ_HỮU",
+      "source": {
+        "name": "Trường",
+        "entity_type_description": "cơ sở giáo dục",
+        "context": "cung cấp cơ sở vật chất"
+      },
+      "target": {
+        "name": "01 xưởng dược thú y",
+        "facility_type": "xưởng sản xuất",
+        "quantity": 1,
+        "specialization": "dược thú y"
+      },
       "type_source": "organization",
-      "type_target": "facility"
+      "type_target": "facility",
+      "relation": "có_cơ_sở_vật_chất"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "01 trại thực nghiệm thủy sản",
-      "relation": "SỞ_HỮU",
+      "source": {
+        "name": "Trường",
+        "entity_type_description": "cơ sở giáo dục",
+        "context": "cung cấp cơ sở vật chất"
+      },
+      "target": {
+        "name": "01 trại thực nghiệm thủy sản",
+        "facility_type": "trại thực nghiệm",
+        "quantity": 1,
+        "specialization": "thủy sản"
+      },
       "type_source": "organization",
-      "type_target": "facility"
+      "type_target": "facility",
+      "relation": "có_cơ_sở_vật_chất"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "04 trung tâm nghiên cứu thí nghiệm",
-      "relation": "SỞ_HỮU",
+      "source": {
+        "name": "Trường",
+        "entity_type_description": "cơ sở giáo dục",
+        "context": "cung cấp cơ sở vật chất"
+      },
+      "target": {
+        "name": "04 trung tâm nghiên cứu thí nghiệm",
+        "facility_type": "trung tâm nghiên cứu",
+        "quantity": 4,
+        "research_areas": "nông học, lâm nghiệp, nuôi trồng thủy sản, chăn nuôi"
+      },
       "type_source": "organization",
-      "type_target": "facility"
+      "type_target": "research_center",
+      "relation": "có_cơ_sở_vật_chất"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "thư viện điện tử",
-      "relation": "SỬ_DỤNG",
+      "source": {
+        "name": "Trường",
+        "entity_type_description": "cơ sở giáo dục",
+        "action_performed": "sử dụng"
+      },
+      "target": {
+        "name": "thư viện điện tử",
+        "facility_type": "thư viện số",
+        "intended_outcome": "nâng cao năng lực nghiên cứu và tự học của sinh viên"
+      },
       "type_source": "organization",
-      "type_target": "facility"
+      "type_target": "digital_library",
+      "relation": "sử_dụng"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "6 ký túc xá",
-      "relation": "SỞ_HỮU",
+      "source": {
+        "name": "thư viện điện tử",
+        "facility_type": "thư viện số",
+        "role": "công cụ hỗ trợ"
+      },
+      "target": {
+        "name": "năng lực nghiên cứu và tự học của sinh viên",
+        "capability_type": "nghiên cứu và tự học",
+        "beneficiary": "sinh viên"
+      },
+      "type_source": "digital_library",
+      "type_target": "capability",
+      "relation": "góp_phần_nâng_cao"
+    },
+    {
+      "source": {
+        "name": "Trường",
+        "entity_type_description": "cơ sở giáo dục",
+        "context": "cung cấp cơ sở vật chất"
+      },
+      "target": {
+        "name": "6 ký túc xá",
+        "facility_type": "ký túc xá",
+        "quantity": 6,
+        "room_count": 350,
+        "student_capacity": "3.000 sinh viên",
+        "recognition": "ký túc xá sinh viên văn hóa cấp thành phố"
+      },
       "type_source": "organization",
-      "type_target": "facility"
+      "type_target": "dormitory",
+      "relation": "có_cơ_sở_vật_chất"
     },
     {
-      "source": "6 ký túc xá",
-      "target": "350 phòng",
-      "relation": "SỐ_LƯỢNG_PHÒNG",
-      "type_source": "facility",
-      "type_target": "quantity"
+      "source": {
+        "name": "6 ký túc xá",
+        "facility_type": "ký túc xá",
+        "quantity": 6,
+        "status": "đạt danh hiệu nhiều năm liền"
+      },
+      "target": {
+        "name": "ký túc xá sinh viên văn hóa cấp thành phố",
+        "award_type": "danh hiệu văn hóa",
+        "level": "cấp thành phố",
+        "recipient_type": "ký túc xá sinh viên"
+      },
+      "type_source": "dormitory",
+      "type_target": "award",
+      "relation": "đạt_danh_hiệu"
     },
     {
-      "source": "6 ký túc xá",
-      "target": "3.000 sinh viên",
-      "relation": "SỨC_CHỨA",
-      "type_source": "facility",
-      "type_target": "quantity"
+      "source": {
+        "name": "6 ký túc xá",
+        "facility_type": "ký túc xá",
+        "quantity": 6,
+        "amenity_context": "cung cấp tiện ích thể thao"
+      },
+      "target": {
+        "name": "1 sân đa môn",
+        "sport_facility_type": "sân thể thao",
+        "court_type": "đa môn",
+        "quantity": 1
+      },
+      "type_source": "dormitory",
+      "type_target": "sport_facility",
+      "relation": "có_tiện_ích"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "1 sân đa môn",
-      "relation": "SỞ_HỮU",
-      "type_source": "organization",
-      "type_target": "facility"
+      "source": {
+        "name": "6 ký túc xá",
+        "facility_type": "ký túc xá",
+        "quantity": 6,
+        "amenity_context": "cung cấp tiện ích thể thao"
+      },
+      "target": {
+        "name": "3 sân bóng chuyền",
+        "sport_facility_type": "sân thể thao",
+        "sport_type": "bóng chuyền",
+        "quantity": 3
+      },
+      "type_source": "dormitory",
+      "type_target": "sport_facility",
+      "relation": "có_tiện_ích"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "3 sân bóng chuyền",
-      "relation": "SỞ_HỮU",
-      "type_source": "organization",
-      "type_target": "facility"
+      "source": {
+        "name": "6 ký túc xá",
+        "facility_type": "ký túc xá",
+        "quantity": 6,
+        "amenity_context": "cung cấp tiện ích thể thao"
+      },
+      "target": {
+        "name": "1 sân bóng đá",
+        "sport_facility_type": "sân thể thao",
+        "sport_type": "bóng đá",
+        "quantity": 1
+      },
+      "type_source": "dormitory",
+      "type_target": "sport_facility",
+      "relation": "có_tiện_ích"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "1 sân bóng đá",
-      "relation": "SỞ_HỮU",
-      "type_source": "organization",
-      "type_target": "facility"
+      "source": {
+        "name": "6 ký túc xá",
+        "facility_type": "ký túc xá",
+        "quantity": 6,
+        "amenity_context": "cung cấp tiện ích thể thao"
+      },
+      "target": {
+        "name": "Nhà thi đấu và luyện tập thể thao hiện đại",
+        "sport_facility_type": "nhà thi đấu",
+        "condition": "hiện đại",
+        "capacity": "1.000 người"
+      },
+      "type_source": "dormitory",
+      "type_target": "sport_facility",
+      "relation": "có_tiện_ích"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "Nhà thi đấu và luyện tập thể thao",
-      "relation": "SỞ_HỮU",
-      "type_source": "organization",
-      "type_target": "facility"
+      "source": {
+        "name": "Nhà thi đấu và luyện tập thể thao hiện đại",
+        "sport_facility_type": "nhà thi đấu",
+        "condition": "hiện đại",
+        "function": "tổ chức hoạt động thể thao"
+      },
+      "target": {
+        "name": "sân chơi bổ ích",
+        "area_type": "không gian giải trí",
+        "characteristic": "bổ ích",
+        "purpose": "rèn luyện cho sinh viên"
+      },
+      "type_source": "sport_facility",
+      "type_target": "recreational_area",
+      "relation": "tạo_ra"
     },
     {
-      "source": "Nhà thi đấu và luyện tập thể thao",
-      "target": "1.000",
-      "relation": "SỨC_CHỨA",
-      "type_source": "facility",
-      "type_target": "quantity"
+      "source": {
+        "name": "sân chơi bổ ích",
+        "area_type": "không gian giải trí",
+        "characteristic": "bổ ích",
+        "activity_focus": "rèn luyện"
+      },
+      "target": {
+        "name": "sinh viên",
+        "target_group_description": "sinh viên học tập tại trường",
+        "desired_development": "tinh thần minh mẫn trong thân thể tráng kiện",
+        "process_context": "trong quá trình học tập tại trường"
+      },
+      "type_source": "recreational_area",
+      "type_target": "group_of_people",
+      "relation": "rèn_luyện_cho"
     }
   ]
 }

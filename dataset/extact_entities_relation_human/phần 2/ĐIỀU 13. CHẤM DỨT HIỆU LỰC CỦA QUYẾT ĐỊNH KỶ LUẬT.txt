@@ -1,252 +1,120 @@
 {
-  "entities": [
-    {
-      "name": "ĐIỀU 13",
-      "type": "article"
-    },
-    {
-      "name": "CHẤM DỨT HIỆU LỰC CỦA QUYẾT ĐỊNH KỶ LUẬT",
-      "type": "process"
-    },
-    {
-      "name": "QUYẾT ĐỊNH KỶ LUẬT",
-      "type": "decision"
-    },
-    {
-      "name": "sinh viên",
-      "type": "category"
-    },
-    {
-      "name": "khiển trách",
-      "type": "disciplinary_level"
-    },
-    {
-      "name": "03 tháng",
-      "type": "duration"
-    },
-    {
-      "name": "ngày có quyết định kỷ luật",
-      "type": "date_event"
-    },
-    {
-      "name": "quyền lợi của sinh viên",
-      "type": "rights"
-    },
-    {
-      "name": "cảnh cáo",
-      "type": "disciplinary_level"
-    },
-    {
-      "name": "06 tháng",
-      "type": "duration"
-    },
-    {
-      "name": "đình chỉ học tập có thời hạn",
-      "type": "disciplinary_action"
-    },
-    {
-      "name": "thời hạn đình chỉ",
-      "type": "duration"
-    },
-    {
-      "name": "chứng nhận của địa phương",
-      "type": "document"
-    },
-    {
-      "name": "địa phương",
-      "type": "location"
-    },
-    {
-      "name": "cấp xã",
-      "type": "administrative_level"
-    },
-    {
-      "name": "phường",
-      "type": "administrative_level"
-    },
-    {
-      "name": "thị trấn",
-      "type": "administrative_level"
-    },
-    {
-      "name": "nơi cư trú",
-      "type": "location"
-    },
-    {
-      "name": "nghĩa vụ công dân",
-      "type": "duty"
-    },
-    {
-      "name": "Nhà trường",
-      "type": "organization"
-    },
-    {
-      "name": "học tiếp",
-      "type": "action"
-    },
-    {
-        "name": "không tái phạm",
-        "type": "condition"
-    },
-    {
-        "name": "không có những vi phạm đến mức phải xử lý kỷ luật",
-        "type": "condition"
-    }
-  ],
   "relationships": [
     {
-      "source": "ĐIỀU 13",
-      "target": "CHẤM DỨT HIỆU LỰC CỦA QUYẾT ĐỊNH KỶ LUẬT",
-      "type_source": "article",
-      "type_target": "process",
-      "relation": "quy_định_về"
-    },
-    {
-      "source": "CHẤM DỨT HIỆU LỰC CỦA QUYẾT ĐỊNH KỶ LUẬT",
-      "target": "QUYẾT ĐỊNH KỶ LUẬT",
-      "type_source": "process",
-      "type_target": "decision",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "sinh viên",
-      "target": "khiển trách",
-      "type_source": "category",
-      "type_target": "disciplinary_level",
-      "relation": "bị_kỷ_luật"
-    },
-    {
-      "source": "QUYẾT ĐỊNH KỶ LUẬT",
-      "target": "03 tháng",
-      "type_source": "decision",
+      "source": {
+        "name": "quyết định kỷ luật khiển trách",
+        "discipline_form": "khiển trách",
+        "basis_for_termination": "thời gian và hành vi của sinh viên",
+        "implication": "chấm dứt hiệu lực tự động nếu không tái phạm"
+      },
+      "target": {
+        "name": "03 tháng",
+        "value": 3,
+        "unit": "tháng",
+        "condition_attached": "sinh viên không tái phạm hoặc không có những vi phạm đến mức phải xử lý kỷ luật",
+        "reference_point": "kể từ ngày có quyết định kỷ luật"
+      },
+      "type_source": "disciplinary_measure",
       "type_target": "duration",
-      "relation": "chấm_dứt_hiệu_lực_sau"
-    },
-        {
-      "source": "03 tháng",
-      "target": "ngày có quyết định kỷ luật",
-      "type_source": "duration",
-      "type_target": "date_event",
-      "relation": "kể_từ"
+      "relation": "có_thời_gian_chấm_dứt_hiệu_lực_tự_động"
     },
     {
-      "source": "CHẤM DỨT HIỆU LỰC CỦA QUYẾT ĐỊNH KỶ LUẬT",
-      "target": "không tái phạm",
-      "type_source": "process",
-      "type_target": "condition",
-      "relation": "yêu_cầu_điều_kiện"
+      "source": {
+        "name": "sinh viên bị kỷ luật khiển trách",
+        "discipline_form": "khiển trách",
+        "trigger_for_rights_restoration": "quyết định kỷ luật chấm dứt hiệu lực"
+      },
+      "target": {
+        "name": "quyền lợi của sinh viên",
+        "timing_of_enjoyment": "kể từ ngày quyết định kỷ luật chấm dứt hiệu lực",
+        "nature_of_entitlement": "được hưởng lại"
+      },
+      "type_source": "student_status",
+      "type_target": "student_rights",
+      "relation": "được_hưởng_lại_khi_kỷ_luật_chấm_dứt"
     },
     {
-        "source": "CHẤM DỨT HIỆU LỰC CỦA QUYẾT ĐỊNH KỶ LUẬT",
-        "target": "không có những vi phạm đến mức phải xử lý kỷ luật",
-        "type_source": "process",
-        "type_target": "condition",
-        "relation": "yêu_cầu_điều_kiện"
-    },
-    {
-      "source": "sinh viên",
-      "target": "quyền lợi của sinh viên",
-      "type_source": "category",
-      "type_target": "rights",
-      "relation": "được_hưởng_lại"
-    },
-     {
-      "source": "sinh viên",
-      "target": "cảnh cáo",
-      "type_source": "category",
-      "type_target": "disciplinary_level",
-      "relation": "bị_kỷ_luật"
-    },
-    {
-      "source": "QUYẾT ĐỊNH KỶ LUẬT",
-      "target": "06 tháng",
-      "type_source": "decision",
+      "source": {
+        "name": "quyết định kỷ luật cảnh cáo",
+        "discipline_form": "cảnh cáo",
+        "basis_for_termination": "thời gian và hành vi của sinh viên",
+        "implication": "chấm dứt hiệu lực tự động nếu không tái phạm"
+      },
+      "target": {
+        "name": "06 tháng",
+        "value": 6,
+        "unit": "tháng",
+        "condition_attached": "sinh viên không tái phạm hoặc không có những vi phạm đến mức phải xử lý kỷ luật",
+        "reference_point": "kể từ ngày có quyết định kỷ luật"
+      },
+      "type_source": "disciplinary_measure",
       "type_target": "duration",
-      "relation": "chấm_dứt_hiệu_lực_sau"
+      "relation": "có_thời_gian_chấm_dứt_hiệu_lực_tự_động"
     },
     {
-      "source": "06 tháng",
-      "target": "ngày có quyết định kỷ luật",
-      "type_source": "duration",
-      "type_target": "date_event",
-      "relation": "kể_từ"
+      "source": {
+        "name": "sinh viên bị kỷ luật cảnh cáo",
+        "discipline_form": "cảnh cáo",
+        "trigger_for_rights_restoration": "quyết định kỷ luật chấm dứt hiệu lực"
+      },
+      "target": {
+        "name": "quyền lợi của sinh viên",
+        "timing_of_enjoyment": "kể từ ngày quyết định kỷ luật chấm dứt hiệu lực",
+        "nature_of_entitlement": "được hưởng lại"
+      },
+      "type_source": "student_status",
+      "type_target": "student_rights",
+      "relation": "được_hưởng_lại_khi_kỷ_luật_chấm_dứt"
     },
     {
-      "source": "sinh viên",
-      "target": "đình chỉ học tập có thời hạn",
-      "type_source": "category",
-      "type_target": "disciplinary_action",
-      "relation": "bị_kỷ_luật"
-    },
-    {
-      "source": "sinh viên",
-      "target": "chứng nhận của địa phương",
-      "type_source": "category",
+      "source": {
+        "name": "sinh viên bị đình chỉ học tập có thời hạn",
+        "discipline_form": "đình chỉ học tập có thời hạn",
+        "action_required": "xuất trình chứng nhận",
+        "timing_of_action": "khi hết thời hạn đình chỉ",
+        "purpose_of_action": "để Nhà trường xem xét, tiếp nhận vào học tiếp"
+      },
+      "target": {
+        "name": "chứng nhận của địa phương nơi cư trú",
+        "issuer_level_hint": "cấp xã, phường, thị trấn",
+        "content_purpose": "chấp hành nghĩa vụ công dân tại địa phương",
+        "document_type": "chứng nhận"
+      },
+      "type_source": "student_status",
       "type_target": "document",
-      "relation": "phải_xuất_trình"
+      "relation": "phải_xuất_trình_để_xem_xét_học_tiếp"
     },
     {
-      "source": "sinh viên",
-      "target": "thời hạn đình chỉ",
-      "type_source": "category",
-      "type_target": "duration",
-      "relation": "khi_hết"
-    },
-    {
-      "source": "chứng nhận của địa phương",
-      "target": "địa phương",
+      "source": {
+        "name": "chứng nhận của địa phương nơi cư trú",
+        "content_purpose": "chấp hành nghĩa vụ công dân tại địa phương",
+        "document_type": "chứng nhận"
+      },
+      "target": {
+        "name": "địa phương (cấp xã, phường, thị trấn) nơi cư trú",
+        "administrative_level": "cấp xã, phường, thị trấn",
+        "role_in_context": "cấp chứng nhận",
+        "location_type": "nơi cư trú của sinh viên"
+      },
       "type_source": "document",
-      "type_target": "location",
-      "relation": "cấp_bởi"
+      "type_target": "local_authority",
+      "relation": "được_cấp_bởi"
     },
     {
-      "source": "địa phương",
-      "target": "nơi cư trú",
-      "type_source": "location",
-      "type_target": "location",
-      "relation": "là"
-    },
-    {
-      "source": "địa phương",
-      "target": "cấp xã",
-      "type_source": "location",
-      "type_target": "administrative_level",
-      "relation": "bao_gồm_cấp"
-    },
-    {
-      "source": "địa phương",
-      "target": "phường",
-      "type_source": "location",
-      "type_target": "administrative_level",
-      "relation": "bao_gồm_cấp"
-    },
-     {
-      "source": "địa phương",
-      "target": "thị trấn",
-      "type_source": "location",
-      "type_target": "administrative_level",
-      "relation": "bao_gồm_cấp"
-    },
-    {
-      "source": "chứng nhận của địa phương",
-      "target": "nghĩa vụ công dân",
-      "type_source": "document",
-      "type_target": "duty",
-      "relation": "chứng_nhận_chấp_hành"
-    },
-    {
-      "source": "Nhà trường",
-      "target": "sinh viên",
+      "source": {
+        "name": "Nhà trường",
+        "action_description": "xem xét, tiếp nhận vào học tiếp",
+        "decision_basis": "chứng nhận của địa phương và điều kiện của sinh viên"
+      },
+      "target": {
+        "name": "sinh viên bị đình chỉ học tập có thời hạn",
+        "status_context": "sau khi hết thời hạn đình chỉ",
+        "action_by_student": "xuất trình chứng nhận",
+        "condition_for_readmission": "đủ điều kiện"
+      },
       "type_source": "organization",
-      "type_target": "category",
-      "relation": "xem_xét_tiếp_nhận"
-    },
-    {
-      "source": "sinh viên",
-      "target": "học tiếp",
-      "type_source": "category",
-      "type_target": "action",
-      "relation": "được_xem_xét"
+      "type_target": "student_status",
+      "relation": "xem_xét_tiếp_nhận_học_tiếp"
     }
   ]
 }

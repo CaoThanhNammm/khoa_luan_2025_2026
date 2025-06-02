@@ -1,447 +1,513 @@
 {
-  "entities": [
-    {
-      "name": "học bổng tài trợ",
-      "type": "concept"
-    },
-    {
-      "name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
-      "type": "organization"
-    },
-    {
-      "name": "cựu sinh viên",
-      "type": "person"
-    },
-    {
-      "name": "doanh nghiệp",
-      "type": "organization"
-    },
-    {
-      "name": "tổ chức",
-      "type": "organization"
-    },
-    {
-      "name": "cá nhân",
-      "type": "person"
-    },
-    {
-      "name": "sinh viên",
-      "type": "person"
-    },
-    {
-      "name": "hoàn cảnh khó khăn",
-      "type": "concept"
-    },
-    {
-      "name": "hộ nghèo",
-      "type": "concept"
-    },
-    {
-      "name": "mồ côi cha mẹ",
-      "type": "concept"
-    },
-    {
-      "name": "hoàn cảnh khó khăn đột xuất",
-      "type": "concept"
-    },
-    {
-      "name": "thiên tai",
-      "type": "natural_phenomenon"
-    },
-    {
-      "name": "tai nạn",
-      "type": "event"
-    },
-    {
-      "name": "thành tích cao",
-      "type": "concept"
-    },
-    {
-      "name": "học tập",
-      "type": "activity"
-    },
-    {
-      "name": "nghiên cứu khoa học",
-      "type": "activity"
-    },
-    {
-      "name": "hoạt động cộng đồng",
-      "type": "activity"
-    },
-    {
-      "name": "Đoàn - Hội",
-      "type": "organization"
-    },
-    {
-      "name": "chương trình học bổng",
-      "type": "concept"
-    },
-    {
-      "name": "phòng Công tác sinh viên",
-      "type": "organization"
-    },
-    {
-      "name": "Khoa",
-      "type": "organization"
-    },
-    {
-      "name": "6 tỷ đồng",
-      "type": "amount"
-    },
-    {
-      "name": "tiền mặt",
-      "type": "concept"
-    },
-    {
-      "name": "khóa học đào tạo ngắn hạn",
-      "type": "concept"
-    },
-    {
-      "name": "tin học",
-      "type": "concept"
-    },
-    {
-      "name": "ngoại ngữ",
-      "type": "concept"
-    },
-    {
-      "name": "kỹ năng",
-      "type": "concept"
-    },
-    {
-      "name": "học bổng Đồng hành",
-      "type": "concept"
-    },
-    {
-      "name": "năm học",
-      "type": "time"
-    },
-    {
-      "name": "chương trình học bổng",
-      "type": "concept"
-    },
-    {
-      "name": "phòng Công tác sinh viên",
-      "type": "organization"
-    },
-    {
-      "name": "điều kiện",
-      "type": "concept"
-    },
-    {
-      "name": "đối tượng",
-      "type": "concept"
-    },
-    {
-      "name": "quy trình",
-      "type": "concept"
-    },
-    {
-      "name": "thủ tục",
-      "type": "concept"
-    },
-    {
-      "name": "hồ sơ học bổng",
-      "type": "document"
-    },
-    {
-      "name": "sinh viên",
-      "type": "person"
-    },
-    {
-      "name": "email sinh viên",
-      "type": "concept"
-    },
-    {
-      "name": "website",
-      "type": "website"
-    },
-    {
-      "name": "Khoa",
-      "type": "organization"
-    },
-    {
-      "name": "website phòng Công tác sinh viên",
-      "type": "website"
-    },
-    {
-      "name": "https://nls.hcmuaf.edu.vn/",
-      "type": "website"
-    }
-  ],
   "relationships": [
     {
-      "source": "học bổng tài trợ",
-      "target": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
-      "relation": "TRÍCH_TỪ",
-      "type_source": "concept",
-      "type_target": "organization"
+      "source": {
+        "name": "Học bổng tài trợ",
+        "description": "Học bổng được trích từ Quỹ Đồng hành cùng trường Đại học Nông Lâm TP.HCM",
+        "source_fund_name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+        "purpose": "Hỗ trợ sinh viên"
+      },
+      "target": {
+        "name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+        "type": "Quỹ học bổng",
+        "origin_description": "Đóng góp của các cựu sinh viên, doanh nghiệp, tổ chức, cá nhân",
+        "associated_entity": "Trường Đại học Nông Lâm TP.HCM",
+        "informal_name": "Quỹ Đồng hành"
+      },
+      "type_source": "sponsored_scholarship",
+      "type_target": "scholarship_fund",
+      "relation": "trích_từ"
     },
     {
-      "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
-      "target": "cựu sinh viên",
-      "relation": "DO",
-      "type_source": "organization",
-      "type_target": "person"
+      "source": {
+        "name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+        "type": "Quỹ học bổng",
+        "purpose": "Tài trợ học bổng cho sinh viên",
+        "annual_sponsorship_value_text": "Khoảng hơn 6 tỷ đồng mỗi năm"
+      },
+      "target": {
+        "name": "Cựu sinh viên",
+        "role": "Người đóng góp cho quỹ",
+        "affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "contribution_type": "Tài chính hoặc hiện vật"
+      },
+      "type_source": "scholarship_fund",
+      "type_target": "alumni_donor",
+      "relation": "nhận_đóng_góp_từ"
     },
     {
-      "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
-      "target": "doanh nghiệp",
-      "relation": "DO",
-      "type_source": "organization",
-      "type_target": "organization"
+      "source": {
+        "name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+        "type": "Quỹ học bổng",
+        "purpose": "Tài trợ học bổng cho sinh viên",
+        "annual_sponsorship_value_text": "Khoảng hơn 6 tỷ đồng mỗi năm"
+      },
+      "target": {
+        "name": "Doanh nghiệp",
+        "role": "Người đóng góp cho quỹ",
+        "sector": "Đa dạng",
+        "contribution_type": "Tài chính hoặc hiện vật"
+      },
+      "type_source": "scholarship_fund",
+      "type_target": "company_donor",
+      "relation": "nhận_đóng_góp_từ"
     },
     {
-      "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
-      "target": "tổ chức",
-      "relation": "DO",
-      "type_source": "organization",
-      "type_target": "organization"
+      "source": {
+        "name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+        "type": "Quỹ học bổng",
+        "purpose": "Tài trợ học bổng cho sinh viên",
+        "annual_sponsorship_value_text": "Khoảng hơn 6 tỷ đồng mỗi năm"
+      },
+      "target": {
+        "name": "Tổ chức",
+        "role": "Người đóng góp cho quỹ",
+        "nature": "Xã hội, nghề nghiệp, v.v.",
+        "contribution_type": "Tài chính hoặc hiện vật"
+      },
+      "type_source": "scholarship_fund",
+      "type_target": "organization_donor",
+      "relation": "nhận_đóng_góp_từ"
     },
     {
-      "source": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
-      "target": "cá nhân",
-      "relation": "DO",
-      "type_source": "organization",
-      "type_target": "person"
+      "source": {
+        "name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+        "type": "Quỹ học bổng",
+        "purpose": "Tài trợ học bổng cho sinh viên",
+        "annual_sponsorship_value_text": "Khoảng hơn 6 tỷ đồng mỗi năm"
+      },
+      "target": {
+        "name": "Cá nhân trong và ngoài nước",
+        "role": "Người đóng góp cho quỹ",
+        "scope": "Trong và ngoài nước",
+        "contribution_type": "Tài chính hoặc hiện vật"
+      },
+      "type_source": "scholarship_fund",
+      "type_target": "individual_donor",
+      "relation": "nhận_đóng_góp_từ"
     },
     {
-      "source": "học bổng",
-      "target": "sinh viên",
-      "relation": "XÉT",
-      "type_source": "concept",
-      "type_target": "person"
+      "source": {
+        "name": "Học bổng tài trợ",
+        "description": "Học bổng từ Quỹ Đồng hành",
+        "purpose": "Hỗ trợ sinh viên",
+        "eligibility_basis": "Hoàn cảnh, thành tích, đóng góp"
+      },
+      "target": {
+        "name": "Sinh viên có hoàn cảnh khó khăn",
+        "category_description": "Đối tượng được xét học bổng",
+        "example_criteria_1": "Hộ nghèo",
+        "example_criteria_2": "Mồ côi cha mẹ"
+      },
+      "type_source": "sponsored_scholarship",
+      "type_target": "student_financial_hardship",
+      "relation": "dành_cho_đối_tượng"
     },
     {
-      "source": "sinh viên",
-      "target": "hoàn cảnh khó khăn",
-      "relation": "CÓ",
-      "type_source": "person",
-      "type_target": "concept"
+      "source": {
+        "name": "Sinh viên có hoàn cảnh khó khăn",
+        "category_description": "Hoàn cảnh khó khăn",
+        "scholarship_relevance": "Đối tượng ưu tiên xét học bổng"
+      },
+      "target": {
+        "name": "Hộ nghèo",
+        "type": "Tình trạng kinh tế",
+        "significance": "Minh chứng hoàn cảnh khó khăn",
+        "document_proof": "Giấy chứng nhận hộ nghèo"
+      },
+      "type_source": "student_financial_hardship",
+      "type_target": "poor_household_status_criterion",
+      "relation": "có_thể_thuộc_diện"
     },
     {
-      "source": "hoàn cảnh khó khăn",
-      "target": "hộ nghèo",
-      "relation": "LÀ",
-      "type_source": "concept",
-      "type_target": "concept"
+      "source": {
+        "name": "Sinh viên có hoàn cảnh khó khăn",
+        "category_description": "Hoàn cảnh gia đình đặc biệt",
+        "scholarship_relevance": "Đối tượng ưu tiên xét học bổng"
+      },
+      "target": {
+        "name": "Mồ côi cha mẹ",
+        "type": "Tình trạng gia đình",
+        "significance": "Minh chứng hoàn cảnh khó khăn",
+        "impact": "Thiếu vắng sự chăm sóc của cha mẹ"
+      },
+      "type_source": "student_financial_hardship",
+      "type_target": "orphan_status_criterion",
+      "relation": "có_thể_thuộc_diện"
     },
     {
-      "source": "hoàn cảnh khó khăn",
-      "target": "mồ côi cha mẹ",
-      "relation": "LÀ",
-      "type_source": "concept",
-      "type_target": "concept"
+      "source": {
+        "name": "Học bổng tài trợ",
+        "description": "Học bổng từ Quỹ Đồng hành",
+        "purpose": "Hỗ trợ sinh viên",
+        "eligibility_basis": "Hoàn cảnh, thành tích, đóng góp"
+      },
+      "target": {
+        "name": "Sinh viên có hoàn cảnh khó khăn đột xuất",
+        "category_description": "Đối tượng được xét học bổng",
+        "cause_example_1": "Do hậu quả của thiên tai",
+        "cause_example_2": "Do tai nạn"
+      },
+      "type_source": "sponsored_scholarship",
+      "type_target": "student_sudden_financial_hardship",
+      "relation": "dành_cho_đối_tượng"
     },
     {
-      "source": "sinh viên",
-      "target": "hoàn cảnh khó khăn đột xuất",
-      "relation": "CÓ",
-      "type_source": "person",
-      "type_target": "concept"
+      "source": {
+        "name": "Sinh viên có hoàn cảnh khó khăn đột xuất",
+        "circumstance_type": "Khó khăn phát sinh bất ngờ",
+        "impact_on_student": "Ảnh hưởng đến học tập và đời sống"
+      },
+      "target": {
+        "name": "Thiên tai",
+        "event_type": "Sự kiện tự nhiên bất lợi",
+        "consequence_description": "Gây ra hoàn cảnh khó khăn đột xuất",
+        "impact_scope": "Tài sản, sức khỏe, tinh thần"
+      },
+      "type_source": "student_sudden_financial_hardship",
+      "type_target": "natural_disaster_cause",
+      "relation": "có_thể_do_hậu_quả_của"
     },
     {
-      "source": "hoàn cảnh khó khăn đột xuất",
-      "target": "thiên tai",
-      "relation": "DO",
-      "type_source": "concept",
-      "type_target": "natural_phenomenon"
+      "source": {
+        "name": "Sinh viên có hoàn cảnh khó khăn đột xuất",
+        "circumstance_type": "Khó khăn phát sinh bất ngờ",
+        "impact_on_student": "Ảnh hưởng đến học tập và đời sống"
+      },
+      "target": {
+        "name": "Tai nạn",
+        "event_type": "Sự cố không mong muốn",
+        "consequence_description": "Gây ra hoàn cảnh khó khăn đột xuất",
+        "impact_scope": "Sức khỏe, tài chính"
+      },
+      "type_source": "student_sudden_financial_hardship",
+      "type_target": "accident_cause",
+      "relation": "có_thể_do_hậu_quả_của"
     },
     {
-      "source": "hoàn cảnh khó khăn đột xuất",
-      "target": "tai nạn",
-      "relation": "DO",
-      "type_source": "concept",
-      "type_target": "event"
+      "source": {
+        "name": "Học bổng tài trợ",
+        "description": "Học bổng từ Quỹ Đồng hành",
+        "purpose": "Hỗ trợ và khuyến khích sinh viên",
+        "eligibility_basis": "Hoàn cảnh, thành tích, đóng góp"
+      },
+      "target": {
+        "name": "Sinh viên đạt thành tích cao trong học tập, nghiên cứu khoa học",
+        "category_description": "Đối tượng được xét học bổng",
+        "achievement_area_1": "Học tập",
+        "achievement_area_2": "Nghiên cứu khoa học"
+      },
+      "type_source": "sponsored_scholarship",
+      "type_target": "student_high_achiever",
+      "relation": "dành_cho_đối_tượng"
     },
     {
-      "source": "sinh viên",
-      "target": "thành tích cao",
-      "relation": "ĐẠT",
-      "type_source": "person",
-      "type_target": "concept"
+      "source": {
+        "name": "Học bổng tài trợ",
+        "description": "Học bổng từ Quỹ Đồng hành",
+        "purpose": "Hỗ trợ và khuyến khích sinh viên",
+        "eligibility_basis": "Hoàn cảnh, thành tích, đóng góp"
+      },
+      "target": {
+        "name": "Sinh viên nhiệt tình tham gia các hoạt động cộng đồng, Đoàn - Hội",
+        "category_description": "Đối tượng được xét học bổng",
+        "activity_area_1": "Hoạt động cộng đồng",
+        "activity_area_2": "Hoạt động Đoàn - Hội"
+      },
+      "type_source": "sponsored_scholarship",
+      "type_target": "student_active_in_community",
+      "relation": "dành_cho_đối_tượng"
     },
     {
-      "source": "sinh viên",
-      "target": "học tập",
-      "relation": "TRONG",
-      "type_source": "person",
-      "type_target": "activity"
+      "source": {
+        "name": "Các chương trình học bổng cụ thể",
+        "general_type": "Học bổng tài trợ",
+        "funding_source_context": "Quỹ Đồng hành cùng trường Đại học Nông Lâm TP.HCM",
+        "implementation_level": "Cụ thể hóa các gói học bổng"
+      },
+      "target": {
+        "name": "Phòng Công tác sinh viên",
+        "responsibility": "Tổ chức thực hiện chương trình học bổng",
+        "collaboration_partner": "Các Khoa",
+        "university_department": "Đơn vị chức năng của trường"
+      },
+      "type_source": "specific_scholarship_program",
+      "type_target": "student_affairs_office",
+      "relation": "được_tổ_chức_thực_hiện_chính_bởi"
     },
     {
-      "source": "sinh viên",
-      "target": "nghiên cứu khoa học",
-      "relation": "TRONG",
-      "type_source": "person",
-      "type_target": "activity"
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "activity_focus": "Tổ chức thực hiện chương trình học bổng",
+        "role_in_university": "Quản lý công tác sinh viên",
+        "key_function": "Hỗ trợ và quản lý sinh viên"
+      },
+      "target": {
+        "name": "Các Khoa",
+        "role_in_scholarship": "Phối hợp tổ chức thực hiện học bổng",
+        "academic_unit_type": "Đơn vị đào tạo chuyên ngành",
+        "relation_to_students": "Quản lý trực tiếp sinh viên theo ngành học"
+      },
+      "type_source": "student_affairs_office",
+      "type_target": "academic_faculty",
+      "relation": "phối_hợp_với"
     },
     {
-      "source": "sinh viên",
-      "target": "hoạt động cộng đồng",
-      "relation": "THAM_GIA",
-      "type_source": "person",
-      "type_target": "activity"
+      "source": {
+        "name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+        "type": "Quỹ học bổng",
+        "focus": "Tài trợ học bổng",
+        "establishment_purpose": "Hỗ trợ sinh viên Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Tổng trị giá tài trợ hàng năm khoảng hơn 6 tỷ đồng",
+        "value_approximate": "Khoảng hơn 6 tỷ",
+        "currency_unit": "đồng",
+        "time_period": "Mỗi năm",
+        "significance": "Nguồn lực tài chính đáng kể cho học bổng"
+      },
+      "type_source": "scholarship_fund",
+      "type_target": "annual_sponsorship_value",
+      "relation": "có_tổng_trị_giá_tài_trợ_hàng_năm_là"
     },
     {
-      "source": "sinh viên",
-      "target": "Đoàn - Hội",
-      "relation": "THAM_GIA",
-      "type_source": "person",
-      "type_target": "organization"
+      "source": {
+        "name": "Sinh viên",
+        "role_status": "Người nhận học bổng tiềm năng",
+        "scholarship_program_context": "Tùy theo từng chương trình học bổng",
+        "benefit_type": "Hỗ trợ tài chính hoặc phát triển kỹ năng"
+      },
+      "target": {
+        "name": "Tiền mặt",
+        "payment_form": "Hình thức nhận học bổng",
+        "description_detail": "Nhận trực tiếp bằng tiền",
+        "flexibility": "Linh hoạt trong sử dụng"
+      },
+      "type_source": "student_recipient",
+      "type_target": "cash_payment_method",
+      "relation": "có_thể_nhận_học_bổng_dưới_hình_thức"
     },
     {
-      "source": "chương trình học bổng",
-      "target": "phòng Công tác sinh viên",
-      "relation": "DO",
-      "type_source": "concept",
-      "type_target": "organization"
+      "source": {
+        "name": "Sinh viên",
+        "role_status": "Người nhận học bổng tiềm năng",
+        "scholarship_program_context": "Tùy theo từng chương trình học bổng",
+        "benefit_type": "Hỗ trợ tài chính hoặc phát triển kỹ năng"
+      },
+      "target": {
+        "name": "Khóa học đào tạo ngắn hạn",
+        "payment_form": "Hình thức nhận học bổng",
+        "course_duration": "Ngắn hạn",
+        "purpose": "Nâng cao kiến thức, kỹ năng"
+      },
+      "type_source": "student_recipient",
+      "type_target": "short_term_training_course_method",
+      "relation": "có_thể_nhận_học_bổng_dưới_hình_thức"
     },
     {
-      "source": "chương trình học bổng",
-      "target": "Khoa",
-      "relation": "PHỐI_HỢP",
-      "type_source": "concept",
-      "type_target": "organization"
+      "source": {
+        "name": "Khóa học đào tạo ngắn hạn",
+        "purpose_context": "Là một hình thức nhận học bổng",
+        "benefit_for_student": "Phát triển kỹ năng chuyên môn hoặc mềm",
+        "duration_category": "Ngắn hạn"
+      },
+      "target": {
+        "name": "Tin học",
+        "course_subject_category": "Ví dụ về khóa học đào tạo",
+        "skill_type": "Kỹ năng công nghệ thông tin",
+        "relevance_to_student": "Hỗ trợ học tập và công việc"
+      },
+      "type_source": "short_term_training_course_method",
+      "type_target": "it_course_example",
+      "relation": "ví_dụ_bao_gồm_khóa_học_về"
     },
     {
-      "source": "học bổng",
-      "target": "6 tỷ đồng",
-      "relation": "TRỊ_GIÁ",
-      "type_source": "concept",
-      "type_target": "amount"
+      "source": {
+        "name": "Khóa học đào tạo ngắn hạn",
+        "purpose_context": "Là một hình thức nhận học bổng",
+        "benefit_for_student": "Phát triển kỹ năng chuyên môn hoặc mềm",
+        "duration_category": "Ngắn hạn"
+      },
+      "target": {
+        "name": "Ngoại ngữ",
+        "course_subject_category": "Ví dụ về khóa học đào tạo",
+        "skill_type": "Kỹ năng ngôn ngữ",
+        "relevance_to_student": "Mở rộng cơ hội giao tiếp và việc làm"
+      },
+      "type_source": "short_term_training_course_method",
+      "type_target": "language_course_example",
+      "relation": "ví_dụ_bao_gồm_khóa_học_về"
     },
     {
-      "source": "sinh viên",
-      "target": "tiền mặt",
-      "relation": "NHẬN",
-      "type_source": "person",
-      "type_target": "concept"
+      "source": {
+        "name": "Khóa học đào tạo ngắn hạn",
+        "purpose_context": "Là một hình thức nhận học bổng",
+        "benefit_for_student": "Phát triển kỹ năng chuyên môn hoặc mềm",
+        "duration_category": "Ngắn hạn"
+      },
+      "target": {
+        "name": "Kỹ năng",
+        "course_subject_category": "Ví dụ về khóa học đào tạo",
+        "skill_type": "Kỹ năng mềm hoặc chuyên môn khác",
+        "relevance_to_student": "Nâng cao năng lực cá nhân"
+      },
+      "type_source": "short_term_training_course_method",
+      "type_target": "skill_dev_course_example",
+      "relation": "ví_dụ_bao_gồm_khóa_học_về"
     },
     {
-      "source": "sinh viên",
-      "target": "khóa học đào tạo ngắn hạn",
-      "relation": "NHẬN",
-      "type_source": "person",
-      "type_target": "concept"
+      "source": {
+        "name": "Học bổng Đồng hành",
+        "scholarship_type": "Học bổng tài trợ cụ thể",
+        "funding_source": "Quỹ Đồng hành cùng trường Đại học Nông Lâm TP.HCM",
+        "target_beneficiary": "Sinh viên"
+      },
+      "target": {
+        "name": "Quy định nhận một lần trong một năm học",
+        "rule_description": "Sinh viên chỉ được nhận một lần trong một năm học",
+        "applies_to_scholarship": "Học bổng Đồng hành",
+        "scope": "Tần suất nhận học bổng"
+      },
+      "type_source": "dong_hanh_scholarship_program",
+      "type_target": "reception_frequency_rule",
+      "relation": "có_quy_định_áp_dụng_là"
     },
     {
-      "source": "khóa học đào tạo ngắn hạn",
-      "target": "tin học",
-      "relation": "NHƯ",
-      "type_source": "concept",
-      "type_target": "concept"
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "communication_role": "Thông báo thông tin học bổng",
+        "basis_for_communication": "Căn cứ vào các chương trình học bổng cụ thể",
+        "target_audience": "Sinh viên"
+      },
+      "target": {
+        "name": "Điều kiện xét duyệt học bổng",
+        "information_category": "Thông tin về học bổng",
+        "purpose": "Hướng dẫn sinh viên về tiêu chí nhận học bổng",
+        "importance": "Cần thiết cho việc nộp hồ sơ"
+      },
+      "type_source": "student_affairs_office",
+      "type_target": "scholarship_condition_info",
+      "relation": "thông_báo_về"
     },
     {
-      "source": "khóa học đào tạo ngắn hạn",
-      "target": "ngoại ngữ",
-      "relation": "NHƯ",
-      "type_source": "concept",
-      "type_target": "concept"
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "communication_role": "Thông báo thông tin học bổng",
+        "basis_for_communication": "Căn cứ vào các chương trình học bổng cụ thể",
+        "target_audience": "Sinh viên"
+      },
+      "target": {
+        "name": "Đối tượng xét duyệt học bổng",
+        "information_category": "Thông tin về học bổng",
+        "purpose": "Xác định nhóm sinh viên đủ điều kiện",
+        "importance": "Giúp sinh viên tự đánh giá khả năng"
+      },
+      "type_source": "student_affairs_office",
+      "type_target": "scholarship_target_audience_info",
+      "relation": "thông_báo_về"
     },
     {
-      "source": "khóa học đào tạo ngắn hạn",
-      "target": "kỹ năng",
-      "relation": "NHƯ",
-      "type_source": "concept",
-      "type_target": "concept"
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "communication_role": "Thông báo thông tin học bổng",
+        "basis_for_communication": "Căn cứ vào các chương trình học bổng cụ thể",
+        "target_audience": "Sinh viên"
+      },
+      "target": {
+        "name": "Quy trình làm hồ sơ học bổng",
+        "information_category": "Thông tin về học bổng",
+        "purpose": "Hướng dẫn các bước nộp hồ sơ",
+        "content_detail": "Các bước thực hiện để xin học bổng"
+      },
+      "type_source": "student_affairs_office",
+      "type_target": "scholarship_application_process_info",
+      "relation": "thông_báo_về"
     },
     {
-      "source": "sinh viên",
-      "target": "học bổng Đồng hành",
-      "relation": "NHẬN",
-      "type_source": "person",
-      "type_target": "concept"
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "communication_role": "Thông báo thông tin học bổng",
+        "basis_for_communication": "Căn cứ vào các chương trình học bổng cụ thể",
+        "target_audience": "Sinh viên"
+      },
+      "target": {
+        "name": "Thủ tục làm hồ sơ học bổng",
+        "information_category": "Thông tin về học bổng",
+        "purpose": "Quy định về giấy tờ, cách thức nộp hồ sơ",
+        "content_detail": "Các yêu cầu và giấy tờ cần thiết"
+      },
+      "type_source": "student_affairs_office",
+      "type_target": "scholarship_application_formalities_info",
+      "relation": "thông_báo_về"
     },
     {
-      "source": "học bổng Đồng hành",
-      "target": "năm học",
-      "relation": "MỘT_LẦN",
-      "type_source": "concept",
-      "type_target": "time"
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "action_description": "Thông báo thông tin học bổng cho sinh viên",
+        "information_disseminated": "Điều kiện, đối tượng, quy trình, thủ tục học bổng",
+        "communication_goal": "Đảm bảo sinh viên nắm rõ thông tin"
+      },
+      "target": {
+        "name": "Email sinh viên",
+        "channel_medium": "Kênh thông tin điện tử cá nhân",
+        "usage_context": "Phổ biến thông tin học bổng",
+        "reach": "Trực tiếp đến từng sinh viên"
+      },
+      "type_source": "student_affairs_office",
+      "type_target": "student_email_communication_channel",
+      "relation": "sử_dụng_kênh_thông_báo_là"
     },
     {
-      "source": "chương trình học bổng",
-      "target": "phòng Công tác sinh viên",
-      "relation": "CỦA",
-      "type_source": "concept",
-      "type_target": "organization"
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "action_description": "Thông báo thông tin học bổng cho sinh viên",
+        "information_disseminated": "Điều kiện, đối tượng, quy trình, thủ tục học bổng",
+        "communication_goal": "Đảm bảo sinh viên nắm rõ thông tin"
+      },
+      "target": {
+        "name": "Website các Khoa",
+        "channel_medium": "Kênh thông tin trực tuyến của Khoa",
+        "usage_context": "Phổ biến thông tin học bổng",
+        "accessibility": "Công khai cho sinh viên Khoa"
+      },
+      "type_source": "student_affairs_office",
+      "type_target": "faculty_website_communication_channel",
+      "relation": "sử_dụng_kênh_thông_báo_là"
     },
     {
-      "source": "phòng Công tác sinh viên",
-      "target": "điều kiện",
-      "relation": "THÔNG_BÁO",
-      "type_source": "organization",
-      "type_target": "concept"
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "action_description": "Thông báo thông tin học bổng cho sinh viên",
+        "information_disseminated": "Điều kiện, đối tượng, quy trình, thủ tục học bổng",
+        "communication_goal": "Đảm bảo sinh viên nắm rõ thông tin"
+      },
+      "target": {
+        "name": "Website phòng Công tác sinh viên",
+        "channel_medium": "Kênh thông tin trực tuyến chính thức của phòng",
+        "url_address": "https://nls.hcmuaf.edu.vn/",
+        "usage_context": "Phổ biến thông tin học bổng",
+        "accessibility": "Công khai cho toàn thể sinh viên"
+      },
+      "type_source": "student_affairs_office",
+      "type_target": "student_affairs_website_communication_channel",
+      "relation": "sử_dụng_kênh_thông_báo_là"
     },
     {
-      "source": "phòng Công tác sinh viên",
-      "target": "đối tượng",
-      "relation": "THÔNG_BÁO",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "phòng Công tác sinh viên",
-      "target": "quy trình",
-      "relation": "THÔNG_BÁO",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "phòng Công tác sinh viên",
-      "target": "thủ tục",
-      "relation": "THÔNG_BÁO",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "phòng Công tác sinh viên",
-      "target": "hồ sơ học bổng",
-      "relation": "THÔNG_BÁO",
-      "type_source": "organization",
-      "type_target": "document"
-    },
-    {
-      "source": "phòng Công tác sinh viên",
-      "target": "sinh viên",
-      "relation": "CHO",
-      "type_source": "organization",
-      "type_target": "person"
-    },
-    {
-      "source": "phòng Công tác sinh viên",
-      "target": "email sinh viên",
-      "relation": "QUA",
-      "type_source": "organization",
-      "type_target": "concept"
-    },
-    {
-      "source": "phòng Công tác sinh viên",
-      "target": "website",
-      "relation": "QUA",
-      "type_source": "organization",
-      "type_target": "website"
-    },
-    {
-      "source": "Khoa",
-      "target": "website",
-      "relation": "CỦA",
-      "type_source": "organization",
-      "type_target": "website"
-    },
-    {
-      "source": "phòng Công tác sinh viên",
-      "target": "website phòng Công tác sinh viên",
-      "relation": "LÀ",
-      "type_source": "organization",
-      "type_target": "website"
-    },
-    {
-      "source": "website phòng Công tác sinh viên",
-      "target": "https://nls.hcmuaf.edu.vn/",
-      "relation": "LÀ",
-      "type_source": "website",
-      "type_target": "website"
+      "source": {
+        "name": "Quỹ “Đồng hành cùng trường Đại học Nông Lâm TP.HCM”",
+        "type": "Quỹ học bổng",
+        "main_purpose": "Hỗ trợ sinh viên của trường",
+        "operational_context": "Trong khuôn khổ Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "institution_type": "Cơ sở giáo dục đại học",
+        "abbreviation_used": "TP.HCM (trong tên quỹ)",
+        "relationship_to_fund": "Đơn vị thụ hưởng và có thể là quản lý"
+      },
+      "type_source": "scholarship_fund",
+      "type_target": "university",
+      "relation": "đồng_hành_cùng"
     }
   ]
 }

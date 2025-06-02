@@ -1,185 +1,308 @@
 {
-  "entities": [
-    {
-      "name": "Tổ tham vấn tâm lý học đường",
-      "type": "organization"
-    },
-    {
-      "name": "Trường Đại học Nông Lâm TP.HCM",
-      "type": "organization"
-    },
-    {
-      "name": "tham vấn trực tiếp",
-      "type": "method"
-    },
-    {
-      "name": "tham vấn online",
-      "type": "method"
-    },
-    {
-      "name": "Radio Nông Lâm",
-      "type": "media"
-    },
-    {
-      "name": "chuyên gia tư vấn",
-      "type": "person"
-    },
-    {
-      "name": "cán bộ",
-      "type": "person"
-    },
-    {
-      "name": "giảng viên",
-      "type": "person"
-    },
-    {
-      "name": "trường",
-      "type": "organization"
-    },
-    {
-      "name": "sinh viên",
-      "type": "person"
-    },
-    {
-      "name": "Tổ Tư vấn Tâm lý học đường",
-      "type": "organization"
-    },
-    {
-      "name": "G.05, nhà Thiên Lý",
-      "type": "location"
-    },
-    {
-      "name": "tuvantamly@hcmuaf.edu.vn",
-      "type": "email"
-    },
-    {
-      "name": "https://nls.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "0283 897 4560",
-      "type": "phone_number"
-    }
-  ],
   "relationships": [
     {
-      "source": "Tổ tham vấn tâm lý học đường",
-      "target": "Trường Đại học Nông Lâm TP.HCM",
-      "relation": "CỦA",
-      "type_source": "organization",
-      "type_target": "organization"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "alias": "Tổ Tư vấn Tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường",
+        "motto_text": "Tôn trọng, lắng nghe, thấu hiểu"
+      },
+      "target": {
+        "name": "Đại học Nông Lâm TP.HCM",
+        "abbreviation": "HCMUAF",
+        "city": "Thành phố Hồ Chí Minh",
+        "country": "Việt Nam",
+        "type_description": "Cơ sở giáo dục đại học"
+      },
+      "type_source": "organization_unit",
+      "type_target": "educational_institution",
+      "relation": "trực_thuộc"
     },
     {
-      "source": "Tổ tham vấn tâm lý học đường",
-      "target": "tham vấn trực tiếp",
-      "relation": "HOẠT_ĐỘNG",
-      "type_source": "organization",
-      "type_target": "method"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "alias": "Tổ Tư vấn Tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường"
+      },
+      "target": {
+        "name": "Tôn trọng, lắng nghe, thấu hiểu",
+        "category": "Phương châm hoạt động",
+        "description": "Nguyên tắc cốt lõi trong hoạt động tư vấn"
+      },
+      "type_source": "organization_unit",
+      "type_target": "motto",
+      "relation": "hoạt_động_với_phương_châm"
     },
     {
-      "source": "Tổ tham vấn tâm lý học đường",
-      "target": "tham vấn online",
-      "relation": "HOẠT_ĐỘNG",
-      "type_source": "organization",
-      "type_target": "method"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Trực tiếp",
+        "method_category": "Hình thức tham vấn",
+        "mode_of_delivery": "Gặp mặt trực tiếp",
+        "setting": "Tại văn phòng hoặc địa điểm được chỉ định"
+      },
+      "type_source": "organization_unit",
+      "type_target": "consultation_method",
+      "relation": "hoạt_động_qua_hình_thức"
     },
     {
-      "source": "Tổ tham vấn tâm lý học đường",
-      "target": "Radio Nông Lâm",
-      "relation": "HOẠT_ĐỘNG",
-      "type_source": "organization",
-      "type_target": "media"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Online",
+        "method_category": "Hình thức tham vấn",
+        "mode_of_delivery": "Qua các nền tảng trực tuyến",
+        "tools_implied": "Email, chat, video call"
+      },
+      "type_source": "organization_unit",
+      "type_target": "consultation_method",
+      "relation": "hoạt_động_qua_hình_thức"
     },
     {
-      "source": "Tổ tham vấn tâm lý học đường",
-      "target": "chuyên gia tư vấn",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "person"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Radio Nông Lâm",
+        "channel_category": "Kênh tin tức và tham vấn",
+        "medium": "Radio",
+        "program_focus": "Cung cấp thông tin và nội dung liên quan đến tâm lý"
+      },
+      "type_source": "organization_unit",
+      "type_target": "media_channel",
+      "relation": "hoạt_động_qua_kênh"
     },
     {
-      "source": "Tổ tham vấn tâm lý học đường",
-      "target": "cán bộ",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "person"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Chuyên gia tư vấn chuyên nghiệp",
+        "role": "Nhà tư vấn",
+        "expertise_level": "Chuyên nghiệp",
+        "contribution_type": "Tham gia trực tiếp vào quá trình tư vấn"
+      },
+      "type_source": "organization_unit",
+      "type_target": "person_role",
+      "relation": "có_nhân_sự_tham_gia_là"
     },
     {
-      "source": "Tổ tham vấn tâm lý học đường",
-      "target": "giảng viên",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "person"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Cán bộ, giảng viên trong trường",
+        "role": "Nhà tư vấn",
+        "affiliation": "Đại học Nông Lâm TP.HCM",
+        "contribution_type": "Tham gia trực tiếp vào quá trình tư vấn"
+      },
+      "type_source": "organization_unit",
+      "type_target": "person_role",
+      "relation": "có_nhân_sự_tham_gia_là"
     },
     {
-      "source": "giảng viên",
-      "target": "trường",
-      "relation": "TRONG",
-      "type_source": "person",
-      "type_target": "organization"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role_context": "Đối tượng người dùng dịch vụ",
+        "educational_status": "Đang theo học tại trường",
+        "need_area": "Hỗ trợ tâm lý, giải đáp thắc mắc"
+      },
+      "type_source": "organization_unit",
+      "type_target": "person_role",
+      "relation": "cung_cấp_dịch_vụ_cho"
     },
     {
-      "source": "cán bộ",
-      "target": "trường",
-      "relation": "TRONG",
-      "type_source": "person",
-      "type_target": "organization"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "alias": "Tổ Tư vấn Tâm lý học đường",
+        "service_type": "Tham vấn tâm lý học đường"
+      },
+      "target": {
+        "name": "G.05, nhà Thiên Lý",
+        "location_description": "Địa điểm đăng ký và tư vấn trực tiếp",
+        "building_name": "Nhà Thiên Lý",
+        "room_identifier": "G.05",
+        "university_campus": "Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "organization_unit",
+      "type_target": "location",
+      "relation": "có_địa_điểm_tiếp_nhận_đăng_ký"
     },
     {
-      "source": "chuyên gia tư vấn",
-      "target": "sinh viên",
-      "relation": "TƯ_VẤN",
-      "type_source": "person",
-      "type_target": "person"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "tuvantamly@hcmuaf.edu.vn",
+        "contact_type": "Email",
+        "purpose_of_contact": "Tiếp nhận nội dung cần tư vấn",
+        "domain_affiliation": "hcmuaf.edu.vn (Đại học Nông Lâm TP.HCM)"
+      },
+      "type_source": "organization_unit",
+      "type_target": "email_address",
+      "relation": "có_thông_tin_liên_hệ_là"
     },
     {
-      "source": "giảng viên",
-      "target": "sinh viên",
-      "relation": "TƯ_VẤN",
-      "type_source": "person",
-      "type_target": "person"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "https://nls.hcmuaf.edu.vn",
+        "contact_type": "Website",
+        "purpose_of_contact": "Đăng ký và tìm hiểu thông tin tư vấn",
+        "domain_affiliation": "hcmuaf.edu.vn (Đại học Nông Lâm TP.HCM)"
+      },
+      "type_source": "organization_unit",
+      "type_target": "website_url",
+      "relation": "có_thông_tin_liên_hệ_là"
     },
     {
-      "source": "cán bộ",
-      "target": "sinh viên",
-      "relation": "TƯ_VẤN",
-      "type_source": "person",
-      "type_target": "person"
+      "source": {
+        "name": "Tổ tham vấn tâm lý học đường trường Đại học Nông Lâm TP.HCM",
+        "service_type": "Tham vấn tâm lý học đường",
+        "university_affiliation": "Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "0283 897 4560",
+        "contact_type": "Số điện thoại",
+        "purpose_of_contact": "Liên hệ tư vấn trực tiếp qua điện thoại"
+      },
+      "type_source": "organization_unit",
+      "type_target": "phone_number",
+      "relation": "có_thông_tin_liên_hệ_là"
     },
     {
-      "source": "sinh viên",
-      "target": "Tổ Tư vấn Tâm lý học đường",
-      "relation": "ĐĂNG_KÝ",
-      "type_source": "person",
-      "type_target": "organization"
+      "source": {
+        "name": "Sinh viên",
+        "role_context": "Đối tượng người dùng dịch vụ",
+        "educational_status": "Đang theo học tại trường"
+      },
+      "target": {
+        "name": "Tâm sự",
+        "issue_type": "Cảm xúc",
+        "description": "Nhu cầu trải lòng, chia sẻ cảm xúc cá nhân",
+        "desired_outcome": "Được lắng nghe, thấu hiểu"
+      },
+      "type_source": "person_role",
+      "type_target": "personal_issue",
+      "relation": "có_nhu_cầu_tư_vấn_về"
     },
     {
-      "source": "Tổ Tư vấn Tâm lý học đường",
-      "target": "G.05, nhà Thiên Lý",
-      "relation": "TẠI",
-      "type_source": "organization",
-      "type_target": "location"
+      "source": {
+        "name": "Sinh viên",
+        "role_context": "Đối tượng người dùng dịch vụ",
+        "educational_status": "Đang theo học tại trường"
+      },
+      "target": {
+        "name": "Thắc mắc",
+        "issue_type": "Thông tin",
+        "description": "Câu hỏi cần được giải đáp, làm rõ",
+        "desired_outcome": "Nhận được câu trả lời, thông tin chính xác"
+      },
+      "type_source": "person_role",
+      "type_target": "personal_issue",
+      "relation": "có_nhu_cầu_tư_vấn_về"
     },
     {
-      "source": "sinh viên",
-      "target": "tuvantamly@hcmuaf.edu.vn",
-      "relation": "GỬI",
-      "type_source": "person",
-      "type_target": "email"
+      "source": {
+        "name": "Sinh viên",
+        "role_context": "Đối tượng người dùng dịch vụ",
+        "educational_status": "Đang theo học tại trường"
+      },
+      "target": {
+        "name": "Chuyên gia tư vấn chuyên nghiệp",
+        "role_sought": "Người tư vấn",
+        "expertise_desired": "Chuyên môn sâu về tâm lý",
+        "reason_for_meeting": "Nhận được sự hỗ trợ chuyên sâu"
+      },
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "có_nhu_cầu_gặp"
     },
     {
-      "source": "sinh viên",
-      "target": "https://nls.hcmuaf.edu.vn",
-      "relation": "TRUY_CẬP",
-      "type_source": "person",
-      "type_target": "website"
+      "source": {
+        "name": "Sinh viên",
+        "role_context": "Đối tượng người dùng dịch vụ",
+        "educational_status": "Đang theo học tại trường"
+      },
+      "target": {
+        "name": "Cán bộ, giảng viên trong trường",
+        "role_sought": "Người tư vấn",
+        "affiliation_desired": "Thuộc các bộ phận trong trường Đại học Nông Lâm TP.HCM",
+        "reason_for_meeting": "Nhận được sự hỗ trợ từ người quen thuộc môi trường học đường"
+      },
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "có_nhu_cầu_gặp"
     },
     {
-      "source": "sinh viên",
-      "target": "0283 897 4560",
-      "relation": "LIÊN_HỆ",
-      "type_source": "person",
-      "type_target": "phone_number"
+      "source": {
+        "name": "Sinh viên",
+        "action_description": "Đăng ký tư vấn trực tiếp",
+        "service_user_for": "Tổ tham vấn tâm lý học đường NLU"
+      },
+      "target": {
+        "name": "G.05, nhà Thiên Lý",
+        "location_description": "Địa điểm đăng ký và tư vấn trực tiếp",
+        "purpose_for_student": "Nơi thực hiện đăng ký dịch vụ tư vấn"
+      },
+      "type_source": "person_role",
+      "type_target": "location",
+      "relation": "có_thể_đăng_ký_tại"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "action_description": "Gửi nội dung cần tư vấn",
+        "service_user_for": "Tổ tham vấn tâm lý học đường NLU"
+      },
+      "target": {
+        "name": "tuvantamly@hcmuaf.edu.vn",
+        "contact_type": "Email",
+        "purpose_for_student": "Kênh gửi yêu cầu và nội dung tư vấn"
+      },
+      "type_source": "person_role",
+      "type_target": "email_address",
+      "relation": "có_thể_gửi_yêu_cầu_đến_email"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "action_description": "Truy cập để đăng ký/tìm thông tin tư vấn",
+        "service_user_for": "Tổ tham vấn tâm lý học đường NLU"
+      },
+      "target": {
+        "name": "https://nls.hcmuaf.edu.vn",
+        "contact_type": "Website",
+        "purpose_for_student": "Kênh thông tin và đăng ký dịch vụ tư vấn"
+      },
+      "type_source": "person_role",
+      "type_target": "website_url",
+      "relation": "có_thể_truy_cập_để_tư_vấn"
     }
   ]
 }

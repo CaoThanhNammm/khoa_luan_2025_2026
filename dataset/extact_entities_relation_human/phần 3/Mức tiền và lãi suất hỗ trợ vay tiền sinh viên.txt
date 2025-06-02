@@ -1,80 +1,85 @@
 {
-  "entities": [
-    {
-      "name": "Mức tiền hỗ trợ vay vốn sinh viên",
-      "type": "loan_amount"
-    },
-    {
-      "name": "4.000.000 đ/tháng/sinh viên",
-      "type": "currency_amount"
-    },
-    {
-      "name": "Lãi suất",
-      "type": "interest_rate"
-    },
-    {
-      "name": "sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "0,65%/tháng",
-      "type": "interest_rate_percentage"
-    },
-    {
-      "name": "lãi suất nợ quá hạn",
-      "type": "overdue_interest_rate"
-    },
-    {
-      "name": "130%",
-      "type": "percentage"
-    },
-    {
-      "name": "lãi suất khi cho vay",
-      "type": "loan_interest_rate"
-    }
-  ],
   "relationships": [
     {
-      "source": "Mức tiền hỗ trợ vay vốn sinh viên",
-      "target": "4.000.000 đ/tháng/sinh viên",
-      "relation": "là",
-      "type_source": "loan_amount",
-      "type_target": "currency_amount"
+      "source": {
+        "name": "Mức tiền hỗ trợ vay vốn sinh viên tối đa",
+        "term_characteristic": "Hỗ trợ tối đa",
+        "target_audience": "Sinh viên",
+        "activity_context": "Vay vốn"
+      },
+      "target": {
+        "name": "4.000.000 đ/tháng/sinh viên",
+        "numeric_amount": "4.000.000",
+        "currency_unit": "đ",
+        "time_period": "tháng",
+        "beneficiary_unit": "sinh viên"
+      },
+      "type_source": "loan_term",
+      "type_target": "monetary_value_specification",
+      "relation": "có_giá_trị_là"
     },
     {
-      "source": "Lãi suất",
-      "target": "sinh viên",
-      "relation": "cho_vay_ưu_đãi_đối_với",
-      "type_source": "interest_rate",
-      "type_target": "student"
+      "source": {
+        "name": "Lãi suất cho vay ưu đãi đối với sinh viên",
+        "rate_category": "Ưu đãi",
+        "target_audience": "Sinh viên",
+        "activity_context": "Cho vay"
+      },
+      "target": {
+        "name": "0,65%/tháng",
+        "rate_percentage": "0,65%",
+        "time_period": "tháng"
+      },
+      "type_source": "interest_rate_term",
+      "type_target": "rate_value_specification",
+      "relation": "có_giá_trị_là"
     },
     {
-      "source": "Lãi suất",
-      "target": "0,65%/tháng",
-      "relation": "là",
-      "type_source": "interest_rate",
-      "type_target": "interest_rate_percentage"
+      "source": {
+        "name": "Lãi suất nợ quá hạn",
+        "rate_category": "Nợ quá hạn",
+        "applicability_condition": "Nợ không trả đúng hạn"
+      },
+      "target": {
+        "name": "lãi suất khi cho vay",
+        "rate_role": "Lãi suất gốc tham chiếu",
+        "usage_context": "Tính lãi suất nợ quá hạn"
+      },
+      "type_source": "interest_rate_term",
+      "type_target": "base_rate_reference",
+      "relation": "được_tính_dựa_trên"
     },
     {
-      "source": "lãi suất nợ quá hạn",
-      "target": "130%",
-      "relation": "tính_bằng",
-      "type_source": "overdue_interest_rate",
-      "type_target": "percentage"
+      "source": {
+        "name": "Lãi suất nợ quá hạn",
+        "rate_category": "Nợ quá hạn",
+        "applicability_condition": "Nợ không trả đúng hạn"
+      },
+      "target": {
+        "name": "130%",
+        "numeric_value_as_string": "130",
+        "unit_symbol": "%",
+        "factor_description": "Hệ số áp dụng cho lãi suất cơ sở khi tính nợ quá hạn"
+      },
+      "type_source": "interest_rate_term",
+      "type_target": "percentage_factor",
+      "relation": "áp_dụng_hệ_số_là"
     },
     {
-      "source": "lãi suất nợ quá hạn",
-      "target": "lãi suất khi cho vay",
-      "relation": "tính_bằng",
-      "type_source": "overdue_interest_rate",
-      "type_target": "loan_interest_rate"
-    },
-      {
-      "source": "130%",
-      "target": "lãi suất khi cho vay",
-      "relation": "của",
-      "type_source": "percentage",
-      "type_target": "loan_interest_rate"
+      "source": {
+        "name": "lãi suất khi cho vay",
+        "rate_role": "Lãi suất gốc tham chiếu",
+        "usage_context": "Tính lãi suất nợ quá hạn"
+      },
+      "target": {
+        "name": "Lãi suất cho vay ưu đãi đối với sinh viên",
+        "rate_category": "Ưu đãi",
+        "target_audience": "Sinh viên",
+        "activity_context": "Cho vay"
+      },
+      "type_source": "base_rate_reference",
+      "type_target": "interest_rate_term",
+      "relation": "tham_chiếu_đến"
     }
   ]
 }

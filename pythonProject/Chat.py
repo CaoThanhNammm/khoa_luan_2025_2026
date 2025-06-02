@@ -1,4 +1,3 @@
-import pandas as pd
 from sentence_transformers import CrossEncoder
 from LLM import prompt
 from ModelLLM.EmbeddingFactory import EmbeddingFactory
@@ -7,10 +6,13 @@ from dotenv import load_dotenv
 from concurrent.futures import ThreadPoolExecutor
 from knowledge_graph.create_entities_relationship_kb import pre_processing
 load_dotenv()
-from langchain_core.prompts import PromptTemplate
 import os
 from knowledge_graph.KnowledgeGraphDatabase import Neo4j
 import numpy as np
+from typing import TypedDict, List
+from langchain_core.messages import HumanMessage
+from langchain_core.prompts import PromptTemplate
+
 
 class Chat:
     def __init__(self, t, gemini_agent, gemini_generator, gemini_valid, gemini_commentor, pre_processing):
@@ -39,6 +41,8 @@ class Chat:
         password = os.getenv("PASSWORD")
         self.neo = Neo4j(uri, user, password)
         self.pre_processing = pre_processing
+        self.reranker_model = CrossEncoder('DiTy/cross-encoder-russian-msmarco', max_length=512)
+
 
     def answer(self, question):
         # sử dụng ngữ cảnh của các câu trả lời trước đó để trả lời
@@ -58,7 +62,8 @@ class Chat:
 
             entities, relationship, action = self.agent(question, feedback)
             print(f"Action: {action}")
-
+            print(f'entities {entities}')
+            print(f'relationship {relationship}')
             if len(relationship) != 0:
                 new_question = self.join_relations(relationship)
             else:
@@ -84,6 +89,15 @@ class Chat:
 
         return "không có thông tin"
 
+
+    def answer_grag(self, question):
+        references = self.retrieval_graph(question)
+
+        potential_answer = self.generator(question, references)
+        print(f"Answer: {potential_answer}")
+        print("-" * 2000)
+
+        return potential_answer
 
     def answer_by_context(self, question):
         prompt_template = PromptTemplate(
@@ -165,10 +179,11 @@ class Chat:
         relationship = entities_relationship['relations']
         entities = entities_relationship['entities']
 
-        return entities, relationship, action
+        return entities, relationship, action.lower()
 
     def retrieval_bank(self, question, action):
         return self.retrieval_graph(question) if 'graph' in action else self.retrieval_text(question)
+
 
     def retrieval_graph(self, question):
         # llm dự đoán câu hỏi thuộc phần nào để thu hẹp nội dung cần truy xuất
@@ -182,14 +197,10 @@ class Chat:
         query = query.replace("```", "").replace("cypher", "")
         print('query:', query)
         path = self.neo.get_path(query)
-        references_node = self.neo.get_triplet(path)
 
-        reranker_model = CrossEncoder('DiTy/cross-encoder-russian-msmarco', max_length=512)
-        documents = []
-        for i in references_node:
-            documents.append(f'{i['source_node']} {i['relation_type']} {i['target_node']}')
+        documents = self.neo.create_documents(path)
 
-        scores = reranker_model.rank(question, documents)
+        scores = self.reranker_model.rank(question, documents)
         res = []
         for item in scores:
             corpus_id = item['corpus_id']
@@ -199,15 +210,13 @@ class Chat:
 
         return res
 
+
     def retrieval_text(self, question):
         embeddings = self.embed_question(question)
-        results = self.qdrant.query_from_db(*embeddings)
-        json_query_text = []
-        for result in results:
-            json_query_text.append(result.payload["text"])
-
+        documents = self.qdrant.query_from_db(*embeddings)
+        print(f'documents {documents}')
         try:
-            re_ranking_query_text = self.qdrant.re_ranking(question, json_query_text)
+            re_ranking_query_text = self.qdrant.re_ranking(question, documents)
 
             reference = ""
             for i in range(len(re_ranking_query_text)):
@@ -218,15 +227,15 @@ class Chat:
 
             return reference
         except:
-            return json_query_text
+            return documents
+
 
     def embed_question(self, question):
         return (
-            self.model_512.embed(self.model_embed_512, None, question),
-            self.model_768.embed(self.model_embed_768, self.tokenizer_768, question),
-            self.model_1024.embed(self.model_embed_1024, self.tokenizer_1024, question),
-            self.model_late_interaction.embed(self.model_embed_late_interaction, self.tokenizer_late_interaction,
-                                              question)
+            self.model_512.embed(question),
+            self.model_768.embed(question),
+            self.model_1024.embed(question),
+            self.model_late_interaction.embed(question)
         )
 
     def first_decision(self, question):
@@ -275,6 +284,7 @@ class Chat:
 
         return self.gemini_commentor.generator(formatted_prompt)
 
+
     @staticmethod
     def _get_env():
         return (
@@ -301,11 +311,6 @@ class Chat:
         self.model_1024 = factory.create_embed_model(self.model_embedding_1024_name)
         self.model_late_interaction = factory.create_embed_model(self.model_late_interaction_name)
 
-        # Load embedding models
-        self.model_embed_512 = self.model_512.load_model()
-        self.model_embed_768, self.tokenizer_768 = self.model_768.load_model()
-        self.model_embed_1024, self.tokenizer_1024 = self.model_1024.load_model()
-        self.model_embed_late_interaction, self.tokenizer_late_interaction = self.model_late_interaction.load_model()
 
     def join_relations(self, relations):
         if not relations:
@@ -321,18 +326,6 @@ class Chat:
 
         # Nối các thành phần thành chuỗi, loại bỏ các phần tử rỗng
         return " ".join(item for item in result if item)
-
-    def cosine_similarity(self, vector1, vector2):
-        # Tính tích vô hướng
-        dot_product = np.dot(vector1, vector2)
-        # Tính độ dài (norm) của từng vector
-        norm1 = np.linalg.norm(vector1)
-        norm2 = np.linalg.norm(vector2)
-        # Tính cosine similarity
-        if norm1 == 0 or norm2 == 0:
-            return 0.0  # Tránh chia cho 0
-        return dot_product / (norm1 * norm2)
-
 
 
 

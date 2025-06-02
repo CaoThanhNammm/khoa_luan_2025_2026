@@ -1,0 +1,1103 @@
+{
+  "relationships": [
+    {
+      "source": {
+        "name": "CLB CÁN BỘ ĐOÀN NGÔI SAO XANH",
+        "slogan": "Dám nghĩ - biết làm - dám hành động",
+        "activity_fields": "Đào tạo lực lượng Cán bộ Đoàn–Hội",
+        "email": "clbdoanngoisaoxanh@hcmuaf.edu.vn",
+        "fanpage_url": "https://www.facebook.com/ClbCanBoDoanNgoiSaoXanh",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Đoàn Thanh niên",
+        "type_description": "Đoàn Thanh niên trường",
+        "scope_affiliation": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Hồ Thị Thanh Hồng",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB CÁN BỘ ĐOÀN NGÔI SAO XANH"
+      },
+      "target": {
+        "name": "CLB CÁN BỘ ĐOÀN NGÔI SAO XANH",
+        "slogan": "Dám nghĩ - biết làm - dám hành động",
+        "activity_fields": "Đào tạo lực lượng Cán bộ Đoàn–Hội",
+        "email": "clbdoanngoisaoxanh@hcmuaf.edu.vn",
+        "fanpage_url": "https://www.facebook.com/ClbCanBoDoanNgoiSaoXanh",
+        "level": "cấp Trường"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB CÁN BỘ ĐOÀN NGÔI SAO XANH",
+        "slogan": "Dám nghĩ - biết làm - dám hành động",
+        "activity_fields": "Đào tạo lực lượng Cán bộ Đoàn–Hội",
+        "email": "clbdoanngoisaoxanh@hcmuaf.edu.vn",
+        "fanpage_url": "https://www.facebook.com/ClbCanBoDoanNgoiSaoXanh",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "club",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "BEC ENGLISH CLUB",
+        "slogan": "One benefit/One Energy/One Chance BEC",
+        "activity_fields": "Học thuật",
+        "email": "bec@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/BioEnglishClub",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Đoàn–Hội khoa Khoa học sinh học",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Khoa học sinh học"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Nguyễn Lê Thanh Vy",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "BEC ENGLISH CLUB"
+      },
+      "target": {
+        "name": "BEC ENGLISH CLUB",
+        "slogan": "One benefit/One Energy/One Chance BEC",
+        "activity_fields": "Học thuật",
+        "email": "bec@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/BioEnglishClub",
+        "level": "cấp Khoa"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "BEC ENGLISH CLUB",
+        "slogan": "One benefit/One Energy/One Chance BEC",
+        "activity_fields": "Học thuật",
+        "email": "bec@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/BioEnglishClub",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Khoa Khoa học sinh học",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "club",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Đoàn–Hội khoa Khoa học sinh học",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Khoa học sinh học"
+      },
+      "target": {
+        "name": "Khoa Khoa học sinh học",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "organization",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Khoa Khoa học sinh học",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "faculty",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB BÓNG RỔ ĐẠI HỌC NÔNG LÂM",
+        "slogan": "1 2 3 Nông Lâm (x3)",
+        "activity_fields": "Thể thao",
+        "email": "hothanhtusbb11@gmail.com",
+        "fanpage_url": "https://www.facebook.com/NLUBASKETBALL",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Hội thể thao",
+        "type_description": "Hội thể thao trường",
+        "scope_affiliation": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Hồ Thanh Tú",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB BÓNG RỔ ĐẠI HỌC NÔNG LÂM"
+      },
+      "target": {
+        "name": "CLB BÓNG RỔ ĐẠI HỌC NÔNG LÂM",
+        "slogan": "1 2 3 Nông Lâm (x3)",
+        "activity_fields": "Thể thao",
+        "email": "hothanhtusbb11@gmail.com",
+        "fanpage_url": "https://www.facebook.com/NLUBASKETBALL",
+        "level": "cấp Trường"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB BÓNG RỔ ĐẠI HỌC NÔNG LÂM",
+        "slogan": "1 2 3 Nông Lâm (x3)",
+        "activity_fields": "Thể thao",
+        "email": "hothanhtusbb11@gmail.com",
+        "fanpage_url": "https://www.facebook.com/NLUBASKETBALL",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "club",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB DU LỊCH SINH THÁI",
+        "slogan": "Kết nối đam mê",
+        "activity_fields": "Học thuật, bảo vệ môi trường, hoạt động thiện nguyện xã hội",
+        "email": "dlst@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/dlst.info",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Đoàn–Hội khoa Môi trường – Tài nguyên",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Môi trường – Tài nguyên"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Trần Lê Hiếu",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB DU LỊCH SINH THÁI"
+      },
+      "target": {
+        "name": "CLB DU LỊCH SINH THÁI",
+        "slogan": "Kết nối đam mê",
+        "activity_fields": "Học thuật, bảo vệ môi trường, hoạt động thiện nguyện xã hội",
+        "email": "dlst@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/dlst.info",
+        "level": "cấp Khoa"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB DU LỊCH SINH THÁI",
+        "slogan": "Kết nối đam mê",
+        "activity_fields": "Học thuật, bảo vệ môi trường, hoạt động thiện nguyện xã hội",
+        "email": "dlst@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/dlst.info",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Khoa Môi trường – Tài nguyên",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "club",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Đoàn–Hội khoa Môi trường – Tài nguyên",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Môi trường – Tài nguyên"
+      },
+      "target": {
+        "name": "Khoa Môi trường – Tài nguyên",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "organization",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Khoa Môi trường – Tài nguyên",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "faculty",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB DƯỢC THÚ Y",
+        "slogan": "Học tập – Chia sẻ - Nghiên cứu – Sáng tạo",
+        "activity_fields": "Học thuật, Nghiên cứu khoa học",
+        "email": "duocthuynlu@gmail.com",
+        "fanpage_url": "Câu lạc bộ Dược Thú Y Đại học Nông Lâm TPHCM",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Đoàn–Hội khoa Chăn nuôi Thú y",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Chăn nuôi Thú y"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Nguyễn Nữ Mai Thơ",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB DƯỢC THÚ Y"
+      },
+      "target": {
+        "name": "CLB DƯỢC THÚ Y",
+        "slogan": "Học tập – Chia sẻ - Nghiên cứu – Sáng tạo",
+        "activity_fields": "Học thuật, Nghiên cứu khoa học",
+        "email": "duocthuynlu@gmail.com",
+        "fanpage_url": "Câu lạc bộ Dược Thú Y Đại học Nông Lâm TPHCM",
+        "level": "cấp Khoa"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB DƯỢC THÚ Y",
+        "slogan": "Học tập – Chia sẻ - Nghiên cứu – Sáng tạo",
+        "activity_fields": "Học thuật, Nghiên cứu khoa học",
+        "email": "duocthuynlu@gmail.com",
+        "fanpage_url": "Câu lạc bộ Dược Thú Y Đại học Nông Lâm TPHCM",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Khoa Chăn nuôi Thú y",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "club",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Đoàn–Hội khoa Chăn nuôi Thú y",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Chăn nuôi Thú y"
+      },
+      "target": {
+        "name": "Khoa Chăn nuôi Thú y",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "organization",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Khoa Chăn nuôi Thú y",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "faculty",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB ĐỒNG HÀNH – AC",
+        "slogan": "Đồng hành AC - Đồng hành cùng sinh viên",
+        "activity_fields": "Tư vấn tuyển sinh, hỗ trợ sinh viên",
+        "email": "ac@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/clbdonghanh.ac",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Đoàn Thanh niên",
+        "type_description": "Đoàn Thanh niên trường",
+        "scope_affiliation": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Phạm Chí Biết",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB ĐỒNG HÀNH – AC"
+      },
+      "target": {
+        "name": "CLB ĐỒNG HÀNH – AC",
+        "slogan": "Đồng hành AC - Đồng hành cùng sinh viên",
+        "activity_fields": "Tư vấn tuyển sinh, hỗ trợ sinh viên",
+        "email": "ac@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/clbdonghanh.ac",
+        "level": "cấp Trường"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB ĐỒNG HÀNH – AC",
+        "slogan": "Đồng hành AC - Đồng hành cùng sinh viên",
+        "activity_fields": "Tư vấn tuyển sinh, hỗ trợ sinh viên",
+        "email": "ac@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/clbdonghanh.ac",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "club",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "FIRE ENGLISH CLUB",
+        "slogan": "We are FIRE – FIRE KHÔNG PHAI MỜ",
+        "activity_fields": "Ngoại ngữ",
+        "email": "fireenglishclub@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/FiRE.EnglishClub",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Đoàn–Hội khoa Ngoại ngữ–Sư phạm",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Ngoại ngữ–Sư phạm"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Nguyễn Hoàng Nam Phương",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "FIRE ENGLISH CLUB"
+      },
+      "target": {
+        "name": "FIRE ENGLISH CLUB",
+        "slogan": "We are FIRE – FIRE KHÔNG PHAI MỜ",
+        "activity_fields": "Ngoại ngữ",
+        "email": "fireenglishclub@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/FiRE.EnglishClub",
+        "level": "cấp Khoa"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "FIRE ENGLISH CLUB",
+        "slogan": "We are FIRE – FIRE KHÔNG PHAI MỜ",
+        "activity_fields": "Ngoại ngữ",
+        "email": "fireenglishclub@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/FiRE.EnglishClub",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Khoa Ngoại ngữ–Sư phạm",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "club",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Đoàn–Hội khoa Ngoại ngữ–Sư phạm",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Ngoại ngữ–Sư phạm"
+      },
+      "target": {
+        "name": "Khoa Ngoại ngữ–Sư phạm",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "organization",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Khoa Ngoại ngữ–Sư phạm",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "faculty",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB HỌC THUẬT–KỸ NĂNG QUẢN TRỊ",
+        "acronym": "B.A.S",
+        "slogan": "B.A.S đến với nhau bằng nhiệt huyết, ở lại với nhau bằng tình cảm!",
+        "activity_fields": "Kỹ năng, thể thao, tình nguyện, học thuật, văn nghệ, truyền thông",
+        "email": "caulacbo.b.a.s@gmail.com",
+        "fanpage_url": "https://www.facebook.com/CLB.B.A.S",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Phòng Công tác Sinh viên",
+        "type_description": "Phòng ban trường",
+        "scope_affiliation": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Võ Lê Bách",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB HỌC THUẬT–KỸ NĂNG QUẢN TRỊ"
+      },
+      "target": {
+        "name": "CLB HỌC THUẬT–KỸ NĂNG QUẢN TRỊ",
+        "acronym": "B.A.S",
+        "slogan": "B.A.S đến với nhau bằng nhiệt huyết, ở lại với nhau bằng tình cảm!",
+        "activity_fields": "Kỹ năng, thể thao, tình nguyện, học thuật, văn nghệ, truyền thông",
+        "email": "caulacbo.b.a.s@gmail.com",
+        "fanpage_url": "https://www.facebook.com/CLB.B.A.S",
+        "level": "cấp Trường"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB HỌC THUẬT–KỸ NĂNG QUẢN TRỊ",
+        "acronym": "B.A.S",
+        "slogan": "B.A.S đến với nhau bằng nhiệt huyết, ở lại với nhau bằng tình cảm!",
+        "activity_fields": "Kỹ năng, thể thao, tình nguyện, học thuật, văn nghệ, truyền thông",
+        "email": "caulacbo.b.a.s@gmail.com",
+        "fanpage_url": "https://www.facebook.com/CLB.B.A.S",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "club",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB KARATE-DO",
+        "slogan": "Rèn luyện tinh thần và thể lực để vững bước cho tương lai. Kiai!",
+        "activity_fields": "Thể thao",
+        "email": "Lequangtri@hcmuaf.edu.vn",
+        "fanpage_url": "https://www.facebook.com/groups/308034235884043",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Hội thể thao",
+        "type_description": "Hội thể thao trường",
+        "scope_affiliation": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Lê Quang Trí",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB KARATE-DO"
+      },
+      "target": {
+        "name": "CLB KARATE-DO",
+        "slogan": "Rèn luyện tinh thần và thể lực để vững bước cho tương lai. Kiai!",
+        "activity_fields": "Thể thao",
+        "email": "Lequangtri@hcmuaf.edu.vn",
+        "fanpage_url": "https://www.facebook.com/groups/308034235884043",
+        "level": "cấp Trường"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB KARATE-DO",
+        "slogan": "Rèn luyện tinh thần và thể lực để vững bước cho tương lai. Kiai!",
+        "activity_fields": "Thể thao",
+        "email": "Lequangtri@hcmuaf.edu.vn",
+        "fanpage_url": "https://www.facebook.com/groups/308034235884043",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "club",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB KẾT NỐI THÀNH CÔNG",
+        "slogan": "Đồng hành cùng sinh viên!",
+        "activity_fields": "Trang bị kỹ năng mềm, hoạt động tình nguyện xã hội",
+        "email": "clbketnoithanhcong10@gmail.com",
+        "fanpage_url": "https://www.facebook.com/clbkntc",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trung tâm Hỗ trợ Sinh viên & Quan hệ Doanh nghiệp",
+        "type_description": "Trung tâm trường",
+        "scope_affiliation": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Dương Triệu Duy",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB KẾT NỐI THÀNH CÔNG"
+      },
+      "target": {
+        "name": "CLB KẾT NỐI THÀNH CÔNG",
+        "slogan": "Đồng hành cùng sinh viên!",
+        "activity_fields": "Trang bị kỹ năng mềm, hoạt động tình nguyện xã hội",
+        "email": "clbketnoithanhcong10@gmail.com",
+        "fanpage_url": "https://www.facebook.com/clbkntc",
+        "level": "cấp Trường"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB KẾT NỐI THÀNH CÔNG",
+        "slogan": "Đồng hành cùng sinh viên!",
+        "activity_fields": "Trang bị kỹ năng mềm, hoạt động tình nguyện xã hội",
+        "email": "clbketnoithanhcong10@gmail.com",
+        "fanpage_url": "https://www.facebook.com/clbkntc",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "club",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB KHỞI NGHIỆP",
+        "alternate_name": "NLU STARTUP CLUB",
+        "acronym": "NSC",
+        "slogan": "Ươm mầm ý tưởng – Vững bước thành công",
+        "activity_fields": "Khởi nghiệp, Nghiên cứu khoa học, Học thuật, Tình nguyện xã hội",
+        "email": "clbkhoinghiep@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/NSC.CLBKNNL",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trung tâm Ươm tạo Doanh nghiệp công nghệ",
+        "type_description": "Trung tâm trường",
+        "scope_affiliation": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Trần Phạm Mỹ Duyên",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB KHỞI NGHIỆP"
+      },
+      "target": {
+        "name": "CLB KHỞI NGHIỆP",
+        "alternate_name": "NLU STARTUP CLUB",
+        "acronym": "NSC",
+        "slogan": "Ươm mầm ý tưởng – Vững bước thành công",
+        "activity_fields": "Khởi nghiệp, Nghiên cứu khoa học, Học thuật, Tình nguyện xã hội",
+        "email": "clbkhoinghiep@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/NSC.CLBKNNL",
+        "level": "cấp Trường"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB KHỞI NGHIỆP",
+        "alternate_name": "NLU STARTUP CLUB",
+        "acronym": "NSC",
+        "slogan": "Ươm mầm ý tưởng – Vững bước thành công",
+        "activity_fields": "Khởi nghiệp, Nghiên cứu khoa học, Học thuật, Tình nguyện xã hội",
+        "email": "clbkhoinghiep@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/NSC.CLBKNNL",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "club",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB MỘT SỨC KHỎE TP.HCM",
+        "alternate_name": "HCMC One Health Club",
+        "activity_fields": "Học thuật",
+        "email": "onehealthtphcm@gmail.com",
+        "fanpage_url": "https://www.facebook.com/oh.tphcm",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Đoàn–Hội khoa Chăn nuôi Thú y",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Chăn nuôi Thú y"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Võ Minh Trường",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB MỘT SỨC KHỎE TP.HCM"
+      },
+      "target": {
+        "name": "CLB MỘT SỨC KHỎE TP.HCM",
+        "alternate_name": "HCMC One Health Club",
+        "activity_fields": "Học thuật",
+        "email": "onehealthtphcm@gmail.com",
+        "fanpage_url": "https://www.facebook.com/oh.tphcm",
+        "level": "cấp Khoa"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB MỘT SỨC KHỎE TP.HCM",
+        "alternate_name": "HCMC One Health Club",
+        "activity_fields": "Học thuật",
+        "email": "onehealthtphcm@gmail.com",
+        "fanpage_url": "https://www.facebook.com/oh.tphcm",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Khoa Chăn nuôi Thú y",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "club",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB SÁCH VÀ HÀNH ĐỘNG NÔNG LÂM TP.HCM",
+        "slogan": "Hành động – Kỷ luật – Không bỏ cuộc",
+        "activity_fields": "Học thuật, truyền thông, sách",
+        "email": "sachvahanhdong@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/clbsvhdnlu",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Thư viện",
+        "type_description": "Thư viện trường",
+        "scope_affiliation": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Phạm Thị Huyên",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB SÁCH VÀ HÀNH ĐỘNG NÔNG LÂM TP.HCM"
+      },
+      "target": {
+        "name": "CLB SÁCH VÀ HÀNH ĐỘNG NÔNG LÂM TP.HCM",
+        "slogan": "Hành động – Kỷ luật – Không bỏ cuộc",
+        "activity_fields": "Học thuật, truyền thông, sách",
+        "email": "sachvahanhdong@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/clbsvhdnlu",
+        "level": "cấp Trường"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB SÁCH VÀ HÀNH ĐỘNG NÔNG LÂM TP.HCM",
+        "slogan": "Hành động – Kỷ luật – Không bỏ cuộc",
+        "activity_fields": "Học thuật, truyền thông, sách",
+        "email": "sachvahanhdong@tuoitrenonglam.com",
+        "fanpage_url": "https://www.facebook.com/clbsvhdnlu",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "club",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB TIẾNG ANH KHOA CÔNG NGHỆ HÓA HỌC VÀ THỰC PHẨM",
+        "alternate_name": "Seeds For Future",
+        "acronym": "SFF",
+        "activity_fields": "Học thuật, ngoại ngữ",
+        "email": "englishclubsff@gmail.com",
+        "fanpage_url": "https://www.facebook.com/sffenglishclub",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Đoàn–Hội khoa Công nghệ hóa học và Thực phẩm",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Công nghệ hóa học và Thực phẩm"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Nguyễn Thị Ngọc Hân",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB TIẾNG ANH KHOA CÔNG NGHỆ HÓA HỌC VÀ THỰC PHẨM"
+      },
+      "target": {
+        "name": "CLB TIẾNG ANH KHOA CÔNG NGHỆ HÓA HỌC VÀ THỰC PHẨM",
+        "alternate_name": "Seeds For Future",
+        "acronym": "SFF",
+        "activity_fields": "Học thuật, ngoại ngữ",
+        "email": "englishclubsff@gmail.com",
+        "fanpage_url": "https://www.facebook.com/sffenglishclub",
+        "level": "cấp Khoa"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB TIẾNG ANH KHOA CÔNG NGHỆ HÓA HỌC VÀ THỰC PHẨM",
+        "alternate_name": "Seeds For Future",
+        "acronym": "SFF",
+        "activity_fields": "Học thuật, ngoại ngữ",
+        "email": "englishclubsff@gmail.com",
+        "fanpage_url": "https://www.facebook.com/sffenglishclub",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Khoa Công nghệ hóa học và Thực phẩm",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "club",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Đoàn–Hội khoa Công nghệ hóa học và Thực phẩm",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Công nghệ hóa học và Thực phẩm"
+      },
+      "target": {
+        "name": "Khoa Công nghệ hóa học và Thực phẩm",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "organization",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Khoa Công nghệ hóa học và Thực phẩm",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "faculty",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB TIẾNG ANH KHOA KINH TẾ EFB",
+        "alternate_name": "English For Business Club",
+        "acronym": "EFB",
+        "slogan": "Will be the better not be the best",
+        "activity_fields": "Học thuật, ngoại ngữ",
+        "email": "englishforbusinessnlu@gmail.com",
+        "fanpage_url": "https://www.facebook.com/englishforbusinessnlu",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Đoàn–Hội khoa Kinh tế",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Kinh tế"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Nguyễn Hoàng Tuấn",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB TIẾNG ANH KHOA KINH TẾ EFB"
+      },
+      "target": {
+        "name": "CLB TIẾNG ANH KHOA KINH TẾ EFB",
+        "alternate_name": "English For Business Club",
+        "acronym": "EFB",
+        "slogan": "Will be the better not be the best",
+        "activity_fields": "Học thuật, ngoại ngữ",
+        "email": "englishforbusinessnlu@gmail.com",
+        "fanpage_url": "https://www.facebook.com/englishforbusinessnlu",
+        "level": "cấp Khoa"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB TIẾNG ANH KHOA KINH TẾ EFB",
+        "alternate_name": "English For Business Club",
+        "acronym": "EFB",
+        "slogan": "Will be the better not be the best",
+        "activity_fields": "Học thuật, ngoại ngữ",
+        "email": "englishforbusinessnlu@gmail.com",
+        "fanpage_url": "https://www.facebook.com/englishforbusinessnlu",
+        "level": "cấp Khoa"
+      },
+      "target": {
+        "name": "Khoa Kinh tế",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "club",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Đoàn–Hội khoa Kinh tế",
+        "type_description": "Đoàn–Hội khoa",
+        "scope_affiliation": "Khoa Kinh tế"
+      },
+      "target": {
+        "name": "Khoa Kinh tế",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "type_source": "organization",
+      "type_target": "faculty",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "Khoa Kinh tế",
+        "university_affiliation": "Trường Đại học Nông Lâm TP.HCM",
+        "type_description": "Đơn vị học thuật",
+        "level": "Khoa"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "faculty",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    },
+    {
+      "source": {
+        "name": "CLB THỂ THAO ĐIỆN TỬ PWF",
+        "alternate_name": "CLB PWF GAMING",
+        "slogan": "PWF- Kết nối đam mê, chinh phục thử thách",
+        "activity_fields": "Thể thao điện tử",
+        "email": "pwfgamingnlu@gmail.com",
+        "fanpage_url": "https://www.facebook.com/pwfgamingnlu",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Phòng Công tác Sinh viên",
+        "type_description": "Phòng ban trường",
+        "scope_affiliation": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "club",
+      "type_target": "organization",
+      "relation": "quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Nguyễn Võ Hải Triều",
+        "title": "Chủ nhiệm CLB",
+        "associated_club": "CLB THỂ THAO ĐIỆN TỬ PWF"
+      },
+      "target": {
+        "name": "CLB THỂ THAO ĐIỆN TỬ PWF",
+        "alternate_name": "CLB PWF GAMING",
+        "slogan": "PWF- Kết nối đam mê, chinh phục thử thách",
+        "activity_fields": "Thể thao điện tử",
+        "email": "pwfgamingnlu@gmail.com",
+        "fanpage_url": "https://www.facebook.com/pwfgamingnlu",
+        "level": "cấp Trường"
+      },
+      "type_source": "person",
+      "type_target": "club",
+      "relation": "là_chủ_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "CLB THỂ THAO ĐIỆN TỬ PWF",
+        "alternate_name": "CLB PWF GAMING",
+        "slogan": "PWF- Kết nối đam mê, chinh phục thử thách",
+        "activity_fields": "Thể thao điện tử",
+        "email": "pwfgamingnlu@gmail.com",
+        "fanpage_url": "https://www.facebook.com/pwfgamingnlu",
+        "level": "cấp Trường"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "abbreviation": "NLU",
+        "city": "TP.HCM",
+        "country": "Việt Nam"
+      },
+      "type_source": "club",
+      "type_target": "university",
+      "relation": "trực_thuộc"
+    }
+  ]
+}

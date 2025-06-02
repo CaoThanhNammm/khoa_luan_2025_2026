@@ -1,272 +1,308 @@
 {
-  "entities": [
-    {
-      "name": "Đại học Nông Lâm TP.HCM",
-      "type": "organization"
-    },
-    {
-      "name": "ngành học",
-      "type": "concept"
-    },
-    {
-      "name": "Khoa",
-      "type": "organization"
-    },
-    {
-      "name": "đội ngũ cố vấn học tập",
-      "type": "group"
-    },
-    {
-      "name": "sinh viên",
-      "type": "person"
-    },
-    {
-      "name": "chương trình đào tạo",
-      "type": "concept"
-    },
-    {
-      "name": "kế hoạch học tập",
-      "type": "document"
-    },
-    {
-      "name": "học kỳ",
-      "type": "time"
-    },
-    {
-      "name": "khóa học",
-      "type": "time"
-    },
-    {
-      "name": "năng lực",
-      "type": "concept"
-    },
-    {
-      "name": "hoàn cảnh",
-      "type": "concept"
-    },
-    {
-      "name": "điều kiện học tập",
-      "type": "concept"
-    },
-    {
-      "name": "học phần",
-      "type": "concept"
-    },
-    {
-      "name": "kế hoạch học tập",
-      "type": "document"
-    },
-    {
-      "name": "kết quả học tập",
-      "type": "concept"
-    },
-    {
-      "name": "biện pháp hỗ trợ",
-      "type": "concept"
-    },
-    {
-      "name": "Ban cố vấn học tập",
-      "type": "group"
-    },
-    {
-      "name": "website",
-      "type": "website"
-    },
-    {
-      "name": "Khoa",
-      "type": "organization"
-    },
-    {
-      "name": "Phòng Công tác Sinh viên",
-      "type": "organization"
-    },
-    {
-      "name": "http://nls.hcmuaf.edu.vn/",
-      "type": "website"
-    }
-  ],
   "relationships": [
     {
-      "source": "Đại học Nông Lâm TP.HCM",
-      "target": "ngành học",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "concept"
+      "source": {
+        "name": "Đại học Nông Lâm TP.HCM",
+        "abbreviation": "HCMUAFF",
+        "location": "TP.HCM",
+        "role": "Cơ sở giáo dục đại học",
+        "structure": "Bao gồm các Khoa đào tạo"
+      },
+      "target": {
+        "name": "Khoa đào tạo",
+        "scope": "Mỗi ngành học",
+        "parent_organization": "Đại học Nông Lâm TP.HCM",
+        "function": "Đào tạo chuyên ngành",
+        "characteristic": "Có đội ngũ cố vấn học tập riêng"
+      },
+      "type_source": "university",
+      "type_target": "academic_department",
+      "relation": "có_đơn_vị_là"
     },
     {
-      "source": "Đại học Nông Lâm TP.HCM",
-      "target": "Khoa",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "organization"
+      "source": {
+        "name": "Khoa đào tạo",
+        "scope": "Mỗi ngành học",
+        "parent_organization": "Đại học Nông Lâm TP.HCM",
+        "function": "Đào tạo chuyên ngành",
+        "characteristic": "Có đội ngũ cố vấn học tập riêng"
+      },
+      "target": {
+        "name": "Đội ngũ cố vấn học tập",
+        "role": "Hỗ trợ và tư vấn sinh viên",
+        "affiliation": "Khoa đào tạo",
+        "characteristic": "Riêng cho mỗi khoa",
+        "main_tasks": "Giải đáp, tư vấn, hướng dẫn, xác nhận, theo dõi"
+      },
+      "type_source": "academic_department",
+      "type_target": "academic_advisory_team",
+      "relation": "có_đội_ngũ_riêng_là"
     },
     {
-      "source": "Khoa",
-      "target": "đội ngũ cố vấn học tập",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "group"
+      "source": {
+        "name": "Đội ngũ cố vấn học tập",
+        "role": "Hỗ trợ và tư vấn sinh viên",
+        "affiliation": "Khoa đào tạo",
+        "activity_focus": "Giải đáp thắc mắc về chương trình đào tạo",
+        "main_tasks": "Giải đáp, tư vấn, hướng dẫn, xác nhận, theo dõi"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "affiliation": "Đại học Nông Lâm TP.HCM",
+        "information_need": "Giải đáp về chương trình đào tạo",
+        "key_activities": "Học tập, xây dựng kế hoạch học tập, đăng ký học phần"
+      },
+      "type_source": "academic_advisory_team",
+      "type_target": "student_group",
+      "relation": "hỗ_trợ_giải_đáp_thắc_mắc"
     },
     {
-      "source": "đội ngũ cố vấn học tập",
-      "target": "sinh viên",
-      "relation": "HỖ_TRỢ",
-      "type_source": "group",
-      "type_target": "person"
+      "source": {
+        "name": "Đội ngũ cố vấn học tập",
+        "role": "Hỗ trợ và tư vấn sinh viên",
+        "affiliation": "Khoa đào tạo",
+        "task": "Tư vấn xây dựng kế hoạch học tập",
+        "main_tasks": "Giải đáp, tư vấn, hướng dẫn, xác nhận, theo dõi"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "activity_supported": "Xây dựng kế hoạch học tập",
+        "scope_of_plan": "Từng học kỳ và toàn khóa học",
+        "key_activities": "Học tập, xây dựng kế hoạch học tập, đăng ký học phần"
+      },
+      "type_source": "academic_advisory_team",
+      "type_target": "student_group",
+      "relation": "tư_vấn_xây_dựng_kế_hoạch_học_tập_cho"
     },
     {
-      "source": "sinh viên",
-      "target": "chương trình đào tạo",
-      "relation": "VỀ",
-      "type_source": "person",
-      "type_target": "concept"
+      "source": {
+        "name": "Kế hoạch học tập",
+        "owner": "Sinh viên",
+        "scope": "Từng học kỳ và toàn khóa học",
+        "purpose": "Đảm bảo tiến độ học tập phù hợp",
+        "requirements": "Phù hợp năng lực, hoàn cảnh, điều kiện sinh viên"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "personal_factors": "Năng lực, hoàn cảnh, điều kiện học tập",
+        "status": "Đang theo học",
+        "key_activities": "Học tập, xây dựng kế hoạch học tập, đăng ký học phần"
+      },
+      "type_source": "study_plan",
+      "type_target": "student_group",
+      "relation": "cần_phù_hợp_với_điều_kiện_của"
     },
     {
-      "source": "đội ngũ cố vấn học tập",
-      "target": "sinh viên",
-      "relation": "TƯ_VẤN",
-      "type_source": "group",
-      "type_target": "person"
+      "source": {
+        "name": "Đội ngũ cố vấn học tập",
+        "role": "Hỗ trợ và tư vấn sinh viên",
+        "affiliation": "Khoa đào tạo",
+        "task": "Hướng dẫn đăng ký học phần",
+        "main_tasks": "Giải đáp, tư vấn, hướng dẫn, xác nhận, theo dõi"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "activity_guided": "Đăng ký học phần",
+        "frequency_of_registration": "Từng học kỳ",
+        "key_activities": "Học tập, xây dựng kế hoạch học tập, đăng ký học phần"
+      },
+      "type_source": "academic_advisory_team",
+      "type_target": "student_group",
+      "relation": "hướng_dẫn_đăng_ký_học_phần_cho"
     },
     {
-      "source": "sinh viên",
-      "target": "kế hoạch học tập",
-      "relation": "XÂY_DỰNG",
-      "type_source": "person",
-      "type_target": "document"
+      "source": {
+        "name": "Đội ngũ cố vấn học tập",
+        "role": "Hỗ trợ và tư vấn sinh viên",
+        "affiliation": "Khoa đào tạo",
+        "task": "Tư vấn điều chỉnh kế hoạch học tập",
+        "main_tasks": "Giải đáp, tư vấn, hướng dẫn, xác nhận, theo dõi"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "activity_supported": "Điều chỉnh kế hoạch học tập",
+        "reason_for_adjustment": "Phù hợp điều kiện thực tế",
+        "key_activities": "Học tập, xây dựng kế hoạch học tập, đăng ký học phần"
+      },
+      "type_source": "academic_advisory_team",
+      "type_target": "student_group",
+      "relation": "tư_vấn_điều_chỉnh_kế_hoạch_học_tập_cho"
     },
     {
-      "source": "kế hoạch học tập",
-      "target": "học kỳ",
-      "relation": "CHO",
-      "type_source": "document",
-      "type_target": "time"
+      "source": {
+        "name": "Đội ngũ cố vấn học tập",
+        "role": "Hỗ trợ và tư vấn sinh viên",
+        "affiliation": "Khoa đào tạo",
+        "authority": "Xác nhận kế hoạch học tập của sinh viên",
+        "main_tasks": "Giải đáp, tư vấn, hướng dẫn, xác nhận, theo dõi"
+      },
+      "target": {
+        "name": "Kế hoạch học tập",
+        "owner": "Sinh viên",
+        "status_process": "Cần được xác nhận bởi cố vấn",
+        "purpose": "Đảm bảo tiến độ học tập phù hợp",
+        "requirements": "Phù hợp năng lực, hoàn cảnh, điều kiện sinh viên"
+      },
+      "type_source": "academic_advisory_team",
+      "type_target": "study_plan",
+      "relation": "xác_nhận"
     },
     {
-      "source": "kế hoạch học tập",
-      "target": "khóa học",
-      "relation": "CHO",
-      "type_source": "document",
-      "type_target": "time"
+      "source": {
+        "name": "Đội ngũ cố vấn học tập",
+        "role": "Hỗ trợ và tư vấn sinh viên",
+        "affiliation": "Khoa đào tạo",
+        "activity": "Theo dõi kết quả học tập",
+        "main_tasks": "Giải đáp, tư vấn, hướng dẫn, xác nhận, theo dõi"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "aspect_monitored": "Kết quả học tập",
+        "purpose_of_monitoring": "Hỗ trợ phù hợp khi cần",
+        "key_activities": "Học tập, xây dựng kế hoạch học tập, đăng ký học phần"
+      },
+      "type_source": "academic_advisory_team",
+      "type_target": "student_group",
+      "relation": "theo_dõi_kết_quả_học_tập_của"
     },
     {
-      "source": "kế hoạch học tập",
-      "target": "năng lực",
-      "relation": "PHÙ_HỢP",
-      "type_source": "document",
-      "type_target": "concept"
+      "source": {
+        "name": "Thông tin Ban Cố vấn Học tập các Khoa",
+        "content": "Chi tiết về các ban cố vấn học tập của từng khoa",
+        "update_status": "Được cập nhật định kỳ",
+        "source_of_information": "Các Khoa",
+        "accessibility": "Qua websites của Khoa và Phòng CTSV"
+      },
+      "target": {
+        "name": "Website của các Khoa",
+        "purpose": "Cung cấp thông tin của Khoa",
+        "owner_type": "Khoa đào tạo",
+        "accessibility": "Công khai",
+        "content_example": "Thông tin Ban Cố vấn Học tập Khoa"
+      },
+      "type_source": "collective_advisory_board_information",
+      "type_target": "department_website",
+      "relation": "được_cập_nhật_trên"
     },
     {
-      "source": "kế hoạch học tập",
-      "target": "hoàn cảnh",
-      "relation": "PHÙ_HỢP",
-      "type_source": "document",
-      "type_target": "concept"
+      "source": {
+        "name": "Thông tin Ban Cố vấn Học tập các Khoa",
+        "content": "Chi tiết về các ban cố vấn học tập của từng khoa",
+        "update_status": "Được cập nhật định kỳ",
+        "source_of_information": "Các Khoa",
+        "accessibility": "Qua websites của Khoa và Phòng CTSV"
+      },
+      "target": {
+        "name": "Website của Phòng Công tác Sinh viên",
+        "url": "http://nls.hcmuaf.edu.vn/",
+        "managed_by": "Phòng Công tác Sinh viên",
+        "content_focus": "Thông tin sinh viên và cố vấn học tập",
+        "key_section": "Mục cố vấn học tập"
+      },
+      "type_source": "collective_advisory_board_information",
+      "type_target": "student_affairs_website",
+      "relation": "được_cập_nhật_trên"
     },
     {
-      "source": "kế hoạch học tập",
-      "target": "điều kiện học tập",
-      "relation": "PHÙ_HỢP",
-      "type_source": "document",
-      "type_target": "concept"
+      "source": {
+        "name": "Phòng Công tác Sinh viên",
+        "affiliation": "Đại học Nông Lâm TP.HCM",
+        "function": "Hỗ trợ công tác sinh viên",
+        "website_management": "Quản lý website http://nls.hcmuaf.edu.vn/",
+        "target_audience": "Sinh viên"
+      },
+      "target": {
+        "name": "Website của Phòng Công tác Sinh viên",
+        "url": "http://nls.hcmuaf.edu.vn/",
+        "managed_by": "Phòng Công tác Sinh viên",
+        "content_focus": "Thông tin sinh viên và cố vấn học tập",
+        "key_section": "Mục cố vấn học tập"
+      },
+      "type_source": "student_affairs_office",
+      "type_target": "student_affairs_website",
+      "relation": "quản_lý"
     },
     {
-      "source": "đội ngũ cố vấn học tập",
-      "target": "sinh viên",
-      "relation": "HƯỚNG_DẪN",
-      "type_source": "group",
-      "type_target": "person"
+      "source": {
+        "name": "Website của Phòng Công tác Sinh viên",
+        "url": "http://nls.hcmuaf.edu.vn/",
+        "managed_by": "Phòng Công tác Sinh viên",
+        "structure_component": "Mục thông tin",
+        "key_section": "Mục cố vấn học tập"
+      },
+      "target": {
+        "name": "Mục cố vấn học tập",
+        "location": "Trên Website của Phòng Công tác Sinh viên",
+        "content_type": "Thông tin về cố vấn học tập",
+        "access_instruction": "Vào mục cố vấn học tập",
+        "parent_website_url": "http://nls.hcmuaf.edu.vn/"
+      },
+      "type_source": "student_affairs_website",
+      "type_target": "website_section",
+      "relation": "có_mục_thông_tin_là"
     },
     {
-      "source": "sinh viên",
-      "target": "học phần",
-      "relation": "ĐĂNG_KÝ",
-      "type_source": "person",
-      "type_target": "concept"
+      "source": {
+        "name": "Kế hoạch học tập",
+        "owner": "Sinh viên",
+        "document_type": "Kế hoạch cá nhân",
+        "status": "Cần xây dựng, điều chỉnh, xác nhận",
+        "requirements": "Phù hợp năng lực, hoàn cảnh, điều kiện sinh viên"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Chủ sở hữu kế hoạch học tập",
+        "responsibility": "Thực hiện kế hoạch",
+        "status": "Đang theo học",
+        "key_activities": "Học tập, xây dựng kế hoạch học tập, đăng ký học phần"
+      },
+      "type_source": "study_plan",
+      "type_target": "student_group",
+      "relation": "của"
     },
     {
-      "source": "học phần",
-      "target": "học kỳ",
-      "relation": "Ở",
-      "type_source": "concept",
-      "type_target": "time"
+      "source": {
+        "name": "Khoa đào tạo",
+        "scope": "Mỗi ngành học",
+        "responsibility": "Cung cấp thông tin khoa",
+        "communication_channel": "Website khoa",
+        "parent_organization": "Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Website của các Khoa",
+        "purpose": "Cung cấp thông tin của Khoa",
+        "owner_type": "Khoa đào tạo",
+        "accessibility": "Công khai",
+        "content_provider": "Khoa đào tạo"
+      },
+      "type_source": "academic_department",
+      "type_target": "department_website",
+      "relation": "quản_lý"
     },
     {
-      "source": "đội ngũ cố vấn học tập",
-      "target": "sinh viên",
-      "relation": "TƯ_VẤN",
-      "type_source": "group",
-      "type_target": "person"
-    },
-    {
-      "source": "sinh viên",
-      "target": "kế hoạch học tập",
-      "relation": "ĐIỀU_CHỈNH",
-      "type_source": "person",
-      "type_target": "document"
-    },
-    {
-      "source": "đội ngũ cố vấn học tập",
-      "target": "kế hoạch học tập",
-      "relation": "XÁC_NHẬN",
-      "type_source": "group",
-      "type_target": "document"
-    },
-    {
-      "source": "đội ngũ cố vấn học tập",
-      "target": "sinh viên",
-      "relation": "THEO_DÕI",
-      "type_source": "group",
-      "type_target": "person"
-    },
-    {
-      "source": "sinh viên",
-      "target": "kết quả học tập",
-      "relation": "CỦA",
-      "type_source": "person",
-      "type_target": "concept"
-    },
-    {
-      "source": "đội ngũ cố vấn học tập",
-      "target": "biện pháp hỗ trợ",
-      "relation": "CÓ",
-      "type_source": "group",
-      "type_target": "concept"
-    },
-    {
-      "source": "Ban cố vấn học tập",
-      "target": "Khoa",
-      "relation": "CỦA",
-      "type_source": "group",
-      "type_target": "organization"
-    },
-    {
-      "source": "Ban cố vấn học tập",
-      "target": "website",
-      "relation": "CẬP_NHẬT_TRÊN",
-      "type_source": "group",
-      "type_target": "website"
-    },
-    {
-      "source": "Khoa",
-      "target": "website",
-      "relation": "CỦA",
-      "type_source": "organization",
-      "type_target": "website"
-    },
-    {
-      "source": "Phòng Công tác Sinh viên",
-      "target": "website",
-      "relation": "CỦA",
-      "type_source": "organization",
-      "type_target": "website"
-    },
-    {
-      "source": "website",
-      "target": "http://nls.hcmuaf.edu.vn/",
-      "relation": "LÀ",
-      "type_source": "website",
-      "type_target": "website"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "information_status": "Có thắc mắc cần giải đáp",
+        "affiliation": "Đại học Nông Lâm TP.HCM",
+        "key_activities": "Học tập, xây dựng kế hoạch học tập, đăng ký học phần"
+      },
+      "target": {
+        "name": "Chương trình đào tạo",
+        "scope": "Từng ngành học",
+        "description": "Khung kế hoạch giảng dạy và học tập",
+        "subject_of_query": "Nội dung, cấu trúc, tiến độ",
+        "basis_for": "Kế hoạch học tập của sinh viên"
+      },
+      "type_source": "student_group",
+      "type_target": "academic_program",
+      "relation": "có_thắc_mắc_về"
     }
   ]
 }

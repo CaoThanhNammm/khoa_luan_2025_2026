@@ -1,908 +1,262 @@
 {
-  "entities": [
-    {
-      "name": "Lớp học phần",
-      "type": "academic_group"
-    },
-    {
-      "name": "Học phần",
-      "type": "academic_unit"
-    },
-    {
-      "name": "Số lượng đăng ký của sinh viên",
-      "type": "metric_registration"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "role"
-    },
-    {
-      "name": "Học kỳ",
-      "type": "academic_term"
-    },
-    {
-      "name": "Số lượng sinh viên tối thiểu",
-      "type": "limit"
-    },
-    {
-      "name": "Số lượng sinh viên tối đa",
-      "type": "limit"
-    },
-    {
-      "name": "Trường",
-      "type": "organization"
-    },
-    {
-      "name": "Học phần Lý thuyết",
-      "type": "academic_unit_type"
-    },
-    {
-      "name": "Học phần Lý thuyết kết hợp thực hành",
-      "type": "academic_unit_type"
-    },
-    {
-      "name": "30",
-      "type": "number_limit"
-    },
-    {
-      "name": "60",
-      "type": "number_limit"
-    },
-    {
-      "name": "200",
-      "type": "number_limit"
-    },
-    {
-      "name": "Số lượng sinh viên chuẩn",
-      "type": "metric_standard"
-    },
-    {
-      "name": "Học phần Thực hành",
-      "type": "academic_unit_type"
-    },
-    {
-      "name": "Học phần Thực tập",
-      "type": "academic_unit_type"
-    },
-    {
-      "name": "Học phần Đồ án",
-      "type": "academic_unit_type"
-    },
-    {
-      "name": "20",
-      "type": "number_limit"
-    },
-    {
-      "name": "25",
-      "type": "number_limit"
-    },
-    {
-      "name": "50",
-      "type": "number_limit"
-    },
-    {
-      "name": "Học phần Giáo dục thể chất",
-      "type": "academic_unit_type"
-    },
-    {
-      "name": "40",
-      "type": "number_limit"
-    },
-    {
-      "name": "Các trường hợp khác",
-      "type": "case_exception"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "role"
-    },
-    {
-      "name": "Trưởng Khoa",
-      "type": "role"
-    },
-    {
-      "name": "Hủy lớp học phần",
-      "type": "action_cancel"
-    },
-    {
-      "name": "Lớp lý thuyết, lý thuyết kết hợp thực hành",
-      "type": "academic_group_type"
-    },
-    {
-      "name": "Lớp thực hành, thực tập, đồ án",
-      "type": "academic_group_type"
-    },
-    {
-      "name": "Lớp học phần Giáo dục thể chất",
-      "type": "academic_group_type"
-    },
-    {
-      "name": "Khoa/Bộ môn",
-      "type": "organization_unit"
-    },
-    {
-      "name": "Duy trì các lớp học phần không đủ số lượng sinh viên",
-      "type": "action_maintain"
-    },
-    {
-      "name": "Văn bản đề nghị",
-      "type": "document_request"
-    },
-    {
-      "name": "Giải pháp tài chính",
-      "type": "finance_solution"
-    },
-    {
-      "name": "Tổng học phí lớp",
-      "type": "finance_metric"
-    },
-    {
-      "name": "Kinh phí của lớp với số lượng sinh viên tối thiểu",
-      "type": "finance_metric"
-    },
-    {
-      "name": "01 tuần",
-      "type": "time_duration"
-    },
-    {
-      "name": "Bắt đầu học kỳ",
-      "type": "time_point"
-    },
-    {
-      "name": "Học phí của 01 sinh viên",
-      "type": "finance_metric"
-    },
-    {
-      "name": "Đơn giá/tín chỉ",
-      "type": "finance_rate"
-    },
-    {
-      "name": "Số tín chỉ",
-      "type": "metric_credit"
-    },
-    {
-      "name": "Số lượng sinh viên đăng ký",
-      "type": "metric_registration"
-    },
-    {
-      "name": "Mở thêm lớp học phần",
-      "type": "action_open"
-    },
-    {
-      "name": "Thời gian xây dựng kế hoạch giảng dạy",
-      "type": "time_period"
-    },
-    {
-      "name": "Nguyện vọng học",
-      "type": "student_desire"
-    },
-    {
-      "name": "Giờ lên lớp",
-      "type": "time_period_class"
-    },
-    {
-      "name": "Tiết 1", "type": "time_slot"}, {"name": "07g00 - 07g50", "type": "time_interval"},
-    { "name": "Tiết 2", "type": "time_slot"}, {"name": "07g50 - 08g40", "type": "time_interval"},
-    { "name": "Tiết 3", "type": "time_slot"}, {"name": "08g40 - 09g30", "type": "time_interval"},
-    { "name": "Tiết 4", "type": "time_slot"}, {"name": "09g35 - 10g25", "type": "time_interval"},
-    { "name": "Tiết 5", "type": "time_slot"}, {"name": "10g25 - 11g15", "type": "time_interval"},
-    { "name": "Tiết 6", "type": "time_slot"}, {"name": "11g15 - 12g05", "type": "time_interval"},
-    { "name": "Tiết 7", "type": "time_slot"}, {"name": "12g15 - 13g05", "type": "time_interval"},
-    { "name": "Tiết 8", "type": "time_slot"}, {"name": "13g05 - 13g55", "type": "time_interval"},
-    { "name": "Tiết 9", "type": "time_slot"}, {"name": "13g55 - 14g45", "type": "time_interval"},
-    { "name": "Tiết 10", "type": "time_slot"}, {"name": "14g50 - 15g40", "type": "time_interval"},
-    { "name": "Tiết 11", "type": "time_slot"}, {"name": "15g40 - 16g30", "type": "time_interval"},
-    { "name": "Tiết 12", "type": "time_slot"}, {"name": "16g30 - 17g20", "type": "time_interval"},
-    { "name": "Tiết 13", "type": "time_slot"}, {"name": "17g30 - 18g20", "type": "time_interval"},
-    { "name": "Tiết 14", "type": "time_slot"}, {"name": "18g20 - 19g10", "type": "time_interval"},
-    { "name": "Tiết 15", "type": "time_slot"}, {"name": "19g10 - 20g00", "type": "time_interval"},
-    {
-      "name": "Buổi học đầu tiên",
-      "type": "time_point_event"
-    },
-    {
-      "name": "Cán bộ giảng dạy",
-      "type": "role"
-    },
-    {
-      "name": "Đề cương chi tiết học phần",
-      "type": "document_syllabus"
-    },
-    {
-      "name": "Nội dung học phần",
-      "type": "syllabus_content"
-    },
-    {
-      "name": "Tài liệu tham khảo",
-      "type": "syllabus_reference"
-    },
-    {
-      "name": "Phương pháp giảng dạy",
-      "type": "syllabus_method"
-    },
-    {
-      "name": "Hình thức kiểm tra đánh giá",
-      "type": "syllabus_assessment"
-    },
-    {
-      "name": "Cách tính điểm",
-      "type": "syllabus_grading"
-    },
-    {
-      "name": "Dự thi đánh giá học phần",
-      "type": "action_exam"
-    },
-    {
-      "name": "80% số giờ",
-      "type": "attendance_requirement"
-    },
-    {
-      "name": "100% số giờ",
-      "type": "attendance_requirement"
-    },
-    {
-      "name": "Học phần thực hành, thí nghiệm, thực tập ngoài trường, lý thuyết kết hợp thực hành",
-      "type": "academic_unit_type_group"
-    },
-    {
-      "name": "Vắng lên lớp nhiều hơn thời gian quy định",
-      "type": "status_absent"
-    },
-    {
-      "name": "Cấm thi",
-      "type": "status_exam_ban"
-    },
-    {
-      "name": "Danh sách sinh viên bị cấm thi",
-      "type": "document_list"
-    },
-    {
-      "name": "Điểm F",
-      "type": "grade"
-    },
-    {
-      "name": "Bảng điểm",
-      "type": "document_record"
-    }
-  ],
   "relationships": [
     {
-      "source": "Trường",
-      "target": "Lớp học phần",
-      "type_source": "organization",
-      "type_target": "academic_group",
-      "relation": "tổ_chức"
+      "source": {
+        "name": "Trường",
+        "role_description": "Đơn vị tổ chức và quản lý giáo dục",
+        "regulatory_function": "Quy định số lượng sinh viên cho lớp học phần",
+        "basis_of_regulation": "Tùy theo từng loại học phần"
+      },
+      "target": {
+        "name": "Quy định số lượng sinh viên cho Học phần Lý thuyết, Lý thuyết kết hợp thực hành",
+        "module_type_affected": "Học phần Lý thuyết, Lý thuyết kết hợp thực hành",
+        "min_students": "30",
+        "standard_students": "60",
+        "max_students": "200"
+      },
+      "type_source": "school",
+      "type_target": "student_quota_regulation",
+      "relation": "quy_định_số_lượng_sinh_viên_cho"
     },
     {
-      "source": "Lớp học phần",
-      "target": "Học phần",
-      "type_source": "academic_group",
-      "type_target": "academic_unit",
-      "relation": "tổ_chức_theo"
+      "source": {
+        "name": "Trường",
+        "role_description": "Đơn vị tổ chức và quản lý giáo dục",
+        "regulatory_function": "Quy định số lượng sinh viên cho lớp học phần",
+        "basis_of_regulation": "Tùy theo từng loại học phần"
+      },
+      "target": {
+        "name": "Quy định số lượng sinh viên cho Học phần Thực hành, thực tập, đồ án",
+        "module_type_affected": "Học phần Thực hành, thực tập, đồ án",
+        "min_students": "20",
+        "standard_students": "25",
+        "max_students": "50"
+      },
+      "type_source": "school",
+      "type_target": "student_quota_regulation",
+      "relation": "quy_định_số_lượng_sinh_viên_cho"
     },
     {
-      "source": "Lớp học phần",
-      "target": "Số lượng đăng ký của sinh viên",
-      "type_source": "academic_group",
-      "type_target": "metric_registration",
-      "relation": "dựa_vào"
+      "source": {
+        "name": "Trường",
+        "role_description": "Đơn vị tổ chức và quản lý giáo dục",
+        "regulatory_function": "Quy định số lượng sinh viên cho lớp học phần",
+        "basis_of_regulation": "Tùy theo từng loại học phần"
+      },
+      "target": {
+        "name": "Quy định số lượng sinh viên cho Học phần Giáo dục thể chất",
+        "module_type_affected": "Học phần Giáo dục thể chất",
+        "min_students": "40",
+        "max_students": "60"
+      },
+      "type_source": "school",
+      "type_target": "student_quota_regulation",
+      "relation": "quy_định_số_lượng_sinh_viên_cho"
     },
     {
-      "source": "Lớp học phần",
-      "target": "Học kỳ",
-      "type_source": "academic_group",
-      "type_target": "academic_term",
-      "relation": "tổ_chức_trong"
+      "source": {
+        "name": "Hiệu trưởng",
+        "role_description": "Người đứng đầu nhà trường",
+        "decision_authority": "Quyết định các trường hợp khác về số lượng sinh viên",
+        "basis_for_decision": "Đề xuất của Trưởng Khoa"
+      },
+      "target": {
+        "name": "Trưởng Khoa",
+        "role_description": "Người đứng đầu Khoa/đơn vị chuyên môn",
+        "action_required": "Đề xuất các trường hợp đặc biệt về sĩ số lớp"
+      },
+      "type_source": "principal",
+      "type_target": "faculty_dean",
+      "relation": "quyết_định_dựa_trên_đề_xuất_của"
     },
     {
-      "source": "Trường",
-      "target": "Số lượng sinh viên tối thiểu",
-      "type_source": "organization",
-      "type_target": "limit",
-      "relation": "quy_định"
+      "source": {
+        "name": "Trường",
+        "role_description": "Đơn vị tổ chức và quản lý giáo dục",
+        "action_authority": "Hủy lớp học phần không đủ sĩ số"
+      },
+      "target": {
+        "name": "Lớp lý thuyết, lý thuyết kết hợp thực hành (không đủ sĩ số)",
+        "module_type_identity": "Lớp lý thuyết, lý thuyết kết hợp thực hành",
+        "cancellation_condition": "Số lượng đăng ký ít hơn 30 sinh viên"
+      },
+      "type_source": "school",
+      "type_target": "undersubscribed_course_class",
+      "relation": "sẽ_hủy"
     },
     {
-      "source": "Trường",
-      "target": "Số lượng sinh viên tối đa",
-      "type_source": "organization",
-      "type_target": "limit",
-      "relation": "quy_định"
+      "source": {
+        "name": "Trường",
+        "role_description": "Đơn vị tổ chức và quản lý giáo dục",
+        "action_authority": "Hủy lớp học phần không đủ sĩ số"
+      },
+      "target": {
+        "name": "Lớp thực hành, thực tập, đồ án (không đủ sĩ số)",
+        "module_type_identity": "Lớp thực hành, thực tập, đồ án",
+        "cancellation_condition": "Số lượng đăng ký ít hơn 20 sinh viên"
+      },
+      "type_source": "school",
+      "type_target": "undersubscribed_course_class",
+      "relation": "sẽ_hủy"
     },
     {
-      "source": "Trường",
-      "target": "Số lượng sinh viên chuẩn",
-      "type_source": "organization",
-      "type_target": "metric_standard",
-      "relation": "quy_định"
+      "source": {
+        "name": "Trường",
+        "role_description": "Đơn vị tổ chức và quản lý giáo dục",
+        "action_authority": "Hủy lớp học phần không đủ sĩ số"
+      },
+      "target": {
+        "name": "Lớp học phần Giáo dục thể chất (không đủ sĩ số)",
+        "module_type_identity": "Học phần Giáo dục thể chất",
+        "cancellation_condition": "Số lượng đăng ký ít hơn 40 sinh viên"
+      },
+      "type_source": "school",
+      "type_target": "undersubscribed_course_class",
+      "relation": "sẽ_hủy"
     },
     {
-      "source": "Lớp học phần",
-      "target": "Học phần Lý thuyết",
-      "type_source": "academic_group",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Khoa/Bộ môn",
+        "role_description": "Đơn vị chuyên môn",
+        "objective": "Duy trì các lớp học phần không đủ số lượng sinh viên",
+        "action_requirement": "Văn bản đề nghị có cam kết giải pháp tài chính"
+      },
+      "target": {
+        "name": "Hiệu trưởng",
+        "role_description": "Người đứng đầu nhà trường",
+        "approval_authority": "Phê duyệt đề nghị duy trì lớp",
+        "approval_deadline": "Chậm nhất trước 01 tuần trước khi bắt đầu học kỳ"
+      },
+      "type_source": "faculty_department",
+      "type_target": "principal",
+      "relation": "đề_nghị_duy_trì_lớp_và_cần_phê_duyệt_từ"
     },
     {
-      "source": "Lớp học phần",
-      "target": "Học phần Lý thuyết kết hợp thực hành",
-      "type_source": "academic_group",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Học phí của 01 sinh viên thuộc lớp duy trì (học phần lý thuyết)",
+        "context_description": "Lớp lý thuyết được duy trì dù không đủ số lượng tối thiểu",
+        "calculation_basis": "Đơn giá/tín chỉ, Số tín chỉ, Số lượng sinh viên đăng ký",
+        "minimum_reference_students": "30"
+      },
+      "target": {
+        "name": "Công thức tính học phí cho lớp lý thuyết duy trì",
+        "formula_expression": "(Đơn giá/tín chỉ x Số tín chỉ x 30)/Số lượng sinh viên đăng ký",
+        "purpose_description": "Xác định mức thu cho sinh viên trong lớp duy trì"
+      },
+      "type_source": "tuition_fee_maintained_class",
+      "type_target": "tuition_fee_calculation_formula",
+      "relation": "được_tính_theo"
     },
     {
-      "source": "Số lượng sinh viên tối thiểu",
-      "target": "30",
-      "type_source": "limit",
-      "type_target": "number_limit",
-      "relation": "có_giá_trị_là"
+      "source": {
+        "name": "Trường",
+        "role_description": "Đơn vị tổ chức và quản lý giáo dục",
+        "action_capability": "Mở thêm lớp học phần mới"
+      },
+      "target": {
+        "name": "Yêu cầu mở thêm lớp học phần",
+        "minimum_student_interest": "Từ 30 sinh viên có nguyện vọng học",
+        "proposing_entity": "Khoa/Bộ môn phụ trách học phần",
+        "approval_entity": "Hiệu trưởng",
+        "timing_constraint": "Trong thời gian xây dựng kế hoạch giảng dạy của học kỳ"
+      },
+      "type_source": "school",
+      "type_target": "additional_class_request_condition",
+      "relation": "sẽ_mở_thêm_lớp_học_phần_nếu_đáp_ứng"
     },
     {
-      "source": "Số lượng sinh viên tối thiểu",
-      "target": "Học phần Lý thuyết",
-      "type_source": "limit",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Cán bộ giảng dạy",
+        "role_description": "Người trực tiếp giảng dạy",
+        "responsibility_syllabus": "Thông báo đề cương chi tiết học phần cho sinh viên",
+        "timing_of_notification": "Vào buổi học đầu tiên"
+      },
+      "target": {
+        "name": "Đề cương chi tiết học phần",
+        "content_summary": "Nội dung học phần, tài liệu, phương pháp giảng dạy, hình thức kiểm tra, cách tính điểm",
+        "recipient": "Sinh viên"
+      },
+      "type_source": "lecturer",
+      "type_target": "module_syllabus",
+      "relation": "thông_báo_về"
     },
     {
-      "source": "Số lượng sinh viên tối thiểu",
-      "target": "Học phần Lý thuyết kết hợp thực hành",
-      "type_source": "limit",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Sinh viên",
+        "role_description": "Người học",
+        "exam_eligibility_dependency": "Mức độ tham dự giờ học"
+      },
+      "target": {
+        "name": "Yêu cầu tham dự tối thiểu 80% số giờ học phần lý thuyết",
+        "module_type_scope": "Các học phần lý thuyết",
+        "attendance_threshold": "Tối thiểu 80% số giờ",
+        "purpose_description": "Điều kiện để được dự thi đánh giá học phần"
+      },
+      "type_source": "student",
+      "type_target": "exam_attendance_requirement",
+      "relation": "phải_đáp_ứng"
     },
     {
-      "source": "Số lượng sinh viên chuẩn",
-      "target": "60",
-      "type_source": "metric_standard",
-      "type_target": "number_limit",
-      "relation": "có_giá_trị_là"
+      "source": {
+        "name": "Sinh viên",
+        "role_description": "Người học",
+        "exam_eligibility_dependency": "Mức độ tham dự giờ học"
+      },
+      "target": {
+        "name": "Yêu cầu tham dự đầy đủ 100% số giờ học phần thực hành/kết hợp",
+        "module_type_scope": "Các học phần thực hành, thí nghiệm, thực tập ngoài trường, lý thuyết kết hợp thực hành",
+        "attendance_threshold": "100% số giờ",
+        "purpose_description": "Điều kiện để được dự thi đánh giá học phần"
+      },
+      "type_source": "student",
+      "type_target": "exam_attendance_requirement",
+      "relation": "phải_đáp_ứng"
     },
     {
-      "source": "Số lượng sinh viên chuẩn",
-      "target": "Học phần Lý thuyết",
-      "type_source": "metric_standard",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Số lượng sinh viên chuẩn",
-      "target": "Học phần Lý thuyết kết hợp thực hành",
-      "type_source": "metric_standard",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Số lượng sinh viên tối đa",
-      "target": "200",
-      "type_source": "limit",
-      "type_target": "number_limit",
-      "relation": "có_giá_trị_là"
-    },
-    {
-      "source": "Số lượng sinh viên tối đa",
-      "target": "Học phần Lý thuyết",
-      "type_source": "limit",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Số lượng sinh viên tối đa",
-      "target": "Học phần Lý thuyết kết hợp thực hành",
-      "type_source": "limit",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Lớp học phần",
-      "target": "Học phần Thực hành",
-      "type_source": "academic_group",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Lớp học phần",
-      "target": "Học phần Thực tập",
-      "type_source": "academic_group",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Lớp học phần",
-      "target": "Học phần Đồ án",
-      "type_source": "academic_group",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Số lượng sinh viên tối thiểu",
-      "target": "20",
-      "type_source": "limit",
-      "type_target": "number_limit",
-      "relation": "có_giá_trị_là"
-    },
-    {
-        "source": "Số lượng sinh viên tối thiểu",
-        "target": "Học phần Thực hành",
-        "type_source": "limit",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-        "source": "Số lượng sinh viên tối thiểu",
-        "target": "Học phần Thực tập",
-        "type_source": "limit",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-        "source": "Số lượng sinh viên tối thiểu",
-        "target": "Học phần Đồ án",
-        "type_source": "limit",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Số lượng sinh viên chuẩn",
-      "target": "25",
-      "type_source": "metric_standard",
-      "type_target": "number_limit",
-      "relation": "có_giá_trị_là"
-    },
-    {
-        "source": "Số lượng sinh viên chuẩn",
-        "target": "Học phần Thực hành",
-        "type_source": "metric_standard",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-        "source": "Số lượng sinh viên chuẩn",
-        "target": "Học phần Thực tập",
-        "type_source": "metric_standard",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-        "source": "Số lượng sinh viên chuẩn",
-        "target": "Học phần Đồ án",
-        "type_source": "metric_standard",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Số lượng sinh viên tối đa",
-      "target": "50",
-      "type_source": "limit",
-      "type_target": "number_limit",
-      "relation": "có_giá_trị_là"
-    },
-     {
-        "source": "Số lượng sinh viên tối đa",
-        "target": "Học phần Thực hành",
-        "type_source": "limit",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-        "source": "Số lượng sinh viên tối đa",
-        "target": "Học phần Thực tập",
-        "type_source": "limit",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-        "source": "Số lượng sinh viên tối đa",
-        "target": "Học phần Đồ án",
-        "type_source": "limit",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Lớp học phần",
-      "target": "Học phần Giáo dục thể chất",
-      "type_source": "academic_group",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Số lượng sinh viên tối thiểu",
-      "target": "40",
-      "type_source": "limit",
-      "type_target": "number_limit",
-      "relation": "có_giá_trị_là"
-    },
-    {
-        "source": "Số lượng sinh viên tối thiểu",
-        "target": "Học phần Giáo dục thể chất",
-        "type_source": "limit",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Số lượng sinh viên tối đa",
-      "target": "60",
-      "type_source": "limit",
-      "type_target": "number_limit",
-      "relation": "có_giá_trị_là"
-    },
-     {
-        "source": "Số lượng sinh viên tối đa",
-        "target": "Học phần Giáo dục thể chất",
-        "type_source": "limit",
-        "type_target": "academic_unit_type",
-        "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Hiệu trưởng",
-      "target": "Các trường hợp khác",
-      "type_source": "role",
-      "type_target": "case_exception",
-      "relation": "quyết_định"
-    },
-    {
-      "source": "Trưởng Khoa",
-      "target": "Các trường hợp khác",
-      "type_source": "role",
-      "type_target": "case_exception",
+      "source": {
+        "name": "Cán bộ giảng dạy học phần",
+        "role_description": "Người giảng dạy và theo dõi chuyên cần",
+        "action_authority": "Đề xuất danh sách sinh viên bị cấm thi"
+      },
+      "target": {
+        "name": "Danh sách sinh viên bị cấm thi",
+        "reason_for_ban": "Vắng lên lớp nhiều hơn thời gian quy định",
+        "approval_entity": "Trưởng Khoa/Bộ môn"
+      },
+      "type_source": "module_lecturer",
+      "type_target": "exam_ban_list",
       "relation": "đề_xuất"
     },
     {
-      "source": "Trường",
-      "target": "Hủy lớp học phần",
-      "type_source": "organization",
-      "type_target": "action_cancel",
-      "relation": "thực_hiện"
+      "source": {
+        "name": "Trưởng Khoa/Bộ môn",
+        "role_description": "Người quản lý Khoa/Bộ môn",
+        "approval_action": "Duyệt danh sách sinh viên bị cấm thi",
+        "notification_duty": "Thông báo công khai cho sinh viên trước khi thi ít nhất 01 tuần"
+      },
+      "target": {
+        "name": "Danh sách sinh viên bị cấm thi",
+        "status_description": "Đã được cán bộ giảng dạy đề xuất",
+        "recipient_of_notification": "Sinh viên"
+      },
+      "type_source": "faculty_department_head",
+      "type_target": "exam_ban_list",
+      "relation": "duyệt_và_thông_báo_công_khai"
     },
     {
-      "source": "Hủy lớp học phần",
-      "target": "Lớp lý thuyết, lý thuyết kết hợp thực hành",
-      "type_source": "action_cancel",
-      "type_target": "academic_group_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Lớp lý thuyết, lý thuyết kết hợp thực hành",
-      "target": "Số lượng đăng ký của sinh viên",
-      "type_source": "academic_group_type",
-      "type_target": "metric_registration",
-      "relation": "có"
-    },
-    {
-      "source": "Số lượng đăng ký của sinh viên",
-      "target": "30",
-      "type_source": "metric_registration",
-      "type_target": "number_limit",
-      "relation": "ít_hơn"
-    },
-    {
-      "source": "Hủy lớp học phần",
-      "target": "Lớp thực hành, thực tập, đồ án",
-      "type_source": "action_cancel",
-      "type_target": "academic_group_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Lớp thực hành, thực tập, đồ án",
-      "target": "Số lượng đăng ký của sinh viên",
-      "type_source": "academic_group_type",
-      "type_target": "metric_registration",
-      "relation": "có"
-    },
-    {
-      "source": "Số lượng đăng ký của sinh viên",
-      "target": "20",
-      "type_source": "metric_registration",
-      "type_target": "number_limit",
-      "relation": "ít_hơn"
-    },
-    {
-      "source": "Hủy lớp học phần",
-      "target": "Lớp học phần Giáo dục thể chất",
-      "type_source": "action_cancel",
-      "type_target": "academic_group_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Lớp học phần Giáo dục thể chất",
-      "target": "Số lượng đăng ký của sinh viên",
-      "type_source": "academic_group_type",
-      "type_target": "metric_registration",
-      "relation": "có"
-    },
-    {
-      "source": "Số lượng đăng ký của sinh viên",
-      "target": "40",
-      "type_source": "metric_registration",
-      "type_target": "number_limit",
-      "relation": "ít_hơn"
-    },
-    {
-      "source": "Khoa/Bộ môn",
-      "target": "Duy trì các lớp học phần không đủ số lượng sinh viên",
-      "type_source": "organization_unit",
-      "type_target": "action_maintain",
-      "relation": "muốn_thực_hiện"
-    },
-    {
-      "source": "Duy trì các lớp học phần không đủ số lượng sinh viên",
-      "target": "Văn bản đề nghị",
-      "type_source": "action_maintain",
-      "type_target": "document_request",
-      "relation": "yêu_cầu"
-    },
-    {
-      "source": "Văn bản đề nghị",
-      "target": "Giải pháp tài chính",
-      "type_source": "document_request",
-      "type_target": "finance_solution",
-      "relation": "có_cam_kết"
-    },
-    {
-      "source": "Giải pháp tài chính",
-      "target": "Tổng học phí lớp",
-      "type_source": "finance_solution",
-      "type_target": "finance_metric",
-      "relation": "đảm_bảo_bằng"
-    },
-     {
-      "source": "Giải pháp tài chính",
-      "target": "Kinh phí của lớp với số lượng sinh viên tối thiểu",
-      "type_source": "finance_solution",
-      "type_target": "finance_metric",
-      "relation": "đảm_bảo_bằng"
-    },
-    {
-      "source": "Hiệu trưởng",
-      "target": "Văn bản đề nghị",
-      "type_source": "role",
-      "type_target": "document_request",
-      "relation": "phê_duyệt"
-    },
-    {
-      "source": "Văn bản đề nghị",
-      "target": "Bắt đầu học kỳ",
-      "type_source": "document_request",
-      "type_target": "time_point",
-      "relation": "phải_được_phê_duyệt_trước"
-    },
-    {
-      "source": "Văn bản đề nghị",
-      "target": "01 tuần",
-      "type_source": "document_request",
-      "type_target": "time_duration",
-      "relation": "phải_được_phê_duyệt_chậm_nhất_là"
-    },
-    {
-      "source": "Học phí của 01 sinh viên",
-      "target": "Lớp lý thuyết, lý thuyết kết hợp thực hành",
-      "type_source": "finance_metric",
-      "type_target": "academic_group_type",
-      "relation": "tính_cho"
-    },
-    {
-      "source": "Học phí của 01 sinh viên",
-      "target": "Lớp thực hành, thực tập, đồ án",
-      "type_source": "finance_metric",
-      "type_target": "academic_group_type",
-      "relation": "tính_cho"
-    },
-    {
-      "source": "Trường",
-      "target": "Mở thêm lớp học phần",
-      "type_source": "organization",
-      "type_target": "action_open",
-      "relation": "thực_hiện"
-    },
-    {
-      "source": "Mở thêm lớp học phần",
-      "target": "Thời gian xây dựng kế hoạch giảng dạy",
-      "type_source": "action_open",
-      "type_target": "time_period",
-      "relation": "thực_hiện_trong"
-    },
-    {
-      "source": "Mở thêm lớp học phần",
-      "target": "Sinh viên",
-      "type_source": "action_open",
-      "type_target": "role",
-      "relation": "dựa_trên_nguyện_vọng_của"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "Nguyện vọng học",
-      "type_source": "role",
-      "type_target": "student_desire",
-      "relation": "có"
-    },
-    {
-      "source": "Mở thêm lớp học phần",
-      "target": "30",
-      "type_source": "action_open",
-      "type_target": "number_limit",
-      "relation": "yêu_cầu_từ"
-    },
-    {
-      "source": "Mở thêm lớp học phần",
-      "target": "Khoa/Bộ môn",
-      "type_source": "action_open",
-      "type_target": "organization_unit",
-      "relation": "được_đề_xuất_bởi"
-    },
-    {
-      "source": "Mở thêm lớp học phần",
-      "target": "Hiệu trưởng",
-      "type_source": "action_open",
-      "type_target": "role",
-      "relation": "được_chấp_thuận_bởi"
-    },
-    { "source": "Tiết 1", "target": "07g00 - 07g50", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 2", "target": "07g50 - 08g40", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 3", "target": "08g40 - 09g30", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 4", "target": "09g35 - 10g25", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 5", "target": "10g25 - 11g15", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 6", "target": "11g15 - 12g05", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 7", "target": "12g15 - 13g05", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 8", "target": "13g05 - 13g55", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 9", "target": "13g55 - 14g45", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 10", "target": "14g50 - 15g40", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 11", "target": "15g40 - 16g30", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 12", "target": "16g30 - 17g20", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 13", "target": "17g30 - 18g20", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 14", "target": "18g20 - 19g10", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    { "source": "Tiết 15", "target": "19g10 - 20g00", "type_source": "time_slot", "type_target": "time_interval", "relation": "diễn_ra_vào" },
-    {
-      "source": "Cán bộ giảng dạy",
-      "target": "Sinh viên",
-      "type_source": "role",
-      "type_target": "role",
-      "relation": "thông_báo_cho"
-    },
-    {
-      "source": "Cán bộ giảng dạy",
-      "target": "Đề cương chi tiết học phần",
-      "type_source": "role",
-      "type_target": "document_syllabus",
-      "relation": "thông_báo"
-    },
-    {
-      "source": "Cán bộ giảng dạy",
-      "target": "Buổi học đầu tiên",
-      "type_source": "role",
-      "type_target": "time_point_event",
-      "relation": "thông_báo_vào"
-    },
-    {
-      "source": "Đề cương chi tiết học phần",
-      "target": "Nội dung học phần",
-      "type_source": "document_syllabus",
-      "type_target": "syllabus_content",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "Đề cương chi tiết học phần",
-      "target": "Tài liệu tham khảo",
-      "type_source": "document_syllabus",
-      "type_target": "syllabus_reference",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "Đề cương chi tiết học phần",
-      "target": "Phương pháp giảng dạy",
-      "type_source": "document_syllabus",
-      "type_target": "syllabus_method",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "Đề cương chi tiết học phần",
-      "target": "Hình thức kiểm tra đánh giá",
-      "type_source": "document_syllabus",
-      "type_target": "syllabus_assessment",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "Đề cương chi tiết học phần",
-      "target": "Cách tính điểm",
-      "type_source": "document_syllabus",
-      "type_target": "syllabus_grading",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Dự thi đánh giá học phần",
-      "type_source": "role",
-      "type_target": "action_exam",
-      "relation": "chỉ_được"
-    },
-    {
-      "source": "Dự thi đánh giá học phần",
-      "target": "80% số giờ",
-      "type_source": "action_exam",
-      "type_target": "attendance_requirement",
-      "relation": "yêu_cầu_tham_dự_tối_thiểu"
-    },
-    {
-      "source": "80% số giờ",
-      "target": "Học phần Lý thuyết",
-      "type_source": "attendance_requirement",
-      "type_target": "academic_unit_type",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Dự thi đánh giá học phần",
-      "target": "100% số giờ",
-      "type_source": "action_exam",
-      "type_target": "attendance_requirement",
-      "relation": "yêu_cầu_tham_dự_đầy_đủ"
-    },
-    {
-      "source": "100% số giờ",
-      "target": "Học phần thực hành, thí nghiệm, thực tập ngoài trường, lý thuyết kết hợp thực hành",
-      "type_source": "attendance_requirement",
-      "type_target": "academic_unit_type_group",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Cấm thi",
-      "type_source": "role",
-      "type_target": "status_exam_ban",
-      "relation": "bị"
-    },
-    {
-      "source": "Cấm thi",
-      "target": "Vắng lên lớp nhiều hơn thời gian quy định",
-      "type_source": "status_exam_ban",
-      "type_target": "status_absent",
-      "relation": "do"
-    },
-    {
-      "source": "Cán bộ giảng dạy",
-      "target": "Danh sách sinh viên bị cấm thi",
-      "type_source": "role",
-      "type_target": "document_list",
-      "relation": "đề_xuất"
-    },
-    {
-      "source": "Trưởng Khoa/Bộ môn",
-      "target": "Danh sách sinh viên bị cấm thi",
-      "type_source": "organization_unit",
-      "type_target": "document_list",
-      "relation": "duyệt"
-    },
-    {
-      "source": "Trưởng Khoa/Bộ môn",
-      "target": "Danh sách sinh viên bị cấm thi",
-      "type_source": "organization_unit",
-      "type_target": "document_list",
-      "relation": "thông_báo_công_khai"
-    },
-    {
-        "source": "Trưởng Khoa/Bộ môn",
-        "target": "01 tuần",
-        "type_source": "organization_unit",
-        "type_target": "time_duration",
-        "relation": "thông_báo_trước_thi_ít_nhất"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Điểm F",
-      "type_source": "role",
-      "type_target": "grade",
-      "relation": "nhận"
-    },
-     {
-        "source": "Sinh viên",
-        "target": "Cấm thi",
-        "type_source": "role",
-        "type_target": "status_exam_ban",
-        "relation": "bị"
-    },
-    {
-      "source": "Điểm F",
-      "target": "Bảng điểm",
-      "type_source": "grade",
-      "type_target": "document_record",
-      "relation": "ghi_vào"
+      "source": {
+        "name": "Sinh viên bị cấm thi học phần",
+        "status_description": "Không đủ điều kiện dự thi do vi phạm quy định chuyên cần",
+        "academic_consequence": "Nhận điểm F"
+      },
+      "target": {
+        "name": "Điểm F",
+        "grade_meaning": "Điểm không đạt cho học phần",
+        "record_location": "Bảng điểm"
+      },
+      "type_source": "student_banned_from_exam",
+      "type_target": "failing_grade",
+      "relation": "sẽ_nhận"
     }
   ]
 }

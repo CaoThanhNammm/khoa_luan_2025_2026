@@ -1,228 +1,112 @@
 {
-  "entities": [
-    {
-      "name": "trang phục",
-      "type": "CLOTHING"
-    },
-    {
-      "name": "đầu tóc",
-      "type": "HAIR"
-    },
-    {
-      "name": "trường",
-      "type": "SCHOOL"
-    },
-    {
-      "name": "ồn ào",
-      "type": "NOISE"
-    },
-    {
-      "name": "mất trật tự",
-      "type": "DISORDER"
-    },
-    {
-      "name": "nơi công cộng",
-      "type": "PUBLIC_PLACE"
-    },
-    {
-      "name": "khu vực hiệu bộ",
-      "type": "OFFICE_AREA"
-    },
-    {
-      "name": "giờ làm việc",
-      "type": "WORKING_HOUR"
-    },
-    {
-      "name": "khu giảng đường",
-      "type": "LECTURE_HALL_AREA"
-    },
-    {
-      "name": "phòng học",
-      "type": "CLASSROOM"
-    },
-    {
-      "name": "giờ học",
-      "type": "CLASS_HOUR"
-    },
-    {
-      "name": "cơ sở vật chất",
-      "type": "FACILITIES"
-    },
-    {
-      "name": "thiết bị dạy và học",
-      "type": "TEACHING_EQUIPMENT"
-    },
-    {
-      "name": "tiết kiệm",
-      "type": "SAVING"
-    },
-    {
-      "name": "lãng phí",
-      "type": "WASTE"
-    },
-    {
-      "name": "môi trường sống",
-      "type": "LIVING_ENVIRONMENT"
-    },
-    {
-      "name": "xanh, sạch, đẹp",
-      "type": "GREEN_CLEAN_BEAUTIFUL"
-    }
-  ],
   "relationships": [
     {
-      "source": "trang phục",
-      "target": "trường",
-      "relation": "đến",
-      "type_source": "CLOTHING",
-      "type_target": "SCHOOL"
+      "source": {
+        "name": "Quy định về trang phục và đầu tóc",
+        "full_text": "Trang phục, đầu tóc khi đến trường phải gọn gàng, lịch sự.",
+        "standard_requirement": "gọn gàng, lịch sự",
+        "application_context": "khi đến trường"
+      },
+      "target": {
+        "name": "Quy tắc ứng xử văn hóa của người học trường Đại học Nông Lâm TP.HCM",
+        "document_category": "quy tắc ứng xử văn hóa",
+        "intended_audience": "người học",
+        "issuing_institution_name": "Trường Đại học Nông Lâm TP.HCM",
+        "source_url": "https://nls.hcmuaf.edu.vn/contents.php?ids=42748&ur=nls&lng=vn&title=quytac-ung-xu-van-hoa-cua-nguoi-hoc-truong-dai-hoc-nong-lam-tp-ho-chi-minh"
+      },
+      "type_source": "conduct_rule",
+      "type_target": "regulation_document",
+      "relation": "là_quy_định_của"
     },
     {
-      "source": "đầu tóc",
-      "target": "trường",
-      "relation": "đến",
-      "type_source": "HAIR",
-      "type_target": "SCHOOL"
+      "source": {
+        "name": "Quy định về giữ gìn trật tự chung",
+        "full_text": "Không gây ồn ào, mất trật tự ở nơi công cộng, khu vực hiệu bộ trong giờ làm việc và các khu giảng đường, phòng học trong giờ học.",
+        "prohibited_action_summary": "Không gây ồn ào, mất trật tự",
+        "scope_location_1": "nơi công cộng",
+        "scope_location_2_condition": "khu vực hiệu bộ trong giờ làm việc",
+        "scope_location_3_condition": "khu giảng đường, phòng học trong giờ học"
+      },
+      "target": {
+        "name": "Quy tắc ứng xử văn hóa của người học trường Đại học Nông Lâm TP.HCM",
+        "document_category": "quy tắc ứng xử văn hóa",
+        "intended_audience": "người học",
+        "issuing_institution_name": "Trường Đại học Nông Lâm TP.HCM",
+        "source_url": "https://nls.hcmuaf.edu.vn/contents.php?ids=42748&ur=nls&lng=vn&title=quytac-ung-xu-van-hoa-cua-nguoi-hoc-truong-dai-hoc-nong-lam-tp-ho-chi-minh"
+      },
+      "type_source": "conduct_rule",
+      "type_target": "regulation_document",
+      "relation": "là_quy_định_của"
     },
     {
-      "source": "người học",
-      "target": "ồn ào",
-      "relation": "không_gây_ở",
-      "type_source": "STUDENT",
-      "type_target": "NOISE"
+      "source": {
+        "name": "Quy định về bảo vệ tài sản và thực hành tiết kiệm",
+        "full_text": "Giữ gìn và bảo vệ cơ sở vật chất, thiết bị dạy và học. Thực hành tiết kiệm, chống lãng phí.",
+        "expected_action_property_protection": "Giữ gìn và bảo vệ cơ sở vật chất, thiết bị dạy và học",
+        "expected_action_resource_saving": "Thực hành tiết kiệm, chống lãng phí"
+      },
+      "target": {
+        "name": "Quy tắc ứng xử văn hóa của người học trường Đại học Nông Lâm TP.HCM",
+        "document_category": "quy tắc ứng xử văn hóa",
+        "intended_audience": "người học",
+        "issuing_institution_name": "Trường Đại học Nông Lâm TP.HCM",
+        "source_url": "https://nls.hcmuaf.edu.vn/contents.php?ids=42748&ur=nls&lng=vn&title=quytac-ung-xu-van-hoa-cua-nguoi-hoc-truong-dai-hoc-nong-lam-tp-ho-chi-minh"
+      },
+      "type_source": "conduct_rule",
+      "type_target": "regulation_document",
+      "relation": "là_quy_định_của"
     },
     {
-      "source": "ồn ào",
-      "target": "nơi công cộng",
-      "relation": "ở",
-      "type_source": "NOISE",
-      "type_target": "PUBLIC_PLACE"
+      "source": {
+        "name": "Quy định về ý thức bảo vệ môi trường",
+        "full_text": "Có ý thức giữ gìn môi trường sống xanh, sạch, đẹp.",
+        "expected_attitude_environmental_care": "Có ý thức giữ gìn",
+        "object_of_environmental_care": "môi trường sống xanh, sạch, đẹp"
+      },
+      "target": {
+        "name": "Quy tắc ứng xử văn hóa của người học trường Đại học Nông Lâm TP.HCM",
+        "document_category": "quy tắc ứng xử văn hóa",
+        "intended_audience": "người học",
+        "issuing_institution_name": "Trường Đại học Nông Lâm TP.HCM",
+        "source_url": "https://nls.hcmuaf.edu.vn/contents.php?ids=42748&ur=nls&lng=vn&title=quytac-ung-xu-van-hoa-cua-nguoi-hoc-truong-dai-hoc-nong-lam-tp-ho-chi-minh"
+      },
+      "type_source": "conduct_rule",
+      "type_target": "regulation_document",
+      "relation": "là_quy_định_của"
     },
     {
-      "source": "ồn ào",
-      "target": "khu vực hiệu bộ",
-      "relation": "ở",
-      "type_source": "NOISE",
-      "type_target": "OFFICE_AREA"
+      "source": {
+        "name": "Quy tắc ứng xử văn hóa của người học trường Đại học Nông Lâm TP.HCM",
+        "document_category": "quy tắc ứng xử văn hóa",
+        "intended_audience": "người học",
+        "issuing_institution_name": "Trường Đại học Nông Lâm TP.HCM",
+        "source_url": "https://nls.hcmuaf.edu.vn/contents.php?ids=42748&ur=nls&lng=vn&title=quytac-ung-xu-van-hoa-cua-nguoi-hoc-truong-dai-hoc-nong-lam-tp-ho-chi-minh"
+      },
+      "target": {
+        "name": "Quyết định số 1099/QĐ-ĐHNL-CTSV",
+        "decision_identifier": "1099/QĐ-ĐHNL-CTSV",
+        "date_of_issue": "29/03/2024",
+        "issuer_department_identifier": "ĐHNL-CTSV"
+      },
+      "type_source": "regulation_document",
+      "type_target": "legal_decision",
+      "relation": "được_ban_hành_theo_quyết_định"
     },
     {
-      "source": "ồn ào",
-      "target": "khu giảng đường",
-      "relation": "ở",
-      "type_source": "NOISE",
-      "type_target": "LECTURE_HALL_AREA"
-    },
-    {
-      "source": "ồn ào",
-      "target": "phòng học",
-      "relation": "ở",
-      "type_source": "NOISE",
-      "type_target": "CLASSROOM"
-    },
-    {
-      "source": "mất trật tự",
-      "target": "nơi công cộng",
-      "relation": "ở",
-      "type_source": "DISORDER",
-      "type_target": "PUBLIC_PLACE"
-    },
-    {
-      "source": "mất trật tự",
-      "target": "khu vực hiệu bộ",
-      "relation": "ở",
-      "type_source": "DISORDER",
-      "type_target": "OFFICE_AREA"
-    },
-    {
-      "source": "mất trật tự",
-      "target": "khu giảng đường",
-      "relation": "ở",
-      "type_source": "DISORDER",
-      "type_target": "LECTURE_HALL_AREA"
-    },
-    {
-      "source": "mất trật tự",
-      "target": "phòng học",
-      "relation": "ở",
-      "type_source": "DISORDER",
-      "type_target": "CLASSROOM"
-    },
-    {
-      "source": "khu vực hiệu bộ",
-      "target": "giờ làm việc",
-      "relation": "trong",
-      "type_source": "OFFICE_AREA",
-      "type_target": "WORKING_HOUR"
-    },
-    {
-      "source": "khu giảng đường",
-      "target": "giờ học",
-      "relation": "trong",
-      "type_source": "LECTURE_HALL_AREA",
-      "type_target": "CLASS_HOUR"
-    },
-    {
-      "source": "phòng học",
-      "target": "giờ học",
-      "relation": "trong",
-      "type_source": "CLASSROOM",
-      "type_target": "CLASS_HOUR"
-    },
-    {
-      "source": "người học",
-      "target": "cơ sở vật chất",
-      "relation": "giữ_gìn",
-      "type_source": "STUDENT",
-      "type_target": "FACILITIES"
-    },
-    {
-      "source": "người học",
-      "target": "thiết bị dạy và học",
-      "relation": "giữ_gìn",
-      "type_source": "STUDENT",
-      "type_target": "TEACHING_EQUIPMENT"
-    },
-    {
-      "source": "người học",
-      "target": "cơ sở vật chất",
-      "relation": "bảo_vệ",
-      "type_source": "STUDENT",
-      "type_target": "FACILITIES"
-    },
-    {
-      "source": "người học",
-      "target": "thiết bị dạy và học",
-      "relation": "bảo_vệ",
-      "type_source": "STUDENT",
-      "type_target": "TEACHING_EQUIPMENT"
-    },
-    {
-      "source": "người học",
-      "target": "tiết kiệm",
-      "relation": "thực_hành",
-      "type_source": "STUDENT",
-      "type_target": "SAVING"
-    },
-    {
-      "source": "người học",
-      "target": "lãng phí",
-      "relation": "chống",
-      "type_source": "STUDENT",
-      "type_target": "WASTE"
-    },
-    {
-      "source": "người học",
-      "target": "môi trường sống",
-      "relation": "giữ_gìn",
-      "type_source": "STUDENT",
-      "type_target": "LIVING_ENVIRONMENT"
-    },
-    {
-      "source": "môi trường sống",
-      "target": "xanh, sạch, đẹp",
-      "relation": "yêu_cầu",
-      "type_source": "LIVING_ENVIRONMENT",
-      "type_target": "GREEN_CLEAN_BEAUTIFUL"
+      "source": {
+        "name": "Quyết định số 1099/QĐ-ĐHNL-CTSV",
+        "decision_identifier": "1099/QĐ-ĐHNL-CTSV",
+        "date_of_issue": "29/03/2024",
+        "decision_purpose_summary": "Ban hành Quy tắc ứng xử văn hóa của người học trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Đại học Nông Lâm TP.HCM",
+        "abbreviation": "ĐHNL",
+        "city_location": "TP.HCM"
+      },
+      "type_source": "legal_decision",
+      "type_target": "organization",
+      "relation": "ban_hành_bởi"
     }
   ]
 }

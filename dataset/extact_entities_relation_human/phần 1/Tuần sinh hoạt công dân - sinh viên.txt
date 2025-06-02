@@ -1,143 +1,155 @@
 {
-  "entities": [
-    {
-      "name": "Sinh hoạt công dân - sinh viên (SHCD - SV)",
-      "type": "activity"
-    },
-    {
-      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "type": "organization"
-    },
-    {
-      "name": "https://go.hcmuaf.edu.vn/lichshcd2024",
-      "type": "website"
-    },
-    {
-      "name": "Tân sinh viên",
-      "type": "group_of_people"
-    },
-    {
-      "name": "sinh viên năm 2, năm 3 và năm cuối",
-      "type": "group_of_people"
-    },
-    {
-      "name": "Hồ Chí Minh",
-      "type": "person"
-    },
-    {
-      "name": "hướng dẫn phương pháp học đại học",
-      "type": "activity"
-    },
-    {
-      "name": "sử dụng các tiện ích Online",
-      "type": "activity"
-    },
-    {
-      "name": "sử dụng thư viện",
-      "type": "activity"
-    },
-    {
-      "name": "đăng ký môn học",
-      "type": "activity"
-    },
-    {
-      "name": "phổ biến quy chế học vụ",
-      "type": "activity"
-    },
-    {
-      "name": "giới thiệu các hoạt động Đoàn - Hội và phong trào sinh viên",
-      "type": "activity"
-    },
-    {
-      "name": "định hướng nghề nghiệp - khởi nghiệp",
-      "type": "activity"
-    },
-    {
-      "name": "thông tin tình hình kinh tế - chính trị - xã hội",
-      "type": "activity"
-    },
-    {
-      "name": "học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh",
-      "type": "activity"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh hoạt công dân - sinh viên (SHCD - SV)",
-      "target": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "relation": "TỔ_CHỨC_BỞI",
-      "type_source": "activity",
-      "type_target": "organization"
+      "source": {
+        "name": "Sinh hoạt công dân - sinh viên",
+        "abbreviation": "SHCD - SV",
+        "frequency": "thường niên, mỗi năm học",
+        "description": "Hoạt động thường niên dành cho sinh viên"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "short_name": "Nhà trường",
+        "role": "Đơn vị tổ chức"
+      },
+      "type_source": "academic_program",
+      "type_target": "organization",
+      "relation": "tổ_chức_bởi"
     },
     {
-      "source": "Sinh hoạt công dân - sinh viên (SHCD - SV)",
-      "target": "https://go.hcmuaf.edu.vn/lichshcd2024",
-      "relation": "ĐƯỢC_ĐĂNG_TẠI",
-      "type_source": "activity",
-      "type_target": "website"
+      "source": {
+        "name": "Sinh hoạt công dân - sinh viên",
+        "abbreviation": "SHCD - SV",
+        "target_audience_description": "Tất cả sinh viên trong thời gian thiết kế chương trình đào tạo"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "academic_status": "Đang trong thời gian thiết kế chương trình đào tạo",
+        "participation_requirement": "Bắt buộc"
+      },
+      "type_source": "academic_program",
+      "type_target": "person_group",
+      "relation": "dành_cho"
     },
     {
-      "source": "hướng dẫn phương pháp học đại học",
-      "target": "Tân sinh viên",
-      "relation": "DÀNH_CHO",
-      "type_source": "activity",
-      "type_target": "group_of_people"
+      "source": {
+        "name": "Sinh viên",
+        "academic_year_category": "Tân sinh viên",
+        "program_focus": "Hội nhập, phương pháp học, quy chế, hoạt động"
+      },
+      "target": {
+        "name": "Nội dung SHCD - SV cho Tân sinh viên",
+        "content_summary": "Hướng dẫn phương pháp học đại học, sử dụng tiện ích Online, thư viện, đăng ký môn học, phổ biến quy chế học vụ, giới thiệu hoạt động Đoàn - Hội",
+        "type_of_session": "Chuyên đề sinh hoạt tập trung"
+      },
+      "type_source": "person_subgroup",
+      "type_target": "program_content",
+      "relation": "tham_gia_nội_dung"
     },
     {
-      "source": "sử dụng các tiện ích Online",
-      "target": "Tân sinh viên",
-      "relation": "DÀNH_CHO",
-      "type_source": "activity",
-      "type_target": "group_of_people"
+      "source": {
+        "name": "Hoạt động Khoa tổ chức cho Tân sinh viên",
+        "purpose": "Định hướng nghề nghiệp theo ngành học, giao lưu với thầy cô, anh chị sinh viên trong Khoa",
+        "target_audience": "Tân sinh viên"
+      },
+      "target": {
+        "name": "Khoa",
+        "role": "Đơn vị tổ chức hoạt động chuyên ngành",
+        "interaction_type": "Giao lưu, định hướng"
+      },
+      "type_source": "academic_activity",
+      "type_target": "academic_department",
+      "relation": "tổ_chức_bởi"
     },
     {
-      "source": "sử dụng thư viện",
-      "target": "Tân sinh viên",
-      "relation": "DÀNH_CHO",
-      "type_source": "activity",
-      "type_target": "group_of_people"
+      "source": {
+        "name": "Hoạt động Khoa tổ chức cho Tân sinh viên",
+        "organizer": "Khoa",
+        "activity_type": "Định hướng nghề nghiệp, giao lưu"
+      },
+      "target": {
+        "name": "Tân sinh viên",
+        "benefit_from_activity": "Định hướng nghề nghiệp, giao lưu",
+        "context": "Một phần của SHCD-SV"
+      },
+      "type_source": "academic_activity",
+      "type_target": "person_subgroup",
+      "relation": "dành_cho"
     },
     {
-      "source": "đăng ký môn học",
-      "target": "Tân sinh viên",
-      "relation": "DÀNH_CHO",
-      "type_source": "activity",
-      "type_target": "group_of_people"
+      "source": {
+        "name": "Sinh viên các năm khác",
+        "academic_years": "Năm 2, năm 3, năm cuối",
+        "program_focus": "Định hướng nghề nghiệp, tình hình xã hội, tư tưởng Hồ Chí Minh"
+      },
+      "target": {
+        "name": "Nội dung SHCD - SV cho sinh viên năm 2, 3, cuối",
+        "content_summary": "Định hướng nghề nghiệp - khởi nghiệp, thông tin tình hình kinh tế - chính trị - xã hội, học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh",
+        "content_nature": "Thiết thực"
+      },
+      "type_source": "person_subgroup_collective",
+      "type_target": "program_content",
+      "relation": "tham_gia_nội_dung"
     },
     {
-      "source": "phổ biến quy chế học vụ",
-      "target": "Tân sinh viên",
-      "relation": "DÀNH_CHO",
-      "type_source": "activity",
-      "type_target": "group_of_people"
+      "source": {
+        "name": "Thông tin Sinh hoạt công dân",
+        "content_details": "Kế hoạch, danh sách, nội dung sinh hoạt",
+        "update_frequency": "Hàng năm"
+      },
+      "target": {
+        "name": "Website Trường Đại học Nông Lâm TP.HCM (Cổng thông tin SHCD-SV)",
+        "url": "https://go.hcmuaf.edu.vn/lichshcd2024",
+        "information_type": "Thông tin chính thức về SHCD-SV"
+      },
+      "type_source": "information_resource",
+      "type_target": "online_portal",
+      "relation": "đăng_tải_trên"
     },
     {
-      "source": "giới thiệu các hoạt động Đoàn - Hội và phong trào sinh viên",
-      "target": "Tân sinh viên",
-      "relation": "DÀNH_CHO",
-      "type_source": "activity",
-      "type_target": "group_of_people"
+      "source": {
+        "name": "Sinh viên",
+        "task_requirement": "Tham gia đầy đủ các nội dung SHCD-SV",
+        "assessment_obligation": "Làm bài thu hoạch đạt yêu cầu"
+      },
+      "target": {
+        "name": "Bài thu hoạch SHCD - SV",
+        "assessment_purpose": "Đánh giá kết quả tham gia SHCD-SV",
+        "pass_criteria": "Đạt yêu cầu"
+      },
+      "type_source": "person_group",
+      "type_target": "academic_assessment",
+      "relation": "phải_hoàn_thành"
     },
     {
-      "source": "định hướng nghề nghiệp - khởi nghiệp",
-      "target": "sinh viên năm 2, năm 3 và năm cuối",
-      "relation": "DÀNH_CHO",
-      "type_source": "activity",
-      "type_target": "group_of_people"
+      "source": {
+        "name": "Sinh viên",
+        "non_completion_status": "Chưa tham gia hoặc không đạt SHCD-SV",
+        "remedial_opportunity": "Được tổ chức học lại 1 lần trong năm"
+      },
+      "target": {
+        "name": "Sinh hoạt công dân - sinh viên",
+        "abbreviation": "SHCD - SV",
+        "remedial_policy": "Cho phép học lại 1 lần/năm"
+      },
+      "type_source": "person_group",
+      "type_target": "academic_program",
+      "relation": "có_thể_học_lại"
     },
     {
-      "source": "thông tin tình hình kinh tế - chính trị - xã hội",
-      "target": "sinh viên năm 2, năm 3 và năm cuối",
-      "relation": "DÀNH_CHO",
-      "type_source": "activity",
-      "type_target": "group_of_people"
-    },
-    {
-      "source": "học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh",
-      "target": "sinh viên năm 2, năm 3 và năm cuối",
-      "relation": "DÀNH_CHO",
-      "type_source": "activity",
-      "type_target": "group_of_people"
+      "source": {
+        "name": "Sinh viên",
+        "violation_description": "Không tham gia hoặc tham gia không đầy đủ chương trình SHCD - SV",
+        "consequence_preview": "Xem như chưa hoàn thành nhiệm vụ học tập và rèn luyện của năm học"
+      },
+      "target": {
+        "name": "Quy định của Trường",
+        "scope": "Xử lý vi phạm liên quan đến SHCD-SV",
+        "issuing_authority": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "person_group",
+      "type_target": "institutional_regulation",
+      "relation": "bị_xử_lý_theo"
     }
   ]
 }

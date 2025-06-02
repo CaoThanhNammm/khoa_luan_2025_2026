@@ -1,124 +1,112 @@
 {
-  "entities": [
-    {
-      "name": "giảng viên",
-      "type": "TEACHER"
-    },
-    {
-      "name": "nhân viên nhà trường",
-      "type": "SCHOOL_STAFF"
-    },
-    {
-      "name": "nhà trường",
-      "type": "SCHOOL"
-    },
-    {
-      "name": "câu hỏi",
-      "type": "QUESTION"
-    },
-    {
-      "name": "trả lời",
-      "type": "ANSWER"
-    }
-  ],
   "relationships": [
     {
-      "source": "người học",
-      "target": "giảng viên",
-      "relation": "tôn_trọng",
-      "type_source": "STUDENT",
-      "type_target": "TEACHER"
+      "source": {
+        "name": "Người học",
+        "role_description": "Chủ thể thực hiện hành vi ứng xử",
+        "required_behavior_1": "Lịch sự",
+        "required_behavior_2": "Tôn trọng"
+      },
+      "target": {
+        "name": "Giảng viên",
+        "professional_role": "Người giảng dạy",
+        "institutional_affiliation": "Nhà trường",
+        "interaction_context": "Trong môi trường học đường"
+      },
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "cần_có_thái_độ_với"
     },
     {
-      "source": "người học",
-      "target": "nhân viên nhà trường",
-      "relation": "tôn_trọng",
-      "type_source": "STUDENT",
-      "type_target": "SCHOOL_STAFF"
+      "source": {
+        "name": "Người học",
+        "role_description": "Chủ thể thực hiện hành vi ứng xử",
+        "required_behavior_1": "Lịch sự",
+        "required_behavior_2": "Tôn trọng"
+      },
+      "target": {
+        "name": "Nhân viên nhà trường",
+        "professional_role": "Nhân viên làm việc tại trường",
+        "institutional_affiliation": "Nhà trường",
+        "interaction_context": "Trong môi trường học đường"
+      },
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "cần_có_thái_độ_với"
     },
     {
-      "source": "người học",
-      "target": "giảng viên",
-      "relation": "hỏi",
-      "type_source": "STUDENT",
-      "type_target": "TEACHER"
+      "source": {
+        "name": "Người học",
+        "role_description": "Người thực hiện hành vi giao tiếp",
+        "communication_act_type": "Hỏi"
+      },
+      "target": {
+        "name": "Hành vi hỏi",
+        "characteristic_1": "Đảm bảo trật tự trên dưới",
+        "characteristic_2": "Câu hỏi ngắn gọn",
+        "characteristic_3": "Có thưa gửi",
+        "characteristic_4": "Có cảm ơn"
+      },
+      "type_source": "person",
+      "type_target": "communication_behavior",
+      "relation": "khi_thực_hiện_cần_đáp_ứng"
     },
     {
-      "source": "người học",
-      "target": "nhân viên nhà trường",
-      "relation": "hỏi",
-      "type_source": "STUDENT",
-      "type_target": "SCHOOL_STAFF"
+      "source": {
+        "name": "Người học",
+        "role_description": "Người thực hiện hành vi giao tiếp",
+        "communication_act_type": "Trả lời"
+      },
+      "target": {
+        "name": "Hành vi trả lời",
+        "characteristic_1": "Đảm bảo trật tự trên dưới",
+        "characteristic_2": "Câu trả lời ngắn gọn",
+        "characteristic_3": "Có thưa gửi",
+        "characteristic_4": "Có cảm ơn"
+      },
+      "type_source": "person",
+      "type_target": "communication_behavior",
+      "relation": "khi_thực_hiện_cần_đáp_ứng"
     },
     {
-      "source": "người học",
-      "target": "giảng viên",
-      "relation": "trả_lời",
-      "type_source": "STUDENT",
-      "type_target": "TEACHER"
+      "source": {
+        "name": "Người học",
+        "role_description": "Chủ thể thực hiện hành vi ứng xử",
+        "context_of_behavior": "Khi làm phiền",
+        "required_attitude_1": "Văn minh",
+        "required_attitude_2": "Tế nhị",
+        "required_attitude_3": "Chân thành",
+        "required_action": "Xin lỗi"
+      },
+      "target": {
+        "name": "Giảng viên",
+        "professional_role": "Người giảng dạy",
+        "institutional_affiliation": "Nhà trường",
+        "interaction_context": "Trong tình huống gây phiền hà"
+      },
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "cần_có_thái_độ_ứng_xử_khi_làm_phiền"
     },
     {
-      "source": "người học",
-      "target": "nhân viên nhà trường",
-      "relation": "trả_lời",
-      "type_source": "STUDENT",
-      "type_target": "SCHOOL_STAFF"
-    },
-    {
-      "source": "người học",
-      "target": "giảng viên",
-      "relation": "thưa_gửi",
-      "type_source": "STUDENT",
-      "type_target": "TEACHER"
-    },
-    {
-      "source": "người học",
-      "target": "nhân viên nhà trường",
-      "relation": "thưa_gửi",
-      "type_source": "STUDENT",
-      "type_target": "SCHOOL_STAFF"
-    },
-    {
-      "source": "người học",
-      "target": "giảng viên",
-      "relation": "cảm_ơn",
-      "type_source": "STUDENT",
-      "type_target": "TEACHER"
-    },
-    {
-      "source": "người học",
-      "target": "nhân viên nhà trường",
-      "relation": "cảm_ơn",
-      "type_source": "STUDENT",
-      "type_target": "SCHOOL_STAFF"
-    },
-    {
-      "source": "người học",
-      "target": "giảng viên",
-      "relation": "làm_phiền",
-      "type_source": "STUDENT",
-      "type_target": "TEACHER"
-    },
-    {
-      "source": "người học",
-      "target": "nhân viên nhà trường",
-      "relation": "làm_phiền",
-      "type_source": "STUDENT",
-      "type_target": "SCHOOL_STAFF"
-    },
-    {
-      "source": "người học",
-      "target": "giảng viên",
-      "relation": "xin_lỗi",
-      "type_source": "STUDENT",
-      "type_target": "TEACHER"
-    },
-    {
-      "source": "người học",
-      "target": "nhân viên nhà trường",
-      "relation": "xin_lỗi",
-      "type_source": "STUDENT",
-      "type_target": "SCHOOL_STAFF"
+      "source": {
+        "name": "Người học",
+        "role_description": "Chủ thể thực hiện hành vi ứng xử",
+        "context_of_behavior": "Khi làm phiền",
+        "required_attitude_1": "Văn minh",
+        "required_attitude_2": "Tế nhị",
+        "required_attitude_3": "Chân thành",
+        "required_action": "Xin lỗi"
+      },
+      "target": {
+        "name": "Nhân viên nhà trường",
+        "professional_role": "Nhân viên làm việc tại trường",
+        "institutional_affiliation": "Nhà trường",
+        "interaction_context": "Trong tình huống gây phiền hà"
+      },
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "cần_có_thái_độ_ứng_xử_khi_làm_phiền"
     }
   ]
 }

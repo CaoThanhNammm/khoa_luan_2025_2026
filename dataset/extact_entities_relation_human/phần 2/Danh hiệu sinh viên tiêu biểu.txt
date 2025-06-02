@@ -1,135 +1,204 @@
 {
-  "entities": [
-    {
-      "name": "Nhà trường",
-      "type": "organization"
-    },
-    {
-      "name": "năm học",
-      "type": "time"
-    },
-    {
-      "name": "Lễ tuyên dương sinh viên tiêu biểu",
-      "type": "event"
-    },
-    {
-      "name": "sinh viên tiêu biểu",
-      "type": "person"
-    },
-    {
-      "name": "sinh viên",
-      "type": "person"
-    },
-    {
-      "name": "thành tích học tập",
-      "type": "concept"
-    },
-    {
-      "name": "rèn luyện",
-      "type": "activity"
-    },
-    {
-      "name": "Danh hiệu sinh viên tiêu biểu",
-      "type": "title"
-    },
-    {
-      "name": "kết quả học tập",
-      "type": "concept"
-    },
-    {
-      "name": "điểm rèn luyện",
-      "type": "concept"
-    },
-    {
-      "name": "loại khá",
-      "type": "concept"
-    },
-    {
-      "name": "loại tốt",
-      "type": "concept"
-    },
-    {
-      "name": "hoạt động Đoàn-Hội SV",
-      "type": "activity"
-    }
-  ],
   "relationships": [
     {
-      "source": "Nhà trường",
-      "target": "Lễ tuyên dương sinh viên tiêu biểu",
-      "relation": "TỔ_CHỨC",
-      "type_source": "organization",
-      "type_target": "event"
+      "source": {
+        "name": "Nhà trường",
+        "type": "educational_organization",
+        "role": "Tổ chức Lễ tuyên dương",
+        "activity_description": "Tổ chức Lễ tuyên dương sinh viên tiêu biểu cuối mỗi năm học, khen thưởng sinh viên"
+      },
+      "target": {
+        "name": "Lễ tuyên dương sinh viên tiêu biểu",
+        "type": "award_ceremony",
+        "purpose": "Khen thưởng sinh viên có thành tích học tập và rèn luyện tốt",
+        "frequency": "Cuối mỗi năm học",
+        "award_conferred": "Danh hiệu sinh viên tiêu biểu"
+      },
+      "type_source": "educational_organization",
+      "type_target": "award_ceremony",
+      "relation": "tổ_chức"
     },
     {
-      "source": "Lễ tuyên dương sinh viên tiêu biểu",
-      "target": "năm học",
-      "relation": "VÀO_CUỐI",
-      "type_source": "event",
-      "type_target": "time"
+      "source": {
+        "name": "Lễ tuyên dương sinh viên tiêu biểu",
+        "type": "award_ceremony",
+        "purpose": "Khen thưởng sinh viên có thành tích học tập và rèn luyện tốt",
+        "organizer": "Nhà trường",
+        "award_conferred": "Danh hiệu sinh viên tiêu biểu"
+      },
+      "target": {
+        "name": "Cuối mỗi năm học",
+        "type": "time_period",
+        "description": "Thời điểm tổ chức Lễ tuyên dương",
+        "frequency_implication": "Hàng năm"
+      },
+      "type_source": "award_ceremony",
+      "type_target": "time_period",
+      "relation": "diễn_ra_vào"
     },
     {
-      "source": "Lễ tuyên dương sinh viên tiêu biểu",
-      "target": "sinh viên tiêu biểu",
-      "relation": "TUYÊN_DƯƠNG",
-      "type_source": "event",
-      "type_target": "person"
+      "source": {
+        "name": "Nhà trường",
+        "type": "educational_organization",
+        "role": "Khen thưởng sinh viên",
+        "context_of_reward": "Lễ tuyên dương sinh viên tiêu biểu"
+      },
+      "target": {
+        "name": "Sinh viên có thành tích học tập và rèn luyện tốt",
+        "type": "student_category",
+        "achievement_criteria": "Thành tích học tập và rèn luyện tốt",
+        "reward_context": "Được khen thưởng trong Lễ tuyên dương"
+      },
+      "type_source": "educational_organization",
+      "type_target": "student_category",
+      "relation": "khen_thưởng"
     },
     {
-      "source": "Lễ tuyên dương sinh viên tiêu biểu",
-      "target": "sinh viên",
-      "relation": "KHEN_THƯỞNG",
-      "type_source": "event",
-      "type_target": "person"
+      "source": {
+        "name": "Danh hiệu sinh viên tiêu biểu",
+        "type": "award_title",
+        "selection_basis": "Kết quả học tập và điểm rèn luyện, tham gia hoạt động Đoàn-Hội",
+        "awarded_by": "Nhà trường",
+        "conferred_during": "Lễ tuyên dương sinh viên tiêu biểu"
+      },
+      "target": {
+        "name": "Tiêu chí xét chọn dựa trên kết quả học tập và điểm rèn luyện",
+        "type": "selection_criterion",
+        "academic_requirement": "Kết quả học tập đạt từ loại khá trở lên",
+        "training_requirement": "Xếp loại rèn luyện đạt từ loại tốt trở lên",
+        "applies_to_award": "Danh hiệu sinh viên tiêu biểu"
+      },
+      "type_source": "award_title",
+      "type_target": "selection_criterion",
+      "relation": "có_tiêu_chí_xét_chọn_là"
     },
     {
-      "source": "sinh viên",
-      "target": "thành tích học tập",
-      "relation": "CÓ",
-      "type_source": "person",
-      "type_target": "concept"
+      "source": {
+        "name": "Danh hiệu sinh viên tiêu biểu",
+        "type": "award_title",
+        "selection_basis": "Kết quả học tập và điểm rèn luyện, tham gia hoạt động Đoàn-Hội",
+        "awarded_by": "Nhà trường",
+        "conferred_during": "Lễ tuyên dương sinh viên tiêu biểu"
+      },
+      "target": {
+        "name": "Tiêu chí tham gia tích cực các hoạt động Đoàn-Hội SV",
+        "type": "selection_criterion",
+        "activity_requirement": "Tham gia tích cực các hoạt động Đoàn-Hội SV",
+        "applies_to_award": "Danh hiệu sinh viên tiêu biểu"
+      },
+      "type_source": "award_title",
+      "type_target": "selection_criterion",
+      "relation": "có_tiêu_chí_xét_chọn_là"
     },
     {
-      "source": "sinh viên",
-      "target": "rèn luyện",
-      "relation": "CÓ",
-      "type_source": "person",
-      "type_target": "activity"
+      "source": {
+        "name": "Tiêu chí xét chọn dựa trên kết quả học tập và điểm rèn luyện",
+        "type": "selection_criterion",
+        "academic_requirement": "Kết quả học tập đạt từ loại khá trở lên",
+        "training_requirement": "Xếp loại rèn luyện đạt từ loại tốt trở lên",
+        "applies_to_award": "Danh hiệu sinh viên tiêu biểu"
+      },
+      "target": {
+        "name": "Kết quả học tập",
+        "type": "academic_performance_metric",
+        "minimum_level_for_award": "Loại khá trở lên",
+        "evaluation_period": "Trong năm học",
+        "relevance": "Căn cứ để xét Danh hiệu sinh viên tiêu biểu"
+      },
+      "type_source": "selection_criterion",
+      "type_target": "academic_performance_metric",
+      "relation": "căn_cứ_vào"
     },
     {
-      "source": "Danh hiệu sinh viên tiêu biểu",
-      "target": "kết quả học tập",
-      "relation": "CĂN_CỨ",
-      "type_source": "title",
-      "type_target": "concept"
+      "source": {
+        "name": "Tiêu chí xét chọn dựa trên kết quả học tập và điểm rèn luyện",
+        "type": "selection_criterion",
+        "academic_requirement": "Kết quả học tập đạt từ loại khá trở lên",
+        "training_requirement": "Xếp loại rèn luyện đạt từ loại tốt trở lên",
+        "applies_to_award": "Danh hiệu sinh viên tiêu biểu"
+      },
+      "target": {
+        "name": "Điểm rèn luyện",
+        "type": "training_score_metric",
+        "minimum_level_for_award": "Loại tốt trở lên",
+        "evaluation_period": "Trong năm học",
+        "relevance": "Căn cứ để xét Danh hiệu sinh viên tiêu biểu"
+      },
+      "type_source": "selection_criterion",
+      "type_target": "training_score_metric",
+      "relation": "căn_cứ_vào"
     },
     {
-      "source": "Danh hiệu sinh viên tiêu biểu",
-      "target": "điểm rèn luyện",
-      "relation": "CĂN_CỨ",
-      "type_source": "title",
-      "type_target": "concept"
+      "source": {
+        "name": "Kết quả học tập",
+        "type": "academic_performance_metric",
+        "minimum_level_for_award": "Loại khá trở lên",
+        "evaluation_period": "Trong năm học",
+        "relevance": "Căn cứ để xét Danh hiệu sinh viên tiêu biểu"
+      },
+      "target": {
+        "name": "Loại khá trở lên (học tập)",
+        "type": "academic_grade_standard",
+        "grade_description": "Từ loại khá trở lên",
+        "context": "Tiêu chí kết quả học tập cho Danh hiệu sinh viên tiêu biểu"
+      },
+      "type_source": "academic_performance_metric",
+      "type_target": "academic_grade_standard",
+      "relation": "phải_đạt_từ"
     },
     {
-      "source": "kết quả học tập",
-      "target": "loại khá",
-      "relation": "TỪ",
-      "type_source": "concept",
-      "type_target": "concept"
+      "source": {
+        "name": "Xếp loại rèn luyện",
+        "type": "training_grade_metric",
+        "performance_indicator": "Điểm rèn luyện",
+        "minimum_level_for_award": "Loại tốt trở lên",
+        "relevance": "Tiêu chí xét Danh hiệu sinh viên tiêu biểu"
+      },
+      "target": {
+        "name": "Loại tốt trở lên (rèn luyện)",
+        "type": "training_grade_standard",
+        "grade_description": "Từ loại tốt trở lên",
+        "context": "Tiêu chí xếp loại rèn luyện cho Danh hiệu sinh viên tiêu biểu"
+      },
+      "type_source": "training_grade_metric",
+      "type_target": "training_grade_standard",
+      "relation": "phải_đạt_từ"
     },
     {
-      "source": "rèn luyện",
-      "target": "loại tốt",
-      "relation": "TỪ",
-      "type_source": "activity",
-      "type_target": "concept"
+      "source": {
+        "name": "Sinh viên",
+        "type": "student_role",
+        "potential_award": "Danh hiệu sinh viên tiêu biểu",
+        "requirements_for_award": "Đáp ứng tiêu chí về học tập, rèn luyện và hoạt động",
+        "rewarded_by": "Nhà trường"
+      },
+      "target": {
+        "name": "Danh hiệu sinh viên tiêu biểu",
+        "type": "award_title",
+        "selection_basis": "Kết quả học tập và điểm rèn luyện, tham gia hoạt động Đoàn-Hội",
+        "awarded_by": "Nhà trường"
+      },
+      "type_source": "student_role",
+      "type_target": "award_title",
+      "relation": "có_thể_nhận"
     },
     {
-      "source": "sinh viên tiêu biểu",
-      "target": "hoạt động Đoàn-Hội SV",
-      "relation": "THAM_GIA",
-      "type_source": "person",
-      "type_target": "activity"
+      "source": {
+        "name": "Sinh viên",
+        "type": "student_role",
+        "activity_expectation": "Tham gia tích cực",
+        "activity_context": "Hoạt động Đoàn-Hội SV",
+        "relevance_for_award": "Tiêu chí xét chọn Danh hiệu sinh viên tiêu biểu"
+      },
+      "target": {
+        "name": "Hoạt động Đoàn-Hội SV",
+        "type": "student_activity_category",
+        "participation_level_required": "Tích cực (cho Danh hiệu sinh viên tiêu biểu)",
+        "organizer_type": "Đoàn Thanh niên - Hội Sinh viên"
+      },
+      "type_source": "student_role",
+      "type_target": "student_activity_category",
+      "relation": "tham_gia_tích_cực"
     }
   ]
 }

@@ -1,148 +1,113 @@
 {
-  "entities": [
-    {
-      "name": "ĐIỀU 7",
-      "type": "regulation_section"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "group_of_people"
-    },
-    {
-      "name": "Thủ khoa",
-      "type": "title"
-    },
-    {
-      "name": "Á khoa",
-      "type": "title"
-    },
-    {
-      "name": "Kỳ tuyển sinh đầu vào",
-      "type": "event"
-    },
-    {
-      "name": "Trường",
-      "type": "organization"
-    },
-    {
-      "name": "Thủ tục nhập học",
-      "type": "process"
-    },
-    {
-      "name": "Điểm thi/xét tuyển",
-      "type": "measure"
-    },
-    {
-      "name": "cao nhất",
-      "type": "condition"
-    },
-    {
-      "name": "cao thứ hai",
-      "type": "condition"
-    },
-    {
-      "name": "Điểm thưởng",
-      "type": "measure"
-    }
-  ],
   "relationships": [
     {
-      "source": "ĐIỀU 7",
-      "target": "Thủ khoa",
-      "type_source": "regulation_section",
-      "type_target": "title",
-      "relation": "quy_định_về"
+      "source": {
+        "name": "Sinh viên trúng tuyển",
+        "enrollment_status": "trúng tuyển",
+        "action_taken": "đã làm thủ tục nhập học",
+        "award_eligibility": "khen thưởng danh hiệu Thủ khoa, Á khoa"
+      },
+      "target": {
+        "name": "kỳ thi/xét tuyển đầu vào của trường",
+        "process_type": "kỳ thi/xét tuyển",
+        "stage": "đầu vào",
+        "organizing_body_context": "của trường"
+      },
+      "type_source": "student_status",
+      "type_target": "admission_process",
+      "relation": "trúng_tuyển_trong"
     },
     {
-      "source": "ĐIỀU 7",
-      "target": "Á khoa",
-      "type_source": "regulation_section",
-      "type_target": "title",
-      "relation": "quy_định_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Thủ khoa",
-      "type_source": "group_of_people",
-      "type_target": "title",
-      "relation": "có_thể_đạt_danh_hiệu"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Á khoa",
-      "type_source": "group_of_people",
-      "type_target": "title",
-      "relation": "có_thể_đạt_danh_hiệu"
-    },
-    {
-      "source": "Thủ khoa",
-      "target": "Kỳ tuyển sinh đầu vào",
-      "type_source": "title",
-      "type_target": "event",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Á khoa",
-      "target": "Kỳ tuyển sinh đầu vào",
-      "type_source": "title",
-      "type_target": "event",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Kỳ tuyển sinh đầu vào",
-      "target": "Trường",
-      "type_source": "event",
+      "source": {
+        "name": "kỳ thi/xét tuyển đầu vào của trường",
+        "process_type": "kỳ thi/xét tuyển",
+        "stage": "đầu vào"
+      },
+      "target": {
+        "name": "trường",
+        "category": "tổ chức giáo dục"
+      },
+      "type_source": "admission_process",
       "type_target": "organization",
-      "relation": "thuộc_về"
+      "relation": "của"
     },
     {
-      "source": "Sinh viên",
-      "target": "Thủ tục nhập học",
-      "type_source": "group_of_people",
-      "type_target": "process",
-      "relation": "phải_hoàn_thành"
+      "source": {
+        "name": "Sinh viên trúng tuyển",
+        "enrollment_status": "trúng tuyển",
+        "admission_event_participation": "trong kỳ thi/xét tuyển đầu vào của trường"
+      },
+      "target": {
+        "name": "thủ tục nhập học",
+        "status_for_student": "đã làm"
+      },
+      "type_source": "student_status",
+      "type_target": "enrollment_procedure",
+      "relation": "thực_hiện"
     },
     {
-      "source": "Thủ khoa",
-      "target": "Điểm thi/xét tuyển",
-      "type_source": "title",
-      "type_target": "measure",
-      "relation": "yêu_cầu"
+      "source": {
+        "name": "Sinh viên trúng tuyển",
+        "enrollment_status": "trúng tuyển",
+        "action_taken": "đã làm thủ tục nhập học",
+        "achievement_criteria_met": "đạt được tiêu chuẩn"
+      },
+      "target": {
+        "name": "Thủ khoa",
+        "title_type": "danh hiệu",
+        "criteria_detail": "điểm thi/xét tuyển cao nhất",
+        "score_condition": "không tính điểm thưởng"
+      },
+      "type_source": "student_status",
+      "type_target": "academic_title",
+      "relation": "đạt_danh_hiệu"
     },
     {
-      "source": "Thủ khoa",
-      "target": "cao nhất",
-      "type_source": "title",
-      "type_target": "condition",
-      "relation": "yêu_cầu_điểm_số_là"
+      "source": {
+        "name": "Sinh viên trúng tuyển",
+        "enrollment_status": "trúng tuyển",
+        "action_taken": "đã làm thủ tục nhập học",
+        "achievement_criteria_met": "đạt được tiêu chuẩn"
+      },
+      "target": {
+        "name": "Á khoa",
+        "title_type": "danh hiệu",
+        "criteria_detail": "điểm thi/xét tuyển cao thứ hai",
+        "score_condition": "không tính điểm thưởng"
+      },
+      "type_source": "student_status",
+      "type_target": "academic_title",
+      "relation": "đạt_danh_hiệu"
     },
     {
-      "source": "Á khoa",
-      "target": "Điểm thi/xét tuyển",
-      "type_source": "title",
-      "type_target": "measure",
-      "relation": "yêu_cầu"
+      "source": {
+        "name": "Thủ khoa",
+        "title_type": "danh hiệu",
+        "awarded_to_description": "Sinh viên có điểm thi/xét tuyển cao nhất"
+      },
+      "target": {
+        "name": "điểm thi/xét tuyển",
+        "ranking_for_title": "cao nhất",
+        "calculation_exclusion": "không tính điểm thưởng"
+      },
+      "type_source": "academic_title",
+      "type_target": "admission_score",
+      "relation": "xét_theo"
     },
     {
-      "source": "Á khoa",
-      "target": "cao thứ hai",
-      "type_source": "title",
-      "type_target": "condition",
-      "relation": "yêu_cầu_điểm_số_là"
-    },
-    {
-      "source": "Thủ khoa",
-      "target": "Điểm thưởng",
-      "type_source": "title",
-      "type_target": "measure",
-      "relation": "không_tính_điểm"
-    },
-    {
-      "source": "Á khoa",
-      "target": "Điểm thưởng",
-      "type_source": "title",
-      "type_target": "measure",
-      "relation": "không_tính_điểm"
+      "source": {
+        "name": "Á khoa",
+        "title_type": "danh hiệu",
+        "awarded_to_description": "Sinh viên có điểm thi/xét tuyển cao thứ hai"
+      },
+      "target": {
+        "name": "điểm thi/xét tuyển",
+        "ranking_for_title": "cao thứ hai",
+        "calculation_exclusion": "không tính điểm thưởng"
+      },
+      "type_source": "academic_title",
+      "type_target": "admission_score",
+      "relation": "xét_theo"
     }
   ]
 }

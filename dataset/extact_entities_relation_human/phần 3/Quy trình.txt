@@ -1,161 +1,237 @@
 {
-  "entities": [
-    {
-      "name": "Sinh viên",
-      "type": "person_type"
-    },
-    {
-      "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
-      "type": "url"
-    },
-    {
-      "name": "Hệ thống",
-      "type": "system"
-    },
-    {
-      "name": "Thông tin cá nhân",
-      "type": "information_type"
-    },
-    {
-      "name": "Giấy xác nhận",
-      "type": "document"
-    },
-    {
-      "name": "Cán bộ phòng Công tác Sinh viên",
-      "type": "role"
-    },
-    {
-      "name": "Phòng Công tác Sinh viên",
-      "type": "organization_department"
-    },
-    {
-      "name": "Thời gian",
-      "type": "time_concept"
-    },
-    {
-      "name": "Bước 4",
-      "type": "process_step"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh viên",
-      "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
-      "type_source": "person_type",
+      "source": {
+        "name": "Sinh viên",
+        "action_step": "Bước 1",
+        "role_in_process": "người thực hiện",
+        "target_action": "truy cập địa chỉ"
+      },
+      "target": {
+        "name": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+        "type": "web_address",
+        "purpose": "đăng nhập hệ thống đăng ký giấy xác nhận",
+        "system_name": "nlsonline.hcmuaf.edu.vn"
+      },
+      "type_source": "student",
       "type_target": "url",
-      "relation": "truy_cập"
+      "relation": "truy_cập_vào"
     },
     {
-      "source": "Sinh viên",
-      "target": "Hệ thống",
-      "type_source": "person_type",
+      "source": {
+        "name": "Sinh viên",
+        "action_step": "Bước 2",
+        "role_in_process": "người thực hiện",
+        "target_action": "đăng nhập"
+      },
+      "target": {
+        "name": "Hệ thống",
+        "system_identifier": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+        "function": "quản lý đăng ký giấy xác nhận",
+        "accessibility": "đăng nhập bởi sinh viên"
+      },
+      "type_source": "student",
       "type_target": "system",
       "relation": "đăng_nhập"
     },
     {
-        "source": "Hệ thống",
-        "target": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
-        "type_source": "system",
-        "type_target": "url",
-        "relation": "tại_địa_chỉ"
+      "source": {
+        "name": "Sinh viên",
+        "action_step": "Bước 3",
+        "role_in_process": "người thực hiện",
+        "action_performed": "kiểm tra, bổ sung, cập nhật"
+      },
+      "target": {
+        "name": "Thông tin cá nhân",
+        "data_type": "cá nhân",
+        "location_on_system": "trên hệ thống",
+        "status_before_action": "có thể còn thiếu hoặc cần cập nhật"
+      },
+      "type_source": "student",
+      "type_target": "personal_information",
+      "relation": "kiểm_tra_lại"
     },
     {
-      "source": "Sinh viên",
-      "target": "Thông tin cá nhân",
-      "type_source": "person_type",
-      "type_target": "information_type",
-      "relation": "kiểm_tra"
-    },
-    {
-        "source": "Thông tin cá nhân",
-        "target": "Hệ thống",
-        "type_source": "information_type",
-        "type_target": "system",
-        "relation": "có_trên"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Thông tin cá nhân",
-      "type_source": "person_type",
-      "type_target": "information_type",
+      "source": {
+        "name": "Sinh viên",
+        "action_step": "Bước 3",
+        "role_in_process": "người thực hiện",
+        "action_type": "bổ sung"
+      },
+      "target": {
+        "name": "Những thông tin còn thiếu",
+        "category": "Thông tin cá nhân",
+        "status": "còn thiếu",
+        "update_method": "bổ sung"
+      },
+      "type_source": "student",
+      "type_target": "information_gap",
       "relation": "bổ_sung"
     },
     {
-      "source": "Sinh viên",
-      "target": "Thông tin cá nhân",
-      "type_source": "person_type",
-      "type_target": "information_type",
+      "source": {
+        "name": "Sinh viên",
+        "action_step": "Bước 3",
+        "role_in_process": "người thực hiện",
+        "action_type": "cập nhật"
+      },
+      "target": {
+        "name": "Những thông tin mới",
+        "category": "Thông tin cá nhân",
+        "status": "mới",
+        "update_method": "cập nhật"
+      },
+      "type_source": "student",
+      "type_target": "new_information",
       "relation": "cập_nhật"
     },
     {
-      "source": "Sinh viên",
-      "target": "Giấy xác nhận",
-      "type_source": "person_type",
+      "source": {
+        "name": "Thông tin cá nhân",
+        "storage_location": "hệ thống",
+        "managed_by": "Sinh viên (kiểm tra, cập nhật)"
+      },
+      "target": {
+        "name": "Hệ thống",
+        "system_identifier": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+        "data_hosted": "Thông tin cá nhân của sinh viên"
+      },
+      "type_source": "personal_information",
+      "type_target": "system",
+      "relation": "trên"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "action_step": "Bước 4",
+        "role_in_process": "người thực hiện",
+        "target_action": "đăng ký"
+      },
+      "target": {
+        "name": "Giấy xác nhận",
+        "document_type": "xác nhận",
+        "purpose": "vay vốn (ngụ ý từบริบท trước)",
+        "registration_process_step": "Bước 4"
+      },
+      "type_source": "student",
       "type_target": "document",
       "relation": "đăng_ký"
     },
     {
-      "source": "Cán bộ phòng Công tác Sinh viên",
-      "target": "Giấy xác nhận",
-      "type_source": "role",
+      "source": {
+        "name": "Cán bộ phòng Công tác Sinh viên",
+        "action_step": "Bước 5",
+        "role_in_process": "người xử lý",
+        "department": "Phòng Công tác Sinh viên"
+      },
+      "target": {
+        "name": "Giấy xác nhận",
+        "document_type": "xác nhận",
+        "processing_actions": "in, trình ký, đóng dấu",
+        "processed_by": "Cán bộ phòng Công tác Sinh viên"
+      },
+      "type_source": "staff_member",
       "type_target": "document",
       "relation": "in"
     },
     {
-      "source": "Cán bộ phòng Công tác Sinh viên",
-      "target": "Giấy xác nhận",
-      "type_source": "role",
+      "source": {
+        "name": "Cán bộ phòng Công tác Sinh viên",
+        "action_step": "Bước 5",
+        "role_in_process": "người xử lý",
+        "department": "Phòng Công tác Sinh viên"
+      },
+      "target": {
+        "name": "Giấy xác nhận",
+        "document_type": "xác nhận",
+        "processing_actions": "in, trình ký, đóng dấu",
+        "processed_by": "Cán bộ phòng Công tác Sinh viên"
+      },
+      "type_source": "staff_member",
       "type_target": "document",
       "relation": "trình_ký"
     },
     {
-      "source": "Cán bộ phòng Công tác Sinh viên",
-      "target": "Giấy xác nhận",
-      "type_source": "role",
+      "source": {
+        "name": "Cán bộ phòng Công tác Sinh viên",
+        "action_step": "Bước 5",
+        "role_in_process": "người xử lý",
+        "department": "Phòng Công tác Sinh viên"
+      },
+      "target": {
+        "name": "Giấy xác nhận",
+        "document_type": "xác nhận",
+        "processing_actions": "in, trình ký, đóng dấu",
+        "processed_by": "Cán bộ phòng Công tác Sinh viên"
+      },
+      "type_source": "staff_member",
       "type_target": "document",
       "relation": "đóng_dấu"
     },
     {
-      "source": "Cán bộ phòng Công tác Sinh viên",
-      "target": "Phòng Công tác Sinh viên",
-      "type_source": "role",
-      "type_target": "organization_department",
-      "relation": "thuộc"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Giấy xác nhận",
-      "type_source": "person_type",
+      "source": {
+        "name": "Sinh viên",
+        "action_step": "Bước 6",
+        "role_in_process": "người nhận",
+        "action_performed": "nhận giấy xác nhận"
+      },
+      "target": {
+        "name": "Giấy xác nhận đã đăng ký",
+        "document_status": "đã đăng ký",
+        "collection_location": "Phòng Công tác Sinh viên",
+        "collection_time_source": "thông báo từ hệ thống (Bước 4)"
+      },
+      "type_source": "student",
       "type_target": "document",
       "relation": "nhận"
     },
     {
-      "source": "Sinh viên",
-      "target": "Phòng Công tác Sinh viên",
-      "type_source": "person_type",
-      "type_target": "organization_department",
-      "relation": "nhận_tại"
+      "source": {
+        "name": "Giấy xác nhận đã đăng ký",
+        "retrieval_step": "Bước 6",
+        "retrieved_by": "Sinh viên"
+      },
+      "target": {
+        "name": "Phòng Công tác Sinh viên",
+        "office_type": "Phòng ban nhà trường",
+        "function_in_process": "nơi trả giấy xác nhận"
+      },
+      "type_source": "document",
+      "type_target": "department",
+      "relation": "tại"
     },
     {
-      "source": "Sinh viên",
-      "target": "Thời gian",
-      "type_source": "person_type",
-      "type_target": "time_concept",
-      "relation": "nhận_theo"
+      "source": {
+        "name": "Sinh viên (khi nhận giấy)",
+        "action_guidance": "theo thời gian hệ thống thông báo",
+        "process_step": "Bước 6"
+      },
+      "target": {
+        "name": "Thời gian hệ thống thông báo ở bước 4",
+        "information_type": "thời gian nhận giấy",
+        "source_of_information": "hệ thống",
+        "notification_step_reference": "Bước 4"
+      },
+      "type_source": "student_action",
+      "type_target": "notification_time",
+      "relation": "theo"
     },
     {
-        "source": "Hệ thống",
-        "target": "Thời gian",
-        "type_source": "system",
-        "type_target": "time_concept",
-        "relation": "thông_báo"
-    },
-    {
-        "source": "Hệ thống",
-        "target": "Bước 4",
-        "type_source": "system",
-        "type_target": "process_step",
-        "relation": "thông_báo_ở"
+      "source": {
+        "name": "Thời gian hệ thống thông báo ở bước 4",
+        "information_content": "thời gian nhận giấy xác nhận",
+        "delivery_method": "thông báo qua hệ thống",
+        "relevant_step_for_info": "Bước 4"
+      },
+      "target": {
+        "name": "Hệ thống",
+        "system_identifier": "https://nlsonline.hcmuaf.edu.vn/gxn/dangnhap.php",
+        "action_performed": "thông báo thời gian",
+        "notification_recipient": "Sinh viên"
+      },
+      "type_source": "notification_time",
+      "type_target": "system",
+      "relation": "thông_báo_bởi"
     }
   ]
 }

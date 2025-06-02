@@ -1,691 +1,606 @@
 {
-  "entities": [
-    {
-      "name": "Bảo hiểm tai nạn",
-      "type": "insurance"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "tai nạn giao thông",
-      "type": "traffic_accident"
-    },
-    {
-      "name": "tai nạn sinh hoạt",
-      "type": "domestic_accident"
-    },
-    {
-      "name": "tiêm ngừa bệnh dại",
-      "type": "rabies_vaccination"
-    },
-    {
-      "name": "động vật cắn",
-      "type": "animal_bite"
-    },
-    {
-      "name": "Thời gian chi trả bồi thường",
-      "type": "compensation_time"
-    },
-    {
-      "name": "10 – 15 ngày",
-      "type": "duration"
-    },
-    {
-      "name": "hồ sơ",
-      "type": "document"
-    },
-    {
-      "name": "Phòng Công tác sinh viên",
-      "type": "department"
-    },
-    {
-      "name": "Địa điểm tiếp nhận hồ sơ yêu cầu bồi thường",
-      "type": "document_reception_location"
-    },
-    {
-      "name": "Thời gian",
-      "type": "time"
-    },
-    {
-      "name": "giờ hành chính",
-      "type": "office_hour"
-    },
-    {
-      "name": "thứ 2",
-      "type": "weekday"
-    },
-    {
-      "name": "thứ 6",
-      "type": "weekday"
-    },
-    {
-      "name": "hàng tuần",
-      "type": "frequency"
-    },
-    {
-      "name": "ngày nghỉ lễ",
-      "type": "holiday"
-    },
-    {
-      "name": "Giấy yêu cầu trả tiền bảo hiểm",
-      "type": "insurance_claim_form"
-    },
-    {
-      "name": "biên bản tường trình tai nạn",
-      "type": "accident_report"
-    },
-    {
-      "name": "mẫu",
-      "type": "sample"
-    },
-    {
-      "name": "Giấy tờ tùy thân",
-      "type": "personal_document"
-    },
-    {
-      "name": "CCCD",
-      "type": "id_card"
-    },
-    {
-      "name": "01 bản photo",
-      "type": "quantity"
-    },
-    {
-      "name": "Giấy tờ phương tiện giao thông",
-      "type": "vehicle_document"
-    },
-    {
-      "name": "xe máy",
-      "type": "vehicle_type"
-    },
-    {
-      "name": "ô tô",
-      "type": "vehicle_type"
-    },
-    {
-      "name": "giấy phép lái xe",
-      "type": "driving_license"
-    },
-    {
-      "name": "cà vẹt xe",
-      "type": "vehicle_registration_certificate"
-    },
-    {
-      "name": "Hồ sơ điều trị thương tật",
-      "type": "medical_record"
-    },
-    {
-      "name": "giấy ra viện",
-      "type": "discharge_certificate"
-    },
-    {
-      "name": "giấy phẫu thuật",
-      "type": "surgery_report"
-    },
-    {
-      "name": "phim X.quang",
-      "type": "x_ray_film"
-    },
-    {
-      "name": "phim MRI",
-      "type": "mri_film"
-    },
-    {
-      "name": "đơn thuốc",
-      "type": "prescription"
-    },
-    {
-      "name": "hóa đơn",
-      "type": "invoice"
-    },
-    {
-      "name": "Bệnh viện",
-      "type": "hospital"
-    },
-    {
-      "name": "cơ sở y tế",
-      "type": "medical_facility"
-    },
-    {
-      "name": "01 bản chính",
-      "type": "quantity"
-    },
-    {
-      "name": "tử vong",
-      "type": "death"
-    },
-    {
-      "name": "Biên bản tại nạn giao thông",
-      "type": "traffic_accident_report"
-    },
-    {
-      "name": "xác nhận của chính quyền",
-      "type": "government_confirmation"
-    },
-    {
-      "name": "Giấy chứng tử",
-      "type": "death_certificate"
-    },
-    {
-      "name": "Ủy quyền thừa kế",
-      "type": "inheritance_authorization"
-    },
-    {
-      "name": "Kết quả nồng độ cồn",
-      "type": "blood_alcohol_content_result"
-    },
-    {
-      "name": "Sổ tiêm ngừa bệnh dại",
-      "type": "vaccination_record"
-    },
-    {
-      "name": "tai nạn khác",
-      "type": "other_accident"
-    },
-    {
-      "name": "hướng dẫn cụ thể",
-      "type": "specific_guidance"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh viên",
-      "target": "Bảo hiểm tai nạn",
-      "relation": "được_hưởng",
-      "type_source": "student",
-      "type_target": "insurance"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Sinh viên",
+        "insurance_participation_status": "có tham gia bảo hiểm tai nạn",
+        "category": "đối tượng hưởng bảo hiểm"
+      },
+      "target": {
+        "name": "Bảo hiểm tai nạn",
+        "policy_type": "Tai nạn",
+        "scope": "Các trường hợp tai nạn được quy định"
+      },
+      "type_source": "person_role",
+      "type_target": "insurance_policy",
+      "relation": "được_hưởng"
     },
     {
-      "source": "Sinh viên",
-      "target": "tai nạn giao thông",
-      "relation": "bị",
-      "type_source": "student",
-      "type_target": "traffic_accident"
+      "source": {
+        "name": "Bảo hiểm tai nạn",
+        "policy_type": "Tai nạn",
+        "benefit_description": "Chi trả bồi thường cho các trường hợp tai nạn"
+      },
+      "target": {
+        "name": "tai nạn giao thông",
+        "coverage_status": "được bảo hiểm",
+        "event_category": "tai nạn"
+      },
+      "type_source": "insurance_policy",
+      "type_target": "event_type",
+      "relation": "áp_dụng_cho_trường_hợp"
     },
     {
-      "source": "Sinh viên",
-      "target": "tai nạn sinh hoạt",
-      "relation": "bị",
-      "type_source": "student",
-      "type_target": "domestic_accident"
+      "source": {
+        "name": "Bảo hiểm tai nạn",
+        "policy_type": "Tai nạn",
+        "benefit_description": "Chi trả bồi thường cho các trường hợp tai nạn"
+      },
+      "target": {
+        "name": "tai nạn sinh hoạt",
+        "coverage_status": "được bảo hiểm",
+        "event_category": "tai nạn"
+      },
+      "type_source": "insurance_policy",
+      "type_target": "event_type",
+      "relation": "áp_dụng_cho_trường_hợp"
     },
     {
-      "source": "Sinh viên",
-      "target": "tiêm ngừa bệnh dại",
-      "relation": "trường_hợp",
-      "type_source": "student",
-      "type_target": "rabies_vaccination"
+      "source": {
+        "name": "Bảo hiểm tai nạn",
+        "policy_type": "Tai nạn",
+        "benefit_description": "Chi trả bồi thường cho các trường hợp tai nạn"
+      },
+      "target": {
+        "name": "tiêm ngừa bệnh dại do động vật cắn",
+        "coverage_status": "được bảo hiểm",
+        "event_category": "y tế dự phòng"
+      },
+      "type_source": "insurance_policy",
+      "type_target": "event_type",
+      "relation": "áp_dụng_cho_trường_hợp"
     },
     {
-      "source": "tiêm ngừa bệnh dại",
-      "target": "động vật cắn",
-      "relation": "do",
-      "type_source": "rabies_vaccination",
-      "type_target": "animal_bite"
+      "source": {
+        "name": "Bảo hiểm tai nạn",
+        "policy_type": "Tai nạn",
+        "payer": "Công ty bảo hiểm (ngụ ý)"
+      },
+      "target": {
+        "name": "Quy trình chi trả bồi thường bảo hiểm tai nạn",
+        "duration_value": "10 – 15 ngày",
+        "trigger_condition": "sau khi nộp đầy đủ hồ sơ",
+        "submission_point": "Phòng Công tác sinh viên"
+      },
+      "type_source": "insurance_policy",
+      "type_target": "compensation_process_term",
+      "relation": "có_thời_gian_chi_trả_bồi_thường"
     },
     {
-      "source": "Thời gian chi trả bồi thường",
-      "target": "10 – 15 ngày",
-      "relation": "là",
-      "type_source": "compensation_time",
-      "type_target": "duration"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường",
+        "purpose": "Xin chi trả bồi thường bảo hiểm tai nạn",
+        "status_requirement": "cần nộp đầy đủ"
+      },
+      "target": {
+        "name": "Phòng Công tác sinh viên",
+        "function": "Tiếp nhận hồ sơ bồi thường",
+        "role_in_process": "đầu mối tiếp nhận"
+      },
+      "type_source": "document_set_general",
+      "type_target": "organization_department",
+      "relation": "nộp_tại"
     },
     {
-      "source": "10 – 15 ngày",
-      "target": "hồ sơ",
-      "relation": "sau_khi_nộp",
-      "type_source": "duration",
-      "type_target": "document"
+      "source": {
+        "name": "Địa điểm tiếp nhận hồ sơ yêu cầu bồi thường",
+        "description": "Nơi sinh viên nộp hồ sơ xin bồi thường",
+        "characteristic": "cố định"
+      },
+      "target": {
+        "name": "Phòng Công tác sinh viên",
+        "function": "Tiếp nhận hồ sơ bồi thường",
+        "location_type": "văn phòng"
+      },
+      "type_source": "service_location_description",
+      "type_target": "organization_department",
+      "relation": "là"
     },
     {
-      "source": "hồ sơ",
-      "target": "Phòng Công tác sinh viên",
-      "relation": "nộp_cho",
-      "type_source": "document",
-      "type_target": "department"
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "function": "Tiếp nhận hồ sơ bồi thường",
+        "department_type": "hỗ trợ sinh viên"
+      },
+      "target": {
+        "name": "Thời gian làm việc của Phòng Công tác sinh viên",
+        "schedule_days": "từ thứ 2 đến thứ 6 hàng tuần",
+        "schedule_hours": "Trong giờ hành chính",
+        "exceptions": "trừ các ngày nghỉ lễ"
+      },
+      "type_source": "organization_department",
+      "type_target": "working_hours_definition",
+      "relation": "tiếp_nhận_hồ_sơ_trong_thời_gian"
     },
     {
-      "source": "Địa điểm tiếp nhận hồ sơ yêu cầu bồi thường",
-      "target": "Phòng Công tác sinh viên",
-      "relation": "là",
-      "type_source": "document_reception_location",
-      "type_target": "department"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tai nạn giao thông",
+        "case_type_covered": "tai nạn giao thông",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "Giấy yêu cầu trả tiền bảo hiểm",
+        "document_category": "form",
+        "template_provider": "Phòng Công tác sinh viên",
+        "submission_format": "theo mẫu"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "Thời gian",
-      "target": "giờ hành chính",
-      "relation": "là",
-      "type_source": "time",
-      "type_target": "office_hour"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tai nạn giao thông",
+        "case_type_covered": "tai nạn giao thông",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "biên bản tường trình tai nạn",
+        "document_category": "report",
+        "template_provider": "Phòng Công tác sinh viên",
+        "submission_format": "theo mẫu"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "giờ hành chính",
-      "target": "thứ 2",
-      "relation": "từ",
-      "type_source": "office_hour",
-      "type_target": "weekday"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tai nạn giao thông",
+        "case_type_covered": "tai nạn giao thông",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "CCCD",
+        "document_category": "giấy tờ tùy thân",
+        "copy_specification": "01 bản photo",
+        "issuer": "Cơ quan nhà nước có thẩm quyền"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "giờ hành chính",
-      "target": "thứ 6",
-      "relation": "đến",
-      "type_source": "office_hour",
-      "type_target": "weekday"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tai nạn giao thông",
+        "case_type_covered": "tai nạn giao thông",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "giấy phép lái xe",
+        "document_category": "giấy tờ phương tiện",
+        "copy_specification": "01 bản photo",
+        "applicability_condition": "trường hợp đi xe máy/ ô tô"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "giờ hành chính",
-      "target": "hàng tuần",
-      "relation": "trong",
-      "type_source": "office_hour",
-      "type_target": "frequency"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tai nạn giao thông",
+        "case_type_covered": "tai nạn giao thông",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "cà vẹt xe",
+        "document_category": "giấy tờ phương tiện",
+        "copy_specification": "01 bản photo",
+        "applicability_condition": "trường hợp đi xe máy/ ô tô"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "hàng tuần",
-      "target": "ngày nghỉ lễ",
-      "relation": "trừ",
-      "type_source": "frequency",
-      "type_target": "holiday"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tai nạn giao thông",
+        "case_type_covered": "tai nạn giao thông",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "Hồ sơ điều trị thương tật",
+        "document_set_type": "medical_records",
+        "certification_requirement": "đóng mộc của Bệnh viện/cơ sở y tế",
+        "copy_specification": "01 bản chính"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document_set",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "Giấy yêu cầu trả tiền bảo hiểm",
-      "target": "hồ sơ",
-      "relation": "là",
-      "type_source": "insurance_claim_form",
-      "type_target": "document"
+      "source": {
+        "name": "Hồ sơ điều trị thương tật",
+        "document_set_type": "medical_records",
+        "certification_requirement": "đóng mộc của Bệnh viện/cơ sở y tế",
+        "copy_specification": "01 bản chính"
+      },
+      "target": {
+        "name": "giấy ra viện",
+        "document_category": "medical_discharge_document",
+        "origin_institution_type": "Bệnh viện/cơ sở y tế"
+      },
+      "type_source": "required_document_set",
+      "type_target": "document_component",
+      "relation": "bao_gồm"
     },
     {
-      "source": "biên bản tường trình tai nạn",
-      "target": "hồ sơ",
-      "relation": "là",
-      "type_source": "accident_report",
-      "type_target": "document"
+      "source": {
+        "name": "Hồ sơ điều trị thương tật",
+        "document_set_type": "medical_records",
+        "certification_requirement": "đóng mộc của Bệnh viện/cơ sở y tế",
+        "copy_specification": "01 bản chính"
+      },
+      "target": {
+        "name": "giấy phẫu thuật",
+        "document_category": "surgical_report_document",
+        "origin_institution_type": "Bệnh viện/cơ sở y tế"
+      },
+      "type_source": "required_document_set",
+      "type_target": "document_component",
+      "relation": "bao_gồm"
     },
     {
-      "source": "mẫu",
-      "target": "Phòng Công tác sinh viên",
-      "relation": "do",
-      "type_source": "sample",
-      "type_target": "department"
+      "source": {
+        "name": "Hồ sơ điều trị thương tật",
+        "document_set_type": "medical_records",
+        "certification_requirement": "đóng mộc của Bệnh viện/cơ sở y tế",
+        "copy_specification": "01 bản chính"
+      },
+      "target": {
+        "name": "phim X.quang",
+        "document_category": "medical_imaging_document",
+        "imaging_modality": "X.quang"
+      },
+      "type_source": "required_document_set",
+      "type_target": "document_component",
+      "relation": "bao_gồm"
     },
     {
-      "source": "Phòng Công tác sinh viên",
-      "target": "mẫu",
-      "relation": "cung_cấp",
-      "type_source": "department",
-      "type_target": "sample"
+      "source": {
+        "name": "Hồ sơ điều trị thương tật",
+        "document_set_type": "medical_records",
+        "certification_requirement": "đóng mộc của Bệnh viện/cơ sở y tế",
+        "copy_specification": "01 bản chính"
+      },
+      "target": {
+        "name": "phim MRI",
+        "document_category": "medical_imaging_document",
+        "imaging_modality": "MRI"
+      },
+      "type_source": "required_document_set",
+      "type_target": "document_component",
+      "relation": "bao_gồm"
     },
     {
-      "source": "Giấy tờ tùy thân",
-      "target": "hồ sơ",
-      "relation": "là",
-      "type_source": "personal_document",
-      "type_target": "document"
+      "source": {
+        "name": "Hồ sơ điều trị thương tật",
+        "document_set_type": "medical_records",
+        "certification_requirement": "đóng mộc của Bệnh viện/cơ sở y tế",
+        "copy_specification": "01 bản chính"
+      },
+      "target": {
+        "name": "đơn thuốc",
+        "document_category": "medical_prescription_document",
+        "origin_institution_type": "Bệnh viện/cơ sở y tế"
+      },
+      "type_source": "required_document_set",
+      "type_target": "document_component",
+      "relation": "bao_gồm"
     },
     {
-      "source": "CCCD",
-      "target": "Giấy tờ tùy thân",
-      "relation": "là",
-      "type_source": "id_card",
-      "type_target": "personal_document"
+      "source": {
+        "name": "Hồ sơ điều trị thương tật",
+        "document_set_type": "medical_records",
+        "certification_requirement": "đóng mộc của Bệnh viện/cơ sở y tế",
+        "copy_specification": "01 bản chính"
+      },
+      "target": {
+        "name": "các hóa đơn (điều trị thương tật)",
+        "document_category": "invoice_document",
+        "service_description": "điều trị thương tật"
+      },
+      "type_source": "required_document_set",
+      "type_target": "document_component",
+      "relation": "bao_gồm"
     },
     {
-      "source": "CCCD",
-      "target": "01 bản photo",
-      "relation": "số_lượng",
-      "type_source": "id_card",
-      "type_target": "quantity"
+      "source": {
+        "name": "Hồ sơ điều trị thương tật",
+        "document_set_type": "medical_records",
+        "certification_action": "đóng mộc",
+        "copy_specification": "01 bản chính"
+      },
+      "target": {
+        "name": "Bệnh viện/cơ sở y tế",
+        "role": "chứng thực hồ sơ y tế",
+        "type_of_organization": "health_care_provider"
+      },
+      "type_source": "required_document_set",
+      "type_target": "organization",
+      "relation": "cần_chứng_thực_bởi"
     },
     {
-      "source": "Giấy tờ phương tiện giao thông",
-      "target": "hồ sơ",
-      "relation": "là",
-      "type_source": "vehicle_document",
-      "type_target": "document"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường (tử vong do TNGT)",
+        "case_type_covered": "tử vong do tai nạn giao thông",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "Biên bản tại nạn giao thông (tử vong)",
+        "document_category": "official_accident_report",
+        "certification_requirement": "xác nhận của chính quyền",
+        "copy_specification": "bản chính"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "Giấy tờ phương tiện giao thông",
-      "target": "xe máy",
-      "relation": "cho_trường_hợp",
-      "type_source": "vehicle_document",
-      "type_target": "vehicle_type"
+      "source": {
+        "name": "Biên bản tại nạn giao thông (tử vong)",
+        "document_category": "official_accident_report",
+        "certification_action": "xác nhận",
+        "copy_specification": "bản chính"
+      },
+      "target": {
+        "name": "chính quyền",
+        "role": "xác nhận biên bản tai nạn",
+        "type_of_authority": "local_government_authority"
+      },
+      "type_source": "required_document",
+      "type_target": "authority",
+      "relation": "cần_chứng_thực_bởi"
     },
     {
-      "source": "Giấy tờ phương tiện giao thông",
-      "target": "ô tô",
-      "relation": "cho_trường_hợp",
-      "type_source": "vehicle_document",
-      "type_target": "vehicle_type"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường (tử vong do TNGT)",
+        "case_type_covered": "tử vong do tai nạn giao thông",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "Giấy chứng tử",
+        "document_category": "death_certificate",
+        "copy_specification": "bản chính",
+        "issuing_authority_type": "official"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "giấy phép lái xe",
-      "target": "Giấy tờ phương tiện giao thông",
-      "relation": "là",
-      "type_source": "driving_license",
-      "type_target": "vehicle_document"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường (tử vong do TNGT)",
+        "case_type_covered": "tử vong do tai nạn giao thông",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "Ủy quyền thừa kế",
+        "document_category": "inheritance_authorization_document",
+        "copy_specification": "bản chính",
+        "legal_nature": "ủy quyền"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "cà vẹt xe",
-      "target": "Giấy tờ phương tiện giao thông",
-      "relation": "là",
-      "type_source": "vehicle_registration_certificate",
-      "type_target": "vehicle_document"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường (tử vong do TNGT)",
+        "case_type_covered": "tử vong do tai nạn giao thông",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "Kết quả nồng độ cồn",
+        "document_category": "alcohol_test_result_document",
+        "copy_specification": "bản chính",
+        "purpose": "xác định tình trạng khi tai nạn"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "giấy phép lái xe",
-      "target": "01 bản photo",
-      "relation": "số_lượng",
-      "type_source": "driving_license",
-      "type_target": "quantity"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tai nạn sinh hoạt",
+        "case_type_covered": "tai nạn sinh hoạt",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "Giấy yêu cầu trả tiền bảo hiểm",
+        "document_category": "form",
+        "template_provider": "Phòng Công tác sinh viên",
+        "submission_format": "theo mẫu"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "cà vẹt xe",
-      "target": "01 bản photo",
-      "relation": "số_lượng",
-      "type_source": "vehicle_registration_certificate",
-      "type_target": "quantity"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tai nạn sinh hoạt",
+        "case_type_covered": "tai nạn sinh hoạt",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "biên bản tường trình tai nạn",
+        "document_category": "report",
+        "template_provider": "Phòng Công tác sinh viên",
+        "submission_format": "theo mẫu"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "Hồ sơ điều trị thương tật",
-      "target": "hồ sơ",
-      "relation": "là",
-      "type_source": "medical_record",
-      "type_target": "document"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tai nạn sinh hoạt",
+        "case_type_covered": "tai nạn sinh hoạt",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "CCCD",
+        "document_category": "giấy tờ tùy thân",
+        "copy_specification": "01 bản photo",
+        "issuer": "Cơ quan nhà nước có thẩm quyền"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "giấy ra viện",
-      "target": "Hồ sơ điều trị thương tật",
-      "relation": "là",
-      "type_source": "discharge_certificate",
-      "type_target": "medical_record"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tai nạn sinh hoạt",
+        "case_type_covered": "tai nạn sinh hoạt",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "Hồ sơ điều trị thương tật",
+        "document_set_type": "medical_records",
+        "certification_requirement": "đóng mộc của Bệnh viện/cơ sở y tế",
+        "copy_specification": "01 bản chính"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document_set",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "giấy phẫu thuật",
-      "target": "Hồ sơ điều trị thương tật",
-      "relation": "là",
-      "type_source": "surgery_report",
-      "type_target": "medical_record"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tiêm ngừa bệnh dại",
+        "case_type_covered": "tiêm ngừa bệnh dại",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "Giấy yêu cầu trả tiền bảo hiểm",
+        "document_category": "form",
+        "template_provider": "Phòng Công tác sinh viên",
+        "submission_format": "theo mẫu"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "phim X.quang",
-      "target": "Hồ sơ điều trị thương tật",
-      "relation": "là",
-      "type_source": "x_ray_film",
-      "type_target": "medical_record"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tiêm ngừa bệnh dại",
+        "case_type_covered": "tiêm ngừa bệnh dại",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "biên bản tường trình tai nạn",
+        "document_category": "report",
+        "template_provider": "Phòng Công tác sinh viên",
+        "submission_format": "theo mẫu"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "phim MRI",
-      "target": "Hồ sơ điều trị thương tật",
-      "relation": "là",
-      "type_source": "mri_film",
-      "type_target": "medical_record"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tiêm ngừa bệnh dại",
+        "case_type_covered": "tiêm ngừa bệnh dại",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "CCCD",
+        "document_category": "giấy tờ tùy thân",
+        "copy_specification": "01 bản photo",
+        "issuer": "Cơ quan nhà nước có thẩm quyền"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "đơn thuốc",
-      "target": "Hồ sơ điều trị thương tật",
-      "relation": "là",
-      "type_source": "prescription",
-      "type_target": "medical_record"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tiêm ngừa bệnh dại",
+        "case_type_covered": "tiêm ngừa bệnh dại",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "Sổ tiêm ngừa bệnh dại",
+        "document_category": "vaccination_record_book",
+        "copy_specification": "01 bản chính",
+        "content_description": "ghi chép lịch sử tiêm ngừa"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "hóa đơn",
-      "target": "Hồ sơ điều trị thương tật",
-      "relation": "là",
-      "type_source": "invoice",
-      "type_target": "medical_record"
+      "source": {
+        "name": "Hồ sơ yêu cầu bồi thường cho tiêm ngừa bệnh dại",
+        "case_type_covered": "tiêm ngừa bệnh dại",
+        "objective": "xin bồi thường bảo hiểm"
+      },
+      "target": {
+        "name": "các hóa đơn (tiêm ngừa bệnh dại)",
+        "document_category": "invoice_document",
+        "service_description": "tiêm ngừa bệnh dại",
+        "certification_requirement": "đóng mộc của Bệnh viện/cơ sở y tế",
+        "copy_specification": "01 bản chính"
+      },
+      "type_source": "claim_documents_set",
+      "type_target": "required_document",
+      "relation": "yêu_cầu"
     },
     {
-      "source": "giấy ra viện",
-      "target": "Bệnh viện",
-      "relation": "của",
-      "type_source": "discharge_certificate",
-      "type_target": "hospital"
+      "source": {
+        "name": "các hóa đơn (tiêm ngừa bệnh dại)",
+        "document_category": "invoice_document",
+        "certification_action": "đóng mộc",
+        "copy_specification": "01 bản chính"
+      },
+      "target": {
+        "name": "Bệnh viện/cơ sở y tế",
+        "role": "chứng thực hóa đơn y tế",
+        "type_of_organization": "health_care_provider"
+      },
+      "type_source": "required_document",
+      "type_target": "organization",
+      "relation": "cần_chứng_thực_bởi"
     },
     {
-      "source": "giấy ra viện",
-      "target": "cơ sở y tế",
-      "relation": "của",
-      "type_source": "discharge_certificate",
-      "type_target": "medical_facility"
+      "source": {
+        "name": "trường hợp tai nạn khác",
+        "description": "Các trường hợp tai nạn không được liệt kê cụ thể",
+        "guidance_needed": "thủ tục bồi thường"
+      },
+      "target": {
+        "name": "Phòng Công tác sinh viên",
+        "role": "hướng dẫn thủ tục cho trường hợp đặc biệt",
+        "contact_method": "liên hệ trực tiếp"
+      },
+      "type_source": "case_type_other",
+      "type_target": "organization_department",
+      "relation": "cần_liên_hệ"
     },
     {
-      "source": "giấy ra viện",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "discharge_certificate",
-      "type_target": "quantity"
-    },
-        {
-      "source": "giấy phẫu thuật",
-      "target": "Bệnh viện",
-      "relation": "của",
-      "type_source": "surgery_report",
-      "type_target": "hospital"
-    },
-    {
-      "source": "giấy phẫu thuật",
-      "target": "cơ sở y tế",
-      "relation": "của",
-      "type_source": "surgery_report",
-      "type_target": "medical_facility"
-    },
-    {
-      "source": "giấy phẫu thuật",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "surgery_report",
-      "type_target": "quantity"
-    },
-        {
-      "source": "phim X.quang",
-      "target": "Bệnh viện",
-      "relation": "của",
-      "type_source": "x_ray_film",
-      "type_target": "hospital"
-    },
-    {
-      "source": "phim X.quang",
-      "target": "cơ sở y tế",
-      "relation": "của",
-      "type_source": "x_ray_film",
-      "type_target": "medical_facility"
-    },
-    {
-      "source": "phim X.quang",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "x_ray_film",
-      "type_target": "quantity"
-    },
-        {
-      "source": "phim MRI",
-      "target": "Bệnh viện",
-      "relation": "của",
-      "type_source": "mri_film",
-      "type_target": "hospital"
-    },
-    {
-      "source": "phim MRI",
-      "target": "cơ sở y tế",
-      "relation": "của",
-      "type_source": "mri_film",
-      "type_target": "medical_facility"
-    },
-    {
-      "source": "phim MRI",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "mri_film",
-      "type_target": "quantity"
-    },
-        {
-      "source": "đơn thuốc",
-      "target": "Bệnh viện",
-      "relation": "của",
-      "type_source": "prescription",
-      "type_target": "hospital"
-    },
-    {
-      "source": "đơn thuốc",
-      "target": "cơ sở y tế",
-      "relation": "của",
-      "type_source": "prescription",
-      "type_target": "medical_facility"
-    },
-    {
-      "source": "đơn thuốc",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "prescription",
-      "type_target": "quantity"
-    },
-        {
-      "source": "hóa đơn",
-      "target": "Bệnh viện",
-      "relation": "của",
-      "type_source": "invoice",
-      "type_target": "hospital"
-    },
-    {
-      "source": "hóa đơn",
-      "target": "cơ sở y tế",
-      "relation": "của",
-      "type_source": "invoice",
-      "type_target": "medical_facility"
-    },
-    {
-      "source": "hóa đơn",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "invoice",
-      "type_target": "quantity"
-    },
-    {
-      "source": "tử vong",
-      "target": "Biên bản tại nạn giao thông",
-      "relation": "trường_hợp",
-      "type_source": "death",
-      "type_target": "traffic_accident_report"
-    },
-    {
-      "source": "Biên bản tại nạn giao thông",
-      "target": "xác nhận của chính quyền",
-      "relation": "có",
-      "type_source": "traffic_accident_report",
-      "type_target": "government_confirmation"
-    },
-    {
-      "source": "tử vong",
-      "target": "Giấy chứng tử",
-      "relation": "trường_hợp",
-      "type_source": "death",
-      "type_target": "death_certificate"
-    },
-    {
-      "source": "tử vong",
-      "target": "Ủy quyền thừa kế",
-      "relation": "trường_hợp",
-      "type_source": "death",
-      "type_target": "inheritance_authorization"
-    },
-    {
-      "source": "tử vong",
-      "target": "Kết quả nồng độ cồn",
-      "relation": "trường_hợp",
-      "type_source": "death",
-      "type_target": "blood_alcohol_content_result"
-    },
-    {
-      "source": "Biên bản tại nạn giao thông",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "traffic_accident_report",
-      "type_target": "quantity"
-    },
-    {
-      "source": "Giấy chứng tử",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "death_certificate",
-      "type_target": "quantity"
-    },
-    {
-      "source": "Ủy quyền thừa kế",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "inheritance_authorization",
-      "type_target": "quantity"
-    },
-    {
-      "source": "Kết quả nồng độ cồn",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "blood_alcohol_content_result",
-      "type_target": "quantity"
-    },
-    {
-      "source": "Sổ tiêm ngừa bệnh dại",
-      "target": "hồ sơ",
-      "relation": "là",
-      "type_source": "vaccination_record",
-      "type_target": "document"
-    },
-    {
-      "source": "Sổ tiêm ngừa bệnh dại",
-      "target": "01 bản chính",
-      "relation": "số_lượng",
-      "type_source": "vaccination_record",
-      "type_target": "quantity"
-    },
-     {
-      "source": "Sổ tiêm ngừa bệnh dại",
-      "target": "Bệnh viện",
-      "relation": "của",
-      "type_source": "vaccination_record",
-      "type_target": "hospital"
-    },
-    {
-      "source": "Sổ tiêm ngừa bệnh dại",
-      "target": "cơ sở y tế",
-      "relation": "của",
-      "type_source": "vaccination_record",
-      "type_target": "medical_facility"
-    },
-     {
-      "source": "hóa đơn",
-      "target": "Sổ tiêm ngừa bệnh dại",
-      "relation": "của",
-      "type_source": "invoice",
-      "type_target": "vaccination_record"
-    },
-     {
-      "source": "hóa đơn",
-      "target": "Bệnh viện",
-      "relation": "của",
-      "type_source": "invoice",
-      "type_target": "hospital"
-    },
-    {
-      "source": "hóa đơn",
-      "target": "cơ sở y tế",
-      "relation": "của",
-      "type_source": "invoice",
-      "type_target": "medical_facility"
-    },
-    {
-      "source": "tai nạn khác",
-      "target": "Phòng Công tác sinh viên",
-      "relation": "liên_hệ",
-      "type_source": "other_accident",
-      "type_target": "department"
-    },
-    {
-      "source": "Phòng Công tác sinh viên",
-      "target": "hướng dẫn cụ thể",
-      "relation": "để_được",
-      "type_source": "department",
-      "type_target": "specific_guidance"
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "role": "hướng dẫn thủ tục cho trường hợp đặc biệt",
+        "service_offered": "hướng dẫn cụ thể về hồ sơ"
+      },
+      "target": {
+        "name": "trường hợp tai nạn khác",
+        "description": "Các trường hợp tai nạn không được liệt kê cụ thể",
+        "status": "cần hướng dẫn"
+      },
+      "type_source": "organization_department",
+      "type_target": "case_type_other",
+      "relation": "hướng_dẫn_cho"
     }
   ]
 }

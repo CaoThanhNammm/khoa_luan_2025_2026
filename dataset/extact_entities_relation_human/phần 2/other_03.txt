@@ -1,72 +1,95 @@
 {
-  "entities": [
-    {
-      "name": "hiến máu tình nguyện",
-      "type": "BLOOD_DONATION"
-    },
-    {
-      "name": "02 lần",
-      "type": "FREQUENCY"
-    },
-    {
-      "name": "năm",
-      "type": "YEAR"
-    },
-    {
-      "name": "Câu lạc bộ",
-      "type": "CLUB"
-    },
-    {
-      "name": "đội",
-      "type": "TEAM"
-    },
-    {
-      "name": "nhóm tuyên truyền, vận động hiến máu tình nguyện",
-      "type": "BLOOD_DONATION_GROUP"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "hiến máu tình nguyện",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "BLOOD_DONATION"
+      "source": {
+        "name": "Hiến máu tình nguyện",
+        "type": "volunteer_activity",
+        "description": "Hoạt động hiến máu tình nguyện",
+        "context_note": "Một trong các lựa chọn để đáp ứng tiêu chí chưa được đặt tên cụ thể",
+        "nature_of_activity": "Hành động trực tiếp"
+      },
+      "target": {
+        "name": "Tần suất tham gia: Ít nhất 02 lần/năm",
+        "type": "frequency_condition",
+        "minimum_occurrences": "02 lần",
+        "time_period": "Trong năm",
+        "applicability": "Điều kiện đối với hoạt động hiến máu tình nguyện"
+      },
+      "type_source": "volunteer_activity",
+      "type_target": "frequency_condition",
+      "relation": "có_điều_kiện_tần_suất_là"
     },
     {
-      "source": "hiến máu tình nguyện",
-      "target": "02 lần",
-      "relation": "ít_nhất",
-      "type_source": "BLOOD_DONATION",
-      "type_target": "FREQUENCY"
+      "source": {
+        "name": "Câu lạc bộ tuyên truyền, vận động hiến máu tình nguyện",
+        "type": "organization",
+        "organization_category": "Câu lạc bộ",
+        "primary_focus": "Tuyên truyền, vận động hiến máu tình nguyện",
+        "context_note": "Một trong các lựa chọn để đáp ứng tiêu chí chưa được đặt tên cụ thể thông qua tham gia"
+      },
+      "target": {
+        "name": "Mức độ tham gia: Tích cực",
+        "type": "intensity_condition",
+        "required_level": "Tích cực",
+        "applicability": "Điều kiện đối với việc tham gia Câu lạc bộ hoặc Đội/Nhóm tuyên truyền hiến máu"
+      },
+      "type_source": "organization",
+      "type_target": "intensity_condition",
+      "relation": "yêu_cầu_mức_độ_tham_gia_là"
     },
     {
-      "source": "02 lần",
-      "target": "năm",
-      "relation": "trong",
-      "type_source": "FREQUENCY",
-      "type_target": "YEAR"
+      "source": {
+        "name": "Các đội, nhóm tuyên truyền, vận động hiến máu tình nguyện",
+        "type": "organization_group",
+        "group_category": "Đội, nhóm",
+        "primary_focus": "Tuyên truyền, vận động hiến máu tình nguyện",
+        "context_note": "Một trong các lựa chọn để đáp ứng tiêu chí chưa được đặt tên cụ thể thông qua tham gia"
+      },
+      "target": {
+        "name": "Mức độ tham gia: Tích cực",
+        "type": "intensity_condition",
+        "required_level": "Tích cực",
+        "applicability": "Điều kiện đối với việc tham gia Câu lạc bộ hoặc Đội/Nhóm tuyên truyền hiến máu"
+      },
+      "type_source": "organization_group",
+      "type_target": "intensity_condition",
+      "relation": "yêu_cầu_mức_độ_tham_gia_là"
     },
     {
-      "source": "sinh viên",
-      "target": "Câu lạc bộ",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "CLUB"
+      "source": {
+        "name": "Câu lạc bộ tuyên truyền, vận động hiến máu tình nguyện",
+        "type": "organization",
+        "organization_category": "Câu lạc bộ",
+        "primary_focus": "Tuyên truyền, vận động hiến máu tình nguyện",
+        "role_description": "Tổ chức hỗ trợ và khuyến khích hiến máu"
+      },
+      "target": {
+        "name": "Hiến máu tình nguyện",
+        "type": "volunteer_activity_domain",
+        "description": "Lĩnh vực hoạt động được Câu lạc bộ hỗ trợ",
+        "relevance": "Đối tượng của hoạt động tuyên truyền và vận động"
+      },
+      "type_source": "organization",
+      "type_target": "volunteer_activity_domain",
+      "relation": "tuyên_truyền_vận_động_cho"
     },
     {
-      "source": "sinh viên",
-      "target": "đội",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "TEAM"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nhóm tuyên truyền, vận động hiến máu tình nguyện",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "BLOOD_DONATION_GROUP"
+      "source": {
+        "name": "Các đội, nhóm tuyên truyền, vận động hiến máu tình nguyện",
+        "type": "organization_group",
+        "group_category": "Đội, nhóm",
+        "primary_focus": "Tuyên truyền, vận động hiến máu tình nguyện",
+        "role_description": "Tập thể hỗ trợ và khuyến khích hiến máu"
+      },
+      "target": {
+        "name": "Hiến máu tình nguyện",
+        "type": "volunteer_activity_domain",
+        "description": "Lĩnh vực hoạt động được Đội/Nhóm hỗ trợ",
+        "relevance": "Đối tượng của hoạt động tuyên truyền và vận động"
+      },
+      "type_source": "organization_group",
+      "type_target": "volunteer_activity_domain",
+      "relation": "tuyên_truyền_vận_động_cho"
     }
   ]
 }

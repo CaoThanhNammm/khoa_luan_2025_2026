@@ -1,167 +1,144 @@
 {
-  "entities": [
-    {
-      "name": "Sinh viên",
-      "type": "person_type"
-    },
-    {
-      "name": "Hộ gia đình",
-      "type": "group"
-    },
-    {
-      "name": "Địa phương nơi cho vay",
-      "type": "location"
-    },
-    {
-      "name": "Sinh viên năm thứ nhất",
-      "type": "person_type"
-    },
-    {
-      "name": "Giấy báo trúng tuyển",
-      "type": "document"
-    },
-    {
-      "name": "Giấy xác nhận được vào học",
-      "type": "document"
-    },
-    {
-      "name": "Nhà trường",
-      "type": "organization"
-    },
-    {
-      "name": "Sinh viên năm thứ hai trở đi",
-      "type": "person_type"
-    },
-    {
-      "name": "Giấy xác nhận của trường",
-      "type": "document"
-    },
-    {
-      "name": "Cờ bạc",
-      "type": "illegal_act"
-    },
-    {
-      "name": "Nghiện hút",
-      "type": "illegal_act"
-    },
-    {
-      "name": "Trộm cắp",
-      "type": "illegal_act"
-    },
-    {
-      "name": "Buôn lậu",
-      "type": "illegal_act"
-    },
-    {
-      "name": "Vi phạm hành chính",
-      "type": "legal_issue"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh viên",
-      "target": "Hộ gia đình",
-      "type_source": "person_type",
-      "type_target": "group",
+      "source": {
+        "name": "Sinh viên",
+        "living_status": "đang sinh sống trong hộ gia đình",
+        "residence_legality_context": "cư trú hợp pháp tại địa phương nơi cho vay",
+        "loan_eligibility_dependency": "đủ các tiêu chuẩn về đối tượng được hỗ trợ vay vốn"
+      },
+      "target": {
+        "name": "Hộ gia đình",
+        "residence_status": "cư trú hợp pháp",
+        "location_detail": "tại địa phương nơi cho vay"
+      },
+      "type_source": "student",
+      "type_target": "household",
       "relation": "sinh_sống_trong"
     },
     {
-      "source": "Hộ gia đình",
-      "target": "Địa phương nơi cho vay",
-      "type_source": "group",
-      "type_target": "location",
-      "relation": "cư_trú_tại"
+      "source": {
+        "name": "Sinh viên",
+        "living_arrangement_info": "đang sinh sống trong hộ gia đình cư trú hợp pháp tại địa phương nơi cho vay",
+        "loan_category": "đối tượng được hỗ trợ vay vốn"
+      },
+      "target": {
+        "name": "Tiêu chuẩn về đối tượng được hỗ trợ vay vốn",
+        "fulfillment_condition": "đủ các tiêu chuẩn",
+        "applies_to": "đối tượng được hỗ trợ vay vốn"
+      },
+      "type_source": "student",
+      "type_target": "standard",
+      "relation": "phải_đáp_ứng"
     },
     {
-      "source": "Sinh viên năm thứ nhất",
-      "target": "Giấy báo trúng tuyển",
-      "type_source": "person_type",
+      "source": {
+        "name": "Sinh viên năm thứ nhất",
+        "academic_year": "năm thứ nhất",
+        "document_requirement_option_1": "giấy báo trúng tuyển"
+      },
+      "target": {
+        "name": "Giấy báo trúng tuyển",
+        "document_purpose": "báo trúng tuyển",
+        "recipient_student_year": "năm thứ nhất"
+      },
+      "type_source": "student",
       "type_target": "document",
-      "relation": "cần_có"
+      "relation": "phải_có"
     },
     {
-      "source": "Sinh viên năm thứ nhất",
-      "target": "Giấy xác nhận được vào học",
-      "type_source": "person_type",
+      "source": {
+        "name": "Sinh viên năm thứ nhất",
+        "academic_year": "năm thứ nhất",
+        "document_requirement_option_2": "giấy xác nhận được vào học của nhà trường"
+      },
+      "target": {
+        "name": "Giấy xác nhận được vào học của nhà trường",
+        "confirmation_content": "được vào học",
+        "issuer_identifier": "của nhà trường"
+      },
+      "type_source": "student",
       "type_target": "document",
-      "relation": "cần_có"
+      "relation": "phải_có"
     },
     {
-      "source": "Giấy báo trúng tuyển",
-      "target": "Nhà trường",
+      "source": {
+        "name": "Giấy xác nhận được vào học của nhà trường",
+        "confirmation_content": "được vào học",
+        "issuer_text_reference": "của nhà trường"
+      },
+      "target": {
+        "name": "Nhà trường",
+        "issuing_role": "cấp giấy xác nhận",
+        "document_name_issued": "giấy xác nhận được vào học"
+      },
       "type_source": "document",
-      "type_target": "organization",
+      "type_target": "educational_institution",
       "relation": "cấp_bởi"
     },
     {
-      "source": "Giấy xác nhận được vào học",
-      "target": "Nhà trường",
-      "type_source": "document",
-      "type_target": "organization",
-      "relation": "cấp_bởi"
-    },
-    {
-      "source": "Sinh viên năm thứ hai trở đi",
-      "target": "Giấy xác nhận của trường",
-      "type_source": "person_type",
+      "source": {
+        "name": "Sinh viên năm thứ hai trở đi",
+        "academic_status": "năm thứ hai trở đi",
+        "document_requirement": "giấy xác nhận của trường"
+      },
+      "target": {
+        "name": "Giấy xác nhận của trường",
+        "issuer_identifier": "của trường",
+        "first_confirmation_detail": "về việc đang theo học tại trường",
+        "second_confirmation_detail": "không bị xử phạt vi phạm hành chính trở lên với các hành vi: cờ bạc, nghiện hút, trộm cắp và buôn lậu"
+      },
+      "type_source": "student",
       "type_target": "document",
-      "relation": "cần_có"
+      "relation": "phải_có"
     },
     {
-      "source": "Giấy xác nhận của trường",
-      "target": "Nhà trường",
+      "source": {
+        "name": "Giấy xác nhận của trường",
+        "issuer_text_reference": "của trường",
+        "confirms_study_status": "việc đang theo học tại trường",
+        "confirms_no_penalty_status": "không bị xử phạt vi phạm hành chính trở lên với các hành vi cụ thể"
+      },
+      "target": {
+        "name": "Trường",
+        "issuing_role": "cấp giấy xác nhận",
+        "document_content_scope": "xác nhận đang theo học và không bị xử phạt"
+      },
       "type_source": "document",
-      "type_target": "organization",
+      "type_target": "educational_institution",
       "relation": "cấp_bởi"
     },
     {
-      "source": "Sinh viên năm thứ hai trở đi",
-      "target": "Vi phạm hành chính",
-      "type_source": "person_type",
-      "type_target": "legal_issue",
-      "relation": "không_bị_xử_phạt"
+      "source": {
+        "name": "Sinh viên năm thứ hai trở đi",
+        "academic_status": "năm thứ hai trở đi",
+        "behavioral_condition": "không bị xử phạt vi phạm hành chính trở lên"
+      },
+      "target": {
+        "name": "Xử phạt vi phạm hành chính",
+        "severity_threshold": "trở lên",
+        "related_prohibited_acts": "cờ bạc, nghiện hút, trộm cắp và buôn lậu"
+      },
+      "type_source": "student",
+      "type_target": "administrative_penalty",
+      "relation": "phải_không_bị"
     },
     {
-       "source": "Vi phạm hành chính",
-       "target": "Cờ bạc",
-       "type_source": "legal_issue",
-       "type_target": "illegal_act",
-       "relation": "liên_quan_đến"
-    },
-    {
-       "source": "Vi phạm hành chính",
-       "target": "Nghiện hút",
-       "type_source": "legal_issue",
-       "type_target": "illegal_act",
-       "relation": "liên_quan_đến"
-    },
-    {
-       "source": "Vi phạm hành chính",
-       "target": "Trộm cắp",
-       "type_source": "legal_issue",
-       "type_target": "illegal_act",
-       "relation": "liên_quan_đến"
-    },
-    {
-       "source": "Vi phạm hành chính",
-       "target": "Buôn lậu",
-       "type_source": "legal_issue",
-       "type_target": "illegal_act",
-       "relation": "liên_quan_đến"
-    },
-    {
-        "source": "Sinh viên năm thứ nhất",
-        "target": "Sinh viên",
-        "type_source": "person_type",
-        "type_target": "person_type",
-        "relation": "là_loại_của"
-    },
-    {
-        "source": "Sinh viên năm thứ hai trở đi",
-        "target": "Sinh viên",
-        "type_source": "person_type",
-        "type_target": "person_type",
-        "relation": "là_loại_của"
+      "source": {
+        "name": "Xử phạt vi phạm hành chính",
+        "penalty_level": "trở lên",
+        "context_of_application": "đối với sinh viên"
+      },
+      "target": {
+        "name": "Các hành vi: cờ bạc, nghiện hút, trộm cắp và buôn lậu",
+        "act_1_name": "cờ bạc",
+        "act_2_name": "nghiện hút",
+        "act_3_name": "trộm cắp",
+        "act_4_name": "buôn lậu"
+      },
+      "type_source": "administrative_penalty",
+      "type_target": "prohibited_behavior_group",
+      "relation": "áp_dụng_cho_hành_vi"
     }
   ]
 }

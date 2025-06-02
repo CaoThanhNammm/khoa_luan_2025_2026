@@ -1,555 +1,304 @@
 {
-  "entities": [
-    {
-      "name": "sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "Bảo hiểm y tế",
-      "type": "health_insurance"
-    },
-    {
-      "name": "Luật Bảo hiểm y tế 2008",
-      "type": "law"
-    },
-    {
-      "name": "năm 2014",
-      "type": "date"
-    },
-    {
-      "name": "trường",
-      "type": "school"
-    },
-    {
-      "name": "nhà nước",
-      "type": "government"
-    },
-    {
-      "name": "Bảo hiểm y tế",
-      "type": "health_insurance"
-    },
-    {
-      "name": "chế độ",
-      "type": "policy"
-    },
-    {
-      "name": "đối tượng chính sách",
-      "type": "policy_beneficiary"
-    },
-    {
-      "name": "thẻ bảo hiểm y tế",
-      "type": "health_insurance_card"
-    },
-    {
-      "name": "CN",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "BT",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "HN",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "DT",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "DK",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "XD",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "TS",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "TC",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "TQ",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "TV",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "TA",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "TY",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "HG",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "PV",
-      "type": "health_insurance_code"
-    },
-    {
-      "name": "quy định",
-      "type": "regulation"
-    },
-    {
-      "name": "Mức đóng Bảo hiểm y tế",
-      "type": "health_insurance_premium"
-    },
-    {
-      "name": "4,5%",
-      "type": "percentage"
-    },
-    {
-      "name": "mức lương cơ sở",
-      "type": "basic_salary"
-    },
-    {
-      "name": "số tháng",
-      "type": "duration_month"
-    },
-    {
-      "name": "70%",
-      "type": "percentage"
-    },
-    {
-      "name": "Mức lương cơ sở hàng năm",
-      "type": "annual_basic_salary"
-    },
-    {
-      "name": "Quốc hội",
-      "type": "organization"
-    },
-    {
-      "name": "Các bước làm Bảo hiểm y tế",
-      "type": "health_insurance_steps"
-    },
-    {
-      "name": "Bước 1",
-      "type": "step_number"
-    },
-    {
-      "name": "Đóng tiền",
-      "type": "payment"
-    },
-    {
-      "name": "thông báo",
-      "type": "notification"
-    },
-    {
-      "name": "Bước 2",
-      "type": "step_number"
-    },
-    {
-      "name": "địa chỉ link",
-      "type": "address"
-    },
-    {
-      "name": "https://bhytsv.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "kê khai thông tin",
-      "type": "information_declaration"
-    },
-    {
-      "name": "email sinh viên",
-      "type": "student_email"
-    },
-    {
-      "name": "nhà trường",
-      "type": "school"
-    },
-    {
-      "name": "Bước 3",
-      "type": "step_number"
-    },
-    {
-      "name": "Kiểm tra email",
-      "type": "email_check"
-    },
-    {
-      "name": "thường xuyên",
-      "type": "frequency"
-    },
-    {
-      "name": "thông tin đối chiếu",
-      "type": "comparison_information"
-    },
-    {
-      "name": "kết quả",
-      "type": "result"
-    },
-    {
-      "name": "thẻ bảo hiểm y tế",
-      "type": "health_insurance_card"
-    },
-    {
-      "name": "Nhà nước",
-      "type": "government"
-    },
-    {
-      "name": "địa chỉ link",
-      "type": "address"
-    },
-    {
-      "name": "https://bhytsv.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Thời hạn sử dụng thẻ",
-      "type": "card_validity_period"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "link",
-      "type": "link"
-    },
-    {
-      "name": "baohiemxahoi.gov.vn",
-      "type": "website"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "Bảo hiểm y tế",
-      "relation": "tham_gia",
+      "source": {
+        "name": "Sinh viên",
+        "description": "Tất cả sinh viên",
+        "obligation_detail": "Bắt buộc tham gia Bảo hiểm y tế theo Luật",
+        "participation_location_context": "Tại trường"
+      },
+      "target": {
+        "name": "Bảo hiểm y tế",
+        "legal_reference": "Luật Bảo hiểm y tế 2008",
+        "amendment_info": "Sửa đổi, bổ sung năm 2014",
+        "status_for_student": "Bắt buộc"
+      },
       "type_source": "student",
-      "type_target": "health_insurance"
+      "type_target": "health_insurance_policy",
+      "relation": "bắt_buộc_tham_gia"
     },
     {
-      "source": "Bảo hiểm y tế",
-      "target": "Luật Bảo hiểm y tế 2008",
-      "relation": "theo_luật",
-      "type_source": "health_insurance",
-      "type_target": "law"
+      "source": {
+        "name": "Sinh viên",
+        "action_context": "Tham gia Bảo hiểm y tế",
+        "compliance_requirement": "Theo quy định của Luật Bảo hiểm y tế"
+      },
+      "target": {
+        "name": "trường",
+        "role_in_process": "Địa điểm sinh viên tham gia Bảo hiểm y tế",
+        "institutional_type": "Cơ sở giáo dục"
+      },
+      "type_source": "student",
+      "type_target": "educational_institution",
+      "relation": "tham_gia_bảo_hiểm_y_tế_tại"
     },
     {
-      "source": "Luật Bảo hiểm y tế 2008",
-      "target": "năm 2014",
-      "relation": "sửa_đổi_bổ_sung_năm",
+      "source": {
+        "name": "Bảo hiểm y tế",
+        "policy_nature": "Chính sách công về y tế",
+        "applicability_to_students": "Bắt buộc đối với sinh viên"
+      },
+      "target": {
+        "name": "Luật Bảo hiểm y tế 2008",
+        "document_type": "Văn bản pháp luật",
+        "year_of_enactment": "2008",
+        "modification_status": "Sửa đổi, bổ sung năm 2014"
+      },
+      "type_source": "health_insurance_policy",
+      "type_target": "law",
+      "relation": "quy_định_bởi"
+    },
+    {
+      "source": {
+        "name": "Luật Bảo hiểm y tế 2008",
+        "original_version_year": "2008",
+        "subject_area": "Bảo hiểm y tế"
+      },
+      "target": {
+        "name": "2014",
+        "event_description": "Năm sửa đổi, bổ sung Luật Bảo hiểm y tế 2008",
+        "type_of_event": "Cập nhật pháp lý"
+      },
       "type_source": "law",
-      "type_target": "date"
+      "type_target": "year",
+      "relation": "sửa_đổi_bổ_sung_năm"
     },
     {
-      "source": "sinh viên",
-      "target": "trường",
-      "relation": "tại",
+      "source": {
+        "name": "Nhà nước",
+        "issuing_authority_role": "Cơ quan cấp phát chính sách",
+        "policy_domain": "An sinh xã hội và y tế"
+      },
+      "target": {
+        "name": "Bảo hiểm y tế",
+        "recipient_group_description": "Sinh viên thuộc đối tượng chính sách",
+        "funding_mechanism": "Do Nhà nước cấp",
+        "basis_of_provision": "Theo chế độ dành cho đối tượng chính sách"
+      },
+      "type_source": "government_entity",
+      "type_target": "health_insurance_policy",
+      "relation": "cấp"
+    },
+    {
+      "source": {
+        "name": "Bảo hiểm y tế",
+        "provider_entity": "Nhà nước",
+        "provision_method": "Cấp theo chế độ",
+        "primary_beneficiary_type": "Sinh viên"
+      },
+      "target": {
+        "name": "đối tượng chính sách",
+        "benefit_type_received": "Bảo hiểm y tế do Nhà nước cấp",
+        "group_description": "Nhóm người hưởng chính sách ưu đãi của Nhà nước"
+      },
+      "type_source": "health_insurance_policy",
+      "type_target": "policy_beneficiary_group",
+      "relation": "dành_cho"
+    },
+    {
+      "source": {
+        "name": "thẻ bảo hiểm y tế",
+        "issuance_context_detail": "Cấp cho đối tượng chính sách bởi Nhà nước",
+        "card_purpose": "Chứng nhận quyền lợi Bảo hiểm y tế"
+      },
+      "target": {
+        "name": "CN",
+        "code_type": "Mã thẻ Bảo hiểm y tế",
+        "code_significance": "Ký hiệu phân loại đối tượng chính sách"
+      },
+      "type_source": "health_insurance_card",
+      "type_target": "insurance_card_code",
+      "relation": "có_mã"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "behavior_condition": "Không tham gia Bảo hiểm y tế",
+        "consequence_implication": "Vi phạm quy định hiện hành"
+      },
+      "target": {
+        "name": "quy định",
+        "regulatory_scope": "Xử lý trường hợp không tham gia Bảo hiểm y tế",
+        "compliance_nature": "Bắt buộc tuân thủ"
+      },
       "type_source": "student",
-      "type_target": "school"
+      "type_target": "regulation",
+      "relation": "chịu_xử_lý_theo"
     },
     {
-      "source": "sinh viên",
-      "target": "Bảo hiểm y tế",
-      "relation": "được_cấp",
+      "source": {
+        "name": "Mức đóng Bảo hiểm y tế",
+        "calculation_method": "Theo công thức quy định",
+        "payment_duration_basis": "Tính theo số tháng tham gia"
+      },
+      "target": {
+        "name": "4,5%",
+        "role_in_calculation": "Tỷ lệ phần trăm của mức lương cơ sở",
+        "value_nature": "Hằng số tỷ lệ"
+      },
+      "type_source": "insurance_premium_rule",
+      "type_target": "percentage_value",
+      "relation": "xác_định_bởi_thành_phần"
+    },
+    {
+      "source": {
+        "name": "Mức đóng Bảo hiểm y tế",
+        "calculation_method": "Theo công thức quy định",
+        "currency": "Việt Nam Đồng (ngầm định)"
+      },
+      "target": {
+        "name": "mức lương cơ sở",
+        "role_in_calculation": "Căn cứ để tính mức đóng Bảo hiểm y tế",
+        "determining_authority": "Quốc hội",
+        "update_schedule": "Hàng năm"
+      },
+      "type_source": "insurance_premium_rule",
+      "type_target": "base_salary_standard",
+      "relation": "xác_định_bởi_thành_phần"
+    },
+    {
+      "source": {
+        "name": "Mức đóng Bảo hiểm y tế",
+        "calculation_method": "Theo công thức quy định",
+        "relevance_to_student": "Khoản tiền sinh viên cần đóng"
+      },
+      "target": {
+        "name": "số tháng",
+        "role_in_calculation": "Yếu tố nhân thể hiện thời gian tham gia",
+        "measurement_unit": "Tháng"
+      },
+      "type_source": "insurance_premium_rule",
+      "type_target": "duration_factor",
+      "relation": "xác_định_bởi_thành_phần"
+    },
+    {
+      "source": {
+        "name": "Mức đóng Bảo hiểm y tế",
+        "calculation_method": "Theo công thức quy định",
+        "student_contribution_rate_info": "Sinh viên đóng 70% của mức tính"
+      },
+      "target": {
+        "name": "70%",
+        "role_in_calculation": "Hệ số áp dụng cho phần sinh viên đóng",
+        "value_nature": "Hằng số tỷ lệ"
+      },
+      "type_source": "insurance_premium_rule",
+      "type_target": "percentage_value",
+      "relation": "xác_định_bởi_thành_phần"
+    },
+    {
+      "source": {
+        "name": "Quốc hội",
+        "organizational_type": "Cơ quan lập pháp cao nhất",
+        "national_context": "Việt Nam",
+        "key_responsibility_area": "Quy định các chính sách kinh tế - xã hội quan trọng"
+      },
+      "target": {
+        "name": "mức lương cơ sở",
+        "application_scope": "Áp dụng trên toàn quốc",
+        "determination_frequency": "Hàng năm",
+        "primary_purpose": "Làm căn cứ tính lương và các khoản phụ cấp, trợ cấp"
+      },
+      "type_source": "government_organization",
+      "type_target": "base_salary_standard",
+      "relation": "quy_định"
+    },
+    {
+      "source": {
+        "name": "nhà trường",
+        "institutional_category": "Cơ sở giáo dục đại học",
+        "service_provision_role": "Cung cấp tài khoản email cho sinh viên"
+      },
+      "target": {
+        "name": "email sinh viên",
+        "intended_use": "Đăng nhập hệ thống kê khai BHYT và các dịch vụ khác của trường",
+        "account_provider": "Nhà trường",
+        "beneficiary": "Sinh viên"
+      },
+      "type_source": "educational_institution",
+      "type_target": "student_email_account",
+      "relation": "cấp"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "required_procedure": "Kê khai thông tin Bảo hiểm y tế",
+        "access_tool": "Email sinh viên do nhà trường cấp"
+      },
+      "target": {
+        "name": "https://bhytsv.hcmuaf.edu.vn",
+        "platform_function": "Kê khai thông tin Bảo hiểm y tế sinh viên",
+        "login_requirement_detail": "Đăng nhập bằng email sinh viên",
+        "website_operator_context": "Trường Đại học Nông Lâm TP.HCM (HCMUAF - implied)"
+      },
       "type_source": "student",
-      "type_target": "health_insurance"
+      "type_target": "website",
+      "relation": "kê_khai_thông_tin_tại"
     },
     {
-      "source": "Bảo hiểm y tế",
-      "target": "nhà nước",
-      "relation": "cấp_bởi",
-      "type_source": "health_insurance",
-      "type_target": "government"
-    },
-    {
-      "source": "Bảo hiểm y tế",
-      "target": "chế độ",
-      "relation": "theo_chế_độ",
-      "type_source": "health_insurance",
-      "type_target": "policy"
-    },
-    {
-      "source": "chế độ",
-      "target": "đối tượng chính sách",
-      "relation": "dành_cho",
-      "type_source": "policy",
-      "type_target": "policy_beneficiary"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "CN",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "BT",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "HN",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "DT",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "DK",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "XD",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "TS",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "TC",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "TQ",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "TV",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "TA",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "TY",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "HG",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "PV",
-      "relation": "mã",
-      "type_source": "health_insurance_card",
-      "type_target": "health_insurance_code"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Bảo hiểm y tế",
-      "relation": "không_tham_gia",
+      "source": {
+        "name": "Sinh viên",
+        "action_performed": "Đăng nhập vào cổng thông tin BHYT",
+        "target_platform_url": "https://bhytsv.hcmuaf.edu.vn"
+      },
+      "target": {
+        "name": "email sinh viên",
+        "credential_function": "Phương tiện xác thực để đăng nhập",
+        "issuing_body": "Nhà trường",
+        "usage_scenario": "Đăng nhập cổng BHYT sinh viên của trường"
+      },
       "type_source": "student",
-      "type_target": "health_insurance"
+      "type_target": "student_email_account",
+      "relation": "đăng_nhập_bằng"
     },
     {
-      "source": "sinh viên",
-      "target": "quy định",
-      "relation": "xử_lý_theo",
+      "source": {
+        "name": "Sinh viên",
+        "specific_condition": "Có thẻ bảo hiểm y tế do Nhà nước cấp",
+        "mandatory_action": "Cập nhật thông tin trên cổng thông tin của trường",
+        "update_trigger": "Theo yêu cầu hoặc khi có thay đổi thông tin"
+      },
+      "target": {
+        "name": "https://bhytsv.hcmuaf.edu.vn",
+        "platform_function_for_group": "Cập nhật thông tin BHYT do Nhà nước cấp",
+        "targeted_user_segment": "Sinh viên có thẻ BHYT do Nhà nước cấp",
+        "access_method_detail": "Đăng nhập bằng email sinh viên"
+      },
       "type_source": "student",
-      "type_target": "regulation"
+      "type_target": "website",
+      "relation": "bắt_buộc_cập_nhật_thông_tin_tại"
     },
     {
-      "source": "Mức đóng Bảo hiểm y tế",
-      "target": "4,5%",
-      "relation": "tính_theo",
-      "type_source": "health_insurance_premium",
-      "type_target": "percentage"
+      "source": {
+        "name": "Nhà nước",
+        "issuing_authority_role": "Cơ quan cấp phát thẻ BHYT",
+        "related_policy_instrument": "Thẻ Bảo hiểm y tế"
+      },
+      "target": {
+        "name": "thẻ bảo hiểm y tế",
+        "intended_recipient_group": "Sinh viên thuộc đối tượng chính sách",
+        "issuing_organization": "Nhà nước",
+        "relevance_to_update_process": "Thông tin thẻ cần được cập nhật trên cổng của trường"
+      },
+      "type_source": "government_entity",
+      "type_target": "health_insurance_card",
+      "relation": "cấp"
     },
     {
-      "source": "Mức đóng Bảo hiểm y tế",
-      "target": "mức lương cơ sở",
-      "relation": "tính_theo",
-      "type_source": "health_insurance_premium",
-      "type_target": "basic_salary"
-    },
-    {
-      "source": "Mức đóng Bảo hiểm y tế",
-      "target": "số tháng",
-      "relation": "nhân_với",
-      "type_source": "health_insurance_premium",
-      "type_target": "duration_month"
-    },
-    {
-      "source": "Mức đóng Bảo hiểm y tế",
-      "target": "70%",
-      "relation": "nhân_với",
-      "type_source": "health_insurance_premium",
-      "type_target": "percentage"
-    },
-    {
-      "source": "Mức lương cơ sở hàng năm",
-      "target": "Quốc hội",
-      "relation": "quy_định_bởi",
-      "type_source": "annual_basic_salary",
-      "type_target": "organization"
-    },
-    {
-      "source": "Bước 1",
-      "target": "Đóng tiền",
-      "relation": "là",
-      "type_source": "step_number",
-      "type_target": "payment"
-    },
-    {
-      "source": "Đóng tiền",
-      "target": "thông báo",
-      "relation": "theo",
-      "type_source": "payment",
-      "type_target": "notification"
-    },
-    {
-      "source": "Bước 2",
-      "target": "địa chỉ link",
-      "relation": "truy_cập_vào",
-      "type_source": "step_number",
-      "type_target": "address"
-    },
-    {
-      "source": "địa chỉ link",
-      "target": "https://bhytsv.hcmuaf.edu.vn",
-      "relation": "là",
-      "type_source": "address",
-      "type_target": "website"
-    },
-    {
-      "source": "địa chỉ link",
-      "target": "kê khai thông tin",
-      "relation": "để",
-      "type_source": "address",
-      "type_target": "information_declaration"
-    },
-    {
-      "source": "kê khai thông tin",
-      "target": "email sinh viên",
-      "relation": "bằng",
-      "type_source": "information_declaration",
-      "type_target": "student_email"
-    },
-    {
-      "source": "email sinh viên",
-      "target": "nhà trường",
-      "relation": "của",
-      "type_source": "student_email",
-      "type_target": "school"
-    },
-    {
-      "source": "Bước 3",
-      "target": "Kiểm tra email",
-      "relation": "là",
-      "type_source": "step_number",
-      "type_target": "email_check"
-    },
-    {
-      "source": "Kiểm tra email",
-      "target": "thường xuyên",
-      "relation": "thực_hiện",
-      "type_source": "email_check",
-      "type_target": "frequency"
-    },
-    {
-      "source": "Kiểm tra email",
-      "target": "thông tin đối chiếu",
-      "relation": "để_nhận",
-      "type_source": "email_check",
-      "type_target": "comparison_information"
-    },
-    {
-      "source": "Kiểm tra email",
-      "target": "kết quả",
-      "relation": "để_nhận",
-      "type_source": "email_check",
-      "type_target": "result"
-    },
-    {
-      "source": "sinh viên",
-      "target": "thẻ bảo hiểm y tế",
-      "relation": "có",
+      "source": {
+        "name": "Sinh viên",
+        "action_to_perform": "Tra cứu thông tin thẻ Bảo hiểm y tế",
+        "specific_information_needed": "Thời hạn sử dụng thẻ"
+      },
+      "target": {
+        "name": "baohiemxahoi.gov.vn",
+        "website_purpose": "Cổng tra cứu thông tin Bảo hiểm xã hội Việt Nam",
+        "service_provided_detail": "Tra cứu thời hạn sử dụng thẻ BHYT",
+        "domain_administrator_implied": "Bảo hiểm xã hội Việt Nam"
+      },
       "type_source": "student",
-      "type_target": "health_insurance_card"
-    },
-    {
-      "source": "thẻ bảo hiểm y tế",
-      "target": "Nhà nước",
-      "relation": "cấp_bởi",
-      "type_source": "health_insurance_card",
-      "type_target": "government"
-    },
-    {
-      "source": "sinh viên",
-      "target": "địa chỉ link",
-      "relation": "cập_nhật_thông_tin_tại",
-      "type_source": "student",
-      "type_target": "address"
-    },
-    {
-      "source": "địa chỉ link",
-      "target": "https://bhytsv.hcmuaf.edu.vn",
-      "relation": "là",
-      "type_source": "address",
-      "type_target": "website"
-    },
-    {
-      "source": "Thời hạn sử dụng thẻ",
-      "target": "Sinh viên",
-      "relation": "tra_cứu",
-      "type_source": "card_validity_period",
-      "type_target": "student"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "link",
-      "relation": "tra_cứu_tại",
-      "type_source": "student",
-      "type_target": "link"
-    },
-    {
-      "source": "link",
-      "target": "baohiemxahoi.gov.vn",
-      "relation": "là",
-      "type_source": "link",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "tra_cứu_thời_hạn_thẻ_tại"
     }
   ]
 }

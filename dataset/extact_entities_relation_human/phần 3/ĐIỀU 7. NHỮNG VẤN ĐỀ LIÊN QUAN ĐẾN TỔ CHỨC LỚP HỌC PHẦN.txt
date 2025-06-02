@@ -1,403 +1,384 @@
 {
-  "entities": [
-    {
-      "name": "vấn đề",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "tổ chức lớp học phần",
-      "type": "ACTION"
-    },
-    {
-      "name": "sai sót",
-      "type": "PROBLEM"
-    },
-    {
-      "name": "danh sách lớp học phần",
-      "type": "CLASS_LIST"
-    },
-    {
-      "name": "Trưởng phòng Đào tạo",
-      "type": "PERSON"
-    },
-    {
-      "name": "danh sách thứ nhất",
-      "type": "LIST"
-    },
-    {
-      "name": "danh sách bổ sung",
-      "type": "LIST"
-    },
-    {
-      "name": "quy định",
-      "type": "REGULATION"
-    },
-    {
-      "name": "đăng ký",
-      "type": "ACTION"
-    },
-    {
-      "name": "rút học phần",
-      "type": "ACTION"
-    },
-    {
-      "name": "sinh viên",
-      "type": "PERSON_GROUP"
-    },
-    {
-      "name": "đăng ký trực tuyến",
-      "type": "ACTION"
-    },
-    {
-      "name": "đơn đề nghị",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "bản in",
-      "type": "MEDIUM"
-    },
-    {
-      "name": "minh chứng",
-      "type": "EVIDENCE"
-    },
-    {
-      "name": "học phần",
-      "type": "COURSE"
-    },
-    {
-      "name": "cam kết",
-      "type": "ACTION"
-    },
-    {
-      "name": "trách nhiệm",
-      "type": "RESPONSIBILITY"
-    },
-    {
-      "name": "tính chính xác",
-      "type": "ACCURACY"
-    },
-    {
-      "name": "điều đề nghị",
-      "type": "REQUEST"
-    },
-    {
-      "name": "đơn",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "Phòng Đào tạo",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "nhà trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "kế hoạch",
-      "type": "PLAN"
-    },
-    {
-      "name": "mở lớp học phần",
-      "type": "ACTION"
-    },
-    {
-      "name": "học kỳ",
-      "type": "TERM"
-    },
-    {
-      "name": "nguyện vọng",
-      "type": "DESIRE"
-    },
-    {
-      "name": "tổ chức thêm lớp học phần",
-      "type": "ACTION"
-    },
-    {
-      "name": "học phí",
-      "type": "TUITION"
-    },
-    {
-      "name": "Quy chế đào tạo hiện hành",
-      "type": "REGULATION"
-    },
-    {
-      "name": "điều kiện",
-      "type": "CONDITION"
-    }
-  ],
   "relationships": [
     {
-      "source": "vấn đề",
-      "target": "tổ chức lớp học phần",
-      "type_source": "CONCEPT",
-      "type_target": "ACTION",
-      "relation": "LIÊN_QUAN_ĐẾN"
+      "source": {
+        "name": "Trưởng phòng Đào tạo",
+        "type_english": "head_of_department",
+        "role_description": "người có thẩm quyền ký duyệt",
+        "department_affiliation": "Phòng Đào tạo"
+      },
+      "target": {
+        "name": "danh sách lớp học phần",
+        "type_english": "course_enrollment_list",
+        "document_status": "đã được ký",
+        "content_description": "bao gồm danh sách thứ nhất và danh sách bổ sung",
+        "relevance_to_issue": "nơi phát sinh sai sót cần xử lý"
+      },
+      "type_source": "person_position",
+      "type_target": "document",
+      "relation": "ký"
     },
     {
-      "source": "vấn đề",
-      "target": "sai sót",
-      "type_source": "CONCEPT",
-      "type_target": "PROBLEM",
-      "relation": "LIÊN_QUAN_ĐẾN"
+      "source": {
+        "name": "vấn đề sai sót trong danh sách lớp học phần",
+        "type_english": "issue",
+        "issue_description": "sai sót trong danh sách lớp học phần đã ký",
+        "scope": "danh sách thứ nhất và danh sách bổ sung",
+        "resolution_process": "sinh viên viết đơn đề nghị"
+      },
+      "target": {
+        "name": "danh sách lớp học phần",
+        "type_english": "course_enrollment_list",
+        "status": "đã được Trưởng phòng Đào tạo ký",
+        "potential_issue": "có thể chứa sai sót",
+        "related_regulation_document": "quy định về đăng ký, rút học phần và tổ chức lớp học phần"
+      },
+      "type_source": "issue",
+      "type_target": "document",
+      "relation": "phát_sinh_trong"
     },
     {
-      "source": "sai sót",
-      "target": "danh sách lớp học phần",
-      "type_source": "PROBLEM",
-      "type_target": "CLASS_LIST",
-      "relation": "TRONG"
+      "source": {
+        "name": "danh sách lớp học phần",
+        "type_english": "course_enrollment_list",
+        "document_nature": "tài liệu chính thức",
+        "signed_by": "Trưởng phòng Đào tạo"
+      },
+      "target": {
+        "name": "danh sách thứ nhất",
+        "type_english": "document_part",
+        "description": "phần đầu của danh sách lớp học phần",
+        "relation_to_main_document": "là một phần của danh sách lớp học phần"
+      },
+      "type_source": "document",
+      "type_target": "document_part",
+      "relation": "bao_gồm"
     },
     {
-      "source": "danh sách lớp học phần",
-      "target": "Trưởng phòng Đào tạo",
-      "type_source": "CLASS_LIST",
-      "type_target": "PERSON",
-      "relation": "ĐƯỢC_KÝ_BỞI"
+      "source": {
+        "name": "danh sách lớp học phần",
+        "type_english": "course_enrollment_list",
+        "document_nature": "tài liệu chính thức",
+        "signed_by": "Trưởng phòng Đào tạo"
+      },
+      "target": {
+        "name": "danh sách bổ sung",
+        "type_english": "document_part",
+        "description": "phần bổ sung của danh sách lớp học phần",
+        "relation_to_main_document": "là một phần của danh sách lớp học phần"
+      },
+      "type_source": "document",
+      "type_target": "document_part",
+      "relation": "bao_gồm"
     },
     {
-      "source": "danh sách lớp học phần",
-      "target": "danh sách thứ nhất",
-      "type_source": "CLASS_LIST",
-      "type_target": "LIST",
-      "relation": "BAO_GỒM"
+      "source": {
+        "name": "vấn đề sai sót trong danh sách lớp học phần",
+        "type_english": "issue",
+        "context": "liên quan đến đăng ký, rút học phần, tổ chức lớp",
+        "affected_document": "danh sách lớp học phần"
+      },
+      "target": {
+        "name": "quy định về đăng ký, rút học phần và tổ chức lớp học phần",
+        "type_english": "regulation",
+        "scope_of_regulation": "đăng ký học phần, rút học phần, tổ chức lớp học phần",
+        "application_context": "cơ sở để giải quyết các vấn đề liên quan"
+      },
+      "type_source": "issue",
+      "type_target": "regulation",
+      "relation": "liên_quan_đến"
     },
     {
-      "source": "danh sách lớp học phần",
-      "target": "danh sách bổ sung",
-      "type_source": "CLASS_LIST",
-      "type_target": "LIST",
-      "relation": "BAO_GỒM"
+      "source": {
+        "name": "sinh viên",
+        "type_english": "student",
+        "action_description": "đăng ký trực tuyến",
+        "registration_result": "thành công",
+        "role_in_context": "người đăng ký học phần"
+      },
+      "target": {
+        "name": "lớp học phần",
+        "type_english": "course_section_class",
+        "registration_method": "trực tuyến",
+        "status_for_student": "đã đăng ký thành công",
+        "relevance": "đối tượng của việc đăng ký và sai sót danh sách"
+      },
+      "type_source": "student",
+      "type_target": "course_section_class",
+      "relation": "đăng_ký_trực_tuyến_thành_công"
     },
     {
-      "source": "danh sách bổ sung",
-      "target": "quy định",
-      "type_source": "LIST",
-      "type_target": "REGULATION",
-      "relation": "LÀ_VỀ"
+      "source": {
+        "name": "sinh viên",
+        "type_english": "student",
+        "required_action": "viết đơn đề nghị",
+        "reason_for_action": "xử lý sai sót trong danh sách lớp học phần",
+        "supporting_document_requirement": "kèm bản in minh chứng"
+      },
+      "target": {
+        "name": "đơn đề nghị",
+        "type_english": "application_form",
+        "purpose_of_document": "đề nghị giải quyết sai sót",
+        "target_recipient": "Phòng Đào tạo",
+        "attachment_requirement": "bản in minh chứng đăng ký thành công"
+      },
+      "type_source": "student",
+      "type_target": "document",
+      "relation": "phải_viết"
     },
     {
-      "source": "quy định",
-      "target": "đăng ký",
-      "type_source": "REGULATION",
-      "type_target": "ACTION",
-      "relation": "VỀ"
+      "source": {
+        "name": "đơn đề nghị",
+        "type_english": "application_form",
+        "document_purpose": "đề nghị giải quyết sai sót",
+        "submitted_by": "sinh viên"
+      },
+      "target": {
+        "name": "bản in minh chứng đã đăng ký học phần thành công",
+        "type_english": "proof_document",
+        "content_description": "minh chứng việc đăng ký học phần thành công",
+        "usage_context": "kèm theo đơn đề nghị"
+      },
+      "type_source": "document",
+      "type_target": "document",
+      "relation": "kèm_theo"
     },
     {
-      "source": "quy định",
-      "target": "rút học phần",
-      "type_source": "REGULATION",
-      "type_target": "ACTION",
-      "relation": "VỀ"
+      "source": {
+        "name": "sinh viên",
+        "type_english": "student",
+        "commitment_action": "cam kết chịu trách nhiệm",
+        "scope_of_commitment": "tính chính xác của những điều đề nghị trong đơn",
+        "document_context": "đơn đề nghị"
+      },
+      "target": {
+        "name": "đơn đề nghị",
+        "type_english": "application_form",
+        "attribute_assured": "tính chính xác của nội dung",
+        "author_responsibility": "sinh viên cam kết"
+      },
+      "type_source": "student",
+      "type_target": "document",
+      "relation": "cam_kết_chịu_trách_nhiệm_về_tính_chính_xác_của"
     },
     {
-      "source": "quy định",
-      "target": "tổ chức lớp học phần",
-      "type_source": "REGULATION",
-      "type_target": "ACTION",
-      "relation": "VỀ"
+      "source": {
+        "name": "đơn đề nghị",
+        "type_english": "application_form",
+        "submission_method": "gửi trực tiếp",
+        "purpose": "đề nghị giải quyết sai sót",
+        "originator": "sinh viên"
+      },
+      "target": {
+        "name": "Phòng Đào tạo",
+        "type_english": "academic_affairs_office",
+        "role_description": "đơn vị tiếp nhận và giải quyết đơn",
+        "processing_timeframe": "giải quyết ngay"
+      },
+      "type_source": "document",
+      "type_target": "academic_affairs_office",
+      "relation": "gửi_trực_tiếp_đến"
     },
     {
-      "source": "sinh viên",
-      "target": "đăng ký trực tuyến",
-      "type_source": "PERSON_GROUP",
-      "type_target": "ACTION",
-      "relation": "ĐÃ"
+      "source": {
+        "name": "Phòng Đào tạo",
+        "type_english": "academic_affairs_office",
+        "responsibility_1": "nhận đơn",
+        "responsibility_2": "giải quyết ngay cho sinh viên",
+        "subject_of_action": "đơn đề nghị của sinh viên"
+      },
+      "target": {
+        "name": "đơn đề nghị",
+        "type_english": "application_form",
+        "status": "cần được nhận và giải quyết",
+        "submitted_by": "sinh viên"
+      },
+      "type_source": "academic_affairs_office",
+      "type_target": "document",
+      "relation": "có_trách_nhiệm_nhận"
     },
     {
-      "source": "sinh viên",
-      "target": "đăng ký trực tuyến",
-      "type_source": "PERSON_GROUP",
-      "type_target": "ACTION",
-      "relation": "THÀNH_CÔNG"
+      "source": {
+        "name": "Phòng Đào tạo",
+        "type_english": "academic_affairs_office",
+        "action": "giải quyết ngay",
+        "recipient_of_resolution": "sinh viên",
+        "context_of_action": "xử lý đơn đề nghị về sai sót"
+      },
+      "target": {
+        "name": "sinh viên",
+        "type_english": "student",
+        "role_in_process": "người có đơn cần giải quyết",
+        "expected_outcome": "vấn đề được giải quyết"
+      },
+      "type_source": "academic_affairs_office",
+      "type_target": "student",
+      "relation": "giải_quyết_ngay_cho"
     },
     {
-      "source": "sinh viên",
-      "target": "đơn đề nghị",
-      "type_source": "PERSON_GROUP",
-      "type_target": "DOCUMENT",
-      "relation": "PHẢI_VIẾT"
+      "source": {
+        "name": "nhà trường",
+        "type_english": "institution",
+        "planning_status": "không có kế hoạch mở lớp",
+        "time_context": "trong học kỳ",
+        "alternative_option": "xem xét nguyện vọng sinh viên"
+      },
+      "target": {
+        "name": "lớp học phần",
+        "type_english": "course_section_class",
+        "scheduling_status": "không được nhà trường lên kế hoạch mở",
+        "academic_period": "học kỳ",
+        "potential_request_source": "sinh viên"
+      },
+      "type_source": "institution",
+      "type_target": "course_section_class",
+      "relation": "không_có_kế_hoạch_mở"
     },
     {
-      "source": "đơn đề nghị",
-      "target": "bản in",
-      "type_source": "DOCUMENT",
-      "type_target": "MEDIUM",
-      "relation": "KÈM_THEO"
+      "source": {
+        "name": "sinh viên",
+        "type_english": "student",
+        "expressed_wish": "tổ chức thêm lớp học phần",
+        "condition_for_wish": "nhà trường không có kế hoạch mở lớp",
+        "subsequent_action": "viết đơn, cam kết nộp học phí"
+      },
+      "target": {
+        "name": "lớp học phần",
+        "type_english": "course_section_class",
+        "requested_action": "tổ chức thêm",
+        "current_planning_status": "không có kế hoạch mở bởi nhà trường"
+      },
+      "type_source": "student",
+      "type_target": "course_section_class",
+      "relation": "có_nguyện_vọng_tổ_chức_thêm"
     },
     {
-      "source": "bản in",
-      "target": "minh chứng",
-      "type_source": "MEDIUM",
-      "type_target": "EVIDENCE",
-      "relation": "LÀ"
+      "source": {
+        "name": "sinh viên",
+        "type_english": "student",
+        "required_action_for_request": "viết đơn",
+        "purpose_of_action": "xin mở thêm lớp học phần",
+        "accompanying_commitment": "cam kết tự nguyện nộp học phí"
+      },
+      "target": {
+        "name": "đơn xin mở lớp học phần",
+        "type_english": "application_form",
+        "document_purpose": "xin tổ chức thêm lớp học phần",
+        "content_requirement": "cam kết tự nguyện nộp học phí",
+        "submission_target": "Phòng Đào tạo"
+      },
+      "type_source": "student",
+      "type_target": "document",
+      "relation": "phải_viết"
     },
     {
-      "source": "minh chứng",
-      "target": "đăng ký học phần",
-      "type_source": "EVIDENCE",
-      "type_target": "ACTION",
-      "relation": "ĐÃ"
+      "source": {
+        "name": "sinh viên",
+        "type_english": "student",
+        "commitment_type": "tự nguyện nộp học phí",
+        "condition_for_commitment": "khi có nguyện vọng tổ chức thêm lớp",
+        "reference_regulation": "theo quy định"
+      },
+      "target": {
+        "name": "học phí",
+        "type_english": "tuition_fee",
+        "payment_nature": "tự nguyện nộp",
+        "basis_of_calculation": "theo quy định",
+        "context": "cho lớp học phần mở thêm"
+      },
+      "type_source": "student",
+      "type_target": "fee",
+      "relation": "cam_kết_tự_nguyện_nộp"
     },
     {
-      "source": "minh chứng",
-      "target": "thành công",
-      "type_source": "EVIDENCE",
-      "type_target": "STATUS",
-      "relation": "THÀNH_CÔNG"
+      "source": {
+        "name": "học phí",
+        "type_english": "tuition_fee",
+        "payment_nature": "tự nguyện",
+        "context_of_payment": "cho lớp học phần mở theo nguyện vọng"
+      },
+      "target": {
+        "name": "quy định về học phí",
+        "type_english": "fee_regulation",
+        "scope_of_regulation": "học phí cho các trường hợp đặc biệt như mở lớp theo yêu cầu",
+        "compliance_requirement": "sinh viên phải tuân theo"
+      },
+      "type_source": "fee",
+      "type_target": "regulation",
+      "relation": "nộp_theo"
     },
     {
-      "source": "sinh viên",
-      "target": "cam kết",
-      "type_source": "PERSON_GROUP",
-      "type_target": "ACTION",
-      "relation": "PHẢI"
+      "source": {
+        "name": "đơn xin mở lớp học phần",
+        "type_english": "application_form",
+        "submitted_by": "sinh viên",
+        "purpose": "xin tổ chức thêm lớp học phần"
+      },
+      "target": {
+        "name": "Phòng Đào tạo",
+        "type_english": "academic_affairs_office",
+        "role_in_process": "tiếp nhận đơn xin mở lớp",
+        "next_step_in_process": "chuyển nhà trường xem xét"
+      },
+      "type_source": "document",
+      "type_target": "academic_affairs_office",
+      "relation": "nộp_cho"
     },
     {
-      "source": "cam kết",
-      "target": "trách nhiệm",
-      "type_source": "ACTION",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CHỊU"
+      "source": {
+        "name": "nhà trường",
+        "type_english": "institution",
+        "action_on_application": "xem xét đơn",
+        "decision_authority": "có quyền quyết định",
+        "basis_for_consideration": "Quy chế đào tạo hiện hành"
+      },
+      "target": {
+        "name": "đơn xin mở lớp học phần",
+        "type_english": "application_form",
+        "submitted_by": "sinh viên",
+        "current_status": "đang chờ xem xét",
+        "subject_matter": "nguyện vọng mở thêm lớp học phần"
+      },
+      "type_source": "institution",
+      "type_target": "document",
+      "relation": "xem_xét"
     },
     {
-      "source": "trách nhiệm",
-      "target": "tính chính xác",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACCURACY",
-      "relation": "VỀ"
+      "source": {
+        "name": "nhà trường",
+        "type_english": "institution",
+        "action_on_application_outcome": "giải quyết đơn",
+        "condition_for_approval": "nếu đủ điều kiện",
+        "guiding_document": "Quy chế đào tạo hiện hành"
+      },
+      "target": {
+        "name": "đơn xin mở lớp học phần",
+        "type_english": "application_form",
+        "submitted_by": "sinh viên",
+        "current_status": "đang chờ giải quyết",
+        "desired_outcome_for_student": "được chấp thuận mở lớp"
+      },
+      "type_source": "institution",
+      "type_target": "document",
+      "relation": "giải_quyết"
     },
     {
-      "source": "tính chính xác",
-      "target": "điều đề nghị",
-      "type_source": "ACCURACY",
-      "type_target": "REQUEST",
-      "relation": "CỦA"
-    },
-    {
-      "source": "điều đề nghị",
-      "target": "đơn",
-      "type_source": "REQUEST",
-      "type_target": "DOCUMENT",
-      "relation": "TRONG"
-    },
-    {
-      "source": "đơn",
-      "target": "Phòng Đào tạo",
-      "type_source": "DOCUMENT",
-      "type_target": "DEPARTMENT",
-      "relation": "ĐƯỢC_GỬI_ĐẾN"
-    },
-    {
-      "source": "Phòng Đào tạo",
-      "target": "đơn",
-      "type_source": "DEPARTMENT",
-      "type_target": "DOCUMENT",
-      "relation": "NHẬN"
-    },
-    {
-      "source": "Phòng Đào tạo",
-      "target": "sinh viên",
-      "type_source": "DEPARTMENT",
-      "type_target": "PERSON_GROUP",
-      "relation": "GIẢI_QUYẾT_CHO"
-    },
-    {
-      "source": "nhà trường",
-      "target": "kế hoạch",
-      "type_source": "ORGANIZATION",
-      "type_target": "PLAN",
-      "relation": "KHÔNG_CÓ"
-    },
-    {
-      "source": "kế hoạch",
-      "target": "mở lớp học phần",
-      "type_source": "PLAN",
-      "type_target": "ACTION",
-      "relation": "MỞ"
-    },
-    {
-      "source": "mở lớp học phần",
-      "target": "học kỳ",
-      "type_source": "ACTION",
-      "type_target": "TERM",
-      "relation": "TRONG"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nguyện vọng",
-      "type_source": "PERSON_GROUP",
-      "type_target": "DESIRE",
-      "relation": "CÓ"
-    },
-    {
-      "source": "nguyện vọng",
-      "target": "tổ chức thêm lớp học phần",
-      "type_source": "DESIRE",
-      "type_target": "ACTION",
-      "relation": "TỔ_CHỨC"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đơn",
-      "type_source": "PERSON_GROUP",
-      "type_target": "DOCUMENT",
-      "relation": "PHẢI_VIẾT"
-    },
-    {
-      "source": "sinh viên",
-      "target": "cam kết",
-      "type_source": "PERSON_GROUP",
-      "type_target": "ACTION",
-      "relation": "VÀ"
-    },
-    {
-      "source": "cam kết",
-      "target": "nộp học phí",
-      "type_source": "ACTION",
-      "type_target": "TUITION",
-      "relation": "TỰ_NGUYỆN"
-    },
-    {
-      "source": "nộp học phí",
-      "target": "quy định",
-      "type_source": "TUITION",
-      "type_target": "REGULATION",
-      "relation": "THEO"
-    },
-    {
-      "source": "nộp học phí",
-      "target": "Phòng Đào tạo",
-      "type_source": "TUITION",
-      "type_target": "DEPARTMENT",
-      "relation": "NỘP_CHO"
-    },
-    {
-      "source": "nhà trường",
-      "target": "đơn",
-      "type_source": "ORGANIZATION",
-      "type_target": "DOCUMENT",
-      "relation": "XEM_XÉT"
-    },
-    {
-      "source": "đơn",
-      "target": "sinh viên",
-      "type_source": "DOCUMENT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
-    },
-    {
-      "source": "nhà trường",
-      "target": "điều kiện",
-      "type_source": "ORGANIZATION",
-      "type_target": "CONDITION",
-      "relation": "GIẢI_QUYẾT_NẾU_ĐỦ"
-    },
-    {
-      "source": "điều kiện",
-      "target": "Quy chế đào tạo hiện hành",
-      "type_source": "CONDITION",
-      "type_target": "REGULATION",
-      "relation": "THEO"
+      "source": {
+        "name": "nhà trường",
+        "type_english": "institution",
+        "decision_making_process": "giải quyết đơn xin mở lớp học phần",
+        "scope_of_action": "xem xét và đưa ra quyết định"
+      },
+      "target": {
+        "name": "Quy chế đào tạo hiện hành",
+        "type_english": "current_academic_regulation",
+        "document_type": "quy chế",
+        "scope_of_regulation": "đào tạo",
+        "role_in_decision_making": "cơ sở để xem xét và giải quyết"
+      },
+      "type_source": "institution",
+      "type_target": "regulation",
+      "relation": "giải_quyết_dựa_theo"
     }
   ]
 }

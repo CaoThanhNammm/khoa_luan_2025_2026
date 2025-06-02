@@ -1,225 +1,143 @@
 {
-  "entities": [
-    {
-      "name": "ĐIỀU 5",
-      "type": "article"
-    },
-    {
-      "name": "ĐÁNH GIÁ VỀ Ý THỨC CHẤP HÀNH NỘI QUY, QUY CHẾ, QUY ĐỊNH",
-      "type": "process"
-    },
-    {
-      "name": "Ý THỨC CHẤP HÀNH",
-      "type": "concept"
-    },
-    {
-      "name": "NỘI QUY",
-      "type": "regulation"
-    },
-    {
-      "name": "QUY CHẾ",
-      "type": "regulation"
-    },
-    {
-      "name": "QUY ĐỊNH",
-      "type": "regulation"
-    },
-    {
-      "name": "CƠ SỞ GIÁO DỤC ĐẠI HỌC",
-      "type": "organization"
-    },
-    {
-      "name": "Các tiêu chí",
-      "type": "category"
-    },
-    {
-      "name": "điểm đánh giá",
-      "type": "score"
-    },
-    {
-      "name": "Ý thức chấp hành các văn bản chỉ đạo của ngành, của cơ quan chỉ đạo cấp trên",
-      "type": "evaluation_criterion"
-    },
-    {
-      "name": "văn bản chỉ đạo",
-      "type": "regulation"
-    },
-    {
-      "name": "ngành",
-      "type": "sector"
-    },
-    {
-      "name": "cơ quan chỉ đạo cấp trên",
-      "type": "organization"
-    },
-    {
-      "name": "Ý thức chấp hành các nội quy, quy chế và các quy định khác",
-      "type": "evaluation_criterion"
-    },
-    {
-      "name": "các nội quy, quy chế và các quy định khác",
-      "type": "regulation"
-    },
-    {
-      "name": "Khung điểm đánh giá",
-      "type": "scoring_range"
-    },
-    {
-      "name": "0",
-      "type": "score_value"
-    },
-    {
-      "name": "25 điểm",
-      "type": "score_value"
-    }
-  ],
   "relationships": [
     {
-      "source": "ĐIỀU 5",
-      "target": "ĐÁNH GIÁ VỀ Ý THỨC CHẤP HÀNH NỘI QUY, QUY CHẾ, QUY ĐỊNH",
-      "type_source": "article",
-      "type_target": "process",
-      "relation": "quy_định_về"
-    },
-    {
-      "source": "ĐÁNH GIÁ VỀ Ý THỨC CHẤP HÀNH NỘI QUY, QUY CHẾ, QUY ĐỊNH",
-      "target": "Ý THỨC CHẤP HÀNH",
-      "type_source": "process",
-      "type_target": "concept",
-      "relation": "đánh_giá"
-    },
-    {
-      "source": "ĐÁNH GIÁ VỀ Ý THỨC CHẤP HÀNH NỘI QUY, QUY CHẾ, QUY ĐỊNH",
-      "target": "NỘI QUY",
-      "type_source": "process",
-      "type_target": "regulation",
-      "relation": "đánh_giá_việc_chấp_hành"
-    },
-    {
-      "source": "ĐÁNH GIÁ VỀ Ý THỨC CHẤP HÀNH NỘI QUY, QUY CHẾ, QUY ĐỊNH",
-      "target": "QUY CHẾ",
-      "type_source": "process",
-      "type_target": "regulation",
-      "relation": "đánh_giá_việc_chấp_hành"
-    },
-    {
-      "source": "ĐÁNH GIÁ VỀ Ý THỨC CHẤP HÀNH NỘI QUY, QUY CHẾ, QUY ĐỊNH",
-      "target": "QUY ĐỊNH",
-      "type_source": "process",
-      "type_target": "regulation",
-      "relation": "đánh_giá_việc_chấp_hành"
-    },
-    {
-      "source": "NỘI QUY",
-      "target": "CƠ SỞ GIÁO DỤC ĐẠI HỌC",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "áp_dụng_trong"
-    },
-    {
-      "source": "QUY CHẾ",
-      "target": "CƠ SỞ GIÁO DỤC ĐẠI HỌC",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "áp_dụng_trong"
-    },
-    {
-      "source": "QUY ĐỊNH",
-      "target": "CƠ SỞ GIÁO DỤC ĐẠI HỌC",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "áp_dụng_trong"
-    },
-     {
-      "source": "ĐÁNH GIÁ VỀ Ý THỨC CHẤP HÀNH NỘI QUY, QUY CHẾ, QUY ĐỊNH",
-      "target": "Các tiêu chí",
-      "type_source": "process",
-      "type_target": "category",
-      "relation": "dựa_trên"
-    },
-    {
-      "source": "Các tiêu chí",
-      "target": "điểm đánh giá",
-      "type_source": "category",
-      "type_target": "score",
-      "relation": "dùng_để_xác_định"
-    },
-    {
-      "source": "Các tiêu chí",
-      "target": "Ý thức chấp hành các văn bản chỉ đạo của ngành, của cơ quan chỉ đạo cấp trên",
-      "type_source": "category",
+      "source": {
+        "name": "Các tiêu chí để xác định điểm đánh giá",
+        "purpose": "xác định điểm đánh giá",
+        "structure_description": "Liệt kê các tiêu chí cụ thể để đánh giá"
+      },
+      "target": {
+        "name": "Ý thức chấp hành các văn bản chỉ đạo của ngành, của cơ quan chỉ đạo cấp trên được thực hiện trong cơ sở giáo dục đại học",
+        "criterion_label": "a",
+        "focus_area": "Ý thức chấp hành văn bản chỉ đạo",
+        "document_source_description": "của ngành, của cơ quan chỉ đạo cấp trên",
+        "implementation_scope": "trong cơ sở giáo dục đại học"
+      },
+      "type_source": "criteria_definition_statement",
       "type_target": "evaluation_criterion",
       "relation": "bao_gồm"
     },
     {
-      "source": "Các tiêu chí",
-      "target": "Ý thức chấp hành các nội quy, quy chế và các quy định khác",
-      "type_source": "category",
+      "source": {
+        "name": "Các tiêu chí để xác định điểm đánh giá",
+        "purpose": "xác định điểm đánh giá",
+        "structure_description": "Liệt kê các tiêu chí cụ thể để đánh giá"
+      },
+      "target": {
+        "name": "Ý thức chấp hành các nội quy, quy chế và các quy định khác được áp dụng trong cơ sở giáo dục đại học",
+        "criterion_label": "b",
+        "focus_area": "Ý thức chấp hành nội quy, quy chế, quy định khác",
+        "application_scope": "trong cơ sở giáo dục đại học"
+      },
+      "type_source": "criteria_definition_statement",
       "type_target": "evaluation_criterion",
       "relation": "bao_gồm"
     },
     {
-      "source": "Ý thức chấp hành các văn bản chỉ đạo của ngành, của cơ quan chỉ đạo cấp trên",
-      "target": "văn bản chỉ đạo",
+      "source": {
+        "name": "Khung điểm đánh giá",
+        "purpose_description": "Quy định thang điểm cho việc đánh giá",
+        "evaluation_context": "Áp dụng cho điểm đánh giá tổng thể"
+      },
+      "target": {
+        "name": "0 đến 25 điểm",
+        "lower_bound_value": 0,
+        "upper_bound_value": 25,
+        "unit_of_measure": "điểm"
+      },
+      "type_source": "scoring_framework_description",
+      "type_target": "score_range_specification",
+      "relation": "có_giá_trị_là"
+    },
+    {
+      "source": {
+        "name": "Ý thức chấp hành các văn bản chỉ đạo của ngành, của cơ quan chỉ đạo cấp trên được thực hiện trong cơ sở giáo dục đại học",
+        "criterion_label": "a",
+        "evaluation_focus": "mức độ tuân thủ"
+      },
+      "target": {
+        "name": "Các văn bản chỉ đạo của ngành, của cơ quan chỉ đạo cấp trên",
+        "document_category": "văn bản chỉ đạo",
+        "issuing_entities_description": "ngành, cơ quan chỉ đạo cấp trên"
+      },
       "type_source": "evaluation_criterion",
-      "type_target": "regulation",
-      "relation": "đánh_giá_việc_chấp_hành"
+      "type_target": "directive_documents_group",
+      "relation": "liên_quan_đến_việc_chấp_hành"
     },
     {
-      "source": "văn bản chỉ đạo",
-      "target": "ngành",
-      "type_source": "regulation",
-      "type_target": "sector",
-      "relation": "của"
+      "source": {
+        "name": "Các văn bản chỉ đạo của ngành, của cơ quan chỉ đạo cấp trên",
+        "document_category": "văn bản chỉ đạo",
+        "contextual_note": "trong khuôn khổ tiêu chí a"
+      },
+      "target": {
+        "name": "Ngành",
+        "authority_type": "ngành (sectoral)",
+        "role_description": "nguồn ban hành văn bản chỉ đạo"
+      },
+      "type_source": "directive_documents_group",
+      "type_target": "authority_source",
+      "relation": "có_nguồn_từ"
     },
     {
-      "source": "văn bản chỉ đạo",
-      "target": "cơ quan chỉ đạo cấp trên",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "của"
+      "source": {
+        "name": "Các văn bản chỉ đạo của ngành, của cơ quan chỉ đạo cấp trên",
+        "document_category": "văn bản chỉ đạo",
+        "contextual_note": "trong khuôn khổ tiêu chí a"
+      },
+      "target": {
+        "name": "Cơ quan chỉ đạo cấp trên",
+        "authority_type": "cấp trên (superior guiding body)",
+        "role_description": "nguồn ban hành văn bản chỉ đạo"
+      },
+      "type_source": "directive_documents_group",
+      "type_target": "authority_source",
+      "relation": "có_nguồn_từ"
     },
     {
-      "source": "văn bản chỉ đạo",
-      "target": "CƠ SỞ GIÁO DỤC ĐẠI HỌC",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thực_hiện_trong"
+      "source": {
+        "name": "Các văn bản chỉ đạo của ngành, của cơ quan chỉ đạo cấp trên",
+        "document_category": "văn bản chỉ đạo",
+        "relevance_to_criterion": "Đối tượng chấp hành của tiêu chí a"
+      },
+      "target": {
+        "name": "Cơ sở giáo dục đại học",
+        "institution_category": "giáo dục đại học",
+        "role_in_compliance": "đơn vị thực hiện"
+      },
+      "type_source": "directive_documents_group",
+      "type_target": "educational_institution",
+      "relation": "được_thực_hiện_trong"
     },
     {
-      "source": "Ý thức chấp hành các nội quy, quy chế và các quy định khác",
-      "target": "các nội quy, quy chế và các quy định khác",
+      "source": {
+        "name": "Ý thức chấp hành các nội quy, quy chế và các quy định khác được áp dụng trong cơ sở giáo dục đại học",
+        "criterion_label": "b",
+        "evaluation_focus": "mức độ tuân thủ"
+      },
+      "target": {
+        "name": "Các nội quy, quy chế và các quy định khác",
+        "regulation_category": "nội quy, quy chế, quy định",
+        "scope_description": "quy định nội bộ"
+      },
       "type_source": "evaluation_criterion",
-      "type_target": "regulation",
-      "relation": "đánh_giá_việc_chấp_hành"
+      "type_target": "internal_regulations_group",
+      "relation": "liên_quan_đến_việc_chấp_hành"
     },
     {
-      "source": "các nội quy, quy chế và các quy định khác",
-      "target": "CƠ SỞ GIÁO DỤC ĐẠI HỌC",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "áp_dụng_trong"
-    },
-    {
-        "source": "ĐÁNH GIÁ VỀ Ý THỨC CHẤP HÀNH NỘI QUY, QUY CHẾ, QUY ĐỊNH",
-        "target": "Khung điểm đánh giá",
-        "type_source": "process",
-        "type_target": "scoring_range",
-        "relation": "sử_dụng"
-    },
-    {
-      "source": "Khung điểm đánh giá",
-      "target": "0",
-      "type_source": "scoring_range",
-      "type_target": "score_value",
-      "relation": "từ"
-    },
-    {
-      "source": "Khung điểm đánh giá",
-      "target": "25 điểm",
-      "type_source": "scoring_range",
-      "type_target": "score_value",
-      "relation": "đến"
+      "source": {
+        "name": "Các nội quy, quy chế và các quy định khác",
+        "regulation_category": "nội quy, quy chế, quy định",
+        "relevance_to_criterion": "Đối tượng chấp hành của tiêu chí b"
+      },
+      "target": {
+        "name": "Cơ sở giáo dục đại học",
+        "institution_category": "giáo dục đại học",
+        "role_in_application": "nơi áp dụng quy định"
+      },
+      "type_source": "internal_regulations_group",
+      "type_target": "educational_institution",
+      "relation": "được_áp_dụng_trong"
     }
   ]
 }

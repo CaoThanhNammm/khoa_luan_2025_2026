@@ -1,759 +1,613 @@
 {
-  "entities": [
-    {
-      "name": "kiểm tra đánh giá",
-      "type": "assessment_method"
-    },
-    {
-      "name": "học phần",
-      "type": "course"
-    },
-    {
-      "name": "giảng dạy kết hợp",
-      "type": "teaching_method"
-    },
-    {
-      "name": "nội dung đào tạo trực tiếp",
-      "type": "training_content"
-    },
-    {
-      "name": "đánh giá trực tuyến",
-      "type": "assessment"
-    },
-    {
-      "name": "kết quả học tập",
-      "type": "learning_outcome"
-    },
-    {
-      "name": "sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "mức độ chuyên cần",
-      "type": "attendance_level"
-    },
-    {
-      "name": "năng lực",
-      "type": "ability"
-    },
-    {
-      "name": "chuẩn đầu ra",
-      "type": "learning_outcome_standard"
-    },
-    {
-      "name": "điểm đánh giá toàn bộ nội dung, quá trình học trực tuyến",
-      "type": "score"
-    },
-    {
-      "name": "điểm học phần",
-      "type": "course_score"
-    },
-    {
-      "name": "điểm thành phần",
-      "type": "component_score"
-    },
-    {
-      "name": "thang điểm 10",
-      "type": "scale"
-    },
-    {
-      "name": "phương pháp đánh giá",
-      "type": "assessment_method"
-    },
-    {
-      "name": "hình thức đánh giá",
-      "type": "assessment_method"
-    },
-    {
-      "name": "trọng số",
-      "type": "weight"
-    },
-    {
-      "name": "đề cương chi tiết",
-      "type": "document"
-    },
-    {
-      "name": "lớp học",
-      "type": "class"
-    },
-    {
-      "name": "tổng điểm đánh giá quá trình học trực tuyến",
-      "type": "score"
-    },
-    {
-      "name": "trọng số điểm học phần",
-      "type": "weight"
-    },
-    {
-      "name": "50%",
-      "type": "percentage"
-    },
-    {
-      "name": "Khoa/Bộ môn",
-      "type": "organization"
-    },
-    {
-      "name": "thi cuối kỳ",
-      "type": "exam"
-    },
-    {
-      "name": "hình thức trực tuyến",
-      "type": "exam_type"
-    },
-    {
-      "name": "hình thức trực tiếp",
-      "type": "exam_type"
-    },
-    {
-      "name": "Trưởng Khoa",
-      "type": "person"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "person"
-    },
-    {
-      "name": "thi trực tuyến",
-      "type": "exam"
-    },
-    {
-      "name": "trang thiết bị",
-      "type": "equipment"
-    },
-    {
-      "name": "phần mềm",
-      "type": "software"
-    },
-    {
-      "name": "ngân hàng câu hỏi",
-      "type": "question_bank"
-    },
-    {
-      "name": "đề thi",
-      "type": "exam_paper"
-    },
-    {
-      "name": "văn bản hướng dẫn",
-      "type": "document"
-    },
-    {
-      "name": "quy trình thực hiện tổ chức thi trực tuyến",
-      "type": "process"
-    },
-    {
-      "name": "đáp án",
-      "type": "answer_key"
-    },
-    {
-      "name": "hướng dẫn chấm thi",
-      "type": "marking_guide"
-    },
-    {
-      "name": "bảo mật",
-      "type": "security_level"
-    },
-    {
-      "name": "thi kết thúc học phần",
-      "type": "exam"
-    },
-    {
-      "name": "hình thức truyền thống",
-      "type": "exam_type"
-    },
-    {
-      "name": "Quy chế đào tạo hiện hành",
-      "type": "regulation"
-    },
-    {
-      "name": "Trường",
-      "type": "school"
-    },
-    {
-      "name": "học phần thực hành/thực tập",
-      "type": "practical_course"
-    },
-    {
-      "name": "kỹ năng thực hành",
-      "type": "skill"
-    },
-    {
-      "name": "thi tay nghề",
-      "type": "skill"
-    },
-    {
-      "name": "nghiệp vụ",
-      "type": "skill"
-    },
-    {
-      "name": "thao tác kỹ thuật",
-      "type": "skill"
-    },
-    {
-      "name": "trường hợp đặc biệt",
-      "type": "special_case"
-    },
-    {
-      "name": "mô tả chi tiết",
-      "type": "description"
-    },
-    {
-      "name": "đề cương học phần",
-      "type": "document"
-    },
-    {
-      "name": "thiên tai",
-      "type": "natural_disaster"
-    },
-    {
-      "name": "dịch bệnh phức tạp",
-      "type": "epidemic"
-    },
-    {
-      "name": "trường hợp bất khả kháng",
-      "type": "force_majeure"
-    },
-    {
-      "name": "đồ án",
-      "type": "project"
-    },
-    {
-      "name": "tiểu luận",
-      "type": "essay"
-    },
-    {
-      "name": "khóa luận",
-      "type": "thesis"
-    },
-    {
-      "name": "hội đồng chuyên môn",
-      "type": "organization"
-    },
-    {
-      "name": "3 thành viên",
-      "type": "members_count"
-    },
-    {
-      "name": "thành viên hội đồng",
-      "type": "council_member"
-    },
-    {
-      "name": "buổi bảo vệ trực tuyến",
-      "type": "session"
-    },
-    {
-      "name": "diễn biến",
-      "type": "process"
-    },
-    {
-      "name": "ghi hình",
-      "type": "recording"
-    },
-    {
-      "name": "ghi âm",
-      "type": "recording"
-    },
-    {
-      "name": "lưu trữ",
-      "type": "storage"
-    }
-  ],
   "relationships": [
     {
-      "source": "kiểm tra đánh giá",
-      "target": "học phần",
-      "relation": "thực_hiện_cho",
+      "source": {
+        "name": "Hình thức kiểm tra đánh giá học phần giảng dạy kết hợp",
+        "type": "assessment_method",
+        "context": "giảng dạy kết hợp",
+        "scope": "học phần"
+      },
+      "target": {
+        "name": "Nội dung đào tạo trực tiếp",
+        "type": "training_content",
+        "delivery_mode": "trực tiếp",
+        "relevance": "tương ứng"
+      },
       "type_source": "assessment_method",
-      "type_target": "course"
+      "type_target": "training_content",
+      "relation": "kết_hợp_với"
     },
     {
-      "source": "học phần",
-      "target": "giảng dạy kết hợp",
-      "relation": "giảng_dạy_theo_phương_thức",
-      "type_source": "course",
-      "type_target": "teaching_method"
+      "source": {
+        "name": "Đánh giá trực tuyến kết quả học tập của sinh viên",
+        "type": "online_assessment_process",
+        "target_group": "sinh viên",
+        "execution_standard": "nghiêm túc, đầy đủ"
+      },
+      "target": {
+        "name": "Mức độ chuyên cần",
+        "type": "diligence_level",
+        "scope": "sinh viên",
+        "assessment_method": "trực tuyến"
+      },
+      "type_source": "online_assessment_process",
+      "type_target": "diligence_level",
+      "relation": "phải_đảm_bảo_đánh_giá_được"
     },
     {
-      "source": "giảng dạy kết hợp",
-      "target": "nội dung đào tạo trực tiếp",
-      "relation": "kết_hợp_với",
-      "type_source": "teaching_method",
-      "type_target": "training_content"
+      "source": {
+        "name": "Đánh giá trực tuyến kết quả học tập của sinh viên",
+        "type": "online_assessment_process",
+        "target_group": "sinh viên",
+        "execution_standard": "nghiêm túc, đầy đủ"
+      },
+      "target": {
+        "name": "Năng lực của sinh viên",
+        "type": "student_competency",
+        "scope": "sinh viên",
+        "assessment_method": "trực tuyến"
+      },
+      "type_source": "online_assessment_process",
+      "type_target": "student_competency",
+      "relation": "phải_đảm_bảo_đánh_giá_được"
     },
     {
-      "source": "đánh giá trực tuyến",
-      "target": "kết quả học tập",
-      "relation": "đánh_giá",
-      "type_source": "assessment",
-      "type_target": "learning_outcome"
+      "source": {
+        "name": "Đánh giá trực tuyến kết quả học tập của sinh viên",
+        "type": "online_assessment_process",
+        "target_group": "sinh viên",
+        "execution_standard": "nghiêm túc, đầy đủ"
+      },
+      "target": {
+        "name": "Chuẩn đầu ra của học phần",
+        "type": "course_learning_outcome",
+        "scope": "học phần",
+        "assessment_method": "trực tuyến"
+      },
+      "type_source": "online_assessment_process",
+      "type_target": "course_learning_outcome",
+      "relation": "phải_đảm_bảo_đánh_giá_được"
     },
     {
-      "source": "kết quả học tập",
-      "target": "sinh viên",
-      "relation": "của",
-      "type_source": "learning_outcome",
-      "type_target": "student"
+      "source": {
+        "name": "Điểm đánh giá quá trình học trực tuyến",
+        "type": "online_learning_assessment_score",
+        "scope": "toàn bộ nội dung, quá trình học trực tuyến",
+        "course_context": "học phần đào tạo kết hợp"
+      },
+      "target": {
+        "name": "Điểm học phần",
+        "type": "course_grade",
+        "course_context": "học phần đào tạo kết hợp"
+      },
+      "type_source": "online_learning_assessment_score",
+      "type_target": "course_grade",
+      "relation": "là_thành_phần_của"
     },
     {
-      "source": "đánh giá trực tuyến",
-      "target": "mức độ chuyên cần",
-      "relation": "đánh_giá",
-      "type_source": "assessment",
-      "type_target": "attendance_level"
-    },
-    {
-      "source": "đánh giá trực tuyến",
-      "target": "năng lực",
-      "relation": "đánh_giá",
-      "type_source": "assessment",
-      "type_target": "ability"
-    },
-    {
-      "source": "đánh giá trực tuyến",
-      "target": "chuẩn đầu ra",
-      "relation": "đánh_giá",
-      "type_source": "assessment",
-      "type_target": "learning_outcome_standard"
-    },
-    {
-      "source": "chuẩn đầu ra",
-      "target": "học phần",
-      "relation": "của",
-      "type_source": "learning_outcome_standard",
-      "type_target": "course"
-    },
-    {
-      "source": "điểm đánh giá toàn bộ nội dung, quá trình học trực tuyến",
-      "target": "điểm học phần",
-      "relation": "là_thành_phần_của",
-      "type_source": "score",
-      "type_target": "course_score"
-    },
-    {
-      "source": "điểm thành phần",
-      "target": "thang điểm 10",
-      "relation": "được_đánh_giá_theo",
+      "source": {
+        "name": "Điểm thành phần",
+        "type": "component_score",
+        "context": "học phần"
+      },
+      "target": {
+        "name": "Thang điểm 10",
+        "type": "grading_scale",
+        "scale_value": 10
+      },
       "type_source": "component_score",
-      "type_target": "scale"
+      "type_target": "grading_scale",
+      "relation": "đánh_giá_theo"
     },
     {
-      "source": "phương pháp đánh giá",
-      "target": "đề cương chi tiết",
-      "relation": "được_quy_định_trong",
-      "type_source": "assessment_method",
-      "type_target": "document"
+      "source": {
+        "name": "Phương pháp đánh giá",
+        "type": "assessment_method_definition",
+        "scope": "điểm thành phần"
+      },
+      "target": {
+        "name": "Đề cương chi tiết của mỗi học phần",
+        "type": "detailed_course_syllabus",
+        "content_includes": "phương pháp đánh giá, hình thức đánh giá, trọng số điểm thành phần"
+      },
+      "type_source": "assessment_method_definition",
+      "type_target": "detailed_course_syllabus",
+      "relation": "được_quy_định_trong"
     },
     {
-      "source": "hình thức đánh giá",
-      "target": "đề cương chi tiết",
-      "relation": "được_quy_định_trong",
-      "type_source": "assessment_method",
-      "type_target": "document"
+      "source": {
+        "name": "Hình thức đánh giá",
+        "type": "assessment_form_definition",
+        "scope": "điểm thành phần"
+      },
+      "target": {
+        "name": "Đề cương chi tiết của mỗi học phần",
+        "type": "detailed_course_syllabus",
+        "content_includes": "phương pháp đánh giá, hình thức đánh giá, trọng số điểm thành phần"
+      },
+      "type_source": "assessment_form_definition",
+      "type_target": "detailed_course_syllabus",
+      "relation": "được_quy_định_trong"
     },
     {
-      "source": "trọng số",
-      "target": "đề cương chi tiết",
-      "relation": "được_quy_định_trong",
-      "type_source": "weight",
-      "type_target": "document"
+      "source": {
+        "name": "Trọng số của mỗi điểm thành phần",
+        "type": "component_score_weight_definition",
+        "scope": "điểm thành phần"
+      },
+      "target": {
+        "name": "Đề cương chi tiết của mỗi học phần",
+        "type": "detailed_course_syllabus",
+        "content_includes": "phương pháp đánh giá, hình thức đánh giá, trọng số điểm thành phần"
+      },
+      "type_source": "component_score_weight_definition",
+      "type_target": "detailed_course_syllabus",
+      "relation": "được_quy_định_trong"
     },
     {
-      "source": "đề cương chi tiết",
-      "target": "học phần",
-      "relation": "của",
-      "type_source": "document",
-      "type_target": "course"
+      "source": {
+        "name": "Đề cương chi tiết của mỗi học phần",
+        "type": "detailed_course_syllabus",
+        "disclosure_timing": "trước khi diễn ra lớp học"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "type": "student",
+        "information_recipient": "true"
+      },
+      "type_source": "detailed_course_syllabus",
+      "type_target": "student",
+      "relation": "công_khai_cho"
     },
     {
-      "source": "đề cương chi tiết",
-      "target": "sinh viên",
-      "relation": "công_khai_cho",
-      "type_source": "document",
-      "type_target": "student"
+      "source": {
+        "name": "Tổng điểm đánh giá quá trình học trực tuyến",
+        "type": "total_online_learning_assessment_score",
+        "context": "học phần đào tạo kết hợp"
+      },
+      "target": {
+        "name": "Trọng số điểm học phần",
+        "type": "course_grade_weight",
+        "limit_percentage": "50%"
+      },
+      "type_source": "total_online_learning_assessment_score",
+      "type_target": "course_grade_weight",
+      "relation": "đóng_góp_không_quá_50_phần_trăm"
     },
     {
-      "source": "công khai",
-      "target": "lớp học",
-      "relation": "trước_khi",
-      "type_source": "RELATION",
-      "type_target": "class"
+      "source": {
+        "name": "Khoa/Bộ môn",
+        "type": "academic_department",
+        "authority_level": "Khoa hoặc Bộ môn"
+      },
+      "target": {
+        "name": "Thi cuối kỳ",
+        "type": "final_exam",
+        "organization_option": "trực tuyến hoặc trực tiếp"
+      },
+      "type_source": "academic_department",
+      "type_target": "final_exam",
+      "relation": "có_thể_tổ_chức"
     },
     {
-      "source": "tổng điểm đánh giá quá trình học trực tuyến",
-      "target": "trọng số điểm học phần",
-      "relation": "đóng_góp",
-      "type_source": "score",
-      "type_target": "weight"
+      "source": {
+        "name": "Tổ chức thi cuối kỳ",
+        "type": "final_exam_organization",
+        "decision_process": "true"
+      },
+      "target": {
+        "name": "Trưởng Khoa",
+        "type": "academic_role",
+        "role_title_vn": "Trưởng Khoa",
+        "action": "đề xuất"
+      },
+      "type_source": "final_exam_organization",
+      "type_target": "academic_role",
+      "relation": "theo_đề_xuất_của"
     },
     {
-      "source": "đóng góp",
-      "target": "50%",
-      "relation": "không_quá",
-      "type_source": "RELATION",
-      "type_target": "percentage"
+      "source": {
+        "name": "Tổ chức thi cuối kỳ",
+        "type": "final_exam_organization",
+        "decision_process": "true"
+      },
+      "target": {
+        "name": "Hiệu trưởng",
+        "type": "academic_role",
+        "role_title_vn": "Hiệu trưởng",
+        "action": "quyết định"
+      },
+      "type_source": "final_exam_organization",
+      "type_target": "academic_role",
+      "relation": "do_quyết_định_của"
     },
     {
-      "source": "Khoa/Bộ môn",
-      "target": "thi cuối kỳ",
-      "relation": "tổ_chức",
-      "type_source": "organization",
-      "type_target": "exam"
+      "source": {
+        "name": "Tổ chức thi trực tuyến",
+        "type": "online_exam_organization",
+        "exam_type": "cuối kỳ"
+      },
+      "target": {
+        "name": "Trang thiết bị",
+        "type": "equipment",
+        "requirement": "phù hợp",
+        "purpose": "thi trực tuyến"
+      },
+      "type_source": "online_exam_organization",
+      "type_target": "equipment",
+      "relation": "yêu_cầu_có"
     },
     {
-      "source": "thi cuối kỳ",
-      "target": "hình thức trực tuyến",
-      "relation": "hình_thức",
-      "type_source": "exam",
-      "type_target": "exam_type"
+      "source": {
+        "name": "Tổ chức thi trực tuyến",
+        "type": "online_exam_organization",
+        "exam_type": "cuối kỳ"
+      },
+      "target": {
+        "name": "Phần mềm",
+        "type": "software",
+        "requirement": "phù hợp",
+        "purpose": "thi trực tuyến"
+      },
+      "type_source": "online_exam_organization",
+      "type_target": "software",
+      "relation": "yêu_cầu_có"
     },
     {
-      "source": "thi cuối kỳ",
-      "target": "hình thức trực tiếp",
-      "relation": "hình_thức",
-      "type_source": "exam",
-      "type_target": "exam_type"
+      "source": {
+        "name": "Tổ chức thi trực tuyến",
+        "type": "online_exam_organization",
+        "exam_type": "cuối kỳ"
+      },
+      "target": {
+        "name": "Ngân hàng câu hỏi",
+        "type": "question_bank",
+        "size_requirement": "đủ lớn",
+        "purpose": "xây dựng đề thi"
+      },
+      "type_source": "online_exam_organization",
+      "type_target": "question_bank",
+      "relation": "yêu_cầu_có"
     },
     {
-      "source": "tổ chức",
-      "target": "Trưởng Khoa",
-      "relation": "theo_đề_xuất_của",
-      "type_source": "RELATION",
-      "type_target": "person"
-    },
-    {
-      "source": "tổ chức",
-      "target": "Hiệu trưởng",
-      "relation": "quyết_định_bởi",
-      "type_source": "RELATION",
-      "type_target": "person"
-    },
-    {
-      "source": "thi trực tuyến",
-      "target": "trang thiết bị",
-      "relation": "yêu_cầu",
-      "type_source": "exam",
-      "type_target": "equipment"
-    },
-    {
-      "source": "thi trực tuyến",
-      "target": "phần mềm",
-      "relation": "yêu_cầu",
-      "type_source": "exam",
-      "type_target": "software"
-    },
-    {
-      "source": "thi trực tuyến",
-      "target": "ngân hàng câu hỏi",
-      "relation": "yêu_cầu",
-      "type_source": "exam",
-      "type_target": "question_bank"
-    },
-    {
-      "source": "ngân hàng câu hỏi",
-      "target": "đề thi",
-      "relation": "đủ_lớn_để",
+      "source": {
+        "name": "Ngân hàng câu hỏi",
+        "type": "question_bank",
+        "usage": "xây dựng đề thi"
+      },
+      "target": {
+        "name": "Đề thi",
+        "type": "exam_paper",
+        "source_material": "ngân hàng câu hỏi"
+      },
       "type_source": "question_bank",
-      "type_target": "exam_paper"
+      "type_target": "exam_paper",
+      "relation": "để_xây_dựng"
     },
     {
-      "source": "Hiệu trưởng",
-      "target": "văn bản hướng dẫn",
-      "relation": "ban_hành",
-      "type_source": "person",
-      "type_target": "document"
+      "source": {
+        "name": "Hiệu trưởng",
+        "type": "academic_role",
+        "role_title_vn": "Hiệu trưởng"
+      },
+      "target": {
+        "name": "Văn bản hướng dẫn quy trình thực hiện tổ chức thi trực tuyến",
+        "type": "guideline_document",
+        "topic": "quy trình tổ chức thi trực tuyến",
+        "scope": "hướng dẫn"
+      },
+      "type_source": "academic_role",
+      "type_target": "guideline_document",
+      "relation": "ban_hành"
     },
     {
-      "source": "văn bản hướng dẫn",
-      "target": "quy trình thực hiện tổ chức thi trực tuyến",
-      "relation": "hướng_dẫn",
-      "type_source": "document",
-      "type_target": "process"
+      "source": {
+        "name": "Văn bản hướng dẫn quy trình thực hiện tổ chức thi trực tuyến",
+        "type": "guideline_document",
+        "topic": "quy trình tổ chức thi trực tuyến"
+      },
+      "target": {
+        "name": "Đề thi",
+        "type": "exam_paper",
+        "security_requirement": "bảo mật trước, trong và sau khi thi"
+      },
+      "type_source": "guideline_document",
+      "type_target": "exam_paper",
+      "relation": "bảo_đảm_bảo_mật_cho"
     },
     {
-      "source": "bảo đảm",
-      "target": "đề thi",
-      "relation": "bảo_đảm",
-      "type_source": "security_level",
-      "type_target": "exam_paper"
+      "source": {
+        "name": "Văn bản hướng dẫn quy trình thực hiện tổ chức thi trực tuyến",
+        "type": "guideline_document",
+        "topic": "quy trình tổ chức thi trực tuyến"
+      },
+      "target": {
+        "name": "Đáp án",
+        "type": "answer_key",
+        "security_requirement": "bảo mật trước, trong và sau khi thi"
+      },
+      "type_source": "guideline_document",
+      "type_target": "answer_key",
+      "relation": "bảo_đảm_bảo_mật_cho"
     },
     {
-      "source": "bảo đảm",
-      "target": "đáp án",
-      "relation": "bảo_đảm",
-      "type_source": "security_level",
-      "type_target": "answer_key"
+      "source": {
+        "name": "Văn bản hướng dẫn quy trình thực hiện tổ chức thi trực tuyến",
+        "type": "guideline_document",
+        "topic": "quy trình tổ chức thi trực tuyến"
+      },
+      "target": {
+        "name": "Hướng dẫn chấm thi",
+        "type": "grading_guide",
+        "security_requirement": "bảo mật trước, trong và sau khi thi"
+      },
+      "type_source": "guideline_document",
+      "type_target": "grading_guide",
+      "relation": "bảo_đảm_bảo_mật_cho"
     },
     {
-      "source": "bảo đảm",
-      "target": "hướng dẫn chấm thi",
-      "relation": "bảo_đảm",
-      "type_source": "security_level",
-      "type_target": "marking_guide"
+      "source": {
+        "name": "Việc tổ chức thi kết thúc học phần theo hình thức truyền thống",
+        "type": "traditional_final_exam_organization_process",
+        "exam_timing": "kết thúc học phần"
+      },
+      "target": {
+        "name": "Quy chế đào tạo hiện hành của Trường",
+        "type": "current_training_regulation",
+        "issuing_body": "Trường",
+        "scope": "đào tạo"
+      },
+      "type_source": "traditional_final_exam_organization_process",
+      "type_target": "current_training_regulation",
+      "relation": "được_quy_định_tại"
     },
     {
-      "source": "đề thi",
-      "target": "bảo mật",
-      "relation": "phải",
-      "type_source": "exam_paper",
-      "type_target": "security_level"
+      "source": {
+        "name": "Thi cuối kỳ bằng hình thức trực tuyến",
+        "type": "online_final_exam"
+      },
+      "target": {
+        "name": "Học phần thực hành/thực tập đánh giá kỹ năng thực hành",
+        "type": "practical_internship_module",
+        "assessment_focus": "kỹ năng thực hành",
+        "skill_examples": "thi tay nghề, nghiệp vụ, thao tác kỹ thuật"
+      },
+      "type_source": "online_final_exam",
+      "type_target": "practical_internship_module",
+      "relation": "không_tổ_chức_với"
     },
     {
-      "source": "đáp án",
-      "target": "bảo mật",
-      "relation": "phải",
-      "type_source": "answer_key",
-      "type_target": "security_level"
+      "source": {
+        "name": "Tổ chức thi trực tuyến cho học phần thực hành/thực tập (trường hợp đặc biệt)",
+        "type": "special_case_online_exam_organization",
+        "course_type": "thực hành/thực tập"
+      },
+      "target": {
+        "name": "Trưởng Khoa",
+        "type": "academic_role",
+        "role_title_vn": "Trưởng Khoa",
+        "action": "đề xuất"
+      },
+      "type_source": "special_case_online_exam_organization",
+      "type_target": "academic_role",
+      "relation": "do_đề_xuất_của"
     },
     {
-      "source": "hướng dẫn chấm thi",
-      "target": "bảo mật",
-      "relation": "phải",
-      "type_source": "marking_guide",
-      "type_target": "security_level"
+      "source": {
+        "name": "Tổ chức thi trực tuyến cho học phần thực hành/thực tập (trường hợp đặc biệt)",
+        "type": "special_case_online_exam_organization",
+        "course_type": "thực hành/thực tập"
+      },
+      "target": {
+        "name": "Hiệu trưởng",
+        "type": "academic_role",
+        "role_title_vn": "Hiệu trưởng",
+        "action": "quyết định"
+      },
+      "type_source": "special_case_online_exam_organization",
+      "type_target": "academic_role",
+      "relation": "do_quyết_định_của"
     },
     {
-      "source": "bảo mật",
-      "target": "khi thi",
-      "relation": "trước_trong_sau",
-      "type_source": "security_level",
-      "type_target": "exam"
+      "source": {
+        "name": "Quyết định của Hiệu trưởng (về thi trực tuyến HP thực hành trường hợp đặc biệt)",
+        "type": "rector_decision",
+        "context": "thi trực tuyến học phần thực hành trường hợp đặc biệt"
+      },
+      "target": {
+        "name": "Mô tả chi tiết tại đề cương học phần",
+        "type": "detailed_description_in_syllabus",
+        "source_document": "đề cương học phần"
+      },
+      "type_source": "rector_decision",
+      "type_target": "detailed_description_in_syllabus",
+      "relation": "dựa_trên"
     },
     {
-      "source": "thi kết thúc học phần",
-      "target": "hình thức truyền thống",
-      "relation": "theo",
-      "type_source": "exam",
-      "type_target": "exam_type"
+      "source": {
+        "name": "Việc tổ chức bảo vệ và đánh giá đồ án, tiểu luận, khóa luận bằng hình thức trực tuyến",
+        "type": "online_defense_assessment_process",
+        "items": "đồ án, tiểu luận, khóa luận",
+        "context": "trường hợp thiên tai, dịch bệnh phức tạp, bất khả kháng"
+      },
+      "target": {
+        "name": "Hiệu trưởng",
+        "type": "academic_role",
+        "role_title_vn": "Hiệu trưởng",
+        "action": "quyết định"
+      },
+      "type_source": "online_defense_assessment_process",
+      "type_target": "academic_role",
+      "relation": "phải_được_quyết_định_bởi"
     },
     {
-      "source": "thi kết thúc học phần",
-      "target": "Quy chế đào tạo hiện hành",
-      "relation": "được_quy_định_tại",
-      "type_source": "exam",
-      "type_target": "regulation"
+      "source": {
+        "name": "Quyết định của Hiệu trưởng (về bảo vệ trực tuyến ĐA/TL/KL)",
+        "type": "rector_decision",
+        "context": "bảo vệ trực tuyến đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Trưởng khoa",
+        "type": "academic_role",
+        "role_title_vn": "Trưởng khoa",
+        "action": "đề xuất"
+      },
+      "type_source": "rector_decision",
+      "type_target": "academic_role",
+      "relation": "trên_cơ_sở_đề_xuất_của"
     },
     {
-      "source": "Quy chế đào tạo hiện hành",
-      "target": "Trường",
-      "relation": "của",
-      "type_source": "regulation",
-      "type_target": "school"
+      "source": {
+        "name": "Việc tổ chức thực hiện bảo vệ đồ án, tiểu luận, khóa luận trực tuyến",
+        "type": "online_defense_implementation",
+        "items": "đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Minh bạch",
+        "type": "process_quality_standard",
+        "standard_name_vn": "Minh bạch"
+      },
+      "type_source": "online_defense_implementation",
+      "type_target": "process_quality_standard",
+      "relation": "phải_bảo_đảm"
     },
     {
-      "source": "không tổ chức thi cuối kỳ",
-      "target": "hình thức trực tuyến",
-      "relation": "hình_thức",
-      "type_source": "RELATION",
-      "type_target": "exam_type"
+      "source": {
+        "name": "Việc tổ chức thực hiện bảo vệ đồ án, tiểu luận, khóa luận trực tuyến",
+        "type": "online_defense_implementation",
+        "items": "đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Khách quan",
+        "type": "process_quality_standard",
+        "standard_name_vn": "Khách quan"
+      },
+      "type_source": "online_defense_implementation",
+      "type_target": "process_quality_standard",
+      "relation": "phải_bảo_đảm"
     },
     {
-      "source": "thi cuối kỳ",
-      "target": "học phần thực hành/thực tập",
-      "relation": "không_tổ_chức_cho",
-      "type_source": "exam",
-      "type_target": "practical_course"
+      "source": {
+        "name": "Việc tổ chức thực hiện bảo vệ đồ án, tiểu luận, khóa luận trực tuyến",
+        "type": "online_defense_implementation",
+        "items": "đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Công bằng",
+        "type": "process_quality_standard",
+        "standard_name_vn": "Công bằng"
+      },
+      "type_source": "online_defense_implementation",
+      "type_target": "process_quality_standard",
+      "relation": "phải_bảo_đảm"
     },
     {
-      "source": "học phần thực hành/thực tập",
-      "target": "kỹ năng thực hành",
-      "relation": "đánh_giá",
-      "type_source": "practical_course",
-      "type_target": "skill"
+      "source": {
+        "name": "Việc tổ chức thực hiện bảo vệ đồ án, tiểu luận, khóa luận trực tuyến",
+        "type": "online_defense_implementation",
+        "items": "đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Điều kiện tổ chức bảo vệ trực tuyến",
+        "type": "online_defense_condition_set",
+        "condition_count": 3
+      },
+      "type_source": "online_defense_implementation",
+      "type_target": "online_defense_condition_set",
+      "relation": "phải_đáp_ứng"
     },
     {
-      "source": "kỹ năng thực hành",
-      "target": "thi tay nghề",
-      "relation": "bao_gồm",
-      "type_source": "skill",
-      "type_target": "skill"
+      "source": {
+        "name": "Việc đánh giá (bảo vệ trực tuyến)",
+        "type": "assessment_activity",
+        "context": "bảo vệ trực tuyến đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Hội đồng chuyên môn",
+        "type": "expert_committee",
+        "member_count": 3,
+        "role": "thực hiện đánh giá"
+      },
+      "type_source": "assessment_activity",
+      "type_target": "expert_committee",
+      "relation": "được_thực_hiện_thông_qua"
     },
     {
-      "source": "kỹ năng thực hành",
-      "target": "nghiệp vụ",
-      "relation": "bao_gồm",
-      "type_source": "skill",
-      "type_target": "skill"
+      "source": {
+        "name": "Hình thức bảo vệ và đánh giá trực tuyến",
+        "type": "online_defense_assessment_method",
+        "context": "đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Các thành viên hội đồng",
+        "type": "committee_member_group",
+        "role": "đồng thuận"
+      },
+      "type_source": "online_defense_assessment_method",
+      "type_target": "committee_member_group",
+      "relation": "cần_sự_đồng_thuận_của"
     },
     {
-      "source": "kỹ năng thực hành",
-      "target": "thao tác kỹ thuật",
-      "relation": "bao_gồm",
-      "type_source": "skill",
-      "type_target": "skill"
+      "source": {
+        "name": "Hình thức bảo vệ và đánh giá trực tuyến",
+        "type": "online_defense_assessment_method",
+        "context": "đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "type": "student",
+        "role": "đồng thuận"
+      },
+      "type_source": "online_defense_assessment_method",
+      "type_target": "student",
+      "relation": "cần_sự_đồng_thuận_của"
     },
     {
-      "source": "trường hợp đặc biệt",
-      "target": "Trưởng Khoa",
-      "relation": "đề_xuất_bởi",
-      "type_source": "special_case",
-      "type_target": "person"
+      "source": {
+        "name": "Diễn biến của buổi bảo vệ trực tuyến",
+        "type": "online_defense_proceeding",
+        "context": "đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Ghi hình đầy đủ",
+        "type": "recording_action",
+        "method": "ghi hình",
+        "completeness": "đầy đủ"
+      },
+      "type_source": "online_defense_proceeding",
+      "type_target": "recording_action",
+      "relation": "phải_được_ghi_hình"
     },
     {
-      "source": "trường hợp đặc biệt",
-      "target": "Hiệu trưởng",
-      "relation": "quyết_định_bởi",
-      "type_source": "special_case",
-      "type_target": "person"
+      "source": {
+        "name": "Diễn biến của buổi bảo vệ trực tuyến",
+        "type": "online_defense_proceeding",
+        "context": "đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Ghi âm đầy đủ",
+        "type": "recording_action",
+        "method": "ghi âm",
+        "completeness": "đầy đủ"
+      },
+      "type_source": "online_defense_proceeding",
+      "type_target": "recording_action",
+      "relation": "phải_được_ghi_âm"
     },
     {
-      "source": "quyết định",
-      "target": "mô tả chi tiết",
-      "relation": "dựa_trên",
-      "type_source": "RELATION",
-      "type_target": "description"
-    },
-    {
-      "source": "mô tả chi tiết",
-      "target": "đề cương học phần",
-      "relation": "tại",
-      "type_source": "description",
-      "type_target": "document"
-    },
-    {
-      "source": "đề cương học phần",
-      "target": "học phần",
-      "relation": "của",
-      "type_source": "document",
-      "type_target": "course"
-    },
-    {
-      "source": "tổ chức bảo vệ và đánh giá đồ án, tiểu luận, khóa luận",
-      "target": "hình thức trực tuyến",
-      "relation": "hình_thức",
-      "type_source": "RELATION",
-      "type_target": "exam_type"
-    },
-    {
-      "source": "tổ chức bảo vệ và đánh giá đồ án, tiểu luận, khóa luận",
-      "target": "Hiệu trưởng",
-      "relation": "quyết_định_bởi",
-      "type_source": "RELATION",
-      "type_target": "person"
-    },
-    {
-      "source": "quyết định",
-      "target": "đề xuất",
-      "relation": "dựa_trên",
-      "type_source": "RELATION",
-      "type_target": "RELATION"
-    },
-    {
-      "source": "đề xuất",
-      "target": "Trưởng khoa",
-      "relation": "của",
-      "type_source": "RELATION",
-      "type_target": "person"
-    },
-    {
-      "source": "tổ chức thực hiện bảo vệ đồ án, tiểu luận, khóa luận trực tuyến",
-      "target": "minh bạch",
-      "relation": "phải",
-      "type_source": "RELATION",
-      "type_target": "transparency"
-    },
-    {
-      "source": "tổ chức thực hiện bảo vệ đồ án, tiểu luận, khóa luận trực tuyến",
-      "target": "khách quan",
-      "relation": "phải",
-      "type_source": "RELATION",
-      "type_target": "objectivity"
-    },
-    {
-      "source": "tổ chức thực hiện bảo vệ đồ án, tiểu luận, khóa luận trực tuyến",
-      "target": "công bằng",
-      "relation": "phải",
-      "type_source": "RELATION",
-      "type_target": "fairness"
-    },
-    {
-      "source": "tổ chức thực hiện bảo vệ đồ án, tiểu luận, khóa luận trực tuyến",
-      "target": "điều kiện",
-      "relation": "phải",
-      "type_source": "RELATION",
-      "type_target": "condition"
-    },
-    {
-      "source": "tổ chức bảo vệ và đánh giá đồ án, tiểu luận, khóa luận",
-      "target": "thiên tai",
-      "relation": "xảy_ra_trong_trường_hợp",
-      "type_source": "RELATION",
-      "type_target": "natural_disaster"
-    },
-    {
-      "source": "tổ chức bảo vệ và đánh giá đồ án, tiểu luận, khóa luận",
-      "target": "dịch bệnh phức tạp",
-      "relation": "xảy_ra_trong_trường_hợp",
-      "type_source": "RELATION",
-      "type_target": "epidemic"
-    },
-    {
-      "source": "tổ chức bảo vệ và đánh giá đồ án, tiểu luận, khóa luận",
-      "target": "trường hợp bất khả kháng",
-      "relation": "xảy_ra_trong_trường_hợp",
-      "type_source": "RELATION",
-      "type_target": "force_majeure"
-    },
-    {
-      "source": "đánh giá",
-      "target": "hội đồng chuyên môn",
-      "relation": "thực_hiện_thông_qua",
-      "type_source": "assessment",
-      "type_target": "organization"
-    },
-    {
-      "source": "hội đồng chuyên môn",
-      "target": "3 thành viên",
-      "relation": "bao_gồm",
-      "type_source": "organization",
-      "type_target": "members_count"
-    },
-    {
-      "source": "hình thức bảo vệ và đánh giá trực tuyến",
-      "target": "thành viên hội đồng",
-      "relation": "được_sự_đồng_thuận_của",
-      "type_source": "defense_form",
-      "type_target": "council_member"
-    },
-    {
-      "source": "hình thức bảo vệ và đánh giá trực tuyến",
-      "target": "sinh viên",
-      "relation": "được_sự_đồng_thuận_của",
-      "type_source": "defense_form",
-      "type_target": "student"
-    },
-    {
-      "source": "thành viên hội đồng",
-      "target": "hội đồng chuyên môn",
-      "relation": "là_thành_viên_của",
-      "type_source": "council_member",
-      "type_target": "organization"
-    },
-    {
-      "source": "diễn biến",
-      "target": "buổi bảo vệ trực tuyến",
-      "relation": "của",
-      "type_source": "process",
-      "type_target": "session"
-    },
-    {
-      "source": "diễn biến",
-      "target": "ghi hình",
-      "relation": "được_ghi_hình",
-      "type_source": "process",
-      "type_target": "recording"
-    },
-    {
-      "source": "diễn biến",
-      "target": "ghi âm",
-      "relation": "được_ghi_âm",
-      "type_source": "process",
-      "type_target": "recording"
-    },
-    {
-      "source": "diễn biến",
-      "target": "lưu trữ",
-      "relation": "được_lưu_trữ",
-      "type_source": "process",
-      "type_target": "storage"
+      "source": {
+        "name": "Diễn biến của buổi bảo vệ trực tuyến",
+        "type": "online_defense_proceeding",
+        "context": "đồ án, tiểu luận, khóa luận"
+      },
+      "target": {
+        "name": "Lưu trữ",
+        "type": "storage_action",
+        "item": "diễn biến buổi bảo vệ trực tuyến"
+      },
+      "type_source": "online_defense_proceeding",
+      "type_target": "storage_action",
+      "relation": "phải_được_lưu_trữ"
     }
   ]
 }

@@ -1,438 +1,227 @@
 {
-  "entities": [
-    {
-      "name": "Căn cứ",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "xét học bổng khuyến khích học tập",
-      "type": "ACTION"
-    },
-    {
-      "name": "Điểm trung bình chung học bổng",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "điểm trung bình có trọng số",
-      "type": "DEFINITION"
-    },
-    {
-      "name": "tất cả các học phần",
-      "type": "COURSE"
-    },
-    {
-      "name": "sinh viên",
-      "type": "PERSON_GROUP"
-    },
-    {
-      "name": "học kỳ",
-      "type": "TERM"
-    },
-    {
-      "name": "trọng số",
-      "type": "WEIGHT"
-    },
-    {
-      "name": "số tín chỉ",
-      "type": "CREDIT"
-    },
-    {
-      "name": "từng học phần",
-      "type": "COURSE"
-    },
-    {
-      "name": "thang điểm 10",
-      "type": "GRADING_SCALE"
-    },
-    {
-      "name": "2 chữ số thập phân",
-      "type": "DECIMAL_PLACE"
-    },
-    {
-      "name": "Điểm rèn luyện",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "quy chế hiện hành",
-      "type": "REGULATION"
-    },
-    {
-      "name": "Bộ Giáo dục và đào tạo",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "Tiêu chuẩn chung",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "xét học bổng khuyến khích học tập",
-      "type": "ACTION"
-    },
-    {
-      "name": "15 tín chỉ",
-      "type": "CREDIT_NUMBER"
-    },
-    {
-      "name": "học kỳ cuối",
-      "type": "TERM"
-    },
-    {
-      "name": "chương trình đào tạo",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "08 tín chỉ",
-      "type": "CREDIT_NUMBER"
-    },
-    {
-      "name": "7,0",
-      "type": "SCORE"
-    },
-    {
-      "name": "môn",
-      "type": "SUBJECT"
-    },
-    {
-      "name": "5 điểm",
-      "type": "SCORE"
-    },
-    {
-      "name": "70",
-      "type": "SCORE"
-    },
-    {
-      "name": "mức khiển trách",
-      "type": "DISCIPLINARY_LEVEL"
-    },
-    {
-      "name": "học kỳ xét học bổng",
-      "type": "TERM"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "PERSON"
-    },
-    {
-      "name": "trường hợp đặc biệt",
-      "type": "CASE"
-    },
-    {
-      "name": "Tiêu chuẩn riêng",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "từng loại học bổng khuyến khích học tập",
-      "type": "SCHOLARSHIP_TYPE"
-    },
-    {
-      "name": "Học bổng loại Khá",
-      "type": "SCHOLARSHIP_TYPE"
-    },
-    {
-      "name": "8,0",
-      "type": "SCORE"
-    },
-    {
-      "name": "80",
-      "type": "SCORE"
-    },
-    {
-      "name": "Học bổng loại Giỏi",
-      "type": "SCHOLARSHIP_TYPE"
-    },
-    {
-      "name": "9,0",
-      "type": "SCORE"
-    },
-    {
-      "name": "90",
-      "type": "SCORE"
-    },
-    {
-      "name": "Học bổng loại Xuất sắc",
-      "type": "SCHOLARSHIP_TYPE"
-    }
-  ],
   "relationships": [
     {
-      "source": "Căn cứ",
-      "target": "xét học bổng khuyến khích học tập",
-      "type_source": "CONCEPT",
-      "type_target": "ACTION",
-      "relation": "ĐỂ"
+      "source": {
+        "name": "Điểm trung bình chung học bổng",
+        "description": "Điểm trung bình có trọng số của tất cả các học phần mà sinh viên đăng ký học trong học kỳ đó",
+        "calculation_basis": "trung bình có trọng số",
+        "scale": "thang điểm 10",
+        "rounding": "làm tròn đến 2 chữ số thập phân"
+      },
+      "target": {
+        "name": "Học phần",
+        "role": "cơ sở tính điểm",
+        "weighting_factor": "số tín chỉ tương ứng",
+        "scope": "sinh viên đăng ký học trong học kỳ đó"
+      },
+      "type_source": "academic_metric_definition",
+      "type_target": "academic_unit",
+      "relation": "tính_toán_dựa_trên"
     },
     {
-      "source": "Điểm trung bình chung học bổng",
-      "target": "điểm trung bình có trọng số",
-      "type_source": "CONCEPT",
-      "type_target": "DEFINITION",
-      "relation": "LÀ"
+      "source": {
+        "name": "Điểm rèn luyện",
+        "evaluation_method": "đánh giá theo quy chế hiện hành",
+        "purpose": "tiêu chuẩn xét học bổng"
+      },
+      "target": {
+        "name": "Bộ Giáo dục và đào tạo",
+        "role": "ban hành quy chế",
+        "authority_level": "Bộ ngành trung ương"
+      },
+      "type_source": "training_score_definition",
+      "type_target": "government_organization",
+      "relation": "đánh_giá_theo_quy_chế_của"
     },
     {
-      "source": "điểm trung bình có trọng số",
-      "target": "tất cả các học phần",
-      "type_source": "DEFINITION",
-      "type_target": "COURSE",
-      "relation": "CỦA"
+      "source": {
+        "name": "Học bổng khuyến khích học tập",
+        "category": "học bổng",
+        "application_context": "Tiêu chuẩn chung"
+      },
+      "target": {
+        "name": "Hoàn thành tín chỉ học kỳ (chung)",
+        "minimum_credits": "15",
+        "semester_type": "học kỳ (không phải cuối)",
+        "unit": "tín chỉ"
+      },
+      "type_source": "scholarship_program",
+      "type_target": "credit_completion_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     },
     {
-      "source": "tất cả các học phần",
-      "target": "sinh viên",
-      "type_source": "COURSE",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Học bổng khuyến khích học tập",
+        "category": "học bổng",
+        "application_context": "Tiêu chuẩn chung"
+      },
+      "target": {
+        "name": "Hoàn thành tín chỉ học kỳ cuối (chung)",
+        "minimum_credits": "08 trở lên",
+        "semester_type": "học kỳ cuối",
+        "additional_requirement": "hoàn thành chương trình đào tạo",
+        "unit": "tín chỉ"
+      },
+      "type_source": "scholarship_program",
+      "type_target": "credit_completion_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     },
     {
-      "source": "tất cả các học phần",
-      "target": "học kỳ",
-      "type_source": "COURSE",
-      "type_target": "TERM",
-      "relation": "TRONG"
+      "source": {
+        "name": "Học bổng khuyến khích học tập",
+        "category": "học bổng",
+        "application_context": "Tiêu chuẩn chung"
+      },
+      "target": {
+        "name": "Điểm trung bình chung học bổng (chung)",
+        "metric_name": "Điểm trung bình chung học bổng",
+        "minimum_value": "7,0 trở lên",
+        "subject_score_condition": "không có môn nào dưới 5 điểm"
+      },
+      "type_source": "scholarship_program",
+      "type_target": "gpa_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     },
     {
-      "source": "điểm trung bình có trọng số",
-      "target": "trọng số",
-      "type_source": "DEFINITION",
-      "type_target": "WEIGHT",
-      "relation": "VỚI"
+      "source": {
+        "name": "Học bổng khuyến khích học tập",
+        "category": "học bổng",
+        "application_context": "Tiêu chuẩn chung"
+      },
+      "target": {
+        "name": "Điểm rèn luyện (chung)",
+        "metric_name": "Điểm rèn luyện",
+        "minimum_value": "70 trở lên"
+      },
+      "type_source": "scholarship_program",
+      "type_target": "training_score_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     },
     {
-      "source": "trọng số",
-      "target": "số tín chỉ",
-      "type_source": "WEIGHT",
-      "type_target": "CREDIT",
-      "relation": "LÀ"
+      "source": {
+        "name": "Học bổng khuyến khích học tập",
+        "category": "học bổng",
+        "application_context": "Tiêu chuẩn chung"
+      },
+      "target": {
+        "name": "Kỷ luật (chung)",
+        "condition": "Không bị kỷ luật từ mức khiển trách trở lên",
+        "period": "trong học kỳ xét học bổng"
+      },
+      "type_source": "scholarship_program",
+      "type_target": "discipline_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     },
     {
-      "source": "số tín chỉ",
-      "target": "từng học phần",
-      "type_source": "CREDIT",
-      "type_target": "COURSE",
-      "relation": "CỦA"
+      "source": {
+        "name": "Các trường hợp đặc biệt",
+        "description": "Các trường hợp không tuân theo tiêu chuẩn xét học bổng thông thường",
+        "scope": "xét học bổng khuyến khích học tập"
+      },
+      "target": {
+        "name": "Hiệu trưởng",
+        "role": "người quyết định",
+        "authority_domain": "các trường hợp đặc biệt trong xét học bổng"
+      },
+      "type_source": "special_case_category",
+      "type_target": "authority_role",
+      "relation": "do_quyết_định_bởi"
     },
     {
-      "source": "điểm trung bình có trọng số",
-      "target": "thang điểm 10",
-      "type_source": "DEFINITION",
-      "type_target": "GRADING_SCALE",
-      "relation": "THEO"
+      "source": {
+        "name": "Học bổng loại Khá",
+        "scholarship_program_type": "Khuyến khích học tập",
+        "tier": "Khá"
+      },
+      "target": {
+        "name": "Điểm trung bình chung học bổng (Khá)",
+        "metric_name": "Điểm trung bình chung học bổng",
+        "minimum_value": "7,0 trở lên",
+        "associated_scholarship_tier": "Học bổng loại Khá"
+      },
+      "type_source": "scholarship_tier",
+      "type_target": "gpa_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     },
     {
-      "source": "thang điểm 10",
-      "target": "2 chữ số thập phân",
-      "type_source": "GRADING_SCALE",
-      "type_target": "DECIMAL_PLACE",
-      "relation": "LÀM_TRÒN_ĐẾN"
+      "source": {
+        "name": "Học bổng loại Khá",
+        "scholarship_program_type": "Khuyến khích học tập",
+        "tier": "Khá"
+      },
+      "target": {
+        "name": "Điểm rèn luyện (Khá)",
+        "metric_name": "Điểm rèn luyện",
+        "minimum_value": "70 trở lên",
+        "associated_scholarship_tier": "Học bổng loại Khá"
+      },
+      "type_source": "scholarship_tier",
+      "type_target": "training_score_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     },
     {
-      "source": "Điểm rèn luyện",
-      "target": "quy chế hiện hành",
-      "type_source": "CONCEPT",
-      "type_target": "REGULATION",
-      "relation": "ĐƯỢC_ĐÁNH_GIÁ_THEO"
+      "source": {
+        "name": "Học bổng loại Giỏi",
+        "scholarship_program_type": "Khuyến khích học tập",
+        "tier": "Giỏi"
+      },
+      "target": {
+        "name": "Điểm trung bình chung học bổng (Giỏi)",
+        "metric_name": "Điểm trung bình chung học bổng",
+        "minimum_value": "8,0 trở lên",
+        "associated_scholarship_tier": "Học bổng loại Giỏi"
+      },
+      "type_source": "scholarship_tier",
+      "type_target": "gpa_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     },
     {
-      "source": "quy chế hiện hành",
-      "target": "Bộ Giáo dục và đào tạo",
-      "type_source": "REGULATION",
-      "type_target": "ORGANIZATION",
-      "relation": "CỦA"
+      "source": {
+        "name": "Học bổng loại Giỏi",
+        "scholarship_program_type": "Khuyến khích học tập",
+        "tier": "Giỏi"
+      },
+      "target": {
+        "name": "Điểm rèn luyện (Giỏi)",
+        "metric_name": "Điểm rèn luyện",
+        "minimum_value": "80 trở lên",
+        "associated_scholarship_tier": "Học bổng loại Giỏi"
+      },
+      "type_source": "scholarship_tier",
+      "type_target": "training_score_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     },
     {
-      "source": "Tiêu chuẩn chung",
-      "target": "xét học bổng khuyến khích học tập",
-      "type_source": "CONCEPT",
-      "type_target": "ACTION",
-      "relation": "ĐỂ"
+      "source": {
+        "name": "Học bổng loại Xuất sắc",
+        "scholarship_program_type": "Khuyến khích học tập",
+        "tier": "Xuất sắc"
+      },
+      "target": {
+        "name": "Điểm trung bình chung học bổng (Xuất sắc)",
+        "metric_name": "Điểm trung bình chung học bổng",
+        "minimum_value": "9,0 trở lên",
+        "associated_scholarship_tier": "Học bổng loại Xuất sắc"
+      },
+      "type_source": "scholarship_tier",
+      "type_target": "gpa_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     },
     {
-      "source": "Tiêu chuẩn chung",
-      "target": "15 tín chỉ",
-      "type_source": "CONCEPT",
-      "type_target": "CREDIT_NUMBER",
-      "relation": "HOÀN_THÀNH_ÍT_NHẤT"
-    },
-    {
-      "source": "15 tín chỉ",
-      "target": "học kỳ",
-      "type_source": "CREDIT_NUMBER",
-      "type_target": "TERM",
-      "relation": "TRONG"
-    },
-    {
-      "source": "Tiêu chuẩn chung",
-      "target": "08 tín chỉ",
-      "type_source": "CONCEPT",
-      "type_target": "CREDIT_NUMBER",
-      "relation": "HOÀN_THÀNH"
-    },
-    {
-      "source": "08 tín chỉ",
-      "target": "học kỳ cuối",
-      "type_source": "CREDIT_NUMBER",
-      "type_target": "TERM",
-      "relation": "NẾU_LÀ"
-    },
-    {
-      "source": "học kỳ cuối",
-      "target": "chương trình đào tạo",
-      "type_source": "TERM",
-      "type_target": "PROGRAM",
-      "relation": "HOÀN_THÀNH"
-    },
-    {
-      "source": "Tiêu chuẩn chung",
-      "target": "Điểm trung bình chung học bổng",
-      "type_source": "CONCEPT",
-      "type_target": "CONCEPT",
-      "relation": "CÓ"
-    },
-    {
-      "source": "Điểm trung bình chung học bổng",
-      "target": "7,0",
-      "type_source": "CONCEPT",
-      "type_target": "SCORE",
-      "relation": "TỪ"
-    },
-    {
-      "source": "Tiêu chuẩn chung",
-      "target": "môn",
-      "type_source": "CONCEPT",
-      "type_target": "SUBJECT",
-      "relation": "KHÔNG_CÓ"
-    },
-    {
-      "source": "môn",
-      "target": "5 điểm",
-      "type_source": "SUBJECT",
-      "type_target": "SCORE",
-      "relation": "DƯỚI"
-    },
-    {
-      "source": "Tiêu chuẩn chung",
-      "target": "Điểm rèn luyện",
-      "type_source": "CONCEPT",
-      "type_target": "CONCEPT",
-      "relation": "CÓ"
-    },
-    {
-      "source": "Điểm rèn luyện",
-      "target": "70",
-      "type_source": "CONCEPT",
-      "type_target": "SCORE",
-      "relation": "TỪ"
-    },
-    {
-      "source": "Tiêu chuẩn chung",
-      "target": "mức khiển trách",
-      "type_source": "CONCEPT",
-      "type_target": "DISCIPLINARY_LEVEL",
-      "relation": "KHÔNG_BỊ_KỶ_LUẬT_TỪ"
-    },
-    {
-      "source": "mức khiển trách",
-      "target": "học kỳ xét học bổng",
-      "type_source": "DISCIPLINARY_LEVEL",
-      "type_target": "TERM",
-      "relation": "TRONG"
-    },
-    {
-      "source": "Hiệu trưởng",
-      "target": "trường hợp đặc biệt",
-      "type_source": "PERSON",
-      "type_target": "CASE",
-      "relation": "QUYẾT_ĐỊNH_DO"
-    },
-    {
-      "source": "Tiêu chuẩn riêng",
-      "target": "từng loại học bổng khuyến khích học tập",
-      "type_source": "CONCEPT",
-      "type_target": "SCHOLARSHIP_TYPE",
-      "relation": "CỦA"
-    },
-    {
-      "source": "Học bổng loại Khá",
-      "target": "Điểm trung bình chung học bổng",
-      "type_source": "SCHOLARSHIP_TYPE",
-      "type_target": "CONCEPT",
-      "relation": "CÓ"
-    },
-    {
-      "source": "Điểm trung bình chung học bổng",
-      "target": "7,0",
-      "type_source": "CONCEPT",
-      "type_target": "SCORE",
-      "relation": "TỪ"
-    },
-    {
-      "source": "Học bổng loại Khá",
-      "target": "Điểm rèn luyện",
-      "type_source": "SCHOLARSHIP_TYPE",
-      "type_target": "CONCEPT",
-      "relation": "CÓ"
-    },
-    {
-      "source": "Điểm rèn luyện",
-      "target": "70",
-      "type_source": "CONCEPT",
-      "type_target": "SCORE",
-      "relation": "TỪ"
-    },
-    {
-      "source": "Học bổng loại Giỏi",
-      "target": "Điểm trung bình chung học bổng",
-      "type_source": "SCHOLARSHIP_TYPE",
-      "type_target": "CONCEPT",
-      "relation": "CÓ"
-    },
-    {
-      "source": "Điểm trung bình chung học bổng",
-      "target": "8,0",
-      "type_source": "CONCEPT",
-      "type_target": "SCORE",
-      "relation": "TỪ"
-    },
-    {
-      "source": "Học bổng loại Giỏi",
-      "target": "Điểm rèn luyện",
-      "type_source": "SCHOLARSHIP_TYPE",
-      "type_target": "CONCEPT",
-      "relation": "CÓ"
-    },
-    {
-      "source": "Điểm rèn luyện",
-      "target": "80",
-      "type_source": "CONCEPT",
-      "type_target": "SCORE",
-      "relation": "TỪ"
-    },
-    {
-      "source": "Học bổng loại Xuất sắc",
-      "target": "Điểm trung bình chung học bổng",
-      "type_source": "SCHOLARSHIP_TYPE",
-      "type_target": "CONCEPT",
-      "relation": "CÓ"
-    },
-    {
-      "source": "Điểm trung bình chung học bổng",
-      "target": "9,0",
-      "type_source": "CONCEPT",
-      "type_target": "SCORE",
-      "relation": "TỪ"
-    },
-    {
-      "source": "Học bổng loại Xuất sắc",
-      "target": "Điểm rèn luyện",
-      "type_source": "SCHOLARSHIP_TYPE",
-      "type_target": "CONCEPT",
-      "relation": "CÓ"
-    },
-    {
-      "source": "Điểm rèn luyện",
-      "target": "90",
-      "type_source": "CONCEPT",
-      "type_target": "SCORE",
-      "relation": "TỪ"
+      "source": {
+        "name": "Học bổng loại Xuất sắc",
+        "scholarship_program_type": "Khuyến khích học tập",
+        "tier": "Xuất sắc"
+      },
+      "target": {
+        "name": "Điểm rèn luyện (Xuất sắc)",
+        "metric_name": "Điểm rèn luyện",
+        "minimum_value": "90 trở lên",
+        "associated_scholarship_tier": "Học bổng loại Xuất sắc"
+      },
+      "type_source": "scholarship_tier",
+      "type_target": "training_score_criterion",
+      "relation": "yêu_cầu_tiêu_chuẩn"
     }
   ]
 }

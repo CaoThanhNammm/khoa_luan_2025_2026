@@ -1,234 +1,287 @@
 {
-  "entities": [
-    {
-      "name": "Trung tâm dịch vụ sinh viên",
-      "type": "organization"
-    },
-    {
-      "name": "sinh viên nội trú",
-      "type": "person"
-    },
-    {
-      "name": "ăn",
-      "type": "activity"
-    },
-    {
-      "name": "ở",
-      "type": "activity"
-    },
-    {
-      "name": "học tập",
-      "type": "activity"
-    },
-    {
-      "name": "sinh hoạt",
-      "type": "activity"
-    },
-    {
-      "name": "dịch vụ",
-      "type": "concept"
-    },
-    {
-      "name": "kỹ năng ngoại khóa",
-      "type": "concept"
-    },
-    {
-      "name": "sinh viên",
-      "type": "person"
-    },
-    {
-      "name": "Nhà trường",
-      "type": "organization"
-    },
-    {
-      "name": "Nhà khách",
-      "type": "location"
-    },
-    {
-      "name": "giữ xe",
-      "type": "service"
-    },
-    {
-      "name": "căn tin",
-      "type": "location"
-    },
-    {
-      "name": "photocopy",
-      "type": "service"
-    },
-    {
-      "name": "internet",
-      "type": "service"
-    },
-    {
-      "name": "phương tiện vận chuyển",
-      "type": "item"
-    },
-    {
-      "name": "Văn phòng Trung tâm Dịch vụ Sinh viên",
-      "type": "location"
-    },
-    {
-      "name": "đường số 6",
-      "type": "location"
-    },
-    {
-      "name": "trường Đại học Nông Lâm TP.HCM",
-      "type": "organization"
-    },
-    {
-      "name": "https://ttdvsv.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "028-38963346",
-      "type": "phone_number"
-    },
-    {
-      "name": "ttdvsv@hcmuaf.edu.vn",
-      "type": "email"
-    }
-  ],
   "relationships": [
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "sinh viên nội trú",
-      "relation": "TỔ_CHỨC",
-      "type_source": "organization",
-      "type_target": "person"
+      "source": {
+        "name": "Trung tâm dịch vụ sinh viên",
+        "role": "Đơn vị tổ chức và quản lý",
+        "primary_aim": "Đáp ứng nhu cầu sinh viên"
+      },
+      "target": {
+        "name": "Sinh viên nội trú",
+        "category": "Đối tượng phục vụ trực tiếp",
+        "needs_met": "Ăn, ở, học tập, sinh hoạt"
+      },
+      "type_source": "student_service_center",
+      "type_target": "boarding_student",
+      "relation": "đáp_ứng_nhu_cầu_cho"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "ăn",
-      "relation": "QUẢN_LÝ",
-      "type_source": "organization",
-      "type_target": "activity"
+      "source": {
+        "name": "Trung tâm dịch vụ sinh viên",
+        "role": "Nhà cung cấp",
+        "provision_context": "Hỗ trợ toàn diện cho sinh viên"
+      },
+      "target": {
+        "name": "Các dịch vụ",
+        "nature": "Dịch vụ chung và cần thiết",
+        "description": "Các loại hình dịch vụ không chuyên biệt"
+      },
+      "type_source": "student_service_center",
+      "type_target": "general_service_concept",
+      "relation": "cung_cấp"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "ở",
-      "relation": "QUẢN_LÝ",
-      "type_source": "organization",
-      "type_target": "activity"
+      "source": {
+        "name": "Các dịch vụ",
+        "nature": "Dịch vụ chung và cần thiết",
+        "provider_entity": "Trung tâm dịch vụ sinh viên"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Người thụ hưởng",
+        "context": "Trong thời gian học tập tại Nhà trường"
+      },
+      "type_source": "general_service_concept",
+      "type_target": "student",
+      "relation": "dành_cho"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "học tập",
-      "relation": "QUẢN_LÝ",
-      "type_source": "organization",
-      "type_target": "activity"
+      "source": {
+        "name": "Trung tâm dịch vụ sinh viên",
+        "role": "Nhà cung cấp",
+        "provision_context": "Phát triển kỹ năng cho sinh viên"
+      },
+      "target": {
+        "name": "Các kỹ năng ngoại khóa",
+        "nature": "Kỹ năng bổ trợ",
+        "necessity_level": "Cần thiết"
+      },
+      "type_source": "student_service_center",
+      "type_target": "extracurricular_skill_concept",
+      "relation": "cung_cấp"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "sinh hoạt",
-      "relation": "QUẢN_LÝ",
-      "type_source": "organization",
-      "type_target": "activity"
+      "source": {
+        "name": "Các kỹ năng ngoại khóa",
+        "nature": "Kỹ năng bổ trợ",
+        "provider_entity": "Trung tâm dịch vụ sinh viên"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Người thụ hưởng",
+        "context": "Trong thời gian học tập tại Nhà trường"
+      },
+      "type_source": "extracurricular_skill_concept",
+      "type_target": "student",
+      "relation": "dành_cho"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "dịch vụ",
-      "relation": "CUNG_CẤP",
-      "type_source": "organization",
-      "type_target": "concept"
+      "source": {
+        "name": "Trung tâm dịch vụ sinh viên",
+        "role": "Đơn vị chủ quản",
+        "primary_activity": "Thực hiện hoạt động hỗ trợ"
+      },
+      "target": {
+        "name": "Hoạt động dịch vụ hỗ trợ sinh viên",
+        "category": "Nhóm các dịch vụ cụ thể",
+        "purpose_description": "Hỗ trợ đa dạng nhu cầu sinh viên"
+      },
+      "type_source": "student_service_center",
+      "type_target": "student_support_activity_group",
+      "relation": "thực_hiện"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "kỹ năng ngoại khóa",
-      "relation": "CUNG_CẤP",
-      "type_source": "organization",
-      "type_target": "concept"
+      "source": {
+        "name": "Hoạt động dịch vụ hỗ trợ sinh viên",
+        "description": "Nhóm các dịch vụ cụ thể do TTDVSV cung cấp",
+        "provider_entity": "Trung tâm dịch vụ sinh viên"
+      },
+      "target": {
+        "name": "Nhà khách",
+        "service_type": "Dịch vụ lưu trú",
+        "classification": "Dịch vụ hỗ trợ"
+      },
+      "type_source": "student_support_activity_group",
+      "type_target": "support_service_instance",
+      "relation": "bao_gồm_ví_dụ_là"
     },
     {
-      "source": "sinh viên",
-      "target": "Nhà trường",
-      "relation": "TẠI",
-      "type_source": "person",
-      "type_target": "organization"
+      "source": {
+        "name": "Hoạt động dịch vụ hỗ trợ sinh viên",
+        "description": "Nhóm các dịch vụ cụ thể do TTDVSV cung cấp",
+        "provider_entity": "Trung tâm dịch vụ sinh viên"
+      },
+      "target": {
+        "name": "Giữ xe",
+        "service_type": "Dịch vụ trông giữ phương tiện",
+        "classification": "Dịch vụ hỗ trợ"
+      },
+      "type_source": "student_support_activity_group",
+      "type_target": "support_service_instance",
+      "relation": "bao_gồm_ví_dụ_là"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "sinh viên",
-      "relation": "PHỤC_VỤ",
-      "type_source": "organization",
-      "type_target": "person"
+      "source": {
+        "name": "Hoạt động dịch vụ hỗ trợ sinh viên",
+        "description": "Nhóm các dịch vụ cụ thể do TTDVSV cung cấp",
+        "provider_entity": "Trung tâm dịch vụ sinh viên"
+      },
+      "target": {
+        "name": "Căn tin",
+        "service_type": "Dịch vụ ăn uống",
+        "classification": "Dịch vụ hỗ trợ"
+      },
+      "type_source": "student_support_activity_group",
+      "type_target": "support_service_instance",
+      "relation": "bao_gồm_ví_dụ_là"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "Nhà khách",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "location"
+      "source": {
+        "name": "Hoạt động dịch vụ hỗ trợ sinh viên",
+        "description": "Nhóm các dịch vụ cụ thể do TTDVSV cung cấp",
+        "provider_entity": "Trung tâm dịch vụ sinh viên"
+      },
+      "target": {
+        "name": "Photocopy",
+        "service_type": "Dịch vụ in ấn, sao chụp",
+        "classification": "Dịch vụ hỗ trợ"
+      },
+      "type_source": "student_support_activity_group",
+      "type_target": "support_service_instance",
+      "relation": "bao_gồm_ví_dụ_là"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "giữ xe",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "service"
+      "source": {
+        "name": "Hoạt động dịch vụ hỗ trợ sinh viên",
+        "description": "Nhóm các dịch vụ cụ thể do TTDVSV cung cấp",
+        "provider_entity": "Trung tâm dịch vụ sinh viên"
+      },
+      "target": {
+        "name": "Internet",
+        "service_type": "Dịch vụ truy cập mạng",
+        "classification": "Dịch vụ hỗ trợ"
+      },
+      "type_source": "student_support_activity_group",
+      "type_target": "support_service_instance",
+      "relation": "bao_gồm_ví_dụ_là"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "căn tin",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "location"
+      "source": {
+        "name": "Hoạt động dịch vụ hỗ trợ sinh viên",
+        "description": "Nhóm các dịch vụ cụ thể do TTDVSV cung cấp",
+        "provider_entity": "Trung tâm dịch vụ sinh viên"
+      },
+      "target": {
+        "name": "Phương tiện vận chuyển",
+        "service_type": "Dịch vụ di chuyển",
+        "classification": "Dịch vụ hỗ trợ"
+      },
+      "type_source": "student_support_activity_group",
+      "type_target": "support_service_instance",
+      "relation": "bao_gồm_ví_dụ_là"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "photocopy",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "service"
+      "source": {
+        "name": "Hoạt động dịch vụ hỗ trợ sinh viên",
+        "purpose_text": "Hỗ trợ và phục vụ sinh viên",
+        "scope": "Đa dạng các dịch vụ cụ thể"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Đối tượng phục vụ chính",
+        "needs_description": "Nhu cầu đa dạng, phong phú"
+      },
+      "type_source": "student_support_activity_group",
+      "type_target": "student",
+      "relation": "phục_vụ_nhu_cầu_của"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "internet",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "service"
+      "source": {
+        "name": "Trung tâm dịch vụ sinh viên",
+        "entity_type": "Đơn vị trực thuộc trường",
+        "operational_base": "Văn phòng làm việc"
+      },
+      "target": {
+        "name": "Văn phòng Trung tâm Dịch vụ Sinh viên",
+        "office_street": "đường số 6",
+        "office_campus": "Trường Đại học Nông Lâm TP.HCM",
+        "location_type": "Địa chỉ chính thức"
+      },
+      "type_source": "student_service_center",
+      "type_target": "office",
+      "relation": "có_văn_phòng_tại"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "phương tiện vận chuyển",
-      "relation": "CÓ",
-      "type_source": "organization",
-      "type_target": "item"
+      "source": {
+        "name": "Văn phòng Trung tâm Dịch vụ Sinh viên",
+        "description": "Địa điểm làm việc của Trung tâm Dịch vụ Sinh viên",
+        "street_location": "đường số 6"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "campus_type": "Khuôn viên trường đại học",
+        "role": "Nơi đặt văn phòng"
+      },
+      "type_source": "office",
+      "type_target": "university",
+      "relation": "nằm_trong_khuôn_viên_của"
     },
     {
-      "source": "Văn phòng Trung tâm Dịch vụ Sinh viên",
-      "target": "đường số 6",
-      "relation": "TẠI",
-      "type_source": "location",
-      "type_target": "location"
+      "source": {
+        "name": "Trung tâm dịch vụ sinh viên",
+        "information_channel_owner": "Đơn vị quản lý website"
+      },
+      "target": {
+        "name": "https://ttdvsv.hcmuaf.edu.vn",
+        "resource_type": "Website",
+        "access_method": "Trực tuyến"
+      },
+      "type_source": "student_service_center",
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Văn phòng Trung tâm Dịch vụ Sinh viên",
-      "target": "trường Đại học Nông Lâm TP.HCM",
-      "relation": "TẠI",
-      "type_source": "location",
-      "type_target": "organization"
+      "source": {
+        "name": "Trung tâm dịch vụ sinh viên",
+        "information_channel_owner": "Đơn vị quản lý số điện thoại"
+      },
+      "target": {
+        "name": "028-38963346",
+        "contact_medium": "Số điện thoại",
+        "purpose": "Liên lạc"
+      },
+      "type_source": "student_service_center",
+      "type_target": "phone_number",
+      "relation": "có_điện_thoại"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "https://ttdvsv.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
-      "type_source": "organization",
-      "type_target": "website"
+      "source": {
+        "name": "Trung tâm dịch vụ sinh viên",
+        "information_channel_owner": "Đơn vị quản lý email"
+      },
+      "target": {
+        "name": "ttdvsv@hcmuaf.edu.vn",
+        "contact_medium": "Địa chỉ email",
+        "purpose": "Liên lạc"
+      },
+      "type_source": "student_service_center",
+      "type_target": "email_address",
+      "relation": "có_email"
     },
     {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "028-38963346",
-      "relation": "ĐIỆN_THOẠI",
-      "type_source": "organization",
-      "type_target": "phone_number"
-    },
-    {
-      "source": "Trung tâm dịch vụ sinh viên",
-      "target": "ttdvsv@hcmuaf.edu.vn",
-      "relation": "EMAIL",
-      "type_source": "organization",
-      "type_target": "email"
+      "source": {
+        "name": "Sinh viên",
+        "primary_role": "Người học",
+        "status_context": "Đang theo học"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "institution_type": "Cơ sở giáo dục đại học",
+        "common_reference_in_text": "Nhà trường"
+      },
+      "type_source": "student",
+      "type_target": "university",
+      "relation": "học_tập_tại"
     }
   ]
 }

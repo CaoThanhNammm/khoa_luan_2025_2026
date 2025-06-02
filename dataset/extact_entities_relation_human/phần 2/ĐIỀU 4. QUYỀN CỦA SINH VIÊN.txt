@@ -1,1422 +1,609 @@
 {
-  "entities": [
-    {
-      "name": "Sinh viên",
-      "type": "person"
-    },
-    {
-      "name": "SV",
-      "type": "person"
-    },
-    {
-      "name": "ngành nghề",
-      "type": "concept"
-    },
-    {
-      "name": "Bộ Giáo dục và Đào tạo",
-      "type": "organization"
-    },
-    {
-      "name": "nhà trường",
-      "type": "organization"
-    },
-    {
-      "name": "thông tin cá nhân",
-      "type": "concept"
-    },
-    {
-      "name": "học tập",
-      "type": "activity"
-    },
-    {
-      "name": "rèn luyện",
-      "type": "activity"
-    },
-    {
-      "name": "quy định",
-      "type": "regulation"
-    },
-    {
-      "name": "nội quy",
-      "type": "regulation"
-    },
-    {
-      "name": "quy chế",
-      "type": "regulation"
-    },
-    {
-      "name": "thực tập",
-      "type": "activity"
-    },
-    {
-      "name": "thi tốt nghiệp",
-      "type": "activity"
-    },
-    {
-      "name": "chế độ chính sách",
-      "type": "regulation"
-    },
-    {
-      "name": "Nhà nước",
-      "type": "organization"
-    },
-    {
-      "name": "thư viện",
-      "type": "location"
-    },
-    {
-      "name": "trang thiết bị",
-      "type": "object"
-    },
-    {
-      "name": "phương tiện",
-      "type": "object"
-    },
-    {
-      "name": "hoạt động học tập",
-      "type": "activity"
-    },
-    {
-      "name": "thí nghiệm",
-      "type": "activity"
-    },
-    {
-      "name": "nghiên cứu khoa học",
-      "type": "activity"
-    },
-    {
-      "name": "văn hoá",
-      "type": "concept"
-    },
-    {
-      "name": "văn nghệ",
-      "type": "concept"
-    },
-    {
-      "name": "thể dục",
-      "type": "activity"
-    },
-    {
-      "name": "thể thao",
-      "type": "activity"
-    },
-    {
-      "name": "thi SV giỏi",
-      "type": "activity"
-    },
-    {
-      "name": "thi Olympic các môn học",
-      "type": "activity"
-    },
-    {
-      "name": "thi sáng tạo tài năng trẻ",
-      "type": "activity"
-    },
-    {
-      "name": "sức khỏe",
-      "type": "concept"
-    },
-    {
-      "name": "chế độ hiện hành",
-      "type": "regulation"
-    },
-    {
-      "name": "nước ngoài",
-      "type": "location"
-    },
-    {
-      "name": "trình độ đào tạo cao hơn",
-      "type": "concept"
-    },
-    {
-      "name": "quy định hiện hành",
-      "type": "regulation"
-    },
-    {
-      "name": "tổ chức Đảng Cộng sản Việt Nam",
-      "type": "organization"
-    },
-    {
-      "name": "Đoàn TNCS Hồ Chí Minh",
-      "type": "organization"
-    },
-    {
-      "name": "Hội Sinh viên Việt Nam",
-      "type": "organization"
-    },
-    {
-      "name": "Hội Liên hiệp Thanh niên Việt Nam",
-      "type": "organization"
-    },
-    {
-      "name": "tổ chức tự quản",
-      "type": "organization"
-    },
-    {
-      "name": "hoạt động xã hội",
-      "type": "activity"
-    },
-    {
-      "name": "pháp luật",
-      "type": "regulation"
-    },
-    {
-      "name": "hoạt động văn hóa",
-      "type": "activity"
-    },
-    {
-      "name": "hoạt động văn nghệ",
-      "type": "activity"
-    },
-    {
-      "name": "hoạt động thể thao",
-      "type": "activity"
-    },
-    {
-      "name": "mục tiêu đào tạo",
-      "type": "concept"
-    },
-    {
-      "name": "nghỉ học tạm thời",
-      "type": "activity"
-    },
-    {
-      "name": "tạm ngừng học",
-      "type": "activity"
-    },
-    {
-      "name": "học theo tiến độ chậm",
-      "type": "activity"
-    },
-    {
-      "name": "học theo tiến độ nhanh",
-      "type": "activity"
-    },
-    {
-      "name": "học cùng lúc hai chương trình",
-      "type": "activity"
-    },
-    {
-      "name": "chuyển trường",
-      "type": "activity"
-    },
-    {
-      "name": "quy chế về đào tạo",
-      "type": "regulation"
-    },
-    {
-      "name": "nghỉ hè",
-      "type": "event"
-    },
-    {
-      "name": "nghỉ tết",
-      "type": "event"
-    },
-    {
-      "name": "nghỉ lễ",
-      "type": "event"
-    },
-    {
-      "name": "chế độ",
-      "type": "regulation"
-    },
-    {
-      "name": "chính sách ưu tiên",
-      "type": "regulation"
-    },
-    {
-      "name": "học bổng",
-      "type": "concept"
-    },
-    {
-      "name": "tổ chức",
-      "type": "organization"
-    },
-    {
-      "name": "cá nhân",
-      "type": "person"
-    },
-    {
-      "name": "trong nước",
-      "type": "location"
-    },
-    {
-       "name": "ngoài nước",
-       "type": "location"
-     },
-    {
-      "name": "phí",
-      "type": "concept"
-    },
-    {
-      "name": "dịch vụ công cộng",
-      "type": "service"
-    },
-    {
-      "name": "giao thông",
-      "type": "service_type"
-    },
-    {
-      "name": "giải trí",
-      "type": "service_type"
-    },
-    {
-      "name": "tham quan viện bảo tàng",
-      "type": "activity"
-    },
-    {
-      "name": "viện bảo tàng",
-      "type": "location"
-    },
-    {
-      "name": "di tích lịch sử",
-      "type": "location"
-    },
-    {
-      "name": "công trình văn hóa",
-      "type": "location"
-    },
-    {
-      "name": "đại diện hợp pháp",
-      "type": "person"
-    },
-    {
-      "name": "giải pháp",
-      "type": "concept"
-    },
-    {
-      "name": "nguyện vọng",
-      "type": "concept"
-    },
-    {
-      "name": "khiếu nại",
-      "type": "action"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "person"
-    },
-    {
-      "name": "quyền",
-      "type": "concept"
-    },
-    {
-      "name": "lợi ích chính đáng",
-      "type": "concept"
-    },
-    {
-      "name": "ký túc xá",
-      "type": "location"
-    },
-    {
-      "name": "Quy chế công tác SV nội trú",
-      "type": "regulation"
-    },
-    {
-      "name": "điều kiện công nhận tốt nghiệp",
-      "type": "concept"
-    },
-    {
-      "name": "bằng tốt nghiệp",
-      "type": "document"
-    },
-    {
-      "name": "bảng điểm học tập",
-      "type": "document"
-    },
-    {
-      "name": "bảng điểm rèn luyện",
-      "type": "document"
-    },
-    {
-      "name": "hồ sơ SV",
-      "type": "document"
-    },
-    {
-      "name": "giấy tờ có liên quan khác",
-      "type": "document"
-    },
-    {
-      "name": "thủ tục hành chính",
-      "type": "process"
-    },
-    {
-      "name": "chính sách ưu tiên của Nhà nước",
-      "type": "regulation"
-    },
-    {
-      "name": "tuyển dụng",
-      "type": "process"
-    },
-    {
-      "name": "cơ quan Nhà nước",
-      "type": "organization"
-    },
-    {
-      "name": "loại giỏi",
-      "type": "classification"
-    },
-    {
-      "name": "chính sách ưu tiên khác",
-      "type": "regulation"
-    },
-    {
-      "name": "quy định về tuyển dụng cán bộ, công chức, viên chức",
-      "type": "regulation"
-    },
-    {
-      "name": "cán bộ",
-      "type": "person"
-    },
-    {
-      "name": "công chức",
-      "type": "person"
-    },
-    {
-      "name": "viên chức",
-      "type": "person"
-    },
-    {
-      "name": "điều kiện trúng tuyển",
-      "type": "concept"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh viên",
-      "target": "ngành nghề",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_quyền_được_nhận_vào_học"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "điều kiện trúng tuyển",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "phải_đáp_ứng"
-    },
-    {
-      "source": "điều kiện trúng tuyển",
-      "target": "quy định",
-      "type_source": "concept",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
-    },
-    {
-      "source": "quy định",
-      "target": "Bộ Giáo dục và Đào tạo",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "quy định",
-      "target": "nhà trường",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nhà trường",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "có_quyền_được_tôn_trọng_bởi"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nhà trường",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "có_quyền_được_đối_xử_bình_đẳng_bởi"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "thông tin cá nhân",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_quyền_được_cung_cấp"
-    },
-    {
-      "source": "thông tin cá nhân",
-      "target": "học tập",
-      "type_source": "concept",
-      "type_target": "activity",
-      "relation": "liên_quan_đến"
-    },
-    {
-      "source": "thông tin cá nhân",
-      "target": "rèn luyện",
-      "type_source": "concept",
-      "type_target": "activity",
-      "relation": "liên_quan_đến"
-    },
-    {
-        "source": "việc cung cấp thông tin cá nhân",
-        "target": "quy định",
-        "type_source": "activity",
-        "type_target": "regulation",
-        "relation": "theo_quy_định"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nội quy",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "có_quyền_được_phổ_biến"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "quy chế",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "có_quyền_được_phổ_biến"
-    },
-     {
-      "source": "nhà trường",
-      "target": "nội quy",
-      "type_source": "organization",
-      "type_target": "regulation",
-      "relation": "có_trách_nhiệm_phổ_biến"
-    },
-    {
-      "source": "nhà trường",
-      "target": "quy chế",
-      "type_source": "organization",
-      "type_target": "regulation",
-      "relation": "có_trách_nhiệm_phổ_biến"
-    },
-    {
-      "source": "quy chế",
-      "target": "học tập",
-      "type_source": "regulation",
-      "type_target": "activity",
-      "relation": "liên_quan_đến"
-    },
-    {
-      "source": "quy chế",
-      "target": "thực tập",
-      "type_source": "regulation",
-      "type_target": "activity",
-      "relation": "liên_quan_đến"
-    },
-    {
-      "source": "quy chế",
-      "target": "thi tốt nghiệp",
-      "type_source": "regulation",
-      "type_target": "activity",
-      "relation": "liên_quan_đến"
-    },
-    {
-      "source": "quy chế",
-      "target": "rèn luyện",
-      "type_source": "regulation",
-      "type_target": "activity",
-      "relation": "liên_quan_đến"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "chế độ chính sách",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "có_quyền_được_phổ_biến"
-    },
-    {
-      "source": "nhà trường",
-      "target": "chế độ chính sách",
-      "type_source": "organization",
-      "type_target": "regulation",
-      "relation": "có_trách_nhiệm_phổ_biến"
-    },
-    {
-      "source": "chế độ chính sách",
-      "target": "Nhà nước",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "chế độ chính sách",
-      "target": "Sinh viên",
-      "type_source": "regulation",
-      "type_target": "person",
-      "relation": "liên_quan_đến"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "học tập",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền_được_tạo_điều_kiện_trong"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "rèn luyện",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền_được_tạo_điều_kiện_trong"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "thư viện",
-      "type_source": "person",
-      "type_target": "location",
-      "relation": "có_quyền_sử_dụng"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "trang thiết bị",
-      "type_source": "person",
-      "type_target": "object",
-      "relation": "có_quyền_sử_dụng"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "phương tiện",
-      "type_source": "person",
-      "type_target": "object",
-      "relation": "có_quyền_sử_dụng"
-    },
-    {
-      "source": "trang thiết bị",
-      "target": "hoạt động học tập",
-      "type_source": "object",
-      "type_target": "activity",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "trang thiết bị",
-      "target": "thí nghiệm",
-      "type_source": "object",
-      "type_target": "activity",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "trang thiết bị",
-      "target": "nghiên cứu khoa học",
-      "type_source": "object",
-      "type_target": "activity",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "trang thiết bị",
-      "target": "văn hoá",
-      "type_source": "object",
-      "type_target": "concept",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "trang thiết bị",
-      "target": "văn nghệ",
-      "type_source": "object",
-      "type_target": "concept",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "trang thiết bị",
-      "target": "thể dục",
-      "type_source": "object",
-      "type_target": "activity",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "trang thiết bị",
-      "target": "thể thao",
-      "type_source": "object",
-      "type_target": "activity",
-      "relation": "phục_vụ_cho"
-    },
-        {
-      "source": "phương tiện",
-      "target": "hoạt động học tập",
-      "type_source": "object",
-      "type_target": "activity",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "phương tiện",
-      "target": "thí nghiệm",
-      "type_source": "object",
-      "type_target": "activity",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "phương tiện",
-      "target": "nghiên cứu khoa học",
-      "type_source": "object",
-      "type_target": "activity",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "phương tiện",
-      "target": "văn hoá",
-      "type_source": "object",
-      "type_target": "concept",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "phương tiện",
-      "target": "văn nghệ",
-      "type_source": "object",
-      "type_target": "concept",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "phương tiện",
-      "target": "thể dục",
-      "type_source": "object",
-      "type_target": "activity",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "phương tiện",
-      "target": "thể thao",
-      "type_source": "object",
-      "type_target": "activity",
-      "relation": "phục_vụ_cho"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nghiên cứu khoa học",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền_tham_gia"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "thi SV giỏi",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền_tham_gia"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "thi Olympic các môn học",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền_tham_gia"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "thi sáng tạo tài năng trẻ",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền_tham_gia"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "sức khỏe",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_quyền_được_chăm_lo"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "sức khỏe",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_quyền_được_bảo_vệ"
-    },
-    {
-      "source": "việc chăm lo sức khỏe",
-      "target": "chế độ hiện hành",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
-    },
-     {
-      "source": "việc bảo vệ sức khỏe",
-      "target": "chế độ hiện hành",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
-    },
-    {
-      "source": "chế độ hiện hành",
-      "target": "Nhà nước",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nước ngoài",
-      "type_source": "person",
-      "type_target": "location",
-      "relation": "có_quyền_đăng_ký_dự_tuyển_đi_học"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "trình độ đào tạo cao hơn",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_quyền_học_chuyển_tiếp"
-    },
-    {
-      "source": "việc đăng ký dự tuyển đi học nước ngoài",
-      "target": "quy định hiện hành",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
-    },
-    {
-      "source": "việc học chuyển tiếp",
-      "target": "quy định hiện hành",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
-    },
-    {
-      "source": "quy định hiện hành",
-      "target": "Bộ Giáo dục và Đào tạo",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "tổ chức Đảng Cộng sản Việt Nam",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "có_quyền_hoạt_động_trong"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Đoàn TNCS Hồ Chí Minh",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "có_quyền_hoạt_động_trong"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Hội Sinh viên Việt Nam",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "có_quyền_hoạt_động_trong"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Hội Liên hiệp Thanh niên Việt Nam",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "có_quyền_hoạt_động_trong"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "tổ chức tự quản",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "có_quyền_tham_gia"
-    },
-    {
-      "source": "tổ chức tự quản",
-      "target": "Sinh viên",
-      "type_source": "organization",
-      "type_target": "person",
-      "relation": "của"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "hoạt động xã hội",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền_tham_gia"
-    },
-    {
-      "source": "hoạt động xã hội",
-      "target": "nhà trường",
-      "type_source": "activity",
-      "type_target": "organization",
-      "relation": "ở_trong"
-    },
-     {
-      "source": "hoạt động xã hội",
-      "target": "nhà trường",
-      "type_source": "activity",
-      "type_target": "organization",
-      "relation": "ở_ngoài"
-    },
-    {
-      "source": "việc tham gia hoạt động xã hội",
-      "target": "pháp luật",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "hoạt động văn hóa",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền_tham_gia"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "hoạt động văn nghệ",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền_tham_gia"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "hoạt động thể thao",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền_tham_gia"
-    },
-    {
-      "source": "hoạt động văn hóa",
-      "target": "mục tiêu đào tạo",
-      "type_source": "activity",
-      "type_target": "concept",
-      "relation": "phù_hợp_với"
-    },
-    {
-      "source": "hoạt động văn nghệ",
-      "target": "mục tiêu đào tạo",
-      "type_source": "activity",
-      "type_target": "concept",
-      "relation": "phù_hợp_với"
-    },
-    {
-      "source": "hoạt động thể thao",
-      "target": "mục tiêu đào tạo",
-      "type_source": "activity",
-      "type_target": "concept",
-      "relation": "phù_hợp_với"
-    },
-    {
-      "source": "mục tiêu đào tạo",
-      "target": "nhà trường",
-      "type_source": "concept",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nghỉ học tạm thời",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "tạm ngừng học",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "học theo tiến độ chậm",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "học theo tiến độ nhanh",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "học cùng lúc hai chương trình",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "chuyển trường",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_quyền"
-    },
-    {
-      "source": "nghỉ học tạm thời",
-      "target": "quy chế về đào tạo",
-      "type_source": "activity",
-      "type_target": "regulation",
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại các cơ sở giáo dục",
+        "condition_for_right": "đủ các điều kiện trúng tuyển"
+      },
+      "target": {
+        "name": "Ngành nghề đã đăng ký dự tuyển",
+        "status": "Đã đăng ký",
+        "description": "Ngành học sinh viên đã chọn"
+      },
+      "type_source": "student",
+      "type_target": "academic_major",
+      "relation": "được_nhận_vào_học"
+    },
+    {
+      "source": {
+        "name": "Điều kiện trúng tuyển",
+        "purpose": "Tiêu chuẩn để được nhập học",
+        "scope": "Tuyển sinh giáo dục"
+      },
+      "target": {
+        "name": "Bộ Giáo dục và Đào tạo",
+        "acronym": "Bộ GD&ĐT",
+        "role": "Cơ quan quản lý nhà nước về giáo dục"
+      },
+      "type_source": "admission_criteria",
+      "type_target": "government_body",
+      "relation": "quy_định_bởi"
+    },
+    {
+      "source": {
+        "name": "Điều kiện trúng tuyển",
+        "purpose": "Tiêu chuẩn để được nhập học",
+        "scope": "Tuyển sinh của trường"
+      },
+      "target": {
+        "name": "Nhà trường",
+        "role": "Cơ sở giáo dục",
+        "responsibility": "Tổ chức tuyển sinh và đào tạo"
+      },
+      "type_source": "admission_criteria",
+      "type_target": "educational_institution",
+      "relation": "quy_định_bởi"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Nhà trường",
+        "role": "Cơ sở giáo dục",
+        "duty": "Đối xử với sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "educational_institution",
+      "relation": "được_tôn_trọng_và_đối_xử_bình_đẳng_bởi"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Thông tin cá nhân về việc học tập, rèn luyện",
+        "content": "Dữ liệu học tập và rèn luyện của sinh viên",
+        "provision_basis": "Theo quy định của nhà trường"
+      },
+      "type_source": "student",
+      "type_target": "personal_academic_information",
+      "relation": "được_cung_cấp_đầy_đủ"
+    },
+    {
+      "source": {
+        "name": "Nhà trường",
+        "role": "Cơ sở giáo dục"
+      },
+      "target": {
+        "name": "Nội quy, quy chế về học tập, thực tập, thi tốt nghiệp, rèn luyện",
+        "category": "Văn bản quy định của trường",
+        "scope_of_regulation": "Học tập, thực tập, thi tốt nghiệp, rèn luyện"
+      },
+      "type_source": "educational_institution",
+      "type_target": "school_regulation",
+      "relation": "phổ_biến_cho_sinh_viên"
+    },
+    {
+      "source": {
+        "name": "Nhà trường",
+        "role": "Cơ sở giáo dục"
+      },
+      "target": {
+        "name": "Chế độ chính sách của Nhà nước có liên quan đến Sinh viên",
+        "issuer": "Nhà nước",
+        "target_audience": "Sinh viên"
+      },
+      "type_source": "educational_institution",
+      "type_target": "state_policy",
+      "relation": "phổ_biến_cho_sinh_viên"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Thư viện",
+        "function": "Phục vụ học tập, nghiên cứu",
+        "type_of_facility": "Cơ sở vật chất trường học"
+      },
+      "type_source": "student",
+      "type_target": "school_facility",
+      "relation": "được_sử_dụng"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Các trang thiết bị và phương tiện",
+        "purpose": "Phục vụ các hoạt động học tập, thí nghiệm, nghiên cứu khoa học, văn hoá, văn nghệ, thể dục, thể thao",
+        "type_of_facility": "Cơ sở vật chất và phương tiện hỗ trợ"
+      },
+      "type_source": "student",
+      "type_target": "school_equipment",
+      "relation": "được_sử_dụng"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Nghiên cứu khoa học",
+        "nature": "Hoạt động học thuật, sáng tạo",
+        "field": "Khoa học"
+      },
+      "type_source": "student",
+      "type_target": "academic_activity",
+      "relation": "được_tham_gia"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Các cuộc thi học thuật và sáng tạo",
+        "examples": "Thi SV giỏi, thi Olympic các môn học, thi sáng tạo tài năng trẻ",
+        "purpose": "Phát triển tài năng, khuyến khích học tập"
+      },
+      "type_source": "student",
+      "type_target": "competition",
+      "relation": "được_tham_gia"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Sức khỏe",
+        "care_standard": "Theo chế độ hiện hành của Nhà nước",
+        "aspect": "Chăm sóc và bảo vệ"
+      },
+      "type_source": "student",
+      "type_target": "health_care_benefit",
+      "relation": "được_chăm_lo_bảo_vệ"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Việc học ở nước ngoài",
+        "opportunity_type": "Đào tạo quốc tế",
+        "process_requirement": "Đăng ký dự tuyển"
+      },
+      "type_source": "student",
+      "type_target": "overseas_study_opportunity",
+      "relation": "được_đăng_ký_dự_tuyển"
+    },
+    {
+      "source": {
+        "name": "Việc học ở nước ngoài",
+        "opportunity_type": "Đào tạo quốc tế"
+      },
+      "target": {
+        "name": "Bộ Giáo dục và Đào tạo",
+        "acronym": "Bộ GD&ĐT",
+        "role": "Cơ quan quản lý nhà nước về giáo dục"
+      },
+      "type_source": "overseas_study_opportunity",
+      "type_target": "government_body",
       "relation": "theo_quy_định_của"
     },
     {
-      "source": "tạm ngừng học",
-      "target": "quy chế về đào tạo",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định_của"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Việc học chuyển tiếp ở các trình độ đào tạo cao hơn",
+        "opportunity_type": "Phát triển học vấn",
+        "level": "Trình độ cao hơn"
+      },
+      "type_source": "student",
+      "type_target": "further_education_opportunity",
+      "relation": "được_học_chuyển_tiếp"
     },
-     {
-      "source": "học theo tiến độ chậm",
-      "target": "quy chế về đào tạo",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định_của"
-    },
-     {
-      "source": "học theo tiến độ nhanh",
-      "target": "quy chế về đào tạo",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định_của"
-    },
-     {
-      "source": "học cùng lúc hai chương trình",
-      "target": "quy chế về đào tạo",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định_của"
-    },
-     {
-      "source": "chuyển trường",
-      "target": "quy chế về đào tạo",
-      "type_source": "activity",
-      "type_target": "regulation",
+    {
+      "source": {
+        "name": "Việc học chuyển tiếp ở các trình độ đào tạo cao hơn",
+        "opportunity_type": "Phát triển học vấn"
+      },
+      "target": {
+        "name": "Bộ Giáo dục và Đào tạo",
+        "acronym": "Bộ GD&ĐT",
+        "role": "Cơ quan quản lý nhà nước về giáo dục"
+      },
+      "type_source": "further_education_opportunity",
+      "type_target": "government_body",
       "relation": "theo_quy_định_của"
     },
     {
-      "source": "quy chế về đào tạo",
-      "target": "Bộ Giáo dục và Đào tạo",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Đảng Cộng sản Việt Nam",
+        "type_of_organization": "Tổ chức chính trị",
+        "student_involvement": "Hoạt động"
+      },
+      "type_source": "student",
+      "type_target": "political_organization",
+      "relation": "được_tạo_điều_kiện_hoạt_động_trong"
     },
     {
-      "source": "Sinh viên",
-      "target": "nghỉ hè",
-      "type_source": "person",
-      "type_target": "event",
-      "relation": "có_quyền_được"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Đoàn TNCS Hồ Chí Minh",
+        "type_of_organization": "Tổ chức chính trị - xã hội của thanh niên",
+        "student_involvement": "Hoạt động"
+      },
+      "type_source": "student",
+      "type_target": "youth_organization",
+      "relation": "được_tạo_điều_kiện_hoạt_động_trong"
     },
     {
-      "source": "Sinh viên",
-      "target": "nghỉ tết",
-      "type_source": "person",
-      "type_target": "event",
-      "relation": "có_quyền_được"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Hội Sinh viên Việt Nam",
+        "type_of_organization": "Tổ chức của sinh viên",
+        "student_involvement": "Hoạt động"
+      },
+      "type_source": "student",
+      "type_target": "student_organization",
+      "relation": "được_tạo_điều_kiện_hoạt_động_trong"
     },
     {
-      "source": "Sinh viên",
-      "target": "nghỉ lễ",
-      "type_source": "person",
-      "type_target": "event",
-      "relation": "có_quyền_được"
-    },
-     {
-      "source": "nghỉ hè",
-      "target": "quy định",
-      "type_source": "event",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
-    },
-     {
-      "source": "nghỉ tết",
-      "target": "quy định",
-      "type_source": "event",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
-    },
-     {
-      "source": "nghỉ lễ",
-      "target": "quy định",
-      "type_source": "event",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Hội Liên hiệp Thanh niên Việt Nam",
+        "type_of_organization": "Tổ chức xã hội của thanh niên",
+        "student_involvement": "Hoạt động"
+      },
+      "type_source": "student",
+      "type_target": "youth_organization",
+      "relation": "được_tạo_điều_kiện_hoạt_động_trong"
     },
     {
-      "source": "Sinh viên",
-      "target": "chế độ",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "có_quyền_hưởng"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Tổ chức tự quản của Sinh viên",
+        "type_of_organization": "Tổ chức do sinh viên thành lập và quản lý",
+        "purpose_of_organization": "Đại diện quyền lợi sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "student_self_governing_organization",
+      "relation": "được_tham_gia"
     },
     {
-      "source": "Sinh viên",
-      "target": "chính sách ưu tiên",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "có_quyền_hưởng"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Hoạt động xã hội",
+        "scope_of_activity": "Trong và ngoài nhà trường",
+        "legal_basis": "Theo quy định của pháp luật"
+      },
+      "type_source": "student",
+      "type_target": "social_activity",
+      "relation": "được_tham_gia"
     },
     {
-      "source": "chế độ",
-      "target": "quy định",
-      "type_source": "regulation",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Hoạt động văn hóa, văn nghệ, thể thao",
+        "characteristics": "Lành mạnh, phù hợp với mục tiêu đào tạo của nhà trường",
+        "type_of_activity": "Ngoại khóa, phát triển toàn diện"
+      },
+      "type_source": "student",
+      "type_target": "extracurricular_activity",
+      "relation": "được_tham_gia"
     },
     {
-      "source": "chính sách ưu tiên",
-      "target": "quy định",
-      "type_source": "regulation",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Các lựa chọn học tập linh hoạt",
+        "examples": "Nghỉ học tạm thời, tạm ngừng học, học theo tiến độ chậm/nhanh, học cùng lúc hai chương trình, chuyển trường",
+        "regulation_source_description": "Quy chế về đào tạo của Bộ Giáo dục và Đào tạo"
+      },
+      "type_source": "student",
+      "type_target": "flexible_study_option",
+      "relation": "được_hưởng_quyền_về"
     },
     {
-      "source": "quy định",
-      "target": "Nhà nước",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
+      "source": {
+        "name": "Các lựa chọn học tập linh hoạt",
+        "description": "Các hình thức học tập không theo tiến độ chuẩn hoặc chương trình chuẩn"
+      },
+      "target": {
+        "name": "Quy chế về đào tạo của Bộ Giáo dục và Đào tạo",
+        "issuer_name": "Bộ Giáo dục và Đào tạo",
+        "content_focus": "Quy định về quá trình đào tạo"
+      },
+      "type_source": "flexible_study_option",
+      "type_target": "education_regulation",
+      "relation": "quy_định_theo"
     },
     {
-      "source": "Sinh viên",
-      "target": "học bổng",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_quyền_được_xét_nhận"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Nghỉ hè, nghỉ tết, nghỉ lễ",
+        "basis_for_leave": "Theo quy định",
+        "type_of_leave": "Thời gian nghỉ định kỳ theo năm học hoặc sự kiện"
+      },
+      "type_source": "student",
+      "type_target": "leave_period",
+      "relation": "được_nghỉ"
     },
     {
-      "source": "học bổng",
-      "target": "tổ chức",
-      "type_source": "concept",
-      "type_target": "organization",
-      "relation": "được_tài_trợ_bởi"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Chế độ, chính sách ưu tiên",
+        "provider_name": "Nhà nước",
+        "purpose_of_policy": "Hỗ trợ và khuyến khích sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "state_preferential_policy",
+      "relation": "được_hưởng"
     },
     {
-      "source": "học bổng",
-      "target": "cá nhân",
-      "type_source": "concept",
-      "type_target": "person",
-      "relation": "được_tài_trợ_bởi"
+      "source": {
+        "name": "Chế độ, chính sách ưu tiên",
+        "beneficiary": "Sinh viên"
+      },
+      "target": {
+        "name": "Nhà nước",
+        "role": "Ban hành chính sách",
+        "scope_of_governance": "Toàn quốc"
+      },
+      "type_source": "state_preferential_policy",
+      "type_target": "government_body",
+      "relation": "theo_quy_định_của"
     },
     {
-      "source": "tổ chức",
-      "target": "trong nước",
-      "type_source": "organization",
-      "type_target": "location",
-      "relation": "ở"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Học bổng",
+        "purpose_of_scholarship": "Hỗ trợ tài chính, khuyến khích học tập",
+        "source_description": "Do các tổ chức, cá nhân trong và ngoài nước tài trợ"
+      },
+      "type_source": "student",
+      "type_target": "scholarship",
+      "relation": "được_xét_nhận"
     },
     {
-      "source": "tổ chức",
-      "target": "ngoài nước",
-      "type_source": "organization",
-      "type_target": "location",
-      "relation": "ở"
-    },
-     {
-      "source": "cá nhân",
-      "target": "trong nước",
-      "type_source": "person",
-      "type_target": "location",
-      "relation": "ở"
-    },
-    {
-      "source": "cá nhân",
-      "target": "ngoài nước",
-      "type_source": "person",
-      "type_target": "location",
-      "relation": "ở"
+      "source": {
+        "name": "Học bổng",
+        "beneficiary_group": "Sinh viên"
+      },
+      "target": {
+        "name": "Các tổ chức, cá nhân trong và ngoài nước",
+        "role_description": "Nhà tài trợ học bổng",
+        "geographical_scope": "Trong và ngoài nước"
+      },
+      "type_source": "scholarship",
+      "type_target": "sponsor",
+      "relation": "tài_trợ_bởi"
     },
     {
-      "source": "Sinh viên",
-      "target": "phí",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_quyền_được_miễn_giảm"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Các dịch vụ công cộng",
+        "examples_of_services": "Giao thông, giải trí, tham quan viện bảo tàng, di tích lịch sử, công trình văn hóa",
+        "benefit_type": "Miễn giảm phí"
+      },
+      "type_source": "student",
+      "type_target": "public_service",
+      "relation": "được_miễn_giảm_phí_khi_sử_dụng"
     },
     {
-      "source": "phí",
-      "target": "dịch vụ công cộng",
-      "type_source": "concept",
-      "type_target": "service",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Việc miễn giảm phí khi sử dụng các dịch vụ công cộng",
+        "target_beneficiary": "Sinh viên"
+      },
+      "target": {
+        "name": "Nhà nước",
+        "role": "Ban hành quy định",
+        "scope_of_governance": "Toàn quốc"
+      },
+      "type_source": "fee_reduction_policy",
+      "type_target": "government_body",
+      "relation": "theo_quy_định_của"
     },
     {
-      "source": "dịch vụ công cộng",
-      "target": "giao thông",
-      "type_source": "service",
-      "type_target": "service_type",
-      "relation": "liên_quan_đến"
+      "source": {
+        "name": "Sinh viên",
+        "representation_method": "Trực tiếp hoặc thông qua đại diện hợp pháp"
+      },
+      "target": {
+        "name": "Nhà trường",
+        "role": "Cơ sở giáo dục",
+        "subject_of_petition": "Các giải pháp góp phần xây dựng nhà trường"
+      },
+      "type_source": "student",
+      "type_target": "educational_institution",
+      "relation": "được_kiến_nghị_với"
     },
     {
-      "source": "dịch vụ công cộng",
-      "target": "giải trí",
-      "type_source": "service",
-      "type_target": "service_type",
-      "relation": "liên_quan_đến"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Hiệu trưởng",
+        "role_in_school": "Người đứng đầu nhà trường",
+        "responsibility_area": "Giải quyết các vấn đề liên quan đến quyền, lợi ích chính đáng của SV"
+      },
+      "type_source": "student",
+      "type_target": "school_principal",
+      "relation": "được_đề_đạt_nguyện_vọng_và_khiếu_nại_lên"
     },
     {
-      "source": "dịch vụ công cộng",
-      "target": "tham quan viện bảo tàng",
-      "type_source": "service",
-      "type_target": "activity",
-      "relation": "liên_quan_đến"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường"
+      },
+      "target": {
+        "name": "Ký túc xá",
+        "type_of_facility": "Nơi ở cho sinh viên",
+        "admission_basis": "Theo quy định của trường"
+      },
+      "type_source": "student",
+      "type_target": "dormitory",
+      "relation": "được_xét_tiếp_nhận_vào"
     },
     {
-        "source": "tham quan viện bảo tàng",
-        "target": "viện bảo tàng",
-        "type_source": "activity",
-        "type_target": "location",
-        "relation": "diễn_ra_tại"
-    },
-     {
-      "source": "dịch vụ công cộng",
-      "target": "di tích lịch sử",
-      "type_source": "service",
-      "type_target": "location",
-      "relation": "liên_quan_đến_tham_quan"
-    },
-     {
-      "source": "dịch vụ công cộng",
-      "target": "công trình văn hóa",
-      "type_source": "service",
-      "type_target": "location",
-      "relation": "liên_quan_đến_tham_quan"
-    },
-    {
-      "source": "việc miễn giảm phí",
-      "target": "quy định",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "giải pháp",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_quyền_kiến_nghị"
-    },
-    {
-      "source": "giải pháp",
-      "target": "nhà trường",
-      "type_source": "concept",
-      "type_target": "organization",
-      "relation": "góp_phần_xây_dựng"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nhà trường",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "kiến_nghị_tới"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "đại diện hợp pháp",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "kiến_nghị_thông_qua"
-    },
-    {
-      "source": "đại diện hợp pháp",
-      "target": "Sinh viên",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "của"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nguyện vọng",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_quyền_đề_đạt"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "khiếu nại",
-      "type_source": "person",
-      "type_target": "action",
-      "relation": "có_quyền"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Hiệu trưởng",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "khiếu_nại_tới"
-    },
-    {
-      "source": "khiếu nại",
-      "target": "quyền",
-      "type_source": "action",
-      "type_target": "concept",
-      "relation": "liên_quan_đến"
-    },
-    {
-      "source": "khiếu nại",
-      "target": "lợi ích chính đáng",
-      "type_source": "action",
-      "type_target": "concept",
-      "relation": "liên_quan_đến"
-    },
-    {
-      "source": "quyền",
-      "target": "Sinh viên",
-      "type_source": "concept",
-      "type_target": "person",
-      "relation": "của"
-    },
-    {
-      "source": "lợi ích chính đáng",
-      "target": "Sinh viên",
-      "type_source": "concept",
-      "type_target": "person",
-      "relation": "của"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "ký túc xá",
-      "type_source": "person",
-      "type_target": "location",
-      "relation": "có_quyền_được_xét_tiếp_nhận_vào"
-    },
-    {
-      "source": "việc xét tiếp nhận vào ký túc xá",
-      "target": "quy định",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
-    },
-    {
-      "source": "quy định",
-      "target": "nhà trường",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "việc ưu tiên sắp xếp vào ký túc xá",
-      "target": "Quy chế công tác SV nội trú",
-      "type_source": "activity",
-      "type_target": "regulation",
+      "source": {
+        "name": "Việc ưu tiên khi sắp xếp vào ở ký túc xá",
+        "context_of_arrangement": "Sắp xếp chỗ ở cho sinh viên tại ký túc xá"
+      },
+      "target": {
+        "name": "Quy chế công tác Sinh viên nội trú",
+        "issuer_name": "Bộ Giáo dục và Đào tạo",
+        "content_description": "Quy định về sinh viên ở nội trú"
+      },
+      "type_source": "dormitory_priority_arrangement",
+      "type_target": "student_boarding_regulation",
       "relation": "theo_quy_định_tại"
     },
     {
-      "source": "Quy chế công tác SV nội trú",
-      "target": "Bộ Giáo dục và Đào tạo",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
+      "source": {
+        "name": "Quy chế công tác Sinh viên nội trú",
+        "purpose_of_regulation": "Quản lý sinh viên ở nội trú"
+      },
+      "target": {
+        "name": "Bộ Giáo dục và Đào tạo",
+        "acronym": "Bộ GD&ĐT",
+        "role": "Cơ quan quản lý nhà nước về giáo dục"
+      },
+      "type_source": "student_boarding_regulation",
+      "type_target": "government_body",
+      "relation": "của"
     },
     {
-      "source": "Sinh viên",
-      "target": "điều kiện công nhận tốt nghiệp",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "phải_đáp_ứng"
+      "source": {
+        "name": "Nhà trường",
+        "role": "Cơ sở giáo dục"
+      },
+      "target": {
+        "name": "Bằng tốt nghiệp, bảng điểm học tập và rèn luyện, hồ sơ Sinh viên, các giấy tờ có liên quan khác",
+        "type_of_documents": "Hồ sơ tốt nghiệp và các giấy tờ liên quan",
+        "recipient_condition": "Sinh viên đủ điều kiện công nhận tốt nghiệp"
+      },
+      "type_source": "educational_institution",
+      "type_target": "graduation_document_package",
+      "relation": "cấp"
     },
     {
-      "source": "Sinh viên",
-      "target": "bằng tốt nghiệp",
-      "type_source": "person",
-      "type_target": "document",
-      "relation": "có_quyền_được_cấp"
+      "source": {
+        "name": "Nhà trường",
+        "role": "Cơ sở giáo dục"
+      },
+      "target": {
+        "name": "Các thủ tục hành chính",
+        "context_of_procedures": "Liên quan đến việc hoàn tất học tập và tốt nghiệp của sinh viên",
+        "recipient_condition": "Sinh viên đủ điều kiện công nhận tốt nghiệp"
+      },
+      "type_source": "educational_institution",
+      "type_target": "administrative_procedure",
+      "relation": "giải_quyết"
     },
     {
-      "source": "Sinh viên",
-      "target": "bảng điểm học tập",
-      "type_source": "person",
-      "type_target": "document",
-      "relation": "có_quyền_được_cấp"
+      "source": {
+        "name": "Sinh viên",
+        "condition_for_benefit": "Tốt nghiệp loại giỏi, rèn luyện tốt"
+      },
+      "target": {
+        "name": "Chính sách ưu tiên của Nhà nước trong tuyển dụng",
+        "provider_name": "Nhà nước",
+        "application_context": "Tuyển dụng vào các cơ quan Nhà nước"
+      },
+      "type_source": "student",
+      "type_target": "state_recruitment_priority_policy",
+      "relation": "được_hưởng"
     },
     {
-      "source": "Sinh viên",
-      "target": "bảng điểm rèn luyện",
-      "type_source": "person",
-      "type_target": "document",
-      "relation": "có_quyền_được_cấp"
+      "source": {
+        "name": "Chính sách ưu tiên của Nhà nước trong tuyển dụng",
+        "provider_name": "Nhà nước"
+      },
+      "target": {
+        "name": "Các cơ quan Nhà nước",
+        "role_description": "Đơn vị tuyển dụng công chức, viên chức",
+        "sector": "Khu vực công"
+      },
+      "type_source": "state_recruitment_priority_policy",
+      "type_target": "state_agency",
+      "relation": "áp_dụng_trong_tuyển_dụng_vào"
     },
     {
-      "source": "Sinh viên",
-      "target": "hồ sơ SV",
-      "type_source": "person",
-      "type_target": "document",
-      "relation": "có_quyền_được_cấp"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Người học tại nhà trường, đặc biệt là người tốt nghiệp"
+      },
+      "target": {
+        "name": "Các chính sách ưu tiên khác",
+        "context_of_policy": "Tuyển dụng cán bộ, công chức, viên chức",
+        "basis_of_policy": "Theo quy định về tuyển dụng"
+      },
+      "type_source": "student",
+      "type_target": "other_recruitment_priority_policy",
+      "relation": "được_hưởng"
     },
     {
-      "source": "Sinh viên",
-      "target": "giấy tờ có liên quan khác",
-      "type_source": "person",
-      "type_target": "document",
-      "relation": "có_quyền_được_cấp"
-    },
-    {
-      "source": "nhà trường",
-      "target": "bằng tốt nghiệp",
-      "type_source": "organization",
-      "type_target": "document",
-      "relation": "có_trách_nhiệm_cấp"
-    },
-    {
-      "source": "nhà trường",
-      "target": "bảng điểm học tập",
-      "type_source": "organization",
-      "type_target": "document",
-      "relation": "có_trách_nhiệm_cấp"
-    },
-    {
-      "source": "nhà trường",
-      "target": "bảng điểm rèn luyện",
-      "type_source": "organization",
-      "type_target": "document",
-      "relation": "có_trách_nhiệm_cấp"
-    },
-     {
-      "source": "nhà trường",
-      "target": "hồ sơ SV",
-      "type_source": "organization",
-      "type_target": "document",
-      "relation": "có_trách_nhiệm_cấp"
-    },
-     {
-      "source": "nhà trường",
-      "target": "giấy tờ có liên quan khác",
-      "type_source": "organization",
-      "type_target": "document",
-      "relation": "có_trách_nhiệm_cấp"
-    },
-    {
-      "source": "nhà trường",
-      "target": "thủ tục hành chính",
-      "type_source": "organization",
-      "type_target": "process",
-      "relation": "có_trách_nhiệm_giải_quyết"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "chính sách ưu tiên của Nhà nước",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "có_quyền_hưởng"
-    },
-    {
-      "source": "chính sách ưu tiên của Nhà nước",
-      "target": "tuyển dụng",
-      "type_source": "regulation",
-      "type_target": "process",
-      "relation": "áp_dụng_trong"
-    },
-    {
-      "source": "tuyển dụng",
-      "target": "cơ quan Nhà nước",
-      "type_source": "process",
-      "type_target": "organization",
-      "relation": "tuyển_dụng_vào"
-    },
-    {
-        "source": "Sinh viên",
-        "target": "loại giỏi",
-        "type_source": "person",
-        "type_target": "classification",
-        "relation": "tốt_nghiệp_loại"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "chính sách ưu tiên khác",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "có_quyền_hưởng"
-    },
-    {
-      "source": "chính sách ưu tiên khác",
-      "target": "quy định về tuyển dụng cán bộ, công chức, viên chức",
-      "type_source": "regulation",
-      "type_target": "regulation",
-      "relation": "theo_quy_định"
+      "source": {
+        "name": "Các chính sách ưu tiên khác",
+        "context_of_policy": "Tuyển dụng"
+      },
+      "target": {
+        "name": "Quy định về tuyển dụng cán bộ, công chức, viên chức",
+        "scope_of_regulation": "Tuyển dụng vào hệ thống nhà nước",
+        "type_of_document": "Văn bản pháp quy"
+      },
+      "type_source": "other_recruitment_priority_policy",
+      "type_target": "recruitment_regulation",
+      "relation": "theo"
     }
   ]
 }

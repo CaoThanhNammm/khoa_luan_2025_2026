@@ -1,604 +1,403 @@
 {
-  "entities": [
-    {
-      "name": "Điều 17",
-      "type": "regulation_article"
-    },
-    {
-      "name": "Điểm rèn luyện",
-      "type": "conduct_score"
-    },
-    {
-      "name": "ĐRL",
-      "type": "conduct_score"
-    },
-    {
-      "name": "Mức độ rèn luyện",
-      "type": "conduct_level"
-    },
-    {
-      "name": "sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "học kỳ chính",
-      "type": "semester_type"
-    },
-    {
-      "name": "học kỳ phụ",
-      "type": "semester_type"
-    },
-    {
-      "name": "thang điểm 100",
-      "type": "grading_scale"
-    },
-    {
-      "name": "thông tư số 16/2015/TT-BGDĐT",
-      "type": "regulation_document"
-    },
-    {
-      "name": "ngày 12 tháng 8 năm 2015",
-      "type": "date"
-    },
-    {
-      "name": "Bộ Giáo dục và Đào tạo",
-      "type": "government_organization"
-    },
-    {
-      "name": "ĐRL cả năm",
-      "type": "yearly_conduct_score"
-    },
-    {
-      "name": "trung bình cộng",
-      "type": "calculation_method"
-    },
-    {
-      "name": "ĐRL hai HK chính",
-      "type": "semester_conduct_score_pair"
-    },
-    {
-      "name": "Xuất sắc",
-      "type": "performance_level"
-    },
-    {
-      "name": "90 đến 100 điểm",
-      "type": "score_range"
-    },
-    {
-      "name": "Tốt",
-      "type": "performance_level"
-    },
-    {
-      "name": "80 đến dưới 90 điểm",
-      "type": "score_range"
-    },
-    {
-      "name": "Khá",
-      "type": "performance_level"
-    },
-    {
-      "name": "65 đến dưới 80 điểm",
-      "type": "score_range"
-    },
-    {
-      "name": "Trung bình",
-      "type": "performance_level"
-    },
-    {
-      "name": "50 đến dưới 65 điểm",
-      "type": "score_range"
-    },
-    {
-      "name": "Yếu",
-      "type": "performance_level"
-    },
-    {
-      "name": "35 đến dưới 50 điểm",
-      "type": "score_range"
-    },
-    {
-      "name": "Kém",
-      "type": "performance_level"
-    },
-    {
-      "name": "Dưới 35 điểm",
-      "type": "score_range"
-    },
-    {
-      "name": "kỷ luật",
-      "type": "disciplinary_action"
-    },
-    {
-      "name": "Trường",
-      "type": "university"
-    },
-    {
-      "name": "cảnh cáo",
-      "type": "warning_discipline_level"
-    },
-    {
-      "name": "học kỳ",
-      "type": "time_period"
-    },
-    {
-      "name": "tham gia đánh giá ĐRL",
-      "type": "student_activity"
-    },
-    {
-      "name": "đánh giá ĐRL",
-      "type": "student_activity"
-    },
-    {
-      "name": "đúng thời gian quy định",
-      "type": "time_constraint"
-    },
-    {
-      "name": "đóng học phí",
-      "type": "student_activity"
-    },
-    {
-      "name": "hạ một bậc kết quả đánh giá rèn luyện",
-      "type": "penalty_action"
-    },
-    {
-      "name": "ĐRL toàn khóa học",
-      "type": "cumulative_conduct_score"
-    },
-    {
-      "name": "hồ sơ quản lý sinh viên",
-      "type": "document"
-    },
-    {
-      "name": "bảng điểm toàn khóa",
-      "type": "document"
-    },
-    {
-      "name": "năm học",
-      "type": "time_period"
-    },
-    {
-      "name": "đình chỉ học tập một năm",
-      "type": "penalty_action"
-    },
-    {
-      "name": "năm học tiếp theo",
-      "type": "time_period"
-    },
-    {
-      "name": "lần thứ hai",
-      "type": "occurrence_count"
-    },
-    {
-      "name": "toàn khóa học",
-      "type": "time_period"
-    },
-    {
-      "name": "buộc thôi học",
-      "type": "penalty_action"
-    },
-    {
-      "name": "học bổng khuyến khích học tập",
-      "type": "scholarship_type"
-    },
-    {
-      "name": "xếp loại",
-      "type": "recognition_type"
-    },
-    {
-      "name": "khen thưởng",
-      "type": "recognition_type"
-    },
-    {
-      "name": "cuối mỗi năm học",
-      "type": "time_point"
-    }
-  ],
   "relationships": [
     {
-      "source": "Điều 17",
-      "target": "Điểm rèn luyện",
-      "type_source": "regulation_article",
-      "type_target": "conduct_score",
-      "relation": "quy_định_về"
-    },
-     {
-      "source": "Điều 17",
-      "target": "ĐRL",
-      "type_source": "regulation_article",
-      "type_target": "conduct_score",
-      "relation": "quy_định_về"
-    },
-    {
-      "source": "Mức độ rèn luyện",
-      "target": "sinh viên",
-      "type_source": "conduct_level",
-      "type_target": "student",
-      "relation": "của"
+      "source": {
+        "name": "Mức độ rèn luyện của sinh viên",
+        "assessment_scope": "Từng học kỳ chính",
+        "scale_type": "Thang điểm 100",
+        "regulatory_basis": "Thông tư số 16/2015/TT-BGDĐT"
+      },
+      "target": {
+        "name": "Học kỳ chính",
+        "term_type": "Chính (không phụ)",
+        "frequency": "Định kỳ",
+        "relevance": "Đánh giá rèn luyện"
+      },
+      "type_source": "student_conduct_level",
+      "type_target": "academic_term",
+      "relation": "được_đánh_giá_theo"
     },
     {
-      "source": "Mức độ rèn luyện",
-      "target": "học kỳ chính",
-      "type_source": "conduct_level",
-      "type_target": "semester_type",
-      "relation": "đánh_giá_từng"
-    },
-    {
-      "source": "Điểm rèn luyện",
-      "target": "học kỳ phụ",
-      "type_source": "conduct_score",
-      "type_target": "semester_type",
-      "relation": "không_tính_cho"
-    },
-     {
-      "source": "ĐRL",
-      "target": "học kỳ phụ",
-      "type_source": "conduct_score",
-      "type_target": "semester_type",
-      "relation": "không_tính_cho"
-    },
-    {
-      "source": "Điểm rèn luyện",
-      "target": "thang điểm 100",
+      "source": {
+        "name": "Điểm rèn luyện",
+        "short_name": "ĐRL",
+        "calculation_basis": "Thông tư số 16/2015/TT-BGDĐT",
+        "evaluation_period": "Từng học kỳ chính"
+      },
+      "target": {
+        "name": "Thang điểm 100",
+        "max_value": 100,
+        "min_value": 0,
+        "application": "Tính điểm rèn luyện"
+      },
       "type_source": "conduct_score",
       "type_target": "grading_scale",
-      "relation": "tính_theo"
-    },
-     {
-      "source": "ĐRL",
-      "target": "thang điểm 100",
-      "type_source": "conduct_score",
-      "type_target": "grading_scale",
-      "relation": "tính_theo"
+      "relation": "được_tính_theo"
     },
     {
-      "source": "Điểm rèn luyện",
-      "target": "thông tư số 16/2015/TT-BGDĐT",
+      "source": {
+        "name": "Điểm rèn luyện",
+        "short_name": "ĐRL",
+        "assessment_method": "Theo quy định",
+        "governing_document": "Thông tư của Bộ GD&ĐT"
+      },
+      "target": {
+        "name": "Thông tư số 16/2015/TT-BGDĐT",
+        "document_type": "Văn bản quy phạm pháp luật",
+        "issuing_authority": "Bộ Giáo dục và Đào tạo",
+        "issue_date_text": "Ngày 12 tháng 8 năm 2015"
+      },
       "type_source": "conduct_score",
-      "type_target": "regulation_document",
-      "relation": "dựa_vào"
-    },
-      {
-      "source": "ĐRL",
-      "target": "thông tư số 16/2015/TT-BGDĐT",
-      "type_source": "conduct_score",
-      "type_target": "regulation_document",
-      "relation": "dựa_vào"
+      "type_target": "legal_document",
+      "relation": "dựa_vào_cơ_sở_pháp_lý_là"
     },
     {
-      "source": "thông tư số 16/2015/TT-BGDĐT",
-      "target": "ngày 12 tháng 8 năm 2015",
-      "type_source": "regulation_document",
-      "type_target": "date",
-      "relation": "ban_hành_ngày"
-    },
-    {
-      "source": "thông tư số 16/2015/TT-BGDĐT",
-      "target": "Bộ Giáo dục và Đào tạo",
-      "type_source": "regulation_document",
+      "source": {
+        "name": "Thông tư số 16/2015/TT-BGDĐT",
+        "document_code": "16/2015/TT-BGDĐT",
+        "purpose": "Quy định về đánh giá rèn luyện sinh viên",
+        "year_issued": 2015
+      },
+      "target": {
+        "name": "Bộ Giáo dục và Đào tạo",
+        "acronym": "MOET",
+        "country": "Việt Nam",
+        "role": "Cơ quan ban hành văn bản"
+      },
+      "type_source": "legal_document",
       "type_target": "government_organization",
-      "relation": "của"
+      "relation": "do_ban_hành_bởi"
     },
     {
-      "source": "ĐRL cả năm",
-      "target": "trung bình cộng",
-      "type_source": "yearly_conduct_score",
-      "type_target": "calculation_method",
-      "relation": "là"
+      "source": {
+        "name": "Thông tư số 16/2015/TT-BGDĐT",
+        "document_code": "16/2015/TT-BGDĐT",
+        "full_title_reference": "Thông tư số 16/2015/TT-BGDĐT ngày 12 tháng 8 năm 2015 của Bộ Giáo dục và Đào tạo",
+        "topic": "Đánh giá rèn luyện sinh viên"
+      },
+      "target": {
+        "name": "Ngày 12 tháng 8 năm 2015",
+        "day": 12,
+        "month": 8,
+        "year": 2015,
+        "event": "Ngày ban hành Thông tư"
+      },
+      "type_source": "legal_document",
+      "type_target": "date",
+      "relation": "có_ngày_ban_hành_là"
     },
     {
-      "source": "trung bình cộng",
-      "target": "ĐRL hai HK chính",
-      "type_source": "calculation_method",
-      "type_target": "semester_conduct_score_pair",
-      "relation": "của"
+      "source": {
+        "name": "ĐRL cả năm",
+        "abbreviation": "ĐRL cả năm",
+        "calculation_method": "Trung bình cộng",
+        "scope": "Cả năm học"
+      },
+      "target": {
+        "name": "ĐRL hai học kỳ chính",
+        "components": "Điểm rèn luyện của 2 học kỳ chính",
+        "period_covered": "Năm học",
+        "usage_for": "Tính ĐRL cả năm"
+      },
+      "type_source": "annual_conduct_score",
+      "type_target": "semester_conduct_score_aggregate",
+      "relation": "là_trung_bình_cộng_của"
     },
     {
-      "source": "Điểm rèn luyện",
-      "target": "Xuất sắc",
-      "type_source": "conduct_score",
-      "type_target": "performance_level",
-      "relation": "phân_loại_thành"
-    },
-     {
-      "source": "Điểm rèn luyện",
-      "target": "Tốt",
-      "type_source": "conduct_score",
-      "type_target": "performance_level",
-      "relation": "phân_loại_thành"
-    },
-     {
-      "source": "Điểm rèn luyện",
-      "target": "Khá",
-      "type_source": "conduct_score",
-      "type_target": "performance_level",
-      "relation": "phân_loại_thành"
-    },
-     {
-      "source": "Điểm rèn luyện",
-      "target": "Trung bình",
-      "type_source": "conduct_score",
-      "type_target": "performance_level",
-      "relation": "phân_loại_thành"
+      "source": {
+        "name": "Mức điểm rèn luyện của sinh viên",
+        "evaluation_type": "Phân loại rèn luyện",
+        "scale": "Thang điểm 100",
+        "basis_for_classification": "Số điểm đạt được"
+      },
+      "target": {
+        "name": "Xuất sắc (rèn luyện)",
+        "classification_level": "Xuất sắc",
+        "point_range_text": "Từ 90 đến 100 điểm",
+        "lower_bound": 90,
+        "upper_bound": 100
+      },
+      "type_source": "student_conduct_level",
+      "type_target": "conduct_classification",
+      "relation": "được_phân_loại_thành"
     },
     {
-      "source": "Điểm rèn luyện",
-      "target": "Yếu",
-      "type_source": "conduct_score",
-      "type_target": "performance_level",
-      "relation": "phân_loại_thành"
+      "source": {
+        "name": "Mức điểm rèn luyện của sinh viên",
+        "evaluation_type": "Phân loại rèn luyện",
+        "scale": "Thang điểm 100",
+        "basis_for_classification": "Số điểm đạt được"
+      },
+      "target": {
+        "name": "Tốt (rèn luyện)",
+        "classification_level": "Tốt",
+        "point_range_text": "Từ 80 đến dưới 90 điểm",
+        "lower_bound": 80,
+        "upper_bound_exclusive": 90
+      },
+      "type_source": "student_conduct_level",
+      "type_target": "conduct_classification",
+      "relation": "được_phân_loại_thành"
     },
     {
-      "source": "Điểm rèn luyện",
-      "target": "Kém",
-      "type_source": "conduct_score",
-      "type_target": "performance_level",
-      "relation": "phân_loại_thành"
+      "source": {
+        "name": "Mức điểm rèn luyện của sinh viên",
+        "evaluation_type": "Phân loại rèn luyện",
+        "scale": "Thang điểm 100",
+        "basis_for_classification": "Số điểm đạt được"
+      },
+      "target": {
+        "name": "Khá (rèn luyện)",
+        "classification_level": "Khá",
+        "point_range_text": "Từ 65 đến dưới 80 điểm",
+        "lower_bound": 65,
+        "upper_bound_exclusive": 80
+      },
+      "type_source": "student_conduct_level",
+      "type_target": "conduct_classification",
+      "relation": "được_phân_loại_thành"
     },
     {
-      "source": "Xuất sắc",
-      "target": "90 đến 100 điểm",
-      "type_source": "performance_level",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
+      "source": {
+        "name": "Mức điểm rèn luyện của sinh viên",
+        "evaluation_type": "Phân loại rèn luyện",
+        "scale": "Thang điểm 100",
+        "basis_for_classification": "Số điểm đạt được"
+      },
+      "target": {
+        "name": "Trung bình (rèn luyện)",
+        "classification_level": "Trung bình",
+        "point_range_text": "Từ 50 đến dưới 65 điểm",
+        "lower_bound": 50,
+        "upper_bound_exclusive": 65
+      },
+      "type_source": "student_conduct_level",
+      "type_target": "conduct_classification",
+      "relation": "được_phân_loại_thành"
     },
     {
-      "source": "Tốt",
-      "target": "80 đến dưới 90 điểm",
-      "type_source": "performance_level",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
+      "source": {
+        "name": "Mức điểm rèn luyện của sinh viên",
+        "evaluation_type": "Phân loại rèn luyện",
+        "scale": "Thang điểm 100",
+        "basis_for_classification": "Số điểm đạt được"
+      },
+      "target": {
+        "name": "Yếu (rèn luyện)",
+        "classification_level": "Yếu",
+        "point_range_text": "Từ 35 đến dưới 50 điểm",
+        "lower_bound": 35,
+        "upper_bound_exclusive": 50
+      },
+      "type_source": "student_conduct_level",
+      "type_target": "conduct_classification",
+      "relation": "được_phân_loại_thành"
     },
     {
-      "source": "Khá",
-      "target": "65 đến dưới 80 điểm",
-      "type_source": "performance_level",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
+      "source": {
+        "name": "Mức điểm rèn luyện của sinh viên",
+        "evaluation_type": "Phân loại rèn luyện",
+        "scale": "Thang điểm 100",
+        "basis_for_classification": "Số điểm đạt được"
+      },
+      "target": {
+        "name": "Kém (rèn luyện)",
+        "classification_level": "Kém",
+        "point_range_text": "Dưới 35 điểm",
+        "upper_bound_exclusive": 35
+      },
+      "type_source": "student_conduct_level",
+      "type_target": "conduct_classification",
+      "relation": "được_phân_loại_thành"
     },
     {
-      "source": "Trung bình",
-      "target": "50 đến dưới 65 điểm",
-      "type_source": "performance_level",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
+      "source": {
+        "name": "Sinh viên bị kỷ luật của Trường từ mức cảnh cáo trở lên",
+        "disciplinary_level": "Từ cảnh cáo trở lên",
+        "academic_term_impact": "Trong học kỳ",
+        "consequence_type": "Giới hạn xếp loại rèn luyện"
+      },
+      "target": {
+        "name": "Loại trung bình (rèn luyện)",
+        "classification_level": "Trung bình",
+        "restriction_imposed": "Không được vượt quá",
+        "context": "Xếp loại rèn luyện cho sinh viên bị kỷ luật"
+      },
+      "type_source": "disciplined_student",
+      "type_target": "conduct_classification",
+      "relation": "có_xếp_loại_rèn_luyện_tối_đa_là"
     },
     {
-      "source": "Yếu",
-      "target": "35 đến dưới 50 điểm",
-      "type_source": "performance_level",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
+      "source": {
+        "name": "Sinh viên không tham gia đánh giá ĐRL",
+        "student_action": "Không tham gia đánh giá",
+        "assessment_type": "Điểm rèn luyện",
+        "consequence_for": "Xếp loại rèn luyện học kỳ"
+      },
+      "target": {
+        "name": "Loại trung bình (rèn luyện)",
+        "classification_level": "Trung bình",
+        "assigned_due_to": "Không tham gia đánh giá ĐRL",
+        "period": "Học kỳ đó"
+      },
+      "type_source": "student_non_participation_in_conduct_assessment",
+      "type_target": "conduct_classification",
+      "relation": "bị_xếp_loại_rèn_luyện_là"
     },
     {
-      "source": "Kém",
-      "target": "Dưới 35 điểm",
-      "type_source": "performance_level",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
+      "source": {
+        "name": "Sinh viên không đánh giá ĐRL đúng thời gian quy định",
+        "student_action": "Không đánh giá đúng thời gian",
+        "assessment_type": "Điểm rèn luyện",
+        "consequence_for": "Xếp loại rèn luyện học kỳ"
+      },
+      "target": {
+        "name": "Loại trung bình (rèn luyện)",
+        "classification_level": "Trung bình",
+        "assigned_due_to": "Không đánh giá ĐRL đúng thời gian",
+        "period": "Học kỳ đó"
+      },
+      "type_source": "student_late_conduct_assessment",
+      "type_target": "conduct_classification",
+      "relation": "bị_xếp_loại_rèn_luyện_là"
     },
     {
-      "source": "sinh viên",
-      "target": "kỷ luật",
-      "type_source": "student",
-      "type_target": "disciplinary_action",
+      "source": {
+        "name": "Sinh viên chậm trễ đóng học phí",
+        "student_issue": "Chậm trễ đóng học phí",
+        "target_organization": "Trường",
+        "consequence_type": "Hạ bậc rèn luyện"
+      },
+      "target": {
+        "name": "Kết quả đánh giá rèn luyện của sinh viên",
+        "assessment_type": "Rèn luyện",
+        "impact_description": "Bị hạ một bậc",
+        "period": "Học kỳ đó"
+      },
+      "type_source": "student_late_tuition_payment",
+      "type_target": "student_conduct_assessment_result",
+      "relation": "dẫn_đến_bị_hạ_một_bậc"
+    },
+    {
+      "source": {
+        "name": "ĐRL toàn khóa học",
+        "scope": "Toàn khóa học",
+        "storage_location_1": "Hồ sơ quản lý sinh viên",
+        "storage_location_2": "Bảng điểm toàn khóa khi ra trường"
+      },
+      "target": {
+        "name": "Hồ sơ quản lý sinh viên",
+        "record_type": "Quản lý sinh viên",
+        "content_item": "ĐRL toàn khóa học",
+        "purpose": "Lưu trữ thông tin sinh viên"
+      },
+      "type_source": "full_course_conduct_score",
+      "type_target": "student_management_record",
+      "relation": "được_lưu_trong"
+    },
+    {
+      "source": {
+        "name": "ĐRL toàn khóa học",
+        "scope": "Toàn khóa học",
+        "recording_event": "Khi ra trường",
+        "official_document": "Bảng điểm toàn khóa"
+      },
+      "target": {
+        "name": "Bảng điểm toàn khóa của sinh viên",
+        "document_type": "Bảng điểm tốt nghiệp",
+        "content_item": "ĐRL toàn khóa học",
+        "timing": "Khi ra trường"
+      },
+      "type_source": "full_course_conduct_score",
+      "type_target": "full_course_academic_transcript",
+      "relation": "được_ghi_vào"
+    },
+    {
+      "source": {
+        "name": "Sinh viên bị xếp loại rèn luyện kém trong cả năm học (lần đầu)",
+        "conduct_classification": "Kém",
+        "period": "Cả năm học",
+        "occurrence": "Lần đầu",
+        "consequence": "Đình chỉ học tập"
+      },
+      "target": {
+        "name": "Đình chỉ học tập một năm",
+        "sanction_type": "Đình chỉ học tập",
+        "duration": "Một năm",
+        "application_period": "Năm học tiếp theo"
+      },
+      "type_source": "student_poor_annual_conduct_first_time",
+      "type_target": "academic_suspension",
       "relation": "bị"
     },
     {
-      "source": "kỷ luật",
-      "target": "Trường",
-      "type_source": "disciplinary_action",
-      "type_target": "university",
-      "relation": "của"
-    },
-    {
-      "source": "kỷ luật",
-      "target": "cảnh cáo",
-      "type_source": "disciplinary_action",
-      "type_target": "warning_discipline_level",
-      "relation": "từ_mức"
-    },
-    {
-      "source": "sinh viên",
-      "target": "học kỳ",
-      "type_source": "student",
-      "type_target": "time_period",
-      "relation": "bị_kỷ_luật_trong"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Trung bình",
-      "type_source": "student",
-      "type_target": "performance_level",
-      "relation": "xếp_loại_rèn_luyện_không_vượt_quá"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tham gia đánh giá ĐRL",
-      "type_source": "student",
-      "type_target": "student_activity",
-      "relation": "không"
-    },
-     {
-      "source": "sinh viên",
-      "target": "đánh giá ĐRL",
-      "type_source": "student",
-      "type_target": "student_activity",
-      "relation": "không"
-    },
-    {
-      "source": "đánh giá ĐRL",
-      "target": "đúng thời gian quy định",
-      "type_source": "student_activity",
-      "type_target": "time_constraint",
-      "relation": "không_đúng"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Trung bình",
-      "type_source": "student",
-      "type_target": "performance_level",
-      "relation": "bị_xếp_loại"
-    },
-     {
-      "source": "Trung bình",
-      "target": "học kỳ",
-      "type_source": "performance_level",
-      "type_target": "time_period",
-      "relation": "ở"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đóng học phí",
-      "type_source": "student",
-      "type_target": "student_activity",
-      "relation": "chậm_trễ_trong_việc"
-    },
-    {
-      "source": "sinh viên",
-      "target": "hạ một bậc kết quả đánh giá rèn luyện",
-      "type_source": "student",
-      "type_target": "penalty_action",
+      "source": {
+        "name": "Sinh viên bị xếp loại rèn luyện kém trong cả năm học lần thứ hai",
+        "conduct_classification": "Kém",
+        "period": "Cả năm học",
+        "occurrence": "Lần thứ hai (trong toàn khóa học)",
+        "consequence": "Buộc thôi học"
+      },
+      "target": {
+        "name": "Buộc thôi học",
+        "sanction_type": "Buộc thôi học",
+        "severity": "Cao nhất",
+        "condition": "Xếp loại kém cả năm lần thứ hai"
+      },
+      "type_source": "student_poor_annual_conduct_second_time",
+      "type_target": "expulsion",
       "relation": "bị"
     },
     {
-      "source": "hạ một bậc kết quả đánh giá rèn luyện",
-      "target": "học kỳ",
-      "type_source": "penalty_action",
-      "type_target": "time_period",
-      "relation": "trong"
-    },
-    {
-      "source": "Điểm rèn luyện",
-      "target": "ĐRL toàn khóa học",
-      "type_source": "conduct_score",
-      "type_target": "cumulative_conduct_score",
-      "relation": "sử_dụng_để_tính"
-    },
-    {
-      "source": "ĐRL toàn khóa học",
-      "target": "hồ sơ quản lý sinh viên",
-      "type_source": "cumulative_conduct_score",
-      "type_target": "document",
-      "relation": "lưu_trong"
-    },
-    {
-      "source": "ĐRL toàn khóa học",
-      "target": "bảng điểm toàn khóa",
-      "type_source": "cumulative_conduct_score",
-      "type_target": "document",
-      "relation": "ghi_vào"
-    },
-    {
-      "source": "bảng điểm toàn khóa",
-      "target": "sinh viên",
-      "type_source": "document",
-      "type_target": "student",
-      "relation": "của"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Kém",
-      "type_source": "student",
-      "type_target": "performance_level",
-      "relation": "bị_xếp_loại_rèn_luyện"
-    },
-    {
-      "source": "Kém",
-      "target": "năm học",
-      "type_source": "performance_level",
-      "type_target": "time_period",
-      "relation": "trong_cả"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đình chỉ học tập một năm",
-      "type_source": "student",
-      "type_target": "penalty_action",
-      "relation": "bị"
-    },
-    {
-      "source": "đình chỉ học tập một năm",
-      "target": "năm học tiếp theo",
-      "type_source": "penalty_action",
-      "type_target": "time_period",
-      "relation": "ở"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Kém",
-      "type_source": "student",
-      "type_target": "performance_level",
-      "relation": "bị_xếp_loại_kém_cả_năm"
-    },
-    {
-      "source": "Kém",
-      "target": "lần thứ hai",
-      "type_source": "performance_level",
-      "type_target": "occurrence_count",
-      "relation": "vào"
-    },
-    {
-      "source": "lần thứ hai",
-      "target": "toàn khóa học",
-      "type_source": "occurrence_count",
-      "type_target": "time_period",
-      "relation": "trong"
-    },
-    {
-      "source": "sinh viên",
-      "target": "buộc thôi học",
-      "type_source": "student",
-      "type_target": "penalty_action",
-      "relation": "bị"
-    },
-    {
-      "source": "ĐRL",
-      "target": "sinh viên",
-      "type_source": "conduct_score",
-      "type_target": "student",
-      "relation": "của"
-    },
-    {
-      "source": "ĐRL",
-      "target": "học kỳ",
-      "type_source": "conduct_score",
-      "type_target": "time_period",
-      "relation": "từng"
-    },
-    {
-      "source": "ĐRL",
-      "target": "học bổng khuyến khích học tập",
-      "type_source": "conduct_score",
-      "type_target": "scholarship_type",
+      "source": {
+        "name": "ĐRL của sinh viên từng học kỳ",
+        "assessment_frequency": "Từng học kỳ",
+        "purpose_as_criterion": "Xét học bổng, xếp loại, khen thưởng",
+        "context": "Cuối mỗi năm học"
+      },
+      "target": {
+        "name": "Học bổng khuyến khích học tập",
+        "scholarship_type": "Khuyến khích học tập",
+        "selection_criterion_basis": "ĐRL từng học kỳ",
+        "awarding_period": "Cuối mỗi năm học (xét theo học kỳ)"
+      },
+      "type_source": "semester_conduct_score",
+      "type_target": "encouragement_scholarship",
       "relation": "là_tiêu_chí_để_xét"
     },
     {
-      "source": "ĐRL",
-      "target": "xếp loại",
-      "type_source": "conduct_score",
-      "type_target": "recognition_type",
-      "relation": "là_tiêu_chí_để"
+      "source": {
+        "name": "ĐRL của sinh viên từng học kỳ",
+        "assessment_frequency": "Từng học kỳ",
+        "purpose_as_criterion": "Xét học bổng, xếp loại, khen thưởng",
+        "context": "Cuối mỗi năm học"
+      },
+      "target": {
+        "name": "Xếp loại cuối mỗi năm học",
+        "classification_type": "Học tập và rèn luyện",
+        "period": "Cuối mỗi năm học",
+        "criterion_basis": "ĐRL từng học kỳ"
+      },
+      "type_source": "semester_conduct_score",
+      "type_target": "annual_academic_classification",
+      "relation": "là_tiêu_chí_để_xét"
     },
     {
-      "source": "ĐRL",
-      "target": "khen thưởng",
-      "type_source": "conduct_score",
-      "type_target": "recognition_type",
-      "relation": "là_tiêu_chí_để"
-    },
-    {
-      "source": "xếp loại",
-      "target": "cuối mỗi năm học",
-      "type_source": "recognition_type",
-      "type_target": "time_point",
-      "relation": "vào"
-    },
-    {
-      "source": "khen thưởng",
-      "target": "cuối mỗi năm học",
-      "type_source": "recognition_type",
-      "type_target": "time_point",
-      "relation": "vào"
+      "source": {
+        "name": "ĐRL của sinh viên từng học kỳ",
+        "assessment_frequency": "Từng học kỳ",
+        "purpose_as_criterion": "Xét học bổng, xếp loại, khen thưởng",
+        "context": "Cuối mỗi năm học"
+      },
+      "target": {
+        "name": "Khen thưởng cuối mỗi năm học",
+        "commendation_type": "Thành tích học tập và rèn luyện",
+        "period": "Cuối mỗi năm học",
+        "criterion_basis": "ĐRL từng học kỳ"
+      },
+      "type_source": "semester_conduct_score",
+      "type_target": "annual_academic_commendation",
+      "relation": "là_tiêu_chí_để_xét"
     }
   ]
 }

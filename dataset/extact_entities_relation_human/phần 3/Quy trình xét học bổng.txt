@@ -1,170 +1,214 @@
 {
-  "entities": [
-    {
-      "name": "Phòng Công tác sinh viên",
-      "type": "organization_department"
-    },
-    {
-      "name": "Học kỳ",
-      "type": "time_period"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "person_type"
-    },
-    {
-      "name": "Học bổng khuyến khích học tập",
-      "type": "scholarship"
-    },
-    {
-      "name": "Hội đồng xét duyệt",
-      "type": "committee"
-    },
-    {
-      "name": "Danh sách",
-      "type": "document_list"
-    },
-    {
-      "name": "Khối học bổng",
-      "type": "scholarship_group"
-    },
-    {
-      "name": "Loại học bổng",
-      "type": "scholarship_category"
-    },
-    {
-      "name": "Điểm trung bình chung học bổng",
-      "type": "academic_score"
-    },
-    {
-      "name": "Điểm rèn luyện",
-      "type": "conduct_score"
-    },
-    {
-      "name": "Số tín chỉ đã học trong học kỳ",
-      "type": "academic_metric"
-    },
-    {
-      "name": "Điểm trung bình chung tích lũy",
-      "type": "academic_score"
-    },
-    {
-      "name": "Quỹ học bổng khuyến khích học tập",
-      "type": "fund"
-    }
-  ],
   "relationships": [
     {
-      "source": "Phòng Công tác sinh viên",
-      "target": "Danh sách",
-      "type_source": "organization_department",
-      "type_target": "document_list",
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "type": "organization",
+        "role_description": "Lập danh sách sinh viên đủ điều kiện xét học bổng",
+        "action_frequency": "Sau mỗi học kỳ",
+        "basis_of_action": "Các tiêu chí quy định"
+      },
+      "target": {
+        "name": "danh sách sinh viên đủ điều kiện xét học bổng",
+        "type": "document",
+        "content_summary": "Sinh viên đủ điều kiện xét học bổng khuyến khích học tập",
+        "preparation_guideline": "Theo các tiêu chí quy định",
+        "submission_target": "Hội đồng xét duyệt"
+      },
+      "type_source": "organization",
+      "type_target": "document",
       "relation": "lập"
     },
     {
-      "source": "Danh sách",
-      "target": "Sinh viên",
-      "type_source": "document_list",
-      "type_target": "person_type",
-      "relation": "liệt_kê"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "Học bổng khuyến khích học tập",
-      "type_source": "person_type",
-      "type_target": "scholarship",
-      "relation": "đủ_điều_kiện_xét"
-    },
-    {
-      "source": "Phòng Công tác sinh viên",
-      "target": "Hội đồng xét duyệt",
-      "type_source": "organization_department",
-      "type_target": "committee",
+      "source": {
+        "name": "Phòng Công tác sinh viên",
+        "type": "organization",
+        "action_performed": "Trình danh sách",
+        "document_involved": "Danh sách sinh viên đủ điều kiện xét học bổng",
+        "recipient_authority": "Hội đồng xét duyệt"
+      },
+      "target": {
+        "name": "Hội đồng xét duyệt",
+        "type": "organization",
+        "function_performed": "Xét duyệt học bổng",
+        "input_document_source": "Phòng Công tác sinh viên",
+        "decision_framework": "Quỹ học bổng, thứ tự ưu tiên"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
       "relation": "trình_danh_sách_cho"
     },
     {
-      "source": "Danh sách",
-      "target": "Khối học bổng",
-      "type_source": "document_list",
-      "type_target": "scholarship_group",
-      "relation": "lập_theo"
-    },
-    {
-      "source": "Danh sách",
-      "target": "Loại học bổng",
-      "type_source": "document_list",
+      "source": {
+        "name": "danh sách sinh viên đủ điều kiện xét học bổng",
+        "type": "document",
+        "structuring_criterion_1": "Theo từng khối học bổng",
+        "originator": "Phòng Công tác sinh viên",
+        "overall_purpose": "Xét duyệt học bổng khuyến khích học tập"
+      },
+      "target": {
+        "name": "khối học bổng",
+        "type": "scholarship_category",
+        "role_in_listing": "Phân loại danh sách sinh viên",
+        "funding_relevance": "Được cấp quỹ học bổng riêng",
+        "application_context": "Xét duyệt học bổng"
+      },
+      "type_source": "document",
       "type_target": "scholarship_category",
-      "relation": "xếp_theo_thứ_tự_ưu_tiên"
+      "relation": "được_lập_theo"
     },
     {
-      "source": "Sinh viên",
-      "target": "Loại học bổng",
-      "type_source": "person_type",
-      "type_target": "scholarship_category",
-      "relation": "đạt"
+      "source": {
+        "name": "danh sách sinh viên đủ điều kiện xét học bổng",
+        "type": "document",
+        "structuring_criterion_2": "Theo thứ tự ưu tiên loại học bổng",
+        "priority_order_direction": "Từ cao xuống thấp",
+        "contextual_use": "Xếp hạng sinh viên cho việc xét học bổng"
+      },
+      "target": {
+        "name": "loại học bổng",
+        "type": "scholarship_level",
+        "basis_for_ranking": "Mức độ học bổng (cao, trung bình, thấp)",
+        "list_ordering_principle": "Ưu tiên từ cao xuống thấp",
+        "usage_in_process": "Xếp thứ tự ưu tiên trong danh sách xét duyệt"
+      },
+      "type_source": "document",
+      "type_target": "scholarship_level",
+      "relation": "xếp_theo_thứ_tự_ưu_tiên_của"
     },
     {
-      "source": "Danh sách",
-      "target": "Điểm trung bình chung học bổng",
-      "type_source": "document_list",
-      "type_target": "academic_score",
-      "relation": "xếp_ưu_tiên_theo"
+      "source": {
+        "name": "loại học bổng",
+        "type": "scholarship_level",
+        "tie_breaking_trigger": "Nhiều sinh viên đạt cùng loại học bổng",
+        "prioritization_sequence": "Tiêu chí phụ thứ nhất",
+        "application_scenario": "Khi xếp ưu tiên sinh viên có cùng mức học bổng"
+      },
+      "target": {
+        "name": "điểm trung bình chung học bổng",
+        "type": "academic_criteria",
+        "function_in_tie_breaking": "Tiêu chí ưu tiên phụ hàng đầu",
+        "nature_of_criterion": "Điểm trung bình chung của học kỳ xét học bổng",
+        "scope_of_application": "Khi có nhiều sinh viên cùng loại học bổng"
+      },
+      "type_source": "scholarship_level",
+      "type_target": "academic_criteria",
+      "relation": "có_tiêu_chí_ưu_tiên_phụ_là"
     },
     {
-      "source": "Danh sách",
-      "target": "Điểm rèn luyện",
-      "type_source": "document_list",
-      "type_target": "conduct_score",
-      "relation": "xếp_ưu_tiên_theo"
+      "source": {
+        "name": "loại học bổng",
+        "type": "scholarship_level",
+        "tie_breaking_trigger": "Nhiều sinh viên đạt cùng loại học bổng",
+        "prioritization_sequence": "Tiêu chí phụ thứ hai",
+        "application_scenario": "Khi xếp ưu tiên sinh viên có cùng mức học bổng"
+      },
+      "target": {
+        "name": "điểm rèn luyện",
+        "type": "conduct_criteria",
+        "function_in_tie_breaking": "Tiêu chí ưu tiên phụ thứ hai",
+        "nature_of_criterion": "Điểm đánh giá hạnh kiểm và rèn luyện",
+        "scope_of_application": "Khi có nhiều sinh viên cùng loại học bổng"
+      },
+      "type_source": "scholarship_level",
+      "type_target": "conduct_criteria",
+      "relation": "có_tiêu_chí_ưu_tiên_phụ_là"
     },
     {
-      "source": "Danh sách",
-      "target": "Số tín chỉ đã học trong học kỳ",
-      "type_source": "document_list",
-      "type_target": "academic_metric",
-      "relation": "xếp_ưu_tiên_theo"
+      "source": {
+        "name": "loại học bổng",
+        "type": "scholarship_level",
+        "tie_breaking_trigger": "Nhiều sinh viên đạt cùng loại học bổng",
+        "prioritization_sequence": "Tiêu chí phụ thứ ba",
+        "application_scenario": "Khi xếp ưu tiên sinh viên có cùng mức học bổng"
+      },
+      "target": {
+        "name": "số tín chỉ đã học trong học kỳ",
+        "type": "academic_criteria",
+        "function_in_tie_breaking": "Tiêu chí ưu tiên phụ thứ ba",
+        "nature_of_criterion": "Số lượng tín chỉ hoàn thành trong học kỳ đang xét",
+        "scope_of_application": "Khi có nhiều sinh viên cùng loại học bổng"
+      },
+      "type_source": "scholarship_level",
+      "type_target": "academic_criteria",
+      "relation": "có_tiêu_chí_ưu_tiên_phụ_là"
     },
     {
-      "source": "Danh sách",
-      "target": "Điểm trung bình chung tích lũy",
-      "type_source": "document_list",
-      "type_target": "academic_score",
-      "relation": "xếp_ưu_tiên_theo"
+      "source": {
+        "name": "loại học bổng",
+        "type": "scholarship_level",
+        "tie_breaking_trigger": "Nhiều sinh viên đạt cùng loại học bổng",
+        "prioritization_sequence": "Tiêu chí phụ thứ tư",
+        "application_scenario": "Khi xếp ưu tiên sinh viên có cùng mức học bổng"
+      },
+      "target": {
+        "name": "điểm trung bình chung tích lũy",
+        "type": "academic_criteria",
+        "function_in_tie_breaking": "Tiêu chí ưu tiên phụ thứ tư",
+        "nature_of_criterion": "Điểm trung bình chung của tất cả các học kỳ đã học",
+        "scope_of_application": "Khi có nhiều sinh viên cùng loại học bổng"
+      },
+      "type_source": "scholarship_level",
+      "type_target": "academic_criteria",
+      "relation": "có_tiêu_chí_ưu_tiên_phụ_là"
     },
     {
-      "source": "Hội đồng xét duyệt",
-      "target": "Quỹ học bổng khuyến khích học tập",
-      "type_source": "committee",
-      "type_target": "fund",
+      "source": {
+        "name": "Hội đồng xét duyệt",
+        "type": "organization",
+        "primary_action": "Xét duyệt học bổng",
+        "key_reference_resource": "Quỹ học bổng khuyến khích học tập",
+        "scope_of_decision": "Các khối học bổng"
+      },
+      "target": {
+        "name": "quỹ học bổng khuyến khích học tập",
+        "type": "financial_resource",
+        "main_purpose": "Cấp học bổng khuyến khích học tập",
+        "managing_entity": "Hội đồng xét duyệt",
+        "allocation_granularity": "Theo khối học bổng"
+      },
+      "type_source": "organization",
+      "type_target": "financial_resource",
       "relation": "căn_cứ_vào"
     },
-     {
-      "source": "Hội đồng xét duyệt",
-      "target": "Khối học bổng",
-      "type_source": "committee",
-      "type_target": "scholarship_group",
-      "relation": "xét_cho"
+    {
+      "source": {
+        "name": "Hội đồng xét duyệt",
+        "type": "organization",
+        "specific_action": "Xét duyệt học bổng cho từng khối",
+        "operational_method": "Theo thứ tự ưu tiên từ cao xuống thấp",
+        "limiting_factor": "Đến khi hết quỹ học bổng của khối đó",
+        "reference_fund": "Quỹ học bổng khuyến khích học tập"
+      },
+      "target": {
+        "name": "khối học bổng",
+        "type": "scholarship_category",
+        "status_in_process": "Đối tượng được Hội đồng xét duyệt",
+        "associated_fund": "Quỹ học bổng khuyến khích học tập cấp cho khối",
+        "review_logic": "Theo thứ tự ưu tiên cho đến khi hết quỹ"
+      },
+      "type_source": "organization",
+      "type_target": "scholarship_category",
+      "relation": "xét_duyệt_cho"
     },
     {
-      "source": "Quỹ học bổng khuyến khích học tập",
-      "target": "Khối học bổng",
-      "type_source": "fund",
-      "type_target": "scholarship_group",
-      "relation": "cấp_cho"
-    },
-    {
-      "source": "Hội đồng xét duyệt",
-      "target": "Danh sách",
-      "type_source": "committee",
-      "type_target": "document_list",
-      "relation": "xét_theo_thứ_tự_ưu_tiên"
-    },
-     {
-      "source": "Hội đồng xét duyệt",
-      "target": "Quỹ học bổng khuyến khích học tập",
-      "type_source": "committee",
-      "type_target": "fund",
-      "relation": "xét_đến_khi_hết"
+      "source": {
+        "name": "danh sách sinh viên đủ điều kiện xét học bổng",
+        "type": "document",
+        "specific_purpose": "Cung cấp thông tin cho việc xét học bổng khuyến khích học tập",
+        "main_content": "Sinh viên đáp ứng tiêu chí học bổng",
+        "relevance_to_scholarship": "Học bổng khuyến khích học tập"
+      },
+      "target": {
+        "name": "học bổng khuyến khích học tập",
+        "type": "scholarship_type",
+        "description_value": "Học bổng nhằm khuyến khích thành tích học tập",
+        "key_input_document": "Danh sách sinh viên đủ điều kiện xét học bổng",
+        "awarding_authority": "Hội đồng xét duyệt"
+      },
+      "type_source": "document",
+      "type_target": "scholarship_type",
+      "relation": "là_danh_sách_cho"
     }
   ]
 }

@@ -1,411 +1,284 @@
 {
-  "entities": [
-    {
-      "name": "Điều 16",
-      "type": "regulation_article"
-    },
-    {
-      "name": "Thông báo kết quả học tập",
-      "type": "process"
-    },
-    {
-      "name": "Giảng viên",
-      "type": "lecturer"
-    },
-    {
-      "name": "bảng ghi điểm thi",
-      "type": "document"
-    },
-    {
-      "name": "Danh sách ghi điểm",
-      "type": "document_alias"
-    },
-    {
-      "name": "Phòng Quản lý chất lượng",
-      "type": "organization_department"
-    },
-    {
-      "name": "Khoa/Bộ môn quản lý học phần",
-      "type": "department_faculty_role"
-    },
-    {
-      "name": "Khoa/Bộ môn",
-      "type": "department_faculty"
-    },
-    {
-      "name": "Phòng Đào tạo",
-      "type": "organization_department"
-    },
-    {
-      "name": "30 ngày",
-      "type": "duration"
-    },
-    {
-      "name": "ngày thi",
-      "type": "date_event"
-    },
-    {
-      "name": "điểm học phần",
-      "type": "course_score"
-    },
-    {
-      "name": "điểm thành phần",
-      "type": "score_component"
-    },
-    {
-      "name": "điểm thi",
-      "type": "final_exam_score"
-    },
-    {
-      "name": "phần mềm",
-      "type": "software"
-    },
-    {
-      "name": "hệ thống",
-      "type": "system"
-    },
-    {
-      "name": "điểm đánh giá thành phần",
-      "type": "score_component"
-    },
-    {
-      "name": "kết thúc học phần",
-      "type": "time_point"
-    },
-    {
-      "name": "khiếu nại",
-      "type": "complaint"
-    },
-    {
-      "name": "kết quả học tập",
-      "type": "academic_record"
-    },
-    {
-      "name": "học phần",
-      "type": "course_unit"
-    },
-    {
-      "name": "học kỳ",
-      "type": "time_period"
-    },
-    {
-      "name": "ĐTBCHK",
-      "type": "gpa_semester"
-    },
-    {
-      "name": "ĐTBCNH",
-      "type": "gpa_year"
-    },
-    {
-      "name": "ĐTBCTL",
-      "type": "gpa_cumulative"
-    },
-    {
-      "name": "sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "cuối mỗi học kỳ",
-      "type": "time_point"
-    },
-    {
-      "name": "website của trường",
-      "type": "digital_platform"
-    },
-    {
-      "name": "Trường",
-      "type": "university"
-    },
-    {
-      "name": "bảng điểm cá nhân",
-      "type": "personal_transcript"
-    },
-    {
-      "name": "nhu cầu riêng",
-      "type": "personal_need"
-    },
-    {
-      "name": "Mức chi phí dịch vụ",
-      "type": "service_fee"
-    },
-    {
-      "name": "thời gian cấp",
-      "type": "processing_time"
-    }
-  ],
   "relationships": [
     {
-      "source": "Điều 16",
-      "target": "Thông báo kết quả học tập",
-      "type_source": "regulation_article",
-      "type_target": "process",
-      "relation": "quy_định_về"
-    },
-    {
-      "source": "Giảng viên",
-      "target": "bảng ghi điểm thi",
+      "source": {"name": "Giảng viên", "role": "Người dạy và đánh giá", "responsibility_item": "Ghi điểm học phần", "academic_task": "Quản lý điểm"},
+      "target": {"name": "Điểm học phần", "grade_category": "Tổng hợp học phần", "components_included": "Điểm thành phần, điểm thi", "status": "Cần ghi nhận"},
       "type_source": "lecturer",
-      "type_target": "document",
-      "relation": "chịu_trách_nhiệm_ghi_điểm_vào"
+      "type_target": "course_grade",
+      "relation": "chịu_trách_nhiệm_ghi"
     },
     {
-      "source": "bảng ghi điểm thi",
-      "target": "Phòng Quản lý chất lượng",
-      "type_source": "document",
-      "type_target": "organization_department",
-      "relation": "cung_cấp_bởi"
+      "source": {"name": "Điểm học phần", "grade_category": "Tổng hợp học phần", "recording_process": "Ghi thủ công và cập nhật phần mềm", "usage_context": "Đánh giá kết quả học tập"},
+      "target": {"name": "Bảng ghi điểm thi", "document_alias": "Danh sách ghi điểm", "quantity_specified": "02 bản", "purpose": "Ghi điểm thi chính thức"},
+      "type_source": "course_grade",
+      "type_target": "grade_sheet",
+      "relation": "được_ghi_vào"
     },
     {
-      "source": "Giảng viên",
-      "target": "bảng ghi điểm thi",
+      "source": {"name": "Phòng Quản lý chất lượng", "department_role": "Hỗ trợ công tác thi cử", "provision_item": "Bảng ghi điểm thi", "institutional_level": "Phòng ban"},
+      "target": {"name": "Bảng ghi điểm thi", "document_type": "Biểu mẫu chính thức", "origin": "Do PQLCL cung cấp", "usage": "Ghi điểm"},
+      "type_source": "department",
+      "type_target": "grade_sheet",
+      "relation": "cung_cấp"
+    },
+    {
+      "source": {"name": "Giảng viên", "role": "Người chịu trách nhiệm pháp lý", "action_on_document": "Ký tên xác nhận", "document_involved": "Bảng ghi điểm thi"},
+      "target": {"name": "Bảng ghi điểm thi", "document_status": "Cần chữ ký xác nhận", "signer_role": "Giảng viên", "importance": "Xác thực thông tin điểm"},
       "type_source": "lecturer",
-      "type_target": "document",
-      "relation": "ký_tên_trên"
+      "type_target": "grade_sheet",
+      "relation": "ký_tên_lên"
     },
     {
-      "source": "Giảng viên",
-      "target": "Khoa/Bộ môn quản lý học phần",
+      "source": {"name": "Giảng viên", "action_description": "Gửi bảng điểm đã hoàn tất", "recipient_unit": "Khoa/Bộ môn quản lý học phần", "document_sent": "Bảng ghi điểm thi"},
+      "target": {"name": "Khoa/Bộ môn quản lý học phần", "unit_role": "Tiếp nhận và xử lý điểm", "document_received": "Bảng ghi điểm thi", "sender": "Giảng viên"},
       "type_source": "lecturer",
-      "type_target": "department_faculty_role",
+      "type_target": "academic_unit",
       "relation": "gửi_bảng_điểm_đến"
     },
     {
-      "source": "Khoa/Bộ môn quản lý học phần",
-      "target": "bảng ghi điểm thi",
-      "type_source": "department_faculty_role",
-      "type_target": "document",
+      "source": {"name": "Khoa/Bộ môn quản lý học phần", "action_performed": "Kiểm tra tính chính xác", "item_checked": "Bảng ghi điểm thi", "purpose_of_check": "Đảm bảo đúng quy trình"},
+      "target": {"name": "Bảng ghi điểm thi", "status_after_receipt": "Cần kiểm tra", "checked_by": "Khoa/Bộ môn quản lý học phần", "content_focus": "Điểm số"},
+      "type_source": "academic_unit",
+      "type_target": "grade_sheet",
       "relation": "kiểm_tra"
     },
     {
-      "source": "Khoa/Bộ môn quản lý học phần",
-      "target": "bảng ghi điểm thi",
-      "type_source": "department_faculty_role",
-      "type_target": "document",
+      "source": {"name": "Khoa/Bộ môn quản lý học phần", "action_performed": "Lưu trữ tài liệu", "item_stored": "Bảng ghi điểm thi", "quantity_stored": "01 bản", "storage_purpose": "Lưu hồ sơ"},
+      "target": {"name": "Bảng ghi điểm thi", "storage_location": "Tại Khoa/Bộ môn", "version_info": "Bản lưu của Khoa/Bộ môn", "document_lifecycle_stage": "Lưu trữ"},
+      "type_source": "academic_unit",
+      "type_target": "grade_sheet",
       "relation": "lưu"
     },
     {
-      "source": "Khoa/Bộ môn quản lý học phần",
-      "target": "Phòng Đào tạo",
-      "type_source": "department_faculty_role",
-      "type_target": "organization_department",
+      "source": {"name": "Khoa/Bộ môn quản lý học phần", "action_description": "Gửi bảng điểm lên cấp cao hơn", "recipient_unit": "Phòng Đào tạo", "document_sent": "Bảng ghi điểm thi (01 bản)"},
+      "target": {"name": "Phòng Đào tạo", "department_role": "Quản lý điểm toàn trường", "document_received": "Bảng ghi điểm thi", "sender_unit": "Khoa/Bộ môn"},
+      "type_source": "academic_unit",
+      "type_target": "department",
       "relation": "gửi_bảng_điểm_về"
     },
     {
-      "source": "bảng ghi điểm thi",
-      "target": "Phòng Đào tạo",
-      "type_source": "document",
-      "type_target": "organization_department",
-      "relation": "có_hạn_nộp_điểm_về"
+      "source": {"name": "Việc gửi bảng điểm của Khoa/Bộ môn về Phòng Đào tạo", "activity_description": "Nộp bảng điểm thi", "actor": "Khoa/Bộ môn quản lý học phần", "recipient": "Phòng Đào tạo"},
+      "target": {"name": "Quy định của Trường về nộp điểm", "document_type": "Văn bản quy phạm", "issuer": "Trường", "scope": "Quy trình nộp điểm"},
+      "type_source": "academic_procedure_activity",
+      "type_target": "regulation",
+      "relation": "tuân_theo"
     },
     {
-      "source": "bảng ghi điểm thi",
-      "target": "30 ngày",
-      "type_source": "document",
-      "type_target": "duration",
-      "relation": "có_hạn_nộp_chậm_nhất"
+      "source": {"name": "Việc nộp điểm về Phòng Đào tạo", "activity_type": "Nộp hồ sơ điểm", "responsible_unit_preceding": "Khoa/Bộ môn", "destination_unit": "Phòng Đào tạo"},
+      "target": {"name": "Thời hạn nộp điểm", "duration_value": "Chậm nhất 30 ngày", "reference_event": "Ngày thi", "applies_to_activity": "Nộp điểm về Phòng Đào tạo"},
+      "type_source": "grade_submission_activity",
+      "type_target": "deadline",
+      "relation": "có"
     },
     {
-      "source": "30 ngày",
-      "target": "ngày thi",
-      "type_source": "duration",
+      "source": {"name": "Thời hạn nộp điểm", "duration_value": "Chậm nhất 30 ngày", "calculation_basis": "Kể từ ngày thi", "context": "Nộp điểm học phần"},
+      "target": {"name": "Ngày thi", "event_nature": "Kết thúc quá trình thi cử học phần", "significance": "Mốc bắt đầu tính thời hạn nộp điểm", "time_frame": "Cụ thể của học phần"},
+      "type_source": "deadline",
       "type_target": "date_event",
-      "relation": "kể_từ"
+      "relation": "tính_từ"
     },
     {
-      "source": "Giảng viên",
-      "target": "phần mềm",
+      "source": {"name": "Điểm học phần", "grade_composition": "Điểm thành phần, điểm thi", "status": "Cần cập nhật vào hệ thống", "overall_assessment": "Kết quả học phần"},
+      "target": {"name": "Điểm thành phần", "grade_type": "Đánh giá quá trình", "contribution_to": "Điểm học phần", "announcer": "Giảng viên"},
+      "type_source": "course_grade",
+      "type_target": "component_grade",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": {"name": "Điểm học phần", "grade_composition": "Điểm thành phần, điểm thi", "status": "Cần cập nhật vào hệ thống", "overall_assessment": "Kết quả học phần"},
+      "target": {"name": "Điểm thi", "grade_type": "Đánh giá cuối kỳ", "contribution_to": "Điểm học phần", "recording_method": "Ghi vào bảng điểm và phần mềm"},
+      "type_source": "course_grade",
+      "type_target": "exam_grade",
+      "relation": "bao_gồm"
+    },
+    {
+      "source": {"name": "Giảng viên", "action_type": "Cập nhật dữ liệu", "data_updated": "Điểm học phần", "target_system": "Phần mềm của Phòng Đào tạo"},
+      "target": {"name": "Phần mềm của Phòng Đào tạo", "software_purpose": "Quản lý điểm học phần", "owner_department": "Phòng Đào tạo", "user_group": "Giảng viên"},
       "type_source": "lecturer",
-      "type_target": "software",
-      "relation": "cập_nhật_điểm_vào"
+      "type_target": "software_system",
+      "relation": "cập_nhật_điểm_học_phần_vào"
     },
     {
-      "source": "Giảng viên",
-      "target": "điểm thành phần",
-      "type_source": "lecturer",
-      "type_target": "score_component",
-      "relation": "cập_nhật"
-    },
-    {
-      "source": "Giảng viên",
-      "target": "điểm thi",
-      "type_source": "lecturer",
-      "type_target": "final_exam_score",
-      "relation": "cập_nhật"
-    },
-    {
-      "source": "Giảng viên",
-      "target": "điểm học phần",
-      "type_source": "lecturer",
-      "type_target": "course_score",
-      "relation": "cập_nhật"
-    },
-    {
-      "source": "phần mềm",
-      "target": "Phòng Đào tạo",
-      "type_source": "software",
-      "type_target": "organization_department",
+      "source": {"name": "Phần mềm của Phòng Đào tạo", "system_type": "Ứng dụng quản lý giáo dục", "functionality": "Lưu trữ và xử lý điểm", "administrator": "Phòng Đào tạo"},
+      "target": {"name": "Phòng Đào tạo", "department_function": "Quản lý hệ thống điểm", "role_in_software": "Chủ quản, vận hành", "user_support": "Hỗ trợ giảng viên"},
+      "type_source": "software_system",
+      "type_target": "department",
       "relation": "của"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "điểm học phần",
-      "type_source": "organization_department",
-      "type_target": "course_score",
+      "source": {"name": "Việc cập nhật điểm học phần của Giảng viên", "activity_nature": "Nhập liệu và đồng bộ điểm", "actor": "Giảng viên", "target_system": "Phần mềm Phòng Đào tạo"},
+      "target": {"name": "Kế hoạch được thông báo", "plan_content": "Lịch trình và hướng dẫn cập nhật điểm", "issuer_implied": "Phòng Đào tạo", "communication_method": "Thông báo"},
+      "type_source": "data_update_activity",
+      "type_target": "plan_document",
+      "relation": "tuân_theo"
+    },
+    {
+      "source": {"name": "Phòng Đào tạo", "action_pre_storage": "Kiểm tra, đối chiếu điểm", "data_checked": "Điểm học phần", "purpose_of_check": "Đảm bảo tính chính xác"},
+      "target": {"name": "Điểm học phần", "status_before_storage": "Đã được giảng viên cập nhật, chờ kiểm dò", "data_sensitivity": "Cao", "storage_system": "Hệ thống của Phòng Đào tạo"},
+      "type_source": "department",
+      "type_target": "course_grade",
       "relation": "kiểm_dò"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "hệ thống",
-      "type_source": "organization_department",
-      "type_target": "system",
+      "source": {"name": "Phòng Đào tạo", "action_performed_after_check": "Lưu trữ dữ liệu điểm", "data_stored": "Điểm học phần", "storage_location": "Hệ thống quản lý"},
+      "target": {"name": "Hệ thống lưu trữ điểm", "system_purpose": "Lưu trữ và quản lý điểm chính thức", "owner": "Phòng Đào tạo", "data_integrity_requirement": "Cao"},
+      "type_source": "department",
+      "type_target": "information_system",
       "relation": "lưu_điểm_vào"
     },
     {
-      "source": "Giảng viên",
-      "target": "điểm đánh giá thành phần",
+      "source": {"name": "Việc kiểm dò điểm", "actor": "Phòng Đào tạo", "subject_data": "Điểm học phần", "purpose": "Đảm bảo chính xác"},
+      "target": {"name": "Việc lưu điểm vào hệ thống", "actor": "Phòng Đào tạo", "subject_data": "Điểm học phần (đã kiểm dò)", "system": "Hệ thống lưu trữ điểm"},
+      "type_source": "data_verification_activity",
+      "type_target": "data_storage_activity",
+      "relation": "diễn_ra_trước"
+    },
+    {
+      "source": {"name": "Giảng viên", "responsibility_type": "Công bố thông tin", "information_to_announce": "Điểm đánh giá thành phần", "timing_constraint": "Trước khi kết thúc học phần"},
+      "target": {"name": "Điểm đánh giá thành phần", "grade_nature": "Đánh giá quá trình học tập", "recipient": "Sinh viên", "importance_to_student": "Biết điểm thành phần sớm"},
       "type_source": "lecturer",
-      "type_target": "score_component",
+      "type_target": "component_grade",
       "relation": "chịu_trách_nhiệm_công_bố"
     },
     {
-      "source": "Giảng viên",
-      "target": "kết thúc học phần",
-      "type_source": "lecturer",
-      "type_target": "time_point",
-      "relation": "công_bố_điểm_trước"
+      "source": {"name": "Việc công bố điểm đánh giá thành phần", "actor": "Giảng viên", "data_announced": "Điểm thành phần", "audience": "Sinh viên"},
+      "target": {"name": "Sự kiện kết thúc học phần", "event_type": "Mốc thời gian học vụ", "significance": "Deadline cho việc công bố điểm thành phần", "module_related": "Học phần tương ứng"},
+      "type_source": "information_announcement_activity",
+      "type_target": "academic_event_milestone",
+      "relation": "thực_hiện_trước_khi"
     },
     {
-      "source": "Khoa/Bộ môn quản lý học phần",
-      "target": "khiếu nại",
-      "type_source": "department_faculty_role",
-      "type_target": "complaint",
+      "source": {"name": "Khoa/Bộ môn quản lý học phần", "task_description": "Giải quyết khiếu nại học tập", "scope_of_complaints": "Liên quan đến kết quả học tập của học phần", "timing_of_handling": "Trong học kỳ đó"},
+      "target": {"name": "Khiếu nại về kết quả học tập", "complaint_nature": "Phản ánh về điểm số/đánh giá", "subject_matter_origin": "Học phần", "filer_implied": "Sinh viên"},
+      "type_source": "academic_unit",
+      "type_target": "complaint_record",
       "relation": "xử_lý"
     },
     {
-      "source": "khiếu nại",
-      "target": "kết quả học tập",
-      "type_source": "complaint",
-      "type_target": "academic_record",
+      "source": {"name": "Khiếu nại về kết quả học tập", "complaint_focus": "Kết quả học tập", "context": "Học phần trong học kỳ", "status": "Cần được xử lý"},
+      "target": {"name": "Kết quả học tập của học phần", "data_type": "Điểm số, đánh giá", "relevance_to_complaint": "Đối tượng của khiếu nại", "source_module": "Học phần"},
+      "type_source": "complaint_record",
+      "type_target": "academic_performance_record",
       "relation": "liên_quan_đến"
     },
     {
-      "source": "kết quả học tập",
-      "target": "học phần",
-      "type_source": "academic_record",
-      "type_target": "course_unit",
+      "source": {"name": "Kết quả học tập của học phần", "record_content": "Điểm số, đánh giá", "assessment_scope": "Một học phần cụ thể", "use_case": "Cơ sở cho khiếu nại, tính GPA"},
+      "target": {"name": "Học phần", "academic_unit_code": "Mã học phần (ẩn)", "module_type": "Đơn vị kiến thức", "duration": "Một học kỳ"},
+      "type_source": "academic_performance_record",
+      "type_target": "course_module",
       "relation": "của"
     },
     {
-      "source": "Khoa/Bộ môn quản lý học phần",
-      "target": "học kỳ",
-      "type_source": "department_faculty_role",
-      "type_target": "time_period",
-      "relation": "xử_lý_khiếu_nại_trong"
+      "source": {"name": "Việc xử lý khiếu nại", "handling_body": "Khoa/Bộ môn quản lý học phần", "subject_of_complaint": "Kết quả học tập của học phần", "time_frame_for_handling": "Trong học kỳ"},
+      "target": {"name": "Học kỳ", "academic_period_name": "Kỳ học", "relevance_to_complaint_handling": "Khung thời gian xử lý", "duration_typical": "Khoảng 4-5 tháng"},
+      "type_source": "complaint_handling_activity",
+      "type_target": "academic_term",
+      "relation": "diễn_ra_trong"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "ĐTBCHK",
-      "type_source": "organization_department",
-      "type_target": "gpa_semester",
+      "source": {"name": "Phòng Đào tạo", "function_performed": "Tính toán các loại GPA", "gpa_types_processed": "ĐTBCHK, ĐTBCNH, ĐTBCTL", "output_action": "Thông báo cho sinh viên"},
+      "target": {"name": "ĐTBCHK", "gpa_full_name": "Điểm trung bình chung học kỳ", "calculation_frequency": "Cuối mỗi học kỳ", "calculated_by": "Phòng Đào tạo"},
+      "type_source": "department",
+      "type_target": "gpa_score",
       "relation": "xử_lý"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "ĐTBCNH",
-      "type_source": "organization_department",
-      "type_target": "gpa_year",
+      "source": {"name": "Phòng Đào tạo", "function_performed": "Tính toán các loại GPA", "gpa_types_processed": "ĐTBCHK, ĐTBCNH, ĐTBCTL", "output_action": "Thông báo cho sinh viên"},
+      "target": {"name": "ĐTBCNH", "gpa_full_name": "Điểm trung bình chung năm học", "calculation_frequency": "Cuối mỗi năm học (ngụ ý từ học kỳ)", "calculated_by": "Phòng Đào tạo"},
+      "type_source": "department",
+      "type_target": "gpa_score",
       "relation": "xử_lý"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "ĐTBCTL",
-      "type_source": "organization_department",
-      "type_target": "gpa_cumulative",
+      "source": {"name": "Phòng Đào tạo", "function_performed": "Tính toán các loại GPA", "gpa_types_processed": "ĐTBCHK, ĐTBCNH, ĐTBCTL", "output_action": "Thông báo cho sinh viên"},
+      "target": {"name": "ĐTBCTL", "gpa_full_name": "Điểm trung bình chung tích lũy", "calculation_frequency": "Cuối mỗi học kỳ", "calculated_by": "Phòng Đào tạo"},
+      "type_source": "department",
+      "type_target": "gpa_score",
       "relation": "xử_lý"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "sinh viên",
-      "type_source": "organization_department",
+      "source": {"name": "Phòng Đào tạo", "communication_task": "Thông báo kết quả GPA", "information_communicated": "ĐTBCHK, ĐTBCNH, ĐTBCTL", "timing_of_communication": "Cuối mỗi học kỳ"},
+      "target": {"name": "Sinh viên", "role_in_communication": "Người nhận thông tin", "information_received": "Các loại GPA", "access_method": "Thông báo trực tiếp, website"},
+      "type_source": "department",
       "type_target": "student",
       "relation": "thông_báo_gpa_đến"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "cuối mỗi học kỳ",
-      "type_source": "organization_department",
+      "source": {"name": "Việc thông báo GPA", "actor": "Phòng Đào tạo", "data_announced": "ĐTBCHK, ĐTBCNH, ĐTBCTL", "recipient": "Sinh viên"},
+      "target": {"name": "Thời điểm cuối mỗi học kỳ", "timing_description": "Kết thúc của một kỳ học", "significance_for_gpa": "Thời điểm tính và công bố GPA", "academic_cycle_part": "Điểm kết thúc kỳ"},
+      "type_source": "gpa_announcement_activity",
       "type_target": "time_point",
-      "relation": "thông_báo_vào"
+      "relation": "thực_hiện_vào"
     },
     {
-      "source": "sinh viên",
-      "target": "kết quả học tập",
+      "source": {"name": "Sinh viên", "action_capability": "Xem thông tin học tập", "information_viewed": "Kết quả học tập", "access_platform": "Website của trường"},
+      "target": {"name": "Website của trường", "platform_type": "Cổng thông tin điện tử", "content_provided": "Kết quả học tập sinh viên", "owner_institution": "Trường"},
       "type_source": "student",
-      "type_target": "academic_record",
-      "relation": "có_thể_xem"
+      "type_target": "website_platform",
+      "relation": "có_thể_xem_kết_quả_học_tập_trên"
     },
     {
-      "source": "sinh viên",
-      "target": "website của trường",
-      "type_source": "student",
-      "type_target": "digital_platform",
-      "relation": "xem_kết_quả_trên"
+      "source": {"name": "Website của trường", "main_function": "Cung cấp thông tin cho sinh viên", "specific_content": "Kết quả học tập, thông báo", "domain_owner": "Trường"},
+      "target": {"name": "Trường", "institution_type": "Cơ sở giáo dục", "role_regarding_website": "Chủ quản, cung cấp nội dung", "student_services_channel": "Website"},
+      "type_source": "website_platform",
+      "type_target": "educational_institution",
+      "relation": "của"
     },
     {
-      "source": "sinh viên",
-      "target": "kết quả học tập",
+      "source": {"name": "Sinh viên", "responsibility_during_study": "Kiểm tra kết quả học tập", "information_to_check": "Điểm số, GPA", "time_frame_for_checking": "Trong thời gian học tại Trường"},
+      "target": {"name": "Kết quả học tập", "data_category": "Thông tin học vụ cá nhân", "importance_for_student": "Theo dõi tiến độ, phát hiện sai sót", "availability_platform": "Website trường"},
       "type_source": "student",
-      "type_target": "academic_record",
+      "type_target": "academic_performance_record",
       "relation": "có_trách_nhiệm_kiểm_tra"
     },
     {
-      "source": "sinh viên",
-      "target": "Trường",
-      "type_source": "student",
-      "type_target": "university",
-      "relation": "kiểm_tra_kết_quả_trong_thời_gian_học_tại"
+      "source": {"name": "Việc kiểm tra kết quả học tập", "actor": "Sinh viên", "subject_checked": "Kết quả học tập cá nhân", "purpose_of_check": "Đối chiếu, theo dõi"},
+      "target": {"name": "Thời gian học tại Trường", "period_description": "Toàn bộ quá trình sinh viên theo học", "relevance_to_checking": "Khung thời gian thực hiện trách nhiệm", "institution_context": "Tại Trường"},
+      "type_source": "result_checking_activity",
+      "type_target": "study_duration",
+      "relation": "thực_hiện_trong"
     },
     {
-      "source": "sinh viên",
-      "target": "bảng điểm cá nhân",
+      "source": {"name": "Sinh viên", "available_action": "Đăng ký yêu cầu dịch vụ", "service_requested": "Cấp bảng điểm cá nhân", "request_basis": "Theo nhu cầu riêng"},
+      "target": {"name": "Bảng điểm cá nhân", "document_type": "Hồ sơ học tập chính thức", "purpose_of_issuance": "Cung cấp cho sinh viên theo yêu cầu", "content_summary": "Tổng hợp kết quả học tập"},
       "type_source": "student",
-      "type_target": "personal_transcript",
+      "type_target": "official_document",
       "relation": "có_thể_đăng_ký_cấp"
     },
     {
-      "source": "sinh viên",
-      "target": "nhu cầu riêng",
-      "type_source": "student",
-      "type_target": "personal_need",
-      "relation": "đăng_ký_cấp_bảng_điểm_theo"
+      "source": {"name": "Việc đăng ký cấp bảng điểm cá nhân", "actor": "Sinh viên", "document_requested": "Bảng điểm cá nhân", "motivation": "Nhu cầu riêng"},
+      "target": {"name": "Nhu cầu riêng của sinh viên", "reason_type": "Cá nhân, không xác định cụ thể", "originator": "Sinh viên", "purpose_for_requesting": "Sử dụng bảng điểm cho mục đích cá nhân"},
+      "type_source": "transcript_request_activity",
+      "type_target": "personal_reason",
+      "relation": "theo"
     },
     {
-      "source": "bảng điểm cá nhân",
-      "target": "Mức chi phí dịch vụ",
-      "type_source": "personal_transcript",
-      "type_target": "service_fee",
-      "relation": "có"
+      "source": {"name": "Việc đăng ký cấp bảng điểm cá nhân", "actor": "Sinh viên", "context_of_action": "Trong quá trình học tập", "timing_flexibility": "Khi có nhu cầu"},
+      "target": {"name": "Quá trình học tập", "process_description": "Toàn bộ thời gian sinh viên học tại trường", "relevance_to_request": "Khung thời gian có thể phát sinh nhu cầu", "actor_involved": "Sinh viên"},
+      "type_source": "transcript_request_activity",
+      "type_target": "learning_process",
+      "relation": "diễn_ra_trong"
     },
     {
-      "source": "bảng điểm cá nhân",
-      "target": "thời gian cấp",
-      "type_source": "personal_transcript",
-      "type_target": "processing_time",
-      "relation": "có"
-    },
-    {
-      "source": "Mức chi phí dịch vụ",
-      "target": "Trường",
+      "source": {"name": "Mức chi phí dịch vụ cấp bảng điểm", "fee_type": "Phí hành chính/dịch vụ", "applies_to_service": "Cấp bảng điểm cá nhân", "determination_basis": "Theo quy định của Trường"},
+      "target": {"name": "Quy định của Trường về cấp bảng điểm", "regulation_content": "Chi phí, thời gian cấp bảng điểm", "issuer": "Trường", "scope": "Dịch vụ sinh viên"},
       "type_source": "service_fee",
-      "type_target": "university",
-      "relation": "theo_quy_định_của"
+      "type_target": "regulation",
+      "relation": "tuân_theo"
     },
     {
-      "source": "thời gian cấp",
-      "target": "Trường",
-      "type_source": "processing_time",
-      "type_target": "university",
-      "relation": "theo_quy_định_của"
+      "source": {"name": "Thời gian cấp bảng điểm", "duration_type": "Thời gian xử lý thủ tục", "service_context": "Cấp bảng điểm cá nhân", "determination_basis": "Theo quy định của Trường"},
+      "target": {"name": "Quy định của Trường về cấp bảng điểm", "regulation_content": "Chi phí, thời gian cấp bảng điểm", "issuer": "Trường", "scope": "Dịch vụ sinh viên"},
+      "type_source": "issuance_duration",
+      "type_target": "regulation",
+      "relation": "tuân_theo"
+    },
+    {
+      "source": {"name": "Quy định của Trường", "document_nature": "Văn bản quản lý nội bộ", "scope_general": "Hoạt động của trường", "specific_content_example": "Quy định về cấp bảng điểm"},
+      "target": {"name": "Trường", "institution_role": "Ban hành và thực thi quy định", "governance_level": "Cấp trường", "target_audience_of_regulation": "Sinh viên, giảng viên, các phòng ban"},
+      "type_source": "regulation",
+      "type_target": "educational_institution",
+      "relation": "của"
     }
   ]
 }

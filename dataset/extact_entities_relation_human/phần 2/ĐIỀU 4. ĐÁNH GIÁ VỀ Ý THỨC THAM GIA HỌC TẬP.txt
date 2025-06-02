@@ -1,215 +1,84 @@
 {
-  "entities": [
-    {
-      "name": "ĐÁNH GIÁ VỀ Ý THỨC THAM GIA HỌC TẬP",
-      "type": "title"
-    },
-    {
-      "name": "tiêu chí",
-      "type": "criterion"
-    },
-    {
-      "name": "điểm đánh giá",
-      "type": "assessment_score"
-    },
-    {
-      "name": "Ý thức",
-      "type": "awareness"
-    },
-    {
-      "name": "thái độ",
-      "type": "attitude"
-    },
-    {
-      "name": "học tập",
-      "type": "learning"
-    },
-    {
-      "name": "câu lạc bộ học thuật",
-      "type": "academic_club"
-    },
-    {
-      "name": "hoạt động học thuật",
-      "type": "academic_activity"
-    },
-    {
-      "name": "hoạt động ngoại khóa",
-      "type": "extracurricular_activity"
-    },
-    {
-      "name": "hoạt động nghiên cứu khoa học",
-      "type": "scientific_research_activity"
-    },
-    {
-      "name": "kỳ thi",
-      "type": "exam"
-    },
-    {
-      "name": "cuộc thi",
-      "type": "contest"
-    },
-    {
-      "name": "Tinh thần vượt khó",
-      "type": "resilience"
-    },
-    {
-      "name": "phấn đấu vươn lên",
-      "type": "striving"
-    },
-    {
-      "name": "học tập",
-      "type": "learning"
-    },
-    {
-      "name": "Kết quả học tập",
-      "type": "learning_outcome"
-    },
-    {
-      "name": "Khung điểm đánh giá",
-      "type": "assessment_scale"
-    },
-    {
-      "name": "0",
-      "type": "score"
-    },
-    {
-      "name": "20 điểm",
-      "type": "score"
-    }
-  ],
   "relationships": [
     {
-      "source": "tiêu chí",
-      "target": "điểm đánh giá",
-      "relation": "để_xác_định",
+      "source": {
+        "name": "Ý thức và thái độ trong học tập",
+        "description": "Tiêu chí đánh giá về nhận thức và cách ứng xử của cá nhân trong quá trình học tập.",
+        "focus_area": "Học tập",
+        "evaluated_components": "Ý thức, Thái độ"
+      },
+      "target": {
+        "name": "Điểm đánh giá",
+        "description": "Thang đo tổng hợp được xác định dựa trên nhiều tiêu chí khác nhau.",
+        "scoring_framework": "Khung điểm từ 0 đến 20 điểm"
+      },
       "type_source": "criterion",
-      "type_target": "assessment_score"
+      "type_target": "assessment_metric",
+      "relation": "xác_định"
     },
     {
-      "source": "Ý thức",
-      "target": "học tập",
-      "relation": "trong",
-      "type_source": "awareness",
-      "type_target": "learning"
+      "source": {
+        "name": "Ý thức và thái độ tham gia các câu lạc bộ học thuật, các hoạt động học thuật, hoạt động ngoại khóa, hoạt động nghiên cứu khoa học",
+        "description": "Tiêu chí đánh giá về nhận thức và cách ứng xử của cá nhân khi tham gia vào các hoạt động đa dạng được liệt kê.",
+        "activity_scope": "Các câu lạc bộ học thuật, các hoạt động học thuật, hoạt động ngoại khóa, hoạt động nghiên cứu khoa học",
+        "evaluated_components": "Ý thức, Thái độ"
+      },
+      "target": {
+        "name": "Điểm đánh giá",
+        "description": "Thang đo tổng hợp được xác định dựa trên nhiều tiêu chí khác nhau.",
+        "scoring_framework": "Khung điểm từ 0 đến 20 điểm"
+      },
+      "type_source": "criterion",
+      "type_target": "assessment_metric",
+      "relation": "xác_định"
     },
     {
-      "source": "thái độ",
-      "target": "học tập",
-      "relation": "trong",
-      "type_source": "attitude",
-      "type_target": "learning"
+      "source": {
+        "name": "Ý thức và thái độ tham gia các kỳ thi, cuộc thi",
+        "description": "Tiêu chí đánh giá về nhận thức và cách ứng xử của cá nhân khi tham gia vào các kỳ thi và cuộc thi.",
+        "focus_area": "Tham gia các kỳ thi, cuộc thi",
+        "evaluated_components": "Ý thức, Thái độ"
+      },
+      "target": {
+        "name": "Điểm đánh giá",
+        "description": "Thang đo tổng hợp được xác định dựa trên nhiều tiêu chí khác nhau.",
+        "scoring_framework": "Khung điểm từ 0 đến 20 điểm"
+      },
+      "type_source": "criterion",
+      "type_target": "assessment_metric",
+      "relation": "xác_định"
     },
     {
-      "source": "Ý thức",
-      "target": "câu lạc bộ học thuật",
-      "relation": "tham_gia",
-      "type_source": "awareness",
-      "type_target": "academic_club"
+      "source": {
+        "name": "Tinh thần vượt khó, phấn đấu vươn lên trong học tập",
+        "description": "Tiêu chí đánh giá về nỗ lực, ý chí và sự cố gắng không ngừng của cá nhân trong quá trình học tập.",
+        "focus_area": "Nỗ lực và ý chí học tập",
+        "evaluated_components": "Tinh thần vượt khó, Tinh thần phấn đấu vươn lên"
+      },
+      "target": {
+        "name": "Điểm đánh giá",
+        "description": "Thang đo tổng hợp được xác định dựa trên nhiều tiêu chí khác nhau.",
+        "scoring_framework": "Khung điểm từ 0 đến 20 điểm"
+      },
+      "type_source": "criterion",
+      "type_target": "assessment_metric",
+      "relation": "xác_định"
     },
     {
-      "source": "thái độ",
-      "target": "câu lạc bộ học thuật",
-      "relation": "tham_gia",
-      "type_source": "attitude",
-      "type_target": "academic_club"
-    },
-    {
-      "source": "Ý thức",
-      "target": "hoạt động học thuật",
-      "relation": "tham_gia",
-      "type_source": "awareness",
-      "type_target": "academic_activity"
-    },
-    {
-      "source": "thái độ",
-      "target": "hoạt động học thuật",
-      "relation": "tham_gia",
-      "type_source": "attitude",
-      "type_target": "academic_activity"
-    },
-    {
-      "source": "Ý thức",
-      "target": "hoạt động ngoại khóa",
-      "relation": "tham_gia",
-      "type_source": "awareness",
-      "type_target": "extracurricular_activity"
-    },
-    {
-      "source": "thái độ",
-      "target": "hoạt động ngoại khóa",
-      "relation": "tham_gia",
-      "type_source": "attitude",
-      "type_target": "extracurricular_activity"
-    },
-    {
-      "source": "Ý thức",
-      "target": "hoạt động nghiên cứu khoa học",
-      "relation": "tham_gia",
-      "type_source": "awareness",
-      "type_target": "scientific_research_activity"
-    },
-    {
-      "source": "thái độ",
-      "target": "hoạt động nghiên cứu khoa học",
-      "relation": "tham_gia",
-      "type_source": "attitude",
-      "type_target": "scientific_research_activity"
-    },
-    {
-      "source": "Ý thức",
-      "target": "kỳ thi",
-      "relation": "tham_gia",
-      "type_source": "awareness",
-      "type_target": "exam"
-    },
-    {
-      "source": "thái độ",
-      "target": "kỳ thi",
-      "relation": "tham_gia",
-      "type_source": "attitude",
-      "type_target": "exam"
-    },
-    {
-      "source": "Ý thức",
-      "target": "cuộc thi",
-      "relation": "tham_gia",
-      "type_source": "awareness",
-      "type_target": "contest"
-    },
-    {
-      "source": "thái độ",
-      "target": "cuộc thi",
-      "relation": "tham_gia",
-      "type_source": "attitude",
-      "type_target": "contest"
-    },
-    {
-      "source": "Tinh thần vượt khó",
-      "target": "học tập",
-      "relation": "trong",
-      "type_source": "resilience",
-      "type_target": "learning"
-    },
-    {
-      "source": "phấn đấu vươn lên",
-      "target": "học tập",
-      "relation": "trong",
-      "type_source": "striving",
-      "type_target": "learning"
-    },
-    {
-      "source": "Khung điểm đánh giá",
-      "target": "0",
-      "relation": "từ_đến",
-      "type_source": "assessment_scale",
-      "type_target": "score"
-    },
-    {
-      "source": "Khung điểm đánh giá",
-      "target": "20 điểm",
-      "relation": "từ_đến",
-      "type_source": "assessment_scale",
-      "type_target": "score"
+      "source": {
+        "name": "Kết quả học tập",
+        "description": "Tiêu chí đánh giá dựa trên thành tích và các kết quả thực tế mà cá nhân đạt được trong học tập.",
+        "nature_of_criterion": "Thành tích học tập",
+        "evaluated_components": "Kết quả"
+      },
+      "target": {
+        "name": "Điểm đánh giá",
+        "description": "Thang đo tổng hợp được xác định dựa trên nhiều tiêu chí khác nhau.",
+        "scoring_framework": "Khung điểm từ 0 đến 20 điểm"
+      },
+      "type_source": "criterion",
+      "type_target": "assessment_metric",
+      "relation": "xác_định"
     }
   ]
 }

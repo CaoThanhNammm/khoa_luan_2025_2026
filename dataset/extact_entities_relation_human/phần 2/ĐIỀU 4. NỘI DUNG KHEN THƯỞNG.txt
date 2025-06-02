@@ -1,206 +1,123 @@
 {
-  "entities": [
-    {
-      "name": "khen thưởng",
-      "type": "reward"
-    },
-    {
-      "name": "cá nhân sinh viên",
-      "type": "individual_student"
-    },
-    {
-      "name": "tập thể sinh viên",
-      "type": "student_group"
-    },
-    {
-      "name": "thành tích xứng đáng",
-      "type": "worthy_achievement"
-    },
-    {
-      "name": "biểu dương",
-      "type": "commendation"
-    },
-    {
-      "name": "cuối năm học",
-      "type": "end_of_year"
-    },
-    {
-      "name": "khóa học",
-      "type": "course"
-    },
-    {
-      "name": "Thủ khoa",
-      "type": "valedictorian"
-    },
-    {
-      "name": "Á khoa",
-      "type": "salutatorian"
-    },
-    {
-      "name": "kỳ thi/ xét tuyển sinh đầu vào",
-      "type": "entrance_exam"
-    },
-    {
-      "name": "xét tuyển sinh đầu vào",
-      "type": "admission_selection"
-    },
-    {
-      "name": "việc khen thưởng",
-      "type": "reward_activity"
-    },
-    {
-      "name": "thường xuyên",
-      "type": "frequency"
-    },
-    {
-      "name": "kịp thời",
-      "type": "timeliness"
-    },
-    {
-      "name": "toàn diện",
-      "type": "comprehensiveness"
-    }
-  ],
   "relationships": [
     {
-      "source": "khen thưởng",
-      "target": "cá nhân sinh viên",
-      "relation": "dành_cho",
-      "type_source": "reward",
-      "type_target": "individual_student"
+      "source": {
+        "name": "Việc khen thưởng",
+        "purpose": "biểu dương, khen thưởng",
+        "frequency": "thường xuyên",
+        "timeliness": "kịp thời",
+        "comprehensiveness": "toàn diện"
+      },
+      "target": {
+        "name": "cá nhân và tập thể sinh viên",
+        "category": "student_group",
+        "status_requirement": "đạt thành tích xứng đáng",
+        "role": "đối tượng khen thưởng"
+      },
+      "type_source": "commendation_process",
+      "type_target": "recipient_group",
+      "relation": "thực_hiện_đối_với"
     },
     {
-      "source": "khen thưởng",
-      "target": "tập thể sinh viên",
-      "relation": "dành_cho",
-      "type_source": "reward",
-      "type_target": "student_group"
+      "source": {
+        "name": "cá nhân và tập thể sinh viên",
+        "category": "student_group",
+        "role": "đối tượng khen thưởng tiềm năng"
+      },
+      "target": {
+        "name": "thành tích xứng đáng",
+        "quality": "xứng đáng",
+        "type": "evaluation_outcome",
+        "description": "điều kiện để được biểu dương, khen thưởng"
+      },
+      "type_source": "recipient_group",
+      "type_target": "achievement",
+      "relation": "đạt_được"
     },
     {
-      "source": "cá nhân sinh viên",
-      "target": "thành tích xứng đáng",
-      "relation": "đạt_được",
-      "type_source": "individual_student",
-      "type_target": "worthy_achievement"
+      "source": {
+        "name": "Khen thưởng đối với cá nhân sinh viên",
+        "recipient_type": "cá nhân sinh viên",
+        "scope_of_application": "cuối năm học, khóa học",
+        "basis_for_commendation": "thành tích trong năm học/khóa học"
+      },
+      "target": {
+        "name": "cuối năm học",
+        "type": "time_point",
+        "description": "thời điểm tiến hành khen thưởng",
+        "period_category": "academic_year_end"
+      },
+      "type_source": "commendation_event",
+      "type_target": "time_point",
+      "relation": "tiến_hành_vào"
     },
     {
-      "source": "tập thể sinh viên",
-      "target": "thành tích xứng đáng",
-      "relation": "đạt_được",
-      "type_source": "student_group",
-      "type_target": "worthy_achievement"
+      "source": {
+        "name": "Khen thưởng đối với cá nhân sinh viên",
+        "recipient_type": "cá nhân sinh viên",
+        "scope_of_application": "cuối năm học, khóa học",
+        "basis_for_commendation": "thành tích trong năm học/khóa học"
+      },
+      "target": {
+        "name": "cuối khóa học",
+        "type": "time_point",
+        "description": "thời điểm tiến hành khen thưởng",
+        "period_category": "course_end"
+      },
+      "type_source": "commendation_event",
+      "type_target": "time_point",
+      "relation": "tiến_hành_vào"
     },
     {
-      "source": "khen thưởng",
-      "target": "biểu dương",
-      "relation": "để",
-      "type_source": "reward",
-      "type_target": "commendation"
+      "source": {
+        "name": "Khen thưởng (tuyển sinh đầu vào)",
+        "context": "tuyển sinh đầu vào",
+        "target_achievement": "Thủ khoa, Á khoa",
+        "purpose": "ghi nhận thành tích xuất sắc ban đầu"
+      },
+      "target": {
+        "name": "sinh viên",
+        "role_in_context": "người dự tuyển",
+        "achievement_status": "đạt thành tích Thủ khoa, Á khoa",
+        "event_context": "kỳ thi/xét tuyển sinh đầu vào"
+      },
+      "type_source": "commendation_policy",
+      "type_target": "student",
+      "relation": "dành_cho"
     },
     {
-      "source": "khen thưởng",
-      "target": "cá nhân sinh viên",
-      "relation": "tiến_hành_vào",
-      "type_source": "reward",
-      "type_target": "individual_student"
-    },
-    {
-      "source": "tiến hành",
-      "target": "cuối năm học",
-      "relation": "vào_thời_điểm",
-      "type_source": "RELATION",
-      "type_target": "end_of_year"
-    },
-    {
-      "source": "tiến hành",
-      "target": "khóa học",
-      "relation": "vào_thời_điểm",
-      "type_source": "RELATION",
-      "type_target": "course"
-    },
-    {
-      "source": "khen thưởng",
-      "target": "sinh viên",
-      "relation": "dành_cho",
-      "type_source": "reward",
-      "type_target": "student"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Thủ khoa",
-      "relation": "đạt_thành_tích",
+      "source": {
+        "name": "sinh viên",
+        "role_in_context": "người dự tuyển",
+        "event_context": "kỳ thi/xét tuyển sinh đầu vào",
+        "status": "ứng viên tuyển sinh"
+      },
+      "target": {
+        "name": "thành tích Thủ khoa, Á khoa",
+        "type": "academic_honor",
+        "rank_level": "Thủ khoa, Á khoa",
+        "significance": "thành tích cao trong tuyển sinh"
+      },
       "type_source": "student",
-      "type_target": "valedictorian"
+      "type_target": "achievement",
+      "relation": "đạt_được"
     },
     {
-      "source": "sinh viên",
-      "target": "Á khoa",
-      "relation": "đạt_thành_tích",
-      "type_source": "student",
-      "type_target": "salutatorian"
-    },
-    {
-      "source": "đạt_thành_tích",
-      "target": "kỳ thi/ xét tuyển sinh đầu vào",
-      "relation": "trong",
-      "type_source": "RELATION",
-      "type_target": "entrance_exam"
-    },
-    {
-      "source": "đạt_thành_tích",
-      "target": "xét tuyển sinh đầu vào",
-      "relation": "trong",
-      "type_source": "RELATION",
-      "type_target": "admission_selection"
-    },
-    {
-      "source": "việc khen thưởng",
-      "target": "thực hiện",
-      "relation": "là",
-      "type_source": "reward_activity",
-      "type_target": "RELATION"
-    },
-    {
-      "source": "thực hiện",
-      "target": "thường xuyên",
-      "relation": "thời_gian",
-      "type_source": "RELATION",
-      "type_target": "frequency"
-    },
-    {
-      "source": "thực hiện",
-      "target": "kịp thời",
-      "relation": "thời_gian",
-      "type_source": "RELATION",
-      "type_target": "timeliness"
-    },
-    {
-      "source": "thực hiện",
-      "target": "toàn diện",
-      "relation": "phạm_vi",
-      "type_source": "RELATION",
-      "type_target": "comprehensiveness"
-    },
-    {
-      "source": "cá nhân",
-      "target": "thành tích xứng đáng",
-      "relation": "đạt_được",
-      "type_source": "individual_student",
-      "type_target": "worthy_achievement"
-    },
-    {
-      "source": "tập thể sinh viên",
-      "target": "thành tích xứng đáng",
-      "relation": "đạt_được",
-      "type_source": "student_group",
-      "type_target": "worthy_achievement"
-    },
-    {
-      "source": "việc khen thưởng",
-      "target": "biểu dương",
-      "relation": "để",
-      "type_source": "reward_activity",
-      "type_target": "commendation"
+      "source": {
+        "name": "thành tích Thủ khoa, Á khoa",
+        "type": "academic_honor",
+        "rank_level": "Thủ khoa, Á khoa",
+        "awarding_context": "tuyển sinh"
+      },
+      "target": {
+        "name": "kỳ thi/xét tuyển sinh đầu vào",
+        "type": "admission_process",
+        "timing": "đầu vào",
+        "purpose_description": "tuyển chọn sinh viên mới"
+      },
+      "type_source": "achievement",
+      "type_target": "event",
+      "relation": "trong_khuôn_khổ_của"
     }
   ]
 }

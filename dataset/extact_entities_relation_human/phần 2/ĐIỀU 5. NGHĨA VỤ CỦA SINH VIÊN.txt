@@ -1,859 +1,527 @@
 {
-  "entities": [
-    {
-      "name": "Sinh viên",
-      "type": "person"
-    },
-    {
-      "name": "Đảng",
-      "type": "organization"
-    },
-    {
-      "name": "Nhà nước",
-      "type": "organization"
-    },
-    {
-      "name": "nhà trường",
-      "type": "organization"
-    },
-    {
-      "name": "nhà giáo",
-      "type": "person"
-    },
-    {
-      "name": "cán bộ",
-      "type": "person"
-    },
-    {
-      "name": "nhân viên",
-      "type": "person"
-    },
-    {
-      "name": "khoa",
-      "type": "organization"
-    },
-    {
-      "name": "phòng chức năng",
-      "type": "organization"
-    },
-    {
-      "name": "Hiệu trưởng nhà trường",
-      "type": "person"
-    },
-    {
-      "name": "cơ quan có thẩm quyền",
-      "type": "organization"
-    },
-    {
-      "name": "giáo viên",
-      "type": "person"
-    },
-    {
-      "name": "chủ trương",
-      "type": "regulation"
-    },
-    {
-      "name": "chính sách",
-      "type": "regulation"
-    },
-    {
-      "name": "pháp luật",
-      "type": "regulation"
-    },
-    {
-      "name": "quy chế",
-      "type": "regulation"
-    },
-    {
-      "name": "nội quy",
-      "type": "regulation"
-    },
-    {
-      "name": "điều lệ nhà trường",
-      "type": "regulation"
-    },
-    {
-      "name": "quy định",
-      "type": "regulation"
-    },
-    {
-      "name": "Hiệp định",
-      "type": "document"
-    },
-    {
-      "name": "chương trình",
-      "type": "document"
-    },
-    {
-      "name": "kế hoạch giáo dục",
-      "type": "document"
-    },
-    {
-      "name": "kế hoạch đào tạo",
-      "type": "document"
-    },
-    {
-      "name": "học tập",
-      "type": "activity"
-    },
-    {
-      "name": "rèn luyện",
-      "type": "activity"
-    },
-    {
-      "name": "nếp sống văn minh",
-      "type": "concept"
-    },
-    {
-      "name": "tài sản",
-      "type": "concept"
-    },
-    {
-      "name": "truyền thống",
-      "type": "concept"
-    },
-    {
-      "name": "nhiệm vụ học tập",
-      "type": "activity"
-    },
-    {
-      "name": "tự học",
-      "type": "activity"
-    },
-    {
-      "name": "nghiên cứu",
-      "type": "activity"
-    },
-    {
-      "name": "sáng tạo",
-      "type": "activity"
-    },
-    {
-      "name": "đạo đức",
-      "type": "concept"
-    },
-    {
-      "name": "lối sống",
-      "type": "concept"
-    },
-    {
-      "name": "khám sức khỏe",
-      "type": "activity"
-    },
-    {
-      "name": "học phí",
-      "type": "concept"
-    },
-    {
-      "name": "lao động công ích",
-      "type": "activity"
-    },
-    {
-      "name": "hoạt động tình nguyện",
-      "type": "activity"
-    },
-    {
-      "name": "năng lực",
-      "type": "concept"
-    },
-    {
-      "name": "sức khoẻ",
-      "type": "concept"
-    },
-    {
-      "name": "nghĩa vụ làm việc",
-      "type": "activity"
-    },
-    {
-      "name": "học bổng",
-      "type": "concept"
-    },
-    {
-      "name": "chi phí đào tạo",
-      "type": "concept"
-    },
-    {
-      "name": "phòng, chống tiêu cực",
-      "type": "activity"
-    },
-    {
-      "name": "gian lận",
-      "type": "concept"
-    },
-    {
-      "name": "thi cử",
-      "type": "activity"
-    },
-    {
-      "name": "hành vi tiêu cực",
-      "type": "concept"
-    },
-    {
-      "name": "hành vi vi phạm pháp luật",
-      "type": "concept"
-    },
-    {
-      "name": "vi phạm nội quy",
-      "type": "concept"
-    },
-    {
-      "name": "quy chế khác",
-      "type": "regulation"
-    },
-    {
-      "name": "công tác đảm bảo an ninh",
-      "type": "activity"
-    },
-    {
-      "name": "trật tự",
-      "type": "concept"
-    },
-    {
-      "name": "phòng chống tội phạm",
-      "type": "activity"
-    },
-    {
-      "name": "tệ nạn xã hội",
-      "type": "concept"
-    },
-    {
-      "name": "nước ngoài",
-      "type": "location"
-    },
-    {
-      "name": "cộng đồng",
-      "type": "location"
-    },
-    {
-      "name": "trường học",
-      "type": "location"
-    },
-    {
-      "name": "gia đình",
-      "type": "location"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh viên",
-      "target": "chủ trương",
-      "type_source": "person",
+      "source": {"name": "Người học", "role": "Sinh viên", "duty_description": "Chấp hành chủ trương, chính sách"},
+      "target": {"name": "Chủ trương của Đảng", "originator": "Đảng", "document_type": "Văn bản chỉ đạo"},
+      "type_source": "person_role",
+      "type_target": "policy_document",
+      "relation": "chấp_hành"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "duty_description": "Chấp hành chủ trương, chính sách"},
+      "target": {"name": "Chính sách của Đảng", "originator": "Đảng", "document_type": "Văn bản chỉ đạo"},
+      "type_source": "person_role",
+      "type_target": "policy_document",
+      "relation": "chấp_hành"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "duty_description": "Chấp hành pháp luật"},
+      "target": {"name": "Pháp luật của Nhà nước", "originator": "Nhà nước", "document_type": "Hệ thống quy phạm pháp luật"},
+      "type_source": "person_role",
+      "type_target": "law",
+      "relation": "chấp_hành"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "duty_description": "Chấp hành quy chế"},
+      "target": {"name": "Quy chế nhà trường", "originator": "Nhà trường", "document_type": "Văn bản quy định"},
+      "type_source": "person_role",
       "type_target": "regulation",
-      "relation": "có_nghĩa_vụ_chấp_hành"
+      "relation": "chấp_hành"
     },
     {
-      "source": "chủ trương",
-      "target": "Đảng",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
+      "source": {"name": "Người học", "role": "Sinh viên", "duty_description": "Chấp hành nội quy"},
+      "target": {"name": "Nội quy nhà trường", "originator": "Nhà trường", "document_type": "Văn bản quy định"},
+      "type_source": "person_role",
+      "type_target": "internal_rule",
+      "relation": "chấp_hành"
     },
     {
-      "source": "Sinh viên",
-      "target": "chính sách",
-      "type_source": "person",
+      "source": {"name": "Người học", "role": "Sinh viên", "duty_description": "Chấp hành điều lệ"},
+      "target": {"name": "Điều lệ nhà trường", "originator": "Nhà trường", "document_type": "Văn bản pháp lý cơ bản"},
+      "type_source": "person_role",
+      "type_target": "charter",
+      "relation": "chấp_hành"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "expected_behavior": "Tôn trọng"},
+      "target": {"name": "Nhà giáo", "affiliation": "Nhà trường", "professional_role": "Giảng dạy"},
+      "type_source": "person_role",
+      "type_target": "teacher",
+      "relation": "tôn_trọng"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "expected_behavior": "Tôn trọng"},
+      "target": {"name": "Cán bộ nhà trường", "affiliation": "Nhà trường", "professional_role": "Quản lý, phục vụ"},
+      "type_source": "person_role",
+      "type_target": "school_staff",
+      "relation": "tôn_trọng"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "expected_behavior": "Tôn trọng"},
+      "target": {"name": "Nhân viên nhà trường", "affiliation": "Nhà trường", "professional_role": "Phục vụ"},
+      "type_source": "person_role",
+      "type_target": "school_employee",
+      "relation": "tôn_trọng"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "interaction_type": "Đoàn kết, giúp đỡ"},
+      "target": {"name": "Người học khác", "role": "Sinh viên", "context": "Trong quá trình học tập và rèn luyện"},
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "hỗ_trợ"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "duty_description": "Thực hiện tốt nếp sống văn minh"},
+      "target": {"name": "Nếp sống văn minh", "description": "Lối sống tích cực, phù hợp chuẩn mực", "expected_quality": "Tốt"},
+      "type_source": "person_role",
+      "type_target": "civilized_lifestyle_concept",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "action_verb": "Giữ gìn"},
+      "target": {"name": "Tài sản của nhà trường", "owner": "Nhà trường", "asset_type": "Vật chất, trang thiết bị"},
+      "type_source": "person_role",
+      "type_target": "asset",
+      "relation": "giữ_gìn"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "action_verb": "Bảo vệ"},
+      "target": {"name": "Tài sản của nhà trường", "owner": "Nhà trường", "asset_type": "Vật chất, trang thiết bị"},
+      "type_source": "person_role",
+      "type_target": "asset",
+      "relation": "bảo_vệ"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "contribution_action": "Xây dựng"},
+      "target": {"name": "Truyền thống của nhà trường", "owner": "Nhà trường", "tradition_type": "Giá trị văn hóa, lịch sử"},
+      "type_source": "person_role",
+      "type_target": "tradition",
+      "relation": "đóng_góp_cho"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "contribution_action": "Bảo vệ"},
+      "target": {"name": "Truyền thống của nhà trường", "owner": "Nhà trường", "tradition_type": "Giá trị văn hóa, lịch sử"},
+      "type_source": "person_role",
+      "type_target": "tradition",
+      "relation": "đóng_góp_cho"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "contribution_action": "Phát huy"},
+      "target": {"name": "Truyền thống của nhà trường", "owner": "Nhà trường", "tradition_type": "Giá trị văn hóa, lịch sử"},
+      "type_source": "person_role",
+      "type_target": "tradition",
+      "relation": "đóng_góp_cho"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "duty_description": "Thực hiện nhiệm vụ"},
+      "target": {"name": "Nhiệm vụ học tập", "description": "Các yêu cầu học tập theo chương trình", "assigner": "Nhà trường"},
+      "type_source": "person_role",
+      "type_target": "academic_task",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "duty_description": "Thực hiện nhiệm vụ"},
+      "target": {"name": "Nhiệm vụ rèn luyện", "description": "Các yêu cầu rèn luyện theo chương trình", "assigner": "Nhà trường"},
+      "type_source": "person_role",
+      "type_target": "training_task",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": {"name": "Nhiệm vụ học tập", "assigner": "Nhà trường", "task_type": "Học tập"},
+      "target": {"name": "Chương trình giáo dục của nhà trường", "issuer": "Nhà trường", "program_scope": "Giáo dục"},
+      "type_source": "academic_task",
+      "type_target": "education_program",
+      "relation": "tuân_theo"
+    },
+    {
+      "source": {"name": "Nhiệm vụ học tập", "assigner": "Nhà trường", "task_type": "Học tập"},
+      "target": {"name": "Kế hoạch giáo dục của nhà trường", "issuer": "Nhà trường", "plan_scope": "Giáo dục"},
+      "type_source": "academic_task",
+      "type_target": "education_plan",
+      "relation": "tuân_theo"
+    },
+    {
+      "source": {"name": "Nhiệm vụ rèn luyện", "assigner": "Nhà trường", "task_type": "Rèn luyện"},
+      "target": {"name": "Chương trình đào tạo của nhà trường", "issuer": "Nhà trường", "program_scope": "Đào tạo"},
+      "type_source": "training_task",
+      "type_target": "training_program",
+      "relation": "tuân_theo"
+    },
+    {
+      "source": {"name": "Nhiệm vụ rèn luyện", "assigner": "Nhà trường", "task_type": "Rèn luyện"},
+      "target": {"name": "Kế hoạch đào tạo của nhà trường", "issuer": "Nhà trường", "plan_scope": "Đào tạo"},
+      "type_source": "training_task",
+      "type_target": "training_plan",
+      "relation": "tuân_theo"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "attitude": "Chủ động, tích cực"},
+      "target": {"name": "Hoạt động tự học", "activity_nature": "Tự giác học tập", "purpose": "Nâng cao kiến thức"},
+      "type_source": "person_role",
+      "type_target": "self_learning_activity",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "attitude": "Chủ động, tích cực"},
+      "target": {"name": "Hoạt động nghiên cứu", "activity_nature": "Tìm tòi khoa học", "purpose": "Phát triển tri thức"},
+      "type_source": "person_role",
+      "type_target": "research_activity",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "attitude": "Chủ động, tích cực"},
+      "target": {"name": "Hoạt động sáng tạo", "activity_nature": "Phát triển ý tưởng mới", "purpose": "Đổi mới, cải tiến"},
+      "type_source": "person_role",
+      "type_target": "creative_activity",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "attitude": "Chủ động"},
+      "target": {"name": "Đạo đức", "aspect_type": "Phẩm chất cá nhân", "training_goal": "Tự rèn luyện"},
+      "type_source": "person_role",
+      "type_target": "morality_concept",
+      "relation": "tự_rèn_luyện"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "attitude": "Chủ động"},
+      "target": {"name": "Lối sống", "aspect_type": "Cách thức sinh hoạt", "training_goal": "Tự rèn luyện"},
+      "type_source": "person_role",
+      "type_target": "lifestyle_concept",
+      "relation": "tự_rèn_luyện"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "compliance_standard": "Đầy đủ"},
+      "target": {"name": "Việc khám sức khỏe", "timing_details": "Khi mới nhập học và định kỳ", "duration_context": "Trong thời gian học tập"},
+      "type_source": "person_role",
+      "type_target": "health_check_activity",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": {"name": "Việc khám sức khỏe", "timing_details": "Khi mới nhập học và định kỳ", "actor": "Người học"},
+      "target": {"name": "Quy định của nhà trường về khám sức khỏe", "issuer": "Nhà trường", "regulation_subject": "Khám sức khỏe"},
+      "type_source": "health_check_activity",
       "type_target": "regulation",
-      "relation": "có_nghĩa_vụ_chấp_hành"
+      "relation": "tuân_theo"
     },
     {
-      "source": "chính sách",
-      "target": "Đảng",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
+      "source": {"name": "Người học", "role": "Sinh viên", "payment_action": "Đóng học phí"},
+      "target": {"name": "Học phí", "payment_terms": "Đúng thời hạn", "regulatory_basis": "Theo quy định"},
+      "type_source": "person_role",
+      "type_target": "tuition_fee",
+      "relation": "đóng"
     },
     {
-      "source": "Sinh viên",
-      "target": "pháp luật",
-      "type_source": "person",
+      "source": {"name": "Việc đóng học phí", "actor": "Người học", "payment_terms": "Đúng thời hạn"},
+      "target": {"name": "Quy định về học phí", "issuer": "Nhà trường (ngụ ý)", "regulation_subject": "Học phí"},
+      "type_source": "fee_payment_activity",
       "type_target": "regulation",
-      "relation": "có_nghĩa_vụ_chấp_hành"
+      "relation": "tuân_theo"
     },
     {
-      "source": "pháp luật",
-      "target": "Nhà nước",
-      "type_source": "regulation",
+      "source": {"name": "Người học", "role": "Sinh viên", "participation_condition": "Phù hợp năng lực và sức khoẻ"},
+      "target": {"name": "Lao động công ích", "main_purpose": "Vì cộng đồng", "requester_entity": "Nhà trường"},
+      "type_source": "person_role",
+      "type_target": "public_interest_labor",
+      "relation": "tham_gia"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "participation_condition": "Phù hợp năng lực và sức khoẻ"},
+      "target": {"name": "Hoạt động tình nguyện", "main_beneficiary": "Cộng đồng", "requester_entity": "Nhà trường"},
+      "type_source": "person_role",
+      "type_target": "volunteer_activity",
+      "relation": "tham_gia"
+    },
+    {
+      "source": {"name": "Hoạt động tình nguyện", "actor": "Người học", "requester_entity": "Nhà trường"},
+      "target": {"name": "Cộng đồng", "social_group_type": "Xã hội", "benefit_description": "Hỗ trợ từ hoạt động tình nguyện"},
+      "type_source": "volunteer_activity",
+      "type_target": "community",
+      "relation": "vì_lợi_ích_của"
+    },
+    {
+      "source": {"name": "Lao động công ích", "actor": "Người học", "participation_condition": "Phù hợp năng lực và sức khoẻ"},
+      "target": {"name": "Nhà trường", "requesting_role": "Đơn vị yêu cầu", "organization_type": "Cơ sở giáo dục"},
+      "type_source": "public_interest_labor",
       "type_target": "organization",
-      "relation": "thuộc_về"
+      "relation": "theo_yêu_cầu_của"
     },
     {
-      "source": "Sinh viên",
-      "target": "quy chế",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "có_nghĩa_vụ_chấp_hành"
-    },
-    {
-      "source": "quy chế",
-      "target": "nhà trường",
-      "type_source": "regulation",
+      "source": {"name": "Hoạt động tình nguyện", "actor": "Người học", "participation_condition": "Phù hợp năng lực và sức khoẻ"},
+      "target": {"name": "Nhà trường", "requesting_role": "Đơn vị yêu cầu", "organization_type": "Cơ sở giáo dục"},
+      "type_source": "volunteer_activity",
       "type_target": "organization",
-      "relation": "thuộc_về"
+      "relation": "theo_yêu_cầu_của"
     },
     {
-      "source": "Sinh viên",
-      "target": "nội quy",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "có_nghĩa_vụ_chấp_hành"
+      "source": {"name": "Người học", "role": "Sinh viên", "obligation_condition": "Khi hưởng học bổng/chi phí đào tạo"},
+      "target": {"name": "Nghĩa vụ làm việc có thời hạn", "dispatching_authority": "Nhà nước", "work_duration": "Có thời hạn"},
+      "type_source": "person_role",
+      "type_target": "work_obligation",
+      "relation": "chấp_hành"
     },
     {
-      "source": "nội quy",
-      "target": "nhà trường",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
+      "source": {"name": "Nghĩa vụ làm việc có thời hạn", "obligated_party": "Người học", "work_duration": "Có thời hạn"},
+      "target": {"name": "Nhà nước", "dispatching_role": "Cơ quan điều động", "organization_type": "Cơ quan nhà nước"},
+      "type_source": "work_obligation",
+      "type_target": "state_organization",
+      "relation": "theo_sự_điều_động_của"
     },
     {
-      "source": "Sinh viên",
-      "target": "điều lệ nhà trường",
-      "type_source": "person",
-      "type_target": "regulation",
-      "relation": "có_nghĩa_vụ_chấp_hành"
-    },
-    {
-      "source": "điều lệ nhà trường",
-      "target": "nhà trường",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nhà giáo",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "có_nghĩa_vụ_tôn_trọng"
-    },
-    {
-      "source": "nhà giáo",
-      "target": "nhà trường",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "cán bộ",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "có_nghĩa_vụ_tôn_trọng"
-    },
-    {
-      "source": "cán bộ",
-      "target": "nhà trường",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nhân viên",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "có_nghĩa_vụ_tôn_trọng"
-    },
-    {
-      "source": "nhân viên",
-      "target": "nhà trường",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nếp sống văn minh",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_nghĩa_vụ_thực_hiện"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "tài sản",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_nghĩa_vụ_bảo_vệ"
-    },
-    {
-      "source": "tài sản",
-      "target": "nhà trường",
-      "type_source": "concept",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "truyền thống",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_nghĩa_vụ_bảo_vệ"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "truyền thống",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_nghĩa_vụ_phát_huy"
-    },
-    {
-      "source": "truyền thống",
-      "target": "nhà trường",
-      "type_source": "concept",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nhiệm vụ học tập",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_thực_hiện"
-    },
-    {
-      "source": "nhiệm vụ học tập",
-      "target": "chương trình",
-      "type_source": "activity",
-      "type_target": "document",
-      "relation": "theo"
-    },
-    {
-      "source": "nhiệm vụ học tập",
-      "target": "kế hoạch giáo dục",
-      "type_source": "activity",
-      "type_target": "document",
-      "relation": "theo"
-    },
-    {
-      "source": "nhiệm vụ học tập",
-      "target": "kế hoạch đào tạo",
-      "type_source": "activity",
-      "type_target": "document",
-      "relation": "theo"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "rèn luyện",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_thực_hiện"
-    },
-    {
-      "source": "rèn luyện",
-      "target": "chương trình",
-      "type_source": "activity",
-      "type_target": "document",
-      "relation": "theo"
-    },
-    {
-      "source": "rèn luyện",
-      "target": "kế hoạch giáo dục",
-      "type_source": "activity",
-      "type_target": "document",
-      "relation": "theo"
-    },
-    {
-      "source": "rèn luyện",
-      "target": "kế hoạch đào tạo",
-      "type_source": "activity",
-      "type_target": "document",
-      "relation": "theo"
-    },
-    {
-      "source": "chương trình",
-      "target": "nhà trường",
-      "type_source": "document",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "kế hoạch giáo dục",
-      "target": "nhà trường",
-      "type_source": "document",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "kế hoạch đào tạo",
-      "target": "nhà trường",
-      "type_source": "document",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "tự học",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_thực_hiện"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "nghiên cứu",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_thực_hiện"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "sáng tạo",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_thực_hiện"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "đạo đức",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_nghĩa_vụ_rèn_luyện"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "lối sống",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_nghĩa_vụ_rèn_luyện"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "khám sức khỏe",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_thực_hiện"
-    },
-    {
-      "source": "khám sức khỏe",
-      "target": "quy định",
-      "type_source": "activity",
-      "type_target": "regulation",
-      "relation": "theo"
-    },
-    {
-      "source": "quy định",
-      "target": "nhà trường",
-      "type_source": "regulation",
-      "type_target": "organization",
-      "relation": "thuộc_về"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "học phí",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_nghĩa_vụ_đóng"
-    },
-    {
-      "source": "học phí",
-      "target": "quy định",
-      "type_source": "concept",
-      "type_target": "regulation",
-      "relation": "theo"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "lao động công ích",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_tham_gia"
-    },
-    {
-      "source": "lao động công ích",
-      "target": "nhà trường",
-      "type_source": "activity",
-      "type_target": "organization",
-      "relation": "yêu_cầu_bởi"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "hoạt động tình nguyện",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_tham_gia"
-    },
-    {
-      "source": "hoạt động tình nguyện",
-      "target": "nhà trường",
-      "type_source": "activity",
-      "type_target": "organization",
-      "relation": "yêu_cầu_bởi"
-    },
-     {
-      "source": "hoạt động tình nguyện",
-      "target": "cộng đồng",
-      "type_source": "activity",
-      "type_target": "location",
-      "relation": "vì"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "nghĩa vụ làm việc",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_chấp_hành"
-    },
-    {
-      "source": "nghĩa vụ làm việc",
-      "target": "Nhà nước",
-      "type_source": "activity",
-      "type_target": "organization",
-      "relation": "điều_động_bởi"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "học bổng",
-      "type_source": "person",
-      "type_target": "concept",
+      "source": {"name": "Người học", "role": "Sinh viên", "benefit_status": "Được hưởng"},
+      "target": {"name": "Học bổng", "funding_source_1": "Nhà nước cấp", "funding_source_2": "Nước ngoài tài trợ"},
+      "type_source": "person_role",
+      "type_target": "scholarship",
       "relation": "hưởng"
     },
     {
-      "source": "Sinh viên",
-      "target": "chi phí đào tạo",
-      "type_source": "person",
-      "type_target": "concept",
+      "source": {"name": "Người học", "role": "Sinh viên", "benefit_status": "Được hưởng"},
+      "target": {"name": "Chi phí đào tạo", "funding_source_1": "Nhà nước cấp", "funding_source_2": "Nước ngoài tài trợ"},
+      "type_source": "person_role",
+      "type_target": "training_cost",
       "relation": "hưởng"
     },
     {
-      "source": "học bổng",
-      "target": "Nhà nước",
-      "type_source": "concept",
-      "type_target": "organization",
-      "relation": "được_cấp_bởi"
+      "source": {"name": "Học bổng", "intended_recipient": "Người học", "funding_nature": "Hỗ trợ tài chính"},
+      "target": {"name": "Nhà nước", "granting_role": "Đơn vị cấp", "organization_type": "Cơ quan nhà nước"},
+      "type_source": "scholarship",
+      "type_target": "state_organization",
+      "relation": "cấp_bởi"
     },
     {
-      "source": "chi phí đào tạo",
-      "target": "Nhà nước",
-      "type_source": "concept",
-      "type_target": "organization",
-      "relation": "được_cấp_bởi"
+      "source": {"name": "Chi phí đào tạo", "intended_recipient": "Người học", "funding_nature": "Hỗ trợ tài chính"},
+      "target": {"name": "Nhà nước", "granting_role": "Đơn vị cấp", "organization_type": "Cơ quan nhà nước"},
+      "type_source": "training_cost",
+      "type_target": "state_organization",
+      "relation": "cấp_bởi"
     },
     {
-      "source": "học bổng",
-      "target": "nước ngoài",
-      "type_source": "concept",
-      "type_target": "location",
-      "relation": "được_tài_trợ_bởi"
+      "source": {"name": "Học bổng", "intended_recipient": "Người học", "sponsorship_basis": "Theo Hiệp định ký kết với Nhà nước"},
+      "target": {"name": "Nước ngoài", "sponsoring_role": "Đơn vị tài trợ", "entity_type": "Quốc gia/Tổ chức nước ngoài"},
+      "type_source": "scholarship",
+      "type_target": "foreign_entity",
+      "relation": "tài_trợ_bởi"
     },
     {
-      "source": "chi phí đào tạo",
-      "target": "nước ngoài",
-      "type_source": "concept",
-      "type_target": "location",
-      "relation": "được_tài_trợ_bởi"
+      "source": {"name": "Chi phí đào tạo", "intended_recipient": "Người học", "sponsorship_basis": "Theo Hiệp định ký kết với Nhà nước"},
+      "target": {"name": "Nước ngoài", "sponsoring_role": "Đơn vị tài trợ", "entity_type": "Quốc gia/Tổ chức nước ngoài"},
+      "type_source": "training_cost",
+      "type_target": "foreign_entity",
+      "relation": "tài_trợ_bởi"
     },
     {
-      "source": "học bổng",
-      "target": "Hiệp định",
-      "type_source": "concept",
-      "type_target": "document",
-      "relation": "theo"
-    },
-     {
-      "source": "chi phí đào tạo",
-      "target": "Hiệp định",
-      "type_source": "concept",
-      "type_target": "document",
-      "relation": "theo"
+      "source": {"name": "Việc tài trợ từ Nước ngoài", "sponsoring_entity": "Nước ngoài", "beneficiary_country_party": "Nhà nước"},
+      "target": {"name": "Hiệp định", "document_subject": "Tài trợ học bổng, chi phí đào tạo", "signing_party_1": "Nước ngoài (ngầm)", "signing_party_2": "Nhà nước"},
+      "type_source": "sponsorship_activity",
+      "type_target": "agreement_document",
+      "relation": "tuân_theo"
     },
     {
-      "source": "Hiệp định",
-      "target": "Nhà nước",
-      "type_source": "document",
-      "type_target": "organization",
+      "source": {"name": "Hiệp định", "document_subject": "Tài trợ học bổng, chi phí đào tạo", "involved_party": "Nước ngoài"},
+      "target": {"name": "Nhà nước", "signing_role": "Bên ký kết", "organization_type": "Cơ quan nhà nước"},
+      "type_source": "agreement_document",
+      "type_target": "state_organization",
       "relation": "ký_kết_với"
     },
-     {
-      "source": "Sinh viên",
-      "target": "học bổng",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_thể_phải_bồi_hoàn"
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "reimbursement_condition": "Không chấp hành nghĩa vụ làm việc"},
+      "target": {"name": "Học bổng", "reimbursement_status": "Phải bồi hoàn", "regulatory_basis": "Theo quy định"},
+      "type_source": "person_role",
+      "type_target": "scholarship",
+      "relation": "bồi_hoàn"
     },
     {
-      "source": "Sinh viên",
-      "target": "chi phí đào tạo",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_thể_phải_bồi_hoàn"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "phòng, chống tiêu cực",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_tham_gia"
+      "source": {"name": "Người học", "role": "Sinh viên", "reimbursement_condition": "Không chấp hành nghĩa vụ làm việc"},
+      "target": {"name": "Chi phí đào tạo", "reimbursement_status": "Phải bồi hoàn", "regulatory_basis": "Theo quy định"},
+      "type_source": "person_role",
+      "type_target": "training_cost",
+      "relation": "bồi_hoàn"
     },
     {
-      "source": "phòng, chống tiêu cực",
-      "target": "học tập",
-      "type_source": "activity",
-      "type_target": "activity",
-      "relation": "áp_dụng_cho"
+      "source": {"name": "Việc bồi hoàn học bổng và chi phí đào tạo", "responsible_party": "Người học", "reason_for_reimbursement": "Không chấp hành nghĩa vụ làm việc"},
+      "target": {"name": "Quy định về bồi hoàn", "issuing_authority": "Nhà nước/Nhà trường", "regulation_scope": "Bồi hoàn học bổng, chi phí đào tạo"},
+      "type_source": "reimbursement_activity",
+      "type_target": "regulation",
+      "relation": "tuân_theo"
     },
     {
-      "source": "phòng, chống tiêu cực",
-      "target": "thi cử",
-      "type_source": "activity",
-      "type_target": "activity",
-      "relation": "áp_dụng_cho"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "gian lận",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_nghĩa_vụ_phòng_chống"
+      "source": {"name": "Người học", "role": "Sinh viên", "preventive_action": "Phòng, chống"},
+      "target": {"name": "Tiêu cực", "occurrence_context": "Trong học tập, thi cử, hoạt động khác", "involved_actors": "SV, cán bộ, giáo viên"},
+      "type_source": "person_role",
+      "type_target": "negative_concept",
+      "relation": "tham_gia_phòng_chống"
     },
     {
-      "source": "gian lận",
-      "target": "học tập",
-      "type_source": "concept",
-      "type_target": "activity",
-      "relation": "áp_dụng_cho"
-    },
-     {
-      "source": "gian lận",
-      "target": "thi cử",
-      "type_source": "concept",
-      "type_target": "activity",
-      "relation": "áp_dụng_cho"
+      "source": {"name": "Người học", "role": "Sinh viên", "preventive_action": "Phòng, chống"},
+      "target": {"name": "Gian lận trong học tập, thi cử", "occurrence_context": "Học tập, thi cử", "involved_actors": "SV, cán bộ, giáo viên"},
+      "type_source": "person_role",
+      "type_target": "cheating_behavior",
+      "relation": "tham_gia_phòng_chống"
     },
     {
-      "source": "Sinh viên",
-      "target": "khoa",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "có_nghĩa_vụ_báo_cáo_cho"
+      "source": {"name": "Người học", "role": "Sinh viên", "reporting_action": "Báo cáo kịp thời"},
+      "target": {"name": "Khoa", "unit_category": "Đơn vị chuyên môn", "parent_institution": "Nhà trường"},
+      "type_source": "person_role",
+      "type_target": "faculty_department",
+      "relation": "báo_cáo_cho"
     },
     {
-      "source": "Sinh viên",
-      "target": "phòng chức năng",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "có_nghĩa_vụ_báo_cáo_cho"
+      "source": {"name": "Người học", "role": "Sinh viên", "reporting_action": "Báo cáo kịp thời"},
+      "target": {"name": "Phòng chức năng", "unit_category": "Đơn vị hỗ trợ", "parent_institution": "Nhà trường"},
+      "type_source": "person_role",
+      "type_target": "functional_department",
+      "relation": "báo_cáo_cho"
     },
     {
-      "source": "Sinh viên",
-      "target": "Hiệu trưởng nhà trường",
-      "type_source": "person",
-      "type_target": "person",
-      "relation": "có_nghĩa_vụ_báo_cáo_cho"
+      "source": {"name": "Người học", "role": "Sinh viên", "reporting_action": "Báo cáo kịp thời"},
+      "target": {"name": "Hiệu trưởng nhà trường", "official_position": "Lãnh đạo nhà trường", "parent_institution": "Nhà trường"},
+      "type_source": "person_role",
+      "type_target": "principal",
+      "relation": "báo_cáo_cho"
     },
     {
-      "source": "Sinh viên",
-      "target": "cơ quan có thẩm quyền",
-      "type_source": "person",
-      "type_target": "organization",
-      "relation": "có_nghĩa_vụ_báo_cáo_cho"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "hành vi tiêu cực",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "báo_cáo_về"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "gian lận",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "báo_cáo_về"
+      "source": {"name": "Người học", "role": "Sinh viên", "reporting_action": "Báo cáo kịp thời"},
+      "target": {"name": "Cơ quan có thẩm quyền", "authority_type": "Cơ quan chức năng", "jurisdictional_scope": "Ngoài nhà trường (có thể)"},
+      "type_source": "person_role",
+      "type_target": "competent_authority",
+      "relation": "báo_cáo_cho"
     },
     {
-      "source": "Sinh viên",
-      "target": "hành vi vi phạm pháp luật",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "báo_cáo_về"
+      "source": {"name": "Người học", "role": "Sinh viên", "detection_action": "Phát hiện"},
+      "target": {"name": "Hành vi tiêu cực", "alleged_perpetrators": "SV, cán bộ, giáo viên", "occurrence_location": "Trong trường"},
+      "type_source": "person_role",
+      "type_target": "negative_act",
+      "relation": "phát_hiện"
     },
     {
-      "source": "Sinh viên",
-      "target": "vi phạm nội quy",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "báo_cáo_về"
+      "source": {"name": "Người học", "role": "Sinh viên", "detection_action": "Phát hiện"},
+      "target": {"name": "Hành vi gian lận trong học tập, thi cử", "alleged_perpetrators": "SV, cán bộ, giáo viên", "occurrence_location": "Trong trường"},
+      "type_source": "person_role",
+      "type_target": "cheating_act",
+      "relation": "phát_hiện"
     },
     {
-      "source": "hành vi tiêu cực",
-      "target": "Sinh viên",
-      "type_source": "concept",
-      "type_target": "person",
-      "relation": "thực_hiện_bởi"
-    },
-     {
-      "source": "hành vi tiêu cực",
-      "target": "cán bộ",
-      "type_source": "concept",
-      "type_target": "person",
-      "relation": "thực_hiện_bởi"
-    },
-     {
-      "source": "hành vi tiêu cực",
-      "target": "giáo viên",
-      "type_source": "concept",
-      "type_target": "person",
-      "relation": "thực_hiện_bởi"
+      "source": {"name": "Người học", "role": "Sinh viên", "detection_action": "Phát hiện"},
+      "target": {"name": "Hành vi vi phạm pháp luật", "alleged_perpetrators": "SV, cán bộ, giáo viên", "occurrence_location": "Trong trường"},
+      "type_source": "person_role",
+      "type_target": "law_violation_act",
+      "relation": "phát_hiện"
     },
     {
-      "source": "Sinh viên",
-      "target": "công tác đảm bảo an ninh",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_tham_gia"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "phòng chống tội phạm",
-      "type_source": "person",
-      "type_target": "activity",
-      "relation": "có_nghĩa_vụ_tham_gia"
-    },
-     {
-      "source": "Sinh viên",
-      "target": "tệ nạn xã hội",
-      "type_source": "person",
-      "type_target": "concept",
-      "relation": "có_nghĩa_vụ_phòng_chống"
+      "source": {"name": "Người học", "role": "Sinh viên", "detection_action": "Phát hiện"},
+      "target": {"name": "Hành vi vi phạm nội quy, quy chế", "alleged_perpetrators": "SV, cán bộ, giáo viên", "occurrence_location": "Trong trường"},
+      "type_source": "person_role",
+      "type_target": "rule_regulation_violation_act",
+      "relation": "phát_hiện"
     },
     {
-      "source": "công tác đảm bảo an ninh",
-      "target": "trường học",
-      "type_source": "activity",
+      "source": {"name": "Người học", "role": "Sinh viên", "participation_type": "Tham gia công tác"},
+      "target": {"name": "Công tác đảm bảo an ninh", "task_scope": "Trường học, gia đình, cộng đồng", "task_objective": "Duy trì an ninh"},
+      "type_source": "person_role",
+      "type_target": "security_assurance_task",
+      "relation": "tham_gia"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "participation_type": "Tham gia công tác"},
+      "target": {"name": "Công tác đảm bảo trật tự", "task_scope": "Trường học, gia đình, cộng đồng", "task_objective": "Duy trì trật tự"},
+      "type_source": "person_role",
+      "type_target": "order_assurance_task",
+      "relation": "tham_gia"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "participation_type": "Tham gia công tác"},
+      "target": {"name": "Công tác phòng chống tội phạm", "task_scope": "Trường học, gia đình, cộng đồng", "task_objective": "Ngăn chặn tội phạm"},
+      "type_source": "person_role",
+      "type_target": "crime_prevention_task",
+      "relation": "tham_gia"
+    },
+    {
+      "source": {"name": "Người học", "role": "Sinh viên", "participation_type": "Tham gia công tác"},
+      "target": {"name": "Công tác phòng chống tệ nạn xã hội", "task_scope": "Trường học, gia đình, cộng đồng", "task_objective": "Ngăn chặn tệ nạn xã hội"},
+      "type_source": "person_role",
+      "type_target": "social_evil_prevention_task",
+      "relation": "tham_gia"
+    },
+    {
+      "source": {"name": "Công tác đảm bảo an ninh", "main_participant": "Người học", "task_objective": "Duy trì an ninh"},
+      "target": {"name": "Trường học", "location_type": "Địa điểm", "location_context": "Môi trường giáo dục"},
+      "type_source": "security_assurance_task",
       "type_target": "location",
       "relation": "diễn_ra_tại"
     },
     {
-      "source": "công tác đảm bảo an ninh",
-      "target": "gia đình",
-      "type_source": "activity",
+      "source": {"name": "Công tác đảm bảo an ninh", "main_participant": "Người học", "task_objective": "Duy trì an ninh"},
+      "target": {"name": "Gia đình", "location_type": "Địa điểm", "location_context": "Môi trường gia đình"},
+      "type_source": "security_assurance_task",
       "type_target": "location",
       "relation": "diễn_ra_tại"
     },
     {
-      "source": "công tác đảm bảo an ninh",
-      "target": "cộng đồng",
-      "type_source": "activity",
-      "type_target": "location",
-      "relation": "diễn_ra_tại"
-    },
-     {
-      "source": "phòng chống tội phạm",
-      "target": "trường học",
-      "type_source": "activity",
+      "source": {"name": "Công tác đảm bảo an ninh", "main_participant": "Người học", "task_objective": "Duy trì an ninh"},
+      "target": {"name": "Cộng đồng", "location_type": "Địa điểm", "location_context": "Môi trường xã hội"},
+      "type_source": "security_assurance_task",
       "type_target": "location",
       "relation": "diễn_ra_tại"
     },
     {
-      "source": "phòng chống tội phạm",
-      "target": "gia đình",
-      "type_source": "activity",
+      "source": {"name": "Công tác đảm bảo trật tự", "main_participant": "Người học", "task_objective": "Duy trì trật tự"},
+      "target": {"name": "Trường học", "location_type": "Địa điểm", "location_context": "Môi trường giáo dục"},
+      "type_source": "order_assurance_task",
       "type_target": "location",
       "relation": "diễn_ra_tại"
     },
     {
-      "source": "phòng chống tội phạm",
-      "target": "cộng đồng",
-      "type_source": "activity",
+      "source": {"name": "Công tác đảm bảo trật tự", "main_participant": "Người học", "task_objective": "Duy trì trật tự"},
+      "target": {"name": "Gia đình", "location_type": "Địa điểm", "location_context": "Môi trường gia đình"},
+      "type_source": "order_assurance_task",
+      "type_target": "location",
+      "relation": "diễn_ra_tại"
+    },
+    {
+      "source": {"name": "Công tác đảm bảo trật tự", "main_participant": "Người học", "task_objective": "Duy trì trật tự"},
+      "target": {"name": "Cộng đồng", "location_type": "Địa điểm", "location_context": "Môi trường xã hội"},
+      "type_source": "order_assurance_task",
+      "type_target": "location",
+      "relation": "diễn_ra_tại"
+    },
+    {
+      "source": {"name": "Công tác phòng chống tội phạm", "main_participant": "Người học", "task_objective": "Ngăn chặn tội phạm"},
+      "target": {"name": "Trường học", "location_type": "Địa điểm", "location_context": "Môi trường giáo dục"},
+      "type_source": "crime_prevention_task",
+      "type_target": "location",
+      "relation": "diễn_ra_tại"
+    },
+    {
+      "source": {"name": "Công tác phòng chống tội phạm", "main_participant": "Người học", "task_objective": "Ngăn chặn tội phạm"},
+      "target": {"name": "Gia đình", "location_type": "Địa điểm", "location_context": "Môi trường gia đình"},
+      "type_source": "crime_prevention_task",
+      "type_target": "location",
+      "relation": "diễn_ra_tại"
+    },
+    {
+      "source": {"name": "Công tác phòng chống tội phạm", "main_participant": "Người học", "task_objective": "Ngăn chặn tội phạm"},
+      "target": {"name": "Cộng đồng", "location_type": "Địa điểm", "location_context": "Môi trường xã hội"},
+      "type_source": "crime_prevention_task",
+      "type_target": "location",
+      "relation": "diễn_ra_tại"
+    },
+    {
+      "source": {"name": "Công tác phòng chống tệ nạn xã hội", "main_participant": "Người học", "task_objective": "Ngăn chặn tệ nạn xã hội"},
+      "target": {"name": "Trường học", "location_type": "Địa điểm", "location_context": "Môi trường giáo dục"},
+      "type_source": "social_evil_prevention_task",
+      "type_target": "location",
+      "relation": "diễn_ra_tại"
+    },
+    {
+      "source": {"name": "Công tác phòng chống tệ nạn xã hội", "main_participant": "Người học", "task_objective": "Ngăn chặn tệ nạn xã hội"},
+      "target": {"name": "Gia đình", "location_type": "Địa điểm", "location_context": "Môi trường gia đình"},
+      "type_source": "social_evil_prevention_task",
+      "type_target": "location",
+      "relation": "diễn_ra_tại"
+    },
+    {
+      "source": {"name": "Công tác phòng chống tệ nạn xã hội", "main_participant": "Người học", "task_objective": "Ngăn chặn tệ nạn xã hội"},
+      "target": {"name": "Cộng đồng", "location_type": "Địa điểm", "location_context": "Môi trường xã hội"},
+      "type_source": "social_evil_prevention_task",
       "type_target": "location",
       "relation": "diễn_ra_tại"
     }

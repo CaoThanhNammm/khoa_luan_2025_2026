@@ -1,155 +1,222 @@
 {
-  "entities": [
-    {
-      "name": "bạn bè",
-      "type": "FRIEND"
-    },
-    {
-      "name": "học tập",
-      "type": "STUDY"
-    },
-    {
-      "name": "nghiên cứu",
-      "type": "RESEARCH"
-    },
-    {
-      "name": "rèn luyện",
-      "type": "PRACTICE"
-    },
-    {
-      "name": "lời nói",
-      "type": "SPEECH"
-    },
-    {
-      "name": "hành vi",
-      "type": "BEHAVIOR"
-    },
-    {
-      "name": "cử chỉ",
-      "type": "GESTURE"
-    },
-    {
-      "name": "tinh thần",
-      "type": "SPIRIT"
-    },
-    {
-      "name": "thân thể",
-      "type": "BODY"
-    },
-    {
-      "name": "lỗi",
-      "type": "MISTAKE"
-    },
-    {
-      "name": "sai sót",
-      "type": "ERROR"
-    }
-  ],
   "relationships": [
     {
-      "source": "bạn bè",
-      "target": "bạn bè",
-      "relation": "quan_hệ",
-      "type_source": "FRIEND",
-      "type_target": "FRIEND"
+      "source": {
+        "name": "Quan hệ bạn bè",
+        "characteristics": "mật thiết, cởi mở, cảm thông, chia sẻ",
+        "interaction_spirit": "động viên nhau tích cực",
+        "purpose_focus": "hỗ trợ phát triển"
+      },
+      "target": {
+        "name": "Học tập",
+        "activity_domain": "học thuật",
+        "goal_description": "nâng cao kiến thức, kỹ năng"
+      },
+      "type_source": "social_relationship",
+      "type_target": "activity",
+      "relation": "khuyến_khích_tích_cực_trong"
     },
     {
-      "source": "bạn bè",
-      "target": "học tập",
-      "relation": "động_viên",
-      "type_source": "FRIEND",
-      "type_target": "STUDY"
+      "source": {
+        "name": "Quan hệ bạn bè",
+        "characteristics": "mật thiết, cởi mở, cảm thông, chia sẻ",
+        "interaction_spirit": "động viên nhau tích cực",
+        "purpose_focus": "hỗ trợ phát triển"
+      },
+      "target": {
+        "name": "Nghiên cứu",
+        "activity_domain": "khoa học",
+        "goal_description": "tìm tòi, sáng tạo tri thức"
+      },
+      "type_source": "social_relationship",
+      "type_target": "activity",
+      "relation": "khuyến_khích_tích_cực_trong"
     },
     {
-      "source": "bạn bè",
-      "target": "nghiên cứu",
-      "relation": "động_viên",
-      "type_source": "FRIEND",
-      "type_target": "RESEARCH"
+      "source": {
+        "name": "Quan hệ bạn bè",
+        "characteristics": "mật thiết, cởi mở, cảm thông, chia sẻ",
+        "interaction_spirit": "động viên nhau tích cực",
+        "purpose_focus": "hỗ trợ phát triển"
+      },
+      "target": {
+        "name": "Rèn luyện",
+        "activity_domain": "phát triển bản thân",
+        "goal_description": "hoàn thiện nhân cách, kỹ năng"
+      },
+      "type_source": "social_relationship",
+      "type_target": "activity",
+      "relation": "khuyến_khích_tích_cực_trong"
     },
     {
-      "source": "bạn bè",
-      "target": "rèn luyện",
-      "relation": "động_viên",
-      "type_source": "FRIEND",
-      "type_target": "PRACTICE"
+      "source": {
+        "name": "Các cá nhân",
+        "interaction_context": "trong mối quan hệ",
+        "behavioral_expectation": "ứng xử đúng mực",
+        "community_role": "thành viên"
+      },
+      "target": {
+        "name": "Sự tôn trọng lẫn nhau",
+        "principle_nature": "ứng xử cơ bản",
+        "scope_of_application": "giữa các cá nhân",
+        "importance_level": "nền tảng"
+      },
+      "type_source": "person_group",
+      "type_target": "principle_of_conduct",
+      "relation": "cần_thể_hiện"
     },
     {
-      "source": "bạn bè",
-      "target": "bạn bè",
-      "relation": "tôn_trọng",
-      "type_source": "FRIEND",
-      "type_target": "FRIEND"
+      "source": {
+        "name": "Lời nói",
+        "expression_context": "khi diễn đạt",
+        "communication_type": "verbal",
+        "behavioral_standard_source": "quy tắc ứng xử"
+      },
+      "target": {
+        "name": "Văn hóa",
+        "quality_description": "lịch sự, chuẩn mực",
+        "application_area": "giao tiếp, ứng xử",
+        "desired_state": "có văn hóa"
+      },
+      "type_source": "communication_element",
+      "type_target": "behavioral_quality",
+      "relation": "phải_thể_hiện"
     },
     {
-      "source": "bạn bè",
-      "target": "lời nói",
-      "relation": "thể_hiện_văn_hóa_qua",
-      "type_source": "FRIEND",
-      "type_target": "SPEECH"
+      "source": {
+        "name": "Hành vi",
+        "expression_context": "khi diễn đạt",
+        "action_type": "general conduct",
+        "behavioral_standard_source": "quy tắc ứng xử"
+      },
+      "target": {
+        "name": "Văn hóa",
+        "quality_description": "đúng đắn, phù hợp",
+        "application_area": "giao tiếp, ứng xử",
+        "desired_state": "có văn hóa"
+      },
+      "type_source": "behavior_element",
+      "type_target": "behavioral_quality",
+      "relation": "phải_thể_hiện"
     },
     {
-      "source": "bạn bè",
-      "target": "hành vi",
-      "relation": "thể_hiện_văn_hóa_qua",
-      "type_source": "FRIEND",
-      "type_target": "BEHAVIOR"
+      "source": {
+        "name": "Cử chỉ",
+        "expression_context": "khi diễn đạt",
+        "communication_type": "non-verbal",
+        "behavioral_standard_source": "quy tắc ứng xử"
+      },
+      "target": {
+        "name": "Văn hóa",
+        "quality_description": "tế nhị, tôn trọng",
+        "application_area": "giao tiếp, ứng xử",
+        "desired_state": "có văn hóa"
+      },
+      "type_source": "gesture_element",
+      "type_target": "behavioral_quality",
+      "relation": "phải_thể_hiện"
     },
     {
-      "source": "bạn bè",
-      "target": "cử chỉ",
-      "relation": "thể_hiện_văn_hóa_qua",
-      "type_source": "FRIEND",
-      "type_target": "GESTURE"
+      "source": {
+        "name": "Một người",
+        "social_norm_context": "ứng xử cộng đồng",
+        "responsibility": "duy trì mối quan hệ tốt đẹp",
+        "behavior_guideline": "tránh xung đột"
+      },
+      "target": {
+        "name": "Gây gổ",
+        "action_category": "xung đột trực tiếp",
+        "negative_consequence": "mất đoàn kết, tổn thương",
+        "prohibition_status": "cấm"
+      },
+      "type_source": "person",
+      "type_target": "negative_action",
+      "relation": "không_được_phép"
     },
     {
-      "source": "bạn bè",
-      "target": "bạn bè",
-      "relation": "tránh_gây_gổ",
-      "type_source": "FRIEND",
-      "type_target": "FRIEND"
+      "source": {
+        "name": "Một người",
+        "social_norm_context": "ứng xử cộng đồng",
+        "responsibility": "duy trì mối quan hệ tốt đẹp",
+        "behavior_guideline": "tránh xung đột"
+      },
+      "target": {
+        "name": "Xích mích",
+        "action_category": "mâu thuẫn, bất hòa",
+        "negative_consequence": "chia rẽ, căng thẳng",
+        "prohibition_status": "cấm"
+      },
+      "type_source": "person",
+      "type_target": "negative_action",
+      "relation": "không_được_phép"
     },
     {
-      "source": "bạn bè",
-      "target": "bạn bè",
-      "relation": "tránh_xích_mích",
-      "type_source": "FRIEND",
-      "type_target": "FRIEND"
+      "source": {
+        "name": "Một người",
+        "ethical_consideration": "tôn trọng người khác",
+        "responsibility": "không gây hại",
+        "scope_of_interaction": "lẫn nhau"
+      },
+      "target": {
+        "name": "Hành động làm tổn thương đến tinh thần",
+        "harm_type": "tinh thần, cảm xúc",
+        "impact_description": "gây đau buồn, căng thẳng",
+        "prohibition_status": "cấm"
+      },
+      "type_source": "person",
+      "type_target": "harmful_act",
+      "relation": "không_được_gây_ra"
     },
     {
-      "source": "bạn bè",
-      "target": "tinh thần",
-      "relation": "tránh_tổn_thương",
-      "type_source": "FRIEND",
-      "type_target": "SPIRIT"
+      "source": {
+        "name": "Một người",
+        "ethical_consideration": "tôn trọng người khác",
+        "responsibility": "không gây hại",
+        "scope_of_interaction": "lẫn nhau"
+      },
+      "target": {
+        "name": "Hành động xâm phạm thân thể",
+        "harm_type": "thể chất, thân thể",
+        "impact_description": "gây thương tích, đau đớn",
+        "prohibition_status": "cấm"
+      },
+      "type_source": "person",
+      "type_target": "harmful_act",
+      "relation": "không_được_gây_ra"
     },
     {
-      "source": "bạn bè",
-      "target": "thân thể",
-      "relation": "tránh_xâm_phạm",
-      "type_source": "FRIEND",
-      "type_target": "BODY"
+      "source": {
+        "name": "Một người",
+        "situational_context": "khi mắc sai sót",
+        "expected_virtue": "trách nhiệm, trung thực",
+        "behavior_guideline": "sửa chữa lỗi lầm"
+      },
+      "target": {
+        "name": "Việc nhận lỗi",
+        "action_characteristic": "thừa nhận trách nhiệm",
+        "purpose_of_action": "đối mặt với sai sót",
+        "moral_value": "dũng cảm"
+      },
+      "type_source": "person",
+      "type_target": "responsible_behavior",
+      "relation": "cần_phải_biết"
     },
     {
-      "source": "bạn bè",
-      "target": "lỗi",
-      "relation": "nhận_lỗi",
-      "type_source": "FRIEND",
-      "type_target": "MISTAKE"
-    },
-    {
-      "source": "bạn bè",
-      "target": "lỗi",
-      "relation": "sửa_lỗi",
-      "type_source": "FRIEND",
-      "type_target": "MISTAKE"
-    },
-    {
-      "source": "bạn bè",
-      "target": "sai sót",
-      "relation": "mắc",
-      "type_source": "FRIEND",
-      "type_target": "ERROR"
+      "source": {
+        "name": "Một người",
+        "situational_context": "khi mắc sai sót",
+        "expected_virtue": "cầu thị, cải thiện",
+        "behavior_guideline": "khắc phục hậu quả"
+      },
+      "target": {
+        "name": "Việc sửa lỗi",
+        "action_characteristic": "khắc phục, cải thiện",
+        "purpose_of_action": "sửa chữa sai lầm",
+        "moral_value": "tiến bộ"
+      },
+      "type_source": "person",
+      "type_target": "responsible_behavior",
+      "relation": "cần_phải_biết"
     }
   ]
 }

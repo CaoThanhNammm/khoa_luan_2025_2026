@@ -1,171 +1,149 @@
 {
-  "entities": [
-    {
-      "name": "quầy giao dịch",
-      "type": "transaction_counter"
-    },
-    {
-      "name": "BIDV",
-      "type": "bank"
-    },
-    {
-      "name": "toàn quốc",
-      "type": "location"
-    },
-    {
-      "name": "Khách hàng",
-      "type": "customer"
-    },
-    {
-      "name": "Mã sinh viên",
-      "type": "student_id"
-    },
-    {
-      "name": "Giao dịch viên",
-      "type": "teller"
-    },
-    {
-      "name": "thông tin chi tiết hóa đơn học phí",
-      "type": "tuition_invoice_detail"
-    },
-    {
-      "name": "số tiền học phí phải nộp",
-      "type": "tuition_amount"
-    },
-    {
-      "name": "giao dịch thanh toán học phí",
-      "type": "tuition_payment_transaction"
-    },
-    {
-      "name": "chứng từ",
-      "type": "receipt"
-    },
-    {
-      "name": "liên chứng từ",
-      "type": "receipt_copy"
-    },
-    {
-      "name": "chứng từ đã thanh toán",
-      "type": "paid_receipt"
-    },
-    {
-      "name": "dấu",
-      "type": "stamp"
-    },
-    {
-      "name": "chữ ký",
-      "type": "signature"
-    },
-    {
-      "name": "cán bộ BIDV",
-      "type": "bidv_staff"
-    }
-  ],
   "relationships": [
     {
-      "source": "Khách hàng",
-      "target": "quầy giao dịch",
-      "relation": "đến",
-      "type_source": "customer",
-      "type_target": "transaction_counter"
+      "source": {
+        "name": "Khách hàng",
+        "role": "người_nộp_học_phí",
+        "activity_description": "đến_quầy_giao_dịch_để_thanh_toán_học_phí"
+      },
+      "target": {
+        "name": "Quầy giao dịch của BIDV",
+        "location_type": "điểm_giao_dịch_ngân_hàng",
+        "owner_organization": "BIDV",
+        "operational_scope": "toàn quốc"
+      },
+      "type_source": "person",
+      "type_target": "location",
+      "relation": "đến"
     },
     {
-      "source": "quầy giao dịch",
-      "target": "BIDV",
-      "relation": "của",
-      "type_source": "transaction_counter",
-      "type_target": "bank"
+      "source": {
+        "name": "Khách hàng",
+        "role": "người_nộp_học_phí",
+        "action_context": "tại_quầy_giao_dịch_BIDV",
+        "purpose_of_action": "thanh_toán_học_phí"
+      },
+      "target": {
+        "name": "Mã sinh viên",
+        "information_type": "thông_tin_nhận_dạng",
+        "usage_context": "cung_cấp_cho_giao_dịch_viên"
+      },
+      "type_source": "person",
+      "type_target": "information",
+      "relation": "cung_cấp"
     },
     {
-      "source": "quầy giao dịch",
-      "target": "toàn quốc",
-      "relation": "trên",
-      "type_source": "transaction_counter",
-      "type_target": "location"
+      "source": {
+        "name": "Quầy giao dịch của BIDV",
+        "location_type": "điểm_giao_dịch_ngân_hàng",
+        "operational_scope": "toàn quốc"
+      },
+      "target": {
+        "name": "BIDV",
+        "organization_type": "ngân_hàng",
+        "service_network": "hệ_thống_quầy_giao_dịch_trên_toàn_quốc"
+      },
+      "type_source": "location",
+      "type_target": "organization",
+      "relation": "là_của"
     },
     {
-      "source": "Khách hàng",
-      "target": "Mã sinh viên",
-      "relation": "cung_cấp",
-      "type_source": "customer",
-      "type_target": "student_id"
+      "source": {
+        "name": "Giao dịch viên",
+        "role": "nhân_viên_ngân_hàng",
+        "workplace_context": "quầy_giao_dịch_BIDV",
+        "task_description": "thông_báo_chi_tiết_học_phí"
+      },
+      "target": {
+        "name": "Thông tin chi tiết hóa đơn học phí",
+        "information_category": "chi_tiết_thanh_toán",
+        "content_focus": "học_phí"
+      },
+      "type_source": "person",
+      "type_target": "information",
+      "relation": "thông_báo"
     },
     {
-      "source": "Giao dịch viên",
-      "target": "thông tin chi tiết hóa đơn học phí",
-      "relation": "thông_báo",
-      "type_source": "teller",
-      "type_target": "tuition_invoice_detail"
+      "source": {
+        "name": "Giao dịch viên",
+        "role": "nhân_viên_ngân_hàng",
+        "workplace_context": "quầy_giao_dịch_BIDV",
+        "task_description": "thông_báo_số_tiền_học_phí"
+      },
+      "target": {
+        "name": "Số tiền học phí phải nộp",
+        "information_category": "số_tiền_thanh_toán",
+        "status": "cần_thanh_toán"
+      },
+      "type_source": "person",
+      "type_target": "information",
+      "relation": "thông_báo"
     },
     {
-      "source": "Giao dịch viên",
-      "target": "số tiền học phí phải nộp",
-      "relation": "thông_báo",
-      "type_source": "teller",
-      "type_target": "tuition_amount"
+      "source": {
+        "name": "Giao dịch viên",
+        "role": "nhân_viên_ngân_hàng",
+        "workplace_context": "quầy_giao_dịch_BIDV",
+        "task_description": "xử_lý_thanh_toán"
+      },
+      "target": {
+        "name": "Giao dịch thanh toán học phí",
+        "transaction_category": "thanh_toán_dịch_vụ",
+        "purpose": "nộp_học_phí_cho_sinh_viên"
+      },
+      "type_source": "person",
+      "type_target": "transaction",
+      "relation": "xử_lý"
     },
     {
-      "source": "Giao dịch viên",
-      "target": "giao dịch thanh toán học phí",
-      "relation": "xử_lý",
-      "type_source": "teller",
-      "type_target": "tuition_payment_transaction"
+      "source": {
+        "name": "Giao dịch viên",
+        "role": "nhân_viên_ngân_hàng",
+        "workplace_context": "quầy_giao_dịch_BIDV",
+        "task_description": "in_chứng_từ_sau_giao_dịch"
+      },
+      "target": {
+        "name": "Chứng từ",
+        "document_category": "biên_lai_thanh_toán",
+        "purpose": "xác_nhận_giao_dịch_hoàn_tất"
+      },
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "in"
     },
     {
-      "source": "Giao dịch viên",
-      "target": "chứng từ",
-      "relation": "in",
-      "type_source": "teller",
-      "type_target": "receipt"
+      "source": {
+        "name": "Khách hàng",
+        "role": "người_nộp_học_phí",
+        "action_description": "nhận_lại_chứng_từ_sau_thanh_toán"
+      },
+      "target": {
+        "name": "Chứng từ",
+        "document_category": "biên_lai_thanh_toán",
+        "status_description": "đã_thanh_toán",
+        "copy_count": "01 liên",
+        "authentication_method": "có_đầy_đủ_dấu_và_chữ_ký_của_cán_bộ_BIDV"
+      },
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "nhận"
     },
     {
-      "source": "Khách hàng",
-      "target": "liên chứng từ",
-      "relation": "nhận_lại",
-      "type_source": "customer",
-      "type_target": "receipt_copy"
-    },
-    {
-      "source": "liên chứng từ",
-      "target": "chứng từ đã thanh toán",
-      "relation": "là",
-      "type_source": "receipt_copy",
-      "type_target": "paid_receipt"
-    },
-    {
-      "source": "liên chứng từ",
-      "target": "dấu",
-      "relation": "có",
-      "type_source": "receipt_copy",
-      "type_target": "stamp"
-    },
-    {
-      "source": "liên chứng từ",
-      "target": "chữ ký",
-      "relation": "có",
-      "type_source": "receipt_copy",
-      "type_target": "signature"
-    },
-    {
-      "source": "dấu",
-      "target": "cán bộ BIDV",
-      "relation": "của",
-      "type_source": "stamp",
-      "type_target": "bidv_staff"
-    },
-    {
-      "source": "chữ ký",
-      "target": "cán bộ BIDV",
-      "relation": "của",
-      "type_source": "signature",
-      "type_target": "bidv_staff"
-    },
-    {
-      "source": "cán bộ BIDV",
-      "target": "BIDV",
-      "relation": "thuộc",
-      "type_source": "bidv_staff",
-      "type_target": "bank"
+      "source": {
+        "name": "Chứng từ",
+        "document_category": "biên_lai_thanh_toán",
+        "status_description": "đã_thanh_toán",
+        "authentication_feature": "dấu_và_chữ_ký"
+      },
+      "target": {
+        "name": "Cán bộ BIDV",
+        "role": "người_xác_thực_giao_dịch",
+        "affiliation": "BIDV",
+        "authentication_action_description": "ký_tên_và_đóng_dấu_lên_chứng_từ"
+      },
+      "type_source": "document",
+      "type_target": "person",
+      "relation": "mang_dấu_và_chữ_ký_của"
     }
   ]
 }

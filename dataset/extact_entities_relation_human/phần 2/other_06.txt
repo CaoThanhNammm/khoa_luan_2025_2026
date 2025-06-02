@@ -1,43 +1,123 @@
 {
-  "entities": [
-    {
-      "name": "thanh niên tiêu biểu",
-      "type": "PERSON"
-    },
-    {
-      "name": "địa phương",
-      "type": "LOCATION"
-    },
-    {
-      "name": "đơn vị",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "phương tiện truyền thông đại chúng",
-      "type": "ORGANIZATION"
-    }
-  ],
   "relationships": [
     {
-      "source": "thanh niên tiêu biểu",
-      "target": "địa phương",
-      "type_source": "PERSON",
-      "type_target": "LOCATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Thanh niên tiêu biểu",
+        "description": "Cá nhân xuất sắc được công nhận hoặc nêu gương",
+        "general_status": "Được xã hội ghi nhận vì thành tích",
+        "recognition_type_context": "Được biểu dương"
+      },
+      "target": {
+        "name": "Các lĩnh vực",
+        "description": "Phạm vi hoạt động nơi thanh niên có thành tích",
+        "role_in_recognition": "Bối cảnh, nội dung của sự biểu dương",
+        "scope_of_activity": "Đa dạng, không chuyên biệt"
+      },
+      "type_source": "outstanding_youth",
+      "type_target": "field_of_activity",
+      "relation": "được_biểu_dương_về"
     },
     {
-      "source": "thanh niên tiêu biểu",
-      "target": "đơn vị",
-      "type_source": "PERSON",
-      "type_target": "ORGANIZATION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Thanh niên tiêu biểu",
+        "description": "Cá nhân xuất sắc được công nhận hoặc nêu gương",
+        "general_status": "Được xã hội ghi nhận vì thành tích",
+        "recognition_type_context": "Được biểu dương"
+      },
+      "target": {
+        "name": "Địa phương",
+        "type": "Khu vực địa lý hoặc hành chính",
+        "role_in_recognition": "Nơi diễn ra sự kiện biểu dương",
+        "recognition_scope_detail": "Công nhận thành tích trên các lĩnh vực"
+      },
+      "type_source": "outstanding_youth",
+      "type_target": "locality",
+      "relation": "được_biểu_dương_tại"
     },
     {
-      "source": "thanh niên tiêu biểu",
-      "target": "phương tiện truyền thông đại chúng",
-      "type_source": "PERSON",
-      "type_target": "ORGANIZATION",
-      "relation": "NÊU_GƯƠNG_TRÊN"
+      "source": {
+        "name": "Thanh niên tiêu biểu",
+        "description": "Cá nhân xuất sắc được công nhận hoặc nêu gương",
+        "general_status": "Được xã hội ghi nhận vì thành tích",
+        "recognition_type_context": "Được biểu dương"
+      },
+      "target": {
+        "name": "Đơn vị",
+        "type": "Tổ chức công tác, học tập, hoặc cơ sở khác",
+        "role_in_recognition": "Tổ chức thực hiện việc biểu dương",
+        "recognition_scope_detail": "Công nhận thành tích trên các lĩnh vực"
+      },
+      "type_source": "outstanding_youth",
+      "type_target": "unit_organization",
+      "relation": "được_biểu_dương_tại"
+    },
+    {
+      "source": {
+        "name": "Thanh niên tiêu biểu",
+        "description": "Cá nhân xuất sắc được công nhận hoặc nêu gương",
+        "general_status": "Được xã hội ghi nhận vì thành tích",
+        "recognition_type_context": "Được khen thưởng"
+      },
+      "target": {
+        "name": "Các lĩnh vực",
+        "description": "Phạm vi hoạt động nơi thanh niên có thành tích",
+        "role_in_recognition": "Bối cảnh, nội dung của sự khen thưởng",
+        "scope_of_activity": "Đa dạng, không chuyên biệt"
+      },
+      "type_source": "outstanding_youth",
+      "type_target": "field_of_activity",
+      "relation": "được_khen_thưởng_về"
+    },
+    {
+      "source": {
+        "name": "Thanh niên tiêu biểu",
+        "description": "Cá nhân xuất sắc được công nhận hoặc nêu gương",
+        "general_status": "Được xã hội ghi nhận vì thành tích",
+        "recognition_type_context": "Được khen thưởng"
+      },
+      "target": {
+        "name": "Địa phương",
+        "type": "Khu vực địa lý hoặc hành chính",
+        "role_in_recognition": "Nơi diễn ra sự kiện khen thưởng",
+        "recognition_scope_detail": "Công nhận thành tích trên các lĩnh vực"
+      },
+      "type_source": "outstanding_youth",
+      "type_target": "locality",
+      "relation": "được_khen_thưởng_tại"
+    },
+    {
+      "source": {
+        "name": "Thanh niên tiêu biểu",
+        "description": "Cá nhân xuất sắc được công nhận hoặc nêu gương",
+        "general_status": "Được xã hội ghi nhận vì thành tích",
+        "recognition_type_context": "Được khen thưởng"
+      },
+      "target": {
+        "name": "Đơn vị",
+        "type": "Tổ chức công tác, học tập, hoặc cơ sở khác",
+        "role_in_recognition": "Tổ chức thực hiện việc khen thưởng",
+        "recognition_scope_detail": "Công nhận thành tích trên các lĩnh vực"
+      },
+      "type_source": "outstanding_youth",
+      "type_target": "unit_organization",
+      "relation": "được_khen_thưởng_tại"
+    },
+    {
+      "source": {
+        "name": "Thanh niên tiêu biểu",
+        "description": "Cá nhân xuất sắc được công nhận hoặc nêu gương",
+        "general_status": "Được xã hội ghi nhận vì thành tích",
+        "recognition_type_context": "Được nêu gương"
+      },
+      "target": {
+        "name": "Các phương tiện truyền thông đại chúng",
+        "type": "Kênh thông tin và truyền thông",
+        "role_in_recognition": "Nền tảng để nêu gương và lan tỏa thông tin",
+        "reach": "Công chúng rộng rãi"
+      },
+      "type_source": "outstanding_youth",
+      "type_target": "mass_media",
+      "relation": "được_nêu_gương_trên"
     }
   ]
 }

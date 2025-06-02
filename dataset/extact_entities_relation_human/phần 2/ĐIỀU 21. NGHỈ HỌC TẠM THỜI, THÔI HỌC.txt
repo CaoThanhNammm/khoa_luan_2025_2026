@@ -1,674 +1,425 @@
 {
-  "entities": [
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "nghỉ học tạm thời",
-      "type": "TEMPORARY_LEAVE"
-    },
-    {
-      "name": "bảo lưu kết quả đã học",
-      "type": "GRADE_RETENTION"
-    },
-    {
-      "name": "lực lượng vũ trang",
-      "type": "ARMED_FORCE"
-    },
-    {
-      "name": "cơ quan có thẩm quyền",
-      "type": "AUTHORITY_AGENCY"
-    },
-    {
-      "name": "đại diện quốc gia",
-      "type": "NATIONAL_REPRESENTATIVE"
-    },
-    {
-      "name": "kỳ thi",
-      "type": "EXAMINATION"
-    },
-    {
-      "name": "giải đấu quốc tế",
-      "type": "INTERNATIONAL_COMPETITION"
-    },
-    {
-      "name": "ốm",
-      "type": "ILLNESS"
-    },
-    {
-      "name": "thai sản",
-      "type": "MATERNITY"
-    },
-    {
-      "name": "tai nạn",
-      "type": "ACCIDENT"
-    },
-    {
-      "name": "điều trị thời gian dài",
-      "type": "LONG_TERM_TREATMENT"
-    },
-    {
-      "name": "chứng nhận",
-      "type": "CERTIFICATE"
-    },
-    {
-      "name": "cơ sở khám bệnh, chữa bệnh có thẩm quyền",
-      "type": "MEDICAL_FACILITY"
-    },
-    {
-      "name": "Bộ Y tế",
-      "type": "MINISTRY_OF_HEALTH"
-    },
-    {
-      "name": "lý do cá nhân khác",
-      "type": "PERSONAL_REASON"
-    },
-    {
-      "name": "01 học kỳ",
-      "type": "SEMESTER"
-    },
-    {
-      "name": "trường hợp bị xem xét buộc thôi học",
-      "type": "SUSPENSION_CASE"
-    },
-    {
-      "name": "xem xét kỷ luật",
-      "type": "DISCIPLINARY_ACTION"
-    },
-    {
-      "name": "điểm trung bình chung tích luỹ (ĐTBCTL)",
-      "type": "GPA"
-    },
-    {
-      "name": "2,00",
-      "type": "GRADE"
-    },
-    {
-      "name": "tuần lễ thứ 08",
-      "type": "WEEK"
-    },
-    {
-      "name": "học kỳ",
-      "type": "SEMESTER"
-    },
-    {
-      "name": "học kỳ hiện tại",
-      "type": "CURRENT_SEMESTER"
-    },
-    {
-      "name": "02 (hai) học kỳ liên tiếp",
-      "type": "SEMESTER_DURATION"
-    },
-    {
-      "name": "tổng số thời gian tạm dừng",
-      "type": "TOTAL_TEMPORARY_LEAVE_TIME"
-    },
-    {
-      "name": "½ (một phần hai) thời gian thiết kế chuẩn",
-      "type": "HALF_STANDARD_TIME"
-    },
-    {
-      "name": "CTĐT",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "trường hợp đặc biệt",
-      "type": "SPECIAL_CASE"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "RECTOR"
-    },
-    {
-      "name": "thời gian nghỉ học tạm thời",
-      "type": "TEMPORARY_LEAVE_TIME"
-    },
-    {
-      "name": "nhu cầu cá nhân",
-      "type": "PERSONAL_NEED"
-    },
-    {
-      "name": "thời gian học chính thức",
-      "type": "OFFICIAL_STUDY_TIME"
-    },
-    {
-      "name": "nghĩa vụ học phí",
-      "type": "TUITION_OBLIGATION"
-    },
-    {
-      "name": "môn học",
-      "type": "SUBJECT"
-    },
-    {
-      "name": "học kỳ xin nghỉ học tạm thời",
-      "type": "LEAVE_SEMESTER"
-    },
-    {
-      "name": "bảo lưu kết quả học tập",
-      "type": "ACADEMIC_RESULT_RETENTION"
-    },
-    {
-      "name": "thôi học",
-      "type": "DROPOUT"
-    },
-    {
-      "name": "học phí",
-      "type": "TUITION_FEE"
-    },
-    {
-      "name": "học phần đã đăng ký",
-      "type": "REGISTERED_COURSE"
-    },
-    {
-      "name": "công nhận kết quả học phần đã tích lũy",
-      "type": "RECOGNIZED_CREDITS"
-    },
-    {
-      "name": "thời gian học tập tại trường",
-      "type": "STUDY_PERIOD"
-    },
-    {
-      "name": "dự tuyển đầu vào",
-      "type": "ENTRANCE_EXAM"
-    },
-    {
-      "name": "thí sinh khác",
-      "type": "OTHER_CANDIDATES"
-    },
-    {
-      "name": "hồ sơ",
-      "type": "DOSSIER"
-    },
-    {
-      "name": "minh chứng",
-      "type": "EVIDENCE"
-    },
-    {
-      "name": "quy định",
-      "type": "REGULATION"
-    },
-    {
-      "name": "quyết định",
-      "type": "DECISION"
-    },
-    {
-      "name": "học tiếp",
-      "type": "CONTINUE_STUDY"
-    },
-    {
-      "name": "đơn",
-      "type": "APPLICATION_FORM"
-    },
-    {
-      "name": "một tháng",
-      "type": "MONTH"
-    },
-    {
-      "name": "học kỳ mới",
-      "type": "NEW_SEMESTER"
-    },
-    {
-      "name": "quyết định thu nhận sinh viên học lại",
-      "type": "re_admission_decision"
-    },
-    {
-      "name": "CVHT",
-      "type": "ACADEMIC_ADVISOR"
-    },
-    {
-      "name": "hướng dẫn đăng ký học phần",
-      "type": "COURSE_REGISTRATION_GUIDANCE"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "nghỉ học tạm thời",
-      "relation": "được_xin",
-      "type_source": "STUDENT",
-      "type_target": "TEMPORARY_LEAVE"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Đối tượng được áp dụng quy định nghỉ học tạm thời",
+        "action_context": "Xin nghỉ học tạm thời và bảo lưu kết quả"
+      },
+      "target": {
+        "name": "Lực lượng vũ trang",
+        "involvement_type": "Điều động vào",
+        "implication_for_student": "Trường hợp được nghỉ học tạm thời"
+      },
+      "type_source": "student",
+      "type_target": "armed_forces",
+      "relation": "có_điều_kiện_nghỉ_học_tạm_thời_do_tham_gia"
     },
     {
-      "source": "sinh viên",
-      "target": "bảo lưu kết quả đã học",
-      "relation": "được_xin",
-      "type_source": "STUDENT",
-      "type_target": "GRADE_RETENTION"
+      "source": {
+        "name": "Cơ quan có thẩm quyền",
+        "action": "Điều động",
+        "purpose_of_action": "Đại diện quốc gia tham dự sự kiện quốc tế"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "status": "Được điều động",
+        "represented_entity": "Quốc gia"
+      },
+      "type_source": "competent_authority",
+      "type_target": "student",
+      "relation": "điều_động"
     },
     {
-      "source": "nghỉ học tạm thời",
-      "target": "lực lượng vũ trang",
-      "relation": "lý_do",
-      "type_source": "TEMPORARY_LEAVE",
-      "type_target": "ARMED_FORCE"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Đại diện quốc gia",
+        "event_type": "Kỳ thi quốc tế"
+      },
+      "target": {
+        "name": "Kỳ thi quốc tế",
+        "category": "Sự kiện quốc tế",
+        "attended_by": "Sinh viên đại diện quốc gia"
+      },
+      "type_source": "student",
+      "type_target": "international_examination",
+      "relation": "tham_dự"
     },
     {
-      "source": "nghỉ học tạm thời",
-      "target": "cơ quan có thẩm quyền",
-      "relation": "lý_do",
-      "type_source": "TEMPORARY_LEAVE",
-      "type_target": "AUTHORITY_AGENCY"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Đại diện quốc gia",
+        "event_type": "Giải đấu quốc tế"
+      },
+      "target": {
+        "name": "Giải đấu quốc tế",
+        "category": "Sự kiện quốc tế",
+        "attended_by": "Sinh viên đại diện quốc gia"
+      },
+      "type_source": "student",
+      "type_target": "international_tournament",
+      "relation": "tham_dự"
     },
     {
-      "source": "cơ quan có thẩm quyền",
-      "target": "đại diện quốc gia",
-      "relation": "điều_động",
-      "type_source": "AUTHORITY_AGENCY",
-      "type_target": "NATIONAL_REPRESENTATIVE"
+      "source": {
+        "name": "Sinh viên",
+        "description": "Đối tượng được áp dụng quy định nghỉ học tạm thời",
+        "health_condition": "Bị ốm, thai sản hoặc tai nạn cần điều trị dài"
+      },
+      "target": {
+        "name": "Điều trị thời gian dài",
+        "requirement": "Có chứng nhận của cơ sở y tế",
+        "reason_for_student_leave": "Ốm, thai sản, tai nạn"
+      },
+      "type_source": "student",
+      "type_target": "long_term_medical_treatment",
+      "relation": "có_điều_kiện_nghỉ_học_tạm_thời_do_cần"
     },
     {
-      "source": "đại diện quốc gia",
-      "target": "kỳ thi",
-      "relation": "tham_dự",
-      "type_source": "NATIONAL_REPRESENTATIVE",
-      "type_target": "EXAMINATION"
+      "source": {
+        "name": "Điều trị thời gian dài",
+        "context": "Dành cho sinh viên bị ốm, thai sản, tai nạn",
+        "documentation_needed": "Chứng nhận y tế"
+      },
+      "target": {
+        "name": "Cơ sở khám bệnh, chữa bệnh có thẩm quyền",
+        "role": "Cấp chứng nhận",
+        "regulated_by": "Bộ Y tế"
+      },
+      "type_source": "long_term_medical_treatment",
+      "type_target": "authorized_medical_facility",
+      "relation": "cần_chứng_nhận_từ"
     },
     {
-      "source": "đại diện quốc gia",
-      "target": "giải đấu quốc tế",
-      "relation": "tham_dự",
-      "type_source": "NATIONAL_REPRESENTATIVE",
-      "type_target": "INTERNATIONAL_COMPETITION"
+      "source": {
+        "name": "Cơ sở khám bệnh, chữa bệnh có thẩm quyền",
+        "type": "Tổ chức y tế",
+        "authorization_basis": "Theo quy định của Bộ Y tế"
+      },
+      "target": {
+        "name": "Bộ Y tế",
+        "role": "Cơ quan quản lý nhà nước",
+        "area_of_regulation": "Khám bệnh, chữa bệnh"
+      },
+      "type_source": "authorized_medical_facility",
+      "type_target": "ministry_of_health",
+      "relation": "hoạt_động_theo_quy_định_của"
     },
     {
-      "source": "nghỉ học tạm thời",
-      "target": "ốm",
-      "relation": "lý_do",
-      "type_source": "TEMPORARY_LEAVE",
-      "type_target": "ILLNESS"
+      "source": {
+        "name": "Sinh viên",
+        "action_context": "Xin nghỉ học tạm thời vì lý do cá nhân khác",
+        "requirement_1": "Học xong tối thiểu 01 học kỳ"
+      },
+      "target": {
+        "name": "Học kỳ",
+        "minimum_completed": "01 học kỳ",
+        "condition_for": "Nghỉ học tạm thời vì lý do cá nhân"
+      },
+      "type_source": "student",
+      "type_target": "semester",
+      "relation": "phải_hoàn_thành_tối_thiểu_để_nghỉ_vì_lý_do_cá_nhân"
     },
     {
-      "source": "nghỉ học tạm thời",
-      "target": "thai sản",
-      "relation": "lý_do",
-      "type_source": "TEMPORARY_LEAVE",
-      "type_target": "MATERNITY"
+      "source": {
+        "name": "Sinh viên",
+        "action_context": "Xin nghỉ học tạm thời vì lý do cá nhân khác",
+        "requirement_2": "Không thuộc trường hợp bị xem xét buộc thôi học hoặc kỷ luật"
+      },
+      "target": {
+        "name": "Trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật",
+        "type": "Tiêu chí loại trừ",
+        "status_to_avoid": "Bị xem xét"
+      },
+      "type_source": "student",
+      "type_target": "disciplinary_consideration_case",
+      "relation": "không_thuộc_diện_khi_xin_nghỉ_vì_lý_do_cá_nhân"
     },
     {
-      "source": "nghỉ học tạm thời",
-      "target": "tai nạn",
-      "relation": "lý_do",
-      "type_source": "TEMPORARY_LEAVE",
-      "type_target": "ACCIDENT"
+      "source": {
+        "name": "Sinh viên",
+        "action_context": "Xin nghỉ học tạm thời vì lý do cá nhân khác",
+        "requirement_3": "ĐTBCTL không dưới 2,00"
+      },
+      "target": {
+        "name": "Điểm trung bình chung tích lũy",
+        "abbreviation": "ĐTBCTL",
+        "minimum_score": "2,00",
+        "condition_for": "Nghỉ học tạm thời vì lý do cá nhân"
+      },
+      "type_source": "student",
+      "type_target": "cumulative_gpa",
+      "relation": "phải_đạt_điểm_tối_thiểu_để_nghỉ_vì_lý_do_cá_nhân"
     },
     {
-      "source": "tai nạn",
-      "target": "điều trị thời gian dài",
-      "relation": "phải",
-      "type_source": "ACCIDENT",
-      "type_target": "LONG_TERM_TREATMENT"
+      "source": {
+        "name": "Sinh viên",
+        "action": "Xin nghỉ học tạm thời",
+        "context": "Trong học kỳ hiện tại"
+      },
+      "target": {
+        "name": "Học kỳ hiện tại",
+        "deadline_for_leave_application": "Chậm nhất tuần lễ thứ 08",
+        "scope_of_leave": "Cho phép nghỉ trong học kỳ này"
+      },
+      "type_source": "student",
+      "type_target": "current_semester",
+      "relation": "có_thể_xin_nghỉ_học_tạm_thời_cho"
     },
     {
-      "source": "điều trị thời gian dài",
-      "target": "chứng nhận",
-      "relation": "có",
-      "type_source": "LONG_TERM_TREATMENT",
-      "type_target": "CERTIFICATE"
+      "source": {
+        "name": "Việc xin nghỉ học tạm thời của sinh viên",
+        "granularity": "Theo từng học kỳ",
+        "actor": "Sinh viên"
+      },
+      "target": {
+        "name": "Giới hạn số học kỳ nghỉ liên tiếp",
+        "limit_value": "Không vượt quá 02 học kỳ liên tiếp",
+        "type": "Quy định về thời gian nghỉ"
+      },
+      "type_source": "temporary_leave_request_process",
+      "type_target": "consecutive_semester_leave_limit",
+      "relation": "có_giới_hạn_là"
     },
     {
-      "source": "chứng nhận",
-      "target": "cơ sở khám bệnh, chữa bệnh có thẩm quyền",
-      "relation": "của",
-      "type_source": "CERTIFICATE",
-      "type_target": "MEDICAL_FACILITY"
+      "source": {
+        "name": "Tổng số thời gian tạm dừng học của sinh viên",
+        "actor": "Sinh viên",
+        "type_of_duration": "Tạm dừng học tập"
+      },
+      "target": {
+        "name": "Thời gian thiết kế chuẩn của CTĐT",
+        "limit_ratio": "Không quá ½ (một phần hai)",
+        "program_context": "Chương trình đào tạo (CTĐT)"
+      },
+      "type_source": "total_study_suspension_duration",
+      "type_target": "standard_program_duration",
+      "relation": "không_vượt_quá_tỷ_lệ_so_với"
     },
     {
-      "source": "cơ sở khám bệnh, chữa bệnh có thẩm quyền",
-      "target": "Bộ Y tế",
-      "relation": "theo_quy_định_của",
-      "type_source": "MEDICAL_FACILITY",
-      "type_target": "MINISTRY_OF_HEALTH"
+      "source": {
+        "name": "Hiệu trưởng",
+        "role": "Người ra quyết định",
+        "scope_of_decision": "Các trường hợp đặc biệt về nghỉ học"
+      },
+      "target": {
+        "name": "Các trường hợp đặc biệt (nghỉ học tạm thời)",
+        "description": "Các tình huống không theo quy định chung",
+        "decision_maker": "Hiệu trưởng"
+      },
+      "type_source": "principal_rector",
+      "type_target": "special_temporary_leave_case",
+      "relation": "quyết_định_về"
     },
     {
-      "source": "nghỉ học tạm thời",
-      "target": "lý do cá nhân khác",
-      "relation": "lý_do",
-      "type_source": "TEMPORARY_LEAVE",
-      "type_target": "PERSONAL_REASON"
+      "source": {
+        "name": "Thời gian nghỉ học tạm thời vì nhu cầu cá nhân",
+        "reason_category": "Nhu cầu cá nhân",
+        "accounting_rule": "Được tính vào thời gian học chính thức"
+      },
+      "target": {
+        "name": "Thời gian học chính thức",
+        "type": "Tổng thời gian học tập được công nhận",
+        "includes": "Thời gian nghỉ vì nhu cầu cá nhân"
+      },
+      "type_source": "personal_leave_duration",
+      "type_target": "official_study_duration",
+      "relation": "được_tính_vào"
     },
     {
-      "source": "lý do cá nhân khác",
-      "target": "01 học kỳ",
-      "relation": "học_xong_tối_thiểu",
-      "type_source": "PERSONAL_REASON",
-      "type_target": "SEMESTER"
+      "source": {
+        "name": "Sinh viên",
+        "action_context": "Xin nghỉ học tạm thời",
+        "obligation": "Hoàn thành học phí"
+      },
+      "target": {
+        "name": "Học phí",
+        "scope": "Các môn học đã đăng ký trong học kỳ xin nghỉ",
+        "status_required": "Phải hoàn thành"
+      },
+      "type_source": "student",
+      "type_target": "tuition_fee",
+      "relation": "phải_hoàn_thành_nghĩa_vụ_cho"
     },
     {
-      "source": "lý do cá nhân khác",
-      "target": "trường hợp bị xem xét buộc thôi học",
-      "relation": "không_thuộc",
-      "type_source": "PERSONAL_REASON",
-      "type_target": "SUSPENSION_CASE"
+      "source": {
+        "name": "Sinh viên",
+        "action_context": "Xin nghỉ học tạm thời và đã hoàn thành học phí",
+        "benefit": "Được bảo lưu kết quả học tập"
+      },
+      "target": {
+        "name": "Kết quả học tập",
+        "status": "Được bảo lưu",
+        "condition": "Khi sinh viên nghỉ học tạm thời và hoàn thành học phí"
+      },
+      "type_source": "student",
+      "type_target": "academic_result",
+      "relation": "được_bảo_lưu"
     },
     {
-      "source": "lý do cá nhân khác",
-      "target": "xem xét kỷ luật",
-      "relation": "không_thuộc",
-      "type_source": "PERSONAL_REASON",
-      "type_target": "DISCIPLINARY_ACTION"
+      "source": {
+        "name": "Sinh viên",
+        "action_context": "Xin thôi học",
+        "allowed_reason": "Lý do cá nhân"
+      },
+      "target": {
+        "name": "Lý do cá nhân (xin thôi học)",
+        "type": "Nguyên nhân được chấp nhận cho việc thôi học",
+        "applies_to": "Sinh viên xin thôi học"
+      },
+      "type_source": "student",
+      "type_target": "personal_reason_for_dropout",
+      "relation": "có_thể_xin_thôi_học_vì"
     },
     {
-      "source": "lý do cá nhân khác",
-      "target": "điểm trung bình chung tích luỹ (ĐTBCTL)",
-      "relation": "phải_đạt",
-      "type_source": "PERSONAL_REASON",
-      "type_target": "GPA"
+      "source": {
+        "name": "Việc sinh viên xin thôi học vì lý do cá nhân",
+        "actor": "Sinh viên",
+        "context": "Yêu cầu thôi học"
+      },
+      "target": {
+        "name": "Trường hợp bị xem xét buộc thôi học hoặc xem xét kỷ luật",
+        "type": "Điều kiện loại trừ",
+        "implication": "Không được xin thôi học nếu thuộc trường hợp này"
+      },
+      "type_source": "dropout_request_process",
+      "type_target": "disciplinary_consideration_case",
+      "relation": "không_áp_dụng_nếu_thuộc_diện"
     },
     {
-      "source": "điểm trung bình chung tích luỹ (ĐTBCTL)",
-      "target": "2,00",
-      "relation": "không_dưới",
-      "type_source": "GPA",
-      "type_target": "GRADE"
+      "source": {
+        "name": "Sinh viên xin thôi học",
+        "status": "Đang làm thủ tục thôi học",
+        "obligation": "Hoàn thành học phí"
+      },
+      "target": {
+        "name": "Học phí các học phần đã đăng ký",
+        "scope": "Các học phần đã đăng ký",
+        "status_required": "Phải hoàn thành khi thôi học"
+      },
+      "type_source": "student_requesting_dropout",
+      "type_target": "tuition_fee_for_registered_courses",
+      "relation": "phải_hoàn_thành"
     },
     {
-      "source": "sinh viên",
-      "target": "nghỉ học tạm thời",
-      "relation": "được_phép",
-      "type_source": "STUDENT",
-      "type_target": "TEMPORARY_LEAVE"
+      "source": {
+        "name": "Sinh viên xin thôi học",
+        "status": "Đang làm thủ tục thôi học",
+        "benefit": "Được công nhận kết quả học phần đã tích lũy"
+      },
+      "target": {
+        "name": "Kết quả học phần đã tích lũy",
+        "context": "Trong thời gian học tập tại trường",
+        "status": "Được công nhận khi thôi học"
+      },
+      "type_source": "student_requesting_dropout",
+      "type_target": "accumulated_course_results",
+      "relation": "được_công_nhận"
     },
     {
-      "source": "nghỉ học tạm thời",
-      "target": "tuần lễ thứ 08",
-      "relation": "chậm_nhất_vào",
-      "type_source": "TEMPORARY_LEAVE",
-      "type_target": "WEEK"
+      "source": {
+        "name": "Sinh viên đã thôi học",
+        "desire": "Muốn quay trở lại học",
+        "requirement": "Phải dự tuyển đầu vào"
+      },
+      "target": {
+        "name": "Quy trình tuyển sinh đầu vào",
+        "standard": "Như những thí sinh khác",
+        "applies_to": "Sinh viên đã thôi học muốn học lại"
+      },
+      "type_source": "former_student",
+      "type_target": "admission_process",
+      "relation": "phải_dự_tuyển_lại_như"
     },
     {
-      "source": "tuần lễ thứ 08",
-      "target": "học kỳ",
-      "relation": "của",
-      "type_source": "WEEK",
-      "type_target": "SEMESTER"
+      "source": {
+        "name": "Sinh viên có nhu cầu nghỉ học tạm thời hoặc thôi học",
+        "action_needed": "Nộp hồ sơ",
+        "document_requirement": "Đầy đủ minh chứng theo quy định"
+      },
+      "target": {
+        "name": "Hồ sơ",
+        "purpose": "Xin nghỉ học tạm thời hoặc thôi học",
+        "content_standard": "Đầy đủ minh chứng theo quy định"
+      },
+      "type_source": "student_with_leave_or_dropout_need",
+      "type_target": "application_document_set",
+      "relation": "cần_nộp"
     },
     {
-      "source": "nghỉ học tạm thời",
-      "target": "học kỳ hiện tại",
-      "relation": "trong",
-      "type_source": "TEMPORARY_LEAVE",
-      "type_target": "CURRENT_SEMESTER"
+      "source": {
+        "name": "Hiệu trưởng",
+        "role": "Người ra quyết định",
+        "scope_of_action": "Cho phép sinh viên nghỉ học tạm thời hoặc thôi học"
+      },
+      "target": {
+        "name": "Việc sinh viên nghỉ học tạm thời hoặc thôi học",
+        "actor": "Sinh viên",
+        "decision_outcome": "Được cho phép bởi Hiệu trưởng"
+      },
+      "type_source": "principal_rector",
+      "type_target": "student_leave_or_dropout_action",
+      "relation": "ra_quyết_định_cho_phép_về"
     },
     {
-      "source": "sinh viên",
-      "target": "nghỉ học tạm thời",
-      "relation": "được_phép_xin",
-      "type_source": "STUDENT",
-      "type_target": "TEMPORARY_LEAVE"
+      "source": {
+        "name": "Sinh viên muốn trở lại học sau nghỉ tạm thời",
+        "action_needed": "Viết và gửi đơn",
+        "recipient_of_application": "Hiệu trưởng"
+      },
+      "target": {
+        "name": "Đơn xin học lại",
+        "purpose": "Xin trở lại học tiếp sau thời gian nghỉ tạm thời",
+        "submission_deadline": "Chậm nhất một tháng trước khi bắt đầu học kỳ mới"
+      },
+      "type_source": "student_returning_from_leave",
+      "type_target": "readmission_application_form",
+      "relation": "phải_nộp_cho_hiệu_trưởng"
     },
     {
-      "source": "nghỉ học tạm thời",
-      "target": "học kỳ",
-      "relation": "theo_từng",
-      "type_source": "TEMPORARY_LEAVE",
-      "type_target": "SEMESTER"
+      "source": {
+        "name": "Hiệu trưởng",
+        "role": "Người ra quyết định",
+        "action_context": "Xem xét đơn xin học lại của sinh viên"
+      },
+      "target": {
+        "name": "Sinh viên học lại",
+        "status_pending": "Chờ quyết định thu nhận từ Hiệu trưởng",
+        "previous_status": "Đã nghỉ học tạm thời"
+      },
+      "type_source": "principal_rector",
+      "type_target": "returning_student_applicant",
+      "relation": "quyết_định_thu_nhận"
     },
     {
-      "source": "nghỉ học tạm thời",
-      "target": "02 (hai) học kỳ liên tiếp",
-      "relation": "không_vượt_quá",
-      "type_source": "TEMPORARY_LEAVE",
-      "type_target": "SEMESTER_DURATION"
+      "source": {
+        "name": "Sinh viên được vào học lại",
+        "status": "Được chấp nhận học lại",
+        "next_step": "Đăng ký học phần"
+      },
+      "target": {
+        "name": "Cố vấn học tập (CVHT)",
+        "role": "Hướng dẫn đăng ký học phần",
+        "contact_purpose": "Nhận hướng dẫn"
+      },
+      "type_source": "readmitted_student",
+      "type_target": "academic_advisor",
+      "relation": "cần_liên_hệ_với"
     },
     {
-      "source": "tổng số thời gian tạm dừng",
-      "target": "½ (một phần hai) thời gian thiết kế chuẩn",
-      "relation": "không_quá",
-      "type_source": "TOTAL_TEMPORARY_LEAVE_TIME",
-      "type_target": "HALF_STANDARD_TIME"
-    },
-    {
-      "source": "½ (một phần hai) thời gian thiết kế chuẩn",
-      "target": "CTĐT",
-      "relation": "của",
-      "type_source": "HALF_STANDARD_TIME",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "trường hợp đặc biệt",
-      "target": "Hiệu trưởng",
-      "relation": "quyết_định_bởi",
-      "type_source": "SPECIAL_CASE",
-      "type_target": "RECTOR"
-    },
-    {
-      "source": "thời gian nghỉ học tạm thời",
-      "target": "nhu cầu cá nhân",
-      "relation": "vì",
-      "type_source": "TEMPORARY_LEAVE_TIME",
-      "type_target": "PERSONAL_NEED"
-    },
-    {
-      "source": "thời gian nghỉ học tạm thời",
-      "target": "thời gian học chính thức",
-      "relation": "được_tính_vào",
-      "type_source": "TEMPORARY_LEAVE_TIME",
-      "type_target": "OFFICIAL_STUDY_TIME"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nghĩa vụ học phí",
-      "relation": "phải_hoàn_thành",
-      "type_source": "STUDENT",
-      "type_target": "TUITION_OBLIGATION"
-    },
-    {
-      "source": "nghĩa vụ học phí",
-      "target": "môn học",
-      "relation": "đối_với",
-      "type_source": "TUITION_OBLIGATION",
-      "type_target": "SUBJECT"
-    },
-    {
-      "source": "môn học",
-      "target": "học kỳ xin nghỉ học tạm thời",
-      "relation": "đã_đăng_ký_trong",
-      "type_source": "SUBJECT",
-      "type_target": "LEAVE_SEMESTER"
-    },
-    {
-      "source": "sinh viên",
-      "target": "bảo lưu kết quả học tập",
-      "relation": "được",
-      "type_source": "STUDENT",
-      "type_target": "ACADEMIC_RESULT_RETENTION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "thôi học",
-      "relation": "được_xin",
-      "type_source": "STUDENT",
-      "type_target": "DROPOUT"
-    },
-    {
-      "source": "thôi học",
-      "target": "lý do cá nhân",
-      "relation": "vì",
-      "type_source": "DROPOUT",
-      "type_target": "PERSONAL_REASON"
-    },
-    {
-      "source": "thôi học",
-      "target": "trường hợp bị xem xét buộc thôi học",
-      "relation": "trừ",
-      "type_source": "DROPOUT",
-      "type_target": "SUSPENSION_CASE"
-    },
-    {
-      "source": "thôi học",
-      "target": "xem xét kỷ luật",
-      "relation": "trừ",
-      "type_source": "DROPOUT",
-      "type_target": "DISCIPLINARY_ACTION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "học phí",
-      "relation": "phải_hoàn_thành",
-      "type_source": "STUDENT",
-      "type_target": "TUITION_FEE"
-    },
-    {
-      "source": "học phí",
-      "target": "học phần đã đăng ký",
-      "relation": "của",
-      "type_source": "TUITION_FEE",
-      "type_target": "REGISTERED_COURSE"
-    },
-    {
-      "source": "sinh viên",
-      "target": "công nhận kết quả học phần đã tích lũy",
-      "relation": "được",
-      "type_source": "STUDENT",
-      "type_target": "RECOGNIZED_CREDITS"
-    },
-    {
-      "source": "công nhận kết quả học phần đã tích lũy",
-      "target": "thời gian học tập tại trường",
-      "relation": "trong",
-      "type_source": "RECOGNIZED_CREDITS",
-      "type_target": "STUDY_PERIOD"
-    },
-    {
-      "source": "sinh viên",
-      "target": "dự tuyển đầu vào",
-      "relation": "phải",
-      "type_source": "STUDENT",
-      "type_target": "ENTRANCE_EXAM"
-    },
-    {
-      "source": "dự tuyển đầu vào",
-      "target": "thí sinh khác",
-      "relation": "như",
-      "type_source": "ENTRANCE_EXAM",
-      "type_target": "OTHER_CANDIDATES"
-    },
-    {
-      "source": "sinh viên",
-      "target": "nhu cầu nghỉ học tạm thời",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "TEMPORARY_LEAVE"
-    },
-    {
-      "source": "sinh viên",
-      "target": "thôi học",
-      "relation": "có_nhu_cầu",
-      "type_source": "STUDENT",
-      "type_target": "DROPOUT"
-    },
-    {
-      "source": "sinh viên",
-      "target": "hồ sơ",
-      "relation": "cần_nộp",
-      "type_source": "STUDENT",
-      "type_target": "DOSSIER"
-    },
-    {
-      "source": "hồ sơ",
-      "target": "minh chứng",
-      "relation": "với",
-      "type_source": "DOSSIER",
-      "type_target": "EVIDENCE"
-    },
-    {
-      "source": "minh chứng",
-      "target": "quy định",
-      "relation": "theo",
-      "type_source": "EVIDENCE",
-      "type_target": "REGULATION"
-    },
-    {
-      "source": "Hiệu trưởng",
-      "target": "quyết định",
-      "relation": "ra",
-      "type_source": "RECTOR",
-      "type_target": "DECISION"
-    },
-    {
-      "source": "quyết định",
-      "target": "sinh viên",
-      "relation": "cho_phép",
-      "type_source": "DECISION",
-      "type_target": "STUDENT"
-    },
-    {
-      "source": "quyết định",
-      "target": "nghỉ học tạm thời",
-      "relation": "cho_phép",
-      "type_source": "DECISION",
-      "type_target": "TEMPORARY_LEAVE"
-    },
-    {
-      "source": "quyết định",
-      "target": "thôi học",
-      "relation": "cho_phép",
-      "type_source": "DECISION",
-      "type_target": "DROPOUT"
-    },
-    {
-      "source": "thời gian nghỉ học tạm thời",
-      "target": "học tiếp",
-      "relation": "hết_khi_muốn_trở_lại",
-      "type_source": "TEMPORARY_LEAVE_TIME",
-      "type_target": "CONTINUE_STUDY"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đơn",
-      "relation": "phải_viết",
-      "type_source": "STUDENT",
-      "type_target": "APPLICATION_FORM"
-    },
-    {
-      "source": "đơn",
-      "target": "Hiệu trưởng",
-      "relation": "gửi",
-      "type_source": "APPLICATION_FORM",
-      "type_target": "RECTOR"
-    },
-    {
-      "source": "đơn",
-      "target": "một tháng",
-      "relation": "trước_chậm_nhất",
-      "type_source": "APPLICATION_FORM",
-      "type_target": "MONTH"
-    },
-    {
-      "source": "một tháng",
-      "target": "học kỳ mới",
-      "relation": "trước_khi_bắt_đầu",
-      "type_source": "MONTH",
-      "type_target": "NEW_SEMESTER"
-    },
-    {
-      "source": "Hiệu trưởng",
-      "target": "quyết định thu nhận sinh viên học lại",
-      "relation": "sẽ",
-      "type_source": "RECTOR",
-      "type_target": "re_admission_decision"
-    },
-    {
-      "source": "quyết định thu nhận sinh viên học lại",
-      "target": "sinh viên",
-      "relation": "cho",
-      "type_source": "re_admission_decision",
-      "type_target": "STUDENT"
-    },
-    {
-      "source": "sinh viên",
-      "target": "CVHT",
-      "relation": "liên_hệ",
-      "type_source": "STUDENT",
-      "type_target": "ACADEMIC_ADVISOR"
-    },
-    {
-      "source": "CVHT",
-      "target": "hướng dẫn đăng ký học phần",
-      "relation": "để_được",
-      "type_source": "ACADEMIC_ADVISOR",
-      "type_target": "COURSE_REGISTRATION_GUIDANCE"
+      "source": {
+        "name": "Cố vấn học tập (CVHT)",
+        "role": "Người hướng dẫn",
+        "area_of_guidance": "Đăng ký học phần"
+      },
+      "target": {
+        "name": "Sinh viên được vào học lại",
+        "need": "Hướng dẫn đăng ký học phần",
+        "status": "Được chấp nhận học lại"
+      },
+      "type_source": "academic_advisor",
+      "type_target": "readmitted_student",
+      "relation": "hướng_dẫn_về_việc_đăng_ký_học_phần_cho"
     }
   ]
 }

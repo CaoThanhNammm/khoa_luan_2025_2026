@@ -1,144 +1,201 @@
 {
-  "entities": [
-    {
-      "name": "Mức học bổng khuyến khích học tập",
-      "type": "scholarship_level"
-    },
-    {
-      "name": "Chương trình đại trà",
-      "type": "program_type"
-    },
-    {
-      "name": "Loại Khá",
-      "type": "scholarship_category"
-    },
-    {
-      "name": "Mức trần học phí chương trình đại trà",
-      "type": "fee_level"
-    },
-    {
-      "name": "Nhóm ngành",
-      "type": "field_of_study_group"
-    },
-    {
-      "name": "Chính phủ",
-      "type": "government_organization"
-    },
-    {
-      "name": "Loại Giỏi",
-      "type": "scholarship_category"
-    },
-    {
-      "name": "Loại Xuất sắc",
-      "type": "scholarship_category"
-    },
-    {
-      "name": "Chương trình Chất lượng cao",
-      "type": "program_type"
-    },
-    {
-      "name": "Chương trình Tiên tiến",
-      "type": "program_type"
-    }
-  ],
   "relationships": [
     {
-      "source": "Mức học bổng khuyến khích học tập",
-      "target": "Chương trình đại trà",
-      "type_source": "scholarship_level",
-      "type_target": "program_type",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Mức học bổng khuyến khích học tập loại Khá chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Khá",
+        "scholarship_category": "khuyến khích học tập",
+        "value_definition": "Bằng mức trần học phí chương trình đại trà của nhóm ngành"
+      },
+      "target": {
+        "name": "Mức trần học phí chương trình đại trà của nhóm ngành",
+        "type": "tuition_fee_cap",
+        "program_name": "chương trình đại trà",
+        "scope_description": "của nhóm ngành",
+        "regulatory_authority": "Chính phủ"
+      },
+      "type_source": "scholarship_amount",
+      "type_target": "tuition_fee_cap",
+      "relation": "bằng_với"
     },
     {
-      "source": "Loại Khá",
-      "target": "Mức trần học phí chương trình đại trà",
-      "type_source": "scholarship_category",
-      "type_target": "fee_level",
-      "relation": "bằng"
-    },
-    {
-      "source": "Mức trần học phí chương trình đại trà",
-      "target": "Nhóm ngành",
-      "type_source": "fee_level",
-      "type_target": "field_of_study_group",
-      "relation": "theo"
-    },
-    {
-      "source": "Mức trần học phí chương trình đại trà",
-      "target": "Chính phủ",
-      "type_source": "fee_level",
+      "source": {
+        "name": "Mức trần học phí chương trình đại trà của nhóm ngành",
+        "type": "tuition_fee_cap",
+        "program_name": "chương trình đại trà",
+        "scope_description": "của nhóm ngành",
+        "basis": "theo quy định của Chính phủ"
+      },
+      "target": {
+        "name": "Chính phủ",
+        "type": "government_organization",
+        "role_description": "quy định mức trần học phí"
+      },
+      "type_source": "tuition_fee_cap",
       "type_target": "government_organization",
-      "relation": "quy_định_bởi"
-    },
-     {
-      "source": "Mức trần học phí chương trình đại trà",
-      "target": "Chương trình đại trà",
-      "type_source": "fee_level",
-      "type_target": "program_type",
-      "relation": "của"
+      "relation": "theo_quy_định_của"
     },
     {
-      "source": "Loại Giỏi",
-      "target": "Loại Khá",
-      "type_source": "scholarship_category",
-      "type_target": "scholarship_category",
-      "relation": "cao_hơn_20%"
+      "source": {
+        "name": "Mức học bổng khuyến khích học tập loại Giỏi chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Giỏi",
+        "scholarship_category": "khuyến khích học tập",
+        "increase_detail": "cao hơn mức học bổng loại Khá 20%"
+      },
+      "target": {
+        "name": "Mức học bổng khuyến khích học tập loại Khá chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Khá",
+        "scholarship_category": "khuyến khích học tập"
+      },
+      "type_source": "scholarship_amount",
+      "type_target": "scholarship_amount",
+      "relation": "cao_hơn"
     },
     {
-      "source": "Loại Xuất sắc",
-      "target": "Loại Giỏi",
-      "type_source": "scholarship_category",
-      "type_target": "scholarship_category",
-      "relation": "cao_hơn_20%"
-    },
-     {
-      "source": "Loại Khá",
-      "target": "Chương trình đại trà",
-      "type_source": "scholarship_category",
-      "type_target": "program_type",
-      "relation": "thuộc"
-    },
-     {
-      "source": "Loại Giỏi",
-      "target": "Chương trình đại trà",
-      "type_source": "scholarship_category",
-      "type_target": "program_type",
-      "relation": "thuộc"
-    },
-     {
-      "source": "Loại Xuất sắc",
-      "target": "Chương trình đại trà",
-      "type_source": "scholarship_category",
-      "type_target": "program_type",
-      "relation": "thuộc"
+      "source": {
+        "name": "Mức học bổng khuyến khích học tập loại Xuất sắc chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Xuất sắc",
+        "scholarship_category": "khuyến khích học tập",
+        "increase_detail": "cao hơn mức học bổng loại Giỏi 20%"
+      },
+      "target": {
+        "name": "Mức học bổng khuyến khích học tập loại Giỏi chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Giỏi",
+        "scholarship_category": "khuyến khích học tập"
+      },
+      "type_source": "scholarship_amount",
+      "type_target": "scholarship_amount",
+      "relation": "cao_hơn"
     },
     {
-      "source": "Mức học bổng khuyến khích học tập",
-      "target": "Chương trình Chất lượng cao",
-      "type_source": "scholarship_level",
-      "type_target": "program_type",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Mức học bổng khuyến khích học tập loại Khá Chương trình Chất lượng cao",
+        "type": "scholarship_amount",
+        "program_name": "Chương trình Chất lượng cao",
+        "rank_name": "Khá",
+        "scholarship_category": "khuyến khích học tập",
+        "increase_detail": "cao hơn học bổng cùng loại của chương trình đại trà 30%"
+      },
+      "target": {
+        "name": "Mức học bổng khuyến khích học tập loại Khá chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Khá",
+        "scholarship_category": "khuyến khích học tập"
+      },
+      "type_source": "scholarship_amount",
+      "type_target": "scholarship_amount",
+      "relation": "cao_hơn"
     },
     {
-      "source": "Mức học bổng khuyến khích học tập",
-      "target": "Chương trình Tiên tiến",
-      "type_source": "scholarship_level",
-      "type_target": "program_type",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Mức học bổng khuyến khích học tập loại Giỏi Chương trình Chất lượng cao",
+        "type": "scholarship_amount",
+        "program_name": "Chương trình Chất lượng cao",
+        "rank_name": "Giỏi",
+        "scholarship_category": "khuyến khích học tập",
+        "increase_detail": "cao hơn học bổng cùng loại của chương trình đại trà 30%"
+      },
+      "target": {
+        "name": "Mức học bổng khuyến khích học tập loại Giỏi chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Giỏi",
+        "scholarship_category": "khuyến khích học tập"
+      },
+      "type_source": "scholarship_amount",
+      "type_target": "scholarship_amount",
+      "relation": "cao_hơn"
     },
     {
-      "source": "Chương trình Chất lượng cao",
-      "target": "Chương trình đại trà",
-      "type_source": "program_type",
-      "type_target": "program_type",
-      "relation": "có_học_bổng_cao_hơn_30%"
+      "source": {
+        "name": "Mức học bổng khuyến khích học tập loại Xuất sắc Chương trình Chất lượng cao",
+        "type": "scholarship_amount",
+        "program_name": "Chương trình Chất lượng cao",
+        "rank_name": "Xuất sắc",
+        "scholarship_category": "khuyến khích học tập",
+        "increase_detail": "cao hơn học bổng cùng loại của chương trình đại trà 30%"
+      },
+      "target": {
+        "name": "Mức học bổng khuyến khích học tập loại Xuất sắc chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Xuất sắc",
+        "scholarship_category": "khuyến khích học tập"
+      },
+      "type_source": "scholarship_amount",
+      "type_target": "scholarship_amount",
+      "relation": "cao_hơn"
     },
     {
-      "source": "Chương trình Tiên tiến",
-      "target": "Chương trình đại trà",
-      "type_source": "program_type",
-      "type_target": "program_type",
-      "relation": "có_học_bổng_cao_hơn_30%"
+      "source": {
+        "name": "Mức học bổng khuyến khích học tập loại Khá Chương trình Tiên tiến",
+        "type": "scholarship_amount",
+        "program_name": "Chương trình Tiên tiến",
+        "rank_name": "Khá",
+        "scholarship_category": "khuyến khích học tập",
+        "increase_detail": "cao hơn học bổng cùng loại của chương trình đại trà 30%"
+      },
+      "target": {
+        "name": "Mức học bổng khuyến khích học tập loại Khá chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Khá",
+        "scholarship_category": "khuyến khích học tập"
+      },
+      "type_source": "scholarship_amount",
+      "type_target": "scholarship_amount",
+      "relation": "cao_hơn"
+    },
+    {
+      "source": {
+        "name": "Mức học bổng khuyến khích học tập loại Giỏi Chương trình Tiên tiến",
+        "type": "scholarship_amount",
+        "program_name": "Chương trình Tiên tiến",
+        "rank_name": "Giỏi",
+        "scholarship_category": "khuyến khích học tập",
+        "increase_detail": "cao hơn học bổng cùng loại của chương trình đại trà 30%"
+      },
+      "target": {
+        "name": "Mức học bổng khuyến khích học tập loại Giỏi chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Giỏi",
+        "scholarship_category": "khuyến khích học tập"
+      },
+      "type_source": "scholarship_amount",
+      "type_target": "scholarship_amount",
+      "relation": "cao_hơn"
+    },
+    {
+      "source": {
+        "name": "Mức học bổng khuyến khích học tập loại Xuất sắc Chương trình Tiên tiến",
+        "type": "scholarship_amount",
+        "program_name": "Chương trình Tiên tiến",
+        "rank_name": "Xuất sắc",
+        "scholarship_category": "khuyến khích học tập",
+        "increase_detail": "cao hơn học bổng cùng loại của chương trình đại trà 30%"
+      },
+      "target": {
+        "name": "Mức học bổng khuyến khích học tập loại Xuất sắc chương trình đại trà",
+        "type": "scholarship_amount",
+        "program_name": "chương trình đại trà",
+        "rank_name": "Xuất sắc",
+        "scholarship_category": "khuyến khích học tập"
+      },
+      "type_source": "scholarship_amount",
+      "type_target": "scholarship_amount",
+      "relation": "cao_hơn"
     }
   ]
 }

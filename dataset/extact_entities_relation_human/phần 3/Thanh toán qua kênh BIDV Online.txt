@@ -1,277 +1,362 @@
 {
-  "entities": [
-    {
-      "name": "BIDV Online",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "website của BIDV",
-      "type": "WEBSITE"
-    },
-    {
-      "name": "www.bidv.com.vn",
-      "type": "WEBSITE_ADDRESS"
-    },
-    {
-      "name": "Cá nhân",
-      "type": "PERSON_TYPE"
-    },
-    {
-      "name": "tên đăng nhập",
-      "type": "USERNAME"
-    },
-    {
-      "name": "mật khẩu",
-      "type": "PASSWORD"
-    },
-    {
-      "name": "màn hình thông tin khách hàng",
-      "type": "SCREEN"
-    },
-    {
-      "name": "Thanh toán hóa đơn",
-      "type": "PAYMENT"
-    },
-    {
-      "name": "Thanh toán hóa đơn từng lần",
-      "type": "PAYMENT_TYPE"
-    },
-    {
-      "name": "tài khoản thanh toán tại BIDV",
-      "type": "BANK_ACCOUNT"
-    },
-    {
-      "name": "học phí",
-      "type": "TUITION_FEE"
-    },
-    {
-      "name": "số hóa đơn",
-      "type": "BILL_NUMBER"
-    },
-    {
-      "name": "số tiền thanh toán",
-      "type": "PAYMENT_AMOUNT"
-    },
-    {
-      "name": "hóa đơn",
-      "type": "BILL"
-    },
-    {
-      "name": "nhiều hóa đơn",
-      "type": "BILLS"
-    },
-    {
-      "name": "Thực hiện",
-      "type": "BUTTON"
-    },
-    {
-      "name": "OTP",
-      "type": "OTP"
-    },
-    {
-      "name": "người dùng",
-      "type": "USER"
-    },
-    {
-      "name": "kết quả giao dịch",
-      "type": "TRANSACTION_RESULT"
-    },
-    {
-      "name": "màn hình BIDV Online",
-      "type": "SCREEN"
-    },
-    {
-      "name": "thông tin giao dịch của khách hàng",
-      "type": "CUSTOMER_TRANSACTION_INFO"
-    },
-    {
-      "name": "Hộp thư/Hộp thư đến",
-      "type": "MAILBOX"
-    },
-    {
-      "name": "hệ thống",
-      "type": "SYSTEM"
-    },
-    {
-      "name": "khách hàng",
-      "type": "PERSON_TYPE"
-    }
-  ],
   "relationships": [
     {
-      "source": "thanh toán",
-      "target": "BIDV Online",
-      "relation": "QUA_KÊNH",
-      "type_source": "PAYMENT",
-      "type_target": "ORGANIZATION"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "action_description": "Bắt đầu quá trình thanh toán học phí",
+        "authentication_status": "Chưa đăng nhập"
+      },
+      "target": {
+        "name": "website của BIDV",
+        "access_point": "www.bidv.com.vn",
+        "provider": "BIDV",
+        "purpose": "Cổng giao dịch trực tuyến",
+        "platform_component": "Giao diện web"
+      },
+      "type_source": "customer",
+      "type_target": "website",
+      "relation": "truy_cập"
     },
     {
-      "source": "khách hàng",
-      "target": "hệ thống",
-      "relation": "ĐĂNG_NHẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "SYSTEM"
+      "source": {
+        "name": "website của BIDV",
+        "provider": "BIDV",
+        "website_type": "Cổng thông tin và giao dịch",
+        "functionality": "Cung cấp truy cập vào dịch vụ ngân hàng trực tuyến"
+      },
+      "target": {
+        "name": "www.bidv.com.vn",
+        "address_type": "URL",
+        "protocol": "HTTP/HTTPS (ngụ ý)",
+        "accessibility": "Công khai"
+      },
+      "type_source": "website",
+      "type_target": "url",
+      "relation": "có_địa_chỉ_truy_cập_là"
     },
     {
-      "source": "khách hàng",
-      "target": "website của BIDV",
-      "relation": "TRUY_CẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "WEBSITE"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "intent": "Đăng nhập hệ thống",
+        "current_location": "Trang chủ website BIDV"
+      },
+      "target": {
+        "name": "Đăng nhập dành cho Cá nhân",
+        "description": "Liên kết/Nút đăng nhập cho khách hàng cá nhân",
+        "location_on_page": "Website BIDV",
+        "target_user_segment": "Cá nhân"
+      },
+      "type_source": "customer",
+      "type_target": "login_interface_option",
+      "relation": "lựa_chọn_chức_năng"
     },
     {
-      "source": "website của BIDV",
-      "target": "www.bidv.com.vn",
-      "relation": "TẠI_ĐỊA_CHỈ",
-      "type_source": "WEBSITE",
-      "type_target": "WEBSITE_ADDRESS"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "action_goal": "Xác thực danh tính",
+        "input_stage": "Đăng nhập"
+      },
+      "target": {
+        "name": "Tên đăng nhập",
+        "credential_type": "Username",
+        "input_purpose": "Đăng nhập hệ thống",
+        "format_requirement": "Chuỗi ký tự"
+      },
+      "type_source": "customer",
+      "type_target": "credential",
+      "relation": "nhập_thông_tin"
     },
     {
-      "source": "khách hàng",
-      "target": "Cá nhân",
-      "relation": "LỰA_CHỌN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "PERSON_TYPE"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "action_goal": "Xác thực danh tính",
+        "input_stage": "Đăng nhập"
+      },
+      "target": {
+        "name": "Mật khẩu",
+        "credential_type": "Password",
+        "security_feature": "Bảo mật",
+        "input_masking": "Ẩn ký tự (thường lệ)"
+      },
+      "type_source": "customer",
+      "type_target": "credential",
+      "relation": "nhập_thông_tin"
     },
     {
-      "source": "khách hàng",
-      "target": "tên đăng nhập",
-      "relation": "NHẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "USERNAME"
+      "source": {
+        "name": "Hệ thống BIDV Online",
+        "platform_type": "Ngân hàng trực tuyến",
+        "response_to_action": "Đăng nhập thành công",
+        "provider": "BIDV"
+      },
+      "target": {
+        "name": "Màn hình thông tin khách hàng",
+        "ui_type": "Trang thông tin người dùng",
+        "content_description": "Thông tin cá nhân và các chức năng tài khoản",
+        "visibility": "Sau khi đăng nhập thành công"
+      },
+      "type_source": "online_banking_system",
+      "type_target": "user_interface_screen",
+      "relation": "hiển_thị"
     },
     {
-      "source": "khách hàng",
-      "target": "mật khẩu",
-      "relation": "NHẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "PASSWORD"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "intent": "Thực hiện thanh toán hóa đơn",
+        "current_screen": "Màn hình thông tin khách hàng"
+      },
+      "target": {
+        "name": "Thanh toán hóa đơn → Thanh toán hóa đơn từng lần",
+        "menu_item_type": "Chức năng thanh toán",
+        "navigation_path": "Thanh toán hóa đơn > Thanh toán hóa đơn từng lần",
+        "description": "Chức năng cho phép thanh toán từng hóa đơn một"
+      },
+      "type_source": "customer",
+      "type_target": "payment_menu_option",
+      "relation": "kích_chọn_mục"
     },
     {
-      "source": "màn hình thông tin khách hàng",
-      "target": "khách hàng",
-      "relation": "THÔNG_TIN",
-      "type_source": "SCREEN",
-      "type_target": "PERSON_TYPE"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "action_context": "Chuẩn bị thanh toán học phí",
+        "payment_method_choice": "Tài khoản ngân hàng"
+      },
+      "target": {
+        "name": "Tài khoản thanh toán tại BIDV",
+        "account_type": "Tài khoản thanh toán",
+        "institution": "BIDV",
+        "purpose": "Nguồn tiền để thực hiện giao dịch"
+      },
+      "type_source": "customer",
+      "type_target": "bank_account",
+      "relation": "sử_dụng"
     },
     {
-      "source": "khách hàng",
-      "target": "màn hình thông tin khách hàng",
-      "relation": "HIỂN_THỊ",
-      "type_source": "PERSON_TYPE",
-      "type_target": "SCREEN"
+      "source": {
+        "name": "Tài khoản thanh toán tại BIDV",
+        "account_type": "Tài khoản thanh toán",
+        "institution": "BIDV",
+        "availability_for_payment": "Đủ số dư (ngụ ý)"
+      },
+      "target": {
+        "name": "Học phí",
+        "fee_category": "Giáo dục",
+        "payment_obligation": "Cần được thanh toán",
+        "recipient_type": "Tổ chức giáo dục (ngụ ý)"
+      },
+      "type_source": "bank_account",
+      "type_target": "fee",
+      "relation": "dùng_để_thanh_toán"
     },
     {
-      "source": "khách hàng",
-      "target": "Thanh toán hóa đơn",
-      "relation": "CHỌN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "PAYMENT"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "action_context": "Lựa chọn hóa đơn để thanh toán",
+        "selection_method": "Kích chọn"
+      },
+      "target": {
+        "name": "Số hóa đơn",
+        "identifier_type": "Mã hóa đơn",
+        "purpose": "Xác định hóa đơn cụ thể cần thanh toán",
+        "display_format": "Chuỗi số/ký tự"
+      },
+      "type_source": "customer",
+      "type_target": "invoice_identifier",
+      "relation": "kích_chọn_vào"
     },
     {
-      "source": "khách hàng",
-      "target": "Thanh toán hóa đơn từng lần",
-      "relation": "CHỌN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "PAYMENT_TYPE"
+      "source": {
+        "name": "Số tiền thanh toán",
+        "value_type": "Tiền tệ",
+        "source_of_value": "Thông tin từ hóa đơn",
+        "currency": "VND (ngụ ý)"
+      },
+      "target": {
+        "name": "Hóa đơn",
+        "document_type": "Chứng từ thanh toán",
+        "attribute_linked": "Giá trị hóa đơn",
+        "status": "Đã chọn để thanh toán"
+      },
+      "type_source": "monetary_amount",
+      "type_target": "invoice_document",
+      "relation": "tương_ứng_với"
     },
     {
-      "source": "tài khoản thanh toán tại BIDV",
-      "target": "học phí",
-      "relation": "THANH_TOÁN",
-      "type_source": "BANK_ACCOUNT",
-      "type_target": "TUITION_FEE"
+      "source": {
+        "name": "Hệ thống BIDV Online",
+        "platform_type": "Ngân hàng trực tuyến",
+        "action_performed": "Hiển thị thông tin chi tiết hóa đơn",
+        "trigger_event": "Khách hàng chọn hóa đơn"
+      },
+      "target": {
+        "name": "Số tiền thanh toán",
+        "value_type": "Tiền tệ",
+        "display_context": "Khi hóa đơn tương ứng được chọn",
+        "purpose_of_display": "Thông báo cho khách hàng"
+      },
+      "type_source": "online_banking_system",
+      "type_target": "monetary_amount",
+      "relation": "hiển_thị"
     },
     {
-      "source": "khách hàng",
-      "target": "tài khoản thanh toán tại BIDV",
-      "relation": "SỬ_DỤNG",
-      "type_source": "PERSON_TYPE",
-      "type_target": "BANK_ACCOUNT"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "payment_scenario": "Thanh toán nhiều hóa đơn cùng lúc",
+        "user_action": "Chọn nhiều mục"
+      },
+      "target": {
+        "name": "Nhiều hóa đơn",
+        "selection_type": "Thanh toán gộp",
+        "description": "Lựa chọn đồng thời nhiều hơn một hóa đơn để thanh toán",
+        "user_interface_interaction": "Kích chọn liên tiếp"
+      },
+      "type_source": "customer",
+      "type_target": "bulk_invoice_selection",
+      "relation": "thực_hiện_kích_chọn"
     },
     {
-      "source": "khách hàng",
-      "target": "số hóa đơn",
-      "relation": "KÍCH_CHỌN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "BILL_NUMBER"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "action_trigger": "Hoàn tất lựa chọn hóa đơn",
+        "next_step_intent": "Tiến hành thanh toán"
+      },
+      "target": {
+        "name": "Thực hiện",
+        "ui_element_type": "Nút bấm",
+        "purpose": "Bắt đầu quá trình xử lý thanh toán cho các hóa đơn đã chọn",
+        "button_label": "Thực hiện"
+      },
+      "type_source": "customer",
+      "type_target": "button_ui",
+      "relation": "chọn"
     },
     {
-      "source": "số tiền thanh toán",
-      "target": "hóa đơn",
-      "relation": "TƯƠNG_ỨNG_VỚI",
-      "type_source": "PAYMENT_AMOUNT",
-      "type_target": "BILL"
+      "source": {
+        "name": "Thực hiện",
+        "ui_element_type": "Nút bấm",
+        "associated_action_verb": "Thanh toán",
+        "trigger_for_system_process": "Xử lý giao dịch"
+      },
+      "target": {
+        "name": "Hóa đơn",
+        "document_type": "Chứng từ thanh toán",
+        "status_after_action": "Được đưa vào quy trình thanh toán",
+        "selection_state": "Đã được chọn bởi khách hàng"
+      },
+      "type_source": "button_ui",
+      "type_target": "invoice_document",
+      "relation": "dùng_để_thanh_toán"
     },
     {
-      "source": "số tiền thanh toán",
-      "target": "hóa đơn",
-      "relation": "HIỂN_THỊ",
-      "type_source": "PAYMENT_AMOUNT",
-      "type_target": "BILL"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "verification_step": "Bước cuối cùng trước khi trừ tiền",
+        "decision_point": "Xác nhận hoặc hủy giao dịch"
+      },
+      "target": {
+        "name": "Thanh toán",
+        "action_type": "Giao dịch tài chính",
+        "subject_of_payment": "Hóa đơn đã chọn",
+        "current_status": "Chờ xác nhận cuối cùng từ người dùng"
+      },
+      "type_source": "customer",
+      "type_target": "payment_process_step",
+      "relation": "xác_nhận"
     },
     {
-      "source": "khách hàng",
-      "target": "nhiều hóa đơn",
-      "relation": "KÍCH_CHỌN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "BILLS"
+      "source": {
+        "name": "Khách hàng",
+        "role": "Người dùng",
+        "action_purpose": "Xác thực giao dịch và danh tính",
+        "security_measure": "Xác thực hai yếu tố (ngụ ý)"
+      },
+      "target": {
+        "name": "OTP",
+        "code_type": "Mã xác thực dùng một lần",
+        "purpose": "Bảo mật giao dịch tài chính",
+        "validity_duration": "Thời gian ngắn (ngụ ý)"
+      },
+      "type_source": "customer",
+      "type_target": "one_time_password",
+      "relation": "nhập_thông_tin"
     },
     {
-      "source": "khách hàng",
-      "target": "Thực hiện",
-      "relation": "CHỌN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "BUTTON"
+      "source": {
+        "name": "OTP",
+        "code_type": "Mã xác thực dùng một lần",
+        "function": "Xác minh danh tính người thực hiện giao dịch",
+        "security_layer": "Tăng cường"
+      },
+      "target": {
+        "name": "Khách hàng",
+        "identity_being_verified": "Người dùng đang thực hiện giao dịch",
+        "role_in_system": "Chủ tài khoản",
+        "verification_context": "Giao dịch thanh toán"
+      },
+      "type_source": "one_time_password",
+      "type_target": "customer",
+      "relation": "dùng_để_xác_thực"
     },
     {
-      "source": "thanh toán",
-      "target": "hóa đơn",
-      "relation": "THANH_TOÁN",
-      "type_source": "PAYMENT",
-      "type_target": "BILL"
+      "source": {
+        "name": "Hệ thống BIDV Online",
+        "platform_type": "Ngân hàng trực tuyến",
+        "process_step_completed": "Hoàn tất xử lý giao dịch thanh toán",
+        "communication_type": "Thông báo trạng thái"
+      },
+      "target": {
+        "name": "Kết quả giao dịch",
+        "information_type": "Thông báo trạng thái giao dịch",
+        "possible_values": "Thành công/Thất bại/Đang xử lý",
+        "recipient": "Khách hàng"
+      },
+      "type_source": "online_banking_system",
+      "type_target": "transaction_result_message",
+      "relation": "trả_về"
     },
     {
-      "source": "khách hàng",
-      "target": "thanh toán",
-      "relation": "XÁC_NHẬN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "PAYMENT"
+      "source": {
+        "name": "Kết quả giao dịch",
+        "information_type": "Thông báo trạng thái giao dịch",
+        "display_purpose": "Cung cấp phản hồi cho khách hàng",
+        "content_nature": "Thông tin tức thời"
+      },
+      "target": {
+        "name": "Màn hình BIDV Online",
+        "ui_type": "Giao diện người dùng",
+        "display_area": "Khu vực thông báo hoặc trang kết quả",
+        "system_context": "Ứng dụng ngân hàng trực tuyến BIDV"
+      },
+      "type_source": "transaction_result_message",
+      "type_target": "user_interface_screen",
+      "relation": "hiển_thị_trên"
     },
     {
-      "source": "khách hàng",
-      "target": "OTP",
-      "relation": "NHẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "OTP"
-    },
-    {
-      "source": "người dùng",
-      "target": "OTP",
-      "relation": "XÁC_THỰC",
-      "type_source": "USER",
-      "type_target": "OTP"
-    },
-    {
-      "source": "hệ thống",
-      "target": "kết quả giao dịch",
-      "relation": "TRẢ_VỀ",
-      "type_source": "SYSTEM",
-      "type_target": "TRANSACTION_RESULT"
-    },
-    {
-      "source": "kết quả giao dịch",
-      "target": "màn hình BIDV Online",
-      "relation": "HIỂN_THỊ",
-      "type_source": "TRANSACTION_RESULT",
-      "type_target": "SCREEN"
-    },
-    {
-      "source": "thông tin giao dịch của khách hàng",
-      "target": "Hộp thư/Hộp thư đến",
-      "relation": "LƯU_TRỮ_TẠI",
-      "type_source": "CUSTOMER_TRANSACTION_INFO",
-      "type_target": "MAILBOX"
+      "source": {
+        "name": "Thông tin giao dịch của khách hàng",
+        "record_type": "Lịch sử giao dịch",
+        "owner": "Khách hàng",
+        "data_content": "Chi tiết giao dịch đã thực hiện (ví dụ: số tiền, ngày, hóa đơn)"
+      },
+      "target": {
+        "name": "Mục Hộp thư/Hộp thư đến",
+        "storage_type": "Khu vực lưu trữ tin nhắn/thông báo điện tử",
+        "location_within_system": "BIDV Online",
+        "access_for_user": "Có thể xem lại"
+      },
+      "type_source": "transaction_record",
+      "type_target": "system_mailbox_section",
+      "relation": "sẽ_được_lưu_tại"
     }
   ]
 }

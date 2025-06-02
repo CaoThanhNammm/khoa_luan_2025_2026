@@ -1,160 +1,209 @@
 {
-  "entities": [
-    {
-      "name": "sinh viên",
-      "type": "PERSON_GROUP"
-    },
-    {
-      "name": "nghiêm túc",
-      "type": "ATTRIBUTE"
-    },
-    {
-      "name": "tham gia trực tuyến",
-      "type": "ACTION"
-    },
-    {
-      "name": "Web-site",
-      "type": "PLATFORM"
-    },
-    {
-      "name": "tinh thần tôn sư trọng đạo",
-      "type": "PRINCIPLE"
-    },
-    {
-      "name": "vấn đề",
-      "type": "PROBLEM"
-    },
-    {
-      "name": "tiêu đề rõ ràng",
-      "type": "ATTRIBUTE"
-    },
-    {
-      "name": "viết tắt",
-      "type": "ACTION"
-    },
-    {
-      "name": "viết thiếu nét",
-      "type": "ACTION"
-    },
-    {
-      "name": "quy định",
-      "type": "REGULATION"
-    },
-    {
-      "name": "điều 10",
-      "type": "ARTICLE_NUMBER"
-    },
-    {
-      "name": "khoản 1 điều 11",
-      "type": "REFERENCE"
-    },
-    {
-      "name": "khoản 2 điều 11",
-      "type": "REFERENCE"
-    },
-    {
-      "name": "trả lời",
-      "type": "ACTION"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "tham gia trực tuyến",
-      "type_source": "PERSON_GROUP",
-      "type_target": "ACTION",
-      "relation": "PHẢI"
+      "source": {
+        "name": "Sinh viên",
+        "role": "người tham gia",
+        "required_attitude": "nghiêm túc",
+        "participation_method": "trực tuyến",
+        "behavioral_guideline": "tôn sư trọng đạo"
+      },
+      "target": {
+        "name": "Web-site",
+        "platform_type": "trang web",
+        "interaction_purpose": "tham gia trực tuyến",
+        "usage_context": "diễn đàn/nền tảng học tập"
+      },
+      "type_source": "student",
+      "type_target": "online_platform",
+      "relation": "phải_tham_gia_trên"
     },
     {
-      "source": "tham gia trực tuyến",
-      "target": "Web-site",
-      "type_source": "ACTION",
-      "type_target": "PLATFORM",
-      "relation": "TRÊN"
+      "source": {
+        "name": "Sinh viên",
+        "context_of_behavior": "khi tham gia trực tuyến trên Web-site",
+        "actor_role": "người học",
+        "action_description": "tương tác trực tuyến"
+      },
+      "target": {
+        "name": "tinh thần tôn sư trọng đạo",
+        "principle_nature": "chuẩn mực đạo đức và ứng xử",
+        "application_scope": "môi trường học thuật trực tuyến",
+        "importance": "bắt buộc"
+      },
+      "type_source": "student",
+      "type_target": "behavioral_principle",
+      "relation": "phải_thể_hiện"
     },
     {
-      "source": "tham gia trực tuyến",
-      "target": "nghiêm túc",
-      "type_source": "ACTION",
-      "type_target": "ATTRIBUTE",
-      "relation": "PHẢI"
+      "source": {
+        "name": "vấn đề sinh viên đặt ra",
+        "originator": "sinh viên",
+        "submission_format": "văn bản trực tuyến",
+        "clarity_requirement": "phải có tiêu đề rõ ràng"
+      },
+      "target": {
+        "name": "tiêu đề",
+        "attribute_requirement": "rõ ràng",
+        "purpose": "xác định và làm rõ nội dung vấn đề",
+        "necessity": "bắt buộc"
+      },
+      "type_source": "student_submission",
+      "type_target": "content_element",
+      "relation": "phải_có"
     },
     {
-      "source": "tham gia trực tuyến",
-      "target": "tinh thần tôn sư trọng đạo",
-      "type_source": "ACTION",
-      "type_target": "PRINCIPLE",
-      "relation": "TRÊN_TINH_THẦN"
+      "source": {
+        "name": "vấn đề sinh viên đặt ra",
+        "content_presentation_rule": "không được viết tắt",
+        "author": "sinh viên",
+        "submission_context": "đặt vấn đề trực tuyến"
+      },
+      "target": {
+        "name": "việc viết tắt",
+        "practice_type": "lối viết không chuẩn mực",
+        "status": "bị cấm",
+        "reason_for_prohibition": "đảm bảo rõ ràng, dễ hiểu"
+      },
+      "type_source": "student_submission",
+      "type_target": "prohibited_writing_practice",
+      "relation": "phải_tránh"
     },
     {
-      "source": "vấn đề",
-      "target": "sinh viên",
-      "type_source": "PROBLEM",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "vấn đề sinh viên đặt ra",
+        "content_presentation_rule": "không được viết thiếu nét",
+        "author": "sinh viên",
+        "submission_context": "đặt vấn đề trực tuyến"
+      },
+      "target": {
+        "name": "việc viết thiếu nét",
+        "practice_type": "lỗi trình bày/chính tả",
+        "status": "bị cấm",
+        "reason_for_prohibition": "đảm bảo tính chính xác, rõ ràng"
+      },
+      "type_source": "student_submission",
+      "type_target": "prohibited_writing_practice",
+      "relation": "phải_tránh"
     },
     {
-      "source": "vấn đề",
-      "target": "tiêu đề rõ ràng",
-      "type_source": "PROBLEM",
-      "type_target": "ATTRIBUTE",
-      "relation": "PHẢI_CÓ"
+      "source": {
+        "name": "vấn đề sinh viên đặt ra",
+        "originator": "sinh viên",
+        "submission_context": "đặt vấn đề trực tuyến",
+        "response_condition": "tuân thủ quy định để được trả lời"
+      },
+      "target": {
+        "name": "quy định",
+        "reference_source_document": "điều 10, các khoản 1, 2 của điều 11",
+        "purpose": "đảm bảo chất lượng và trật tự trong trao đổi thông tin",
+        "applicability": "áp dụng cho tất cả các vấn đề sinh viên đặt ra"
+      },
+      "type_source": "student_submission",
+      "type_target": "regulation",
+      "relation": "phải_tuân_thủ_theo"
     },
     {
-      "source": "vấn đề",
-      "target": "viết tắt",
-      "type_source": "PROBLEM",
-      "type_target": "ACTION",
-      "relation": "KHÔNG_ĐƯỢC"
+      "source": {
+        "name": "quy định",
+        "scope_of_application": "vấn đề sinh viên đặt ra",
+        "nature_of_content": "các quy tắc cần tuân thủ",
+        "enforcement_consequence": "không trả lời nếu không tuân thủ"
+      },
+      "target": {
+        "name": "điều 10",
+        "document_category": "phần của văn bản quy phạm",
+        "content_description": "chứa các quy tắc cụ thể",
+        "relevance": "một trong các nguồn của quy định"
+      },
+      "type_source": "regulation",
+      "type_target": "regulation_article",
+      "relation": "bao_gồm_nội_dung_từ"
     },
     {
-      "source": "vấn đề",
-      "target": "viết thiếu nét",
-      "type_source": "PROBLEM",
-      "type_target": "ACTION",
-      "relation": "KHÔNG_ĐƯỢC"
+      "source": {
+        "name": "quy định",
+        "scope_of_application": "vấn đề sinh viên đặt ra",
+        "nature_of_content": "các quy tắc cần tuân thủ",
+        "enforcement_consequence": "không trả lời nếu không tuân thủ"
+      },
+      "target": {
+        "name": "khoản 1 điều 11",
+        "document_category": "phần của văn bản quy phạm",
+        "parent_article_reference": "điều 11",
+        "relevance": "một trong các nguồn của quy định"
+      },
+      "type_source": "regulation",
+      "type_target": "regulation_clause",
+      "relation": "bao_gồm_nội_dung_từ"
     },
     {
-      "source": "vấn đề",
-      "target": "sinh viên",
-      "type_source": "PROBLEM",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "quy định",
+        "scope_of_application": "vấn đề sinh viên đặt ra",
+        "nature_of_content": "các quy tắc cần tuân thủ",
+        "enforcement_consequence": "không trả lời nếu không tuân thủ"
+      },
+      "target": {
+        "name": "khoản 2 điều 11",
+        "document_category": "phần của văn bản quy phạm",
+        "parent_article_reference": "điều 11",
+        "relevance": "một trong các nguồn của quy định"
+      },
+      "type_source": "regulation",
+      "type_target": "regulation_clause",
+      "relation": "bao_gồm_nội_dung_từ"
     },
     {
-      "source": "vấn đề",
-      "target": "quy định",
-      "type_source": "PROBLEM",
-      "type_target": "REGULATION",
-      "relation": "KHÔNG_TUÂN_THỦ"
+      "source": {
+        "name": "khoản 1 điều 11",
+        "clause_identifier": "khoản 1",
+        "content_type": "quy định chi tiết",
+        "hierarchical_level": "sub-section of article"
+      },
+      "target": {
+        "name": "điều 11",
+        "article_identifier": "điều 11",
+        "document_context": "văn bản quy định chung",
+        "content_nature": "chứa các khoản quy định"
+      },
+      "type_source": "regulation_clause",
+      "type_target": "regulation_article",
+      "relation": "là_một_phần_của"
     },
     {
-      "source": "quy định",
-      "target": "điều 10",
-      "type_source": "REGULATION",
-      "type_target": "ARTICLE_NUMBER",
-      "relation": "TRONG"
+      "source": {
+        "name": "khoản 2 điều 11",
+        "clause_identifier": "khoản 2",
+        "content_type": "quy định chi tiết",
+        "hierarchical_level": "sub-section of article"
+      },
+      "target": {
+        "name": "điều 11",
+        "article_identifier": "điều 11",
+        "document_context": "văn bản quy định chung",
+        "content_nature": "chứa các khoản quy định"
+      },
+      "type_source": "regulation_clause",
+      "type_target": "regulation_article",
+      "relation": "là_một_phần_của"
     },
     {
-      "source": "quy định",
-      "target": "khoản 1 điều 11",
-      "type_source": "REGULATION",
-      "type_target": "REFERENCE",
-      "relation": "TRONG"
-    },
-    {
-      "source": "quy định",
-      "target": "khoản 2 điều 11",
-      "type_source": "REGULATION",
-      "type_target": "REFERENCE",
-      "relation": "TRONG"
-    },
-    {
-      "source": "vấn đề",
-      "target": "trả lời",
-      "type_source": "PROBLEM",
-      "type_target": "ACTION",
-      "relation": "KHÔNG_ĐƯỢC"
+      "source": {
+        "name": "vấn đề sinh viên đặt ra",
+        "compliance_status_trigger": "không tuân thủ quy định (từ điều 10, khoản 1 và 2 điều 11)",
+        "originator": "sinh viên",
+        "submission_type": "câu hỏi/vấn đề trực tuyến"
+      },
+      "target": {
+        "name": "hành động trả lời",
+        "action_nature": "phản hồi hoặc giải đáp vấn đề",
+        "status_conditional_on_compliance": "không được thực hiện nếu vấn đề không tuân thủ",
+        "intended_recipient": "sinh viên"
+      },
+      "type_source": "student_submission",
+      "type_target": "response_action",
+      "relation": "sẽ_không_nhận_được"
     }
   ]
 }

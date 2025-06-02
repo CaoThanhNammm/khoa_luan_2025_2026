@@ -1,190 +1,263 @@
 {
-  "entities": [
-    {
-      "name": "BIDV Smart banking",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "điện thoại di động",
-      "type": "DEVICE"
-    },
-    {
-      "name": "khách hàng",
-      "type": "PERSON_TYPE"
-    },
-    {
-      "name": "hệ thống",
-      "type": "SYSTEM"
-    },
-    {
-      "name": "ứng dụng BIDV Smart banking",
-      "type": "APPLICATION"
-    },
-    {
-      "name": "số điện thoại di động",
-      "type": "PHONE_NUMBER"
-    },
-    {
-      "name": "mật khẩu",
-      "type": "PASSWORD"
-    },
-    {
-      "name": "thanh toán",
-      "type": "ACTION"
-    },
-    {
-      "name": "Học phí_Lệ phí thi",
-      "type": "PAYMENT_TYPE"
-    },
-    {
-      "name": "nhà cung cấp",
-      "type": "ORGANIZATION_TYPE"
-    },
-    {
-      "name": "mã khách hàng",
-      "type": "CUSTOMER_ID"
-    },
-    {
-      "name": "nút “Tiếp tục”",
-      "type": "BUTTON"
-    },
-    {
-      "name": "hóa đơn",
-      "type": "BILL"
-    },
-    {
-      "name": "mã OTP",
-      "type": "OTP"
-    },
-    {
-      "name": "kết quả giao dịch",
-      "type": "TRANSACTION_RESULT"
-    },
-    {
-      "name": "màn hình BIDV Smart Banking",
-      "type": "DEVICE"
-    },
-    {
-      "name": "thông tin giao dịch của khách hàng",
-      "type": "CUSTOMER_TRANSACTION_INFO"
-    },
-    {
-      "name": "mục “Báo cáo giao dịch”",
-      "type": "REPORT_CATEGORY"
-    }
-  ],
   "relationships": [
     {
-      "source": "thanh toán",
-      "target": "BIDV Smart banking",
-      "relation": "QUA_KÊNH",
-      "type_source": "ACTION",
-      "type_target": "ORGANIZATION"
+      "source": {
+        "name": "Khách hàng",
+        "action_description": "đăng nhập hệ thống",
+        "step_number": "Bước 1",
+        "user_role": "người dùng"
+      },
+      "target": {
+        "name": "Hệ thống BIDV Smart banking",
+        "access_method": "qua ứng dụng BIDV Smart banking",
+        "platform_name": "BIDV Smart banking",
+        "login_requirement": "xác thực người dùng"
+      },
+      "type_source": "customer",
+      "type_target": "system",
+      "relation": "đăng_nhập_vào"
     },
     {
-      "source": "khách hàng",
-      "target": "hệ thống",
-      "relation": "ĐĂNG_NHẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "SYSTEM"
+      "source": {
+        "name": "Khách hàng",
+        "action_taken": "truy cập ứng dụng",
+        "step_number": "Bước 1",
+        "purpose_of_action": "để đăng nhập hệ thống"
+      },
+      "target": {
+        "name": "Ứng dụng BIDV Smart banking",
+        "application_type": "ngân hàng di động",
+        "provider": "BIDV",
+        "platform_device": "điện thoại di động"
+      },
+      "type_source": "customer",
+      "type_target": "application",
+      "relation": "truy_cập"
     },
     {
-      "source": "ứng dụng BIDV Smart banking",
-      "target": "điện thoại di động",
-      "relation": "TRÊN",
-      "type_source": "APPLICATION",
-      "type_target": "DEVICE"
+      "source": {
+        "name": "Ứng dụng BIDV Smart banking",
+        "application_name": "BIDV Smart banking",
+        "category": "mobile_banking_app",
+        "vendor": "BIDV"
+      },
+      "target": {
+        "name": "Điện thoại di động của khách hàng",
+        "device_type": "điện thoại di động",
+        "ownership": "của khách hàng",
+        "function_executed": "chạy ứng dụng"
+      },
+      "type_source": "application",
+      "type_target": "device",
+      "relation": "chạy_trên"
     },
     {
-      "source": "khách hàng",
-      "target": "ứng dụng BIDV Smart banking",
-      "relation": "TRUY_CẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "APPLICATION"
+      "source": {
+        "name": "Khách hàng",
+        "action_taken": "nhập thông tin",
+        "step_number": "Bước 2",
+        "purpose_of_action": "để đăng nhập"
+      },
+      "target": {
+        "name": "Số điện thoại di động",
+        "data_type": "thông tin xác thực",
+        "credential_part": "username_identifier",
+        "input_requirement": "để đăng nhập"
+      },
+      "type_source": "customer",
+      "type_target": "identifier",
+      "relation": "nhập"
     },
     {
-      "source": "khách hàng",
-      "target": "số điện thoại di động",
-      "relation": "NHẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "PHONE_NUMBER"
+      "source": {
+        "name": "Khách hàng",
+        "action_taken": "nhập thông tin",
+        "step_number": "Bước 2",
+        "purpose_of_action": "để đăng nhập"
+      },
+      "target": {
+        "name": "Mật khẩu",
+        "data_type": "thông tin xác thực",
+        "credential_part": "password",
+        "security_nature": "bí mật",
+        "input_requirement": "để đăng nhập"
+      },
+      "type_source": "customer",
+      "type_target": "credential",
+      "relation": "nhập"
     },
     {
-      "source": "khách hàng",
-      "target": "mật khẩu",
-      "relation": "NHẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "PASSWORD"
+      "source": {
+        "name": "Khách hàng",
+        "action_taken": "chọn mục",
+        "step_number": "Bước 3",
+        "user_interface_interaction": "lựa chọn menu"
+      },
+      "target": {
+        "name": "Mục thanh toán “Học phí_Lệ phí thi”",
+        "item_type": "menu_selection",
+        "label_text": "Học phí_Lệ phí thi",
+        "function_triggered": "khởi tạo quy trình thanh toán"
+      },
+      "type_source": "customer",
+      "type_target": "menu_item",
+      "relation": "chọn"
     },
     {
-      "source": "khách hàng",
-      "target": "Học phí_Lệ phí thi",
-      "relation": "CHỌN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "PAYMENT_TYPE"
+      "source": {
+        "name": "Khách hàng",
+        "action_taken": "chọn thông tin",
+        "step_number": "Bước 4",
+        "purpose_of_action": "để thanh toán hóa đơn"
+      },
+      "target": {
+        "name": "Nhà cung cấp",
+        "entity_role": "bên nhận thanh toán",
+        "selection_context": "quy trình thanh toán",
+        "category_type": "service_provider"
+      },
+      "type_source": "customer",
+      "type_target": "provider",
+      "relation": "chọn"
     },
     {
-      "source": "khách hàng",
-      "target": "nhà cung cấp",
-      "relation": "CHỌN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "ORGANIZATION_TYPE"
+      "source": {
+        "name": "Khách hàng",
+        "action_taken": "nhập dữ liệu",
+        "step_number": "Bước 4",
+        "purpose_of_action": "để thanh toán hóa đơn"
+      },
+      "target": {
+        "name": "Mã khách hàng",
+        "identifier_type": "customer_code",
+        "purpose_of_data": "định danh khách hàng với nhà cung cấp",
+        "input_context": "thanh toán hóa đơn"
+      },
+      "type_source": "customer",
+      "type_target": "customer_identifier",
+      "relation": "nhập"
     },
     {
-      "source": "khách hàng",
-      "target": "mã khách hàng",
-      "relation": "NHẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "CUSTOMER_ID"
+      "source": {
+        "name": "Khách hàng",
+        "action_taken": "nhấn nút",
+        "step_number": "Bước 4",
+        "purpose_of_action": "để thanh toán hóa đơn"
+      },
+      "target": {
+        "name": "Nút “Tiếp tục”",
+        "element_type": "button_control",
+        "label_text": "Tiếp tục",
+        "function_description": "chuyển sang bước kế tiếp của thanh toán",
+        "ui_context": "ứng dụng BIDV Smart banking"
+      },
+      "type_source": "customer",
+      "type_target": "ui_element",
+      "relation": "nhấn"
     },
     {
-      "source": "khách hàng",
-      "target": "nút “Tiếp tục”",
-      "relation": "NHẤN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "BUTTON"
+      "source": {
+        "name": "Khách hàng",
+        "action_taken": "xác nhận hành động",
+        "step_number": "Bước 5",
+        "subject_of_confirmation": "thanh toán"
+      },
+      "target": {
+        "name": "Thanh toán hóa đơn",
+        "process_type": "giao dịch tài chính",
+        "current_status": "chờ xác nhận cuối cùng",
+        "trigger_action": "xác nhận từ khách hàng"
+      },
+      "type_source": "customer",
+      "type_target": "transaction_process",
+      "relation": "xác_nhận"
     },
     {
-      "source": "thanh toán",
-      "target": "hóa đơn",
-      "relation": "THANH_TOÁN",
-      "type_source": "ACTION",
-      "type_target": "BILL"
+      "source": {
+        "name": "Khách hàng",
+        "action_taken": "nhập mã bảo mật",
+        "step_number": "Bước 5",
+        "purpose_of_action": "xác thực thanh toán hóa đơn"
+      },
+      "target": {
+        "name": "Mã OTP",
+        "code_type": "one_time_password",
+        "security_function": "xác thực giao dịch",
+        "validity_duration": "ngắn hạn",
+        "issuance_context": "thanh toán hóa đơn"
+      },
+      "type_source": "customer",
+      "type_target": "security_code",
+      "relation": "nhập"
     },
     {
-      "source": "khách hàng",
-      "target": "thanh toán",
-      "relation": "XÁC_NHẬN",
-      "type_source": "PERSON_TYPE",
-      "type_target": "ACTION"
+      "source": {
+        "name": "Mã OTP",
+        "code_type": "one_time_password",
+        "input_by": "Khách hàng",
+        "security_purpose": "xác thực"
+      },
+      "target": {
+        "name": "Thanh toán hóa đơn",
+        "process_type": "giao dịch tài chính",
+        "authentication_requirement": "Mã OTP",
+        "status_dependency": "phụ thuộc vào xác thực OTP"
+      },
+      "type_source": "security_code",
+      "type_target": "transaction_process",
+      "relation": "dùng_để_xác_thực"
     },
     {
-      "source": "khách hàng",
-      "target": "mã OTP",
-      "relation": "NHẬP",
-      "type_source": "PERSON_TYPE",
-      "type_target": "OTP"
+      "source": {
+        "name": "Hệ thống BIDV Smart banking",
+        "system_action": "phản hồi kết quả",
+        "step_number": "Bước 6",
+        "response_content": "kết quả giao dịch"
+      },
+      "target": {
+        "name": "Kết quả giao dịch",
+        "information_type": "trạng thái giao dịch",
+        "display_method": "hiển thị trên màn hình",
+        "data_origin": "Hệ thống BIDV Smart banking"
+      },
+      "type_source": "system",
+      "type_target": "transaction_result",
+      "relation": "trả_về"
     },
     {
-      "source": "hệ thống",
-      "target": "kết quả giao dịch",
-      "relation": "TRẢ_VỀ",
-      "type_source": "SYSTEM",
-      "type_target": "TRANSACTION_RESULT"
+      "source": {
+        "name": "Kết quả giao dịch",
+        "content_description": "thông tin trạng thái giao dịch",
+        "source_system": "Hệ thống BIDV Smart banking",
+        "recipient": "Khách hàng"
+      },
+      "target": {
+        "name": "Màn hình BIDV Smart Banking",
+        "interface_type": "user_display",
+        "application_name": "BIDV Smart Banking",
+        "purpose_of_display": "thông báo kết quả cho khách hàng"
+      },
+      "type_source": "transaction_result",
+      "type_target": "display_interface",
+      "relation": "hiển_thị_trên"
     },
     {
-      "source": "kết quả giao dịch",
-      "target": "màn hình BIDV Smart Banking",
-      "relation": "HIỂN_THỊ",
-      "type_source": "TRANSACTION_RESULT",
-      "type_target": "DEVICE"
-    },
-    {
-      "source": "thông tin giao dịch của khách hàng",
-      "target": "mục “Báo cáo giao dịch”",
-      "relation": "LƯU_TRỮ_TẠI",
-      "type_source": "CUSTOMER_TRANSACTION_INFO",
-      "type_target": "REPORT_CATEGORY"
+      "source": {
+        "name": "Thông tin giao dịch của khách hàng",
+        "data_category": "lịch sử giao dịch tài chính",
+        "associated_user": "khách hàng",
+        "storage_status": "sẽ được lưu"
+      },
+      "target": {
+        "name": "Mục “Báo cáo giao dịch”",
+        "section_type": "phần báo cáo trong ứng dụng",
+        "storage_function": "lưu trữ thông tin giao dịch",
+        "application_context": "BIDV Smart Banking",
+        "access_role": "khách hàng"
+      },
+      "type_source": "transaction_data",
+      "type_target": "report_section",
+      "relation": "được_lưu_tại"
     }
   ]
 }

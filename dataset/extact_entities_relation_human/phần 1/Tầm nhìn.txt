@@ -1,43 +1,49 @@
 {
-  "entities": [
-    {
-      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "type": "organization"
-    },
-    {
-      "name": "2035",
-      "type": "time"
-    },
-    {
-      "name": "trường đại học nghiên cứu",
-      "type": "type_of_organization"
-    },
-    {
-      "name": "chất lượng quốc tế",
-      "type": "concept"
-    }
-  ],
   "relationships": [
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "2035",
-      "relation": "MỤC_TIÊU_ĐẾN",
-      "type_source": "organization",
-      "type_target": "time"
+      "source": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "city_component": "TP.HCM",
+        "field_focus": "Nông Lâm"
+      },
+      "target": {
+        "name": "trường đại học nghiên cứu",
+        "type_description": "loại hình đại học",
+        "status_goal": "mục tiêu trở thành"
+      },
+      "type_source": "university",
+      "type_target": "university_type",
+      "relation": "hướng_tới_trở_thành"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "trường đại học nghiên cứu",
-      "relation": "SẼ_TRỞ_THÀNH",
-      "type_source": "organization",
-      "type_target": "type_of_organization"
+      "source": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "city_component": "TP.HCM",
+        "field_focus": "Nông Lâm"
+      },
+      "target": {
+        "name": "2035",
+        "unit_of_measure": "năm",
+        "event_context": "thời điểm hoàn thành mục tiêu chuyển đổi"
+      },
+      "type_source": "university",
+      "type_target": "date",
+      "relation": "mục_tiêu_thời_gian"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "chất lượng quốc tế",
-      "relation": "VỚI",
-      "type_source": "organization",
-      "type_target": "concept"
+      "source": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "city_component": "TP.HCM",
+        "field_focus": "Nông Lâm"
+      },
+      "target": {
+        "name": "chất lượng quốc tế",
+        "standard_type": "tiêu chuẩn chất lượng",
+        "scope_level": "quốc tế"
+      },
+      "type_source": "university",
+      "type_target": "quality_standard",
+      "relation": "phấn_đấu_chất_lượng"
     }
   ]
 }

@@ -1,209 +1,195 @@
 {
-  "entities": [
-    {
-      "name": "ĐÁNH GIÁ VỀ Ý THỨC THAM GIA CÁC HOẠT ĐỘNG CHÍNH TRỊ, XÃ HỘI, VĂN HÓA, VĂN NGHỆ, THỂ THAO, PHÒNG CHỐNG TỘI PHẠM VÀ CÁC TỆ NẠN XÃ HỘI",
-      "type": "title"
-    },
-    {
-      "name": "tiêu chí",
-      "type": "criterion"
-    },
-    {
-      "name": "điểm đánh giá",
-      "type": "assessment_score"
-    },
-    {
-      "name": "Ý thức",
-      "type": "awareness"
-    },
-    {
-      "name": "hiệu quả",
-      "type": "effectiveness"
-    },
-    {
-      "name": "hoạt động rèn luyện",
-      "type": "training_activity"
-    },
-    {
-      "name": "chính trị",
-      "type": "political"
-    },
-    {
-      "name": "xã hội",
-      "type": "social"
-    },
-    {
-      "name": "văn hóa",
-      "type": "cultural"
-    },
-    {
-      "name": "văn nghệ",
-      "type": "artistic"
-    },
-    {
-      "name": "thể thao",
-      "type": "sports"
-    },
-    {
-      "name": "hoạt động công ích",
-      "type": "public_interest_activity"
-    },
-    {
-      "name": "hoạt động tình nguyện",
-      "type": "volunteer_activity"
-    },
-    {
-      "name": "công tác xã hội",
-      "type": "social_work"
-    },
-    {
-      "name": "tuyên truyền",
-      "type": "propaganda"
-    },
-    {
-      "name": "phòng chống tội phạm",
-      "type": "crime_prevention"
-    },
-    {
-      "name": "tội phạm",
-      "type": "crime"
-    },
-    {
-      "name": "tệ nạn xã hội",
-      "type": "social_evil"
-    },
-    {
-      "name": "Khung điểm đánh giá",
-      "type": "assessment_scale"
-    },
-    {
-      "name": "0",
-      "type": "score"
-    },
-    {
-      "name": "20 điểm",
-      "type": "score"
-    }
-  ],
   "relationships": [
     {
-      "source": "tiêu chí",
-      "target": "điểm đánh giá",
-      "relation": "để_xác_định",
-      "type_source": "criterion",
-      "type_target": "assessment_score"
+      "source": {
+        "name": "Ý thức và hiệu quả tham gia các hoạt động rèn luyện về chính trị, xã hội, văn hóa, văn nghệ, thể thao",
+        "entity_type": "evaluation_criterion",
+        "evaluates_aspect": "ý thức và hiệu quả tham gia",
+        "activity_scope_description": "các hoạt động rèn luyện trên nhiều lĩnh vực"
+      },
+      "target": {
+        "name": "Điểm đánh giá",
+        "entity_type": "evaluation_score",
+        "purpose": "đo lường kết quả rèn luyện",
+        "basis_of_assessment": "các tiêu chí cụ thể"
+      },
+      "type_source": "evaluation_criterion",
+      "type_target": "evaluation_score",
+      "relation": "dùng_để_xác_định"
     },
     {
-      "source": "Ý thức",
-      "target": "hoạt động rèn luyện",
-      "relation": "tham_gia",
-      "type_source": "awareness",
-      "type_target": "training_activity"
+      "source": {
+        "name": "Ý thức và hiệu quả tham gia các hoạt động rèn luyện về chính trị, xã hội, văn hóa, văn nghệ, thể thao",
+        "entity_type": "evaluation_criterion",
+        "evaluates_aspect": "ý thức và hiệu quả tham gia",
+        "criterion_details": "đánh giá mức độ chủ động và kết quả đạt được"
+      },
+      "target": {
+        "name": "Các hoạt động rèn luyện về chính trị, xã hội, văn hóa, văn nghệ, thể thao",
+        "entity_type": "activity_set",
+        "included_domains": "chính trị, xã hội, văn hóa, văn nghệ, thể thao",
+        "activity_nature": "rèn luyện",
+        "purpose": "phát triển toàn diện"
+      },
+      "type_source": "evaluation_criterion",
+      "type_target": "activity_set",
+      "relation": "đánh_giá_sự_tham_gia_vào"
     },
     {
-      "source": "hiệu quả",
-      "target": "hoạt động rèn luyện",
-      "relation": "tham_gia",
-      "type_source": "effectiveness",
-      "type_target": "training_activity"
+      "source": {
+        "name": "Ý thức tham gia các hoạt động công ích, tình nguyện, công tác xã hội",
+        "entity_type": "evaluation_criterion",
+        "evaluates_aspect": "ý thức tham gia",
+        "activity_scope_description": "các hoạt động vì cộng đồng và xã hội"
+      },
+      "target": {
+        "name": "Điểm đánh giá",
+        "entity_type": "evaluation_score",
+        "purpose": "đo lường kết quả rèn luyện",
+        "basis_of_assessment": "các tiêu chí cụ thể"
+      },
+      "type_source": "evaluation_criterion",
+      "type_target": "evaluation_score",
+      "relation": "dùng_để_xác_định"
     },
     {
-      "source": "hoạt động rèn luyện",
-      "target": "chính trị",
-      "relation": "về",
-      "type_source": "training_activity",
-      "type_target": "political"
+      "source": {
+        "name": "Ý thức tham gia các hoạt động công ích, tình nguyện, công tác xã hội",
+        "entity_type": "evaluation_criterion",
+        "evaluates_aspect": "ý thức tham gia",
+        "criterion_details": "đánh giá mức độ tự nguyện và tinh thần trách nhiệm"
+      },
+      "target": {
+        "name": "Các hoạt động công ích, tình nguyện, công tác xã hội",
+        "entity_type": "activity_set",
+        "included_types": "công ích, tình nguyện, công tác xã hội",
+        "activity_nature": "đóng góp cho cộng đồng",
+        "expected_attitude": "tự nguyện, tích cực"
+      },
+      "type_source": "evaluation_criterion",
+      "type_target": "activity_set",
+      "relation": "đánh_giá_sự_tham_gia_vào"
     },
     {
-      "source": "hoạt động rèn luyện",
-      "target": "xã hội",
-      "relation": "về",
-      "type_source": "training_activity",
-      "type_target": "social"
+      "source": {
+        "name": "Tham gia tuyên truyền, phòng chống tội phạm và các tệ nạn xã hội",
+        "entity_type": "evaluation_criterion",
+        "evaluates_aspect": "tham gia",
+        "activity_scope_description": "các hoạt động tuyên truyền và phòng chống tiêu cực xã hội"
+      },
+      "target": {
+        "name": "Điểm đánh giá",
+        "entity_type": "evaluation_score",
+        "purpose": "đo lường kết quả rèn luyện",
+        "basis_of_assessment": "các tiêu chí cụ thể"
+      },
+      "type_source": "evaluation_criterion",
+      "type_target": "evaluation_score",
+      "relation": "dùng_để_xác_định"
     },
     {
-      "source": "hoạt động rèn luyện",
-      "target": "văn hóa",
-      "relation": "về",
-      "type_source": "training_activity",
-      "type_target": "cultural"
+      "source": {
+        "name": "Tham gia tuyên truyền, phòng chống tội phạm và các tệ nạn xã hội",
+        "entity_type": "evaluation_criterion",
+        "evaluates_aspect": "tham gia",
+        "criterion_details": "đánh giá mức độ tham gia vào các hoạt động cụ thể"
+      },
+      "target": {
+        "name": "Tuyên truyền",
+        "entity_type": "societal_action",
+        "purpose": "phổ biến, nâng cao nhận thức",
+        "target_audience": "cộng đồng, xã hội"
+      },
+      "type_source": "evaluation_criterion",
+      "type_target": "societal_action",
+      "relation": "đánh_giá_sự_tham_gia_vào"
     },
     {
-      "source": "hoạt động rèn luyện",
-      "target": "văn nghệ",
-      "relation": "về",
-      "type_source": "training_activity",
-      "type_target": "artistic"
+      "source": {
+        "name": "Tham gia tuyên truyền, phòng chống tội phạm và các tệ nạn xã hội",
+        "entity_type": "evaluation_criterion",
+        "evaluates_aspect": "tham gia",
+        "criterion_details": "đánh giá mức độ tham gia vào các hoạt động cụ thể"
+      },
+      "target": {
+        "name": "Phòng chống tội phạm",
+        "entity_type": "preventive_action",
+        "goal": "ngăn chặn và đấu tranh với tội phạm",
+        "scope_of_action": "an ninh trật tự xã hội"
+      },
+      "type_source": "evaluation_criterion",
+      "type_target": "preventive_action",
+      "relation": "đánh_giá_sự_tham_gia_vào"
     },
     {
-      "source": "hoạt động rèn luyện",
-      "target": "thể thao",
-      "relation": "về",
-      "type_source": "training_activity",
-      "type_target": "sports"
+      "source": {
+        "name": "Phòng chống tội phạm",
+        "entity_type": "preventive_action",
+        "goal": "ngăn chặn và đấu tranh với tội phạm",
+        "methodology": "tuyên truyền, phối hợp, tố giác"
+      },
+      "target": {
+        "name": "Tội phạm",
+        "entity_type": "social_issue",
+        "nature": "hành vi nguy hiểm cho xã hội",
+        "legal_implication": "vi phạm pháp luật hình sự"
+      },
+      "type_source": "preventive_action",
+      "type_target": "social_issue",
+      "relation": "nhằm_vào"
     },
     {
-      "source": "Ý thức",
-      "target": "hoạt động công ích",
-      "relation": "tham_gia",
-      "type_source": "awareness",
-      "type_target": "public_interest_activity"
+      "source": {
+        "name": "Tham gia tuyên truyền, phòng chống tội phạm và các tệ nạn xã hội",
+        "entity_type": "evaluation_criterion",
+        "evaluates_aspect": "tham gia",
+        "criterion_details": "đánh giá mức độ tham gia vào các hoạt động cụ thể"
+      },
+      "target": {
+        "name": "Phòng chống các tệ nạn xã hội",
+        "entity_type": "preventive_action",
+        "goal": "ngăn chặn và bài trừ tệ nạn xã hội",
+        "scope_of_action": "văn hóa, lối sống lành mạnh"
+      },
+      "type_source": "evaluation_criterion",
+      "type_target": "preventive_action",
+      "relation": "đánh_giá_sự_tham_gia_vào"
     },
     {
-      "source": "Ý thức",
-      "target": "hoạt động tình nguyện",
-      "relation": "tham_gia",
-      "type_source": "awareness",
-      "type_target": "volunteer_activity"
+      "source": {
+        "name": "Phòng chống các tệ nạn xã hội",
+        "entity_type": "preventive_action",
+        "goal": "ngăn chặn và bài trừ tệ nạn xã hội",
+        "methodology": "tuyên truyền, giáo dục, xây dựng môi trường văn hóa"
+      },
+      "target": {
+        "name": "Các tệ nạn xã hội",
+        "entity_type": "social_issue",
+        "nature": "hiện tượng tiêu cực trong xã hội",
+        "impact": "ảnh hưởng xấu đến đạo đức, sức khỏe, trật tự"
+      },
+      "type_source": "preventive_action",
+      "type_target": "social_issue",
+      "relation": "nhằm_vào"
     },
     {
-      "source": "Ý thức",
-      "target": "công tác xã hội",
-      "relation": "tham_gia",
-      "type_source": "awareness",
-      "type_target": "social_work"
-    },
-    {
-      "source": "Tham gia",
-      "target": "tuyên truyền",
-      "relation": "tham_gia",
-      "type_source": "RELATION",
-      "type_target": "propaganda"
-    },
-    {
-      "source": "Tham gia",
-      "target": "phòng chống tội phạm",
-      "relation": "tham_gia",
-      "type_source": "RELATION",
-      "type_target": "crime_prevention"
-    },
-    {
-      "source": "phòng chống tội phạm",
-      "target": "tội phạm",
-      "relation": "phòng_chống",
-      "type_source": "crime_prevention",
-      "type_target": "crime"
-    },
-    {
-      "source": "phòng chống tội phạm",
-      "target": "tệ nạn xã hội",
-      "relation": "và",
-      "type_source": "crime_prevention",
-      "type_target": "social_evil"
-    },
-    {
-      "source": "Khung điểm đánh giá",
-      "target": "0",
-      "relation": "từ_đến",
-      "type_source": "assessment_scale",
-      "type_target": "score"
-    },
-    {
-      "source": "Khung điểm đánh giá",
-      "target": "20 điểm",
-      "relation": "từ_đến",
-      "type_source": "assessment_scale",
-      "type_target": "score"
+      "source": {
+        "name": "Điểm đánh giá",
+        "entity_type": "evaluation_score",
+        "purpose": "đo lường kết quả rèn luyện",
+        "assessment_method": "dựa trên các tiêu chí và khung điểm"
+      },
+      "target": {
+        "name": "Khung điểm đánh giá từ 0 đến 20 điểm",
+        "entity_type": "scoring_framework",
+        "lower_bound": "0",
+        "upper_bound": "20",
+        "unit": "điểm",
+        "application": "dùng cho việc đánh giá các tiêu chí rèn luyện"
+      },
+      "type_source": "evaluation_score",
+      "type_target": "scoring_framework",
+      "relation": "có_khung_điểm_là"
     }
   ]
 }

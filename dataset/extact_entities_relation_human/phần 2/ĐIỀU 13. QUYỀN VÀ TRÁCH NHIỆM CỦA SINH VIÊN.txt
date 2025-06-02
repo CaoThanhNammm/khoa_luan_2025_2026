@@ -1,538 +1,667 @@
 {
-  "entities": [
-    {
-      "name": "ĐIỀU 13",
-      "type": "article"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "role"
-    },
-    {
-      "name": "tài khoản",
-      "type": "account"
-    },
-    {
-      "name": "lớp học",
-      "type": "virtual_location"
-    },
-    {
-      "name": "diễn đàn thảo luận",
-      "type": "platform_feature"
-    },
-    {
-      "name": "tài liệu học tập",
-      "type": "document"
-    },
-    {
-      "name": "hồ sơ cá nhân",
-      "type": "profile"
-    },
-    {
-      "name": "hình đại diện",
-      "type": "image"
-    },
-    {
-      "name": "tên thật",
-      "type": "personal_information"
-    },
-    {
-      "name": "chữ ký",
-      "type": "personal_information"
-    },
-    {
-      "name": "đường dẫn",
-      "type": "link"
-    },
-    {
-      "name": "hình thật",
-      "type": "image_type"
-    },
-    {
-      "name": "thuần phong mỹ tục",
-      "type": "cultural_standard"
-    },
-    {
-      "name": "dân tộc",
-      "type": "group"
-    },
-    {
-      "name": "đường link lớp học",
-      "type": "link"
-    },
-    {
-      "name": "người khác",
-      "type": "person"
-    },
-    {
-      "name": "hệ thống",
-      "type": "system"
-    },
-    {
-      "name": "quy định",
-      "type": "regulation"
-    },
-    {
-      "name": "nhiệm vụ",
-      "type": "task"
-    },
-    {
-      "name": "giảng viên",
-      "type": "role"
-    },
-    {
-      "name": "hệ thống đào tạo trực tuyến",
-      "type": "system"
-    },
-    {
-      "name": "thời hạn",
-      "type": "time_limit"
-    },
-    {
-      "name": "05 - 10 phút",
-      "type": "time_duration"
-    },
-    {
-      "name": "thời gian bắt đầu buổi học",
-      "type": "time_point"
-    },
-    {
-      "name": "tài khoản email sinh viên",
-      "type": "account"
-    },
-    {
-      "name": "trường",
-      "type": "organization"
-    },
-    {
-      "name": "micro",
-      "type": "device"
-    },
-    {
-      "name": "camera",
-      "type": "device"
-    },
-    {
-      "name": "nút giơ tay (Raise hand)",
-      "type": "button_ui"
-    },
-    {
-      "name": "nút Lower hand",
-      "type": "button_ui"
-    },
-    {
-      "name": "các buổi học",
-      "type": "event"
-    },
-    {
-      "name": "Trang phục lịch sự nghiêm túc",
-      "type": "dress_code"
-    },
-    {
-      "name": "thái độ chuẩn mực",
-      "type": "behavior"
-    },
-    {
-      "name": "lớp học trực tuyến",
-      "type": "virtual_location"
-    },
-    {
-      "name": "việc khác",
-      "type": "activity"
-    },
-    {
-      "name": "giờ học",
-      "type": "time_period"
-    },
-    {
-      "name": "không gian học tập yên tĩnh",
-      "type": "environment_condition"
-    },
-    {
-      "name": "tiếng ồn",
-      "type": "sound"
-    },
-    {
-      "name": "màn hình cá nhân",
-      "type": "screen"
-    },
-    {
-      "name": "nội dung không liên quan đến bài học",
-      "type": "content"
-    },
-    {
-      "name": "cửa sổ trao đổi",
-      "type": "platform_feature"
-    },
-    {
-      "name": "việc giảng bài",
-      "type": "activity"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh viên",
-      "target": "tài khoản",
-      "type_source": "role",
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "entitlement": "Được cung cấp tài khoản",
+        "usage_context": "Học tập và truy cập tài nguyên"
+      },
+      "target": {
+        "name": "Tài khoản",
+        "type": "Truy cập cá nhân",
+        "provision_status": "Được cung cấp",
+        "purpose": "Sử dụng các dịch vụ học tập trực tuyến"
+      },
+      "type_source": "student",
       "type_target": "account",
       "relation": "được_cung_cấp"
     },
     {
-      "source": "Sinh viên",
-      "target": "tài khoản",
-      "type_source": "role",
-      "type_target": "account",
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người dùng hệ thống",
+        "support_type_received": "Hướng dẫn sử dụng",
+        "entitlement": "Được hướng dẫn"
+      },
+      "target": {
+        "name": "Hệ thống học tập",
+        "user_guidance": "Cung cấp hướng dẫn",
+        "accessibility_support": "Hỗ trợ người dùng",
+        "user_group": "Sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "learning_system",
       "relation": "được_hướng_dẫn_sử_dụng"
     },
     {
-      "source": "Sinh viên",
-      "target": "tài khoản",
-      "type_source": "role",
-      "type_target": "account",
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người dùng hệ thống",
+        "support_type_received": "Hỗ trợ sử dụng",
+        "entitlement": "Được hỗ trợ"
+      },
+      "target": {
+        "name": "Hệ thống học tập",
+        "user_support": "Cung cấp hỗ trợ",
+        "functionality": "Hỗ trợ quá trình học tập",
+        "user_group": "Sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "learning_system",
       "relation": "được_hỗ_trợ_sử_dụng"
     },
     {
-      "source": "Sinh viên",
-      "target": "lớp học",
-      "type_source": "role",
-      "type_target": "virtual_location",
+      "source": {
+        "name": "Sinh viên",
+        "right_type": "Quyền truy cập",
+        "access_condition": "Lớp học đã đăng ký",
+        "activity_scope": "Tham gia học tập, diễn đàn"
+      },
+      "target": {
+        "name": "Lớp học",
+        "status_for_access": "Đã đăng ký",
+        "content_provided": "Tài liệu học tập, diễn đàn",
+        "participant_type": "Sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "class",
       "relation": "có_quyền_truy_cập_vào"
     },
     {
-      "source": "Sinh viên",
-      "target": "lớp học",
-      "type_source": "role",
-      "type_target": "virtual_location",
-      "relation": "tham_gia_học_tập_trong"
+      "source": {
+        "name": "Sinh viên",
+        "activity": "Tham gia học tập",
+        "platform": "Lớp học đã đăng ký",
+        "purpose": "Tiếp thu kiến thức"
+      },
+      "target": {
+        "name": "Lớp học",
+        "function": "Nơi diễn ra hoạt động học tập",
+        "participant_role": "Người học",
+        "registration_requirement": "Cần đăng ký"
+      },
+      "type_source": "student",
+      "type_target": "class",
+      "relation": "tham_gia_học_tập_trên"
     },
     {
-      "source": "Sinh viên",
-      "target": "diễn đàn thảo luận",
-      "type_source": "role",
-      "type_target": "platform_feature",
+      "source": {
+        "name": "Sinh viên",
+        "activity": "Tham gia diễn đàn thảo luận",
+        "location": "Trên các lớp học đã đăng ký",
+        "purpose": "Trao đổi, thảo luận học thuật"
+      },
+      "target": {
+        "name": "Diễn đàn thảo luận",
+        "context": "Thuộc các lớp học đã đăng ký",
+        "function": "Không gian trao đổi cho sinh viên",
+        "accessibility": "Cho sinh viên đã đăng ký lớp"
+      },
+      "type_source": "student",
+      "type_target": "discussion_forum",
       "relation": "tham_gia_vào"
     },
     {
-      "source": "diễn đàn thảo luận",
-      "target": "lớp học",
-      "type_source": "platform_feature",
-      "type_target": "virtual_location",
-      "relation": "thuộc"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "lớp học",
-      "type_source": "role",
-      "type_target": "virtual_location",
-      "relation": "đăng_ký"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "tài liệu học tập",
-      "type_source": "role",
-      "type_target": "document",
+      "source": {
+        "name": "Sinh viên",
+        "entitlement": "Được cung cấp tài liệu học tập",
+        "scope_of_materials": "Của lớp học",
+        "quantity": "Đầy đủ"
+      },
+      "target": {
+        "name": "Tài liệu học tập",
+        "source_location": "Lớp học",
+        "provision_status": "Được cung cấp đầy đủ",
+        "user": "Sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "learning_material",
       "relation": "được_cung_cấp"
     },
     {
-      "source": "tài liệu học tập",
-      "target": "lớp học",
-      "type_source": "document",
-      "type_target": "virtual_location",
-      "relation": "của"
+      "source": {
+        "name": "Sinh viên",
+        "right_type": "Quyền bổ sung thông tin",
+        "information_types": "Hình đại diện, tên thật, chữ ký",
+        "location_of_information": "Hồ sơ cá nhân"
+      },
+      "target": {
+        "name": "Hồ sơ cá nhân",
+        "owner": "Sinh viên",
+        "modifiable_content": "Thông tin cá nhân (hình đại diện, tên thật, chữ ký)",
+        "purpose": "Thể hiện thông tin người dùng"
+      },
+      "type_source": "student",
+      "type_target": "personal_profile",
+      "relation": "có_quyền_bổ_sung_thông_tin_vào"
     },
     {
-      "source": "Sinh viên",
-      "target": "hồ sơ cá nhân",
-      "type_source": "role",
-      "type_target": "profile",
-      "relation": "có_quyền_bổ_sung_thông_tin_trong"
+      "source": {
+        "name": "Hình đại diện",
+        "type": "Thông tin cá nhân",
+        "ownership_status": "Thuộc quyền sở hữu riêng của sinh viên",
+        "restriction_1": "Không được kèm đường dẫn"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role_as_owner": "Chủ sở hữu thông tin cá nhân",
+        "owned_item_example_1": "Hình đại diện",
+        "owned_item_example_2": "Chữ ký"
+      },
+      "type_source": "avatar_image",
+      "type_target": "student",
+      "relation": "thuộc_quyền_sở_hữu_của"
     },
     {
-      "source": "hình đại diện",
-      "target": "hồ sơ cá nhân",
-      "type_source": "image",
-      "type_target": "profile",
-      "relation": "là_thông_tin_trong"
+      "source": {
+        "name": "Chữ ký",
+        "type": "Thông tin cá nhân",
+        "ownership_status": "Thuộc quyền sở hữu riêng của sinh viên",
+        "restriction_1": "Không được kèm đường dẫn"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role_as_owner": "Chủ sở hữu thông tin cá nhân",
+        "owned_item_example_1": "Hình đại diện",
+        "owned_item_example_2": "Chữ ký"
+      },
+      "type_source": "signature",
+      "type_target": "student",
+      "relation": "thuộc_quyền_sở_hữu_của"
     },
     {
-      "source": "tên thật",
-      "target": "hồ sơ cá nhân",
-      "type_source": "personal_information",
-      "type_target": "profile",
-      "relation": "là_thông_tin_trong"
-    },
-    {
-      "source": "chữ ký",
-      "target": "hồ sơ cá nhân",
-      "type_source": "personal_information",
-      "type_target": "profile",
-      "relation": "là_thông_tin_trong"
-    },
-    {
-      "source": "hình đại diện",
-      "target": "Sinh viên",
-      "type_source": "image",
-      "type_target": "role",
-      "relation": "thuộc_sở_hữu_riêng_của"
-    },
-    {
-      "source": "tên thật",
-      "target": "Sinh viên",
-      "type_source": "personal_information",
-      "type_target": "role",
-      "relation": "thuộc_sở_hữu_riêng_của"
-    },
-    {
-      "source": "chữ ký",
-      "target": "Sinh viên",
-      "type_source": "personal_information",
-      "type_target": "role",
-      "relation": "thuộc_sở_hữu_riêng_của"
-    },
-    {
-      "source": "hình đại diện",
-      "target": "đường dẫn",
-      "type_source": "image",
+      "source": {
+        "name": "Hình đại diện",
+        "content_requirement_1": "Hình thật",
+        "content_requirement_2": "Chụp nghiêm túc",
+        "content_requirement_3": "Không vi phạm thuần phong mỹ tục"
+      },
+      "target": {
+        "name": "Đường dẫn",
+        "association_restriction": "Không được kèm theo hình đại diện",
+        "type": "Liên kết web",
+        "context_of_restriction": "Thông tin cá nhân trong hồ sơ"
+      },
+      "type_source": "avatar_image",
       "type_target": "link",
       "relation": "không_được_kèm"
     },
     {
-      "source": "chữ ký",
-      "target": "đường dẫn",
-      "type_source": "personal_information",
+      "source": {
+        "name": "Chữ ký",
+        "content_type": "Thông tin cá nhân",
+        "usage_location": "Hồ sơ cá nhân",
+        "format_restriction": "Không được kèm đường dẫn"
+      },
+      "target": {
+        "name": "Đường dẫn",
+        "association_restriction": "Không được kèm theo chữ ký",
+        "type": "Liên kết web",
+        "context_of_restriction": "Thông tin cá nhân trong hồ sơ"
+      },
+      "type_source": "signature",
       "type_target": "link",
       "relation": "không_được_kèm"
     },
     {
-      "source": "hình đại diện",
-      "target": "hình thật",
-      "type_source": "image",
-      "type_target": "image_type",
-      "relation": "phải_là"
-    },
-    {
-      "source": "hình đại diện",
-      "target": "thuần phong mỹ tục",
-      "type_source": "image",
-      "type_target": "cultural_standard",
+      "source": {
+        "name": "Hình ảnh đại diện",
+        "requirement_type_1": "Hình thật",
+        "requirement_type_2": "Chụp nghiêm túc",
+        "requirement_type_3": "Không vi phạm thuần phong mỹ tục"
+      },
+      "target": {
+        "name": "Thuần phong mỹ tục",
+        "nature": "Giá trị văn hóa, đạo đức",
+        "application_context": "Hình ảnh đại diện của sinh viên",
+        "violation_consequence": "Bị cấm sử dụng"
+      },
+      "type_source": "avatar_image",
+      "type_target": "fine_customs_and_traditions",
       "relation": "không_vi_phạm"
     },
     {
-      "source": "Sinh viên",
-      "target": "đường link lớp học",
-      "type_source": "role",
-      "type_target": "link",
+      "source": {
+        "name": "Quy định chung",
+        "scope": "Sử dụng hình ảnh",
+        "stipulation": "Nghiêm cấm sử dụng hình ảnh không phù hợp",
+        "standard_reference": "Thuần phong mỹ tục của dân tộc"
+      },
+      "target": {
+        "name": "Hình ảnh không phù hợp với thuần phong mỹ tục",
+        "characteristic": "Không phù hợp văn hóa, đạo đức",
+        "usage_status": "Bị nghiêm cấm",
+        "context": "Đặc biệt là hình ảnh đại diện"
+      },
+      "type_source": "general_regulation",
+      "type_target": "inappropriate_image",
+      "relation": "nghiêm_cấm_sử_dụng"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "obligation": "Giữ bí mật đường link lớp học",
+        "responsibility_scope": "Bảo mật thông tin lớp học",
+        "restricted_action": "Chia sẻ cho người khác"
+      },
+      "target": {
+        "name": "Đường link lớp học",
+        "confidentiality_level": "Cao",
+        "access_control": "Hạn chế, không chia sẻ cho người ngoài",
+        "purpose": "Truy cập vào không gian học tập riêng tư"
+      },
+      "type_source": "student",
+      "type_target": "class_link",
       "relation": "phải_giữ_bí_mật"
     },
     {
-      "source": "Sinh viên",
-      "target": "đường link lớp học",
-      "type_source": "role",
-      "type_target": "link",
-      "relation": "không_chia_sẻ_cho"
+      "source": {
+        "name": "Sinh viên",
+        "action_restriction": "Không chia sẻ đường link lớp học",
+        "target_audience_of_restriction": "Người khác (không phải thành viên lớp)",
+        "item_to_be_protected": "Đường link lớp học"
+      },
+      "target": {
+        "name": "Người khác",
+        "description": "Cá nhân không phải là thành viên của lớp học",
+        "information_access_status": "Không được nhận đường link lớp học từ sinh viên",
+        "role_in_context": "Bên thứ ba không có quyền truy cập"
+      },
+      "type_source": "student",
+      "type_target": "other_person",
+      "relation": "không_được_chia_sẻ_đường_link_lớp_học_cho"
     },
     {
-      "source": "Sinh viên",
-      "target": "người khác",
-      "type_source": "role",
-      "type_target": "person",
-      "relation": "không_chia_sẻ_đường_link_lớp_học_cho"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "tài khoản",
-      "type_source": "role",
+      "source": {
+        "name": "Sinh viên",
+        "responsibility": "Tự bảo vệ tài khoản",
+        "accountability_scope": "Thông tin và hoạt động trên tài khoản",
+        "consequence_of_negligence": "Tự chịu trách nhiệm"
+      },
+      "target": {
+        "name": "Tài khoản",
+        "owner": "Sinh viên",
+        "security_requirement": "Cần được bảo vệ bởi chủ sở hữu",
+        "vulnerability": "Sử dụng sai mục đích bởi người khác"
+      },
+      "type_source": "student",
       "type_target": "account",
       "relation": "phải_tự_bảo_vệ"
     },
     {
-      "source": "Sinh viên",
-      "target": "hệ thống",
-      "type_source": "role",
-      "type_target": "system",
-      "relation": "chịu_trách_nhiệm_về_thông_tin_đưa_lên"
+      "source": {
+        "name": "Sinh viên",
+        "responsibility": "Tự chịu trách nhiệm",
+        "scope_of_responsibility_1": "Thông tin đưa lên hệ thống",
+        "scope_of_responsibility_2": "Để người khác sử dụng tài khoản sai mục đích/quy định"
+      },
+      "target": {
+        "name": "Thông tin đưa lên hệ thống",
+        "originator": "Sinh viên",
+        "platform": "Hệ thống học tập",
+        "accountability_holder": "Sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "system_uploaded_information",
+      "relation": "phải_tự_chịu_trách_nhiệm_về"
     },
     {
-      "source": "Sinh viên",
-      "target": "tài khoản",
-      "type_source": "role",
-      "type_target": "account",
-      "relation": "chịu_trách_nhiệm_về_việc_để_người_khác_sử_dụng"
+      "source": {
+        "name": "Sinh viên",
+        "responsibility_for_action": "Chịu trách nhiệm nếu tài khoản bị lạm dụng",
+        "preventive_action_implied": "Bảo vệ tài khoản",
+        "account_owner": "Chính sinh viên"
+      },
+      "target": {
+        "name": "Việc người khác sử dụng tài khoản của sinh viên",
+        "actor": "Người khác (không phải chủ tài khoản)",
+        "nature_of_misuse_1": "Sai mục đích",
+        "nature_of_misuse_2": "Không đúng với quy định"
+      },
+      "type_source": "student",
+      "type_target": "unauthorized_account_usage_by_others",
+      "relation": "phải_chịu_trách_nhiệm_về"
     },
     {
-      "source": "Sinh viên",
-      "target": "nhiệm vụ",
-      "type_source": "role",
+      "source": {
+        "name": "Giảng viên",
+        "role": "Người hướng dẫn học tập",
+        "action": "Giao nhiệm vụ",
+        "platform_for_assignment": "Hệ thống đào tạo trực tuyến"
+      },
+      "target": {
+        "name": "Nhiệm vụ",
+        "assignee": "Sinh viên",
+        "delivery_method": "Giao trên hệ thống đào tạo trực tuyến",
+        "completion_requirement": "Theo đúng thời hạn quy định"
+      },
+      "type_source": "lecturer",
+      "type_target": "task",
+      "relation": "giao"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "obligation": "Hoàn thành nhiệm vụ",
+        "deadline_compliance": "Theo đúng thời hạn quy định",
+        "task_source": "Do giảng viên giao trên hệ thống"
+      },
+      "target": {
+        "name": "Nhiệm vụ",
+        "assigned_by": "Giảng viên",
+        "platform": "Hệ thống đào tạo trực tuyến",
+        "status_goal": "Hoàn thành"
+      },
+      "type_source": "student",
       "type_target": "task",
       "relation": "phải_hoàn_thành"
     },
     {
-      "source": "nhiệm vụ",
-      "target": "giảng viên",
-      "type_source": "task",
-      "type_target": "role",
-      "relation": "được_giao_bởi"
+      "source": {
+        "name": "Sinh viên",
+        "action_requirement": "Đăng nhập vào lớp",
+        "timing_detail": "Trước từ 05 - 10 phút so với thời gian bắt đầu buổi học",
+        "login_credential": "Tài khoản email sinh viên do trường cấp"
+      },
+      "target": {
+        "name": "Lớp học",
+        "event_start_time_reference": "Thời gian bắt đầu buổi học",
+        "access_method": "Đăng nhập bằng tài khoản email sinh viên",
+        "participant_type": "Sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "class",
+      "relation": "đăng_nhập_vào_trước_giờ_học"
     },
     {
-      "source": "nhiệm vụ",
-      "target": "hệ thống đào tạo trực tuyến",
-      "type_source": "task",
-      "type_target": "system",
-      "relation": "trên"
+      "source": {
+        "name": "Trường",
+        "role": "Đơn vị cung cấp",
+        "item_provided": "Tài khoản email sinh viên",
+        "purpose_of_provision": "Phục vụ học tập của sinh viên"
+      },
+      "target": {
+        "name": "Tài khoản email sinh viên",
+        "provider": "Trường",
+        "user": "Sinh viên",
+        "usage_purpose": "Đăng nhập lớp học, nhận thông tin"
+      },
+      "type_source": "institution",
+      "type_target": "student_email_account",
+      "relation": "cấp"
     },
     {
-      "source": "Sinh viên",
-      "target": "thời hạn",
-      "type_source": "role",
-      "type_target": "time_limit",
-      "relation": "phải_hoàn_thành_nhiệm_vụ_theo_đúng"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "lớp học",
-      "type_source": "role",
-      "type_target": "virtual_location",
-      "relation": "phải_đăng_nhập_vào"
-    },
-    {
-        "source": "Sinh viên",
-        "target": "thời gian bắt đầu buổi học",
-        "type_source": "role",
-        "type_target": "time_point",
-        "relation": "phải_đăng_nhập_trước"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "tài khoản email sinh viên",
-      "type_source": "role",
-      "type_target": "account",
-      "relation": "đăng_nhập_bằng"
-    },
-    {
-      "source": "tài khoản email sinh viên",
-      "target": "trường",
-      "type_source": "account",
-      "type_target": "organization",
-      "relation": "do_cấp"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "micro",
-      "type_source": "role",
-      "type_target": "device",
+      "source": {
+        "name": "Sinh viên",
+        "action_requirement": "Kiểm tra micro",
+        "desired_status_of_equipment": "Sẵn sàng",
+        "timing_of_check": "Trước khi buổi học bắt đầu"
+      },
+      "target": {
+        "name": "Micro",
+        "function": "Thu âm thanh",
+        "check_requirement": "Cần được kiểm tra bởi sinh viên",
+        "state_before_class": "Sẵn sàng"
+      },
+      "type_source": "student",
+      "type_target": "microphone",
       "relation": "phải_kiểm_tra"
     },
     {
-      "source": "Sinh viên",
-      "target": "camera",
-      "type_source": "role",
-      "type_target": "device",
+      "source": {
+        "name": "Sinh viên",
+        "action_requirement": "Kiểm tra camera",
+        "desired_status_of_equipment": "Sẵn sàng",
+        "timing_of_check": "Trước khi buổi học bắt đầu"
+      },
+      "target": {
+        "name": "Camera",
+        "function": "Ghi hình ảnh",
+        "check_requirement": "Cần được kiểm tra bởi sinh viên",
+        "state_before_class": "Sẵn sàng"
+      },
+      "type_source": "student",
+      "type_target": "camera",
       "relation": "phải_kiểm_tra"
     },
     {
-      "source": "Sinh viên",
-      "target": "micro",
-      "type_source": "role",
-      "type_target": "device",
-      "relation": "phải_tắt_khi_lớp_học_bắt_đầu"
+      "source": {
+        "name": "Sinh viên",
+        "action_requirement": "Tắt micro",
+        "condition_for_action_1": "Khi lớp học bắt đầu",
+        "condition_for_action_2": "Sau khi trao đổi xong"
+      },
+      "target": {
+        "name": "Micro",
+        "control_action": "Tắt",
+        "controlled_by": "Sinh viên",
+        "purpose_of_action": "Đảm bảo trật tự lớp học"
+      },
+      "type_source": "student",
+      "type_target": "microphone",
+      "relation": "phải_tắt"
     },
     {
-      "source": "Sinh viên",
-      "target": "nút giơ tay (Raise hand)",
-      "type_source": "role",
-      "type_target": "button_ui",
-      "relation": "phải_nhấn_khi_muốn_phát_biểu"
+      "source": {
+        "name": "Sinh viên",
+        "action": "Nhấn nút giơ tay (Raise hand)",
+        "condition_for_action": "Khi muốn phát biểu",
+        "purpose_of_action": "Xin phép phát biểu"
+      },
+      "target": {
+        "name": "Nút giơ tay (Raise hand)",
+        "function": "Tín hiệu xin phát biểu",
+        "user_interaction": "Nhấn",
+        "platform_feature": "Tính năng trong lớp học trực tuyến"
+      },
+      "type_source": "student",
+      "type_target": "raise_hand_button",
+      "relation": "nhấn"
     },
     {
-      "source": "Sinh viên",
-      "target": "micro",
-      "type_source": "role",
-      "type_target": "device",
-      "relation": "chỉ_mở_khi_được_cho_phép"
+      "source": {
+        "name": "Sinh viên",
+        "action_rule": "Chỉ mở micro và phát biểu",
+        "condition_for_action": "Khi được cho phép",
+        "subsequent_action": "Tắt micro trở lại sau khi trao đổi"
+      },
+      "target": {
+        "name": "Quyền phát biểu",
+        "granter": "Giảng viên (ngầm định)",
+        "receiver": "Sinh viên",
+        "accompanying_action": "Mở micro"
+      },
+      "type_source": "student",
+      "type_target": "speaking_permission",
+      "relation": "chỉ_phát_biểu_khi_được_cho_phép"
     },
     {
-      "source": "Sinh viên",
-      "target": "micro",
-      "type_source": "role",
-      "type_target": "device",
-      "relation": "phải_tắt_sau_khi_trao_đổi_xong"
+      "source": {
+        "name": "Sinh viên",
+        "action": "Bấm nút Lower hand",
+        "condition_for_action": "Sau khi trao đổi xong",
+        "purpose_of_action": "Kết thúc lượt phát biểu"
+      },
+      "target": {
+        "name": "Nút Lower hand",
+        "function": "Hạ tín hiệu giơ tay",
+        "user_interaction": "Bấm",
+        "platform_feature": "Tính năng trong lớp học trực tuyến"
+      },
+      "type_source": "student",
+      "type_target": "lower_hand_button",
+      "relation": "bấm"
     },
     {
-      "source": "Sinh viên",
-      "target": "nút Lower hand",
-      "type_source": "role",
-      "type_target": "button_ui",
-      "relation": "phải_bấm_sau_khi_trao_đổi_xong"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "các buổi học",
-      "type_source": "role",
-      "type_target": "event",
+      "source": {
+        "name": "Sinh viên",
+        "obligation": "Tham gia đầy đủ các buổi học",
+        "compliance_standard": "Theo quy định",
+        "context": "Lớp học trực tuyến"
+      },
+      "target": {
+        "name": "Buổi học",
+        "attendance_requirement": "Đầy đủ",
+        "participant": "Sinh viên",
+        "format": "Trực tuyến"
+      },
+      "type_source": "student",
+      "type_target": "class_session",
       "relation": "phải_tham_gia_đầy_đủ"
     },
     {
-      "source": "Sinh viên",
-      "target": "Trang phục lịch sự nghiêm túc",
-      "type_source": "role",
-      "type_target": "dress_code",
-      "relation": "phải_mặc"
+      "source": {
+        "name": "Sinh viên",
+        "behavioral_requirement_1": "Trang phục lịch sự nghiêm túc",
+        "behavioral_requirement_2": "Thái độ chuẩn mực",
+        "context": "Khi tham gia lớp học trực tuyến"
+      },
+      "target": {
+        "name": "Trang phục",
+        "standard": "Lịch sự nghiêm túc",
+        "user": "Sinh viên",
+        "occasion": "Tham gia lớp học trực tuyến"
+      },
+      "type_source": "student",
+      "type_target": "attire",
+      "relation": "phải_có"
+    },
+     {
+      "source": {
+        "name": "Sinh viên",
+        "behavioral_requirement_1": "Trang phục lịch sự nghiêm túc",
+        "behavioral_requirement_2": "Thái độ chuẩn mực",
+        "context": "Khi tham gia lớp học trực tuyến"
+      },
+      "target": {
+        "name": "Thái độ chuẩn mực",
+        "expected_from": "Sinh viên",
+        "importance": "Duy trì môi trường học tập tôn trọng",
+        "context": "Lớp học trực tuyến"
+      },
+      "type_source": "student",
+      "type_target": "proper_attitude",
+      "relation": "phải_có"
     },
     {
-      "source": "Sinh viên",
-      "target": "thái độ chuẩn mực",
-      "type_source": "role",
-      "type_target": "behavior",
-      "relation": "phải_có_khi_tham_gia_lớp_học_trực_tuyến"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "việc khác",
-      "type_source": "role",
-      "type_target": "activity",
+      "source": {
+        "name": "Sinh viên",
+        "action_restriction": "Không làm việc khác",
+        "time_context": "Trong giờ học",
+        "purpose_of_restriction": "Tập trung vào bài học"
+      },
+      "target": {
+        "name": "Việc khác (không liên quan học tập)",
+        "status_during_class": "Bị cấm",
+        "reason_for_prohibition": "Gây mất tập trung, ảnh hưởng lớp học",
+        "actor_restriction": "Sinh viên"
+      },
+      "type_source": "student",
+      "type_target": "unrelated_activities",
       "relation": "không_làm_trong_giờ_học"
     },
     {
-      "source": "Sinh viên",
-      "target": "không gian học tập yên tĩnh",
-      "type_source": "role",
-      "type_target": "environment_condition",
+      "source": {
+        "name": "Sinh viên",
+        "responsibility": "Đảm bảo không gian học tập yên tĩnh",
+        "environmental_condition_1": "Yên tĩnh",
+        "environmental_condition_2": "Không bị ảnh hưởng bởi tiếng ồn"
+      },
+      "target": {
+        "name": "Không gian học tập",
+        "required_state": "Yên tĩnh",
+        "maintained_by": "Sinh viên",
+        "potential_disruption": "Tiếng ồn"
+      },
+      "type_source": "student",
+      "type_target": "study_space",
       "relation": "phải_đảm_bảo"
     },
     {
-      "source": "Sinh viên",
-      "target": "màn hình cá nhân",
-      "type_source": "role",
-      "type_target": "screen",
-      "relation": "chỉ_chia_sẻ_khi_được_sự_đồng_ý_của_giảng_viên"
+      "source": {
+        "name": "Sinh viên",
+        "action_permission": "Chỉ được chia sẻ màn hình cá nhân",
+        "condition_for_action": "Khi được sự đồng ý của giảng viên",
+        "purpose_of_sharing": "Trình bày, thảo luận liên quan bài học"
+      },
+      "target": {
+        "name": "Màn hình cá nhân",
+        "owner": "Sinh viên",
+        "sharing_policy": "Chỉ chia sẻ khi có sự đồng ý của giảng viên",
+        "content_type_implied": "Liên quan đến nội dung học tập"
+      },
+      "type_source": "student",
+      "type_target": "personal_screen",
+      "relation": "chỉ_được_chia_sẻ_khi_giảng_viên_đồng_ý"
     },
     {
-      "source": "Sinh viên",
-      "target": "nội dung không liên quan đến bài học",
-      "type_source": "role",
-      "type_target": "content",
+      "source": {
+        "name": "Giảng viên",
+        "role": "Người điều phối lớp học",
+        "authority": "Cho phép chia sẻ màn hình",
+        "recipient_of_permission": "Sinh viên"
+      },
+      "target": {
+        "name": "Việc chia sẻ màn hình cá nhân của sinh viên",
+        "actor_requesting_permission": "Sinh viên",
+        "permission_granter": "Giảng viên",
+        "status_before_permission": "Không được phép"
+      },
+      "type_source": "lecturer",
+      "type_target": "student_screen_sharing_action",
+      "relation": "đồng_ý_cho"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "action_restriction": "Không bàn luận những nội dung không liên quan đến bài học",
+        "platform_of_restriction": "Cửa sổ trao đổi",
+        "negative_impact_avoided": "Gián đoạn việc giảng bài, ảnh hưởng lớp học"
+      },
+      "target": {
+        "name": "Nội dung không liên quan đến bài học",
+        "discussion_status": "Bị cấm trên cửa sổ trao đổi",
+        "reason_for_prohibition": "Gây gián đoạn, ảnh hưởng lớp học",
+        "scope": "Trong quá trình học"
+      },
+      "type_source": "student",
+      "type_target": "irrelevant_content",
       "relation": "không_bàn_luận_trên_cửa_sổ_trao_đổi"
     },
     {
-      "source": "bàn luận nội dung không liên quan",
-      "target": "việc giảng bài",
-      "type_source": "activity",
-      "type_target": "activity",
+      "source": {
+        "name": "Việc bàn luận nội dung không liên quan đến bài học",
+        "actor_if_occurs": "Sinh viên",
+        "consequence_1": "Làm gián đoạn việc giảng bài",
+        "consequence_2": "Ảnh hưởng tới lớp học"
+      },
+      "target": {
+        "name": "Việc giảng bài",
+        "vulnerability": "Bị gián đoạn bởi thảo luận không liên quan",
+        "desired_flow": "Liên tục, không bị ngắt quãng",
+        "importance": "Truyền đạt kiến thức hiệu quả"
+      },
+      "type_source": "discussion_of_irrelevant_content",
+      "type_target": "lecturing_activity",
       "relation": "làm_gián_đoạn"
     },
     {
-      "source": "bàn luận nội dung không liên quan",
-      "target": "lớp học",
-      "type_source": "activity",
-      "type_target": "virtual_location",
+      "source": {
+        "name": "Việc bàn luận nội dung không liên quan đến bài học",
+        "actor_if_occurs": "Sinh viên",
+        "consequence_1": "Làm gián đoạn việc giảng bài",
+        "consequence_2": "Ảnh hưởng tới lớp học"
+      },
+      "target": {
+        "name": "Lớp học",
+        "vulnerability": "Bị ảnh hưởng bởi thảo luận không liên quan",
+        "desired_environment": "Tập trung, hiệu quả",
+        "affected_aspect": "Không khí và tiến độ học tập"
+      },
+      "type_source": "discussion_of_irrelevant_content",
+      "type_target": "class",
       "relation": "ảnh_hưởng_tới"
-    },
-    {
-        "source": "ĐIỀU 13",
-        "target": "Sinh viên",
-        "type_source": "article",
-        "type_target": "role",
-        "relation": "quy_định_quyền_và_trách_nhiệm_của"
     }
   ]
 }

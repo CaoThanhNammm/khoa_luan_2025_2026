@@ -1,128 +1,174 @@
 {
-  "entities": [
-    {
-      "name": "thắc mắc, kiến nghị",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "sinh viên",
-      "type": "PERSON_GROUP"
-    },
-    {
-      "name": "người có thẩm quyền",
-      "type": "PERSON"
-    },
-    {
-      "name": "trao đổi trực tiếp",
-      "type": "METHOD"
-    },
-    {
-      "name": "gửi thư qua email",
-      "type": "METHOD"
-    },
-    {
-      "name": "viết đơn",
-      "type": "METHOD"
-    },
-    {
-      "name": "minh chứng cụ thể",
-      "type": "EVIDENCE"
-    },
-    {
-      "name": "bản in",
-      "type": "MEDIUM"
-    },
-    {
-      "name": "photocopy",
-      "type": "MEDIUM"
-    },
-    {
-      "name": "trực tuyến trên website",
-      "type": "METHOD"
-    },
-    {
-      "name": "website",
-      "type": "PLATFORM"
-    },
-    {
-      "name": "Nhà Trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "điện thoại",
-      "type": "COMMUNICATION_CHANNEL"
-    }
-  ],
   "relationships": [
     {
-      "source": "thắc mắc, kiến nghị",
-      "target": "sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Thắc mắc, kiến nghị",
+        "description": "Các vấn đề hoặc đề xuất của sinh viên",
+        "originator_group": "Sinh viên",
+        "handling_requirement": "Cần được chuyển tới người có thẩm quyền"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Người đưa ra thắc mắc, kiến nghị",
+        "affiliation": "Thuộc Nhà Trường (ngầm định)",
+        "action_described": "Có thắc mắc, kiến nghị"
+      },
+      "type_source": "abstract_concept",
+      "type_target": "person_role",
+      "relation": "của"
     },
     {
-      "source": "thắc mắc, kiến nghị",
-      "target": "người có thẩm quyền",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON",
-      "relation": "CHUYỂN_TỚI"
+      "source": {
+        "name": "Thắc mắc, kiến nghị",
+        "description": "Các vấn đề hoặc đề xuất của sinh viên",
+        "status_flow": "Sẽ được chuyển tới",
+        "resolution_authority": "Người có thẩm quyền giải quyết"
+      },
+      "target": {
+        "name": "Người có thẩm quyền giải quyết",
+        "responsibility": "Giải quyết các thắc mắc, kiến nghị",
+        "recipient_of": "Thắc mắc, kiến nghị",
+        "authority_level": "Có thẩm quyền"
+      },
+      "type_source": "abstract_concept",
+      "type_target": "person_role",
+      "relation": "được_chuyển_tới"
     },
     {
-      "source": "gửi thư qua email",
-      "target": "email",
-      "type_source": "METHOD",
-      "type_target": "COMMUNICATION_CHANNEL",
-      "relation": "QUA"
+      "source": {
+        "name": "Thắc mắc, kiến nghị",
+        "description": "Các vấn đề hoặc đề xuất của sinh viên",
+        "submission_method_category": "Hình thức giải quyết",
+        "context": "Theo một trong ba hình thức"
+      },
+      "target": {
+        "name": "Trao đổi trực tiếp",
+        "method_type": "Hình thức giải quyết thắc mắc, kiến nghị",
+        "nature": "Trực tiếp",
+        "medium": "Giao tiếp mặt đối mặt hoặc tương tự"
+      },
+      "type_source": "abstract_concept",
+      "type_target": "submission_method",
+      "relation": "có_thể_giải_quyết_bằng_hình_thức"
     },
     {
-      "source": "viết đơn",
-      "target": "minh chứng cụ thể",
-      "type_source": "METHOD",
-      "type_target": "EVIDENCE",
-      "relation": "KÈM_THEO"
+      "source": {
+        "name": "Thắc mắc, kiến nghị",
+        "description": "Các vấn đề hoặc đề xuất của sinh viên",
+        "submission_method_category": "Hình thức giải quyết",
+        "context": "Theo một trong ba hình thức"
+      },
+      "target": {
+        "name": "Gửi thư qua email",
+        "method_type": "Hình thức giải quyết thắc mắc, kiến nghị",
+        "communication_channel": "Email",
+        "format": "Thư điện tử"
+      },
+      "type_source": "abstract_concept",
+      "type_target": "submission_method",
+      "relation": "có_thể_giải_quyết_bằng_hình_thức"
     },
     {
-      "source": "minh chứng cụ thể",
-      "target": "bản in",
-      "type_source": "EVIDENCE",
-      "type_target": "MEDIUM",
-      "relation": "BẰNG"
+      "source": {
+        "name": "Thắc mắc, kiến nghị",
+        "description": "Các vấn đề hoặc đề xuất của sinh viên",
+        "submission_method_category": "Hình thức giải quyết",
+        "context": "Theo một trong ba hình thức"
+      },
+      "target": {
+        "name": "Viết đơn",
+        "method_type": "Hình thức giải quyết thắc mắc, kiến nghị",
+        "document_type": "Đơn từ",
+        "requirement": "Kèm theo minh chứng cụ thể"
+      },
+      "type_source": "abstract_concept",
+      "type_target": "submission_method",
+      "relation": "có_thể_giải_quyết_bằng_hình_thức"
     },
     {
-      "source": "minh chứng cụ thể",
-      "target": "photocopy",
-      "type_source": "EVIDENCE",
-      "type_target": "MEDIUM",
-      "relation": "BẰNG"
+      "source": {
+        "name": "Thắc mắc, kiến nghị",
+        "description": "Các vấn đề hoặc đề xuất của sinh viên",
+        "submission_method_category": "Hình thức giải quyết",
+        "context": "Theo một trong ba hình thức"
+      },
+      "target": {
+        "name": "Trực tuyến trên website",
+        "method_type": "Hình thức giải quyết thắc mắc, kiến nghị",
+        "platform": "Website",
+        "access_mode": "Trực tuyến"
+      },
+      "type_source": "abstract_concept",
+      "type_target": "submission_method",
+      "relation": "có_thể_giải_quyết_bằng_hình_thức"
     },
     {
-      "source": "trực tuyến trên website",
-      "target": "website",
-      "type_source": "METHOD",
-      "type_target": "PLATFORM",
-      "relation": "TRÊN"
+      "source": {
+        "name": "Viết đơn",
+        "document_type_submitted": "Đơn",
+        "process_detail": "Hình thức nộp thắc mắc, kiến nghị",
+        "accompanying_item": "Minh chứng cụ thể"
+      },
+      "target": {
+        "name": "Minh chứng cụ thể",
+        "purpose": "Hỗ trợ cho đơn",
+        "format_requirement": "Bản in hoặc photocopy",
+        "nature": "Bằng chứng"
+      },
+      "type_source": "submission_method",
+      "type_target": "document_type",
+      "relation": "kèm_theo"
     },
     {
-      "source": "Nhà Trường",
-      "target": "hình thức thắc mắc, kiến nghị",
-      "type_source": "ORGANIZATION",
-      "type_target": "CONCEPT",
-      "relation": "KHÔNG_CHẤP_NHẬN"
+      "source": {
+        "name": "Minh chứng cụ thể",
+        "description": "Bằng chứng vật lý đi kèm đơn",
+        "example_format_1": "Bản in",
+        "example_format_2": "Photocopy"
+      },
+      "target": {
+        "name": "Bản in",
+        "format_type": "Dạng tài liệu",
+        "role": "Một dạng của minh chứng cụ thể",
+        "physical_form": "Tài liệu in giấy"
+      },
+      "type_source": "document_type",
+      "type_target": "document_format",
+      "relation": "có_thể_là"
     },
     {
-      "source": "hình thức thắc mắc, kiến nghị",
-      "target": "sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Minh chứng cụ thể",
+        "description": "Bằng chứng vật lý đi kèm đơn",
+        "example_format_1": "Bản in",
+        "example_format_2": "Photocopy"
+      },
+      "target": {
+        "name": "Photocopy",
+        "format_type": "Dạng tài liệu",
+        "role": "Một dạng của minh chứng cụ thể",
+        "physical_form": "Tài liệu sao chụp"
+      },
+      "type_source": "document_type",
+      "type_target": "document_format",
+      "relation": "có_thể_là"
     },
     {
-      "source": "hình thức thắc mắc, kiến nghị",
-      "target": "điện thoại",
-      "type_source": "CONCEPT",
-      "type_target": "COMMUNICATION_CHANNEL",
-      "relation": "QUA"
+      "source": {
+        "name": "Nhà Trường",
+        "authority": "Đơn vị quản lý và ra quy định",
+        "policy_on_submission": "Quy định về hình thức tiếp nhận thắc mắc, kiến nghị",
+        "decision_scope": "Áp dụng cho sinh viên"
+      },
+      "target": {
+        "name": "Điện thoại",
+        "usage_context": "Hình thức thắc mắc, kiến nghị của sinh viên",
+        "acceptance_status": "Không được chấp nhận",
+        "reason_implicit": "Theo quy định của Nhà Trường"
+      },
+      "type_source": "organization",
+      "type_target": "communication_method",
+      "relation": "không_chấp_nhận_là_phương_thức_cho_thắc_mắc_kiến_nghị"
     }
   ]
 }

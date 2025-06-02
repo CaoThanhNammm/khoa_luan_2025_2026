@@ -1,614 +1,249 @@
 {
-  "entities": [
-    {
-      "name": "Kỳ thi kết thúc học phần",
-      "type": "academic_event"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "role"
-    },
-    {
-      "name": "Quy định về công tác thi kết thúc học phần",
-      "type": "document_rule"
-    },
-    {
-      "name": "Trường",
-      "type": "organization"
-    },
-    {
-      "name": "Hình thức thi kết thúc học phần",
-      "type": "exam_format"
-    },
-    {
-      "name": "Trực tiếp",
-      "type": "exam_mode"
-    },
-    {
-      "name": "Trực tuyến",
-      "type": "exam_mode"
-    },
-    {
-      "name": "Vấn đáp",
-      "type": "exam_type"
-    },
-    {
-      "name": "Tự luận",
-      "type": "exam_type"
-    },
-    {
-      "name": "Trắc nghiệm",
-      "type": "exam_type"
-    },
-    {
-      "name": "Đồ án",
-      "type": "document"
-    },
-    {
-      "name": "Hình thức khác",
-      "type": "exam_type"
-    },
-    {
-      "name": "Đề cương chi tiết học phần",
-      "type": "document_syllabus"
-    },
-    {
-      "name": "Buổi học đầu tiên",
-      "type": "time_point_event"
-    },
-    {
-      "name": "Hình thức thi hết học phần trực tuyến",
-      "type": "exam_format_online"
-    },
-    {
-      "name": "Tính trung thực",
-      "type": "assessment_quality"
-    },
-    {
-      "name": "Công bằng",
-      "type": "assessment_quality"
-    },
-    {
-      "name": "Khách quan",
-      "type": "assessment_quality"
-    },
-    {
-      "name": "Đánh giá trực tiếp",
-      "type": "assessment_mode"
-    },
-    {
-      "name": "Bảo vệ và đánh giá đồ án, khóa luận",
-      "type": "defense_assessment_process"
-    },
-    {
-      "name": "Khóa luận",
-      "type": "document"
-    },
-    {
-      "name": "Hội đồng chuyên môn",
-      "type": "committee"
-    },
-    {
-      "name": "03 thành viên",
-      "type": "member_count"
-    },
-    {
-      "name": "Chủ tịch",
-      "type": "committee_role"
-    },
-    {
-      "name": "Ủy viên phản biện",
-      "type": "committee_role"
-    },
-    {
-      "name": "Ủy viên",
-      "type": "committee_role"
-    },
-    {
-      "name": "Sự đồng thuận",
-      "type": "agreement"
-    },
-    {
-      "name": "Thành viên hội đồng",
-      "type": "committee_role"
-    },
-    {
-      "name": "Diễn biến của buổi bảo vệ trực tuyến",
-      "type": "event_record"
-    },
-    {
-      "name": "Ghi hình",
-      "type": "action_record"
-    },
-    {
-      "name": "Ghi âm",
-      "type": "action_record"
-    },
-    {
-      "name": "Lưu trữ",
-      "type": "action_store"
-    },
-    {
-      "name": "Môn học",
-      "type": "academic_unit"
-    },
-    {
-      "name": "Khoa",
-      "type": "organization_unit"
-    },
-    {
-      "name": "Lịch chung",
-      "type": "document_schedule"
-    },
-    {
-      "name": "Phòng Quản lý Chất lượng",
-      "type": "organization_unit"
-    },
-    {
-      "name": "Kế hoạch",
-      "type": "document_plan"
-    },
-    {
-      "name": "Lịch thi kết thúc học phần",
-      "type": "document_schedule"
-    },
-    {
-      "name": "30 ngày",
-      "type": "time_duration"
-    },
-    {
-      "name": "Ngày thi đầu tiên của học kỳ",
-      "type": "time_point_event"
-    },
-    {
-      "name": "Website",
-      "type": "system_location"
-    },
-    {
-      "name": "Bộ môn Lý luận chính trị",
-      "type": "organization_unit"
-    },
-    {
-      "name": "Thời gian thi kết thúc học phần",
-      "type": "time_period"
-    },
-    {
-      "name": "Lý do chính đáng",
-      "type": "reason_valid"
-    },
-    {
-      "name": "Trưởng Khoa/Bộ môn",
-      "type": "role_approver"
-    },
-    {
-      "name": "Điểm I",
-      "type": "grade"
-    },
-    {
-      "name": "Khoản 3, Điều 13",
-      "type": "reference"
-    },
-    {
-      "name": "Vắng mặt trong buổi thi kết thúc học phần",
-      "type": "status_absent_exam"
-    },
-    {
-      "name": "Điểm 0",
-      "type": "grade"
-    },
-    {
-      "name": "Quyền yêu cầu phúc khảo bài thi",
-      "type": "right"
-    },
-    {
-      "name": "Phúc khảo bài thi",
-      "type": "process_appeal"
-    },
-    {
-      "name": "15 ngày",
-      "type": "time_duration"
-    },
-    {
-      "name": "Ngày Phòng Đào tạo công bố điểm",
-      "type": "time_point_event"
-    },
-    {
-      "name": "Phòng Đào tạo",
-      "type": "organization_unit"
-    }
-  ],
   "relationships": [
     {
-      "source": "Kỳ thi kết thúc học phần",
-      "target": "Trường",
-      "type_source": "academic_event",
-      "type_target": "organization",
-      "relation": "tổ_chức_bởi"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Quy định về công tác thi kết thúc học phần",
-      "type_source": "role",
-      "type_target": "document_rule",
+      "source": {"name": "Sinh viên", "role": "Người học", "obligation": "Tuân thủ quy định", "academic_context": "Học phần"},
+      "target": {"name": "Quy định về công tác thi kết thúc học phần", "issuer": "Trường", "scope": "Công tác thi", "purpose": "Đảm bảo tính nghiêm túc"},
+      "type_source": "student",
+      "type_target": "regulation",
       "relation": "phải_tuân_thủ"
     },
     {
-      "source": "Quy định về công tác thi kết thúc học phần",
-      "target": "Trường",
-      "type_source": "document_rule",
+      "source": {"name": "Quy định về công tác thi kết thúc học phần", "scope": "Công tác thi", "applicability": "Toàn trường", "document_type": "Văn bản quy phạm"},
+      "target": {"name": "Trường", "type": "Tổ chức giáo dục", "authority": "Ban hành quy định", "responsibility": "Quản lý thi cử"},
+      "type_source": "regulation",
       "type_target": "organization",
       "relation": "của"
     },
     {
-      "source": "Hình thức thi kết thúc học phần",
-      "target": "Đề cương chi tiết học phần",
-      "type_source": "exam_format",
-      "type_target": "document_syllabus",
-      "relation": "quy_định_trong"
+      "source": {"name": "Hình thức thi kết thúc học phần", "description": "Phương pháp đánh giá kiến thức", "examples_provided": "Trực tiếp, trực tuyến, vấn đáp, tự luận, trắc nghiệm, đồ án, khác", "determination_basis": "Đề cương chi tiết"},
+      "target": {"name": "Đề cương chi tiết học phần", "document_type": "Tài liệu học tập", "content_includes": "Thông tin về hình thức thi", "provider": "Nhà trường/Khoa"},
+      "type_source": "exam_form",
+      "type_target": "course_syllabus",
+      "relation": "được_quy_định_trong"
     },
     {
-      "source": "Hình thức thi kết thúc học phần",
-      "target": "Sinh viên",
-      "type_source": "exam_format",
-      "type_target": "role",
-      "relation": "thông_báo_cho"
+      "source": {"name": "Hình thức thi kết thúc học phần", "information_type": "Quan trọng đối với sinh viên", "notification_timing": "Buổi học đầu tiên", "content_description": "Cách thức thi của học phần"},
+      "target": {"name": "Sinh viên", "role": "Người học", "information_recipient": "Cần được thông báo", "academic_period": "Đầu học phần"},
+      "type_source": "exam_form",
+      "type_target": "student",
+      "relation": "được_thông_báo_cho"
     },
     {
-      "source": "Hình thức thi kết thúc học phần",
-      "target": "Buổi học đầu tiên",
-      "type_source": "exam_format",
-      "type_target": "time_point_event",
-      "relation": "thông_báo_trong"
-    },
-    {
-      "source": "Hình thức thi kết thúc học phần",
-      "target": "Trực tiếp",
-      "type_source": "exam_format",
-      "type_target": "exam_mode",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Hình thức thi kết thúc học phần",
-      "target": "Trực tuyến",
-      "type_source": "exam_format",
-      "type_target": "exam_mode",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Hình thức thi kết thúc học phần",
-      "target": "Vấn đáp",
-      "type_source": "exam_format",
-      "type_target": "exam_type",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Hình thức thi kết thúc học phần",
-      "target": "Tự luận",
-      "type_source": "exam_format",
-      "type_target": "exam_type",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Hình thức thi kết thúc học phần",
-      "target": "Trắc nghiệm",
-      "type_source": "exam_format",
-      "type_target": "exam_type",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Hình thức thi kết thúc học phần",
-      "target": "Đồ án",
-      "type_source": "exam_format",
-      "type_target": "document",
-      "relation": "có_thể_là"
-    },
-     {
-      "source": "Hình thức thi kết thúc học phần",
-      "target": "Hình thức khác",
-      "type_source": "exam_format",
-      "type_target": "exam_type",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Hình thức thi hết học phần trực tuyến",
-      "target": "Tính trung thực",
-      "type_source": "exam_format_online",
-      "type_target": "assessment_quality",
-      "relation": "yêu_cầu_đảm_bảo"
-    },
-    {
-      "source": "Hình thức thi hết học phần trực tuyến",
-      "target": "Công bằng",
-      "type_source": "exam_format_online",
-      "type_target": "assessment_quality",
-      "relation": "yêu_cầu_đảm_bảo"
-    },
-    {
-      "source": "Hình thức thi hết học phần trực tuyến",
-      "target": "Khách quan",
-      "type_source": "exam_format_online",
-      "type_target": "assessment_quality",
-      "relation": "yêu_cầu_đảm_bảo"
-    },
-    {
-      "source": "Hình thức thi hết học phần trực tuyến",
-      "target": "Đánh giá trực tiếp",
-      "type_source": "exam_format_online",
-      "type_target": "assessment_mode",
-      "relation": "yêu_cầu_tương_đương"
-    },
-    {
-      "source": "Bảo vệ và đánh giá đồ án, khóa luận",
-      "target": "Hình thức thi hết học phần trực tuyến",
-      "type_source": "defense_assessment_process",
-      "type_target": "exam_format_online",
-      "relation": "có_thể_thực_hiện_bằng"
-    },
-    {
-      "source": "Bảo vệ và đánh giá đồ án, khóa luận",
-      "target": "Đồ án",
-      "type_source": "defense_assessment_process",
-      "type_target": "document",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Bảo vệ và đánh giá đồ án, khóa luận",
-      "target": "Khóa luận",
-      "type_source": "defense_assessment_process",
-      "type_target": "document",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Bảo vệ và đánh giá đồ án, khóa luận",
-      "target": "Hội đồng chuyên môn",
-      "type_source": "defense_assessment_process",
-      "type_target": "committee",
-      "relation": "thực_hiện_thông_qua"
-    },
-    {
-      "source": "Hội đồng chuyên môn",
-      "target": "03 thành viên",
-      "type_source": "committee",
-      "type_target": "member_count",
-      "relation": "gồm"
-    },
-    {
-      "source": "Hội đồng chuyên môn",
-      "target": "Chủ tịch",
-      "type_source": "committee",
-      "type_target": "committee_role",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "Hội đồng chuyên môn",
-      "target": "Ủy viên phản biện",
-      "type_source": "committee",
-      "type_target": "committee_role",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "Hội đồng chuyên môn",
-      "target": "Ủy viên",
-      "type_source": "committee",
-      "type_target": "committee_role",
-      "relation": "bao_gồm"
-    },
-    {
-      "source": "Hình thức thi hết học phần trực tuyến",
-      "target": "Sự đồng thuận",
-      "type_source": "exam_format_online",
-      "type_target": "agreement",
-      "relation": "yêu_cầu"
-    },
-    {
-      "source": "Sự đồng thuận",
-      "target": "Thành viên hội đồng",
-      "type_source": "agreement",
-      "type_target": "committee_role",
-      "relation": "của"
-    },
-    {
-      "source": "Sự đồng thuận",
-      "target": "Sinh viên",
-      "type_source": "agreement",
-      "type_target": "role",
-      "relation": "của"
-    },
-    {
-      "source": "Diễn biến của buổi bảo vệ trực tuyến",
-      "target": "Ghi hình",
-      "type_source": "event_record",
-      "type_target": "action_record",
-      "relation": "phải_được"
-    },
-    {
-      "source": "Diễn biến của buổi bảo vệ trực tuyến",
-      "target": "Ghi âm",
-      "type_source": "event_record",
-      "type_target": "action_record",
-      "relation": "phải_được"
-    },
-    {
-      "source": "Diễn biến của buổi bảo vệ trực tuyến",
-      "target": "Lưu trữ",
-      "type_source": "event_record",
-      "type_target": "action_store",
-      "relation": "phải_được"
-    },
-    {
-      "source": "Khoa",
-      "target": "Môn học",
-      "type_source": "organization_unit",
-      "type_target": "academic_unit",
-      "relation": "quản_lý"
-    },
-    {
-      "source": "Khoa",
-      "target": "Kỳ thi kết thúc học phần",
-      "type_source": "organization_unit",
-      "type_target": "academic_event",
-      "relation": "tổ_chức"
-    },
-    {
-      "source": "Khoa",
-      "target": "Lịch chung",
-      "type_source": "organization_unit",
-      "type_target": "document_schedule",
-      "relation": "tổ_chức_theo"
-    },
-    {
-      "source": "Phòng Quản lý Chất lượng",
-      "target": "Lịch chung",
-      "type_source": "organization_unit",
-      "type_target": "document_schedule",
-      "relation": "lập_kế_hoạch_cho"
-    },
-    {
-      "source": "Lịch thi kết thúc học phần",
-      "target": "Sinh viên",
-      "type_source": "document_schedule",
-      "type_target": "role",
-      "relation": "phải_thông_báo_tới"
-    },
-    {
-      "source": "Lịch thi kết thúc học phần",
-      "target": "30 ngày",
-      "type_source": "document_schedule",
-      "type_target": "time_duration",
-      "relation": "thông_báo_trước_chậm_nhất"
-    },
-    {
-      "source": "30 ngày",
-      "target": "Ngày thi đầu tiên của học kỳ",
-      "type_source": "time_duration",
-      "type_target": "time_point_event",
-      "relation": "trước"
-    },
-    {
-      "source": "Lịch thi kết thúc học phần",
-      "target": "Website",
-      "type_source": "document_schedule",
-      "type_target": "system_location",
-      "relation": "công_bố_trên"
-    },
-    {
-      "source": "Phòng Quản lý Chất lượng",
-      "target": "Kỳ thi kết thúc học phần",
-      "type_source": "organization_unit",
-      "type_target": "academic_event",
-      "relation": "chịu_trách_nhiệm_tổ_chức"
-    },
-    {
-      "source": "Kỳ thi kết thúc học phần",
-      "target": "Môn học",
-      "type_source": "academic_event",
-      "type_target": "academic_unit",
-      "relation": "cho"
-    },
-    {
-      "source": "Môn học",
-      "target": "Bộ môn Lý luận chính trị",
-      "type_source": "academic_unit",
-      "type_target": "organization_unit",
-      "relation": "thuộc"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Kỳ thi kết thúc học phần",
-      "type_source": "role",
-      "type_target": "academic_event",
-      "relation": "có_thể_vắng_mặt"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Lý do chính đáng",
-      "type_source": "role",
-      "type_target": "reason_valid",
-      "relation": "có"
-    },
-    {
-      "source": "Lý do chính đáng",
-      "target": "Trưởng Khoa/Bộ môn",
-      "type_source": "reason_valid",
-      "type_target": "role_approver",
-      "relation": "yêu_cầu_chấp_thuận_bởi"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Điểm I",
-      "type_source": "role",
-      "type_target": "grade",
-      "relation": "hưởng_nếu_vắng_có_phép"
-    },
-    {
-      "source": "Điểm I",
-      "target": "Khoản 3, Điều 13",
-      "type_source": "grade",
-      "type_target": "reference",
-      "relation": "tham_chiếu"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Vắng mặt trong buổi thi kết thúc học phần",
-      "type_source": "role",
-      "type_target": "status_absent_exam",
-      "relation": "có_thể"
-    },
-    {
-      "source": "Vắng mặt trong buổi thi kết thúc học phần",
-      "target": "Lý do chính đáng",
-      "type_source": "status_absent_exam",
-      "type_target": "reason_valid",
-      "relation": "không_có"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Điểm 0",
-      "type_source": "role",
-      "type_target": "grade",
-      "relation": "phải_nhận_nếu_vắng_không_phép"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Quyền yêu cầu phúc khảo bài thi",
-      "type_source": "role",
-      "type_target": "right",
-      "relation": "có"
-    },
-    {
-      "source": "Quyền yêu cầu phúc khảo bài thi",
-      "target": "Phúc khảo bài thi",
-      "type_source": "right",
-      "type_target": "process_appeal",
-      "relation": "áp_dụng_cho"
-    },
-    {
-      "source": "Phúc khảo bài thi",
-      "target": "15 ngày",
-      "type_source": "process_appeal",
-      "type_target": "time_duration",
+      "source": {"name": "Việc thông báo Hình thức thi kết thúc học phần", "actor": "Nhà trường/Giảng viên", "recipient": "Sinh viên", "purpose": "Cung cấp thông tin"},
+      "target": {"name": "Buổi học đầu tiên", "event_timing": "Khởi đầu học phần", "significance": "Cung cấp thông tin cốt lõi", "module_related": "Của học phần"},
+      "type_source": "notification_activity",
+      "type_target": "academic_session",
       "relation": "thực_hiện_trong"
     },
     {
-      "source": "15 ngày",
-      "target": "Ngày Phòng Đào tạo công bố điểm",
-      "type_source": "time_duration",
-      "type_target": "time_point_event",
+      "source": {"name": "Hình thức thi hết học phần trực tuyến", "modality": "Trực tuyến", "application_condition": "Đảm bảo chất lượng", "comparison_standard": "Đánh giá trực tiếp"},
+      "target": {"name": "Tính trung thực", "principle_type": "Nguyên tắc đánh giá", "requirement": "Phải đảm bảo", "assessment_context": "Thi cử"},
+      "type_source": "online_exam_form",
+      "type_target": "assessment_principle",
+      "relation": "phải_đảm_bảo"
+    },
+    {
+      "source": {"name": "Hình thức thi hết học phần trực tuyến", "modality": "Trực tuyến", "application_condition": "Đảm bảo chất lượng", "comparison_standard": "Đánh giá trực tiếp"},
+      "target": {"name": "Tính công bằng", "principle_type": "Nguyên tắc đánh giá", "requirement": "Phải đảm bảo", "assessment_context": "Thi cử"},
+      "type_source": "online_exam_form",
+      "type_target": "assessment_principle",
+      "relation": "phải_đảm_bảo"
+    },
+    {
+      "source": {"name": "Hình thức thi hết học phần trực tuyến", "modality": "Trực tuyến", "application_condition": "Đảm bảo chất lượng", "comparison_standard": "Đánh giá trực tiếp"},
+      "target": {"name": "Tính khách quan", "principle_type": "Nguyên tắc đánh giá", "requirement": "Phải đảm bảo", "assessment_context": "Thi cử"},
+      "type_source": "online_exam_form",
+      "type_target": "assessment_principle",
+      "relation": "phải_đảm_bảo"
+    },
+    {
+      "source": {"name": "Việc tổ chức bảo vệ và đánh giá đồ án trực tuyến", "activity_type": "Bảo vệ và đánh giá", "subject_matter": "Đồ án", "modality": "Trực tuyến", "condition": "Trọng số cao hơn và đáp ứng điều kiện"},
+      "target": {"name": "Hội đồng chuyên môn", "role": "Đơn vị đánh giá", "composition_requirement": "03 thành viên", "function": "Đánh giá chuyên môn"},
+      "type_source": "online_defense_assessment_activity",
+      "type_target": "expert_council",
+      "relation": "yêu_cầu_thực_hiện_qua"
+    },
+    {
+      "source": {"name": "Việc tổ chức bảo vệ và đánh giá khóa luận trực tuyến", "activity_type": "Bảo vệ và đánh giá", "subject_matter": "Khóa luận", "modality": "Trực tuyến", "condition": "Trọng số cao hơn và đáp ứng điều kiện"},
+      "target": {"name": "Hội đồng chuyên môn", "role": "Đơn vị đánh giá", "composition_requirement": "03 thành viên", "function": "Đánh giá chuyên môn"},
+      "type_source": "online_defense_assessment_activity",
+      "type_target": "expert_council",
+      "relation": "yêu_cầu_thực_hiện_qua"
+    },
+    {
+      "source": {"name": "Hội đồng chuyên môn", "role": "Đơn vị đánh giá", "member_count": "03", "purpose": "Đảm bảo chất lượng đánh giá"},
+      "target": {"name": "Chủ tịch hội đồng", "member_role": "Chủ tịch", "council_affiliation": "Hội đồng chuyên môn", "responsibility": "Điều hành hội đồng"},
+      "type_source": "expert_council",
+      "type_target": "council_member_role",
+      "relation": "bao_gồm_thành_viên"
+    },
+    {
+      "source": {"name": "Hội đồng chuyên môn", "role": "Đơn vị đánh giá", "member_count": "03", "purpose": "Đảm bảo chất lượng đánh giá"},
+      "target": {"name": "Ủy viên phản biện", "member_role": "Phản biện", "council_affiliation": "Hội đồng chuyên môn", "responsibility": "Đánh giá, phản biện"},
+      "type_source": "expert_council",
+      "type_target": "council_member_role",
+      "relation": "bao_gồm_thành_viên"
+    },
+    {
+      "source": {"name": "Hội đồng chuyên môn", "role": "Đơn vị đánh giá", "member_count": "03", "purpose": "Đảm bảo chất lượng đánh giá"},
+      "target": {"name": "Ủy viên", "member_role": "Thành viên", "council_affiliation": "Hội đồng chuyên môn", "responsibility": "Tham gia đánh giá"},
+      "type_source": "expert_council",
+      "type_target": "council_member_role",
+      "relation": "bao_gồm_thành_viên"
+    },
+    {
+      "source": {"name": "Hình thức bảo vệ và đánh giá trực tuyến", "modality": "Trực tuyến", "scope": "Đồ án, khóa luận", "requirement_type": "Đồng thuận"},
+      "target": {"name": "Thành viên hội đồng", "role": "Người đánh giá", "decision_involvement": "Cần đồng thuận", "group_context": "Hội đồng chuyên môn"},
+      "type_source": "online_defense_assessment_form",
+      "type_target": "council_member_group",
+      "relation": "cần_sự_đồng_thuận_của"
+    },
+    {
+      "source": {"name": "Hình thức bảo vệ và đánh giá trực tuyến", "modality": "Trực tuyến", "scope": "Đồ án, khóa luận", "requirement_type": "Đồng thuận"},
+      "target": {"name": "Sinh viên", "role": "Người được đánh giá", "decision_involvement": "Cần đồng thuận", "context": "Bảo vệ đồ án/khóa luận"},
+      "type_source": "online_defense_assessment_form",
+      "type_target": "student",
+      "relation": "cần_sự_đồng_thuận_của"
+    },
+    {
+      "source": {"name": "Diễn biến của buổi bảo vệ trực tuyến", "event_type": "Buổi bảo vệ", "modality": "Trực tuyến", "record_requirement": "Đầy đủ"},
+      "target": {"name": "Việc ghi hình", "action_type": "Lưu trữ bằng chứng", "completeness": "Đầy đủ", "medium": "Video"},
+      "type_source": "online_defense_proceeding",
+      "type_target": "recording_action",
+      "relation": "là_đối_tượng_của"
+    },
+    {
+      "source": {"name": "Diễn biến của buổi bảo vệ trực tuyến", "event_type": "Buổi bảo vệ", "modality": "Trực tuyến", "record_requirement": "Đầy đủ"},
+      "target": {"name": "Việc ghi âm", "action_type": "Lưu trữ bằng chứng", "completeness": "Đầy đủ", "medium": "Audio"},
+      "type_source": "online_defense_proceeding",
+      "type_target": "recording_action",
+      "relation": "là_đối_tượng_của"
+    },
+    {
+      "source": {"name": "Bản ghi buổi bảo vệ trực tuyến", "content": "Diễn biến được ghi hình, ghi âm", "status": "Đã hoàn thành", "purpose": "Lưu trữ lâu dài"},
+      "target": {"name": "Việc lưu trữ", "action_type": "Bảo quản tài liệu", "duration": "Lâu dài", "responsibility": "Nhà trường/Khoa"},
+      "type_source": "event_record",
+      "type_target": "storage_action",
+      "relation": "là_đối_tượng_của"
+    },
+    {
+      "source": {"name": "Khoa", "type": "Đơn vị học thuật", "function": "Quản lý và tổ chức thi", "scope_of_management": "Các môn học thuộc Khoa"},
+      "target": {"name": "Môn học do Khoa quản lý", "category": "Học thuật", "management_unit": "Khoa", "exam_organization_unit": "Khoa"},
+      "type_source": "academic_department",
+      "type_target": "subject_group",
+      "relation": "quản_lý"
+    },
+    {
+      "source": {"name": "Khoa", "type": "Đơn vị học thuật", "responsibility": "Tổ chức thi", "schedule_dependency": "Lịch chung"},
+      "target": {"name": "Hoạt động thi các môn học do Khoa quản lý", "organizer": "Khoa", "timing_basis": "Theo lịch chung", "scope": "Các môn học của Khoa"},
+      "type_source": "academic_department",
+      "type_target": "examination_activity",
+      "relation": "tổ_chức"
+    },
+    {
+      "source": {"name": "Hoạt động thi của Khoa", "organizer": "Khoa", "scope": "Môn học Khoa quản lý", "planning_basis": "Lịch chung"},
+      "target": {"name": "Lịch chung", "document_type": "Kế hoạch thời gian", "planner": "Phòng Quản lý Chất lượng", "content": "Lịch thi"},
+      "type_source": "examination_activity",
+      "type_target": "general_schedule",
+      "relation": "tuân_theo"
+    },
+    {
+      "source": {"name": "Phòng Quản lý Chất lượng", "type": "Đơn vị chức năng", "responsibility": "Lập kế hoạch lịch thi", "output_document": "Lịch chung"},
+      "target": {"name": "Lịch chung", "document_type": "Kế hoạch thời gian", "purpose": "Điều phối thi cử", "content": "Lịch thi"},
+      "type_source": "quality_management_department",
+      "type_target": "general_schedule",
+      "relation": "lập_kế_hoạch_cho"
+    },
+    {
+      "source": {"name": "Lịch thi kết thúc học phần", "document_type": "Thông báo quan trọng", "content_description": "Thời gian, địa điểm thi", "notification_deadline_info": "Chậm nhất 30 ngày trước ngày thi đầu tiên"},
+      "target": {"name": "Sinh viên", "role": "Người dự thi", "information_recipient_scope": "Tất cả", "action_required": "Nắm rõ lịch thi"},
+      "type_source": "final_exam_schedule",
+      "type_target": "student",
+      "relation": "phải_được_thông_báo_tới"
+    },
+    {
+      "source": {"name": "Lịch thi kết thúc học phần", "document_type": "Thông tin công khai", "accessibility_requirement": "Công bố rộng rãi", "publication_channel": "Website"},
+      "target": {"name": "Website", "platform_type": "Trang thông tin điện tử", "purpose": "Công bố thông tin chính thức", "accessibility": "Công cộng"},
+      "type_source": "final_exam_schedule",
+      "type_target": "website",
+      "relation": "phải_được_công_bố_trên"
+    },
+    {
+      "source": {"name": "Phòng Quản lý Chất lượng", "type": "Đơn vị chức năng", "responsibility_area": "Tổ chức thi", "specific_subjects_scope": "Môn học thuộc Bộ môn Lý luận chính trị"},
+      "target": {"name": "Môn học thuộc Bộ môn Lý luận chính trị", "category": "Lý luận chính trị", "department_affiliation": "Bộ môn Lý luận chính trị", "exam_organizer": "Phòng Quản lý Chất lượng"},
+      "type_source": "quality_management_department",
+      "type_target": "political_theory_subject_group",
+      "relation": "chịu_trách_nhiệm_tổ_chức_thi_cho"
+    },
+    {
+      "source": {"name": "Môn học Lý luận chính trị", "subject_area": "Lý luận chính trị", "academic_level": "Đại học", "curriculum_component": "Bắt buộc/Tự chọn"},
+      "target": {"name": "Bộ môn Lý luận chính trị", "type": "Đơn vị học thuật chuyên ngành", "specialization": "Lý luận chính trị", "management_scope": "Các môn học liên quan"},
+      "type_source": "subject",
+      "type_target": "academic_department_section",
+      "relation": "thuộc_về"
+    },
+    {
+      "source": {"name": "Sinh viên", "condition": "Vắng thi có lý do chính đáng và được chấp thuận", "exam_period_context": "Trong thời gian thi kết thúc học phần", "resulting_grade": "Điểm I"},
+      "target": {"name": "Điểm I", "grade_meaning": "Chưa hoàn thành (có phép)", "source_regulation_reference": "Khoản 3, Điều 13", "implication": "Cần thi lại/hoàn thành sau"},
+      "type_source": "student",
+      "type_target": "grade",
+      "relation": "hưởng"
+    },
+    {
+      "source": {"name": "Việc chấp thuận vắng thi của sinh viên", "basis_for_approval": "Lý do chính đáng", "approving_authority_option1": "Trưởng Khoa", "approving_authority_option2": "Trưởng Bộ môn"},
+      "target": {"name": "Trưởng Khoa", "role": "Người quản lý Khoa", "authority_scope": "Các vấn đề thuộc Khoa", "decision_power": "Chấp thuận/Từ chối"},
+      "type_source": "absenteeism_approval_request",
+      "type_target": "dean_of_faculty",
+      "relation": "được_chấp_thuận_bởi"
+    },
+    {
+      "source": {"name": "Việc chấp thuận vắng thi của sinh viên", "basis_for_approval": "Lý do chính đáng", "approving_authority_option1": "Trưởng Khoa", "approving_authority_option2": "Trưởng Bộ môn"},
+      "target": {"name": "Trưởng Bộ môn", "role": "Người quản lý Bộ môn", "authority_scope": "Các vấn đề thuộc Bộ môn", "decision_power": "Chấp thuận/Từ chối"},
+      "type_source": "absenteeism_approval_request",
+      "type_target": "head_of_department_section",
+      "relation": "được_chấp_thuận_bởi"
+    },
+    {
+      "source": {"name": "Điểm I", "grade_meaning": "Chưa hoàn thành (có phép)", "context_of_application": "Vắng thi có lý do chính đáng được chấp thuận", "value": "I"},
+      "target": {"name": "Khoản 3, Điều 13", "document_type": "Điều khoản quy định", "parent_document": "Quy chế của Trường (ngụ ý)", "content_description": "Quy định về điểm I"},
+      "type_source": "grade",
+      "type_target": "regulation_clause",
+      "relation": "tham_chiếu_quy_định_tại"
+    },
+    {
+      "source": {"name": "Sinh viên", "condition": "Vắng mặt không có lý do chính đáng", "event_context": "Buổi thi kết thúc học phần", "consequence": "Nhận điểm 0"},
+      "target": {"name": "Điểm 0", "grade_meaning": "Không đạt/Vắng không phép", "value": "0", "implication": "Học lại/Thi lại học phần"},
+      "type_source": "student",
+      "type_target": "grade",
+      "relation": "nhận"
+    },
+    {
+      "source": {"name": "Sinh viên", "role": "Người dự thi", "entitlement": "Yêu cầu phúc khảo", "subject_of_review": "Bài thi"},
+      "target": {"name": "Bài thi", "type": "Tài liệu đánh giá", "status_after_grading": "Đã có điểm", "review_eligibility": "Có thể được phúc khảo"},
+      "type_source": "student",
+      "type_target": "exam_paper",
+      "relation": "được_quyền_yêu_cầu_phúc_khảo_cho"
+    },
+    {
+      "source": {"name": "Việc yêu cầu phúc khảo bài thi", "actor": "Sinh viên", "object_of_request": "Bài thi", "time_constraint": "15 ngày"},
+      "target": {"name": "Thời hạn 15 ngày", "duration_in_days": "15", "start_event_reference": "Ngày Phòng Đào tạo công bố điểm", "purpose": "Nộp đơn phúc khảo"},
+      "type_source": "review_request_action",
+      "type_target": "time_period_constraint",
+      "relation": "phải_thực_hiện_trong"
+    },
+    {
+      "source": {"name": "Thời hạn 15 ngày để phúc khảo", "duration_in_days": "15", "purpose_of_period": "Yêu cầu phúc khảo bài thi", "reference_point": "Ngày công bố điểm"},
+      "target": {"name": "Ngày Phòng Đào tạo công bố điểm", "event_type": "Công bố kết quả học tập", "announcing_body": "Phòng Đào tạo", "significance": "Mốc bắt đầu thời hạn phúc khảo"},
+      "type_source": "time_period_constraint",
+      "type_target": "grade_announcement_date",
       "relation": "kể_từ"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "Điểm",
-      "type_source": "organization_unit",
-      "type_target": "grade",
+      "source": {"name": "Phòng Đào tạo", "type": "Đơn vị chức năng", "responsibility": "Quản lý đào tạo và kết quả học tập", "action_performed": "Công bố điểm"},
+      "target": {"name": "Điểm thi", "data_type": "Kết quả học tập", "recipient_audience": "Sinh viên", "status_after_announcement": "Chính thức"},
+      "type_source": "training_department",
+      "type_target": "exam_grade_information",
       "relation": "công_bố"
-    },
-    {
-      "source": "Ngày Phòng Đào tạo công bố điểm",
-      "target": "Phòng Đào tạo",
-      "type_source": "time_point_event",
-      "type_target": "organization_unit",
-      "relation": "thực_hiện_bởi"
     }
   ]
 }

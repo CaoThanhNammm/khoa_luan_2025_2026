@@ -1,7 +1,5 @@
-from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct
 from dotenv import load_dotenv
-
 from PreProcessing.PreProcessing import PreProcessing
 load_dotenv()
 from langchain_nvidia_ai_endpoints import NVIDIARerank
@@ -9,6 +7,7 @@ from langchain_core.documents import Document
 from qdrant_client import models
 import os
 import pdfplumber
+from qdrant_client import QdrantClient
 
 class Qdrant:
     def __init__(self, host, api, model_1024, model_768, model_512, model_late_interaction, collection_name):
@@ -119,15 +118,6 @@ class Qdrant:
         return all_pages_text
 
     def create_embedding(self, chunks):
-        try:
-            model_embed_1024, tokenizer_1024 = self.model_1024.load_model()
-            model_embed_768, tokenizer_768 = self.model_768.load_model()
-            model_embed_512 = self.model_512.load_model()
-            model_embed_late_interaction, tokenizer_late_interaction = self.model_late_interaction.load_model()
-        except Exception as e:
-            print(f"Error loading models: {e}")
-            return
-
         points = []
         batch_size = 20
 
@@ -139,12 +129,10 @@ class Qdrant:
             try:
                 # Tạo embeddings song song nếu có thể
                 embeddings = {
-                    'matryoshka-1024dim': self.model_1024.embed(model_embed_1024, tokenizer_1024, chunk_text_pre_processing),
-                    'matryoshka-768dim': self.model_768.embed(model_embed_768, tokenizer_768, chunk_text_pre_processing),
-                    'matryoshka-512dim': self.model_512.embed(model_embed_512, None, chunk_text_pre_processing),
-                    'late_interaction': self.model_late_interaction.embed(model_embed_late_interaction,
-                                                                          tokenizer_late_interaction,
-                                                                          chunk_text_pre_processing)
+                    'matryoshka-1024dim': self.model_1024.embed(chunk_text_pre_processing),
+                    'matryoshka-768dim': self.model_768.embed(chunk_text_pre_processing),
+                    'matryoshka-512dim': self.model_512.embed(chunk_text_pre_processing),
+                    'late_interaction': self.model_late_interaction.embed(chunk_text_pre_processing)
                 }
 
                 # Tạo PointStruct với cách viết gọn hơn
@@ -181,29 +169,34 @@ class Qdrant:
         except Exception as e:
             print(f"Error upserting points: {e}")
 
-
     def query_from_db(self, text_embedded_512, text_embedded_768, text_embedded_1024, embedded_late_interaction):
-        return self.client.query_points(
+        response =  self.client.query_points(
             collection_name= self.collection_name,
             prefetch=models.Prefetch(
-                # prefetch=models.Prefetch(
-                #     prefetch=models.Prefetch(
-                #         query=text_embedded_512,
-                #         using="matryoshka-512dim",
-                #         limit=200,
-                #     ),
-                #     query=text_embedded_768,
-                #     using="matryoshka-768dim",
-                #     limit=100,
-                # ),
+                prefetch=models.Prefetch(
+                    prefetch=models.Prefetch(
+                        query=text_embedded_512,
+                        using="matryoshka-512dim",
+                        limit=200,
+                    ),
+                    query=text_embedded_768,
+                    using="matryoshka-768dim",
+                    limit=100,
+                ),
                 query=text_embedded_1024,
                 using="matryoshka-1024dim",
-                limit=25,
+                limit=50,
             ),
             query=embedded_late_interaction,
             using="late_interaction",
-            limit=10,
-        ).points
+            limit=20,
+        )
+
+        documents = []
+        for result in response.points:
+            documents.append(result.payload["text"])
+        return documents
+
 
     def re_ranking(self, query, passages):
         client = NVIDIARerank(

@@ -1,1064 +1,2044 @@
 {
-  "entities": [
-    {
-      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "type": "organization"
-    },
-    {
-      "name": "12 phòng ban",
-      "type": "quantity"
-    },
-    {
-      "name": "07 trung tâm",
-      "type": "quantity"
-    },
-    {
-      "name": "01 viện nghiên cứu",
-      "type": "quantity"
-    },
-    {
-      "name": "12 khoa đào tạo chuyên môn",
-      "type": "quantity"
-    },
-    {
-      "name": "01 khoa cơ bản",
-      "type": "quantity"
-    },
-    {
-      "name": "01 bộ môn",
-      "type": "quantity"
-    },
-    {
-      "name": "Phòng Công tác Sinh viên",
-      "type": "department"
-    },
-    {
-      "name": "028.38974560",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://nls.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng Đào tạo",
-      "type": "department"
-    },
-    {
-      "name": "028.38963350",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://pdt.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng Đào tạo Sau đại học",
-      "type": "department"
-    },
-    {
-      "name": "028.38963339",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://pgo.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng Hành chính",
-      "type": "department"
-    },
-    {
-      "name": "028.38966780",
-      "type": "phone_number"
-    },
-    {
-      "name": "https://ado.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng Hợp tác Quốc tế",
-      "type": "department"
-    },
-    {
-      "name": "028.38966946",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://iro.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng Kế hoạch Tài chính",
-      "type": "department"
-    },
-    {
-      "name": "028.38963334",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://pkhtc.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng Quản lý Chất lượng",
-      "type": "department"
-    },
-    {
-      "name": "0283.7245870",
-      "type": "phone_number"
-    },
-    {
-      "name": "https://kdcl.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng QL Nghiên cứu Khoa học",
-      "type": "department"
-    },
-    {
-      "name": "028.38963340",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://srmo.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng Quản trị Vật tư",
-      "type": "department"
-    },
-    {
-      "name": "028.38961157",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://pqtvt.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng Tổ chức Cán bộ",
-      "type": "department"
-    },
-    {
-      "name": "028.38963341",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://tccb.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng Thanh tra giáo dục",
-      "type": "department"
-    },
-    {
-      "name": "028.37245195",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://ttra.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Phòng Thông tin và Truyền thông",
-      "type": "department"
-    },
-    {
-      "name": "028.35359097",
-      "type": "phone_number"
-    },
-    {
-      "name": "https://4t.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Đoàn Thanh niên, Hội sinh viên",
-      "type": "organization"
-    },
-    {
-      "name": "0283.7245396",
-      "type": "phone_number"
-    },
-    {
-      "name": "https://www.tuoitrenonglam.com",
-      "type": "website"
-    },
-    {
-      "name": "Tạp chí Nông nghiệp và phát triển trường Đại học Nông Lâm TP.HCM",
-      "type": "organization"
-    },
-    {
-      "name": "028.37245670",
-      "type": "phone_number"
-    },
-    {
-      "name": "https://jad.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Thư viện",
-      "type": "facility"
-    },
-    {
-      "name": "028.38963351",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://elib.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Trung tâm Dịch vụ Sinh viên",
-      "type": "center"
-    },
-    {
-      "name": "028.38963346",
-      "type": "phone_number"
-    },
-    {
-      "name": "https://ttdvsv.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "TT hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
-      "type": "center"
-    },
-    {
-      "name": "028.37245397",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://htsv.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "TT Nghiên cứu & chuyển giao KHCN",
-      "type": "center"
-    },
-    {
-      "name": "028.38966056",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://rttc.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Trung tâm Nghiên cứu biến đổi khí hậu",
-      "type": "center"
-    },
-    {
-      "name": "028.37242522",
-      "type": "phone_number"
-    },
-    {
-      "name": "https://rccc.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Trung tâm Nghiên cứu và Ứng dụng Công nghệ Địa chính",
-      "type": "center"
-    },
-    {
-      "name": "028.37245422",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://cadas.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "TT Ngoại ngữ",
-      "type": "center"
-    },
-    {
-      "name": "028.38960109",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://cfs.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "TT Tin học ứng dụng",
-      "type": "center"
-    },
-    {
-      "name": "028.38961713",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://aic.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "TT Ươm tạo doanh nghiệp công nghệ",
-      "type": "center"
-    },
-    {
-      "name": "28.37245197",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://tbi.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Viện Nghiên cứu Công nghệ Sinh học và Môi trường",
-      "type": "institute"
-    },
-    {
-      "name": "028.37220294",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://ribe.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Công nghệ Hóa học và Thực phẩm",
-      "type": "faculty"
-    },
-    {
-      "name": "028.38960871",
-      "type": "phone_number"
-    },
-    {
-      "name": "https://ceft.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Công nghệ Thông tin",
-      "type": "faculty"
-    },
-    {
-      "name": "028.37242623",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://fit.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Cơ khí Công nghệ",
-      "type": "faculty"
-    },
-    {
-      "name": "028.38960721",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://fme.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Chăn nuôi Thú y",
-      "type": "faculty"
-    },
-    {
-      "name": "028.38961711",
-      "type": "phone_number"
-    },
-    {
-      "name": "https://cnty.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Kinh tế",
-      "type": "faculty"
-    },
-    {
-      "name": "028.38961708",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://eco.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Khoa học",
-      "type": "faculty"
-    },
-    {
-      "name": "028.37220262",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://fs.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Khoa học Sinh học",
-      "type": "faculty"
-    },
-    {
-      "name": "028.37245163",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://biotech.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Lâm nghiệp",
-      "type": "faculty"
-    },
-    {
-      "name": "028.38975453",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://ff.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Môi trường và Tài nguyên",
-      "type": "faculty"
-    },
-    {
-      "name": "028.37220723",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://env.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Nông học",
-      "type": "faculty"
-    },
-    {
-      "name": "028.38961710",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://fa.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Ngoại ngữ - Sư phạm",
-      "type": "faculty"
-    },
-    {
-      "name": "028.37220727",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://ffl.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Quản lý đất đai và Bất động sản",
-      "type": "faculty"
-    },
-    {
-      "name": "028.37220261",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://lrem.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Khoa Thủy sản",
-      "type": "faculty"
-    },
-    {
-      "name": "028.38963343",
-      "type": "phone_number"
-    },
-    {
-      "name": "https://fof.hcmuaf.edu.vn",
-      "type": "website"
-    },
-    {
-      "name": "Bộ môn Lý luận Chính trị",
-      "type": "department_subject"
-    },
-    {
-      "name": "028.38963342",
-      "type": "phone_number"
-    },
-    {
-      "name": "http://bmllct.hcmuaf.edu.vn",
-      "type": "website"
-    }
-  ],
   "relationships": [
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "12 phòng ban",
-      "relation": "SỞ_HỮU",
-      "type_source": "organization",
-      "type_target": "quantity"
+      "source": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "target": {
+        "name": "phòng ban",
+        "category_label_vn": "phòng ban",
+        "count_value": "12",
+        "description_note": "Số lượng phòng ban trực thuộc trường"
+      },
+      "type_source": "university",
+      "type_target": "unit_count_summary",
+      "relation": "có_tổng_số"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "07 trung tâm",
-      "relation": "SỞ_HỮU",
-      "type_source": "organization",
-      "type_target": "quantity"
+      "source": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "target": {
+        "name": "trung tâm",
+        "category_label_vn": "trung tâm",
+        "count_value": "07",
+        "description_note": "Số lượng trung tâm trực thuộc trường"
+      },
+      "type_source": "university",
+      "type_target": "unit_count_summary",
+      "relation": "có_tổng_số"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "01 viện nghiên cứu",
-      "relation": "SỞ_HỮU",
-      "type_source": "organization",
-      "type_target": "quantity"
+      "source": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "target": {
+        "name": "viện nghiên cứu",
+        "category_label_vn": "viện nghiên cứu",
+        "count_value": "01",
+        "description_note": "Số lượng viện nghiên cứu trực thuộc trường"
+      },
+      "type_source": "university",
+      "type_target": "unit_count_summary",
+      "relation": "có_tổng_số"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "12 khoa đào tạo chuyên môn",
-      "relation": "SỞ_HỮU",
-      "type_source": "organization",
-      "type_target": "quantity"
+      "source": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "target": {
+        "name": "khoa đào tạo chuyên môn",
+        "category_label_vn": "khoa đào tạo chuyên môn",
+        "count_value": "12",
+        "description_note": "Số lượng khoa đào tạo chuyên môn trực thuộc trường"
+      },
+      "type_source": "university",
+      "type_target": "unit_count_summary",
+      "relation": "có_tổng_số"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "01 khoa cơ bản",
-      "relation": "SỞ_HỮU",
-      "type_source": "organization",
-      "type_target": "quantity"
+      "source": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "target": {
+        "name": "khoa cơ bản",
+        "category_label_vn": "khoa cơ bản",
+        "count_value": "01",
+        "description_note": "Số lượng khoa cơ bản trực thuộc trường"
+      },
+      "type_source": "university",
+      "type_target": "unit_count_summary",
+      "relation": "có_tổng_số"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "01 bộ môn",
-      "relation": "SỞ_HỮU",
-      "type_source": "organization",
-      "type_target": "quantity"
+      "source": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "target": {
+        "name": "bộ môn trực thuộc Trường",
+        "category_label_vn": "bộ môn trực thuộc Trường",
+        "count_value": "01",
+        "description_note": "Số lượng bộ môn trực thuộc trường"
+      },
+      "type_source": "university",
+      "type_target": "unit_count_summary",
+      "relation": "có_tổng_số"
     },
     {
-      "source": "Phòng Công tác Sinh viên",
-      "target": "028.38974560",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Công tác Sinh viên",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Công tác Sinh viên",
+        "web_presence_key": "nls"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Phòng Công tác Sinh viên",
-      "target": "http://nls.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng Công tác Sinh viên",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Công tác Sinh viên",
+        "web_presence_key": "nls"
+      },
+      "target": {
+        "name": "028.38974560",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "028.38963350",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Công tác Sinh viên",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Công tác Sinh viên",
+        "web_presence_key": "nls"
+      },
+      "target": {
+        "name": "http://nls.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "nls.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "http://pdt.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng Đào tạo",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Đào tạo",
+        "web_presence_key": "pdt"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Phòng Đào tạo Sau đại học",
-      "target": "028.38963339",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Đào tạo",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Đào tạo",
+        "web_presence_key": "pdt"
+      },
+      "target": {
+        "name": "028.38963350",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Phòng Đào tạo Sau đại học",
-      "target": "http://pgo.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng Đào tạo",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Đào tạo",
+        "web_presence_key": "pdt"
+      },
+      "target": {
+        "name": "http://pdt.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "pdt.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Phòng Hành chính",
-      "target": "028.38966780",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Đào tạo Sau đại học",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Đào tạo Sau đại học",
+        "web_presence_key": "pgo"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Phòng Hành chính",
-      "target": "https://ado.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng Đào tạo Sau đại học",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Đào tạo Sau đại học",
+        "web_presence_key": "pgo"
+      },
+      "target": {
+        "name": "028.38963339",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Phòng Hợp tác Quốc tế",
-      "target": "028.38966946",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Đào tạo Sau đại học",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Đào tạo Sau đại học",
+        "web_presence_key": "pgo"
+      },
+      "target": {
+        "name": "http://pgo.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "pgo.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Phòng Hợp tác Quốc tế",
-      "target": "http://iro.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng Hành chính",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Hành chính",
+        "web_presence_key": "ado"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Phòng Kế hoạch Tài chính",
-      "target": "028.38963334",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Hành chính",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Hành chính",
+        "web_presence_key": "ado"
+      },
+      "target": {
+        "name": "028.38966780",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Phòng Kế hoạch Tài chính",
-      "target": "http://pkhtc.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng Hành chính",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Hành chính",
+        "web_presence_key": "ado"
+      },
+      "target": {
+        "name": "https://ado.hcmuaf.edu.vn",
+        "access_method": "https",
+        "full_hostname": "ado.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Phòng Quản lý Chất lượng",
-      "target": "0283.7245870",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Hợp tác Quốc tế",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Hợp tác Quốc tế",
+        "web_presence_key": "iro"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Phòng Quản lý Chất lượng",
-      "target": "https://kdcl.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng Hợp tác Quốc tế",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Hợp tác Quốc tế",
+        "web_presence_key": "iro"
+      },
+      "target": {
+        "name": "028.38966946",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Phòng QL Nghiên cứu Khoa học",
-      "target": "028.38963340",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Hợp tác Quốc tế",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Hợp tác Quốc tế",
+        "web_presence_key": "iro"
+      },
+      "target": {
+        "name": "http://iro.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "iro.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Phòng QL Nghiên cứu Khoa học",
-      "target": "http://srmo.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng Kế hoạch Tài chính",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Kế hoạch Tài chính",
+        "web_presence_key": "pkhtc"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Phòng Quản trị Vật tư",
-      "target": "028.38961157",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Kế hoạch Tài chính",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Kế hoạch Tài chính",
+        "web_presence_key": "pkhtc"
+      },
+      "target": {
+        "name": "028.38963334",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Phòng Quản trị Vật tư",
-      "target": "http://pqtvt.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng Kế hoạch Tài chính",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Kế hoạch Tài chính",
+        "web_presence_key": "pkhtc"
+      },
+      "target": {
+        "name": "http://pkhtc.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "pkhtc.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Phòng Tổ chức Cán bộ",
-      "target": "028.38963341",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Quản lý Chất lượng",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Quản lý Chất lượng",
+        "web_presence_key": "kdcl"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Phòng Tổ chức Cán bộ",
-      "target": "http://tccb.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng Quản lý Chất lượng",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Quản lý Chất lượng",
+        "web_presence_key": "kdcl"
+      },
+      "target": {
+        "name": "0283.7245870",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "0283",
+        "remarks": "Số điện thoại được cung cấp với tiền tố 0283"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Phòng Thanh tra giáo dục",
-      "target": "028.37245195",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Quản lý Chất lượng",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Quản lý Chất lượng",
+        "web_presence_key": "kdcl"
+      },
+      "target": {
+        "name": "https://kdcl.hcmuaf.edu.vn",
+        "access_method": "https",
+        "full_hostname": "kdcl.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Phòng Thanh tra giáo dục",
-      "target": "http://ttra.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng QL Nghiên cứu Khoa học",
+        "unit_category_vn": "Phòng",
+        "functional_description": "QL Nghiên cứu Khoa học",
+        "web_presence_key": "srmo"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Phòng Thông tin và Truyền thông",
-      "target": "028.35359097",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng QL Nghiên cứu Khoa học",
+        "unit_category_vn": "Phòng",
+        "functional_description": "QL Nghiên cứu Khoa học",
+        "web_presence_key": "srmo"
+      },
+      "target": {
+        "name": "028.38963340",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "department",
-      "type_target": "phone_number"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Phòng Thông tin và Truyền thông",
-      "target": "https://4t.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Phòng QL Nghiên cứu Khoa học",
+        "unit_category_vn": "Phòng",
+        "functional_description": "QL Nghiên cứu Khoa học",
+        "web_presence_key": "srmo"
+      },
+      "target": {
+        "name": "http://srmo.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "srmo.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "department",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Đoàn Thanh niên, Hội sinh viên",
-      "target": "0283.7245396",
-      "relation": "SỐ_ĐIỆN_THOẠI",
-      "type_source": "organization",
-      "type_target": "phone_number"
+      "source": {
+        "name": "Phòng Quản trị Vật tư",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Quản trị Vật tư",
+        "web_presence_key": "pqtvt"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "department",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Đoàn Thanh niên, Hội sinh viên",
-      "target": "https://www.tuoitrenonglam.com",
-      "relation": "WEBSITE",
-      "type_source": "organization",
-      "type_target": "website"
+      "source": {
+        "name": "Phòng Quản trị Vật tư",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Quản trị Vật tư",
+        "web_presence_key": "pqtvt"
+      },
+      "target": {
+        "name": "028.38961157",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "department",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Tạp chí Nông nghiệp và phát triển trường Đại học Nông Lâm TP.HCM",
-      "target": "028.37245670",
-      "relation": "SỐ_ĐIỆN_THOẠI",
-      "type_source": "organization",
-      "type_target": "phone_number"
+      "source": {
+        "name": "Phòng Quản trị Vật tư",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Quản trị Vật tư",
+        "web_presence_key": "pqtvt"
+      },
+      "target": {
+        "name": "http://pqtvt.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "pqtvt.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "department",
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Tạp chí Nông nghiệp và phát triển trường Đại học Nông Lâm TP.HCM",
-      "target": "https://jad.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
-      "type_source": "organization",
-      "type_target": "website"
+      "source": {
+        "name": "Phòng Tổ chức Cán bộ",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Tổ chức Cán bộ",
+        "web_presence_key": "tccb"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "department",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Thư viện",
-      "target": "028.38963351",
-      "relation": "SỐ_ĐIỆN_THOẠI",
-      "type_source": "facility",
-      "type_target": "phone_number"
+      "source": {
+        "name": "Phòng Tổ chức Cán bộ",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Tổ chức Cán bộ",
+        "web_presence_key": "tccb"
+      },
+      "target": {
+        "name": "028.38963341",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "department",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Thư viện",
-      "target": "http://elib.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
-      "type_source": "facility",
-      "type_target": "website"
+      "source": {
+        "name": "Phòng Tổ chức Cán bộ",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Tổ chức Cán bộ",
+        "web_presence_key": "tccb"
+      },
+      "target": {
+        "name": "http://tccb.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "tccb.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "department",
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Trung tâm Dịch vụ Sinh viên",
-      "target": "028.38963346",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Phòng Thanh tra giáo dục",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Thanh tra giáo dục",
+        "web_presence_key": "ttra"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "department",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Phòng Thanh tra giáo dục",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Thanh tra giáo dục",
+        "web_presence_key": "ttra"
+      },
+      "target": {
+        "name": "028.37245195",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "department",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Phòng Thanh tra giáo dục",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Thanh tra giáo dục",
+        "web_presence_key": "ttra"
+      },
+      "target": {
+        "name": "http://ttra.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "ttra.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "department",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Phòng Thông tin và Truyền thông",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Thông tin và Truyền thông",
+        "web_presence_key": "4t"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "department",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Phòng Thông tin và Truyền thông",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Thông tin và Truyền thông",
+        "web_presence_key": "4t"
+      },
+      "target": {
+        "name": "028.35359097",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "department",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Phòng Thông tin và Truyền thông",
+        "unit_category_vn": "Phòng",
+        "functional_description": "Thông tin và Truyền thông",
+        "web_presence_key": "4t"
+      },
+      "target": {
+        "name": "https://4t.hcmuaf.edu.vn",
+        "access_method": "https",
+        "full_hostname": "4t.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "department",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Đoàn Thanh niên, Hội sinh viên",
+        "unit_category_vn": "Đoàn thể Sinh viên",
+        "functional_description": "Hoạt động thanh niên và sinh viên",
+        "web_presence_key": "www.tuoitrenonglam.com"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "student_organization",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Đoàn Thanh niên, Hội sinh viên",
+        "unit_category_vn": "Đoàn thể Sinh viên",
+        "functional_description": "Hoạt động thanh niên và sinh viên",
+        "web_presence_key": "www.tuoitrenonglam.com"
+      },
+      "target": {
+        "name": "0283.7245396",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "0283",
+        "remarks": "Số điện thoại được cung cấp với tiền tố 0283"
+      },
+      "type_source": "student_organization",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Đoàn Thanh niên, Hội sinh viên",
+        "unit_category_vn": "Đoàn thể Sinh viên",
+        "functional_description": "Hoạt động thanh niên và sinh viên",
+        "web_presence_key": "www.tuoitrenonglam.com"
+      },
+      "target": {
+        "name": "https://www.tuoitrenonglam.com",
+        "access_method": "https",
+        "full_hostname": "www.tuoitrenonglam.com",
+        "status": "Hoạt động"
+      },
+      "type_source": "student_organization",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Tạp chí Nông nghiệp và phát triển trường Đại học Nông Lâm TP.HCM",
+        "unit_category_vn": "Tạp chí khoa học",
+        "functional_description": "Nông nghiệp và phát triển",
+        "web_presence_key": "jad"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "journal",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Tạp chí Nông nghiệp và phát triển trường Đại học Nông Lâm TP.HCM",
+        "unit_category_vn": "Tạp chí khoa học",
+        "functional_description": "Nông nghiệp và phát triển",
+        "web_presence_key": "jad"
+      },
+      "target": {
+        "name": "028.37245670",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "journal",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Tạp chí Nông nghiệp và phát triển trường Đại học Nông Lâm TP.HCM",
+        "unit_category_vn": "Tạp chí khoa học",
+        "functional_description": "Nông nghiệp và phát triển",
+        "web_presence_key": "jad"
+      },
+      "target": {
+        "name": "https://jad.hcmuaf.edu.vn",
+        "access_method": "https",
+        "full_hostname": "jad.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "journal",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Thư viện",
+        "unit_category_vn": "Thư viện",
+        "functional_description": "Cung cấp tài liệu, thông tin",
+        "web_presence_key": "elib"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "library",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Thư viện",
+        "unit_category_vn": "Thư viện",
+        "functional_description": "Cung cấp tài liệu, thông tin",
+        "web_presence_key": "elib"
+      },
+      "target": {
+        "name": "028.38963351",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "library",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Thư viện",
+        "unit_category_vn": "Thư viện",
+        "functional_description": "Cung cấp tài liệu, thông tin",
+        "web_presence_key": "elib"
+      },
+      "target": {
+        "name": "http://elib.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "elib.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "library",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Trung tâm Dịch vụ Sinh viên",
+        "unit_category_vn": "Trung tâm",
+        "functional_description": "Dịch vụ Sinh viên",
+        "web_presence_key": "ttdvsv"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "center",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Trung tâm Dịch vụ Sinh viên",
-      "target": "https://ttdvsv.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Trung tâm Dịch vụ Sinh viên",
+        "unit_category_vn": "Trung tâm",
+        "functional_description": "Dịch vụ Sinh viên",
+        "web_presence_key": "ttdvsv"
+      },
+      "target": {
+        "name": "028.38963346",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "center",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "TT hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
-      "target": "028.37245397",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Trung tâm Dịch vụ Sinh viên",
+        "unit_category_vn": "Trung tâm",
+        "functional_description": "Dịch vụ Sinh viên",
+        "web_presence_key": "ttdvsv"
+      },
+      "target": {
+        "name": "https://ttdvsv.hcmuaf.edu.vn",
+        "access_method": "https",
+        "full_hostname": "ttdvsv.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "center",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "TT hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
-      "target": "http://htsv.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "TT hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
+        "unit_category_vn": "TT",
+        "functional_description": "hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
+        "web_presence_key": "htsv"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "center",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "TT Nghiên cứu & chuyển giao KHCN",
-      "target": "028.38966056",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "TT hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
+        "unit_category_vn": "TT",
+        "functional_description": "hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
+        "web_presence_key": "htsv"
+      },
+      "target": {
+        "name": "028.37245397",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "center",
-      "type_target": "phone_number"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "TT Nghiên cứu & chuyển giao KHCN",
-      "target": "http://rttc.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "TT hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
+        "unit_category_vn": "TT",
+        "functional_description": "hỗ trợ Sinh viên và Quan hệ Doanh nghiệp",
+        "web_presence_key": "htsv"
+      },
+      "target": {
+        "name": "http://htsv.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "htsv.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "center",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Trung tâm Nghiên cứu biến đổi khí hậu",
-      "target": "028.37242522",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "TT Nghiên cứu & chuyển giao KHCN",
+        "unit_category_vn": "TT",
+        "functional_description": "Nghiên cứu & chuyển giao KHCN",
+        "web_presence_key": "rttc"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "center",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Trung tâm Nghiên cứu biến đổi khí hậu",
-      "target": "https://rccc.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "TT Nghiên cứu & chuyển giao KHCN",
+        "unit_category_vn": "TT",
+        "functional_description": "Nghiên cứu & chuyển giao KHCN",
+        "web_presence_key": "rttc"
+      },
+      "target": {
+        "name": "028.38966056",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "center",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Trung tâm Nghiên cứu và Ứng dụng Công nghệ Địa chính",
-      "target": "028.37245422",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "TT Nghiên cứu & chuyển giao KHCN",
+        "unit_category_vn": "TT",
+        "functional_description": "Nghiên cứu & chuyển giao KHCN",
+        "web_presence_key": "rttc"
+      },
+      "target": {
+        "name": "http://rttc.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "rttc.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "center",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Trung tâm Nghiên cứu và Ứng dụng Công nghệ Địa chính",
-      "target": "http://cadas.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Trung tâm Nghiên cứu biến đổi khí hậu",
+        "unit_category_vn": "Trung tâm",
+        "functional_description": "Nghiên cứu biến đổi khí hậu",
+        "web_presence_key": "rccc"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "center",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "TT Ngoại ngữ",
-      "target": "028.38960109",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Trung tâm Nghiên cứu biến đổi khí hậu",
+        "unit_category_vn": "Trung tâm",
+        "functional_description": "Nghiên cứu biến đổi khí hậu",
+        "web_presence_key": "rccc"
+      },
+      "target": {
+        "name": "028.37242522",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "center",
-      "type_target": "phone_number"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "TT Ngoại ngữ",
-      "target": "http://cfs.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Trung tâm Nghiên cứu biến đổi khí hậu",
+        "unit_category_vn": "Trung tâm",
+        "functional_description": "Nghiên cứu biến đổi khí hậu",
+        "web_presence_key": "rccc"
+      },
+      "target": {
+        "name": "https://rccc.hcmuaf.edu.vn",
+        "access_method": "https",
+        "full_hostname": "rccc.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "center",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "TT Tin học ứng dụng",
-      "target": "028.38961713",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Trung tâm Nghiên cứu và Ứng dụng Công nghệ Địa chính",
+        "unit_category_vn": "Trung tâm",
+        "functional_description": "Nghiên cứu và Ứng dụng Công nghệ Địa chính",
+        "web_presence_key": "cadas"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "center",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "TT Tin học ứng dụng",
-      "target": "http://aic.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Trung tâm Nghiên cứu và Ứng dụng Công nghệ Địa chính",
+        "unit_category_vn": "Trung tâm",
+        "functional_description": "Nghiên cứu và Ứng dụng Công nghệ Địa chính",
+        "web_presence_key": "cadas"
+      },
+      "target": {
+        "name": "028.37245422",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "center",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "TT Ươm tạo doanh nghiệp công nghệ",
-      "target": "28.37245197",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Trung tâm Nghiên cứu và Ứng dụng Công nghệ Địa chính",
+        "unit_category_vn": "Trung tâm",
+        "functional_description": "Nghiên cứu và Ứng dụng Công nghệ Địa chính",
+        "web_presence_key": "cadas"
+      },
+      "target": {
+        "name": "http://cadas.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "cadas.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "center",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "TT Ươm tạo doanh nghiệp công nghệ",
-      "target": "http://tbi.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "TT Ngoại ngữ",
+        "unit_category_vn": "TT",
+        "functional_description": "Ngoại ngữ",
+        "web_presence_key": "cfs"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "center",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Viện Nghiên cứu Công nghệ Sinh học và Môi trường",
-      "target": "028.37220294",
-      "relation": "SỐ_ĐIỆN_THOẠI",
-      "type_source": "institute",
-      "type_target": "phone_number"
+      "source": {
+        "name": "TT Ngoại ngữ",
+        "unit_category_vn": "TT",
+        "functional_description": "Ngoại ngữ",
+        "web_presence_key": "cfs"
+      },
+      "target": {
+        "name": "028.38960109",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "center",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Viện Nghiên cứu Công nghệ Sinh học và Môi trường",
-      "target": "http://ribe.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
-      "type_source": "institute",
-      "type_target": "website"
+      "source": {
+        "name": "TT Ngoại ngữ",
+        "unit_category_vn": "TT",
+        "functional_description": "Ngoại ngữ",
+        "web_presence_key": "cfs"
+      },
+      "target": {
+        "name": "http://cfs.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "cfs.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "center",
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Khoa Công nghệ Hóa học và Thực phẩm",
-      "target": "028.38960871",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "TT Tin học ứng dụng",
+        "unit_category_vn": "TT",
+        "functional_description": "Tin học ứng dụng",
+        "web_presence_key": "aic"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "center",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "TT Tin học ứng dụng",
+        "unit_category_vn": "TT",
+        "functional_description": "Tin học ứng dụng",
+        "web_presence_key": "aic"
+      },
+      "target": {
+        "name": "028.38961713",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "center",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "TT Tin học ứng dụng",
+        "unit_category_vn": "TT",
+        "functional_description": "Tin học ứng dụng",
+        "web_presence_key": "aic"
+      },
+      "target": {
+        "name": "http://aic.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "aic.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "center",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "TT Ươm tạo doanh nghiệp công nghệ",
+        "unit_category_vn": "TT",
+        "functional_description": "Ươm tạo doanh nghiệp công nghệ",
+        "web_presence_key": "tbi"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "center",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "TT Ươm tạo doanh nghiệp công nghệ",
+        "unit_category_vn": "TT",
+        "functional_description": "Ươm tạo doanh nghiệp công nghệ",
+        "web_presence_key": "tbi"
+      },
+      "target": {
+        "name": "28.37245197",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "Không có mã vùng tiêu chuẩn",
+        "remarks": "Số điện thoại được cung cấp không có mã vùng 3 chữ số tiêu chuẩn"
+      },
+      "type_source": "center",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "TT Ươm tạo doanh nghiệp công nghệ",
+        "unit_category_vn": "TT",
+        "functional_description": "Ươm tạo doanh nghiệp công nghệ",
+        "web_presence_key": "tbi"
+      },
+      "target": {
+        "name": "http://tbi.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "tbi.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "center",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Viện Nghiên cứu Công nghệ Sinh học và Môi trường",
+        "unit_category_vn": "Viện",
+        "functional_description": "Nghiên cứu Công nghệ Sinh học và Môi trường",
+        "web_presence_key": "ribe"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "research_institute",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Viện Nghiên cứu Công nghệ Sinh học và Môi trường",
+        "unit_category_vn": "Viện",
+        "functional_description": "Nghiên cứu Công nghệ Sinh học và Môi trường",
+        "web_presence_key": "ribe"
+      },
+      "target": {
+        "name": "028.37220294",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "research_institute",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Viện Nghiên cứu Công nghệ Sinh học và Môi trường",
+        "unit_category_vn": "Viện",
+        "functional_description": "Nghiên cứu Công nghệ Sinh học và Môi trường",
+        "web_presence_key": "ribe"
+      },
+      "target": {
+        "name": "http://ribe.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "ribe.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "research_institute",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Khoa Công nghệ Hóa học và Thực phẩm",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Công nghệ Hóa học và Thực phẩm",
+        "web_presence_key": "ceft"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Khoa Công nghệ Hóa học và Thực phẩm",
-      "target": "https://ceft.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Công nghệ Hóa học và Thực phẩm",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Công nghệ Hóa học và Thực phẩm",
+        "web_presence_key": "ceft"
+      },
+      "target": {
+        "name": "028.38960871",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Khoa Công nghệ Thông tin",
-      "target": "028.37242623",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Công nghệ Hóa học và Thực phẩm",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Công nghệ Hóa học và Thực phẩm",
+        "web_presence_key": "ceft"
+      },
+      "target": {
+        "name": "https://ceft.hcmuaf.edu.vn",
+        "access_method": "https",
+        "full_hostname": "ceft.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Khoa Công nghệ Thông tin",
-      "target": "http://fit.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Công nghệ Thông tin",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Công nghệ Thông tin",
+        "web_presence_key": "fit"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Khoa Cơ khí Công nghệ",
-      "target": "028.38960721",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Công nghệ Thông tin",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Công nghệ Thông tin",
+        "web_presence_key": "fit"
+      },
+      "target": {
+        "name": "028.37242623",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Khoa Cơ khí Công nghệ",
-      "target": "http://fme.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Công nghệ Thông tin",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Công nghệ Thông tin",
+        "web_presence_key": "fit"
+      },
+      "target": {
+        "name": "http://fit.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "fit.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Khoa Chăn nuôi Thú y",
-      "target": "028.38961711",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Cơ khí Công nghệ",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Cơ khí Công nghệ",
+        "web_presence_key": "fme"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Khoa Chăn nuôi Thú y",
-      "target": "https://cnty.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Cơ khí Công nghệ",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Cơ khí Công nghệ",
+        "web_presence_key": "fme"
+      },
+      "target": {
+        "name": "028.38960721",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Khoa Kinh tế",
-      "target": "028.38961708",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Cơ khí Công nghệ",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Cơ khí Công nghệ",
+        "web_presence_key": "fme"
+      },
+      "target": {
+        "name": "http://fme.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "fme.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Khoa Kinh tế",
-      "target": "http://eco.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Chăn nuôi Thú y",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Chăn nuôi Thú y",
+        "web_presence_key": "cnty"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Khoa Khoa học",
-      "target": "028.37220262",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Chăn nuôi Thú y",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Chăn nuôi Thú y",
+        "web_presence_key": "cnty"
+      },
+      "target": {
+        "name": "028.38961711",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Khoa Khoa học",
-      "target": "http://fs.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Chăn nuôi Thú y",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Chăn nuôi Thú y",
+        "web_presence_key": "cnty"
+      },
+      "target": {
+        "name": "https://cnty.hcmuaf.edu.vn",
+        "access_method": "https",
+        "full_hostname": "cnty.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Khoa Khoa học Sinh học",
-      "target": "028.37245163",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Kinh tế",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Kinh tế",
+        "web_presence_key": "eco"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Khoa Khoa học Sinh học",
-      "target": "http://biotech.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Kinh tế",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Kinh tế",
+        "web_presence_key": "eco"
+      },
+      "target": {
+        "name": "028.38961708",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Khoa Lâm nghiệp",
-      "target": "028.38975453",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Kinh tế",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Kinh tế",
+        "web_presence_key": "eco"
+      },
+      "target": {
+        "name": "http://eco.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "eco.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Khoa Lâm nghiệp",
-      "target": "http://ff.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Khoa học",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Khoa học",
+        "web_presence_key": "fs"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Khoa Môi trường và Tài nguyên",
-      "target": "028.37220723",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Khoa học",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Khoa học",
+        "web_presence_key": "fs"
+      },
+      "target": {
+        "name": "028.37220262",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Khoa Môi trường và Tài nguyên",
-      "target": "http://env.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Khoa học",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Khoa học",
+        "web_presence_key": "fs"
+      },
+      "target": {
+        "name": "http://fs.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "fs.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Khoa Nông học",
-      "target": "028.38961710",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Khoa học Sinh học",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Khoa học Sinh học",
+        "web_presence_key": "biotech"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Khoa Nông học",
-      "target": "http://fa.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Khoa học Sinh học",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Khoa học Sinh học",
+        "web_presence_key": "biotech"
+      },
+      "target": {
+        "name": "028.37245163",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Khoa Ngoại ngữ - Sư phạm",
-      "target": "028.37220727",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Khoa học Sinh học",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Khoa học Sinh học",
+        "web_presence_key": "biotech"
+      },
+      "target": {
+        "name": "http://biotech.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "biotech.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Khoa Ngoại ngữ - Sư phạm",
-      "target": "http://ffl.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Lâm nghiệp",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Lâm nghiệp",
+        "web_presence_key": "ff"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Khoa Quản lý đất đai và Bất động sản",
-      "target": "028.37220261",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Lâm nghiệp",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Lâm nghiệp",
+        "web_presence_key": "ff"
+      },
+      "target": {
+        "name": "028.38975453",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Khoa Quản lý đất đai và Bất động sản",
-      "target": "http://lrem.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Lâm nghiệp",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Lâm nghiệp",
+        "web_presence_key": "ff"
+      },
+      "target": {
+        "name": "http://ff.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "ff.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Khoa Thủy sản",
-      "target": "028.38963343",
-      "relation": "SỐ_ĐIỆN_THOẠI",
+      "source": {
+        "name": "Khoa Môi trường và Tài nguyên",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Môi trường và Tài nguyên",
+        "web_presence_key": "env"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
       "type_source": "faculty",
-      "type_target": "phone_number"
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
     },
     {
-      "source": "Khoa Thủy sản",
-      "target": "https://fof.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
+      "source": {
+        "name": "Khoa Môi trường và Tài nguyên",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Môi trường và Tài nguyên",
+        "web_presence_key": "env"
+      },
+      "target": {
+        "name": "028.37220723",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
       "type_source": "faculty",
-      "type_target": "website"
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
     },
     {
-      "source": "Bộ môn Lý luận Chính trị",
-      "target": "028.38963342",
-      "relation": "SỐ_ĐIỆN_THOẠI",
-      "type_source": "department_subject",
-      "type_target": "phone_number"
+      "source": {
+        "name": "Khoa Môi trường và Tài nguyên",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Môi trường và Tài nguyên",
+        "web_presence_key": "env"
+      },
+      "target": {
+        "name": "http://env.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "env.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "faculty",
+      "type_target": "website",
+      "relation": "có_website"
     },
     {
-      "source": "Bộ môn Lý luận Chính trị",
-      "target": "http://bmllct.hcmuaf.edu.vn",
-      "relation": "WEBSITE",
-      "type_source": "department_subject",
-      "type_target": "website"
+      "source": {
+        "name": "Khoa Nông học",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Nông học",
+        "web_presence_key": "fa"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "faculty",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Khoa Nông học",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Nông học",
+        "web_presence_key": "fa"
+      },
+      "target": {
+        "name": "028.38961710",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "faculty",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Khoa Nông học",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Nông học",
+        "web_presence_key": "fa"
+      },
+      "target": {
+        "name": "http://fa.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "fa.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "faculty",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Khoa Ngoại ngữ - Sư phạm",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Ngoại ngữ - Sư phạm",
+        "web_presence_key": "ffl"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "faculty",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Khoa Ngoại ngữ - Sư phạm",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Ngoại ngữ - Sư phạm",
+        "web_presence_key": "ffl"
+      },
+      "target": {
+        "name": "028.37220727",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "faculty",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Khoa Ngoại ngữ - Sư phạm",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Ngoại ngữ - Sư phạm",
+        "web_presence_key": "ffl"
+      },
+      "target": {
+        "name": "http://ffl.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "ffl.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "faculty",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Khoa Quản lý đất đai và Bất động sản",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Quản lý đất đai và Bất động sản",
+        "web_presence_key": "lrem"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "faculty",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Khoa Quản lý đất đai và Bất động sản",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Quản lý đất đai và Bất động sản",
+        "web_presence_key": "lrem"
+      },
+      "target": {
+        "name": "028.37220261",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "faculty",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Khoa Quản lý đất đai và Bất động sản",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Quản lý đất đai và Bất động sản",
+        "web_presence_key": "lrem"
+      },
+      "target": {
+        "name": "http://lrem.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "lrem.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "faculty",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Khoa Thủy sản",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Thủy sản",
+        "web_presence_key": "fof"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "faculty",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Khoa Thủy sản",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Thủy sản",
+        "web_presence_key": "fof"
+      },
+      "target": {
+        "name": "028.38963343",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "faculty",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Khoa Thủy sản",
+        "unit_category_vn": "Khoa",
+        "functional_description": "Thủy sản",
+        "web_presence_key": "fof"
+      },
+      "target": {
+        "name": "https://fof.hcmuaf.edu.vn",
+        "access_method": "https",
+        "full_hostname": "fof.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "faculty",
+      "type_target": "website",
+      "relation": "có_website"
+    },
+    {
+      "source": {
+        "name": "Bộ môn Lý luận Chính trị",
+        "unit_category_vn": "Bộ môn",
+        "functional_description": "Lý luận Chính trị",
+        "web_presence_key": "bmllct"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
+        "main_academic_discipline": "Nông Lâm",
+        "city": "Tp. Hồ Chí Minh",
+        "root_domain": "hcmuaf.edu.vn"
+      },
+      "type_source": "subject_department",
+      "type_target": "university",
+      "relation": "là_đơn_vị_của"
+    },
+    {
+      "source": {
+        "name": "Bộ môn Lý luận Chính trị",
+        "unit_category_vn": "Bộ môn",
+        "functional_description": "Lý luận Chính trị",
+        "web_presence_key": "bmllct"
+      },
+      "target": {
+        "name": "028.38963342",
+        "number_type": "Số điện thoại",
+        "city_code_if_applicable": "028",
+        "remarks": "Mã vùng TP.HCM"
+      },
+      "type_source": "subject_department",
+      "type_target": "phone_number",
+      "relation": "có_số_điện_thoại"
+    },
+    {
+      "source": {
+        "name": "Bộ môn Lý luận Chính trị",
+        "unit_category_vn": "Bộ môn",
+        "functional_description": "Lý luận Chính trị",
+        "web_presence_key": "bmllct"
+      },
+      "target": {
+        "name": "http://bmllct.hcmuaf.edu.vn",
+        "access_method": "http",
+        "full_hostname": "bmllct.hcmuaf.edu.vn",
+        "status": "Hoạt động"
+      },
+      "type_source": "subject_department",
+      "type_target": "website",
+      "relation": "có_website"
     }
   ]
 }

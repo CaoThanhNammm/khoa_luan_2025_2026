@@ -1,832 +1,424 @@
 {
-  "entities": [
-    {
-      "name": "KHÓA LUẬN",
-      "type": "TOPIC"
-    },
-    {
-      "name": "TIỂU LUẬN",
-      "type": "TOPIC"
-    },
-    {
-      "name": "TÍCH LŨY TÍN CHỈ TỐT NGHIỆP",
-      "type": "TOPIC"
-    },
-    {
-      "name": "ngành/chuyên ngành đào tạo",
-      "type": "MAJOR"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "Cử nhân",
-      "type": "DEGREE"
-    },
-    {
-      "name": "10",
-      "type": "NUMBER"
-    },
-    {
-      "name": "tín chỉ",
-      "type": "CREDIT"
-    },
-    {
-      "name": "12",
-      "type": "NUMBER"
-    },
-    {
-      "name": "Kỹ sư",
-      "type": "DEGREE"
-    },
-    {
-      "name": "Bác sỹ Thú y",
-      "type": "DEGREE"
-    },
-    {
-      "name": "tiểu luận tốt nghiệp",
-      "type": "TOPIC"
-    },
-    {
-      "name": "05",
-      "type": "NUMBER"
-    },
-    {
-      "name": "06",
-      "type": "NUMBER"
-    },
-    {
-      "name": "01 giảng viên",
-      "type": "LECTURER"
-    },
-    {
-      "name": "giảng viên",
-      "type": "LECTURER"
-    },
-    {
-      "name": "hội đồng",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "Cán bộ",
-      "type": "STAFF"
-    },
-    {
-      "name": "Trưởng Khoa",
-      "type": "POSITION"
-    },
-    {
-      "name": "Khoa",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "CTĐT",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "90",
-      "type": "NUMBER"
-    },
-    {
-      "name": "112",
-      "type": "NUMBER"
-    },
-    {
-      "name": "hệ 4",
-      "type": "SYSTEM"
-    },
-    {
-      "name": "2,00",
-      "type": "GRADE"
-    },
-    {
-      "name": "học kỳ cuối cùng",
-      "type": "SEMESTER"
-    },
-    {
-      "name": "chương trình đào tạo",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Bộ môn",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "doanh nghiệp",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "03 cuốn báo cáo",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "giáo viên hướng dẫn",
-      "type": "SUPERVISOR"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "POSITION"
-    },
-    {
-      "name": "chủ tịch hội đồng",
-      "type": "POSITION"
-    },
-    {
-      "name": "ủy viên phản biện",
-      "type": "POSITION"
-    },
-    {
-      "name": "ủy viên",
-      "type": "POSITION"
-    },
-    {
-      "name": "thư ký hành chính",
-      "type": "POSITION"
-    },
-    {
-      "name": "hồ sơ",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "biên bản",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "phiếu nhận xét",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "điểm",
-      "type": "GRADE"
-    },
-    {
-      "name": "3 điểm",
-      "type": "GRADE"
-    },
-    {
-      "name": "Thạc sĩ",
-      "type": "DEGREE"
-    },
-    {
-      "name": "03 năm",
-      "type": "DURATION"
-    },
-    {
-      "name": "lớp",
-      "type": "CLASS"
-    },
-    {
-      "name": "đợt phân công",
-      "type": "ROUND"
-    },
-    {
-      "name": "04",
-      "type": "NUMBER"
-    },
-    {
-      "name": "đề tài khóa luận",
-      "type": "TOPIC"
-    },
-    {
-      "name": "0,5",
-      "type": "NUMBER"
-    },
-    {
-      "name": "01",
-      "type": "NUMBER"
-    }
-  ],
   "relationships": [
     {
-      "source": "KHÓA LUẬN",
-      "target": "10 tín chỉ",
-      "relation": "có_khối_lượng",
-      "type_source": "TOPIC",
-      "type_target": "CREDIT"
+      "source": {"name": "Sinh viên", "type": "person_role", "description": "Đối tượng thực hiện các hình thức tốt nghiệp", "academic_level": "Đại học"},
+      "target": {"name": "Khóa luận", "type": "academic_work", "credits_bachelor": "10 tín chỉ", "credits_engineer_vet": "12 tín chỉ", "evaluation_method": "Bảo vệ trước hội đồng"},
+      "type_source": "person_role",
+      "type_target": "academic_work",
+      "relation": "thực_hiện"
     },
     {
-      "source": "KHÓA LUẬN",
-      "target": "12 tín chỉ",
-      "relation": "có_khối_lượng",
-      "type_source": "TOPIC",
-      "type_target": "CREDIT"
+      "source": {"name": "Sinh viên", "type": "person_role", "description": "Đối tượng thực hiện các hình thức tốt nghiệp", "academic_level": "Đại học"},
+      "target": {"name": "Tiểu luận tốt nghiệp", "type": "academic_work", "credits_bachelor": "05 tín chỉ", "credits_engineer_vet": "06 tín chỉ", "defense_required": "không"},
+      "type_source": "person_role",
+      "type_target": "academic_work",
+      "relation": "thực_hiện"
     },
     {
-      "source": "tiểu luận tốt nghiệp",
-      "target": "05 tín chỉ",
-      "relation": "có_khối_lượng",
-      "type_source": "TOPIC",
-      "type_target": "CREDIT"
+      "source": {"name": "Khóa luận", "type": "academic_work", "purpose": "Công trình tốt nghiệp cho sinh viên", "associated_degree": "Cử nhân"},
+      "target": {"name": "Cử nhân", "type": "degree", "level": "Đại học", "thesis_requirement_credits": "10"},
+      "type_source": "academic_work",
+      "type_target": "degree",
+      "relation": "áp_dụng_cho_bằng"
     },
     {
-      "source": "tiểu luận tốt nghiệp",
-      "target": "06 tín chỉ",
-      "relation": "có_khối_lượng",
-      "type_source": "TOPIC",
-      "type_target": "CREDIT"
+      "source": {"name": "Khóa luận", "type": "academic_work", "purpose": "Công trình tốt nghiệp cho sinh viên", "associated_degrees": "Kỹ sư, Bác sỹ Thú y"},
+      "target": {"name": "Kỹ sư", "type": "degree", "level": "Đại học", "thesis_requirement_credits": "12"},
+      "type_source": "academic_work",
+      "type_target": "degree",
+      "relation": "áp_dụng_cho_bằng"
     },
     {
-      "source": "tiểu luận tốt nghiệp",
-      "target": "01 giảng viên",
-      "relation": "được_hướng_dẫn_bởi",
-      "type_source": "TOPIC",
-      "type_target": "LECTURER"
+      "source": {"name": "Khóa luận", "type": "academic_work", "purpose": "Công trình tốt nghiệp cho sinh viên", "associated_degrees": "Kỹ sư, Bác sỹ Thú y"},
+      "target": {"name": "Bác sỹ Thú y", "type": "degree", "level": "Đại học chuyên ngành", "thesis_requirement_credits": "12"},
+      "type_source": "academic_work",
+      "type_target": "degree",
+      "relation": "áp_dụng_cho_bằng"
     },
     {
-      "source": "Trưởng Khoa",
-      "target": "Cán bộ",
-      "relation": "chỉ_định_người_chấm",
-      "type_source": "POSITION",
-      "type_target": "STAFF"
+      "source": {"name": "Tiểu luận tốt nghiệp", "type": "academic_work", "purpose": "Bài viết tốt nghiệp thay thế hoặc bổ sung", "associated_degree": "Cử nhân"},
+      "target": {"name": "Cử nhân", "type": "degree", "level": "Đại học", "essay_requirement_credits": "05"},
+      "type_source": "academic_work",
+      "type_target": "degree",
+      "relation": "áp_dụng_cho_bằng"
     },
     {
-      "source": "sinh viên",
-      "target": "90 tín chỉ",
-      "relation": "cần_tích_lũy",
-      "type_source": "STUDENT",
-      "type_target": "CREDIT"
+      "source": {"name": "Tiểu luận tốt nghiệp", "type": "academic_work", "purpose": "Bài viết tốt nghiệp thay thế hoặc bổ sung", "associated_degrees": "Kỹ sư, Bác sỹ Thú y"},
+      "target": {"name": "Kỹ sư", "type": "degree", "level": "Đại học", "essay_requirement_credits": "06"},
+      "type_source": "academic_work",
+      "type_target": "degree",
+      "relation": "áp_dụng_cho_bằng"
     },
     {
-      "source": "90 tín chỉ",
-      "target": "ngành/chuyên ngành đào tạo",
-      "relation": "dành_cho",
-      "type_source": "CREDIT",
-      "type_target": "MAJOR"
+      "source": {"name": "Tiểu luận tốt nghiệp", "type": "academic_work", "purpose": "Bài viết tốt nghiệp thay thế hoặc bổ sung", "associated_degrees": "Kỹ sư, Bác sỹ Thú y"},
+      "target": {"name": "Bác sỹ Thú y", "type": "degree", "level": "Đại học chuyên ngành", "essay_requirement_credits": "06"},
+      "type_source": "academic_work",
+      "type_target": "degree",
+      "relation": "áp_dụng_cho_bằng"
     },
     {
-      "source": "ngành/chuyên ngành đào tạo",
-      "target": "Cử nhân",
-      "relation": "cấp_bằng",
-      "type_source": "MAJOR",
-      "type_target": "DEGREE"
+      "source": {"name": "Sinh viên", "type": "person_role", "academic_status": "Đang theo học", "objective": "Hoàn thành chương trình đào tạo"},
+      "target": {"name": "Học phần chuyên môn", "type": "academic_module", "purpose": "Bổ sung tín chỉ theo quy định CTĐT", "category": "Chuyên môn"},
+      "type_source": "person_role",
+      "type_target": "academic_module",
+      "relation": "học_thêm"
     },
     {
-      "source": "sinh viên",
-      "target": "112 tín chỉ",
-      "relation": "cần_tích_lũy",
-      "type_source": "STUDENT",
-      "type_target": "CREDIT"
+      "source": {"name": "Tiểu luận tốt nghiệp", "type": "academic_work", "supervision_requirement": "01 giảng viên hướng dẫn", "grading_requirement": "01 giảng viên khác chấm"},
+      "target": {"name": "Giảng viên", "type": "person_role", "function": "Hướng dẫn học thuật", "affiliation": "Trường đại học"},
+      "type_source": "academic_work",
+      "type_target": "person_role",
+      "relation": "được_hướng_dẫn_bởi"
     },
     {
-      "source": "112 tín chỉ",
-      "target": "ngành/chuyên ngành đào tạo",
-      "relation": "dành_cho",
-      "type_source": "CREDIT",
-      "type_target": "MAJOR"
+      "source": {"name": "Tiểu luận tốt nghiệp", "type": "academic_work", "supervision_requirement": "01 giảng viên hướng dẫn", "grading_requirement": "01 giảng viên khác chấm"},
+      "target": {"name": "Giảng viên", "type": "person_role", "function": "Đánh giá học thuật", "distinction": "Khác giảng viên hướng dẫn"},
+      "type_source": "academic_work",
+      "type_target": "person_role",
+      "relation": "được_chấm_bởi"
     },
     {
-      "source": "ngành/chuyên ngành đào tạo",
-      "target": "Kỹ sư",
-      "relation": "cấp_bằng",
-      "type_source": "MAJOR",
-      "type_target": "DEGREE"
+      "source": {"name": "Trưởng Khoa", "type": "person_role", "authority": "Quản lý Khoa", "decision_scope": "Nhân sự chấm tiểu luận"},
+      "target": {"name": "Cán bộ chấm tiểu luận tốt nghiệp", "type": "person_role", "basis": "Là giảng viên", "task": "Chấm điểm tiểu luận tốt nghiệp"},
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "quyết_định"
     },
     {
-      "source": "ngành/chuyên ngành đào tạo",
-      "target": "Bác sỹ Thú y",
-      "relation": "cấp_bằng",
-      "type_source": "MAJOR",
-      "type_target": "DEGREE"
+      "source": {"name": "Sinh viên", "type": "person_role", "academic_goal": "Hoàn thành tốt nghiệp", "method": "Học các học phần tự chọn"},
+      "target": {"name": "Tín chỉ tốt nghiệp", "type": "academic_requirement_unit", "source": "CTĐT ngành/chuyên ngành", "purpose": "Đủ số tín chỉ theo yêu cầu CTĐT"},
+      "type_source": "person_role",
+      "type_target": "academic_requirement_unit",
+      "relation": "tích_lũy"
     },
     {
-      "source": "sinh viên",
-      "target": "2,00",
-      "relation": "cần_có_điểm_trung_bình",
-      "type_source": "STUDENT",
-      "type_target": "GRADE"
+      "source": {"name": "Sinh viên", "type": "person_role", "action": "Đăng ký thực hiện khóa luận", "min_credits_bachelor": "90", "min_credits_engineer_vet":"112", "min_gpa": "2.00"},
+      "target": {"name": "Đề tài khóa luận", "type": "academic_topic", "category": "Khóa luận", "assignment_process": "Theo quy định"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "phải_thỏa_mãn_điều_kiện_để_nhận"
     },
     {
-      "source": "hệ thống điểm",
-      "target": "hệ 4",
-      "relation": "là",
-      "type_source": "SYSTEM",
-      "type_target": "SYSTEM"
+      "source": {"name": "Sinh viên", "type": "person_role", "action": "Đăng ký thực hiện tiểu luận", "min_credits_bachelor": "90", "min_credits_engineer_vet":"112", "min_gpa": "2.00"},
+      "target": {"name": "Đề tài tiểu luận tốt nghiệp", "type": "academic_topic", "category": "Tiểu luận tốt nghiệp", "assignment_process": "Theo quy định"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "phải_thỏa_mãn_điều_kiện_để_nhận"
     },
     {
-      "source": "Khoa",
-      "target": "quy định",
-      "relation": "có_thể_bổ_sung",
-      "type_source": "ORGANIZATION",
-      "type_target": "RULE"
+      "source": {"name": "Khoa", "type": "organization_unit", "administrative_level": "Đơn vị đào tạo", "discretion": "Tùy theo tình hình cụ thể"},
+      "target": {"name": "Quy định khác về điều kiện nhận đề tài", "type": "regulation", "scope": "Điều kiện nhận đề tài KL/TLTN", "basis": "Đặc điểm ngành/chuyên ngành"},
+      "type_source": "organization_unit",
+      "type_target": "regulation",
+      "relation": "có_thể_bổ_sung"
     },
     {
-      "source": "Trưởng Khoa",
-      "target": "thời điểm phân công đề tài",
-      "relation": "quy_định",
-      "type_source": "POSITION",
-      "type_target": "TIME"
+      "source": {"name": "Trưởng Khoa", "type": "person_role", "authority_scope": "Quản lý đào tạo Khoa", "flexibility": "Có thể quy định thời điểm phù hợp"},
+      "target": {"name": "Đề tài khóa luận", "type": "academic_topic", "default_assignment_time": "Đầu học kỳ cuối cùng", "assigner": "Khoa"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "quy_định_thời_điểm_phân_công"
     },
     {
-      "source": "Khoa",
-      "target": "định hướng nghiên cứu",
-      "relation": "cập_nhật_và_công_bố",
-      "type_source": "ORGANIZATION",
-      "type_target": "RESEARCH_DIRECTION"
+      "source": {"name": "Trưởng Khoa", "type": "person_role", "authority_scope": "Quản lý đào tạo Khoa", "flexibility": "Có thể quy định thời điểm phù hợp"},
+      "target": {"name": "Đề tài tiểu luận tốt nghiệp", "type": "academic_topic", "default_assignment_time": "Đầu học kỳ cuối cùng", "assigner": "Khoa"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "quy_định_thời_điểm_phân_công"
     },
     {
-      "source": "định hướng nghiên cứu",
-      "target": "giảng viên",
-      "relation": "của",
-      "type_source": "RESEARCH_DIRECTION",
-      "type_target": "LECTURER"
+      "source": {"name": "Khoa", "type": "organization_unit", "function": "Quản lý và hỗ trợ nghiên cứu", "communication_channel": "Công khai"},
+      "target": {"name": "Định hướng nghiên cứu của giảng viên", "type": "information_document", "content_description": "Lĩnh vực nghiên cứu của giảng viên cơ hữu", "provider": "Giảng viên cơ hữu"},
+      "type_source": "organization_unit",
+      "type_target": "information_document",
+      "relation": "công_bố"
     },
     {
-      "source": "Khoa",
-      "target": "danh sách các đề tài hợp tác",
-      "relation": "cập_nhật_và_công_bố",
-      "type_source": "ORGANIZATION",
-      "type_target": "TOPIC_LIST"
+      "source": {"name": "Khoa", "type": "organization_unit", "function": "Quản lý và hỗ trợ nghiên cứu", "communication_channel": "Công khai"},
+      "target": {"name": "Danh sách đề tài hợp tác", "type": "list_document", "content_description": "Các đề tài nghiên cứu có sự hợp tác", "nature": "Hợp tác"},
+      "type_source": "organization_unit",
+      "type_target": "list_document",
+      "relation": "công_bố"
     },
     {
-      "source": "Khoa",
-      "target": "đề tài đặt hàng",
-      "relation": "cập_nhật_và_công_bố",
-      "type_source": "ORGANIZATION",
-      "type_target": "TOPIC"
+      "source": {"name": "Khoa", "type": "organization_unit", "function": "Quản lý và hỗ trợ nghiên cứu", "communication_channel": "Công khai"},
+      "target": {"name": "Đề tài đặt hàng từ doanh nghiệp", "type": "list_document", "origin": "Doanh nghiệp", "nature": "Đặt hàng"},
+      "type_source": "organization_unit",
+      "type_target": "list_document",
+      "relation": "công_bố"
     },
     {
-      "source": "đề tài đặt hàng",
-      "target": "doanh nghiệp",
-      "relation": "từ",
-      "type_source": "TOPIC",
-      "type_target": "ORGANIZATION"
+      "source": {"name": "Đề tài đặt hàng từ doanh nghiệp", "type": "list_document", "context": "Nghiên cứu ứng dụng theo yêu cầu", "status": "Được Khoa công bố"},
+      "target": {"name": "Doanh nghiệp", "type": "organization", "role_in_research": "Đối tác đặt hàng đề tài", "sector": "Ngoài trường"},
+      "type_source": "list_document",
+      "type_target": "organization",
+      "relation": "được_đặt_hàng_bởi"
     },
     {
-      "source": "sinh viên",
-      "target": "đề tài",
-      "relation": "chọn",
-      "type_source": "STUDENT",
-      "type_target": "TOPIC"
+      "source": {"name": "Sinh viên", "type": "person_role", "action_in_process": "Lựa chọn hướng nghiên cứu", "autonomy": "Tự chọn"},
+      "target": {"name": "Đề tài", "type": "academic_topic", "category": "Khóa luận hoặc Tiểu luận", "availability": "Theo danh sách công bố hoặc tự đề xuất"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "chọn"
     },
     {
-      "source": "sinh viên",
-      "target": "giảng viên hướng dẫn",
-      "relation": "mời",
-      "type_source": "STUDENT",
-      "type_target": "SUPERVISOR"
+      "source": {"name": "Sinh viên", "type": "person_role", "action_in_process": "Tìm người hướng dẫn", "initiative": "Chủ động mời"},
+      "target": {"name": "Giảng viên hướng dẫn", "type": "person_role", "expertise_needed": "Chuyên môn phù hợp với đề tài", "role_acceptance": "Đồng ý hướng dẫn"},
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "mời"
     },
     {
-      "source": "sinh viên",
-      "target": "đề cương nghiên cứu",
-      "relation": "chuẩn_bị",
-      "type_source": "STUDENT",
-      "type_target": "RESEARCH_PROPOSAL"
+      "source": {"name": "Sinh viên", "type": "person_role", "task_in_process": "Xây dựng kế hoạch nghiên cứu chi tiết", "support_needed": "Hỗ trợ từ giảng viên hướng dẫn"},
+      "target": {"name": "Đề cương nghiên cứu", "type": "document", "purpose": "Trình bày kế hoạch và phương pháp nghiên cứu", "approval_step": "Bảo vệ trước Bộ môn"},
+      "type_source": "person_role",
+      "type_target": "document",
+      "relation": "chuẩn_bị"
     },
     {
-      "source": "đề cương nghiên cứu",
-      "target": "giảng viên hướng dẫn",
-      "relation": "được_hỗ_trợ_bởi",
-      "type_source": "RESEARCH_PROPOSAL",
-      "type_target": "SUPERVISOR"
+      "source": {"name": "Đề cương nghiên cứu", "type": "document", "status": "Đang được chuẩn bị bởi sinh viên", "development_phase": "Ban đầu"},
+      "target": {"name": "Giảng viên hướng dẫn", "type": "person_role", "role_in_proposal": "Người hỗ trợ chuyên môn và định hướng", "interaction_type": "Hướng dẫn"},
+      "type_source": "document",
+      "type_target": "person_role",
+      "relation": "được_hỗ_trợ_bởi"
     },
     {
-      "source": "Bộ môn",
-      "target": "việc bảo vệ đề cương nghiên cứu",
-      "relation": "tổ_chức",
-      "type_source": "ORGANIZATION",
-      "type_target": "ACTIVITY"
+      "source": {"name": "Bộ môn", "type": "organization_unit", "responsibility": "Đánh giá đề cương nghiên cứu của sinh viên", "event_type": "Buổi bảo vệ"},
+      "target": {"name": "Đề cương nghiên cứu", "type": "document", "presented_by": "Sinh viên", "evaluation_forum": "Bộ môn"},
+      "type_source": "organization_unit",
+      "type_target": "document",
+      "relation": "tổ_chức_bảo_vệ_cho"
     },
     {
-      "source": "việc bảo vệ đề cương nghiên cứu",
-      "target": "sinh viên",
-      "relation": "cho",
-      "type_source": "ACTIVITY",
-      "type_target": "STUDENT"
+      "source": {"name": "Khoa", "type": "organization_unit", "role_in_assignment": "Quản lý phân công đề tài chính thức", "target_audience": "Sinh viên đã bảo vệ thành công đề cương"},
+      "target": {"name": "Đề tài khóa luận", "type": "academic_topic", "assignment_condition": "Bảo vệ thành công đề cương nghiên cứu", "assigner_level": "Khoa"},
+      "type_source": "organization_unit",
+      "type_target": "academic_topic",
+      "relation": "phân_công"
     },
     {
-      "source": "Khoa",
-      "target": "sinh viên",
-      "relation": "phân_công_đề_tài",
-      "type_source": "ORGANIZATION",
-      "type_target": "STUDENT"
+      "source": {"name": "Khoa", "type": "organization_unit", "role_in_assignment": "Quản lý phân công đề tài chính thức", "target_audience": "Sinh viên đã bảo vệ thành công đề cương"},
+      "target": {"name": "Đề tài tiểu luận tốt nghiệp", "type": "academic_topic", "assignment_condition": "Bảo vệ thành công đề cương nghiên cứu", "assigner_level": "Khoa"},
+      "type_source": "organization_unit",
+      "type_target": "academic_topic",
+      "relation": "phân_công"
     },
     {
-      "source": "đề tài",
-      "target": "KHÓA LUẬN",
-      "relation": "là",
-      "type_source": "TOPIC",
-      "type_target": "TOPIC"
+      "source": {"name": "Sinh viên", "type": "person_role", "deliverable_status": "Hoàn thành viết báo cáo", "submission_target": "Khoa/Hội đồng"},
+      "target": {"name": "Báo cáo khóa luận", "type": "document", "quantity_submitted": "03 cuốn", "requirement_for_submission": "Có xác nhận của giáo viên hướng dẫn"},
+      "type_source": "person_role",
+      "type_target": "document",
+      "relation": "nộp"
     },
     {
-      "source": "đề tài",
-      "target": "tiểu luận tốt nghiệp",
-      "relation": "là",
-      "type_source": "TOPIC",
-      "type_target": "TOPIC"
+      "source": {"name": "Báo cáo khóa luận", "type": "document", "submission_phase": "Trước khi nộp cho Khoa/Hội đồng để bảo vệ", "verification_needed": "Chất lượng và tiến độ"},
+      "target": {"name": "Giáo viên hướng dẫn", "type": "person_role", "approval_role_report": "Xác nhận nội dung và hình thức báo cáo", "interaction": "Làm việc với sinh viên"},
+      "type_source": "document",
+      "type_target": "person_role",
+      "relation": "cần_xác_nhận_của"
     },
     {
-      "source": "sinh viên",
-      "target": "03 cuốn báo cáo",
-      "relation": "nộp",
-      "type_source": "STUDENT",
-      "type_target": "DOCUMENT"
+      "source": {"name": "Sinh viên", "type": "person_role", "action_defense": "Trình bày kết quả nghiên cứu đã thực hiện", "condition_for_reporting": "Được sự đồng ý của giảng viên hướng dẫn"},
+      "target": {"name": "Đề tài khóa luận", "type": "academic_topic", "presentation_forum_type": "Hội đồng đánh giá", "focus": "Kết quả đạt được"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "báo_cáo_kết_quả"
     },
     {
-      "source": "03 cuốn báo cáo",
-      "target": "giáo viên hướng dẫn",
-      "relation": "có_xác_nhận_của",
-      "type_source": "DOCUMENT",
-      "type_target": "SUPERVISOR"
+      "source": {"name": "Giảng viên hướng dẫn", "type": "person_role", "supervisory_responsibility": "Theo dõi và đánh giá tiến độ của sinh viên", "decision_point": "Cho phép sinh viên bảo vệ"},
+      "target": {"name": "Việc báo cáo kết quả đề tài khóa luận của sinh viên", "type": "academic_activity", "actor": "Sinh viên", "subject": "Đề tài khóa luận"},
+      "type_source": "person_role",
+      "type_target": "academic_activity",
+      "relation": "đồng_ý_cho"
     },
     {
-      "source": "Trưởng Khoa",
-      "target": "danh sách hội đồng",
-      "relation": "đề_xuất",
-      "type_source": "POSITION",
-      "type_target": "ORGANIZATION_LIST"
+      "source": {"name": "Trưởng Khoa", "type": "person_role", "administrative_duty_committee": "Chuẩn bị cho việc thành lập hội đồng", "proposal_type": "Danh sách thành viên dự kiến"},
+      "target": {"name": "Hội đồng đánh giá kết quả khóa luận", "type": "committee", "formation_step_1": "Được Trưởng Khoa đề xuất danh sách", "purpose": "Đánh giá khóa luận"},
+      "type_source": "person_role",
+      "type_target": "committee",
+      "relation": "đề_xuất_danh_sách"
     },
     {
-      "source": "Hiệu trưởng",
-      "target": "hội đồng",
-      "relation": "ra_quyết_định",
-      "type_source": "POSITION",
-      "type_target": "ORGANIZATION"
+      "source": {"name": "Trưởng Khoa", "type": "person_role", "administrative_duty_student_list": "Xác định sinh viên đủ điều kiện đánh giá", "list_purpose": "Phục vụ công tác tổ chức đánh giá"},
+      "target": {"name": "Sinh viên", "type": "person_role", "evaluation_context_specific": "Được đánh giá kết quả khóa luận", "status_in_list": "Đủ điều kiện"},
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "lập_danh_sách_đánh_giá"
     },
     {
-      "source": "Hội đồng đánh giá khóa luận",
-      "target": "03 thành viên",
-      "relation": "có",
-      "type_source": "ORGANIZATION",
-      "type_target": "NUMBER"
+      "source": {"name": "Hiệu trưởng", "type": "person_role", "highest_authority": "Quản lý cao nhất của trường", "decision_type": "Phê duyệt thành lập"},
+      "target": {"name": "Hội đồng đánh giá kết quả khóa luận", "type": "committee", "establishment_authority_final": "Hiệu trưởng", "legal_basis": "Quyết định của Hiệu trưởng"},
+      "type_source": "person_role",
+      "type_target": "committee",
+      "relation": "ra_quyết_định_thành_lập"
     },
     {
-      "source": "03 thành viên",
-      "target": "đề tài nghiên cứu",
-      "relation": "có_chuyên_môn",
-      "type_source": "NUMBER",
-      "type_target": "TOPIC"
+      "source": {"name": "Giảng viên hướng dẫn", "type": "person_role", "conflict_of_interest_policy": "Đảm bảo tính khách quan trong đánh giá", "scope_of_exclusion": "Hội đồng đánh giá sinh viên do mình hướng dẫn"},
+      "target": {"name": "Hội đồng đánh giá kết quả khóa luận", "type": "committee", "membership_restriction": "Không bao gồm GVHD của sinh viên được đánh giá", "reason_for_restriction": "Khách quan"},
+      "type_source": "person_role",
+      "type_target": "committee",
+      "relation": "không_tham_gia"
     },
     {
-      "source": "hội đồng",
-      "target": "chủ tịch hội đồng",
-      "relation": "bao_gồm",
-      "type_source": "ORGANIZATION",
-      "type_target": "POSITION"
+      "source": {"name": "Hội đồng đánh giá kết quả khóa luận", "type": "committee", "administrative_support_option": "Có thể có thư ký hỗ trợ", "secretary_role": "Không đánh giá"},
+      "target": {"name": "Thư ký hành chính", "type": "person_role", "assigned_task": "Chuẩn bị hồ sơ, ghi biên bản", "evaluation_power_explicit": "Không có quyền đánh giá"},
+      "type_source": "committee",
+      "type_target": "person_role",
+      "relation": "có_thể_có"
     },
     {
-      "source": "hội đồng",
-      "target": "ủy viên phản biện",
-      "relation": "bao_gồm",
-      "type_source": "ORGANIZATION",
-      "type_target": "POSITION"
+      "source": {"name": "Sinh viên", "type": "person_role", "presentation_requirement": "Tóm tắt kết quả nghiên cứu", "time_limit": "Không quá 15 phút"},
+      "target": {"name": "Hội đồng đánh giá kết quả khóa luận", "type": "committee", "role_during_defense": "Lắng nghe, đặt câu hỏi, góp ý", "focus_evaluation": "Nội dung trình bày và trả lời"},
+      "type_source": "person_role",
+      "type_target": "committee",
+      "relation": "trình_bày_tóm_tắt_kết_quả_cho"
     },
     {
-      "source": "hội đồng",
-      "target": "ủy viên",
-      "relation": "bao_gồm",
-      "type_source": "ORGANIZATION",
-      "type_target": "POSITION"
+      "source": {"name": "Thành viên hội đồng", "type": "person_role", "committee_function": "Đánh giá và phản biện", "interaction_type_feedback": "Góp ý xây dựng"},
+      "target": {"name": "Sinh viên", "type": "person_role", "recipient_of_feedback": "Người trình bày khóa luận", "context_interaction": "Trong buổi bảo vệ"},
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "góp_ý_cho"
     },
     {
-      "source": "hội đồng",
-      "target": "01 thành viên ngoài trường",
-      "relation": "có",
-      "type_source": "ORGANIZATION",
-      "type_target": "NUMBER"
+      "source": {"name": "Thành viên hội đồng", "type": "person_role", "committee_function": "Đánh giá và phản biện", "interaction_type_query": "Đặt câu hỏi làm rõ"},
+      "target": {"name": "Sinh viên", "type": "person_role", "recipient_of_questions": "Người trình bày khóa luận", "context_interaction": "Trong buổi bảo vệ"},
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "đặt_câu_hỏi_cho"
     },
     {
-      "source": "01 thành viên ngoài trường",
-      "target": "thành viên hội đồng",
-      "relation": "là",
-      "type_source": "NUMBER",
-      "type_target": "PERSON"
+      "source": {"name": "Sinh viên", "type": "person_role", "action_response": "Trả lời trực tiếp các câu hỏi", "skill_demonstrated": "Kiến thức và khả năng giải trình"},
+      "target": {"name": "Thành viên hội đồng", "type": "person_role", "interaction_role_qna": "Người đặt câu hỏi", "expectation": "Câu trả lời rõ ràng, chính xác"},
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "trả_lời_câu_hỏi_của"
     },
     {
-      "source": "thành viên hội đồng",
-      "target": "trường",
-      "relation": "công_tác_ngoài",
-      "type_source": "PERSON",
-      "type_target": "ORGANIZATION"
+      "source": {"name": "Thư ký hành chính", "type": "person_role", "task_during_defense_reading": "Đọc phiếu nhận xét", "document_source": "Giảng viên hướng dẫn"},
+      "target": {"name": "Phiếu nhận xét của GVHD", "type": "document_evaluation", "author_name": "Giảng viên hướng dẫn", "content_summary_supervisor_feedback": "Đánh giá tinh thần, thái độ, kết quả, kiến thức của SV"},
+      "type_source": "person_role",
+      "type_target": "document_evaluation",
+      "relation": "đọc"
     },
     {
-      "source": "giảng viên hướng dẫn",
-      "target": "hội đồng đánh giá khóa luận",
-      "relation": "không_tham_gia",
-      "type_source": "SUPERVISOR",
-      "type_target": "ORGANIZATION"
+      "source": {"name": "Phiếu nhận xét của GVHD", "type": "document_evaluation", "purpose_in_defense": "Cung cấp thông tin đánh giá từ người hướng dẫn", "audience": "Hội đồng đánh giá"},
+      "target": {"name": "Giảng viên hướng dẫn", "type": "person_role", "role_as_author": "Người cung cấp nhận xét chi tiết về quá trình làm việc của SV", "input_for_grading": "Một phần của đánh giá tổng thể"},
+      "type_source": "document_evaluation",
+      "type_target": "person_role",
+      "relation": "của"
     },
     {
-      "source": "hội đồng",
-      "target": "thư ký hành chính",
-      "relation": "có_thể_có",
-      "type_source": "ORGANIZATION",
-      "type_target": "POSITION"
+      "source": {"name": "Thành viên hội đồng", "type": "person_role", "evaluation_responsibility": "Chấm điểm độc lập", "criteria_basis": "Theo các tiêu chí đã công bố"},
+      "target": {"name": "Khóa luận", "type": "academic_work", "evaluation_object": "Công trình nghiên cứu của sinh viên", "assessment_goal": "Đảm bảo minh bạch, công bằng"},
+      "type_source": "person_role",
+      "type_target": "academic_work",
+      "relation": "chấm_điểm_độc_lập_cho"
     },
     {
-      "source": "thư ký",
-      "target": "hồ sơ",
-      "relation": "chuẩn_bị",
-      "type_source": "POSITION",
-      "type_target": "DOCUMENT"
+      "source": {"name": "Điểm kết quả khóa luận", "type": "grade_evaluation_metric", "calculation_method": "Trung bình cộng", "components_committee": "Điểm của ba thành viên hội đồng"},
+      "target": {"name": "Thành viên hội đồng", "type": "person_role", "role_in_final_grade": "Người chấm điểm (03 người)", "weight_in_average": "Một phần của điểm trung bình"},
+      "type_source": "grade_evaluation_metric",
+      "type_target": "person_role",
+      "relation": "là_trung_bình_cộng_điểm_từ"
     },
     {
-      "source": "thư ký",
-      "target": "biên bản",
-      "relation": "ghi",
-      "type_source": "POSITION",
-      "type_target": "DOCUMENT"
+      "source": {"name": "Điểm kết quả khóa luận", "type": "grade_evaluation_metric", "calculation_method": "Trung bình cộng", "component_supervisor": "Điểm của giảng viên hướng dẫn"},
+      "target": {"name": "Giảng viên hướng dẫn", "type": "person_role", "role_in_final_grade_supervisor": "Người chấm điểm", "weight_in_average_supervisor": "Một phần của điểm trung bình"},
+      "type_source": "grade_evaluation_metric",
+      "type_target": "person_role",
+      "relation": "là_trung_bình_cộng_điểm_từ"
     },
     {
-      "source": "sinh viên",
-      "target": "kết quả",
-      "relation": "trình_bày",
-      "type_source": "STUDENT",
-      "type_target": "RESULT"
+      "source": {"name": "Chủ tịch hội đồng", "type": "person_role", "responsibility_in_grading": "Tổ chức thảo luận khi có chênh lệch điểm lớn", "condition_for_discussion": "Chênh lệch trên 3 điểm giữa các điểm thành phần"},
+      "target": {"name": "Thành viên hội đồng", "type": "person_role", "participation_in_discussion": "Tham gia thảo luận để thống nhất điểm", "involved_parties": "Các thành viên chấm điểm"},
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "tổ_chức_thảo_luận_với"
     },
     {
-      "source": "thành viên hội đồng",
-      "target": "sinh viên",
-      "relation": "góp_ý",
-      "type_source": "PERSON",
-      "type_target": "STUDENT"
+      "source": {"name": "Sinh viên", "type": "person_role", "post_defense_activity": "Thảo luận để chỉnh sửa khóa luận", "collaborator": "Giảng viên hướng dẫn"},
+      "target": {"name": "Giảng viên hướng dẫn", "type": "person_role", "post_defense_support_role": "Hỗ trợ sinh viên giải trình và chỉnh sửa", "goal_collaboration": "Hoàn thiện khóa luận"},
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "thảo_luận_với"
     },
     {
-      "source": "thành viên hội đồng",
-      "target": "sinh viên",
-      "relation": "đặt_câu_hỏi",
-      "type_source": "PERSON",
-      "type_target": "STUDENT"
+      "source": {"name": "Sinh viên", "type": "person_role", "post_defense_responsibility": "Chỉnh sửa khóa luận theo góp ý", "submission_final": "Nộp lưu sau chỉnh sửa"},
+      "target": {"name": "Hội đồng đánh giá kết quả khóa luận", "type": "committee", "role_post_defense": "Cung cấp góp ý để sinh viên cải thiện", "impact_on_work": "Hướng dẫn chỉnh sửa"},
+      "type_source": "person_role",
+      "type_target": "committee",
+      "relation": "chỉnh_sửa_theo_góp_ý_của"
     },
     {
-      "source": "sinh viên",
-      "target": "câu hỏi",
-      "relation": "trả_lời",
-      "type_source": "STUDENT",
-      "type_target": "QUESTION"
+      "source": {"name": "Sinh viên", "type": "person_role", "circumstance_for_extension": "Cần thêm thời gian hoàn thành khóa luận", "extension_limit_count": "Không quá 2 lần"},
+      "target": {"name": "Đề tài khóa luận", "type": "academic_topic", "status_for_extension": "Đang trong quá trình thực hiện", "financial_implication_extension": "Phải đóng lại học phí"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "được_gia_hạn_thực_hiện"
     },
     {
-      "source": "thư ký",
-      "target": "phiếu nhận xét",
-      "relation": "đọc",
-      "type_source": "POSITION",
-      "type_target": "DOCUMENT"
+      "source": {"name": "Trưởng Khoa", "type": "person_role", "authority_for_special_case": "Quyết định gia hạn đặc biệt", "basis_for_decision_extension": "Đề xuất của sinh viên và GVHD"},
+      "target": {"name": "Đề tài khóa luận", "type": "academic_topic", "situation_for_special_extension": "Trường hợp đặc biệt cần gia hạn thêm", "requester_extension": "Sinh viên và GVHD"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "quyết_định_gia_hạn_đặc_biệt_cho"
     },
     {
-      "source": "phiếu nhận xét",
-      "target": "giảng viên hướng dẫn",
-      "relation": "của",
-      "type_source": "DOCUMENT",
-      "type_target": "SUPERVISOR"
+      "source": {"name": "Sinh viên", "type": "person_role", "condition_for_payment_fee": "Khi gia hạn đề tài khóa luận", "financial_obligation": "Đóng học phí"},
+      "target": {"name": "Học phí", "type": "fee", "reason_for_collection": "Gia hạn thời gian thực hiện đề tài khóa luận", "payer": "Sinh viên"},
+      "type_source": "person_role",
+      "type_target": "fee",
+      "relation": "phải_đóng"
     },
     {
-      "source": "thành viên hội đồng",
-      "target": "khóa luận",
-      "relation": "chấm_điểm",
-      "type_source": "PERSON",
-      "type_target": "TOPIC"
+      "source": {"name": "Sinh viên", "type": "person_role", "situation_failure": "Không hoàn thành đề tài hoặc nhận điểm F", "option_after_failure_1": "Thực hiện lại đề tài khác"},
+      "target": {"name": "Đề tài khóa luận khác", "type": "academic_topic", "condition_new_topic": "Do giảng viên khác hướng dẫn", "nature_new_topic": "Khác với đề tài đã thất bại"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "có_thể_thực_hiện_lại"
     },
     {
-      "source": "điểm khóa luận",
-      "target": "trung bình cộng điểm",
-      "relation": "là",
-      "type_source": "GRADE",
-      "type_target": "AVERAGE_GRADE"
+      "source": {"name": "Đề tài khóa luận khác", "type": "academic_topic", "supervision_requirement_new": "Cần giảng viên hướng dẫn mới", "student_status_new_topic": "Sau khi không hoàn thành đề tài cũ"},
+      "target": {"name": "Giảng viên khác", "type": "person_role", "role_for_new_topic": "Hướng dẫn đề tài khóa luận mới", "distinction_supervisor": "Khác với giảng viên hướng dẫn đề tài cũ"},
+      "type_source": "academic_topic",
+      "type_target": "person_role",
+      "relation": "được_hướng_dẫn_bởi"
     },
     {
-      "source": "trung bình cộng điểm",
-      "target": "thành viên hội đồng",
-      "relation": "của",
-      "type_source": "AVERAGE_GRADE",
-      "type_target": "PERSON"
+      "source": {"name": "Sinh viên", "type": "person_role", "situation_failure_alternative": "Không hoàn thành đề tài hoặc nhận điểm F", "option_after_failure_2": "Chọn tiểu luận và học bổ sung tín chỉ"},
+      "target": {"name": "Tiểu luận tốt nghiệp", "type": "academic_work", "context_as_alternative": "Khi không hoàn thành khóa luận hoặc nhận điểm F", "accompanying_action": "Học bổ sung tín chỉ"},
+      "type_source": "person_role",
+      "type_target": "academic_work",
+      "relation": "có_thể_chọn_thực_hiện"
     },
     {
-      "source": "trung bình cộng điểm",
-      "target": "giảng viên hướng dẫn",
-      "relation": "của",
-      "type_source": "AVERAGE_GRADE",
-      "type_target": "SUPERVISOR"
+      "source": {"name": "Giảng viên cơ hữu", "type": "person_role", "employment_status_staff": "Cơ hữu tại trường", "qualification_supervision": "Đủ tiêu chuẩn lên lớp lý thuyết"},
+      "target": {"name": "Đề tài khóa luận", "type": "academic_topic", "supervision_eligibility_staff": "Có thể được hướng dẫn bởi giảng viên cơ hữu đủ tiêu chuẩn", "category_academic_work": "Khóa luận"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "được_hướng_dẫn"
     },
     {
-      "source": "điểm khóa luận",
-      "target": "sinh viên",
-      "relation": "của",
-      "type_source": "GRADE",
-      "type_target": "STUDENT"
+      "source": {"name": "Người công tác ngoài trường", "type": "person_role", "role_context_external": "Hướng dẫn đề tài khóa luận", "qualification_requirement_external": "Trình độ Thạc sĩ trở lên"},
+      "target": {"name": "Trình độ Thạc sĩ", "type": "qualification_degree", "minimum_level_external_supervisor": "Thạc sĩ", "purpose_qualification": "Đủ điều kiện hướng dẫn khóa luận"},
+      "type_source": "person_role",
+      "type_target": "qualification_degree",
+      "relation": "phải_có"
     },
     {
-      "source": "chủ tịch hội đồng",
-      "target": "thảo luận",
-      "relation": "tổ_chức",
-      "type_source": "POSITION",
-      "type_target": "DISCUSSION"
+      "source": {"name": "Người công tác ngoài trường", "type": "person_role", "role_context_external_research": "Hướng dẫn đề tài khóa luận", "experience_requirement_external": "Ít nhất 03 năm công tác trong lĩnh vực nghiên cứu"},
+      "target": {"name": "Lĩnh vực nghiên cứu", "type": "field_of_study", "required_experience_duration": "Ít nhất 03 năm", "application_context": "Công tác chuyên môn"},
+      "type_source": "person_role",
+      "type_target": "field_of_study",
+      "relation": "phải_công_tác_trong"
     },
     {
-      "source": "chủ tịch hội đồng",
-      "target": "quyết định cuối cùng",
-      "relation": "quyết_định",
-      "type_source": "POSITION",
-      "type_target": "DECISION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "giảng viên hướng dẫn",
-      "relation": "thảo_luận_với",
-      "type_source": "STUDENT",
-      "type_target": "SUPERVISOR"
-    },
-    {
-      "source": "sinh viên",
-      "target": "góp ý",
-      "relation": "chỉnh_sửa",
-      "type_source": "STUDENT",
-      "type_target": "SUGGESTION"
-    },
-    {
-      "source": "góp ý",
-      "target": "hội đồng đánh giá",
-      "relation": "của",
-      "type_source": "SUGGESTION",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "báo cáo khóa luận",
-      "relation": "nộp_lưu",
-      "type_source": "STUDENT",
-      "type_target": "DOCUMENT"
-    },
-    {
-      "source": "sinh viên",
-      "target": "thời gian thực hiện đề tài khóa luận",
-      "relation": "được_gia_hạn",
-      "type_source": "STUDENT",
-      "type_target": "TIME"
-    },
-    {
-      "source": "thời gian gia hạn",
-      "target": "2 lần",
-      "relation": "không_quá",
-      "type_source": "TIME",
-      "type_target": "NUMBER"
-    },
-    {
-      "source": "Trưởng khoa",
-      "target": "việc gia hạn",
-      "relation": "quyết_định",
-      "type_source": "POSITION",
-      "type_target": "ACTIVITY"
-    },
-    {
-      "source": "việc gia hạn",
-      "target": "đề xuất",
-      "relation": "dựa_trên",
-      "type_source": "ACTIVITY",
-      "type_target": "PROPOSAL"
-    },
-    {
-      "source": "đề xuất",
-      "target": "sinh viên",
-      "relation": "của",
-      "type_source": "PROPOSAL",
-      "type_target": "STUDENT"
-    },
-    {
-      "source": "đề xuất",
-      "target": "giảng viên hướng dẫn",
-      "relation": "của",
-      "type_source": "PROPOSAL",
-      "type_target": "SUPERVISOR"
-    },
-    {
-      "source": "sinh viên",
-      "target": "học phí",
-      "relation": "phải_đóng",
-      "type_source": "STUDENT",
-      "type_target": "TUITION"
-    },
-    {
-      "source": "hành động đóng học phí",
-      "target": "gia hạn đề tài khóa luận",
-      "relation": "khi",
-      "type_source": "ACTIVITY",
-      "type_target": "ACTIVITY"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đề tài khóa luận",
-      "relation": "không_hoàn_thành",
-      "type_source": "STUDENT",
-      "type_target": "TOPIC"
-    },
-    {
-      "source": "đề tài khóa luận",
-      "target": "phân công",
-      "relation": "được",
-      "type_source": "TOPIC",
-      "type_target": "ACTIVITY"
-    },
-    {
-      "source": "sinh viên",
-      "target": "điểm F",
-      "relation": "nhận",
-      "type_source": "STUDENT",
-      "type_target": "GRADE"
-    },
-    {
-      "source": "hành động nhận điểm F",
-      "target": "báo cáo kết quả đề tài khóa luận",
-      "relation": "khi",
-      "type_source": "ACTIVITY",
-      "type_target": "ACTIVITY"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đề tài khóa luận khác",
-      "relation": "thực_hiện_lại",
-      "type_source": "STUDENT",
-      "type_target": "TOPIC"
-    },
-    {
-      "source": "đề tài khóa luận khác",
-      "target": "giảng viên khác",
-      "relation": "được_hướng_dẫn_bởi",
-      "type_source": "TOPIC",
-      "type_target": "LECTURER"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tiểu luận",
-      "relation": "chọn_thực_hiện",
-      "type_source": "STUDENT",
-      "type_target": "TOPIC"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tín chỉ",
-      "relation": "học_bổ_sung",
-      "type_source": "STUDENT",
-      "type_target": "CREDIT"
-    },
-    {
-      "source": "sinh viên",
-      "target": "tích lũy tín chỉ tốt nghiệp",
-      "relation": "học",
-      "type_source": "STUDENT",
-      "type_target": "TOPIC"
-    },
-    {
-      "source": "giảng viên cơ hữu",
-      "target": "hướng dẫn đề tài khóa luận",
-      "relation": "đủ_tiêu_chuẩn_lên_lớp_lý_thuyết",
-      "type_source": "LECTURER",
-      "type_target": "ACTIVITY"
-    },
-    {
-      "source": "Người công tác ngoài trường",
-      "target": "Thạc sĩ trở lên",
-      "relation": "phải_có_trình_độ",
-      "type_source": "PERSON",
-      "type_target": "DEGREE"
-    },
-    {
-      "source": "Người công tác ngoài trường",
-      "target": "nghiên cứu",
-      "relation": "công_tác_trong_lĩnh_vực",
-      "type_source": "PERSON",
-      "type_target": "RESEARCH"
-    },
-    {
-      "source": "thời gian công tác",
-      "target": "03 năm",
-      "relation": "ít_nhất",
-      "type_source": "TIME",
-      "type_target": "DURATION"
-    },
-    {
-      "source": "giảng viên hướng dẫn độc lập",
-      "target": "04 đề tài khóa luận",
-      "relation": "hướng_dẫn_không_quá",
-      "type_source": "LECTURER",
-      "type_target": "TOPIC"
-    },
-    {
-      "source": "giảng viên hướng dẫn độc lập",
-      "target": "lớp",
-      "relation": "hướng_dẫn_trong",
-      "type_source": "LECTURER",
-      "type_target": "CLASS"
-    },
-    {
-      "source": "giảng viên hướng dẫn độc lập",
-      "target": "đợt phân công",
-      "relation": "hướng_dẫn_trong",
-      "type_source": "LECTURER",
-      "type_target": "ROUND"
-    },
-    {
-      "source": "Đồng hướng dẫn",
-      "target": "Hướng dẫn độc lập",
-      "relation": "quy_đổi",
-      "type_source": "ACTIVITY",
-      "type_target": "ACTIVITY"
-    },
-    {
-      "source": "01 đề tài đồng hướng dẫn",
-      "target": "0,5 đề tài độc lập",
-      "relation": "quy_đổi_tương_đương",
-      "type_source": "NUMBER",
-      "type_target": "NUMBER"
+      "source": {"name": "Giảng viên", "type": "person_role", "supervision_type_independent": "Độc lập", "max_thesis_supervision_limit_value": "04 đề tài/lớp/đợt"},
+      "target": {"name": "Đề tài khóa luận", "type": "academic_topic", "supervision_mode_independent": "Độc lập", "limit_context": "Mỗi lớp, mỗi đợt phân công"},
+      "type_source": "person_role",
+      "type_target": "academic_topic",
+      "relation": "hướng_dẫn_độc_lập"
     }
   ]
 }

@@ -1,507 +1,1076 @@
 {
-  "entities": [
-    {
-      "name": "GIẢNG VIÊN",
-      "type": "PERSON"
-    },
-    {
-      "name": "bộ phận chức năng",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "Giáo viên chủ nhiệm",
-      "type": "PERSON"
-    },
-    {
-      "name": "cố vấn học tập",
-      "type": "PERSON"
-    },
-    {
-      "name": "cán bộ giảng dạy",
-      "type": "PERSON"
-    },
-    {
-      "name": "trợ lý giáo vụ",
-      "type": "PERSON"
-    },
-    {
-      "name": "Ban chủ nhiệm khoa",
-      "type": "DEPARTMENT_LEADERSHIP"
-    },
-    {
-      "name": "phòng chức năng",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "ý kiến",
-      "type": "OPINION"
-    },
-    {
-      "name": "sinh viên",
-      "type": "PERSON_GROUP"
-    },
-    {
-      "name": "trách nhiệm",
-      "type": "RESPONSIBILITY"
-    },
-    {
-      "name": "giải thích",
-      "type": "ACTION"
-    },
-    {
-      "name": "giúp đỡ",
-      "type": "ACTION"
-    },
-    {
-      "name": "giải quyết thắc mắc, kiến nghị",
-      "type": "ACTION"
-    },
-    {
-      "name": "thắc mắc, kiến nghị",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "thông tin",
-      "type": "INFORMATION"
-    },
-    {
-      "name": "vấn đề",
-      "type": "PROBLEM"
-    },
-    {
-      "name": "điều 4",
-      "type": "ARTICLE_NUMBER"
-    },
-    {
-      "name": "quy định",
-      "type": "REGULATION"
-    },
-    {
-      "name": "kiến nghị, thắc mắc",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "giải quyết trả lời",
-      "type": "ACTION"
-    },
-    {
-      "name": "đơn vị chức năng khác",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "Ban giám hiệu",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "tham khảo ý kiến",
-      "type": "ACTION"
-    },
-    {
-      "name": "đơn vị khác",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "phạm vi trách nhiệm",
-      "type": "RESPONSIBILITY_SCOPE"
-    },
-    {
-      "name": "mình",
-      "type": "PERSON"
-    },
-    {
-      "name": "trao đổi trực tiếp",
-      "type": "METHOD"
-    },
-    {
-      "name": "gởi thư",
-      "type": "METHOD"
-    },
-    {
-      "name": "giải quyết thỏa đáng",
-      "type": "ACTION"
-    },
-    {
-      "name": "quyền viết đơn",
-      "type": "RIGHT"
-    },
-    {
-      "name": "viết đơn",
-      "type": "ACTION"
-    },
-    {
-      "name": "chương 3",
-      "type": "CHAPTER_NUMBER"
-    },
-    {
-      "name": "đơn",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "xác nhận",
-      "type": "ACTION"
-    },
-    {
-      "name": "giáo vụ khoa",
-      "type": "PERSON"
-    }
-  ],
   "relationships": [
     {
-      "source": "Giáo viên chủ nhiệm",
-      "target": "GIẢNG VIÊN",
-      "type_source": "PERSON",
-      "type_target": "PERSON",
-      "relation": "LÀ"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "cố vấn học tập",
-      "target": "GIẢNG VIÊN",
-      "type_source": "PERSON",
-      "type_target": "PERSON",
-      "relation": "LÀ"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Thông tin",
+        "info_type": "Dữ liệu chung",
+        "relevance_tt": "Liên quan vấn đề sinh viên",
+        "source_context": "Từ quy định, trao đổi"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "cán bộ giảng dạy",
-      "target": "GIẢNG VIÊN",
-      "type_source": "PERSON",
-      "type_target": "PERSON",
-      "relation": "LÀ"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_thích"
     },
     {
-      "source": "trợ lý giáo vụ",
-      "target": "GIẢNG VIÊN",
-      "type_source": "PERSON",
-      "type_target": "PERSON",
-      "relation": "LÀ"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "student_role": "Người học",
+        "academic_status": "Đang theo học",
+        "rights": "Được hỗ trợ, giải đáp"
+      },
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "có_trách_nhiệm_giúp_đỡ"
     },
     {
-      "source": "Ban chủ nhiệm khoa",
-      "target": "bộ phận chức năng",
-      "type_source": "DEPARTMENT_LEADERSHIP",
-      "type_target": "DEPARTMENT",
-      "relation": "LÀ"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Thắc mắc",
+        "info_type": "Câu hỏi/Yêu cầu làm rõ",
+        "subject_matter": "Học tập, quy định",
+        "urgency": "Cần giải đáp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "phòng chức năng",
-      "target": "bộ phận chức năng",
-      "type_source": "DEPARTMENT",
-      "type_target": "DEPARTMENT",
-      "relation": "LÀ"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Kiến nghị",
+        "info_type": "Đề xuất/Khiếu nại",
+        "desired_outcome": "Giải quyết vấn đề",
+        "formal_level": "Có thể bằng văn bản"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "Giáo viên chủ nhiệm",
-      "target": "ý kiến",
-      "type_source": "PERSON",
-      "type_target": "OPINION",
-      "relation": "NHẬN_ĐƯỢC"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "cố vấn học tập",
-      "target": "ý kiến",
-      "type_source": "PERSON",
-      "type_target": "OPINION",
-      "relation": "NHẬN_ĐƯỢC"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Thông tin",
+        "info_type": "Dữ liệu chung",
+        "relevance_tt": "Liên quan vấn đề sinh viên",
+        "source_context": "Từ quy định, trao đổi"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "cán bộ giảng dạy",
-      "target": "ý kiến",
-      "type_source": "PERSON",
-      "type_target": "OPINION",
-      "relation": "NHẬN_ĐƯỢC"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_thích"
     },
     {
-      "source": "trợ lý giáo vụ",
-      "target": "ý kiến",
-      "type_source": "PERSON",
-      "type_target": "OPINION",
-      "relation": "NHẬN_ĐƯỢC"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "student_role": "Người học",
+        "academic_status": "Đang theo học",
+        "rights": "Được hỗ trợ, giải đáp"
+      },
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "có_trách_nhiệm_giúp_đỡ"
     },
     {
-      "source": "Ban chủ nhiệm khoa",
-      "target": "ý kiến",
-      "type_source": "DEPARTMENT_LEADERSHIP",
-      "type_target": "OPINION",
-      "relation": "NHẬN_ĐƯỢC"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Thắc mắc",
+        "info_type": "Câu hỏi/Yêu cầu làm rõ",
+        "subject_matter": "Học tập, quy định",
+        "urgency": "Cần giải đáp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "phòng chức năng",
-      "target": "ý kiến",
-      "type_source": "DEPARTMENT",
-      "type_target": "OPINION",
-      "relation": "NHẬN_ĐƯỢC"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Kiến nghị",
+        "info_type": "Đề xuất/Khiếu nại",
+        "desired_outcome": "Giải quyết vấn đề",
+        "formal_level": "Có thể bằng văn bản"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "ý kiến",
-      "target": "sinh viên",
-      "type_source": "OPINION",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Cán bộ giảng dạy",
+        "role_cb": "Giảng viên bộ môn",
+        "responsibility_cb": "Chất lượng giảng dạy",
+        "interaction_mode": "Trên lớp"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "Giáo viên chủ nhiệm",
-      "target": "trách nhiệm",
-      "type_source": "PERSON",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Cán bộ giảng dạy",
+        "role_cb": "Giảng viên bộ môn",
+        "responsibility_cb": "Chất lượng giảng dạy",
+        "interaction_mode": "Trên lớp"
+      },
+      "target": {
+        "name": "Thông tin",
+        "info_type": "Dữ liệu chung",
+        "relevance_tt": "Liên quan vấn đề sinh viên",
+        "source_context": "Từ quy định, trao đổi"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "cố vấn học tập",
-      "target": "trách nhiệm",
-      "type_source": "PERSON",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Cán bộ giảng dạy",
+        "role_cb": "Giảng viên bộ môn",
+        "responsibility_cb": "Chất lượng giảng dạy",
+        "interaction_mode": "Trên lớp"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_thích"
     },
     {
-      "source": "cán bộ giảng dạy",
-      "target": "trách nhiệm",
-      "type_source": "PERSON",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Cán bộ giảng dạy",
+        "role_cb": "Giảng viên bộ môn",
+        "responsibility_cb": "Chất lượng giảng dạy",
+        "interaction_mode": "Trên lớp"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "student_role": "Người học",
+        "academic_status": "Đang theo học",
+        "rights": "Được hỗ trợ, giải đáp"
+      },
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "có_trách_nhiệm_giúp_đỡ"
     },
     {
-      "source": "trợ lý giáo vụ",
-      "target": "trách nhiệm",
-      "type_source": "PERSON",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Cán bộ giảng dạy",
+        "role_cb": "Giảng viên bộ môn",
+        "responsibility_cb": "Chất lượng giảng dạy",
+        "interaction_mode": "Trên lớp"
+      },
+      "target": {
+        "name": "Thắc mắc",
+        "info_type": "Câu hỏi/Yêu cầu làm rõ",
+        "subject_matter": "Học tập, quy định",
+        "urgency": "Cần giải đáp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "Ban chủ nhiệm khoa",
-      "target": "trách nhiệm",
-      "type_source": "DEPARTMENT_LEADERSHIP",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Cán bộ giảng dạy",
+        "role_cb": "Giảng viên bộ môn",
+        "responsibility_cb": "Chất lượng giảng dạy",
+        "interaction_mode": "Trên lớp"
+      },
+      "target": {
+        "name": "Kiến nghị",
+        "info_type": "Đề xuất/Khiếu nại",
+        "desired_outcome": "Giải quyết vấn đề",
+        "formal_level": "Có thể bằng văn bản"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "phòng chức năng",
-      "target": "trách nhiệm",
-      "type_source": "DEPARTMENT",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Trợ lý giáo vụ",
+        "role_tl": "Hỗ trợ hành chính",
+        "work_location": "Văn phòng Khoa",
+        "task_scope": "Giáo vụ"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "trách nhiệm",
-      "target": "giải thích",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACTION",
-      "relation": "BAO_GỒM"
+      "source": {
+        "name": "Trợ lý giáo vụ",
+        "role_tl": "Hỗ trợ hành chính",
+        "work_location": "Văn phòng Khoa",
+        "task_scope": "Giáo vụ"
+      },
+      "target": {
+        "name": "Thông tin",
+        "info_type": "Dữ liệu chung",
+        "relevance_tt": "Liên quan vấn đề sinh viên",
+        "source_context": "Từ quy định, trao đổi"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "trách nhiệm",
-      "target": "giúp đỡ",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACTION",
-      "relation": "BAO_GỒM"
+      "source": {
+        "name": "Trợ lý giáo vụ",
+        "role_tl": "Hỗ trợ hành chính",
+        "work_location": "Văn phòng Khoa",
+        "task_scope": "Giáo vụ"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_thích"
     },
     {
-      "source": "trách nhiệm",
-      "target": "giải quyết thắc mắc, kiến nghị",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACTION",
-      "relation": "BAO_GỒM"
+      "source": {
+        "name": "Trợ lý giáo vụ",
+        "role_tl": "Hỗ trợ hành chính",
+        "work_location": "Văn phòng Khoa",
+        "task_scope": "Giáo vụ"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "student_role": "Người học",
+        "academic_status": "Đang theo học",
+        "rights": "Được hỗ trợ, giải đáp"
+      },
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "có_trách_nhiệm_giúp_đỡ"
     },
     {
-      "source": "giải quyết thắc mắc, kiến nghị",
-      "target": "thắc mắc, kiến nghị",
-      "type_source": "ACTION",
-      "type_target": "CONCEPT",
-      "relation": "VỀ"
+      "source": {
+        "name": "Trợ lý giáo vụ",
+        "role_tl": "Hỗ trợ hành chính",
+        "work_location": "Văn phòng Khoa",
+        "task_scope": "Giáo vụ"
+      },
+      "target": {
+        "name": "Thắc mắc",
+        "info_type": "Câu hỏi/Yêu cầu làm rõ",
+        "subject_matter": "Học tập, quy định",
+        "urgency": "Cần giải đáp"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "thông tin",
-      "target": "vấn đề",
-      "type_source": "INFORMATION",
-      "type_target": "PROBLEM",
-      "relation": "VỀ"
+      "source": {
+        "name": "Trợ lý giáo vụ",
+        "role_tl": "Hỗ trợ hành chính",
+        "work_location": "Văn phòng Khoa",
+        "task_scope": "Giáo vụ"
+      },
+      "target": {
+        "name": "Kiến nghị",
+        "info_type": "Đề xuất/Khiếu nại",
+        "desired_outcome": "Giải quyết vấn đề",
+        "formal_level": "Có thể bằng văn bản"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "vấn đề",
-      "target": "điều 4",
-      "type_source": "PROBLEM",
-      "type_target": "ARTICLE_NUMBER",
-      "relation": "NÊU_Ở"
+      "source": {
+        "name": "Ban chủ nhiệm khoa",
+        "org_unit_type": "Quản lý cấp Khoa",
+        "leadership": "Trưởng/Phó Khoa",
+        "function_bcnk": "Điều hành hoạt động Khoa"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "organization_department",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "điều 4",
-      "target": "quy định",
-      "type_source": "ARTICLE_NUMBER",
-      "type_target": "REGULATION",
-      "relation": "TRONG"
+      "source": {
+        "name": "Ban chủ nhiệm khoa",
+        "org_unit_type": "Quản lý cấp Khoa",
+        "leadership": "Trưởng/Phó Khoa",
+        "function_bcnk": "Điều hành hoạt động Khoa"
+      },
+      "target": {
+        "name": "Thông tin",
+        "info_type": "Dữ liệu chung",
+        "relevance_tt": "Liên quan vấn đề sinh viên",
+        "source_context": "Từ quy định, trao đổi"
+      },
+      "type_source": "organization_department",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "kiến nghị, thắc mắc",
-      "target": "giải quyết trả lời",
-      "type_source": "CONCEPT",
-      "type_target": "ACTION",
-      "relation": "KHÔNG_THỂ"
+      "source": {
+        "name": "Ban chủ nhiệm khoa",
+        "org_unit_type": "Quản lý cấp Khoa",
+        "leadership": "Trưởng/Phó Khoa",
+        "function_bcnk": "Điều hành hoạt động Khoa"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "organization_department",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_thích"
     },
     {
-      "source": "giải quyết trả lời",
-      "target": "trả lời",
-      "type_source": "ACTION",
-      "type_target": "ACTION",
-      "relation": "GIẢI_QUYẾT"
+      "source": {
+        "name": "Ban chủ nhiệm khoa",
+        "org_unit_type": "Quản lý cấp Khoa",
+        "leadership": "Trưởng/Phó Khoa",
+        "function_bcnk": "Điều hành hoạt động Khoa"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "student_role": "Người học",
+        "academic_status": "Đang theo học",
+        "rights": "Được hỗ trợ, giải đáp"
+      },
+      "type_source": "organization_department",
+      "type_target": "person_role",
+      "relation": "có_trách_nhiệm_giúp_đỡ"
     },
     {
-      "source": "chủ động liên hệ",
-      "target": "đơn vị chức năng khác",
-      "type_source": "ACTION",
-      "type_target": "DEPARTMENT",
-      "relation": "VỚI"
+      "source": {
+        "name": "Ban chủ nhiệm khoa",
+        "org_unit_type": "Quản lý cấp Khoa",
+        "leadership": "Trưởng/Phó Khoa",
+        "function_bcnk": "Điều hành hoạt động Khoa"
+      },
+      "target": {
+        "name": "Thắc mắc",
+        "info_type": "Câu hỏi/Yêu cầu làm rõ",
+        "subject_matter": "Học tập, quy định",
+        "urgency": "Cần giải đáp"
+      },
+      "type_source": "organization_department",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "chủ động liên hệ",
-      "target": "Ban giám hiệu",
-      "type_source": "ACTION",
-      "type_target": "ORGANIZATION",
-      "relation": "VỚI"
+      "source": {
+        "name": "Ban chủ nhiệm khoa",
+        "org_unit_type": "Quản lý cấp Khoa",
+        "leadership": "Trưởng/Phó Khoa",
+        "function_bcnk": "Điều hành hoạt động Khoa"
+      },
+      "target": {
+        "name": "Kiến nghị",
+        "info_type": "Đề xuất/Khiếu nại",
+        "desired_outcome": "Giải quyết vấn đề",
+        "formal_level": "Có thể bằng văn bản"
+      },
+      "type_source": "organization_department",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "liên hệ",
-      "target": "tham khảo ý kiến",
-      "type_source": "ACTION",
-      "type_target": "ACTION",
-      "relation": "ĐỂ"
+      "source": {
+        "name": "Các phòng chức năng",
+        "org_unit_type": "Đơn vị chuyên môn cấp Trường",
+        "service_area": "Đa dạng (ĐT, CTSV, TC-KT)",
+        "support_role": "Toàn trường"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "organization_department",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "tham khảo ý kiến",
-      "target": "ý kiến",
-      "type_source": "ACTION",
-      "type_target": "OPINION",
-      "relation": "THAM_KHẢO"
+      "source": {
+        "name": "Các phòng chức năng",
+        "org_unit_type": "Đơn vị chuyên môn cấp Trường",
+        "service_area": "Đa dạng (ĐT, CTSV, TC-KT)",
+        "support_role": "Toàn trường"
+      },
+      "target": {
+        "name": "Thông tin",
+        "info_type": "Dữ liệu chung",
+        "relevance_tt": "Liên quan vấn đề sinh viên",
+        "source_context": "Từ quy định, trao đổi"
+      },
+      "type_source": "organization_department",
+      "type_target": "information_item",
+      "relation": "nhận_được"
     },
     {
-      "source": "trả lời",
-      "target": "sinh viên",
-      "type_source": "ACTION",
-      "type_target": "PERSON_GROUP",
-      "relation": "CHO"
+      "source": {
+        "name": "Các phòng chức năng",
+        "org_unit_type": "Đơn vị chuyên môn cấp Trường",
+        "service_area": "Đa dạng (ĐT, CTSV, TC-KT)",
+        "support_role": "Toàn trường"
+      },
+      "target": {
+        "name": "Ý kiến của sinh viên",
+        "info_type": "Phản hồi/Góp ý",
+        "originator_info": "Sinh viên",
+        "submission_method": "Trực tiếp/Gián tiếp"
+      },
+      "type_source": "organization_department",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_thích"
     },
     {
-      "source": "hướng dẫn",
-      "target": "sinh viên",
-      "type_source": "ACTION",
-      "type_target": "PERSON_GROUP",
-      "relation": "KHÔNG_ĐƯỢC"
+      "source": {
+        "name": "Các phòng chức năng",
+        "org_unit_type": "Đơn vị chuyên môn cấp Trường",
+        "service_area": "Đa dạng (ĐT, CTSV, TC-KT)",
+        "support_role": "Toàn trường"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "student_role": "Người học",
+        "academic_status": "Đang theo học",
+        "rights": "Được hỗ trợ, giải đáp"
+      },
+      "type_source": "organization_department",
+      "type_target": "person_role",
+      "relation": "có_trách_nhiệm_giúp_đỡ"
     },
     {
-      "source": "hướng dẫn",
-      "target": "đơn vị khác",
-      "type_source": "ACTION",
-      "type_target": "DEPARTMENT",
-      "relation": "ĐẾN"
+      "source": {
+        "name": "Các phòng chức năng",
+        "org_unit_type": "Đơn vị chuyên môn cấp Trường",
+        "service_area": "Đa dạng (ĐT, CTSV, TC-KT)",
+        "support_role": "Toàn trường"
+      },
+      "target": {
+        "name": "Thắc mắc",
+        "info_type": "Câu hỏi/Yêu cầu làm rõ",
+        "subject_matter": "Học tập, quy định",
+        "urgency": "Cần giải đáp"
+      },
+      "type_source": "organization_department",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "vấn đề",
-      "target": "phạm vi trách nhiệm",
-      "type_source": "PROBLEM",
-      "type_target": "RESPONSIBILITY_SCOPE",
-      "relation": "THUỘC"
+      "source": {
+        "name": "Các phòng chức năng",
+        "org_unit_type": "Đơn vị chuyên môn cấp Trường",
+        "service_area": "Đa dạng (ĐT, CTSV, TC-KT)",
+        "support_role": "Toàn trường"
+      },
+      "target": {
+        "name": "Kiến nghị",
+        "info_type": "Đề xuất/Khiếu nại",
+        "desired_outcome": "Giải quyết vấn đề",
+        "formal_level": "Có thể bằng văn bản"
+      },
+      "type_source": "organization_department",
+      "type_target": "information_item",
+      "relation": "có_trách_nhiệm_giải_quyết"
     },
     {
-      "source": "phạm vi trách nhiệm",
-      "target": "mình",
-      "type_source": "RESPONSIBILITY_SCOPE",
-      "type_target": "PERSON",
-      "relation": "CỦA"
+      "source": {
+        "name": "Thắc mắc",
+        "info_type": "Câu hỏi/Yêu cầu làm rõ",
+        "subject_matter": "Học tập, quy định",
+        "urgency": "Cần giải đáp"
+      },
+      "target": {
+        "name": "Điều 4 quy định này",
+        "doc_type": "Văn bản quy định",
+        "section_ref": "Điều 4",
+        "content_focus": "Vấn đề của sinh viên"
+      },
+      "type_source": "information_item",
+      "type_target": "document_section",
+      "relation": "nêu_trong"
     },
     {
-      "source": "thắc mắc, kiến nghị",
-      "target": "sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Kiến nghị",
+        "info_type": "Đề xuất/Khiếu nại",
+        "desired_outcome": "Giải quyết vấn đề",
+        "formal_level": "Có thể bằng văn bản"
+      },
+      "target": {
+        "name": "Điều 4 quy định này",
+        "doc_type": "Văn bản quy định",
+        "section_ref": "Điều 4",
+        "content_focus": "Vấn đề của sinh viên"
+      },
+      "type_source": "information_item",
+      "type_target": "document_section",
+      "relation": "nêu_trong"
     },
     {
-      "source": "thắc mắc, kiến nghị",
-      "target": "trao đổi trực tiếp",
-      "type_source": "CONCEPT",
-      "type_target": "METHOD",
-      "relation": "QUA"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Các đơn vị chức năng khác",
+        "org_unit_type": "Đơn vị hỗ trợ chuyên môn",
+        "collaboration_type": "Phối hợp giải quyết",
+        "scope_dvcnk": "Ngoài đơn vị xử lý ban đầu"
+      },
+      "type_source": "person_role",
+      "type_target": "organization_department",
+      "relation": "cần_liên_hệ_với"
     },
     {
-      "source": "thắc mắc, kiến nghị",
-      "target": "gởi thư",
-      "type_source": "CONCEPT",
-      "type_target": "METHOD",
-      "relation": "QUA"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Ban giám hiệu",
+        "org_unit_type": "Lãnh đạo cấp Trường",
+        "authority": "Quyết định cao nhất",
+        "consultation_role": "Cho ý kiến chỉ đạo"
+      },
+      "type_source": "person_role",
+      "type_target": "organization_department",
+      "relation": "cần_liên_hệ_với"
     },
     {
-      "source": "thắc mắc, kiến nghị",
-      "target": "giải quyết thỏa đáng",
-      "type_source": "CONCEPT",
-      "type_target": "ACTION",
-      "relation": "CHƯA_ĐƯỢC"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Ý kiến",
+        "info_type": "Tư vấn/Chỉ đạo",
+        "source_yk": "Đơn vị chức năng/BGH",
+        "purpose_yk": "Tham khảo để ra quyết định"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "tham_khảo"
     },
     {
-      "source": "sinh viên",
-      "target": "quyền viết đơn",
-      "type_source": "PERSON_GROUP",
-      "type_target": "RIGHT",
-      "relation": "CÓ"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "student_role": "Người học",
+        "academic_status": "Đang theo học",
+        "rights": "Được hỗ trợ, giải đáp"
+      },
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "trả_lời_cho"
     },
     {
-      "source": "quyền viết đơn",
-      "target": "viết đơn",
-      "type_source": "RIGHT",
-      "type_target": "ACTION",
-      "relation": "LÀ"
+      "source": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "target": {
+        "name": "Đơn vị khác",
+        "org_unit_type": "Không xác định",
+        "responsibility_status": "Không thuộc phạm vi giải quyết",
+        "guidance_policy": "Không hướng dẫn SV đến"
+      },
+      "type_source": "person_role",
+      "type_target": "organization_department",
+      "relation": "không_được_hướng_dẫn_tới"
     },
     {
-      "source": "viết đơn",
-      "target": "quy định",
-      "type_source": "ACTION",
-      "type_target": "REGULATION",
-      "relation": "THEO"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Các đơn vị chức năng khác",
+        "org_unit_type": "Đơn vị hỗ trợ chuyên môn",
+        "collaboration_type": "Phối hợp giải quyết",
+        "scope_dvcnk": "Ngoài đơn vị xử lý ban đầu"
+      },
+      "type_source": "person_role",
+      "type_target": "organization_department",
+      "relation": "cần_liên_hệ_với"
     },
     {
-      "source": "quy định",
-      "target": "chương 3",
-      "type_source": "REGULATION",
-      "type_target": "CHAPTER_NUMBER",
-      "relation": "Ở"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Ban giám hiệu",
+        "org_unit_type": "Lãnh đạo cấp Trường",
+        "authority": "Quyết định cao nhất",
+        "consultation_role": "Cho ý kiến chỉ đạo"
+      },
+      "type_source": "person_role",
+      "type_target": "organization_department",
+      "relation": "cần_liên_hệ_với"
     },
     {
-      "source": "viết đơn",
-      "target": "giải quyết",
-      "type_source": "ACTION",
-      "type_target": "ACTION",
-      "relation": "ĐỂ_ĐƯỢC"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Ý kiến",
+        "info_type": "Tư vấn/Chỉ đạo",
+        "source_yk": "Đơn vị chức năng/BGH",
+        "purpose_yk": "Tham khảo để ra quyết định"
+      },
+      "type_source": "person_role",
+      "type_target": "information_item",
+      "relation": "tham_khảo"
     },
     {
-      "source": "đơn",
-      "target": "xác nhận",
-      "type_source": "DOCUMENT",
-      "type_target": "ACTION",
-      "relation": "PHẢI_CÓ"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "student_role": "Người học",
+        "academic_status": "Đang theo học",
+        "rights": "Được hỗ trợ, giải đáp"
+      },
+      "type_source": "person_role",
+      "type_target": "person_role",
+      "relation": "trả_lời_cho"
     },
     {
-      "source": "xác nhận",
-      "target": "Giáo viên chủ nhiệm",
-      "type_source": "ACTION",
-      "type_target": "PERSON",
-      "relation": "CỦA"
+      "source": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "target": {
+        "name": "Đơn vị khác",
+        "org_unit_type": "Không xác định",
+        "responsibility_status": "Không thuộc phạm vi giải quyết",
+        "guidance_policy": "Không hướng dẫn SV đến"
+      },
+      "type_source": "person_role",
+      "type_target": "organization_department",
+      "relation": "không_được_hướng_dẫn_tới"
     },
     {
-      "source": "xác nhận",
-      "target": "cố vấn học tập",
-      "type_source": "ACTION",
-      "type_target": "PERSON",
-      "relation": "CỦA"
+      "source": {
+        "name": "Vấn đề",
+        "info_type": "Sự việc/Tình huống",
+        "status_vd": "Cần xử lý",
+        "responsibility_context": "Thuộc phạm vi của đơn vị/cá nhân"
+      },
+      "target": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "type_source": "information_item",
+      "type_target": "person_role",
+      "relation": "thuộc_phạm_vi_trách_nhiệm_của"
     },
     {
-      "source": "xác nhận",
-      "target": "giáo vụ khoa",
-      "type_source": "ACTION",
-      "type_target": "PERSON",
-      "relation": "CỦA"
+      "source": {
+        "name": "Vấn đề",
+        "info_type": "Sự việc/Tình huống",
+        "status_vd": "Cần xử lý",
+        "responsibility_context": "Thuộc phạm vi của đơn vị/cá nhân"
+      },
+      "target": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "type_source": "information_item",
+      "type_target": "person_role",
+      "relation": "thuộc_phạm_vi_trách_nhiệm_của"
+    },
+     {
+      "source": {
+        "name": "Vấn đề",
+        "info_type": "Sự việc/Tình huống",
+        "status_vd": "Cần xử lý",
+        "responsibility_context": "Thuộc phạm vi của đơn vị/cá nhân"
+      },
+      "target": {
+        "name": "Cán bộ giảng dạy",
+        "role_cb": "Giảng viên bộ môn",
+        "responsibility_cb": "Chất lượng giảng dạy",
+        "interaction_mode": "Trên lớp"
+      },
+      "type_source": "information_item",
+      "type_target": "person_role",
+      "relation": "thuộc_phạm_vi_trách_nhiệm_của"
     },
     {
-      "source": "đơn",
-      "target": "sinh viên",
-      "type_source": "DOCUMENT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Vấn đề",
+        "info_type": "Sự việc/Tình huống",
+        "status_vd": "Cần xử lý",
+        "responsibility_context": "Thuộc phạm vi của đơn vị/cá nhân"
+      },
+      "target": {
+        "name": "Trợ lý giáo vụ",
+        "role_tl": "Hỗ trợ hành chính",
+        "work_location": "Văn phòng Khoa",
+        "task_scope": "Giáo vụ"
+      },
+      "type_source": "information_item",
+      "type_target": "person_role",
+      "relation": "thuộc_phạm_vi_trách_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "Vấn đề",
+        "info_type": "Sự việc/Tình huống",
+        "status_vd": "Cần xử lý",
+        "responsibility_context": "Thuộc phạm vi của đơn vị/cá nhân"
+      },
+      "target": {
+        "name": "Ban chủ nhiệm khoa",
+        "org_unit_type": "Quản lý cấp Khoa",
+        "leadership": "Trưởng/Phó Khoa",
+        "function_bcnk": "Điều hành hoạt động Khoa"
+      },
+      "type_source": "information_item",
+      "type_target": "organization_department",
+      "relation": "thuộc_phạm_vi_trách_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "Vấn đề",
+        "info_type": "Sự việc/Tình huống",
+        "status_vd": "Cần xử lý",
+        "responsibility_context": "Thuộc phạm vi của đơn vị/cá nhân"
+      },
+      "target": {
+        "name": "Các phòng chức năng",
+        "org_unit_type": "Đơn vị chuyên môn cấp Trường",
+        "service_area": "Đa dạng (ĐT, CTSV, TC-KT)",
+        "support_role": "Toàn trường"
+      },
+      "type_source": "information_item",
+      "type_target": "organization_department",
+      "relation": "thuộc_phạm_vi_trách_nhiệm_của"
+    },
+    {
+      "source": {
+        "name": "Thắc mắc",
+        "info_type": "Câu hỏi/Yêu cầu làm rõ",
+        "subject_matter": "Học tập, quy định",
+        "urgency": "Cần giải đáp"
+      },
+      "target": {
+        "name": "Trao đổi trực tiếp",
+        "comm_method": "Giao tiếp mặt đối mặt",
+        "synchronicity_comm": "Đồng bộ",
+        "formality": "Không chính thức/Chính thức"
+      },
+      "type_source": "information_item",
+      "type_target": "communication_method",
+      "relation": "thực_hiện_qua"
+    },
+    {
+      "source": {
+        "name": "Thắc mắc",
+        "info_type": "Câu hỏi/Yêu cầu làm rõ",
+        "subject_matter": "Học tập, quy định",
+        "urgency": "Cần giải đáp"
+      },
+      "target": {
+        "name": "Gởi thư",
+        "comm_method": "Giao tiếp bằng văn bản",
+        "medium_comm": "Thư tín (giấy/điện tử)",
+        "record_keeping": "Có lưu vết"
+      },
+      "type_source": "information_item",
+      "type_target": "communication_method",
+      "relation": "thực_hiện_qua"
+    },
+    {
+      "source": {
+        "name": "Kiến nghị",
+        "info_type": "Đề xuất/Khiếu nại",
+        "desired_outcome": "Giải quyết vấn đề",
+        "formal_level": "Có thể bằng văn bản"
+      },
+      "target": {
+        "name": "Trao đổi trực tiếp",
+        "comm_method": "Giao tiếp mặt đối mặt",
+        "synchronicity_comm": "Đồng bộ",
+        "formality": "Không chính thức/Chính thức"
+      },
+      "type_source": "information_item",
+      "type_target": "communication_method",
+      "relation": "thực_hiện_qua"
+    },
+    {
+      "source": {
+        "name": "Kiến nghị",
+        "info_type": "Đề xuất/Khiếu nại",
+        "desired_outcome": "Giải quyết vấn đề",
+        "formal_level": "Có thể bằng văn bản"
+      },
+      "target": {
+        "name": "Gởi thư",
+        "comm_method": "Giao tiếp bằng văn bản",
+        "medium_comm": "Thư tín (giấy/điện tử)",
+        "record_keeping": "Có lưu vết"
+      },
+      "type_source": "information_item",
+      "type_target": "communication_method",
+      "relation": "thực_hiện_qua"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "student_role": "Người học",
+        "academic_status": "Đang theo học",
+        "rights": "Được hỗ trợ, giải đáp"
+      },
+      "target": {
+        "name": "Đơn",
+        "doc_category": "Văn bản kiến nghị",
+        "submission_rule": "Theo quy định chương 3",
+        "purpose_don": "Yêu cầu giải quyết chính thức"
+      },
+      "type_source": "person_role",
+      "type_target": "document",
+      "relation": "có_quyền_viết"
+    },
+    {
+      "source": {
+        "name": "Đơn",
+        "doc_category": "Văn bản kiến nghị",
+        "submission_rule": "Theo quy định chương 3",
+        "purpose_don": "Yêu cầu giải quyết chính thức"
+      },
+      "target": {
+        "name": "Quy định ở chương 3",
+        "doc_type": "Văn bản quy định",
+        "section_ref": "Chương 3",
+        "content_focus_qd": "Quy trình nộp đơn"
+      },
+      "type_source": "document",
+      "type_target": "document_section",
+      "relation": "tuân_theo_quy_định"
+    },
+    {
+      "source": {
+        "name": "Đơn sinh viên",
+        "doc_category": "Văn bản kiến nghị của SV",
+        "originator_doc": "Sinh viên",
+        "validation_needed": "Xác nhận của GVCN/CVHT/Giáo vụ Khoa"
+      },
+      "target": {
+        "name": "Giáo viên chủ nhiệm",
+        "role_gv": "Chủ nhiệm lớp",
+        "main_duty": "Quản lý sinh viên lớp",
+        "contact_level": "Cơ sở"
+      },
+      "type_source": "document",
+      "type_target": "person_role",
+      "relation": "cần_xác_nhận_bởi"
+    },
+    {
+      "source": {
+        "name": "Đơn sinh viên",
+        "doc_category": "Văn bản kiến nghị của SV",
+        "originator_doc": "Sinh viên",
+        "validation_needed": "Xác nhận của GVCN/CVHT/Giáo vụ Khoa"
+      },
+      "target": {
+        "name": "Cố vấn học tập",
+        "role_cv": "Tư vấn học tập",
+        "expertise_area": "Chương trình đào tạo",
+        "support_type": "Học thuật"
+      },
+      "type_source": "document",
+      "type_target": "person_role",
+      "relation": "cần_xác_nhận_bởi"
+    },
+    {
+      "source": {
+        "name": "Đơn sinh viên",
+        "doc_category": "Văn bản kiến nghị của SV",
+        "originator_doc": "Sinh viên",
+        "validation_needed": "Xác nhận của GVCN/CVHT/Giáo vụ Khoa"
+      },
+      "target": {
+        "name": "Giáo vụ khoa",
+        "role_gvk": "Chuyên viên giáo vụ Khoa",
+        "department_gvk": "Khoa",
+        "responsibility_gvk": "Hỗ trợ thủ tục sinh viên",
+        "confirmation_role": "Xác nhận đơn"
+      },
+      "type_source": "document",
+      "type_target": "person_role",
+      "relation": "cần_xác_nhận_bởi"
     }
   ]
 }

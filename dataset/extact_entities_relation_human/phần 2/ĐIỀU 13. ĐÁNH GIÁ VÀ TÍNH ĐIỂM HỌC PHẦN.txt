@@ -1,1167 +1,977 @@
 {
-  "entities": [
-    {
-      "name": "Điều 13",
-      "type": "regulation_article"
-    },
-    {
-      "name": "Đánh giá và tính điểm học phần",
-      "type": "process"
-    },
-    {
-      "name": "học phần",
-      "type": "course_unit"
-    },
-    {
-      "name": "đề cương chi tiết học phần",
-      "type": "course_syllabus"
-    },
-    {
-      "name": "sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "buổi học đầu tiên",
-      "type": "time_point"
-    },
-    {
-      "name": "Điểm học phần lý thuyết",
-      "type": "score_type"
-    },
-    {
-      "name": "lý thuyết kết hợp thực hành",
-      "type": "course_type"
-    },
-    {
-      "name": "điểm thành phần",
-      "type": "score_component"
-    },
-    {
-      "name": "điểm bài tập",
-      "type": "score_component_type"
-    },
-    {
-      "name": "điểm kiểm tra giữa kỳ",
-      "type": "score_component_type"
-    },
-    {
-      "name": "điểm thực hành",
-      "type": "score_component_type"
-    },
-    {
-      "name": "điểm đánh giá nhận thức",
-      "type": "score_component_type"
-    },
-    {
-      "name": "điểm tham gia thảo luận",
-      "type": "score_component_type"
-    },
-    {
-      "name": "điểm chuyên cần",
-      "type": "score_component_type"
-    },
-    {
-      "name": "điểm đồ án",
-      "type": "score_component_type"
-    },
-    {
-      "name": "điểm thi kết thúc học phần",
-      "type": "score_component_type"
-    },
-    {
-      "name": "Thi kết thúc học phần",
-      "type": "assessment_method"
-    },
-    {
-      "name": "50%",
-      "type": "percentage_value"
-    },
-    {
-      "name": "Điểm học phần thực hành",
-      "type": "score_type"
-    },
-    {
-      "name": "điểm trung bình của các bài thực hành",
-      "type": "calculation_method"
-    },
-    {
-      "name": "Bộ môn",
-      "type": "department"
-    },
-    {
-      "name": "02 tín chỉ",
-      "type": "credit_value"
-    },
-    {
-      "name": "một điểm đánh giá",
-      "type": "assessment_quantity"
-    },
-    {
-      "name": "thang điểm 10",
-      "type": "grading_scale"
-    },
-    {
-      "name": "Phương pháp đánh giá",
-      "type": "assessment_parameter"
-    },
-    {
-      "name": "hình thức đánh giá",
-      "type": "assessment_parameter"
-    },
-    {
-      "name": "trọng số",
-      "type": "assessment_parameter"
-    },
-    {
-      "name": "Giảng viên",
-      "type": "lecturer"
-    },
-    {
-      "name": "bảng ghi điểm",
-      "type": "document"
-    },
-    {
-      "name": "Phòng Quản lý chất lượng",
-      "type": "organization_department"
-    },
-    {
-      "name": "Điểm học phần",
-      "type": "course_score"
-    },
-    {
-      "name": "một chữ số thập phân",
-      "type": "rounding_rule"
-    },
-    {
-      "name": "điểm chữ",
-      "type": "letter_grade_system"
-    },
-    {
-      "name": "A",
-      "type": "letter_grade"
-    },
-    {
-      "name": "B",
-      "type": "letter_grade"
-    },
-    {
-      "name": "C",
-      "type": "letter_grade"
-    },
-    {
-      "name": "D",
-      "type": "letter_grade"
-    },
-    {
-      "name": "F",
-      "type": "letter_grade"
-    },
-    {
-      "name": "điểm trung bình học tập",
-      "type": "gpa_type"
-    },
-    {
-      "name": "thang điểm 4",
-      "type": "grading_scale"
-    },
-    {
-      "name": "ĐTBCHK",
-      "type": "gpa_type"
-    },
-    {
-      "name": "ĐTBCTL",
-      "type": "gpa_type"
-    },
-    {
-      "name": "4.0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "8.5 đến 10.0",
-      "type": "score_range"
-    },
-    {
-      "name": "xuất sắc",
-      "type": "performance_level"
-    },
-    {
-      "name": "B+",
-      "type": "letter_grade"
-    },
-    {
-      "name": "3.5",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "8.0 đến 8.4",
-      "type": "score_range"
-    },
-    {
-      "name": "khá giỏi",
-      "type": "performance_level"
-    },
-    {
-      "name": "3.0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "7.0 đến 7.9",
-      "type": "score_range"
-    },
-    {
-      "name": "trung bình khá",
-      "type": "performance_level"
-    },
-    {
-      "name": "C+",
-      "type": "letter_grade"
-    },
-    {
-      "name": "2.5",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "6.5 đến 6.9",
-      "type": "score_range"
-    },
-    {
-      "name": "2.0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "5.5 đến 6.4",
-      "type": "score_range"
-    },
-    {
-      "name": "D+",
-      "type": "letter_grade"
-    },
-    {
-      "name": "1.5",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "5.0 đến 5.4",
-      "type": "score_range"
-    },
-    {
-      "name": "1.0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "4.0 đến 4.9",
-      "type": "score_range"
-    },
-    {
-      "name": "0.0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "dưới 4.0",
-      "type": "score_range"
-    },
-    {
-      "name": "không đạt yêu cầu",
-      "type": "performance_level"
-    },
-    {
-      "name": "Đạt",
-      "type": "passing_status"
-    },
-    {
-      "name": "Không đạt",
-      "type": "failing_status"
-    },
-    {
-      "name": "P",
-      "type": "letter_grade"
-    },
-    {
-      "name": "5,0",
-      "type": "score_value"
-    },
-    {
-      "name": "I",
-      "type": "letter_grade"
-    },
-    {
-      "name": "hoãn thi, kiểm tra",
-      "type": "postponement_reason"
-    },
-    {
-      "name": "lý do bất khả kháng",
-      "type": "reason_category"
-    },
-    {
-      "name": "ốm đau, tai nạn",
-      "type": "specific_reason"
-    },
-    {
-      "name": "giảng viên phụ trách học phần",
-      "type": "lecturer"
-    },
-    {
-      "name": "Trưởng Khoa/Bộ môn",
-      "type": "position"
-    },
-    {
-      "name": "01 năm",
-      "type": "duration"
-    },
-    {
-      "name": "Khoa/Bộ môn",
-      "type": "department_faculty"
-    },
-    {
-      "name": "X",
-      "type": "letter_grade"
-    },
-    {
-      "name": "R",
-      "type": "letter_grade"
-    },
-    {
-      "name": "Mục c, Khoản 5, Điều 9",
-      "type": "regulation_reference"
-    },
-    {
-      "name": "M",
-      "type": "letter_grade"
-    },
-    {
-      "name": "miễn học và công nhận tín chỉ",
-      "type": "academic_action"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "position"
-    },
-    {
-      "name": "Phòng Đào tạo",
-      "type": "organization_department"
-    },
-    {
-      "name": "Bảo lưu và chuyển điểm học phần",
-      "type": "academic_action"
-    },
-    {
-      "name": "5,5",
-      "type": "score_value"
-    },
-    {
-      "name": "2,0",
-      "type": "grade_point_value"
-    },
-    {
-      "name": "1,5 lần thời gian tối đa đào tạo",
-      "type": "duration_limit"
-    }
-  ],
   "relationships": [
     {
-      "source": "Điều 13",
-      "target": "Đánh giá và tính điểm học phần",
-      "type_source": "regulation_article",
-      "type_target": "process",
-      "relation": "quy_định_về"
-    },
-    {
-      "source": "Đánh giá và tính điểm học phần",
-      "target": "đề cương chi tiết học phần",
-      "type_source": "process",
+      "source": {
+        "name": "Phương thức đánh giá và tính điểm học phần",
+        "description": "Quy trình và cách thức xác định kết quả học tập của sinh viên cho một học phần.",
+        "scope": "Áp dụng cho từng học phần",
+        "determination_basis": "Đề cương chi tiết học phần"
+      },
+      "target": {
+        "name": "Đề cương chi tiết học phần",
+        "document_type": "Tài liệu học thuật",
+        "content": "Thông tin chi tiết về học phần, bao gồm phương thức đánh giá",
+        "authority": "Do giảng viên/bộ môn biên soạn",
+        "availability": "Cung cấp cho sinh viên"
+      },
+      "type_source": "assessment_methodology",
       "type_target": "course_syllabus",
-      "relation": "quy_định_trong"
+      "relation": "được_quy_định_trong"
     },
     {
-      "source": "Đánh giá và tính điểm học phần",
-      "target": "sinh viên",
-      "type_source": "process",
-      "type_target": "student",
-      "relation": "thông_báo_cho"
-    },
-     {
-      "source": "Đánh giá và tính điểm học phần",
-      "target": "buổi học đầu tiên",
-      "type_source": "process",
-      "type_target": "time_point",
-      "relation": "thông_báo_vào"
-    },
-    {
-      "source": "Điểm học phần lý thuyết",
-      "target": "điểm thành phần",
-      "type_source": "score_type",
-      "type_target": "score_component",
-      "relation": "tính_từ"
-    },
-     {
-      "source": "Điểm học phần lý thuyết",
-      "target": "lý thuyết kết hợp thực hành",
-      "type_source": "score_type",
-      "type_target": "course_type",
-      "relation": "áp_dụng_cho_loại_học_phần"
-    },
-    {
-      "source": "điểm thành phần",
-      "target": "điểm bài tập",
-      "type_source": "score_component",
-      "type_target": "score_component_type",
-      "relation": "có_thể_bao_gồm"
-    },
-    {
-      "source": "điểm thành phần",
-      "target": "điểm kiểm tra giữa kỳ",
-      "type_source": "score_component",
-      "type_target": "score_component_type",
-      "relation": "có_thể_bao_gồm"
-    },
-    {
-      "source": "điểm thành phần",
-      "target": "điểm thực hành",
-      "type_source": "score_component",
-      "type_target": "score_component_type",
-      "relation": "có_thể_bao_gồm"
-    },
-    {
-      "source": "điểm thành phần",
-      "target": "điểm đánh giá nhận thức",
-      "type_source": "score_component",
-      "type_target": "score_component_type",
-      "relation": "có_thể_bao_gồm"
-    },
-    {
-      "source": "điểm thành phần",
-      "target": "điểm tham gia thảo luận",
-      "type_source": "score_component",
-      "type_target": "score_component_type",
-      "relation": "có_thể_bao_gồm"
-    },
-    {
-      "source": "điểm thành phần",
-      "target": "điểm chuyên cần",
-      "type_source": "score_component",
-      "type_target": "score_component_type",
-      "relation": "có_thể_bao_gồm"
-    },
-    {
-      "source": "điểm thành phần",
-      "target": "điểm đồ án",
-      "type_source": "score_component",
-      "type_target": "score_component_type",
-      "relation": "có_thể_bao_gồm"
-    },
-    {
-      "source": "điểm thành phần",
-      "target": "điểm thi kết thúc học phần",
-      "type_source": "score_component",
-      "type_target": "score_component_type",
-      "relation": "có_thể_bao_gồm"
-    },
-    {
-      "source": "Thi kết thúc học phần",
-      "target": "điểm thi kết thúc học phần",
-      "type_source": "assessment_method",
-      "type_target": "score_component_type",
-      "relation": "là_thành_phần_của"
-    },
-     {
-      "source": "Thi kết thúc học phần",
-      "target": "học phần",
-      "type_source": "assessment_method",
-      "type_target": "course_unit",
-      "relation": "là_bắt_buộc_cho"
-    },
-    {
-      "source": "điểm thi kết thúc học phần",
-      "target": "50%",
-      "type_source": "score_component_type",
-      "type_target": "percentage_value",
-      "relation": "có_trọng_số_tối_thiểu"
-    },
-    {
-      "source": "Điểm học phần thực hành",
-      "target": "điểm trung bình của các bài thực hành",
-      "type_source": "score_type",
-      "type_target": "calculation_method",
-      "relation": "tính_bằng"
-    },
-    {
-      "source": "Điểm học phần thực hành",
-      "target": "đề cương chi tiết học phần",
-      "type_source": "score_type",
-      "type_target": "course_syllabus",
-      "relation": "theo_quy_định_trong"
-    },
-    {
-      "source": "đề cương chi tiết học phần",
-      "target": "Bộ môn",
+      "source": {
+        "name": "Đề cương chi tiết học phần",
+        "document_type": "Tài liệu học thuật",
+        "purpose": "Cung cấp thông tin học phần",
+        "timing_of_communication": "Buổi học đầu tiên"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "recipient_of_information": "Đề cương chi tiết học phần",
+        "academic_context": "Tham gia học phần"
+      },
       "type_source": "course_syllabus",
+      "type_target": "student",
+      "relation": "được_thông_báo_cho"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần lý thuyết hoặc lý thuyết kết hợp thực hành",
+        "course_category": "Lý thuyết, Lý thuyết kết hợp thực hành",
+        "calculation_basis": "Tổng hợp từ các điểm thành phần",
+        "final_exam_importance": "Bắt buộc, trọng số ≥ 50%"
+      },
+      "target": {
+        "name": "Điểm bài tập",
+        "score_type": "Điểm thành phần",
+        "assessment_activity": "Bài tập",
+        "evaluation_purpose": "Đánh giá quá trình học tập"
+      },
+      "type_source": "theoretical_practical_course_grade",
+      "type_target": "component_score_homework",
+      "relation": "có_thể_bao_gồm_điểm_thành_phần_là"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần lý thuyết hoặc lý thuyết kết hợp thực hành",
+        "course_category": "Lý thuyết, Lý thuyết kết hợp thực hành",
+        "calculation_basis": "Tổng hợp từ các điểm thành phần",
+        "final_exam_importance": "Bắt buộc, trọng số ≥ 50%"
+      },
+      "target": {
+        "name": "Điểm kiểm tra giữa kỳ",
+        "score_type": "Điểm thành phần",
+        "assessment_activity": "Kiểm tra giữa kỳ",
+        "timing": "Giữa học phần"
+      },
+      "type_source": "theoretical_practical_course_grade",
+      "type_target": "component_score_midterm",
+      "relation": "có_thể_bao_gồm_điểm_thành_phần_là"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần lý thuyết hoặc lý thuyết kết hợp thực hành",
+        "course_category": "Lý thuyết, Lý thuyết kết hợp thực hành",
+        "calculation_basis": "Tổng hợp từ các điểm thành phần",
+        "final_exam_importance": "Bắt buộc, trọng số ≥ 50%"
+      },
+      "target": {
+        "name": "Điểm thực hành",
+        "score_type": "Điểm thành phần",
+        "assessment_activity": "Bài thực hành",
+        "skill_evaluated": "Kỹ năng thực hành"
+      },
+      "type_source": "theoretical_practical_course_grade",
+      "type_target": "component_score_practical",
+      "relation": "có_thể_bao_gồm_điểm_thành_phần_là"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần lý thuyết hoặc lý thuyết kết hợp thực hành",
+        "course_category": "Lý thuyết, Lý thuyết kết hợp thực hành",
+        "calculation_basis": "Tổng hợp từ các điểm thành phần",
+        "final_exam_importance": "Bắt buộc, trọng số ≥ 50%"
+      },
+      "target": {
+        "name": "Điểm đánh giá nhận thức",
+        "score_type": "Điểm thành phần",
+        "assessment_focus": "Mức độ hiểu biết, nhận thức",
+        "evaluation_method": "Đa dạng"
+      },
+      "type_source": "theoretical_practical_course_grade",
+      "type_target": "component_score_cognitive",
+      "relation": "có_thể_bao_gồm_điểm_thành_phần_là"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần lý thuyết hoặc lý thuyết kết hợp thực hành",
+        "course_category": "Lý thuyết, Lý thuyết kết hợp thực hành",
+        "calculation_basis": "Tổng hợp từ các điểm thành phần",
+        "final_exam_importance": "Bắt buộc, trọng số ≥ 50%"
+      },
+      "target": {
+        "name": "Điểm tham gia thảo luận",
+        "score_type": "Điểm thành phần",
+        "assessment_activity": "Tham gia thảo luận trên lớp",
+        "evaluation_criteria": "Tính tích cực, chất lượng đóng góp"
+      },
+      "type_source": "theoretical_practical_course_grade",
+      "type_target": "component_score_discussion",
+      "relation": "có_thể_bao_gồm_điểm_thành_phần_là"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần lý thuyết hoặc lý thuyết kết hợp thực hành",
+        "course_category": "Lý thuyết, Lý thuyết kết hợp thực hành",
+        "calculation_basis": "Tổng hợp từ các điểm thành phần",
+        "final_exam_importance": "Bắt buộc, trọng số ≥ 50%"
+      },
+      "target": {
+        "name": "Điểm chuyên cần",
+        "score_type": "Điểm thành phần",
+        "assessment_basis": "Mức độ tham gia lớp học đều đặn",
+        "importance": "Khuyến khích sự hiện diện của sinh viên"
+      },
+      "type_source": "theoretical_practical_course_grade",
+      "type_target": "component_score_attendance",
+      "relation": "có_thể_bao_gồm_điểm_thành_phần_là"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần lý thuyết hoặc lý thuyết kết hợp thực hành",
+        "course_category": "Lý thuyết, Lý thuyết kết hợp thực hành",
+        "calculation_basis": "Tổng hợp từ các điểm thành phần",
+        "final_exam_importance": "Bắt buộc, trọng số ≥ 50%"
+      },
+      "target": {
+        "name": "Điểm đồ án",
+        "score_type": "Điểm thành phần",
+        "assessment_activity": "Thực hiện đồ án môn học",
+        "evaluation_focus": "Năng lực tổng hợp kiến thức, giải quyết vấn đề"
+      },
+      "type_source": "theoretical_practical_course_grade",
+      "type_target": "component_score_project",
+      "relation": "có_thể_bao_gồm_điểm_thành_phần_là"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần lý thuyết hoặc lý thuyết kết hợp thực hành",
+        "course_category": "Lý thuyết, Lý thuyết kết hợp thực hành",
+        "calculation_basis": "Tổng hợp từ các điểm thành phần",
+        "final_exam_importance": "Bắt buộc, trọng số ≥ 50%"
+      },
+      "target": {
+        "name": "Điểm thi kết thúc học phần",
+        "score_type": "Điểm thành phần chính",
+        "requirement": "Bắt buộc",
+        "minimum_weight": "50%"
+      },
+      "type_source": "theoretical_practical_course_grade",
+      "type_target": "final_exam_score",
+      "relation": "bao_gồm_điểm_thành_phần_là"
+    },
+    {
+      "source": {
+        "name": "Điểm thi kết thúc học phần",
+        "requirement": "Bắt buộc đối với học phần lý thuyết/lý thuyết kết hợp thực hành",
+        "assessment_type": "Đánh giá cuối kỳ",
+        "purpose": "Đánh giá tổng kết kiến thức học phần"
+      },
+      "target": {
+        "name": "Điểm học phần lý thuyết hoặc lý thuyết kết hợp thực hành",
+        "course_category": "Lý thuyết, Lý thuyết kết hợp thực hành",
+        "final_assessment_component": "Điểm thi kết thúc học phần",
+        "overall_grade_dependency": "Phụ thuộc lớn vào điểm thi cuối kỳ"
+      },
+      "type_source": "final_exam_score",
+      "type_target": "theoretical_practical_course_grade",
+      "relation": "có_trọng_số_không_dưới_50_phan_tram_trong"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần thực hành",
+        "course_category": "Thực hành",
+        "calculation_method": "Điểm trung bình các bài thực hành hoặc theo đề cương",
+        "focus": "Đánh giá kỹ năng thực hành"
+      },
+      "target": {
+        "name": "Điểm trung bình của các bài thực hành",
+        "calculation_type": "Trung bình cộng",
+        "input_data": "Điểm từng bài thực hành",
+        "usage": "Tính điểm học phần thực hành"
+      },
+      "type_source": "practical_course_grade",
+      "type_target": "average_practical_exercises_score",
+      "relation": "được_tính_bằng"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần thực hành",
+        "course_category": "Thực hành",
+        "alternative_calculation": "Theo quy định trong đề cương chi tiết",
+        "flexibility": "Cho phép quy định riêng theo môn học"
+      },
+      "target": {
+        "name": "Đề cương chi tiết môn học",
+        "document_type": "Tài liệu học thuật",
+        "content_specification": "Quy định cách tính điểm thực hành",
+        "approval_body": "Bộ môn"
+      },
+      "type_source": "practical_course_grade",
+      "type_target": "course_syllabus_practical",
+      "relation": "có_thể_được_tính_theo_quy_định_trong"
+    },
+    {
+      "source": {
+        "name": "Đề cương chi tiết môn học (cho học phần thực hành)",
+        "document_type": "Tài liệu học thuật",
+        "scope": "Quy địnhเฉพาะ cho môn học thực hành",
+        "status_requirement": "Cần được phê duyệt"
+      },
+      "target": {
+        "name": "Bộ môn",
+        "academic_unit_type": "Đơn vị chuyên môn",
+        "role": "Phê duyệt đề cương",
+        "authority_level": "Cấp Bộ môn"
+      },
+      "type_source": "course_syllabus_practical",
       "type_target": "department",
-      "relation": "phê_duyệt_bởi"
+      "relation": "được_phê_duyệt_bởi"
     },
     {
-      "source": "học phần",
-      "target": "điểm thành phần",
-      "type_source": "course_unit",
-      "type_target": "score_component",
-      "relation": "đánh_giá_qua"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "evaluation_context": "Mỗi học phần",
+        "assessment_components_min": "Tối thiểu hai (trừ học phần < 2 tín chỉ)"
+      },
+      "target": {
+        "name": "Điểm thành phần",
+        "purpose": "Đánh giá các khía cạnh khác nhau của quá trình học",
+        "quantity_rule": "Tối thiểu hai điểm (trừ học phần < 2 tín chỉ)",
+        "scale": "Thang điểm 10"
+      },
+      "type_source": "student",
+      "type_target": "component_score",
+      "relation": "được_đánh_giá_qua"
     },
     {
-      "source": "học phần",
-      "target": "02 tín chỉ",
-      "type_source": "course_unit",
-      "type_target": "credit_value",
-      "relation": "có_thể_có_khối_lượng_nhỏ_hơn"
+      "source": {
+        "name": "Các học phần có khối lượng nhỏ hơn 02 tín chỉ",
+        "course_characteristic": "Khối lượng tín chỉ ít",
+        "credit_value": "< 2 tín chỉ",
+        "assessment_flexibility": "Có thể chỉ có một điểm đánh giá"
+      },
+      "target": {
+        "name": "Một điểm đánh giá",
+        "quantity": "Một",
+        "applicability": "Học phần nhỏ hơn 02 tín chỉ",
+        "purpose": "Đánh giá tổng thể học phần ít tín chỉ"
+      },
+      "type_source": "low_credit_course",
+      "type_target": "single_assessment_point",
+      "relation": "có_thể_chỉ_có"
     },
     {
-      "source": "học phần",
-      "target": "một điểm đánh giá",
-      "type_source": "course_unit",
-      "type_target": "assessment_quantity",
-      "relation": "có_thể_có"
+      "source": {
+        "name": "Các điểm thành phần",
+        "score_nature": "Điểm bộ phận của học phần",
+        "evaluation_standard": "Thang điểm 10",
+        "weight_determination": "Quy định trong đề cương"
+      },
+      "target": {
+        "name": "Thang điểm 10",
+        "scale_type": "Số học",
+        "range_min": 0,
+        "range_max": 10,
+        "usage": "Đánh giá điểm thành phần"
+      },
+      "type_source": "component_score",
+      "type_target": "grading_scale_10",
+      "relation": "được_đánh_giá_theo"
     },
     {
-      "source": "điểm thành phần",
-      "target": "thang điểm 10",
-      "type_source": "score_component",
-      "type_target": "grading_scale",
-      "relation": "đánh_giá_theo"
+      "source": {
+        "name": "Phương pháp đánh giá",
+        "definition_scope": "Cách thức tiến hành đánh giá",
+        "specification_location": "Đề cương chi tiết học phần",
+        "approval_authority": "Bộ môn"
+      },
+      "target": {
+        "name": "Đề cương chi tiết của mỗi học phần",
+        "document_type": "Tài liệu học thuật",
+        "content_detail": "Thông tin về phương pháp, hình thức, trọng số đánh giá",
+        "approval_status": "Đã được Bộ môn phê duyệt"
+      },
+      "type_source": "assessment_method_definition",
+      "type_target": "course_syllabus_detailed",
+      "relation": "được_quy_định_trong"
     },
     {
-      "source": "Phương pháp đánh giá",
-      "target": "đề cương chi tiết học phần",
-      "type_source": "assessment_parameter",
-      "type_target": "course_syllabus",
-      "relation": "quy_định_trong"
+      "source": {
+        "name": "Hình thức đánh giá",
+        "definition_scope": "Loại bài kiểm tra, bài tập cụ thể",
+        "specification_location": "Đề cương chi tiết học phần",
+        "approval_authority": "Bộ môn"
+      },
+      "target": {
+        "name": "Đề cương chi tiết của mỗi học phần",
+        "document_type": "Tài liệu học thuật",
+        "content_detail": "Thông tin về phương pháp, hình thức, trọng số đánh giá",
+        "approval_status": "Đã được Bộ môn phê duyệt"
+      },
+      "type_source": "assessment_format_definition",
+      "type_target": "course_syllabus_detailed",
+      "relation": "được_quy_định_trong"
     },
     {
-      "source": "hình thức đánh giá",
-      "target": "đề cương chi tiết học phần",
-      "type_source": "assessment_parameter",
-      "type_target": "course_syllabus",
-      "relation": "quy_định_trong"
+      "source": {
+        "name": "Trọng số của mỗi điểm thành phần",
+        "definition_scope": "Tỷ lệ đóng góp của điểm thành phần vào điểm học phần",
+        "specification_location": "Đề cương chi tiết học phần",
+        "approval_authority": "Bộ môn"
+      },
+      "target": {
+        "name": "Đề cương chi tiết của mỗi học phần",
+        "document_type": "Tài liệu học thuật",
+        "content_detail": "Thông tin về phương pháp, hình thức, trọng số đánh giá",
+        "approval_status": "Đã được Bộ môn phê duyệt"
+      },
+      "type_source": "component_score_weight_definition",
+      "type_target": "course_syllabus_detailed",
+      "relation": "được_quy_định_trong"
     },
     {
-      "source": "trọng số",
-      "target": "đề cương chi tiết học phần",
-      "type_source": "assessment_parameter",
-      "type_target": "course_syllabus",
-      "relation": "quy_định_trong"
-    },
-     {
-      "source": "trọng số",
-      "target": "điểm thành phần",
-      "type_source": "assessment_parameter",
-      "type_target": "score_component",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Đề cương chi tiết của mỗi học phần",
+        "document_type": "Tài liệu học thuật",
+        "approval_requirement": "Cần được phê duyệt để có hiệu lực",
+        "content_relevance": "Quy định chi tiết cho từng học phần"
+      },
+      "target": {
+        "name": "Bộ môn",
+        "academic_unit_type": "Đơn vị chuyên môn",
+        "role": "Phê duyệt đề cương chi tiết",
+        "decision_making_level": "Cấp Bộ môn"
+      },
+      "type_source": "course_syllabus_detailed",
+      "type_target": "department",
+      "relation": "đã_được_phê_duyệt_bởi"
     },
     {
-      "source": "Giảng viên",
-      "target": "bảng ghi điểm",
+      "source": {
+        "name": "Giảng viên",
+        "role": "Người giảng dạy và đánh giá",
+        "task": "Ghi điểm",
+        "documentation_tool": "Bảng ghi điểm"
+      },
+      "target": {
+        "name": "Các điểm thành phần",
+        "score_type": "Điểm bộ phận",
+        "record_requirement": "Cần được ghi nhận chính thức",
+        "official_document": "Bảng ghi điểm"
+      },
       "type_source": "lecturer",
-      "type_target": "document",
-      "relation": "ghi_điểm_vào"
+      "type_target": "component_score",
+      "relation": "ghi_vào_bảng_ghi_điểm"
     },
     {
-      "source": "bảng ghi điểm",
-      "target": "Phòng Quản lý chất lượng",
-      "type_source": "document",
-      "type_target": "organization_department",
-      "relation": "cung_cấp_bởi"
+      "source": {
+        "name": "Giảng viên",
+        "role": "Người giảng dạy và đánh giá",
+        "task": "Ghi điểm",
+        "documentation_tool": "Bảng ghi điểm"
+      },
+      "target": {
+        "name": "Điểm tổng kết của học phần",
+        "score_type": "Điểm cuối cùng của học phần",
+        "record_requirement": "Cần được ghi nhận chính thức",
+        "official_document": "Bảng ghi điểm"
+      },
+      "type_source": "lecturer",
+      "type_target": "final_course_grade_summary",
+      "relation": "ghi_vào_bảng_ghi_điểm"
     },
     {
-      "source": "Điểm học phần",
-      "target": "điểm thành phần",
-      "type_source": "course_score",
-      "type_target": "score_component",
-      "relation": "tính_từ_tổng"
-    },
-     {
-      "source": "Điểm học phần",
-      "target": "trọng số",
-      "type_source": "course_score",
-      "type_target": "assessment_parameter",
-      "relation": "nhân_với"
-    },
-    {
-      "source": "Điểm học phần",
-      "target": "một chữ số thập phân",
-      "type_source": "course_score",
-      "type_target": "rounding_rule",
-      "relation": "làm_tròn_tới"
+      "source": {
+        "name": "Bảng ghi điểm",
+        "document_purpose": "Lưu trữ chính thức điểm số của sinh viên",
+        "issuer": "Phòng Quản lý chất lượng",
+        "user": "Giảng viên"
+      },
+      "target": {
+        "name": "Phòng Quản lý chất lượng",
+        "administrative_department": "Đơn vị quản lý học vụ",
+        "role": "Cung cấp bảng ghi điểm",
+        "responsibility": "Đảm bảo quy trình quản lý điểm"
+      },
+      "type_source": "grade_sheet",
+      "type_target": "quality_management_office",
+      "relation": "do_cung_cấp_bởi"
     },
     {
-      "source": "Điểm học phần",
-      "target": "điểm chữ",
-      "type_source": "course_score",
-      "type_target": "letter_grade_system",
+      "source": {
+        "name": "Điểm học phần",
+        "calculation_method": "Tổng các điểm thành phần nhân trọng số",
+        "rounding_rule": "Làm tròn tới một chữ số thập phân",
+        "final_representation": "Xếp loại điểm chữ"
+      },
+      "target": {
+        "name": "Tổng các điểm thành phần nhân với trọng số tương ứng",
+        "value_type": "Giá trị số học trung gian",
+        "basis_for": "Tính điểm học phần cuối cùng",
+        "components": "Điểm thành phần, trọng số"
+      },
+      "type_source": "course_grade",
+      "type_target": "weighted_component_score_sum",
+      "relation": "được_tính_từ"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần",
+        "numerical_value_step": "Sau khi tính tổng trọng số",
+        "precision_requirement": "Một chữ số thập phân",
+        "purpose_of_rounding": "Thống nhất cách hiển thị điểm"
+      },
+      "target": {
+        "name": "Một chữ số thập phân",
+        "precision_level": "0.1",
+        "application_context": "Làm tròn điểm học phần",
+        "standardization_purpose": "Đảm bảo tính nhất quán"
+      },
+      "type_source": "course_grade",
+      "type_target": "decimal_place_one",
+      "relation": "được_làm_tròn_tới"
+    },
+    {
+      "source": {
+        "name": "Điểm học phần",
+        "final_format": "Điểm chữ",
+        "grading_system_type": "Alphabetical grading",
+        "exception_clause": "Trừ các trường hợp quy định tại điểm d khoản này"
+      },
+      "target": {
+        "name": "Hệ điểm chữ (A, B, C, D, F)",
+        "grade_set": "A, B, C, D, F",
+        "application": "Các học phần tính vào điểm trung bình học tập",
+        "conversion_to_scale_4": "Bắt buộc để tính ĐTB"
+      },
+      "type_source": "course_grade_for_gpa",
+      "type_target": "standard_letter_grade_system",
       "relation": "xếp_loại_theo"
     },
     {
-      "source": "Điểm học phần",
-      "target": "điểm trung bình học tập",
-      "type_source": "course_score",
-      "type_target": "gpa_type",
-      "relation": "tính_vào"
-    },
-    {
-      "source": "Điểm học phần",
-      "target": "A",
-      "type_source": "course_score",
-      "type_target": "letter_grade",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Điểm học phần",
-      "target": "B",
-      "type_source": "course_score",
-      "type_target": "letter_grade",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Điểm học phần",
-      "target": "C",
-      "type_source": "course_score",
-      "type_target": "letter_grade",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Điểm học phần",
-      "target": "D",
-      "type_source": "course_score",
-      "type_target": "letter_grade",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "Điểm học phần",
-      "target": "F",
-      "type_source": "course_score",
-      "type_target": "letter_grade",
-      "relation": "có_thể_là"
-    },
-    {
-      "source": "học phần",
-      "target": "D",
+      "source": {
+        "name": "Học phần",
+        "credit_accumulation_status": "Tích lũy hoặc không tích lũy",
+        "condition_for_accumulation": "Đạt từ điểm D trở lên",
+        "grading_basis": "Điểm học phần"
+      },
+      "target": {
+        "name": "Điểm D",
+        "letter_grade_value": "D",
+        "minimum_requirement_for_credit": "Đúng",
+        "scale_4_equivalent": "1.0"
+      },
       "type_source": "course_unit",
-      "type_target": "letter_grade",
-      "relation": "tích_lũy_khi_đạt_từ"
+      "type_target": "grade_D",
+      "relation": "chỉ_được_tích_lũy_khi_đạt_từ_trở_lên"
     },
     {
-      "source": "điểm chữ",
-      "target": "thang điểm 4",
-      "type_source": "letter_grade_system",
-      "type_target": "grading_scale",
-      "relation": "quy_đổi_sang"
+      "source": {
+        "name": "Các điểm chữ (A, B, C, D, F)",
+        "grade_category": "Standard letter grades for GPA calculation",
+        "conversion_purpose": "Tính ĐTBCHK và ĐTBCTL",
+        "original_scale_context": "Thang điểm 10 và xếp loại"
+      },
+      "target": {
+        "name": "Điểm số (thang điểm 4)",
+        "scale_type": "Numerical 4-point scale",
+        "usage": "Tính điểm trung bình chung",
+        "conversion_source": "Điểm chữ A, B, C, D, F"
+      },
+      "type_source": "standard_letter_grades",
+      "type_target": "grade_point_scale_4",
+      "relation": "được_quy_đổi_sang"
     },
     {
-      "source": "thang điểm 4",
-      "target": "ĐTBCHK",
-      "type_source": "grading_scale",
-      "type_target": "gpa_type",
+      "source": {
+        "name": "Điểm số (thang điểm 4)",
+        "scale_type": "Numerical 4-point scale",
+        "application": "GPA calculation",
+        "input_for_gpa": "Kết quả quy đổi từ điểm chữ"
+      },
+      "target": {
+        "name": "ĐTBCHK (Điểm trung bình chung học kỳ)",
+        "gpa_type": "Học kỳ",
+        "calculation_input": "Điểm số thang điểm 4",
+        "purpose": "Đánh giá kết quả học tập trong một học kỳ"
+      },
+      "type_source": "grade_point_scale_4",
+      "type_target": "semester_gpa",
       "relation": "dùng_để_tính"
     },
     {
-      "source": "thang điểm 4",
-      "target": "ĐTBCTL",
-      "type_source": "grading_scale",
-      "type_target": "gpa_type",
+      "source": {
+        "name": "Điểm số (thang điểm 4)",
+        "scale_type": "Numerical 4-point scale",
+        "application": "GPA calculation",
+        "input_for_gpa": "Kết quả quy đổi từ điểm chữ"
+      },
+      "target": {
+        "name": "ĐTBCTL (Điểm trung bình chung tích lũy)",
+        "gpa_type": "Tích lũy",
+        "calculation_input": "Điểm số thang điểm 4",
+        "purpose": "Đánh giá kết quả học tập toàn khóa"
+      },
+      "type_source": "grade_point_scale_4",
+      "type_target": "cumulative_gpa",
       "relation": "dùng_để_tính"
     },
     {
-      "source": "A",
-      "target": "4.0",
-      "type_source": "letter_grade",
-      "type_target": "grade_point_value",
-      "relation": "tương_ứng_với"
+      "source": { "name": "Điểm A", "letter_value": "A", "classification": "Đạt", "description": "Mức điểm Xuất sắc"},
+      "target": { "name": "4.0", "scale_system": "Thang điểm 4", "numeric_value": 4.0, "meaning": "Điểm số quy đổi cao nhất"},
+      "type_source": "grade_A", "type_target": "grade_point_4_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "A",
-      "target": "thang điểm 4",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
+      "source": { "name": "Điểm A", "letter_value": "A", "classification": "Đạt", "description": "Mức điểm Xuất sắc"},
+      "target": { "name": "8.5 đến 10.0", "scale_system": "Thang điểm 10", "lower_bound": 8.5, "upper_bound": 10.0, "description": "Khoảng điểm 10 tương ứng"},
+      "type_source": "grade_A", "type_target": "grade_range_10_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "A",
-      "target": "8.5 đến 10.0",
-      "type_source": "letter_grade",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
+      "source": { "name": "Điểm B+", "letter_value": "B+", "classification": "Đạt", "description": "Mức điểm Giỏi"},
+      "target": { "name": "3.5", "scale_system": "Thang điểm 4", "numeric_value": 3.5, "meaning": "Điểm số quy đổi"},
+      "type_source": "grade_B_plus", "type_target": "grade_point_4_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "A",
-      "target": "thang điểm 10",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
+      "source": { "name": "Điểm B+", "letter_value": "B+", "classification": "Đạt", "description": "Mức điểm Giỏi"},
+      "target": { "name": "8.0 đến 8.4", "scale_system": "Thang điểm 10", "lower_bound": 8.0, "upper_bound": 8.4, "description": "Khoảng điểm 10 tương ứng"},
+      "type_source": "grade_B_plus", "type_target": "grade_range_10_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "A",
-      "target": "xuất sắc",
-      "type_source": "letter_grade",
-      "type_target": "performance_level",
-      "relation": "thể_hiện"
+      "source": { "name": "Điểm B", "letter_value": "B", "classification": "Đạt", "description": "Mức điểm Khá Giỏi"},
+      "target": { "name": "3.0", "scale_system": "Thang điểm 4", "numeric_value": 3.0, "meaning": "Điểm số quy đổi"},
+      "type_source": "grade_B", "type_target": "grade_point_4_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "B+",
-      "target": "3.5",
-      "type_source": "letter_grade",
-      "type_target": "grade_point_value",
-      "relation": "tương_ứng_với"
+      "source": { "name": "Điểm B", "letter_value": "B", "classification": "Đạt", "description": "Mức điểm Khá Giỏi"},
+      "target": { "name": "7.0 đến 7.9", "scale_system": "Thang điểm 10", "lower_bound": 7.0, "upper_bound": 7.9, "description": "Khoảng điểm 10 tương ứng"},
+      "type_source": "grade_B", "type_target": "grade_range_10_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "B+",
-      "target": "thang điểm 4",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
+      "source": { "name": "Điểm C+", "letter_value": "C+", "classification": "Đạt", "description": "Mức điểm Khá"},
+      "target": { "name": "2.5", "scale_system": "Thang điểm 4", "numeric_value": 2.5, "meaning": "Điểm số quy đổi"},
+      "type_source": "grade_C_plus", "type_target": "grade_point_4_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "B+",
-      "target": "8.0 đến 8.4",
-      "type_source": "letter_grade",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
-    },
-     {
-      "source": "B+",
-      "target": "thang điểm 10",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
+      "source": { "name": "Điểm C+", "letter_value": "C+", "classification": "Đạt", "description": "Mức điểm Khá"},
+      "target": { "name": "6.5 đến 6.9", "scale_system": "Thang điểm 10", "lower_bound": 6.5, "upper_bound": 6.9, "description": "Khoảng điểm 10 tương ứng"},
+      "type_source": "grade_C_plus", "type_target": "grade_range_10_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "B+",
-      "target": "khá giỏi",
-      "type_source": "letter_grade",
-      "type_target": "performance_level",
-      "relation": "thể_hiện"
+      "source": { "name": "Điểm C", "letter_value": "C", "classification": "Đạt", "description": "Mức điểm Trung bình Khá"},
+      "target": { "name": "2.0", "scale_system": "Thang điểm 4", "numeric_value": 2.0, "meaning": "Điểm số quy đổi"},
+      "type_source": "grade_C", "type_target": "grade_point_4_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "B",
-      "target": "3.0",
-      "type_source": "letter_grade",
-      "type_target": "grade_point_value",
-      "relation": "tương_ứng_với"
+      "source": { "name": "Điểm C", "letter_value": "C", "classification": "Đạt", "description": "Mức điểm Trung bình Khá"},
+      "target": { "name": "5.5 đến 6.4", "scale_system": "Thang điểm 10", "lower_bound": 5.5, "upper_bound": 6.4, "description": "Khoảng điểm 10 tương ứng"},
+      "type_source": "grade_C", "type_target": "grade_range_10_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "B",
-      "target": "thang điểm 4",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
+      "source": { "name": "Điểm D+", "letter_value": "D+", "classification": "Đạt", "description": "Mức điểm Trung bình"},
+      "target": { "name": "1.5", "scale_system": "Thang điểm 4", "numeric_value": 1.5, "meaning": "Điểm số quy đổi"},
+      "type_source": "grade_D_plus", "type_target": "grade_point_4_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "B",
-      "target": "7.0 đến 7.9",
-      "type_source": "letter_grade",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
+      "source": { "name": "Điểm D+", "letter_value": "D+", "classification": "Đạt", "description": "Mức điểm Trung bình"},
+      "target": { "name": "5.0 đến 5.4", "scale_system": "Thang điểm 10", "lower_bound": 5.0, "upper_bound": 5.4, "description": "Khoảng điểm 10 tương ứng"},
+      "type_source": "grade_D_plus", "type_target": "grade_range_10_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "B",
-      "target": "thang điểm 10",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
+      "source": { "name": "Điểm D", "letter_value": "D", "classification": "Đạt", "description": "Mức điểm Yếu (vẫn tích lũy)"},
+      "target": { "name": "1.0", "scale_system": "Thang điểm 4", "numeric_value": 1.0, "meaning": "Điểm số quy đổi thấp nhất để đạt"},
+      "type_source": "grade_D", "type_target": "grade_point_4_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "B",
-      "target": "trung bình khá",
-      "type_source": "letter_grade",
-      "type_target": "performance_level",
-      "relation": "thể_hiện"
+      "source": { "name": "Điểm D", "letter_value": "D", "classification": "Đạt", "description": "Mức điểm Yếu (vẫn tích lũy)"},
+      "target": { "name": "4.0 đến 4.9", "scale_system": "Thang điểm 10", "lower_bound": 4.0, "upper_bound": 4.9, "description": "Khoảng điểm 10 tương ứng"},
+      "type_source": "grade_D", "type_target": "grade_range_10_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "C+",
-      "target": "2.5",
-      "type_source": "letter_grade",
-      "type_target": "grade_point_value",
-      "relation": "tương_ứng_với"
+      "source": { "name": "Điểm F", "letter_value": "F", "classification": "Không đạt", "description": "Mức điểm Kém/Không đạt"},
+      "target": { "name": "0.0", "scale_system": "Thang điểm 4", "numeric_value": 0.0, "meaning": "Điểm số quy đổi khi không đạt"},
+      "type_source": "grade_F", "type_target": "grade_point_4_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "C+",
-      "target": "thang điểm 4",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
+      "source": { "name": "Điểm F", "letter_value": "F", "classification": "Không đạt", "description": "Mức điểm Kém/Không đạt"},
+      "target": { "name": "dưới 4.0", "scale_system": "Thang điểm 10", "upper_bound": 3.9, "description": "Khoảng điểm 10 tương ứng khi không đạt"},
+      "type_source": "grade_F", "type_target": "grade_range_10_value", "relation": "tương_ứng_với"
     },
     {
-      "source": "C+",
-      "target": "6.5 đến 6.9",
-      "type_source": "letter_grade",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
-    },
-    {
-      "source": "C+",
-      "target": "thang điểm 10",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
-    },
-    {
-      "source": "C",
-      "target": "2.0",
-      "type_source": "letter_grade",
-      "type_target": "grade_point_value",
-      "relation": "tương_ứng_với"
-    },
-    {
-      "source": "C",
-      "target": "thang điểm 4",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
-    },
-    {
-      "source": "C",
-      "target": "5.5 đến 6.4",
-      "type_source": "letter_grade",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
-    },
-    {
-      "source": "C",
-      "target": "thang điểm 10",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
-    },
-    {
-      "source": "D+",
-      "target": "1.5",
-      "type_source": "letter_grade",
-      "type_target": "grade_point_value",
-      "relation": "tương_ứng_với"
-    },
-    {
-      "source": "D+",
-      "target": "thang điểm 4",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
-    },
-    {
-      "source": "D+",
-      "target": "5.0 đến 5.4",
-      "type_source": "letter_grade",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
-    },
-     {
-      "source": "D+",
-      "target": "thang điểm 10",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
-    },
-    {
-      "source": "D",
-      "target": "1.0",
-      "type_source": "letter_grade",
-      "type_target": "grade_point_value",
-      "relation": "tương_ứng_với"
-    },
-    {
-      "source": "D",
-      "target": "thang điểm 4",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
-    },
-    {
-      "source": "D",
-      "target": "4.0 đến 4.9",
-      "type_source": "letter_grade",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
-    },
-     {
-      "source": "D",
-      "target": "thang điểm 10",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
-    },
-    {
-      "source": "F",
-      "target": "0.0",
-      "type_source": "letter_grade",
-      "type_target": "grade_point_value",
-      "relation": "tương_ứng_với"
-    },
-     {
-      "source": "F",
-      "target": "thang điểm 4",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
-    },
-    {
-      "source": "F",
-      "target": "dưới 4.0",
-      "type_source": "letter_grade",
-      "type_target": "score_range",
-      "relation": "tương_ứng_với"
-    },
-     {
-      "source": "F",
-      "target": "thang điểm 10",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
-    },
-    {
-      "source": "F",
-      "target": "không đạt yêu cầu",
-      "type_source": "letter_grade",
-      "type_target": "performance_level",
-      "relation": "thể_hiện"
-    },
-    {
-      "source": "D",
-      "target": "Đạt",
-      "type_source": "letter_grade",
-      "type_target": "passing_status",
-      "relation": "là_mức_tối_thiểu_để"
-    },
-    {
-      "source": "F",
-      "target": "Không đạt",
-      "type_source": "letter_grade",
-      "type_target": "failing_status",
-      "relation": "tương_ứng_với"
-    },
-    {
-      "source": "P",
-      "target": "học phần",
-      "type_source": "letter_grade",
-      "type_target": "course_unit",
+      "source": {
+        "name": "Loại đạt không phân mức (P)",
+        "grade_symbol": "P",
+        "gpa_impact": "Không tính vào điểm trung bình học tập",
+        "meaning": "Đạt yêu cầu học phần"
+      },
+      "target": {
+        "name": "Các học phần chỉ yêu cầu đạt, không tính vào điểm trung bình học tập",
+        "course_type": "Pass/Fail",
+        "grading_objective": "Chỉ cần đạt, không xếp loại chi tiết",
+        "gpa_contribution": "Không"
+      },
+      "type_source": "pass_grade_P_type",
+      "type_target": "pass_fail_course_type",
       "relation": "áp_dụng_cho"
     },
-     {
-      "source": "học phần",
-      "target": "P",
-      "type_source": "course_unit",
-      "type_target": "letter_grade",
-      "relation": "chỉ_yêu_cầu_đạt"
-    },
-     {
-      "source": "P",
-      "target": "điểm trung bình học tập",
-      "type_source": "letter_grade",
-      "type_target": "gpa_type",
-      "relation": "không_tính_vào"
-    },
-     {
-      "source": "P",
-      "target": "5,0",
-      "type_source": "letter_grade",
-      "type_target": "score_value",
-      "relation": "yêu_cầu_điểm_từ"
-    },
-     {
-      "source": "P",
-      "target": "thang điểm 10",
-      "type_source": "letter_grade",
-      "type_target": "grading_scale",
-      "relation": "trong_thang_điểm"
+    {
+      "source": {
+        "name": "P (Điểm đạt không phân mức)",
+        "letter_grade_value": "P",
+        "meaning": "Đạt",
+        "scale_10_condition": "Từ 5,0 trở lên"
+      },
+      "target": {
+        "name": "Ngưỡng điểm 5,0 (thang 10)",
+        "scale": "Thang điểm 10",
+        "threshold_value": 5.0,
+        "condition": "Trở lên",
+        "implication": "Đạt yêu cầu"
+      },
+      "type_source": "grade_P",
+      "type_target": "score_threshold_5_on_10",
+      "relation": "yêu_cầu_đạt_từ"
     },
     {
-      "source": "I",
-      "target": "điểm trung bình học tập",
-      "type_source": "letter_grade",
-      "type_target": "gpa_type",
-      "relation": "không_tính_vào"
+      "source": {
+        "name": "Điểm I",
+        "special_grade_code": "I",
+        "meaning": "Điểm chưa hoàn thiện do được phép hoãn thi, kiểm tra",
+        "gpa_impact_semester": "Không tính vào ĐTBCHK ở học kỳ đó",
+        "resolution_deadline": "Không quá 01 năm"
+      },
+      "target": {
+        "name": "ĐTBCHK (Điểm trung bình chung học kỳ)",
+        "gpa_type": "Học kỳ",
+        "calculation_rule_for_I": "Không tính điểm I",
+        "status_temporarily": "Chưa bị ảnh hưởng bởi điểm I"
+      },
+      "type_source": "grade_I_incomplete",
+      "type_target": "semester_gpa",
+      "relation": "không_được_tính_vào"
     },
     {
-      "source": "I",
-      "target": "hoãn thi, kiểm tra",
-      "type_source": "letter_grade",
-      "type_target": "postponement_reason",
-      "relation": "sử_dụng_khi"
+      "source": {
+        "name": "Sinh viên (xin điểm I)",
+        "requester_role": "Người học",
+        "action_required": "Làm đơn kèm hồ sơ minh chứng hợp lệ",
+        "reason_for_request": "Ốm đau, tai nạn (lý do bất khả kháng)"
+      },
+      "target": {
+        "name": "Giảng viên phụ trách học phần",
+        "role": "Người tiếp nhận và xem xét đơn",
+        "next_step": "Trình Trưởng Khoa/Bộ môn duyệt",
+        "authority_level": "Xem xét ban đầu"
+      },
+      "type_source": "student_requesting_grade_I",
+      "type_target": "course_lecturer",
+      "relation": "nộp_đơn_điểm_I_cho"
     },
     {
-      "source": "hoãn thi, kiểm tra",
-      "target": "lý do bất khả kháng",
-      "type_source": "postponement_reason",
-      "type_target": "reason_category",
-      "relation": "do"
+      "source": {
+        "name": "Giảng viên phụ trách học phần",
+        "action_after_review": "Trình duyệt đơn xin điểm I",
+        "recipient_of_submission": "Trưởng Khoa/Bộ môn",
+        "purpose_of_submission": "Xin phê duyệt chính thức"
+      },
+      "target": {
+        "name": "Trưởng Khoa/Bộ môn",
+        "role": "Người phê duyệt đơn xin điểm I",
+        "authority": "Duyệt hoặc từ chối",
+        "decision_basis": "Xem xét đơn và hồ sơ"
+      },
+      "type_source": "course_lecturer",
+      "type_target": "head_of_faculty_department",
+      "relation": "trình_đơn_điểm_I_lên"
     },
     {
-      "source": "lý do bất khả kháng",
-      "target": "ốm đau, tai nạn",
-      "type_source": "reason_category",
-      "type_target": "specific_reason",
-      "relation": "ví_dụ_như"
-    },
-    {
-      "source": "I",
-      "target": "giảng viên phụ trách học phần",
-      "type_source": "letter_grade",
+      "source": {
+        "name": "Thời hạn thay thế điểm I của học phần",
+        "setter_of_deadline": "Giảng viên quy định",
+        "maximum_duration": "Không quá 01 năm kể từ ngày thi lần trước",
+        "consequence_if_exceeded": "Bị điểm F nếu không hoàn thành"
+      },
+      "target": {
+        "name": "Giảng viên",
+        "role": "Người quy định thời hạn",
+        "responsibility": "Thông báo thời hạn cho sinh viên",
+        "discretion_limit": "Không quá 01 năm"
+      },
+      "type_source": "grade_I_replacement_period",
       "type_target": "lecturer",
-      "relation": "yêu_cầu_chấp_thuận_bởi"
-    },
-     {
-      "source": "I",
-      "target": "Trưởng Khoa/Bộ môn",
-      "type_source": "letter_grade",
-      "type_target": "position",
-      "relation": "yêu_cầu_trình_duyệt_bởi"
+      "relation": "do_quy_định_bởi"
     },
     {
-      "source": "I",
-      "target": "01 năm",
-      "type_source": "letter_grade",
-      "type_target": "duration",
-      "relation": "có_thời_hạn_thay_thế_tối_đa"
+      "source": {
+        "name": "Sinh viên (với điểm I)",
+        "condition_for_F": "Không hoàn thành học phần quá thời hạn thay thế điểm I",
+        "resulting_grade": "F",
+        "responsibility_to_complete": "Thuộc về sinh viên"
+      },
+      "target": {
+        "name": "Điểm F",
+        "letter_grade_value": "F",
+        "meaning": "Không đạt học phần",
+        "trigger_condition": "Quá hạn hoàn thành điểm I"
+      },
+      "type_source": "student_with_grade_I",
+      "type_target": "grade_F",
+      "relation": "sẽ_bị_điểm_nếu_không_hoàn_thành_học_phần_quá_thời_hạn_điểm_I"
     },
     {
-      "source": "I",
-      "target": "F",
-      "type_source": "letter_grade",
-      "type_target": "letter_grade",
-      "relation": "trở_thành_nếu_quá_hạn"
+      "source": {
+        "name": "Phòng Quản lý chất lượng",
+        "role": "Đơn vị tổ chức thi (cho điểm I)",
+        "collaboration_partner": "Khoa/Bộ môn",
+        "regulation_adherence": "Theo quy định"
+      },
+      "target": {
+        "name": "Khoa/Bộ môn",
+        "role_in_exam_I": "Phối hợp tổ chức thi",
+        "collaboration_with": "Phòng Quản lý chất lượng",
+        "target_student_group": "Sinh viên có điểm I"
+      },
+      "type_source": "quality_management_office",
+      "type_target": "faculty_or_department_unit",
+      "relation": "phối_hợp_với_để_tổ_chức_thi_điểm_I"
     },
     {
-      "source": "Phòng Quản lý chất lượng",
-      "target": "Khoa/Bộ môn",
-      "type_source": "organization_department",
-      "type_target": "department_faculty",
-      "relation": "phối_hợp_với"
+      "source": {
+        "name": "Điểm X",
+        "special_grade_code": "X",
+        "meaning": "Điểm chưa hoàn thiện do chưa đủ dữ liệu",
+        "gpa_impact": "Không được tính vào điểm trung bình học tập",
+        "resolution_status": "Cần được cập nhật khi có đủ dữ liệu"
+      },
+      "target": {
+        "name": "Điểm trung bình học tập (ĐTBCHK, ĐTBCTL)",
+        "calculation_rule_for_X": "Không tính điểm X",
+        "scope": "Cả ĐTBCHK và ĐTBCTL",
+        "status_temporarily": "Chưa bị ảnh hưởng bởi điểm X"
+      },
+      "type_source": "grade_X_incomplete_data",
+      "type_target": "academic_gpa",
+      "relation": "không_được_tính_vào"
     },
     {
-      "source": "Phòng Quản lý chất lượng",
-      "target": "sinh viên",
-      "type_source": "organization_department",
-      "type_target": "student",
-      "relation": "tổ_chức_thi_cho"
+      "source": {
+        "name": "Điểm R",
+        "special_grade_code": "R",
+        "meaning": "Dành cho học phần sinh viên được phép rút",
+        "gpa_impact": "Không tính vào ĐTBCHK và ĐTBCTL",
+        "regulation_reference": "Mục c, Khoản 5, Điều 9"
+      },
+      "target": {
+        "name": "Các học phần sinh viên được phép rút",
+        "student_action": "Rút học phần",
+        "condition": "Theo quy định tại Mục c, Khoản 5, Điều 9",
+        "grade_assigned": "R"
+      },
+      "type_source": "grade_R_withdrawn",
+      "type_target": "withdrawable_course",
+      "relation": "dành_cho"
     },
     {
-      "source": "X",
-      "target": "điểm trung bình học tập",
-      "type_source": "letter_grade",
-      "type_target": "gpa_type",
+      "source": {
+        "name": "Điểm R",
+        "special_grade_code": "R",
+        "impact_on_gpa": "Không tính",
+        "scope_of_no_impact": "ĐTBCHK và ĐTBCTL"
+      },
+      "target": {
+        "name": "ĐTBCHK (Điểm trung bình chung học kỳ)",
+        "gpa_type": "Học kỳ",
+        "calculation_rule_for_R": "Không tính điểm R",
+        "rationale": "Học phần đã được rút"
+      },
+      "type_source": "grade_R_withdrawn",
+      "type_target": "semester_gpa",
       "relation": "không_tính_vào"
     },
     {
-      "source": "R",
-      "target": "điểm trung bình học tập",
-      "type_source": "letter_grade",
-      "type_target": "gpa_type",
+      "source": {
+        "name": "Điểm R",
+        "special_grade_code": "R",
+        "impact_on_gpa": "Không tính",
+        "scope_of_no_impact": "ĐTBCHK và ĐTBCTL"
+      },
+      "target": {
+        "name": "ĐTBCTL (Điểm trung bình chung tích lũy)",
+        "gpa_type": "Tích lũy",
+        "calculation_rule_for_R": "Không tính điểm R",
+        "rationale": "Học phần đã được rút"
+      },
+      "type_source": "grade_R_withdrawn",
+      "type_target": "cumulative_gpa",
       "relation": "không_tính_vào"
     },
     {
-      "source": "R",
-      "target": "Mục c, Khoản 5, Điều 9",
-      "type_source": "letter_grade",
-      "type_target": "regulation_reference",
-      "relation": "quy_định_tại"
-    },
-     {
-      "source": "R",
-      "target": "ĐTBCHK",
-      "type_source": "letter_grade",
-      "type_target": "gpa_type",
-      "relation": "không_tính_vào"
-    },
-     {
-      "source": "R",
-      "target": "ĐTBCTL",
-      "type_source": "letter_grade",
-      "type_target": "gpa_type",
-      "relation": "không_tính_vào"
+      "source": {
+        "name": "Điểm M",
+        "special_grade_code": "M",
+        "meaning": "Điểm học phần được miễn học và công nhận tín chỉ",
+        "gpa_impact": "Không được tính vào ĐTBCHK và ĐTBCTL",
+        "purpose": "Xác nhận học phần được miễn"
+      },
+      "target": {
+        "name": "Học phần được miễn học và công nhận tín chỉ",
+        "status": "Miễn học, công nhận tín chỉ",
+        "grade_assigned": "M",
+        "student_benefit": "Không cần học lại học phần tương đương"
+      },
+      "type_source": "grade_M_exempted",
+      "type_target": "exempted_and_credited_course",
+      "relation": "là_điểm_cho"
     },
     {
-      "source": "M",
-      "target": "điểm trung bình học tập",
-      "type_source": "letter_grade",
-      "type_target": "gpa_type",
-      "relation": "không_tính_vào"
+      "source": {
+        "name": "Sinh viên (xin miễn học phần)",
+        "requester_role": "Người học",
+        "action_required": "Làm đơn kèm giấy tờ minh chứng hợp lệ",
+        "pre_approval_step": "Có ý kiến của Trưởng Khoa/Bộ môn"
+      },
+      "target": {
+        "name": "Trưởng Khoa/Bộ môn",
+        "role": "Người cho ý kiến vào đơn miễn học",
+        "part_of_process": "Thủ tục xin miễn học phần",
+        "input_for_rector": "Cơ sở để Hiệu trưởng xem xét"
+      },
+      "type_source": "student_requesting_exemption",
+      "type_target": "head_of_faculty_department",
+      "relation": "làm_đơn_xin_miễn_học_phần_có_ý_kiến_của"
     },
     {
-      "source": "M",
-      "target": "miễn học và công nhận tín chỉ",
-      "type_source": "letter_grade",
-      "type_target": "academic_action",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Đơn xin miễn học phần và công nhận tín chỉ",
+        "document_type": "Đơn đề nghị của sinh viên",
+        "submission_target": "Hiệu trưởng",
+        "requirement_before_submission": "Có ý kiến Trưởng Khoa/Bộ môn, kèm minh chứng"
+      },
+      "target": {
+        "name": "Hiệu trưởng",
+        "role": "Người chấp thuận cuối cùng",
+        "decision_authority": "Phê duyệt miễn học phần",
+        "timing_of_approval": "Trước khi học học phần đó"
+      },
+      "type_source": "course_exemption_application",
+      "type_target": "rector",
+      "relation": "trình_hiệu_trưởng_chấp_thuận"
     },
     {
-      "source": "miễn học và công nhận tín chỉ",
-      "target": "Trưởng Khoa/Bộ môn",
-      "type_source": "academic_action",
-      "type_target": "position",
-      "relation": "yêu_cầu_ý_kiến"
+      "source": {
+        "name": "Phòng Đào tạo",
+        "administrative_department": "Đơn vị quản lý đào tạo",
+        "role": "Lưu trữ điểm M",
+        "record_keeping_purpose": "Quản lý hồ sơ học tập của sinh viên"
+      },
+      "target": {
+        "name": "Điểm M",
+        "special_grade_code": "M",
+        "status_after_approval": "Được Phòng Đào tạo lưu trữ",
+        "nature": "Điểm xác nhận miễn học"
+      },
+      "type_source": "academic_affairs_office",
+      "type_target": "grade_M_exempted",
+      "relation": "lưu_trữ"
     },
     {
-      "source": "miễn học và công nhận tín chỉ",
-      "target": "Hiệu trưởng",
-      "type_source": "academic_action",
-      "type_target": "position",
-      "relation": "yêu_cầu_chấp_thuận_bởi"
+      "source": {
+        "name": "Điểm M",
+        "special_grade_code": "M",
+        "impact_on_gpa": "Không tính",
+        "scope_of_no_impact": "ĐTBCHK và ĐTBCTL"
+      },
+      "target": {
+        "name": "ĐTBCHK (Điểm trung bình chung học kỳ)",
+        "gpa_type": "Học kỳ",
+        "calculation_rule_for_M": "Không tính điểm M",
+        "rationale": "Học phần được miễn"
+      },
+      "type_source": "grade_M_exempted",
+      "type_target": "semester_gpa",
+      "relation": "không_được_tính_vào"
     },
     {
-      "source": "Phòng Đào tạo",
-      "target": "M",
-      "type_source": "organization_department",
-      "type_target": "letter_grade",
-      "relation": "lưu_trữ_điểm"
-    },
-     {
-      "source": "M",
-      "target": "ĐTBCHK",
-      "type_source": "letter_grade",
-      "type_target": "gpa_type",
-      "relation": "không_tính_vào"
-    },
-     {
-      "source": "M",
-      "target": "ĐTBCTL",
-      "type_source": "letter_grade",
-      "type_target": "gpa_type",
-      "relation": "không_tính_vào"
+      "source": {
+        "name": "Điểm M",
+        "special_grade_code": "M",
+        "impact_on_gpa": "Không tính",
+        "scope_of_no_impact": "ĐTBCHK và ĐTBCTL"
+      },
+      "target": {
+        "name": "ĐTBCTL (Điểm trung bình chung tích lũy)",
+        "gpa_type": "Tích lũy",
+        "calculation_rule_for_M": "Không tính điểm M",
+        "rationale": "Học phần được miễn"
+      },
+      "type_source": "grade_M_exempted",
+      "type_target": "cumulative_gpa",
+      "relation": "không_được_tính_vào"
     },
     {
-      "source": "Bảo lưu và chuyển điểm học phần",
-      "target": "sinh viên",
-      "type_source": "academic_action",
-      "type_target": "student",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Sinh viên (thuộc diện chuyển trường, chuyển ngành, etc.)",
+        "category": "Chuyển trường, chuyển ngành/chuyên ngành, chuyển hệ, VB2, liên thông, học 2 chương trình",
+        "consideration_for": "Bảo lưu và chuyển điểm học phần",
+        "condition_scale_10": "Điểm học phần ≥ 5,5"
+      },
+      "target": {
+        "name": "Điều kiện điểm học phần ≥ 5,5 (thang điểm 10)",
+        "grade_threshold": 5.5,
+        "scale_system": "Thang điểm 10",
+        "purpose": "Điều kiện để xem xét bảo lưu/chuyển điểm",
+        "applicability": "Sinh viên thuộc diện đặc biệt"
+      },
+      "type_source": "special_category_student_transfer",
+      "type_target": "grade_condition_5_5_scale_10",
+      "relation": "chỉ_được_xem_xét_bảo_lưu_chuyển_điểm_học_phần_khi_đạt"
     },
     {
-      "source": "Bảo lưu và chuyển điểm học phần",
-      "target": "5,5",
-      "type_source": "academic_action",
-      "type_target": "score_value",
-      "relation": "yêu_cầu_điểm_tối_thiểu"
+      "source": {
+        "name": "Sinh viên (thuộc diện chuyển trường, chuyển ngành, etc.)",
+        "category": "Chuyển trường, chuyển ngành/chuyên ngành, chuyển hệ, VB2, liên thông, học 2 chương trình",
+        "consideration_for": "Bảo lưu và chuyển điểm học phần",
+        "condition_scale_4": "Điểm học phần ≥ 2,0"
+      },
+      "target": {
+        "name": "Điều kiện điểm học phần ≥ 2,0 (thang điểm 4)",
+        "grade_threshold": 2.0,
+        "scale_system": "Thang điểm 4",
+        "purpose": "Điều kiện để xem xét bảo lưu/chuyển điểm",
+        "applicability": "Sinh viên thuộc diện đặc biệt"
+      },
+      "type_source": "special_category_student_transfer",
+      "type_target": "grade_condition_2_0_scale_4",
+      "relation": "chỉ_được_xem_xét_bảo_lưu_chuyển_điểm_học_phần_khi_đạt"
     },
     {
-      "source": "Bảo lưu và chuyển điểm học phần",
-      "target": "thang điểm 10",
-      "type_source": "academic_action",
-      "type_target": "grading_scale",
-      "relation": "theo_thang_điểm"
-    },
-     {
-      "source": "Bảo lưu và chuyển điểm học phần",
-      "target": "2,0",
-      "type_source": "academic_action",
-      "type_target": "grade_point_value",
-      "relation": "yêu_cầu_điểm_tối_thiểu"
-    },
-     {
-      "source": "Bảo lưu và chuyển điểm học phần",
-      "target": "thang điểm 4",
-      "type_source": "academic_action",
-      "type_target": "grading_scale",
-      "relation": "theo_thang_điểm"
-    },
-    {
-      "source": "Bảo lưu và chuyển điểm học phần",
-      "target": "1,5 lần thời gian tối đa đào tạo",
-      "type_source": "academic_action",
-      "type_target": "duration_limit",
-      "relation": "có_thời_hạn_không_quá"
+      "source": {
+        "name": "Thời hạn bảo lưu và chuyển điểm học phần",
+        "duration_limit": "Không quá 1,5 lần thời gian tối đa đào tạo",
+        "context": "Áp dụng cho việc bảo lưu và chuyển điểm",
+        "calculation_basis": "Thời gian tối đa đào tạo của ngành/chuyên ngành"
+      },
+      "target": {
+        "name": "Thời gian tối đa đào tạo của ngành/chuyên ngành",
+        "time_reference_type": "Chuẩn đào tạo tối đa",
+        "multiplier_for_limit": 1.5,
+        "unit_of_measure": "Thời gian (năm, học kỳ)"
+      },
+      "type_source": "grade_preservation_transfer_period_limit",
+      "type_target": "maximum_program_training_duration",
+      "relation": "không_quá_so_với"
     }
   ]
 }

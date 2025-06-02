@@ -1,436 +1,108 @@
 {
-  "entities": [
-    {
-      "name": "ĐIỀU 5",
-      "type": "article"
-    },
-    {
-      "name": "CÁ NHÂN",
-      "type": "category"
-    },
-    {
-      "name": "TẬP THỂ SINH VIÊN",
-      "type": "category"
-    },
-    {
-      "name": "SINH VIÊN",
-      "type": "category"
-    },
-    {
-      "name": "KHEN THƯỞNG",
-      "type": "process"
-    },
-    {
-      "name": "Olympic các môn học",
-      "type": "competition"
-    },
-    {
-      "name": "các cuộc thi sáng tạo kỹ thuật",
-      "type": "competition"
-    },
-    {
-      "name": "cuộc thi học thuật",
-      "type": "competition"
-    },
-    {
-      "name": "cuộc thi văn hóa",
-      "type": "competition"
-    },
-    {
-      "name": "cuộc thi văn nghệ",
-      "type": "competition"
-    },
-    {
-      "name": "cuộc thi thể thao",
-      "type": "competition"
-    },
-    {
-      "name": "hoạt động nghiên cứu khoa học",
-      "type": "activity"
-    },
-    {
-      "name": "công tác Đảng",
-      "type": "activity"
-    },
-    {
-      "name": "Đoàn thanh niên",
-      "type": "organization"
-    },
-    {
-      "name": "Hội sinh viên",
-      "type": "organization"
-    },
-    {
-      "name": "lớp",
-      "type": "group"
-    },
-    {
-      "name": "khoa",
-      "type": "organization_unit"
-    },
-    {
-      "name": "ký túc xá",
-      "type": "location"
-    },
-    {
-      "name": "hoạt động xã hội",
-      "type": "activity"
-    },
-    {
-      "name": "phong trào toàn dân bảo vệ an ninh tổ quốc",
-      "type": "movement"
-    },
-    {
-      "name": "an ninh tổ quốc",
-      "type": "concept"
-    },
-    {
-      "name": "an ninh, trật tự trường học",
-      "type": "concept"
-    },
-    {
-      "name": "tội phạm",
-      "type": "concept"
-    },
-    {
-      "name": "tệ nạn xã hội",
-      "type": "concept"
-    },
-    {
-      "name": "người bị nạn",
-      "type": "category"
-    },
-    {
-      "name": "tiêu cực",
-      "type": "concept"
-    },
-    {
-      "name": "tham nhũng",
-      "type": "concept"
-    }
-  ],
   "relationships": [
     {
-      "source": "ĐIỀU 5",
-      "target": "KHEN THƯỞNG",
-      "type_source": "article",
-      "type_target": "process",
-      "relation": "quy_định_về"
+      "source": {
+        "name": "Sinh viên",
+        "form": "Cá nhân, tập thể",
+        "status_achievement_basis": "Đạt thành tích",
+        "worthiness": "Xứng đáng để biểu dương, khen thưởng"
+      },
+      "target": {
+        "name": "Thành tích",
+        "achiever": "Sinh viên (cá nhân hoặc tập thể)",
+        "characteristic": "Xứng đáng để biểu dương, khen thưởng",
+        "context": "Thuộc các trường hợp được quy định"
+      },
+      "type_source": "student",
+      "type_target": "overall_achievement",
+      "relation": "đạt_được"
     },
     {
-      "source": "KHEN THƯỞNG",
-      "target": "CÁ NHÂN",
-      "type_source": "process",
-      "type_target": "category",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Thành tích",
+        "achiever": "Sinh viên (cá nhân hoặc tập thể)",
+        "characteristic": "Xứng đáng để biểu dương, khen thưởng",
+        "context": "Thuộc các trường hợp được quy định"
+      },
+      "target": {
+        "name": "Biểu dương, khen thưởng",
+        "scope": "Áp dụng cho sinh viên",
+        "purpose": "Ghi nhận thành tích",
+        "nature": "Hoạt động của nhà trường/tổ chức"
+      },
+      "type_source": "overall_achievement",
+      "type_target": "reward_activity",
+      "relation": "xứng_đáng_để"
     },
     {
-      "source": "KHEN THƯỞNG",
-      "target": "TẬP THỂ SINH VIÊN",
-      "type_source": "process",
-      "type_target": "category",
-      "relation": "áp_dụng_cho"
+      "source": {
+        "name": "Thành tích trong thi cử và nghiên cứu khoa học",
+        "component_competition": "Đoạt giải trong các cuộc thi Olympic các môn học, các cuộc thi sáng tạo kỹ thuật, học thuật, văn hóa, văn nghệ, thể thao",
+        "component_research": "Có thành tích trong hoạt động nghiên cứu khoa học",
+        "domain_areas": "Thi Olympic, sáng tạo kỹ thuật, học thuật, văn hóa, văn nghệ, thể thao, nghiên cứu khoa học"
+      },
+      "target": {
+        "name": "Thành tích",
+        "achiever": "Sinh viên (cá nhân hoặc tập thể)",
+        "characteristic": "Xứng đáng để biểu dương, khen thưởng",
+        "context": "Thuộc các trường hợp được quy định"
+      },
+      "type_source": "achievement_criteria",
+      "type_target": "overall_achievement",
+      "relation": "là_một_trường_hợp_của"
     },
     {
-      "source": "CÁ NHÂN",
-      "target": "Olympic các môn học",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
+      "source": {
+        "name": "Đóng góp có hiệu quả",
+        "contribution_to_organizations": "Công tác Đảng, Đoàn thanh niên, Hội sinh viên",
+        "contribution_to_internal_activities": "Các hoạt động trong lớp, khoa, ký túc xá",
+        "contribution_to_social_activities": "Các hoạt động xã hội khác",
+        "effectiveness_level": "Có hiệu quả"
+      },
+      "target": {
+        "name": "Thành tích",
+        "achiever": "Sinh viên (cá nhân hoặc tập thể)",
+        "characteristic": "Xứng đáng để biểu dương, khen thưởng",
+        "context": "Thuộc các trường hợp được quy định"
+      },
+      "type_source": "achievement_criteria",
+      "type_target": "overall_achievement",
+      "relation": "là_một_trường_hợp_của"
     },
     {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "Olympic các môn học",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
+      "source": {
+        "name": "Thành tích trong bảo vệ an ninh và đóng góp xã hội",
+        "homeland_security_movement": "Thực hiện phong trào toàn dân bảo vệ an ninh tổ quốc",
+        "school_security_order": "Bảo đảm an ninh, trật tự trường học",
+        "crime_social_evil_prevention": "Phòng chống tội phạm, tệ nạn xã hội",
+        "bravery_integrity_actions": "Dũng cảm cứu người bị nạn, chống tiêu cực, tham nhũng"
+      },
+      "target": {
+        "name": "Thành tích",
+        "achiever": "Sinh viên (cá nhân hoặc tập thể)",
+        "characteristic": "Xứng đáng để biểu dương, khen thưởng",
+        "context": "Thuộc các trường hợp được quy định"
+      },
+      "type_source": "achievement_criteria",
+      "type_target": "overall_achievement",
+      "relation": "là_một_trường_hợp_của"
     },
     {
-      "source": "CÁ NHÂN",
-      "target": "các cuộc thi sáng tạo kỹ thuật",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "các cuộc thi sáng tạo kỹ thuật",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
-    },
-        {
-      "source": "CÁ NHÂN",
-      "target": "cuộc thi học thuật",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "cuộc thi học thuật",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
-    },
-        {
-      "source": "CÁ NHÂN",
-      "target": "cuộc thi văn hóa",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "cuộc thi văn hóa",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
-    },
-        {
-      "source": "CÁ NHÂN",
-      "target": "cuộc thi văn nghệ",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "cuộc thi văn nghệ",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
-    },
-        {
-      "source": "CÁ NHÂN",
-      "target": "cuộc thi thể thao",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "cuộc thi thể thao",
-      "type_source": "category",
-      "type_target": "competition",
-      "relation": "đoạt_giải_trong"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "hoạt động nghiên cứu khoa học",
-      "type_source": "category",
-      "type_target": "activity",
-      "relation": "có_thành_tích_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "hoạt động nghiên cứu khoa học",
-      "type_source": "category",
-      "type_target": "activity",
-      "relation": "có_thành_tích_trong"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "công tác Đảng",
-      "type_source": "category",
-      "type_target": "activity",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "công tác Đảng",
-      "type_source": "category",
-      "type_target": "activity",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "Đoàn thanh niên",
-      "type_source": "category",
-      "type_target": "organization",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "Đoàn thanh niên",
-      "type_source": "category",
-      "type_target": "organization",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "Hội sinh viên",
-      "type_source": "category",
-      "type_target": "organization",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "Hội sinh viên",
-      "type_source": "category",
-      "type_target": "organization",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "lớp",
-      "type_source": "category",
-      "type_target": "group",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "lớp",
-      "type_source": "category",
-      "type_target": "group",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "khoa",
-      "type_source": "category",
-      "type_target": "organization_unit",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "khoa",
-      "type_source": "category",
-      "type_target": "organization_unit",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "ký túc xá",
-      "type_source": "category",
-      "type_target": "location",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "ký túc xá",
-      "type_source": "category",
-      "type_target": "location",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "hoạt động xã hội",
-      "type_source": "category",
-      "type_target": "activity",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "hoạt động xã hội",
-      "type_source": "category",
-      "type_target": "activity",
-      "relation": "đóng_góp_trong"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "phong trào toàn dân bảo vệ an ninh tổ quốc",
-      "type_source": "category",
-      "type_target": "movement",
-      "relation": "có_thành_tích_trong"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "phong trào toàn dân bảo vệ an ninh tổ quốc",
-      "type_source": "category",
-      "type_target": "movement",
-      "relation": "có_thành_tích_trong"
-    },
-    {
-      "source": "phong trào toàn dân bảo vệ an ninh tổ quốc",
-      "target": "an ninh tổ quốc",
-      "type_source": "movement",
-      "type_target": "concept",
-      "relation": "bảo_vệ"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "an ninh, trật tự trường học",
-      "type_source": "category",
-      "type_target": "concept",
-      "relation": "bảo_đảm"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "an ninh, trật tự trường học",
-      "type_source": "category",
-      "type_target": "concept",
-      "relation": "bảo_đảm"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "tội phạm",
-      "type_source": "category",
-      "type_target": "concept",
-      "relation": "chống"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "tội phạm",
-      "type_source": "category",
-      "type_target": "concept",
-      "relation": "chống"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "tệ nạn xã hội",
-      "type_source": "category",
-      "type_target": "concept",
-      "relation": "chống"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "tệ nạn xã hội",
-      "type_source": "category",
-      "type_target": "concept",
-      "relation": "chống"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "người bị nạn",
-      "type_source": "category",
-      "type_target": "category",
-      "relation": "cứu"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "người bị nạn",
-      "type_source": "category",
-      "type_target": "category",
-      "relation": "cứu"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "tiêu cực",
-      "type_source": "category",
-      "type_target": "concept",
-      "relation": "chống"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "tiêu cực",
-      "type_source": "category",
-      "type_target": "concept",
-      "relation": "chống"
-    },
-    {
-      "source": "CÁ NHÂN",
-      "target": "tham nhũng",
-      "type_source": "category",
-      "type_target": "concept",
-      "relation": "chống"
-    },
-    {
-      "source": "TẬP THỂ SINH VIÊN",
-      "target": "tham nhũng",
-      "type_source": "category",
-      "type_target": "concept",
-      "relation": "chống"
+      "source": {
+        "name": "Các thành tích đặc biệt khác",
+        "nature": "Đặc biệt",
+        "exclusivity": "Khác với các trường hợp đã nêu cụ thể",
+        "evaluation_basis": "Xét theo tính chất đặc biệt của thành tích"
+      },
+      "target": {
+        "name": "Thành tích",
+        "achiever": "Sinh viên (cá nhân hoặc tập thể)",
+        "characteristic": "Xứng đáng để biểu dương, khen thưởng",
+        "context": "Thuộc các trường hợp được quy định"
+      },
+      "type_source": "achievement_criteria",
+      "type_target": "overall_achievement",
+      "relation": "là_một_trường_hợp_của"
     }
   ]
 }

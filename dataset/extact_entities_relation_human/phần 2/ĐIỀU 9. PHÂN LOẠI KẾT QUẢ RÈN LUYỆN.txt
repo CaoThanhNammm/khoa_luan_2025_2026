@@ -1,232 +1,225 @@
 {
-  "entities": [
-    {
-      "name": "Kết quả rèn luyện",
-      "type": "result"
-    },
-    {
-      "name": "xuất sắc",
-      "type": "category"
-    },
-    {
-      "name": "tốt",
-      "type": "category"
-    },
-    {
-      "name": "khá",
-      "type": "category"
-    },
-    {
-      "name": "trung bình",
-      "type": "category"
-    },
-    {
-      "name": "yếu",
-      "type": "category"
-    },
-    {
-      "name": "kém",
-      "type": "category"
-    },
-    {
-      "name": "Phân loại kết quả rèn luyện",
-      "type": "classification"
-    },
-    {
-      "name": "90 điểm",
-      "type": "score"
-    },
-    {
-      "name": "100 điểm",
-      "type": "score"
-    },
-    {
-      "name": "loại xuất sắc",
-      "type": "category"
-    },
-    {
-      "name": "80 điểm",
-      "type": "score"
-    },
-    {
-      "name": "dưới 90 điểm",
-      "type": "score"
-    },
-    {
-      "name": "loại tốt",
-      "type": "category"
-    },
-    {
-      "name": "65 điểm",
-      "type": "score"
-    },
-    {
-      "name": "dưới 80 điểm",
-      "type": "score"
-    },
-    {
-      "name": "loại khá",
-      "type": "category"
-    },
-    {
-      "name": "50 điểm",
-      "type": "score"
-    },
-    {
-      "name": "dưới 65 điểm",
-      "type": "score"
-    },
-    {
-      "name": "loại trung bình",
-      "type": "category"
-    },
-    {
-      "name": "35 điểm",
-      "type": "score"
-    },
-    {
-      "name": "dưới 50 điểm",
-      "type": "score"
-    },
-    {
-      "name": "loại yếu",
-      "type": "category"
-    },
-    {
-      "name": "dưới 35 điểm",
-      "type": "score"
-    },
-    {
-      "name": "loại kém",
-      "type": "category"
-    }
-  ],
   "relationships": [
     {
-      "source": "Kết quả rèn luyện",
-      "target": "xuất sắc",
-      "type_source": "result",
-      "type_target": "category",
-      "relation": "được_phân_thành"
+      "source": {
+        "name": "Kết quả rèn luyện",
+        "entity_type": "training_outcome",
+        "description": "kết quả đánh giá quá trình rèn luyện",
+        "classification_system_description": "được phân thành các loại cụ thể dựa trên điểm số"
+      },
+      "target": {
+        "name": "Xuất sắc",
+        "entity_type": "classification_level",
+        "level_description": "mức phân loại cao nhất",
+        "part_of_system": "phân loại kết quả rèn luyện"
+      },
+      "type_source": "training_outcome",
+      "type_target": "classification_level",
+      "relation": "được_phân_thành_loại"
     },
     {
-      "source": "Kết quả rèn luyện",
-      "target": "tốt",
-      "type_source": "result",
-      "type_target": "category",
-      "relation": "được_phân_thành"
+      "source": {
+        "name": "Kết quả rèn luyện",
+        "entity_type": "training_outcome",
+        "description": "kết quả đánh giá quá trình rèn luyện",
+        "classification_system_description": "được phân thành các loại cụ thể dựa trên điểm số"
+      },
+      "target": {
+        "name": "Tốt",
+        "entity_type": "classification_level",
+        "level_description": "mức phân loại cao",
+        "part_of_system": "phân loại kết quả rèn luyện"
+      },
+      "type_source": "training_outcome",
+      "type_target": "classification_level",
+      "relation": "được_phân_thành_loại"
     },
     {
-      "source": "Kết quả rèn luyện",
-      "target": "khá",
-      "type_source": "result",
-      "type_target": "category",
-      "relation": "được_phân_thành"
+      "source": {
+        "name": "Kết quả rèn luyện",
+        "entity_type": "training_outcome",
+        "description": "kết quả đánh giá quá trình rèn luyện",
+        "classification_system_description": "được phân thành các loại cụ thể dựa trên điểm số"
+      },
+      "target": {
+        "name": "Khá",
+        "entity_type": "classification_level",
+        "level_description": "mức phân loại trên trung bình",
+        "part_of_system": "phân loại kết quả rèn luyện"
+      },
+      "type_source": "training_outcome",
+      "type_target": "classification_level",
+      "relation": "được_phân_thành_loại"
     },
     {
-      "source": "Kết quả rèn luyện",
-      "target": "trung bình",
-      "type_source": "result",
-      "type_target": "category",
-      "relation": "được_phân_thành"
+      "source": {
+        "name": "Kết quả rèn luyện",
+        "entity_type": "training_outcome",
+        "description": "kết quả đánh giá quá trình rèn luyện",
+        "classification_system_description": "được phân thành các loại cụ thể dựa trên điểm số"
+      },
+      "target": {
+        "name": "Trung bình",
+        "entity_type": "classification_level",
+        "level_description": "mức phân loại đạt yêu cầu cơ bản",
+        "part_of_system": "phân loại kết quả rèn luyện"
+      },
+      "type_source": "training_outcome",
+      "type_target": "classification_level",
+      "relation": "được_phân_thành_loại"
     },
     {
-      "source": "Kết quả rèn luyện",
-      "target": "yếu",
-      "type_source": "result",
-      "type_target": "category",
-      "relation": "được_phân_thành"
+      "source": {
+        "name": "Kết quả rèn luyện",
+        "entity_type": "training_outcome",
+        "description": "kết quả đánh giá quá trình rèn luyện",
+        "classification_system_description": "được phân thành các loại cụ thể dựa trên điểm số"
+      },
+      "target": {
+        "name": "Yếu",
+        "entity_type": "classification_level",
+        "level_description": "mức phân loại dưới trung bình",
+        "part_of_system": "phân loại kết quả rèn luyện"
+      },
+      "type_source": "training_outcome",
+      "type_target": "classification_level",
+      "relation": "được_phân_thành_loại"
     },
     {
-      "source": "Kết quả rèn luyện",
-      "target": "kém",
-      "type_source": "result",
-      "type_target": "category",
-      "relation": "được_phân_thành"
+      "source": {
+        "name": "Kết quả rèn luyện",
+        "entity_type": "training_outcome",
+        "description": "kết quả đánh giá quá trình rèn luyện",
+        "classification_system_description": "được phân thành các loại cụ thể dựa trên điểm số"
+      },
+      "target": {
+        "name": "Kém",
+        "entity_type": "classification_level",
+        "level_description": "mức phân loại thấp nhất",
+        "part_of_system": "phân loại kết quả rèn luyện"
+      },
+      "type_source": "training_outcome",
+      "type_target": "classification_level",
+      "relation": "được_phân_thành_loại"
     },
     {
-      "source": "Kết quả rèn luyện",
-      "target": "Phân loại kết quả rèn luyện",
-      "type_source": "result",
-      "type_target": "classification",
-      "relation": "có"
+      "source": {
+        "name": "Từ 90 đến 100 điểm",
+        "entity_type": "score_range",
+        "lower_limit_value": "90",
+        "upper_limit_value": "100",
+        "lower_limit_type": "bao_gồm",
+        "upper_limit_type": "bao_gồm",
+        "unit": "điểm"
+      },
+      "target": {
+        "name": "Xuất sắc",
+        "entity_type": "classification_level",
+        "score_criteria_description": "yêu cầu điểm từ 90 đến 100",
+        "meaning": "kết quả rèn luyện ở mức độ cao nhất"
+      },
+      "type_source": "score_range",
+      "type_target": "classification_level",
+      "relation": "tương_ứng_với_loại"
     },
     {
-      "source": "90 điểm",
-      "target": "100 điểm",
-      "type_source": "score",
-      "type_target": "score",
-      "relation": "từ_đến"
+      "source": {
+        "name": "Từ 80 đến dưới 90 điểm",
+        "entity_type": "score_range",
+        "lower_limit_value": "80",
+        "upper_limit_value": "90",
+        "lower_limit_type": "bao_gồm",
+        "upper_limit_type": "không_bao_gồm",
+        "unit": "điểm"
+      },
+      "target": {
+        "name": "Tốt",
+        "entity_type": "classification_level",
+        "score_criteria_description": "yêu cầu điểm từ 80 đến dưới 90",
+        "meaning": "kết quả rèn luyện ở mức độ cao"
+      },
+      "type_source": "score_range",
+      "type_target": "classification_level",
+      "relation": "tương_ứng_với_loại"
     },
     {
-      "source": "90 điểm",
-      "target": "loại xuất sắc",
-      "type_source": "score",
-      "type_target": "category",
-      "relation": "là"
+      "source": {
+        "name": "Từ 65 đến dưới 80 điểm",
+        "entity_type": "score_range",
+        "lower_limit_value": "65",
+        "upper_limit_value": "80",
+        "lower_limit_type": "bao_gồm",
+        "upper_limit_type": "không_bao_gồm",
+        "unit": "điểm"
+      },
+      "target": {
+        "name": "Khá",
+        "entity_type": "classification_level",
+        "score_criteria_description": "yêu cầu điểm từ 65 đến dưới 80",
+        "meaning": "kết quả rèn luyện ở mức độ trên trung bình"
+      },
+      "type_source": "score_range",
+      "type_target": "classification_level",
+      "relation": "tương_ứng_với_loại"
     },
     {
-      "source": "80 điểm",
-      "target": "dưới 90 điểm",
-      "type_source": "score",
-      "type_target": "score",
-      "relation": "từ_đến"
+      "source": {
+        "name": "Từ 50 đến dưới 65 điểm",
+        "entity_type": "score_range",
+        "lower_limit_value": "50",
+        "upper_limit_value": "65",
+        "lower_limit_type": "bao_gồm",
+        "upper_limit_type": "không_bao_gồm",
+        "unit": "điểm"
+      },
+      "target": {
+        "name": "Trung bình",
+        "entity_type": "classification_level",
+        "score_criteria_description": "yêu cầu điểm từ 50 đến dưới 65",
+        "meaning": "kết quả rèn luyện ở mức độ đạt yêu cầu"
+      },
+      "type_source": "score_range",
+      "type_target": "classification_level",
+      "relation": "tương_ứng_với_loại"
     },
     {
-      "source": "80 điểm",
-      "target": "loại tốt",
-      "type_source": "score",
-      "type_target": "category",
-      "relation": "là"
+      "source": {
+        "name": "Từ 35 đến dưới 50 điểm",
+        "entity_type": "score_range",
+        "lower_limit_value": "35",
+        "upper_limit_value": "50",
+        "lower_limit_type": "bao_gồm",
+        "upper_limit_type": "không_bao_gồm",
+        "unit": "điểm"
+      },
+      "target": {
+        "name": "Yếu",
+        "entity_type": "classification_level",
+        "score_criteria_description": "yêu cầu điểm từ 35 đến dưới 50",
+        "meaning": "kết quả rèn luyện ở mức độ dưới trung bình"
+      },
+      "type_source": "score_range",
+      "type_target": "classification_level",
+      "relation": "tương_ứng_với_loại"
     },
     {
-      "source": "65 điểm",
-      "target": "dưới 80 điểm",
-      "type_source": "score",
-      "type_target": "score",
-      "relation": "từ_đến"
-    },
-    {
-      "source": "65 điểm",
-      "target": "loại khá",
-      "type_source": "score",
-      "type_target": "category",
-      "relation": "là"
-    },
-    {
-      "source": "50 điểm",
-      "target": "dưới 65 điểm",
-      "type_source": "score",
-      "type_target": "score",
-      "relation": "từ_đến"
-    },
-    {
-      "source": "50 điểm",
-      "target": "loại trung bình",
-      "type_source": "score",
-      "type_target": "category",
-      "relation": "là"
-    },
-    {
-      "source": "35 điểm",
-      "target": "dưới 50 điểm",
-      "type_source": "score",
-      "type_target": "score",
-      "relation": "từ_đến"
-    },
-    {
-      "source": "35 điểm",
-      "target": "loại yếu",
-      "type_source": "score",
-      "type_target": "category",
-      "relation": "là"
-    },
-    {
-      "source": "dưới 35 điểm",
-      "target": "loại kém",
-      "type_source": "score",
-      "type_target": "category",
-      "relation": "là"
+      "source": {
+        "name": "Dưới 35 điểm",
+        "entity_type": "score_range",
+        "upper_limit_value": "35",
+        "upper_limit_type": "không_bao_gồm",
+        "unit": "điểm",
+        "description": "điểm số thấp hơn 35"
+      },
+      "target": {
+        "name": "Kém",
+        "entity_type": "classification_level",
+        "score_criteria_description": "yêu cầu điểm dưới 35",
+        "meaning": "kết quả rèn luyện ở mức độ thấp nhất, không đạt yêu cầu"
+      },
+      "type_source": "score_range",
+      "type_target": "classification_level",
+      "relation": "tương_ứng_với_loại"
     }
   ]
 }

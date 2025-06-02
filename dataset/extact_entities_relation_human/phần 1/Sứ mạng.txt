@@ -1,157 +1,64 @@
 {
-  "entities": [
-    {
-      "name": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "type": "organization"
-    },
-    {
-      "name": "Việt Nam",
-      "type": "location"
-    },
-    {
-      "name": "trường đại học đa ngành",
-      "type": "type_of_organization"
-    },
-    {
-      "name": "nguồn nhân lực",
-      "type": "concept"
-    },
-    {
-      "name": "chuyên môn",
-      "type": "concept"
-    },
-    {
-      "name": "tư duy sáng tạo",
-      "type": "concept"
-    },
-    {
-      "name": "nghiên cứu",
-      "type": "activity"
-    },
-    {
-      "name": "phát triển",
-      "type": "activity"
-    },
-    {
-      "name": "phổ biến",
-      "type": "activity"
-    },
-    {
-      "name": "chuyển giao tri thức",
-      "type": "activity"
-    },
-    {
-      "name": "công nghệ",
-      "type": "concept"
-    },
-    {
-      "name": "phát triển bền vững",
-      "type": "concept"
-    },
-    {
-      "name": "kinh tế - xã hội",
-      "type": "concept"
-    },
-    {
-      "name": "Việt Nam",
-      "type": "location"
-    },
-    {
-      "name": "khu vực",
-      "type": "location"
-    }
-  ],
   "relationships": [
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "Việt Nam",
-      "relation": "PHỤC_VỤ",
+      "source": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "institution_type": "trường đại học đa ngành",
+        "primary_activity": "đào tạo nguồn nhân lực"
+      },
+      "target": {
+        "name": "Nguồn nhân lực",
+        "desired_quality_1": "chuyên môn tốt",
+        "desired_quality_2": "tư duy sáng tạo"
+      },
       "type_source": "organization",
-      "type_target": "location"
+      "type_target": "group_of_people",
+      "relation": "đào_tạo"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "trường đại học đa ngành",
-      "relation": "LÀ",
+      "source": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "institution_type": "trường đại học đa ngành",
+        "mission_focus": "nghiên cứu, phát triển, phổ biến, chuyển giao"
+      },
+      "target": {
+        "name": "Tri thức - công nghệ",
+        "scope": "tri thức và công nghệ",
+        "process_context": "nghiên cứu, phát triển, phổ biến, chuyển giao"
+      },
       "type_source": "organization",
-      "type_target": "type_of_organization"
+      "type_target": "concept",
+      "relation": "phát_triển_và_chuyển_giao"
     },
     {
-      "source": "Trường Đại học Nông Lâm Tp. Hồ Chí Minh",
-      "target": "nguồn nhân lực",
-      "relation": "ĐÀO_TẠO",
+      "source": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "institution_type": "trường đại học đa ngành",
+        "societal_goal_contribution": "đáp ứng nhu cầu phát triển bền vững kinh tế - xã hội"
+      },
+      "target": {
+        "name": "Việt Nam",
+        "entity_classification": "quốc gia",
+        "specific_need": "phát triển bền vững kinh tế - xã hội"
+      },
       "type_source": "organization",
-      "type_target": "concept"
+      "type_target": "location",
+      "relation": "đáp_ứng_nhu_cầu_phát_triển_cho"
     },
     {
-      "source": "nguồn nhân lực",
-      "target": "chuyên môn",
-      "relation": "CÓ",
-      "type_source": "concept",
-      "type_target": "concept"
-    },
-    {
-      "source": "nguồn nhân lực",
-      "target": "tư duy sáng tạo",
-      "relation": "CÓ",
-      "type_source": "concept",
-      "type_target": "concept"
-    },
-    {
-      "source": "nghiên cứu",
-      "target": "phát triển",
-      "relation": "VÀ",
-      "type_source": "activity",
-      "type_target": "activity"
-    },
-    {
-      "source": "nghiên cứu",
-      "target": "phổ biến",
-      "relation": "VÀ",
-      "type_source": "activity",
-      "type_target": "activity"
-    },
-    {
-      "source": "nghiên cứu",
-      "target": "chuyển giao tri thức",
-      "relation": "VÀ",
-      "type_source": "activity",
-      "type_target": "activity"
-    },
-    {
-      "source": "chuyển giao tri thức",
-      "target": "công nghệ",
-      "relation": "VÀ",
-      "type_source": "activity",
-      "type_target": "concept"
-    },
-    {
-      "source": "nghiên cứu",
-      "target": "phát triển bền vững",
-      "relation": "ĐÁP_ỨNG",
-      "type_source": "activity",
-      "type_target": "concept"
-    },
-    {
-      "source": "phát triển bền vững",
-      "target": "kinh tế - xã hội",
-      "relation": "CỦA",
-      "type_source": "concept",
-      "type_target": "concept"
-    },
-    {
-      "source": "kinh tế - xã hội",
-      "target": "Việt Nam",
-      "relation": "CỦA",
-      "type_source": "concept",
-      "type_target": "location"
-    },
-    {
-      "source": "kinh tế - xã hội",
-      "target": "khu vực",
-      "relation": "CỦA",
-      "type_source": "concept",
-      "type_target": "location"
+      "source": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "institution_type": "trường đại học đa ngành",
+        "societal_goal_contribution": "đáp ứng nhu cầu phát triển bền vững kinh tế - xã hội"
+      },
+      "target": {
+        "name": "Khu vực",
+        "entity_classification": "khu vực địa lý",
+        "specific_need": "phát triển bền vững kinh tế - xã hội"
+      },
+      "type_source": "organization",
+      "type_target": "location",
+      "relation": "đáp_ứng_nhu_cầu_phát_triển_cho"
     }
   ]
 }

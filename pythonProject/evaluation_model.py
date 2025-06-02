@@ -1,13 +1,13 @@
-import json
 import time
-import pandas as pd
-from sklearn.metrics.pairwise import cosine_similarity
-from scipy.stats import spearmanr
 from scipy.stats import rankdata
 import os
 import numpy as np
 from dotenv import load_dotenv
-from LLM.Gemini import Gemini
+from ModelLLM.EmbeddingFactory import EmbeddingFactory
+from sklearn.metrics.pairwise import cosine_similarity
+
+from PreProcessing.PreProcessing import PreProcessing
+
 load_dotenv()
 
 def generate_answer(model, question):
@@ -30,17 +30,25 @@ def mrr(y_true, y_pred):
     except ValueError:
         return 0
 
-# Tính cosine similarity
-def cosine_similarity(vector1, vector2):
-    # Tính tích vô hướng
-    dot_product = np.dot(vector1, vector2)
-    # Tính độ dài (norm) của từng vector
-    norm1 = np.linalg.norm(vector1)
-    norm2 = np.linalg.norm(vector2)
-    # Tính cosine similarity
-    if norm1 == 0 or norm2 == 0:
-        return 0.0  # Tránh chia cho 0
-    return dot_product / (norm1 * norm2)
+# def cosine_similarity(vec1, vec2):
+#     vec1 = np.array(vec1)
+#     vec2 = np.array(vec2)
+#
+#     # Kiểm tra độ dài hai vector
+#     if vec1.shape != vec2.shape:
+#         raise ValueError("Hai vector phải có cùng kích thước")
+#
+#     # Tính cosine similarity
+#     dot_product = np.dot(vec1, vec2)
+#     norm1 = np.linalg.norm(vec1)
+#     norm2 = np.linalg.norm(vec2)
+#
+#     if norm1 == 0 or norm2 == 0:
+#         return 0.0
+#
+#     similarity = dot_product / (norm1 * norm2)
+#     return similarity
+
 
 # Tính Spearman cosine similarity
 def spearman_cosine(vector1, vector2):
@@ -110,9 +118,9 @@ def evaluate_model(model, data, top_k=20):
 # details: Nói về chi tiết hơn bệnh/dị tật
 # """
 #
-api_key = os.getenv("API_KEY")
-model_name = os.getenv("MODEL")
-gemini = Gemini(model_name, api_key)
+# api_key = os.getenv("API_KEY")
+# model_name = os.getenv("MODEL")
+# gemini = Gemini(model_name, api_key)
 #
 # # dataset = pd.read_csv('dataset/prime/prime_auto_qa.csv')
 # #
@@ -157,24 +165,66 @@ gemini = Gemini(model_name, api_key)
 # print(f'spearman_score: {spearman_score/len(answer_truth)}')
 
 # ----------------------------------------------------------------------------------------
-truth = pd.read_csv('qa_human_hybrid.csv')
-predict = pd.read_csv('my_qa_hybrid_grag.csv')
 
-embeds_truth = truth.answer
-embeds_predict = predict.answer
-similarity_score = 0
-spearman_score = 0
 
-for i in range(len(embeds_truth)):
-    print(i)
-    encode_truth = gemini.encode(embeds_truth[i])
-    encode_predict = gemini.encode(embeds_predict[i])
+# 1. sử dụng factory để khởi tạo các clas model embed
+model_embed_1024_name = os.getenv("MODEL_EMBEDDING_1024")
+model_embed_768_name = os.getenv("MODEL_EMBEDDING_768")
+model_embed_512_name = os.getenv("MODEL_EMBEDDING_512")
+model_late_interaction_name = os.getenv("MODEL_LATE_INTERACTION")
 
-    similarity_score += cosine_similarity(encode_truth, encode_predict)
-    spearman_score += spearman_cosine(encode_truth, encode_predict)
+factory = EmbeddingFactory()
+model_1024 = factory.create_embed_model(model_embed_1024_name)
+model_768 = factory.create_embed_model(model_embed_768_name)
+model_512 = factory.create_embed_model(model_embed_512_name)
 
-print(f'similarity_score: {similarity_score/len(embeds_truth)}')
-print(f'spearman_score: {spearman_score/len(embeds_truth)}')
+model_embed_1024, tokenizer_1024 = model_1024.load_model()
+model_embed_768, tokenizer_768 = model_768.load_model()
+model_embed_512 = model_512.load_model()
+
+answer_truth = "Trường trực thuộc Bộ Giáo dục và Đào tạo."
+answer_predict = "không có thông tin"
+pre_processing = PreProcessing()
+
+answer_truth = pre_processing.text_preprocessing_vietnamese(answer_truth)
+answer_predict= pre_processing.text_preprocessing_vietnamese(answer_predict)
+
+embed_truth = model_768.embed(model_embed_768, tokenizer_768, answer_truth)
+embed_predict = model_768.embed(model_embed_768, tokenizer_768, answer_predict)
+
+
+# similarity_score = cosine_similarity(embed_truth, embed_predict)
+spearman_score = spearman_cosine(embed_truth, embed_predict)
+# print(similarity_score)
+print(spearman_score)
+print(cosine_similarity(embed_truth.reshape(1, -1), embed_predict))
+
+# truth = pd.read_csv('qa_human_hybrid.csv')
+# predict = pd.read_csv('my_qa_hybrid_grag.csv')
+#
+# embeds_truth = truth.answer
+# embeds_predict = predict.answer
+# similarity_score = 0
+# spearman_score = 0
+#
+# for i in range(len(embeds_truth)):
+#     print(i)
+#     encode_truth = gemini.encode(embeds_truth[i])
+#     encode_predict = gemini.encode(embeds_predict[i])
+#
+#     similarity_score += cosine_similarity(encode_truth, encode_predict)
+#     spearman_score += spearman_cosine(encode_truth, encode_predict)
+#
+# print(f'similarity_score: {similarity_score/len(embeds_truth)}')
+# print(f'spearman_score: {spearman_score/len(embeds_truth)}')
+
+
+
+
+
+
+
+
 
 
 

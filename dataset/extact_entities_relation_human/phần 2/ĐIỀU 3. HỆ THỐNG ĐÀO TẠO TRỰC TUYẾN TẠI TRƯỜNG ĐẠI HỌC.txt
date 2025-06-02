@@ -1,316 +1,746 @@
 {
-  "entities": [
-    {
-      "name": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "e-Learning – NLU",
-      "type": "SYSTEM"
-    },
-    {
-      "name": "cổng đào tạo trực tuyến",
-      "type": "SYSTEM_COMPONENT"
-    },
-    {
-      "name": "hệ thống quản lý học tập",
-      "type": "SYSTEM_COMPONENT"
-    },
-    {
-      "name": "học liệu điện tử",
-      "type": "RESOURCE"
-    },
-    {
-      "name": "diễn đàn trao đổi",
-      "type": "INTERACTION_METHOD"
-    },
-    {
-      "name": "thảo luận trực tuyến",
-      "type": "INTERACTION_METHOD"
-    },
-    {
-      "name": "hệ thống kiểm tra",
-      "type": "SYSTEM_COMPONENT"
-    },
-    {
-      "name": "đánh giá sinh viên",
-      "type": "ACTIVITY"
-    },
-    {
-      "name": "giảng viên",
-      "type": "PERSON"
-    },
-    {
-      "name": "quản trị hệ thống",
-      "type": "PERSON"
-    },
-    {
-      "name": "Edmodo",
-      "type": "PLATFORM"
-    },
-    {
-      "name": "Zoom",
-      "type": "PLATFORM"
-    },
-    {
-      "name": "Google meet",
-      "type": "PLATFORM"
-    },
-    {
-      "name": "Microsoft team",
-      "type": "PLATFORM"
-    },
-    {
-      "name": "Skype",
-      "type": "PLATFORM"
-    },
-    {
-      "name": "máy tính",
-      "type": "DEVICE"
-    },
-    {
-      "name": "mạng",
-      "type": "INFRASTRUCTURE"
-    },
-    {
-      "name": "thiết bị di động thông minh",
-      "type": "DEVICE"
-    },
-    {
-      "name": "sinh viên",
-      "type": "PERSON"
-    }
-  ],
   "relationships": [
     {
-      "source": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
-      "target": "e-Learning – NLU",
-      "type_source": "ORGANIZATION",
-      "type_target": "SYSTEM",
-      "relation": "có_hệ_thống"
+      "source": {
+        "name": "Trường Đại học Nông Lâm TP.HCM",
+        "type": "organization",
+        "abbreviation": "NLU",
+        "location": "Thành phố Hồ Chí Minh",
+        "activity_focus": "Giảng dạy và đào tạo"
+      },
+      "target": {
+        "name": "Mô hình kết hợp giảng dạy online – offline",
+        "type": "teaching_model",
+        "description": "Kết hợp giảng dạy trực tuyến và trực tiếp",
+        "online_teaching_ratio_note": "Tỷ lệ dạy online không vượt quá 30% số giờ tín chỉ"
+      },
+      "type_source": "organization",
+      "type_target": "teaching_model",
+      "relation": "áp_dụng"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "cổng đào tạo trực tuyến",
-      "type_source": "SYSTEM",
-      "type_target": "SYSTEM_COMPONENT",
-      "relation": "bao_gồm"
+      "source": {
+        "name": "Mô hình kết hợp giảng dạy online – offline",
+        "type": "teaching_model",
+        "description": "Kết hợp giảng dạy trực tuyến và trực tiếp",
+        "applied_by": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Giảng dạy online",
+        "type": "online_teaching_method",
+        "ratio_limit_source": "Chương trình đào tạo",
+        "max_ratio_percentage": "30%"
+      },
+      "type_source": "teaching_model",
+      "type_target": "online_teaching_method",
+      "relation": "có_thành_phần"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "hệ thống quản lý học tập",
-      "type_source": "SYSTEM",
-      "type_target": "SYSTEM_COMPONENT",
-      "relation": "bao_gồm"
+      "source": {
+        "name": "Giảng dạy online",
+        "type": "online_teaching_method",
+        "context": "Trong mô hình kết hợp tại Trường ĐH Nông Lâm TP.HCM",
+        "measurement_unit": "Số giờ tín chỉ của chương trình đào tạo"
+      },
+      "target": {
+        "name": "30% số giờ tín chỉ của chương trình đào tạo",
+        "type": "percentage_limit",
+        "value": "30%",
+        "basis": "Số giờ tín chỉ của chương trình đào tạo",
+        "application_context": "Giới hạn tỷ lệ dạy online"
+      },
+      "type_source": "online_teaching_method",
+      "type_target": "percentage_limit",
+      "relation": "có_tỷ_lệ_không_vượt_quá"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "học liệu điện tử",
-      "type_source": "SYSTEM",
-      "type_target": "RESOURCE",
-      "relation": "bao_gồm"
+      "source": {
+        "name": "Hiệu trưởng",
+        "type": "person_role",
+        "affiliation": "Trường Đại học Nông Lâm TP.HCM (ngụ ý)",
+        "authority": "Ban hành văn bản chỉ đạo",
+        "condition_for_action": "Dịch bệnh, thiên tai, các trường hợp đặc biệt khác"
+      },
+      "target": {
+        "name": "Văn bản chỉ đạo riêng",
+        "type": "directive_document",
+        "issuer": "Hiệu trưởng",
+        "compliance_requirement1": "Phù hợp các quy định hiện hành",
+        "compliance_requirement2": "Phù hợp tình hình thực tiễn"
+      },
+      "type_source": "person_role",
+      "type_target": "directive_document",
+      "relation": "ban_hành"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "diễn đàn trao đổi",
-      "type_source": "SYSTEM",
-      "type_target": "INTERACTION_METHOD",
-      "relation": "bao_gồm"
+      "source": {
+        "name": "Văn bản chỉ đạo riêng",
+        "type": "directive_document",
+        "issuer": "Hiệu trưởng",
+        "purpose": "Chỉ đạo trong trường hợp đặc biệt"
+      },
+      "target": {
+        "name": "Dịch bệnh",
+        "type": "crisis_event",
+        "category": "Trường hợp đặc biệt",
+        "consequence": "Yêu cầu chỉ đạo riêng của Hiệu trưởng"
+      },
+      "type_source": "directive_document",
+      "type_target": "crisis_event",
+      "relation": "được_ban_hành_cho_tình_huống"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "thảo luận trực tuyến",
-      "type_source": "SYSTEM",
-      "type_target": "INTERACTION_METHOD",
-      "relation": "bao_gồm"
+      "source": {
+        "name": "Văn bản chỉ đạo riêng",
+        "type": "directive_document",
+        "issuer": "Hiệu trưởng",
+        "purpose": "Chỉ đạo trong trường hợp đặc biệt"
+      },
+      "target": {
+        "name": "Thiên tai",
+        "type": "crisis_event",
+        "category": "Trường hợp đặc biệt",
+        "consequence": "Yêu cầu chỉ đạo riêng của Hiệu trưởng"
+      },
+      "type_source": "directive_document",
+      "type_target": "crisis_event",
+      "relation": "được_ban_hành_cho_tình_huống"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "hệ thống kiểm tra",
-      "type_source": "SYSTEM",
-      "type_target": "SYSTEM_COMPONENT",
-      "relation": "bao_gồm"
+      "source": {
+        "name": "Văn bản chỉ đạo riêng",
+        "type": "directive_document",
+        "issuer": "Hiệu trưởng",
+        "purpose": "Chỉ đạo trong trường hợp đặc biệt"
+      },
+      "target": {
+        "name": "Các trường hợp đặc biệt khác",
+        "type": "crisis_event_category",
+        "description": "Các tình huống đặc biệt không xác định cụ thể",
+        "consequence": "Yêu cầu chỉ đạo riêng của Hiệu trưởng"
+      },
+      "type_source": "directive_document",
+      "type_target": "crisis_event_category",
+      "relation": "được_ban_hành_cho_tình_huống"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "đánh giá sinh viên",
-      "type_source": "SYSTEM",
-      "type_target": "ACTIVITY",
+      "source": {
+        "name": "Văn bản chỉ đạo riêng",
+        "type": "directive_document",
+        "issuer": "Hiệu trưởng",
+        "context": "Chỉ đạo trong các trường hợp đặc biệt"
+      },
+      "target": {
+        "name": "Quy định hiện hành",
+        "type": "regulation",
+        "scope": "Áp dụng chung",
+        "importance": "Cần tuân thủ khi ban hành chỉ đạo"
+      },
+      "type_source": "directive_document",
+      "type_target": "regulation",
+      "relation": "phải_phù_hợp_với"
+    },
+    {
+      "source": {
+        "name": "Văn bản chỉ đạo riêng",
+        "type": "directive_document",
+        "issuer": "Hiệu trưởng",
+        "context": "Chỉ đạo trong các trường hợp đặc biệt"
+      },
+      "target": {
+        "name": "Tình hình thực tiễn",
+        "type": "real_world_situation",
+        "nature": "Điều kiện thực tế tại thời điểm",
+        "importance": "Cần xem xét khi ban hành chỉ đạo"
+      },
+      "type_source": "directive_document",
+      "type_target": "real_world_situation",
+      "relation": "phải_phù_hợp_với"
+    },
+    {
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "development_platform": "Edmodo",
+        "purpose1": "Nâng cao chất lượng đào tạo",
+        "purpose2": "Nâng cao quản lý giáo dục"
+      },
+      "target": {
+        "name": "Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "organization",
+        "abbreviation": "NLU",
+        "location": "Thành phố Hồ Chí Minh"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "organization",
+      "relation": "được_triển_khai_tại"
+    },
+    {
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "function": "Hỗ trợ giảng dạy và học tập"
+      },
+      "target": {
+        "name": "Trang thiết bị",
+        "type": "technical_equipment",
+        "role_in_system": "Thành phần vật chất của hệ thống",
+        "category": "Cơ sở hạ tầng"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "technical_equipment",
+      "relation": "bao_gồm_thành_phần"
+    },
+    {
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "function": "Hỗ trợ giảng dạy và học tập"
+      },
+      "target": {
+        "name": "Cơ sở hạ tầng kỹ thuật",
+        "type": "technical_infrastructure",
+        "role_in_system": "Nền tảng kỹ thuật của hệ thống",
+        "category": "Cơ sở hạ tầng"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "technical_infrastructure",
+      "relation": "bao_gồm_thành_phần"
+    },
+    {
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "function": "Hỗ trợ giảng dạy và học tập"
+      },
+      "target": {
+        "name": "Cơ sở dữ liệu",
+        "type": "database_system",
+        "role_in_system": "Lưu trữ thông tin và dữ liệu học tập",
+        "category": "Tài nguyên số"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "database_system",
+      "relation": "bao_gồm_thành_phần"
+    },
+    {
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "function": "Hỗ trợ giảng dạy và học tập"
+      },
+      "target": {
+        "name": "Nguồn nhân lực",
+        "type": "human_resource",
+        "role_in_system": "Con người vận hành và tham gia hệ thống",
+        "examples": "Giảng viên, sinh viên, quản trị viên"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "human_resource",
+      "relation": "bao_gồm_thành_phần"
+    },
+    {
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "function": "Hỗ trợ giảng dạy và học tập"
+      },
+      "target": {
+        "name": "Tài nguyên hỗ trợ",
+        "type": "support_resource",
+        "role_in_system": "Các yếu tố phụ trợ cho hoạt động hệ thống",
+        "examples": "Tài liệu hướng dẫn, hỗ trợ kỹ thuật"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "support_resource",
+      "relation": "bao_gồm_thành_phần"
+    },
+    {
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "operator": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Công tác giảng dạy",
+        "type": "teaching_activity",
+        "context": "Hoạt động đào tạo tại NLU",
+        "mode": "Trực tuyến và kết hợp"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "teaching_activity",
       "relation": "phục_vụ_cho"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "giảng viên",
-      "type_source": "SYSTEM",
-      "type_target": "PERSON",
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "operator": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Công tác học tập",
+        "type": "learning_activity",
+        "context": "Hoạt động học tập của sinh viên NLU",
+        "mode": "Trực tuyến và kết hợp"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "learning_activity",
       "relation": "phục_vụ_cho"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "quản trị hệ thống",
-      "type_source": "SYSTEM",
-      "type_target": "PERSON",
-      "relation": "phục_vụ_cho"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "description": "Hệ thống hỗ trợ giảng dạy và học tập trực tuyến"
+      },
+      "target": {
+        "name": "Cổng đào tạo trực tuyến",
+        "type": "online_portal_component",
+        "function": "Giao diện truy cập chính của hệ thống",
+        "category": "Thành phần chính"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "online_portal_component",
+      "relation": "có_thành_phần_chính_là"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "Edmodo",
-      "type_source": "SYSTEM",
-      "type_target": "PLATFORM",
-      "relation": "phát_triển_trên_nền_tảng"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "description": "Hệ thống hỗ trợ giảng dạy và học tập trực tuyến"
+      },
+      "target": {
+        "name": "Hệ thống quản lý học tập",
+        "type": "lms_component",
+        "acronym_vi": "HT QLHT",
+        "function": "Quản lý nội dung, tiến độ học tập và tương tác",
+        "category": "Thành phần chính"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "lms_component",
+      "relation": "có_thành_phần_chính_là"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "Zoom",
-      "type_source": "SYSTEM",
-      "type_target": "PLATFORM",
-      "relation": "có_thể_dạy_học_trực_tuyến_trên"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "description": "Hệ thống hỗ trợ giảng dạy và học tập trực tuyến"
+      },
+      "target": {
+        "name": "Học liệu điện tử",
+        "type": "digital_learning_material",
+        "format": "Điện tử",
+        "function": "Nội dung học tập cho sinh viên",
+        "category": "Thành phần chính"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "digital_learning_material",
+      "relation": "có_thành_phần_chính_là"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "Google meet",
-      "type_source": "SYSTEM",
-      "type_target": "PLATFORM",
-      "relation": "có_thể_dạy_học_trực_tuyến_trên"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "description": "Hệ thống hỗ trợ giảng dạy và học tập trực tuyến"
+      },
+      "target": {
+        "name": "Các phương thức tương tác",
+        "type": "interaction_method_category",
+        "examples": "Diễn đàn trao đổi, thảo luận trực tuyến",
+        "function": "Tạo môi trường giao tiếp và hợp tác",
+        "category": "Thành phần chính"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "interaction_method_category",
+      "relation": "có_thành_phần_chính_là"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "Microsoft team",
-      "type_source": "SYSTEM",
-      "type_target": "PLATFORM",
-      "relation": "có_thể_dạy_học_trực_tuyến_trên"
+      "source": {
+        "name": "Các phương thức tương tác",
+        "type": "interaction_method_category",
+        "context": "Trong Hệ thống Đào tạo trực tuyến NLU",
+        "purpose": "Giao tiếp và hợp tác học tập"
+      },
+      "target": {
+        "name": "Diễn đàn trao đổi",
+        "type": "forum_tool",
+        "nature": "Trực tuyến",
+        "function": "Trao đổi thông tin, thảo luận chủ đề"
+      },
+      "type_source": "interaction_method_category",
+      "type_target": "forum_tool",
+      "relation": "bao_gồm_công_cụ"
     },
     {
-      "source": "e-Learning – NLU",
-      "target": "Skype",
-      "type_source": "SYSTEM",
-      "type_target": "PLATFORM",
-      "relation": "có_thể_dạy_học_trực_tuyến_trên"
+      "source": {
+        "name": "Các phương thức tương tác",
+        "type": "interaction_method_category",
+        "context": "Trong Hệ thống Đào tạo trực tuyến NLU",
+        "purpose": "Giao tiếp và hợp tác học tập"
+      },
+      "target": {
+        "name": "Thảo luận trực tuyến (phương thức)",
+        "type": "online_discussion_method",
+        "nature": "Trực tuyến",
+        "function": "Thảo luận các vấn đề học tập"
+      },
+      "type_source": "interaction_method_category",
+      "type_target": "online_discussion_method",
+      "relation": "bao_gồm_phương_thức"
     },
     {
-      "source": "Zoom",
-      "target": "công cụ",
-      "type_source": "PLATFORM",
-      "type_target": "UNKNOWN",
-      "relation": "là_một_số"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "description": "Hệ thống hỗ trợ giảng dạy và học tập trực tuyến"
+      },
+      "target": {
+        "name": "Hệ thống kiểm tra, đánh giá sinh viên",
+        "type": "student_assessment_system_component",
+        "function": "Thực hiện kiểm tra và đánh giá kết quả học tập của sinh viên",
+        "category": "Thành phần chính"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "student_assessment_system_component",
+      "relation": "có_thành_phần_chính_là"
     },
     {
-      "source": "Google meet",
-      "target": "công cụ",
-      "type_source": "PLATFORM",
-      "type_target": "UNKNOWN",
-      "relation": "là_một_số"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "description": "Hệ thống hỗ trợ giảng dạy và học tập trực tuyến"
+      },
+      "target": {
+        "name": "Giảng viên (thành phần hệ thống)",
+        "type": "person_role_system_component",
+        "role_description": "Người giảng dạy và tương tác trên hệ thống",
+        "category": "Thành phần chính (nhân lực)"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "person_role_system_component",
+      "relation": "có_thành_phần_chính_là"
     },
     {
-      "source": "Microsoft team",
-      "target": "công cụ",
-      "type_source": "PLATFORM",
-      "type_target": "UNKNOWN",
-      "relation": "là_một_số"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "description": "Hệ thống hỗ trợ giảng dạy và học tập trực tuyến"
+      },
+      "target": {
+        "name": "Quản trị hệ thống (chức năng)",
+        "type": "system_administration_function_component",
+        "role_description": "Chức năng quản lý và vận hành kỹ thuật hệ thống",
+        "category": "Thành phần chính (vận hành)"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "system_administration_function_component",
+      "relation": "có_thành_phần_chính_là"
     },
     {
-      "source": "Skype",
-      "target": "công cụ",
-      "type_source": "PLATFORM",
-      "type_target": "UNKNOWN",
-      "relation": "là_một_số"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "operator": "NLU"
+      },
+      "target": {
+        "name": "Mục tiêu nâng cao chất lượng đào tạo",
+        "type": "objective",
+        "scope": "Chất lượng đào tạo",
+        "location_context": "Tại NLU",
+        "achieved_via": "Hệ thống Đào tạo trực tuyến"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "objective",
+      "relation": "nhằm_mục_đích"
     },
     {
-      "source": "công cụ",
-      "target": "trao đổi",
-      "type_source": "UNKNOWN",
-      "type_target": "ACTIVITY",
-      "relation": "để"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "operator": "NLU"
+      },
+      "target": {
+        "name": "Mục tiêu nâng cao quản lý giáo dục",
+        "type": "objective",
+        "scope": "Quản lý giáo dục",
+        "location_context": "Tại NLU",
+        "achieved_via": "Hệ thống Đào tạo trực tuyến"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "objective",
+      "relation": "nhằm_mục_đích"
     },
     {
-      "source": "công cụ",
-      "target": "giảng viên",
-      "type_source": "UNKNOWN",
-      "type_target": "PERSON",
-      "relation": "giữa"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "operator": "Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Edmodo",
+        "type": "platform",
+        "platform_type": "Learning Management System (LMS) / Social Learning Network",
+        "usage_context": "Nền tảng phát triển Hệ thống Đào tạo trực tuyến NLU"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "platform",
+      "relation": "được_phát_triển_trên_nền_tảng"
     },
     {
-      "source": "công cụ",
-      "target": "sinh viên",
-      "type_source": "UNKNOWN",
-      "type_target": "PERSON",
-      "relation": "giữa"
+      "source": {
+        "name": "Hệ thống Đào tạo trực tuyến tại Trường Đại học Nông Lâm Thành phố Hồ Chí Minh",
+        "type": "e_learning_system",
+        "abbreviation": "e-Learning – NLU",
+        "management_aspect": "Sử dụng hiệu quả và đúng quy định pháp luật"
+      },
+      "target": {
+        "name": "Cơ chế đảm bảo",
+        "type": "mechanism_policy",
+        "purpose1": "Đảm bảo sử dụng hiệu quả Hệ thống Đào tạo trực tuyến",
+        "purpose2": "Đảm bảo sử dụng đúng quy định pháp luật Hệ thống Đào tạo trực tuyến",
+        "context": "Tại Trường Đại học Nông Lâm TP.HCM"
+      },
+      "type_source": "e_learning_system",
+      "type_target": "mechanism_policy",
+      "relation": "có_cơ_chế_đảm_bảo"
     },
     {
-      "source": "công cụ",
-      "target": "lên lớp",
-      "type_source": "UNKNOWN",
-      "type_target": "ACTIVITY",
-      "relation": "để"
+      "source": {
+        "name": "Dạy học trực tuyến",
+        "type": "online_teaching_method",
+        "alternative_name": "Giảng dạy online",
+        "context": "Tại Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Zoom",
+        "type": "communication_platform",
+        "main_function": "Họp và học trực tuyến",
+        "device_compatibility": "Máy tính, thiết bị di động thông minh"
+      },
+      "type_source": "online_teaching_method",
+      "type_target": "communication_platform",
+      "relation": "có_thể_thực_hiện_trên"
     },
     {
-      "source": "công cụ",
-      "target": "thảo luận trực tuyến",
-      "type_source": "UNKNOWN",
-      "type_target": "ACTIVITY",
-      "relation": "để"
+      "source": {
+        "name": "Dạy học trực tuyến",
+        "type": "online_teaching_method",
+        "alternative_name": "Giảng dạy online",
+        "context": "Tại Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Google meet",
+        "type": "communication_platform",
+        "main_function": "Họp và học trực tuyến",
+        "device_compatibility": "Máy tính, thiết bị di động thông minh"
+      },
+      "type_source": "online_teaching_method",
+      "type_target": "communication_platform",
+      "relation": "có_thể_thực_hiện_trên"
     },
     {
-      "source": "công cụ",
-      "target": "máy tính",
-      "type_source": "UNKNOWN",
-      "type_target": "DEVICE",
-      "relation": "trên"
+      "source": {
+        "name": "Dạy học trực tuyến",
+        "type": "online_teaching_method",
+        "alternative_name": "Giảng dạy online",
+        "context": "Tại Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Microsoft team",
+        "type": "communication_platform",
+        "main_function": "Hợp tác và học trực tuyến",
+        "device_compatibility": "Máy tính, thiết bị di động thông minh"
+      },
+      "type_source": "online_teaching_method",
+      "type_target": "communication_platform",
+      "relation": "có_thể_thực_hiện_trên"
     },
     {
-      "source": "công cụ",
-      "target": "thiết bị di động thông minh",
-      "type_source": "UNKNOWN",
-      "type_target": "DEVICE",
-      "relation": "trên"
+      "source": {
+        "name": "Dạy học trực tuyến",
+        "type": "online_teaching_method",
+        "alternative_name": "Giảng dạy online",
+        "context": "Tại Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Skype",
+        "type": "communication_platform",
+        "main_function": "Gọi điện và họp trực tuyến",
+        "device_compatibility": "Máy tính, thiết bị di động thông minh"
+      },
+      "type_source": "online_teaching_method",
+      "type_target": "communication_platform",
+      "relation": "có_thể_thực_hiện_trên"
     },
     {
-      "source": "máy tính",
-      "target": "mạng",
-      "type_source": "DEVICE",
-      "type_target": "INFRASTRUCTURE",
-      "relation": "có_kết_nối"
+      "source": {
+        "name": "Dạy học trực tuyến",
+        "type": "online_teaching_method",
+        "alternative_name": "Giảng dạy online",
+        "context": "Tại Trường Đại học Nông Lâm TP.HCM"
+      },
+      "target": {
+        "name": "Các công cụ phổ biến khác",
+        "type": "generic_communication_tool_category",
+        "description": "Các nền tảng/phần mềm trực tuyến phổ biến không được liệt kê cụ thể",
+        "purpose": "Hỗ trợ dạy học trực tuyến"
+      },
+      "type_source": "online_teaching_method",
+      "type_target": "generic_communication_tool_category",
+      "relation": "có_thể_thực_hiện_trên"
     },
     {
-      "source": "thiết bị di động thông minh",
-      "target": "mạng",
-      "type_source": "DEVICE",
-      "type_target": "INFRASTRUCTURE",
-      "relation": "có_kết_nối"
+      "source": {
+        "name": "Zoom",
+        "type": "communication_platform",
+        "category": "Công cụ trực tuyến",
+        "user_groups": "Giảng viên, Sinh viên"
+      },
+      "target": {
+        "name": "Hoạt động trao đổi trực tuyến",
+        "type": "online_interaction_activity",
+        "participants": "Giảng viên và Sinh viên",
+        "medium": "Trực tuyến qua mạng hoặc thiết bị di động"
+      },
+      "type_source": "communication_platform",
+      "type_target": "online_interaction_activity",
+      "relation": "là_công_cụ_để"
     },
     {
-      "source": "giảng viên",
-      "target": "công cụ",
-      "type_source": "PERSON",
-      "type_target": "UNKNOWN",
+      "source": {
+        "name": "Zoom",
+        "type": "communication_platform",
+        "category": "Công cụ trực tuyến",
+        "user_groups": "Giảng viên, Sinh viên"
+      },
+      "target": {
+        "name": "Hoạt động lên lớp trực tuyến",
+        "type": "online_class_activity",
+        "participants": "Giảng viên và Sinh viên",
+        "medium": "Trực tuyến qua mạng hoặc thiết bị di động"
+      },
+      "type_source": "communication_platform",
+      "type_target": "online_class_activity",
+      "relation": "là_công_cụ_để"
+    },
+    {
+      "source": {
+        "name": "Zoom",
+        "type": "communication_platform",
+        "category": "Công cụ trực tuyến",
+        "user_groups": "Giảng viên, Sinh viên"
+      },
+      "target": {
+        "name": "Hoạt động thảo luận trực tuyến",
+        "type": "online_discussion_activity",
+        "participants": "Giảng viên và Sinh viên",
+        "medium": "Trực tuyến qua mạng hoặc thiết bị di động"
+      },
+      "type_source": "communication_platform",
+      "type_target": "online_discussion_activity",
+      "relation": "là_công_cụ_để"
+    },
+    {
+      "source": {
+        "name": "Google meet",
+        "type": "communication_platform",
+        "category": "Công cụ trực tuyến",
+        "user_groups": "Giảng viên, Sinh viên"
+      },
+      "target": {
+        "name": "Hoạt động trao đổi trực tuyến",
+        "type": "online_interaction_activity",
+        "participants": "Giảng viên và Sinh viên",
+        "medium": "Trực tuyến qua mạng hoặc thiết bị di động"
+      },
+      "type_source": "communication_platform",
+      "type_target": "online_interaction_activity",
+      "relation": "là_công_cụ_để"
+    },
+     {
+      "source": {
+        "name": "Giảng viên",
+        "type": "person_role",
+        "role_context": "Tổ chức lớp học trực tuyến",
+        "institution_affiliation": "Trường Đại học Nông Lâm TP.HCM (ngụ ý)"
+      },
+      "target": {
+        "name": "Công cụ trực tuyến phù hợp",
+        "type": "online_tool",
+        "selection_basis": "Phù hợp với nhu cầu giảng dạy",
+        "examples_from_text": "Zoom, Google meet, Microsoft team, Skype"
+      },
+      "type_source": "person_role",
+      "type_target": "online_tool",
       "relation": "chọn"
     },
     {
-      "source": "giảng viên",
-      "target": "lớp học",
-      "type_source": "PERSON",
-      "type_target": "EVENT",
+      "source": {
+        "name": "Giảng viên",
+        "type": "person_role",
+        "role_context": "Tổ chức lớp học trực tuyến",
+        "institution_affiliation": "Trường Đại học Nông Lâm TP.HCM (ngụ ý)"
+      },
+      "target": {
+        "name": "Lớp học trực tuyến",
+        "type": "online_class",
+        "status": "Được đăng ký bởi giảng viên",
+        "platform": "Sử dụng công cụ trực tuyến đã chọn"
+      },
+      "type_source": "person_role",
+      "type_target": "online_class",
       "relation": "đăng_ký"
     },
     {
-      "source": "giảng viên",
-      "target": "sinh viên",
-      "type_source": "PERSON",
-      "type_target": "PERSON",
+      "source": {
+        "name": "Giảng viên",
+        "type": "person_role",
+        "role_context": "Tổ chức lớp học trực tuyến",
+        "communication_duty": "Thông tin về lớp học"
+      },
+      "target": {
+        "name": "Sinh viên",
+        "type": "person_role",
+        "role_context": "Tham gia lớp học trực tuyến",
+        "information_recipient": "Nhận thông báo từ giảng viên"
+      },
+      "type_source": "person_role",
+      "type_target": "person_role",
       "relation": "thông_báo_cho"
     },
     {
-      "source": "giảng viên",
-      "target": "lớp học",
-      "type_source": "PERSON",
-      "type_target": "EVENT",
-      "relation": "tham_gia"
-    },
-    {
-      "source": "sinh viên",
-      "target": "lớp học",
-      "type_source": "PERSON",
-      "type_target": "EVENT",
+      "source": {
+        "name": "Sinh viên",
+        "type": "person_role",
+        "role_context": "Tham gia lớp học trực tuyến",
+        "action": "Tham gia lớp học theo thông báo"
+      },
+      "target": {
+        "name": "Lớp học trực tuyến",
+        "type": "online_class",
+        "organizer": "Giảng viên",
+        "access_condition": "Theo thông báo của giảng viên"
+      },
+      "type_source": "person_role",
+      "type_target": "online_class",
       "relation": "tham_gia"
     }
   ]

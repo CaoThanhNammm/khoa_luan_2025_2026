@@ -1,55 +1,57 @@
-
 {
-  "entities": [
-    {
-      "name": "Sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "hoàn cảnh khó khăn",
-      "type": "DIFFICULT_CIRCUMSTANCES"
-    },
-    {
-      "name": "vượt khó",
-      "type": "OVERCOME_DIFFICULTIES"
-    },
-    {
-      "name": "học tập",
-      "type": "STUDY"
-    },
-    {
-      "name": "rèn luyện",
-      "type": "PRACTICE"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh viên",
-      "target": "hoàn cảnh khó khăn",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "DIFFICULT_CIRCUMSTANCES"
+      "source": {
+        "name": "Sinh viên",
+        "type": "person",
+        "description": "Đối tượng được đề cập trong tiêu chí",
+        "status": "đang theo học"
+      },
+      "target": {
+        "name": "hoàn cảnh khó khăn",
+        "type": "socioeconomic_condition",
+        "nature": "khó khăn",
+        "impact_potential": "ảnh hưởng đến học tập và rèn luyện"
+      },
+      "type_source": "person",
+      "type_target": "socioeconomic_condition",
+      "relation": "TRẢI_QUA"
     },
     {
-      "source": "Sinh viên",
-      "target": "vượt khó",
-      "relation": "cố_gắng",
-      "type_source": "STUDENT",
-      "type_target": "OVERCOME_DIFFICULTIES"
+      "source": {
+        "name": "Sinh viên",
+        "type": "person",
+        "characteristic_1": "có hoàn cảnh khó khăn",
+        "characteristic_2": "cố gắng vượt khó",
+        "focus_action": "vươn lên"
+      },
+      "target": {
+        "name": "học tập",
+        "type": "academic_activity",
+        "domain": "kiến thức",
+        "process_component": "quá trình học"
+      },
+      "type_source": "person",
+      "type_target": "academic_activity",
+      "relation": "VƯƠN_LÊN_TRONG"
     },
     {
-      "source": "Sinh viên",
-      "target": "học tập",
-      "relation": "vươn_lên_trong",
-      "type_source": "STUDENT",
-      "type_target": "STUDY"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "rèn luyện",
-      "relation": "vươn_lên_trong",
-      "type_source": "STUDENT",
-      "type_target": "PRACTICE"
+      "source": {
+        "name": "Sinh viên",
+        "type": "person",
+        "characteristic_1": "có hoàn cảnh khó khăn",
+        "characteristic_2": "cố gắng vượt khó",
+        "focus_action": "vươn lên"
+      },
+      "target": {
+        "name": "rèn luyện",
+        "type": "personal_development_activity",
+        "domain": "phẩm chất đạo đức và kỹ năng",
+        "process_component": "quá trình tự hoàn thiện"
+      },
+      "type_source": "person",
+      "type_target": "personal_development_activity",
+      "relation": "VƯƠN_LÊN_TRONG"
     }
   ]
 }

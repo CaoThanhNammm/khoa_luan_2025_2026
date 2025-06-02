@@ -1,179 +1,138 @@
 {
-  "entities": [
-    {
-      "name": "07 ngày tình nguyện/năm",
-      "type": "DURATION"
-    },
-    {
-      "name": "ngày",
-      "type": "DAY"
-    },
-    {
-      "name": "hoạt động tình nguyện",
-      "type": "VOLUNTEERING_ACTIVITY"
-    },
-    {
-      "name": "sinh viên A",
-      "type": "STUDENT"
-    },
-    {
-      "name": "3 ngày tình nguyện",
-      "type": "DURATION"
-    },
-    {
-      "name": "mái ấm nhà mở",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "1 ngày",
-      "type": "DURATION"
-    },
-    {
-      "name": "hiến máu tình nguyện",
-      "type": "VOLUNTEERING_ACTIVITY"
-    },
-    {
-      "name": "2 ngày",
-      "type": "DURATION"
-    },
-    {
-      "name": "Chủ nhật xanh",
-      "type": "EVENT"
-    },
-    {
-      "name": "những thời điểm khác nhau trong năm",
-      "type": "TIME_PERIOD"
-    },
-    {
-      "name": "năm",
-      "type": "YEAR"
-    },
-    {
-      "name": "tiêu chuẩn",
-      "type": "CRITERIA"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "giấy khen",
-      "type": "AWARD"
-    },
-    {
-      "name": "cấp trường",
-      "type": "SCHOOL_LEVEL"
-    },
-    {
-      "name": "hoạt động tình nguyện",
-      "type": "VOLUNTEERING_ACTIVITY"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "07 ngày tình nguyện/năm",
-      "relation": "tham_gia_ít_nhất",
-      "type_source": "STUDENT",
-      "type_target": "DURATION"
+      "source": {
+        "name": "Sinh viên",
+        "type": "student_role",
+        "description": "Đối tượng chung cần đáp ứng yêu cầu và có thể nhận ưu tiên",
+        "scope_of_application": "Áp dụng chung cho sinh viên",
+        "potential_benefit": "Có thể nhận ưu tiên dựa trên thành tích"
+      },
+      "target": {
+        "name": "Yêu cầu 07 ngày tình nguyện/năm",
+        "type": "volunteer_participation_requirement",
+        "minimum_duration": "07 ngày/năm",
+        "calculation_method": "Số ngày thực tế tham gia các hoạt động tình nguyện cộng dồn",
+        "source_citation": "Tham gia ít nhất 07 ngày tình nguyện/năm"
+      },
+      "type_source": "student_role",
+      "type_target": "volunteer_participation_requirement",
+      "relation": "phải_đáp_ứng"
     },
     {
-      "source": "07 ngày tình nguyện/năm",
-      "target": "ngày",
-      "relation": "tính_theo",
-      "type_source": "DURATION",
-      "type_target": "DAY"
+      "source": {
+        "name": "Sinh viên A",
+        "type": "example_person",
+        "role": "Người tham gia trong ví dụ minh họa",
+        "purpose_of_mention": "Minh họa cách tính cộng dồn ngày tình nguyện",
+        "activities_summary_for_example": "3 ngày tình nguyện tại mái ấm nhà mở, 1 ngày hiến máu tình nguyện, 2 ngày Chủ nhật xanh"
+      },
+      "target": {
+        "name": "Hoạt động tình nguyện 3 ngày (ví dụ SV A)",
+        "type": "volunteer_activity_instance",
+        "duration_in_example": "3 ngày",
+        "participant_in_example": "Sinh viên A",
+        "part_of_illustration": "Phương pháp tính cộng dồn ngày tình nguyện"
+      },
+      "type_source": "example_person",
+      "type_target": "volunteer_activity_instance",
+      "relation": "tham_gia_minh_họa"
     },
     {
-      "source": "ngày",
-      "target": "hoạt động tình nguyện",
-      "relation": "tham_gia",
-      "type_source": "DAY",
-      "type_target": "VOLUNTEERING_ACTIVITY"
+      "source": {
+        "name": "Hoạt động tình nguyện 3 ngày (ví dụ SV A)",
+        "type": "volunteer_activity_instance",
+        "duration_in_example": "3 ngày",
+        "participant_in_example": "Sinh viên A",
+        "part_of_illustration": "Phương pháp tính cộng dồn ngày tình nguyện"
+      },
+      "target": {
+        "name": "Mái ấm nhà mở",
+        "type": "location",
+        "role_in_text": "Địa điểm diễn ra hoạt động tình nguyện ví dụ",
+        "activity_example_link": "Tình nguyện 3 ngày của Sinh viên A"
+      },
+      "type_source": "volunteer_activity_instance",
+      "type_target": "location",
+      "relation": "diễn_ra_tại"
     },
     {
-      "source": "sinh viên A",
-      "target": "3 ngày tình nguyện",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "DURATION"
+      "source": {
+        "name": "Sinh viên A",
+        "type": "example_person",
+        "role": "Người tham gia trong ví dụ minh họa",
+        "purpose_of_mention": "Minh họa cách tính cộng dồn ngày tình nguyện",
+        "activities_summary_for_example": "3 ngày tình nguyện tại mái ấm nhà mở, 1 ngày hiến máu tình nguyện, 2 ngày Chủ nhật xanh"
+      },
+      "target": {
+        "name": "Hoạt động hiến máu tình nguyện (ví dụ SV A)",
+        "type": "volunteer_activity_instance",
+        "activity_description": "Hiến máu tình nguyện",
+        "duration_in_example": "1 ngày",
+        "participant_in_example": "Sinh viên A"
+      },
+      "type_source": "example_person",
+      "type_target": "volunteer_activity_instance",
+      "relation": "tham_gia_minh_họa"
     },
     {
-      "source": "3 ngày tình nguyện",
-      "target": "mái ấm nhà mở",
-      "relation": "tại",
-      "type_source": "DURATION",
-      "type_target": "ORGANIZATION"
+      "source": {
+        "name": "Sinh viên A",
+        "type": "example_person",
+        "role": "Người tham gia trong ví dụ minh họa",
+        "purpose_of_mention": "Minh họa cách tính cộng dồn ngày tình nguyện",
+        "activities_summary_for_example": "3 ngày tình nguyện tại mái ấm nhà mở, 1 ngày hiến máu tình nguyện, 2 ngày Chủ nhật xanh"
+      },
+      "target": {
+        "name": "Hoạt động Chủ nhật xanh (ví dụ SV A)",
+        "type": "volunteer_activity_instance",
+        "event_description": "Chủ nhật xanh",
+        "duration_in_example": "2 ngày",
+        "timing_context": "Những thời điểm khác nhau trong năm",
+        "participant_in_example": "Sinh viên A"
+      },
+      "type_source": "example_person",
+      "type_target": "volunteer_activity_instance",
+      "relation": "tham_gia_minh_họa"
     },
     {
-      "source": "sinh viên A",
-      "target": "1 ngày",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "DURATION"
+      "source": {
+        "name": "Sinh viên A",
+        "type": "example_person",
+        "role": "Người tham gia trong ví dụ minh họa",
+        "purpose_of_mention": "Minh họa cách tính cộng dồn ngày tình nguyện",
+        "activities_summary_for_example": "3 ngày tình nguyện tại mái ấm nhà mở, 1 ngày hiến máu tình nguyện, 2 ngày Chủ nhật xanh",
+        "example_outcome_note": "Các hoạt động được tính đủ tiêu chuẩn theo phương pháp cộng dồn"
+      },
+      "target": {
+        "name": "Yêu cầu 07 ngày tình nguyện/năm",
+        "type": "volunteer_participation_requirement",
+        "minimum_duration": "07 ngày/năm",
+        "calculation_method": "Số ngày thực tế tham gia các hoạt động tình nguyện cộng dồn",
+        "source_citation": "Tham gia ít nhất 07 ngày tình nguyện/năm"
+      },
+      "type_source": "example_person",
+      "type_target": "volunteer_participation_requirement",
+      "relation": "minh_họa_cách_tính_cho"
     },
     {
-      "source": "1 ngày",
-      "target": "hiến máu tình nguyện",
-      "relation": "cho_hoạt_động",
-      "type_source": "DURATION",
-      "type_target": "VOLUNTEERING_ACTIVITY"
-    },
-    {
-      "source": "sinh viên A",
-      "target": "2 ngày",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "DURATION"
-    },
-    {
-      "source": "2 ngày",
-      "target": "Chủ nhật xanh",
-      "relation": "cho_hoạt_động",
-      "type_source": "DURATION",
-      "type_target": "EVENT"
-    },
-    {
-      "source": "Chủ nhật xanh",
-      "target": "những thời điểm khác nhau trong năm",
-      "relation": "ở",
-      "type_source": "EVENT",
-      "type_target": "TIME_PERIOD"
-    },
-    {
-      "source": "những thời điểm khác nhau trong năm",
-      "target": "năm",
-      "relation": "trong",
-      "type_source": "TIME_PERIOD",
-      "type_target": "YEAR"
-    },
-    {
-      "source": "ví dụ",
-      "target": "tiêu chuẩn",
-      "relation": "đạt",
-      "type_source": "EXAMPLE",
-      "type_target": "CRITERIA"
-    },
-    {
-      "source": "sinh viên",
-      "target": "giấy khen",
-      "relation": "ưu_tiên_đạt",
-      "type_source": "STUDENT",
-      "type_target": "AWARD"
-    },
-    {
-      "source": "giấy khen",
-      "target": "cấp trường",
-      "relation": "cấp",
-      "type_source": "AWARD",
-      "type_target": "SCHOOL_LEVEL"
-    },
-    {
-      "source": "giấy khen",
-      "target": "hoạt động tình nguyện",
-      "relation": "về",
-      "type_source": "AWARD",
-      "type_target": "VOLUNTEERING_ACTIVITY"
+      "source": {
+        "name": "Sinh viên",
+        "type": "student_role",
+        "description": "Đối tượng chung của các quy định và ưu tiên",
+        "scope_of_application": "Áp dụng chung cho sinh viên",
+        "potential_benefit": "Có thể nhận ưu tiên dựa trên thành tích"
+      },
+      "target": {
+        "name": "Giấy khen cấp trường trở lên về hoạt động tình nguyện",
+        "type": "award_recognition",
+        "minimum_level": "Cấp trường trở lên",
+        "field_of_recognition": "Hoạt động tình nguyện",
+        "associated_benefit": "Là điều kiện để sinh viên được ưu tiên"
+      },
+      "type_source": "student_role",
+      "type_target": "award_recognition",
+      "relation": "nhận_ưu_tiên_khi_đạt"
     }
   ]
 }

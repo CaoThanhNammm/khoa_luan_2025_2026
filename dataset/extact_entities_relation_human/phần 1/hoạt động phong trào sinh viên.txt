@@ -1,289 +1,495 @@
 {
-  "entities": [
-    {
-      "name": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "type": "activity"
-    },
-    {
-      "name": "Các hoạt động nổi bật khác",
-      "type": "activity"
-    },
-    {
-      "name": "Hoạt động Tự hào Sinh viên Nông Lâm",
-      "type": "activity"
-    },
-    {
-      "name": "Ngày hội Sinh viên Nông Lâm với Pháp luật",
-      "type": "activity"
-    },
-    {
-      "name": "Hội thao Sinh viên Nông Lâm",
-      "type": "activity"
-    },
-    {
-      "name": "Cuộc thi Khởi nghiệp Nông nghiệp",
-      "type": "activity"
-    },
-    {
-      "name": "Cuộc thi Ý tưởng nghiên cứu khoa học",
-      "type": "activity"
-    },
-    {
-      "name": "Hội thảo Nghiên cứu khoa học Sinh viên",
-      "type": "activity"
-    },
-    {
-      "name": "Chiến dịch tình nguyện Mùa hè xanh",
-      "type": "activity"
-    },
-    {
-      "name": "Chương trình Vì màu xanh Nông Lâm",
-      "type": "activity"
-    },
-    {
-      "name": "Chiến dịch Xuân tình nguyện",
-      "type": "activity"
-    },
-    {
-      "name": "Chương trình Hiến máu tình nguyện",
-      "type": "activity"
-    },
-    {
-      "name": "Lễ tuyên dương Thanh niên tiên tiến làm theo lời Bác và trao giải thưởng Nguyễn Thái Bình",
-      "type": "activity"
-    },
-    {
-      "name": "Lễ tuyên dương Sinh viên 5 tốt",
-      "type": "activity"
-    },
-    {
-      "name": "Lễ Tuyên dương hoạt động học thuật, khoa học công nghệ, khởi nghiệp",
-      "type": "activity"
-    },
-    {
-      "name": "Cuộc thi Nét đẹp sinh viên Nông Lâm",
-      "type": "activity"
-    },
-    {
-      "name": "Hội thi Bí thư Chi đoàn giỏi",
-      "type": "activity"
-    },
-    {
-      "name": "Hội thi Thủ lĩnh sinh viên",
-      "type": "activity"
-    },
-    {
-      "name": "Chương trình Vì đàn em thân yêu",
-      "type": "activity"
-    },
-    {
-      "name": "Chương trình Ánh trăng cho em",
-      "type": "activity"
-    },
-    {
-      "name": "Ngày Thứ 7 tình nguyện",
-      "type": "activity"
-    },
-    {
-      "name": "Ngày Chủ nhật xanh",
-      "type": "activity"
-    },
-    {
-      "name": "Chương trình Vì nụ cười trẻ thơ",
-      "type": "activity"
-    },
-    {
-      "name": "Chương trình Về nguồn",
-      "type": "activity"
-    },
-    {
-      "name": "Hành trình đi tìm địa chỉ đỏ",
-      "type": "activity"
-    },
-    {
-      "name": "Hành trình đến với bảo tàng",
-      "type": "activity"
-    },
-    {
-      "name": "Hội thi Kiến thức chuyên ngành",
-      "type": "activity"
-    }
-  ],
   "relationships": [
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Hoạt động Tự hào Sinh viên Nông Lâm",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Hoạt động Tự hào Sinh viên Nông Lâm",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "hoạt động",
+        "focus_or_theme": "Tự hào Sinh viên Nông Lâm",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Ngày hội Sinh viên Nông Lâm với Pháp luật",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Ngày hội Sinh viên Nông Lâm với Pháp luật",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "ngày hội",
+        "focus_or_theme": "Sinh viên Nông Lâm với Pháp luật",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Hội thao Sinh viên Nông Lâm",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Hội thao Sinh viên Nông Lâm",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "hội thao",
+        "focus_or_theme": "Thể thao cho Sinh viên Nông Lâm",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Cuộc thi Khởi nghiệp Nông nghiệp",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Cuộc thi Khởi nghiệp Nông nghiệp",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "cuộc thi",
+        "focus_or_theme": "Khởi nghiệp Nông nghiệp",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Cuộc thi Ý tưởng nghiên cứu khoa học",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Cuộc thi Ý tưởng nghiên cứu khoa học",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "cuộc thi",
+        "focus_or_theme": "Ý tưởng nghiên cứu khoa học",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Hội thảo Nghiên cứu khoa học Sinh viên",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Hội thảo Nghiên cứu khoa học Sinh viên",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "hội thảo",
+        "focus_or_theme": "Nghiên cứu khoa học Sinh viên",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Chiến dịch tình nguyện Mùa hè xanh",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Chiến dịch tình nguyện Mùa hè xanh",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "chiến dịch tình nguyện",
+        "focus_or_theme": "Mùa hè xanh",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Chương trình Vì màu xanh Nông Lâm",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Chương trình Vì màu xanh Nông Lâm",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "chương trình",
+        "focus_or_theme": "Vì màu xanh Nông Lâm",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Chiến dịch Xuân tình nguyện",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Chiến dịch Xuân tình nguyện",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "chiến dịch tình nguyện",
+        "focus_or_theme": "Xuân tình nguyện",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Chương trình Hiến máu tình nguyện",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Chương trình Hiến máu tình nguyện",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "chương trình",
+        "focus_or_theme": "Hiến máu tình nguyện",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Lễ tuyên dương Thanh niên tiên tiến làm theo lời Bác và trao giải thưởng Nguyễn Thái Bình",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Lễ tuyên dương Thanh niên tiên tiến làm theo lời Bác và trao giải thưởng Nguyễn Thái Bình",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "lễ tuyên dương",
+        "focus_or_theme": "Tuyên dương Thanh niên tiên tiến làm theo lời Bác và trao giải thưởng Nguyễn Thái Bình",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Lễ tuyên dương Sinh viên 5 tốt",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Lễ tuyên dương Thanh niên tiên tiến làm theo lời Bác và trao giải thưởng Nguyễn Thái Bình",
+        "genre": "lễ tuyên dương",
+        "key_action": "trao giải thưởng Nguyễn Thái Bình",
+        "frequency": "hằng năm"
+      },
+      "target": {
+        "name": "Giải thưởng Nguyễn Thái Bình",
+        "type_of_item": "giải thưởng",
+        "presentation_context": "trao trong Lễ tuyên dương Thanh niên tiên tiến làm theo lời Bác"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "award",
+      "relation": "trao_giải"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Lễ Tuyên dương hoạt động học thuật, khoa học công nghệ, khởi nghiệp",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Liên hoan Tiếng hát Sinh viên Nông Lâm",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "liên hoan",
+        "focus_or_theme": "Tiếng hát Sinh viên Nông Lâm",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động sinh viên cấp Trường nổi bật hằng năm",
-      "target": "Cuộc thi Nét đẹp sinh viên Nông Lâm",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Lễ tuyên dương Sinh viên 5 tốt",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "lễ tuyên dương",
+        "focus_or_theme": "Tuyên dương Sinh viên 5 tốt",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Hội thi Bí thư Chi đoàn giỏi",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Lễ tuyên dương Sinh viên 5 tốt",
+        "genre": "lễ tuyên dương",
+        "key_action": "tuyên dương Sinh viên 5 tốt",
+        "frequency": "hằng năm"
+      },
+      "target": {
+        "name": "Danh hiệu Sinh viên 5 tốt",
+        "type_of_item": "danh hiệu sinh viên",
+        "recognition_context": "tuyên dương tại Lễ tuyên dương Sinh viên 5 tốt"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "recognition_title",
+      "relation": "vinh_danh_cho"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Hội thi Thủ lĩnh sinh viên",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Lễ Tuyên dương hoạt động học thuật, khoa học công nghệ, khởi nghiệp",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "lễ tuyên dương",
+        "focus_or_theme": "Tuyên dương hoạt động học thuật, khoa học công nghệ, khởi nghiệp",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Chương trình Vì đàn em thân yêu",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Cuộc thi Nét đẹp sinh viên Nông Lâm",
+        "category": "hoạt động sinh viên cấp Trường nổi bật hằng năm",
+        "genre": "cuộc thi",
+        "focus_or_theme": "Nét đẹp sinh viên Nông Lâm",
+        "timing_info": "hằng năm"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Chương trình Ánh trăng cho em",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Hội thi Bí thư Chi đoàn giỏi",
+        "category": "hoạt động nổi bật khác",
+        "genre": "hội thi",
+        "focus_or_theme": "Tuyển chọn Bí thư Chi đoàn giỏi"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Ngày Thứ 7 tình nguyện",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Hội thi Thủ lĩnh sinh viên",
+        "category": "hoạt động nổi bật khác",
+        "genre": "hội thi",
+        "focus_or_theme": "Tuyển chọn Thủ lĩnh sinh viên"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Ngày Chủ nhật xanh",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Chương trình Vì đàn em thân yêu",
+        "category": "hoạt động nổi bật khác",
+        "genre": "chương trình",
+        "focus_or_theme": "Vì đàn em thân yêu"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Chương trình Vì nụ cười trẻ thơ",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Chương trình Ánh trăng cho em",
+        "category": "hoạt động nổi bật khác",
+        "genre": "chương trình",
+        "focus_or_theme": "Ánh trăng cho em"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Chương trình Về nguồn",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Ngày Thứ 7 tình nguyện",
+        "category": "hoạt động nổi bật khác",
+        "genre": "ngày tình nguyện",
+        "focus_or_theme": "Hoạt động tình nguyện",
+        "timing_info": "Thứ 7"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Hành trình đi tìm địa chỉ đỏ",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Ngày Chủ nhật xanh",
+        "category": "hoạt động nổi bật khác",
+        "genre": "ngày hoạt động",
+        "focus_or_theme": "Hoạt động vì môi trường xanh",
+        "timing_info": "Chủ nhật"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Hành trình đến với bảo tàng",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Chương trình Vì nụ cười trẻ thơ",
+        "category": "hoạt động nổi bật khác",
+        "genre": "chương trình",
+        "focus_or_theme": "Vì nụ cười trẻ thơ"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     },
     {
-      "source": "Các hoạt động nổi bật khác",
-      "target": "Hội thi Kiến thức chuyên ngành",
-      "relation": "BAO_GỒM",
+      "source": {
+        "name": "Chương trình Về nguồn",
+        "category": "hoạt động nổi bật khác",
+        "genre": "chương trình",
+        "focus_or_theme": "Về nguồn, giáo dục truyền thống"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
       "type_source": "activity",
-      "type_target": "activity"
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
+    },
+    {
+      "source": {
+        "name": "Hành trình đi tìm địa chỉ đỏ",
+        "category": "hoạt động nổi bật khác",
+        "genre": "hành trình",
+        "focus_or_theme": "Đi tìm địa chỉ đỏ, giáo dục lịch sử"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
+      "type_source": "activity",
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
+    },
+    {
+      "source": {
+        "name": "Hành trình đến với bảo tàng",
+        "category": "hoạt động nổi bật khác",
+        "genre": "hành trình",
+        "focus_or_theme": "Tham quan, học tập tại bảo tàng"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
+      "type_source": "activity",
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
+    },
+    {
+      "source": {
+        "name": "Hội thi Kiến thức chuyên ngành",
+        "category": "hoạt động nổi bật khác",
+        "genre": "hội thi",
+        "focus_or_theme": "Kiến thức chuyên ngành"
+      },
+      "target": {
+        "name": "Trường Nông Lâm",
+        "organization_level": "cấp Trường",
+        "student_population_descriptor": "Sinh viên Nông Lâm",
+        "main_function": "tổ chức hoạt động sinh viên"
+      },
+      "type_source": "activity",
+      "type_target": "organization",
+      "relation": "là_hoạt_động_của"
     }
   ]
 }

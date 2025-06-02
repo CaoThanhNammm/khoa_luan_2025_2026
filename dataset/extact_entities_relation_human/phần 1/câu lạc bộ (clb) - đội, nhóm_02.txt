@@ -1,0 +1,407 @@
+{
+  "relationships": [
+    {
+      "source": {
+        "name": "Nguyễn Ngọc Uyên Nhi",
+        "role": "Chủ nhiệm CLB"
+      },
+      "target": {
+        "name": "CLB THÚ Y ENGSCOPE",
+        "slogan": "Engscope – Lan tỏa kiến thức – Kết nối đam mê – Nuôi dưỡng tương lai",
+        "field_of_activity": "Học thuật",
+        "email": "engscope.asvm@gmail.com",
+        "fanpage": "https://www.facebook.com/Engscope"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "CLB THÚ Y ENGSCOPE",
+        "slogan": "Engscope – Lan tỏa kiến thức – Kết nối đam mê – Nuôi dưỡng tương lai",
+        "field_of_activity": "Học thuật",
+        "email": "engscope.asvm@gmail.com",
+        "fanpage": "https://www.facebook.com/Engscope"
+      },
+      "target": {
+        "name": "Đoàn - Hội khoa Chăn nuôi Thú y"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Bùi Thị Thùy Trang",
+        "role": "Chủ nhiệm CLB"
+      },
+      "target": {
+        "name": "CLB TRUYỀN THÔNG NÔNG LÂM RADIO",
+        "slogan": "Nơi cảm xúc tôi và bạn hòa tan",
+        "field_of_activity": "Truyền thông",
+        "email": "hcmnlu.radio@gmail.com",
+        "fanpage": "https://www.facebook.com/NongLamUniversity.Radio"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "CLB TRUYỀN THÔNG NÔNG LÂM RADIO",
+        "slogan": "Nơi cảm xúc tôi và bạn hòa tan",
+        "field_of_activity": "Truyền thông",
+        "email": "hcmnlu.radio@gmail.com",
+        "fanpage": "https://www.facebook.com/NongLamUniversity.Radio"
+      },
+      "target": {
+        "name": "Phòng Công tác sinh viên"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Lê Tường Vi",
+        "role": "Chủ nhiệm/Đội trưởng CLB"
+      },
+      "target": {
+        "name": "WILDLIFE VET STUDENT CLUB",
+        "slogan": "Vì sức khỏe của ĐVHD – For better health of wildlife",
+        "field_of_activity": "Truyền thông, ngoại ngữ, động vật hoang dã",
+        "email": "wildlife28082019@gmail.com",
+        "fanpage": "https://www.facebook.com/WildlifeVetsClub"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "WILDLIFE VET STUDENT CLUB",
+        "slogan": "Vì sức khỏe của ĐVHD – For better health of wildlife",
+        "field_of_activity": "Truyền thông, ngoại ngữ, động vật hoang dã",
+        "email": "wildlife28082019@gmail.com",
+        "fanpage": "https://www.facebook.com/WildlifeVetsClub"
+      },
+      "target": {
+        "name": "Đoàn - Hội khoa Chăn nuôi Thú y"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Trần Ái Thiên",
+        "role": "Chủ nhiệm CLB"
+      },
+      "target": {
+        "name": "CLB YÊU MÔI TRƯỜNG",
+        "slogan": "Tôi, Bạn yêu môi trường",
+        "field_of_activity": "Tình nguyện xã hội, học thuật, bảo vệ môi trường, truyền thông, thể thao",
+        "email": "clbyeumoitruong@hcmuaf.edu.vn",
+        "fanpage": "https://vi-vn.facebook.com/CLB.YMT.NL"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "CLB YÊU MÔI TRƯỜNG",
+        "slogan": "Tôi, Bạn yêu môi trường",
+        "field_of_activity": "Tình nguyện xã hội, học thuật, bảo vệ môi trường, truyền thông, thể thao",
+        "email": "clbyeumoitruong@hcmuaf.edu.vn",
+        "fanpage": "https://vi-vn.facebook.com/CLB.YMT.NL"
+      },
+      "target": {
+        "name": "Đoàn – Hội khoa Môi trường và Tài nguyên"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Dương Quốc Thái",
+        "role": "Trưởng ban điều hành"
+      },
+      "target": {
+        "name": "TỔ TU DƯỠNG RÈN LUYỆN HẠT GIỐNG ĐỎ",
+        "slogan": "Hạt giống đỏ - Sáng mãi một niềm tin",
+        "field_of_activity": "Tư tưởng, lý luận chính trị, kiến thức lịch sử, xã hội",
+        "email": "hatgiongdo@hcmuaf.edu.vn",
+        "fanpage": "https://www.facebook.com/totdrlhatgiongdo"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "TỔ TU DƯỠNG RÈN LUYỆN HẠT GIỐNG ĐỎ",
+        "slogan": "Hạt giống đỏ - Sáng mãi một niềm tin",
+        "field_of_activity": "Tư tưởng, lý luận chính trị, kiến thức lịch sử, xã hội",
+        "email": "hatgiongdo@hcmuaf.edu.vn",
+        "fanpage": "https://www.facebook.com/totdrlhatgiongdo"
+      },
+      "target": {
+        "name": "Đoàn Thanh niên"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Võ Công Thương",
+        "role": "Đội trưởng"
+      },
+      "target": {
+        "name": "ĐỘI CÔNG TÁC XÃ HỘI",
+        "slogan": "Sống là cho đâu chỉ nhận riêng mình",
+        "field_of_activity": "Các hoạt động tình nguyện xã hội",
+        "email": "doicongtacxahoi@st.hcmuaf.edu.vn",
+        "fanpage": "https://www.facebook.com/ctxh2001nlu"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "ĐỘI CÔNG TÁC XÃ HỘI",
+        "slogan": "Sống là cho đâu chỉ nhận riêng mình",
+        "field_of_activity": "Các hoạt động tình nguyện xã hội",
+        "email": "doicongtacxahoi@st.hcmuaf.edu.vn",
+        "fanpage": "https://www.facebook.com/ctxh2001nlu"
+      },
+      "target": {
+        "name": "Hội Sinh viên trường"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Trần Viết Nguyên Chương",
+        "role": "Đội trưởng"
+      },
+      "target": {
+        "name": "ĐỘI KHÁT VỌNG TUỔI TRẺ KHOA CHĂN NUÔI THÚ Y",
+        "slogan": "Gắn kết sức trẻ - chia sẻ yêu thương",
+        "field_of_activity": "Hỗ trợ hoạt động Đoàn - Hội khoa",
+        "email": "doikhatvongtuoitre@tuoitrenonglam.com",
+        "fanpage": "https://www.facebook.com/khatvongtuoitrekhoacnty"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "ĐỘI KHÁT VỌNG TUỔI TRẺ KHOA CHĂN NUÔI THÚ Y",
+        "slogan": "Gắn kết sức trẻ - chia sẻ yêu thương",
+        "field_of_activity": "Hỗ trợ hoạt động Đoàn - Hội khoa",
+        "email": "doikhatvongtuoitre@tuoitrenonglam.com",
+        "fanpage": "https://www.facebook.com/khatvongtuoitrekhoacnty"
+      },
+      "target": {
+        "name": "Đoàn - Hội khoa Chăn nuôi Thú y"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Nguyễn Hữu Hoàng",
+        "role": "Đội trưởng"
+      },
+      "target": {
+        "name": "ĐỘI NHIỆT HUYẾT RỪNG XANH",
+        "slogan": "Nhiệt huyết – Đoàn kết – Hành động",
+        "field_of_activity": "Đào tạo cán bộ Đoàn – Hội, hoạt động tình nguyện xã hội, học thuật",
+        "email": "doinhiethuyetrungxanh@hcmuaf.edu.vn",
+        "fanpage": "https://www.facebook.com/NhietHuyetRungXanh"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "ĐỘI NHIỆT HUYẾT RỪNG XANH",
+        "slogan": "Nhiệt huyết – Đoàn kết – Hành động",
+        "field_of_activity": "Đào tạo cán bộ Đoàn – Hội, hoạt động tình nguyện xã hội, học thuật",
+        "email": "doinhiethuyetrungxanh@hcmuaf.edu.vn",
+        "fanpage": "https://www.facebook.com/NhietHuyetRungXanh"
+      },
+      "target": {
+        "name": "Đoàn–Hội khoa Lâm Nghiệp"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Trần Đức Phúc",
+        "role": "Chủ nhiệm"
+      },
+      "target": {
+        "name": "ĐỘI VĂN NGHỆ MFB–MELODY FROM BIO",
+        "slogan": "Music – Friend - Bioscience",
+        "field_of_activity": "Văn nghệ",
+        "email": "melodyfrombiotech@tuoitrenonglam.com",
+        "fanpage": "https://www.facebook.com/melodyfrombio"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "ĐỘI VĂN NGHỆ MFB–MELODY FROM BIO",
+        "slogan": "Music – Friend - Bioscience",
+        "field_of_activity": "Văn nghệ",
+        "email": "melodyfrombiotech@tuoitrenonglam.com",
+        "fanpage": "https://www.facebook.com/melodyfrombio"
+      },
+      "target": {
+        "name": "Đoàn–Hội khoa Khoa học Sinh học"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Lê Thành Tài",
+        "role": "Đội trưởng"
+      },
+      "target": {
+        "name": "ĐỘI VĂN NGHỆ RẠNG ĐÔNG",
+        "slogan": "Rạng Đông khoảng cách bằng 0",
+        "field_of_activity": "Văn nghệ, Truyền thông",
+        "email": "vanngherangdong@hcmuaf.edu.vn",
+        "fanpage": "https://www.facebook.com/doivannghe.rangdong"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "ĐỘI VĂN NGHỆ RẠNG ĐÔNG",
+        "slogan": "Rạng Đông khoảng cách bằng 0",
+        "field_of_activity": "Văn nghệ, Truyền thông",
+        "email": "vanngherangdong@hcmuaf.edu.vn",
+        "fanpage": "https://www.facebook.com/doivannghe.rangdong"
+      },
+      "target": {
+        "name": "Đoàn Thanh niên"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Nguyễn Nhu Minh Hạ",
+        "role": "Đội trưởng"
+      },
+      "target": {
+        "name": "ĐỘI VĂN NGHỆ XUNG KÍCH NHỊP ĐIỆU XANH",
+        "slogan": "Nhịp Điệu Xanh, mãi trong tim, trong tim, trong tim. Yeah!!!",
+        "field_of_activity": "Văn nghệ",
+        "email": "vannghenhipdieuxanh@hcmuaf.edu.vn",
+        "fanpage": "https://www.facebook.com/Vnxk.nhip.dieu.xanh"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "ĐỘI VĂN NGHỆ XUNG KÍCH NHỊP ĐIỆU XANH",
+        "slogan": "Nhịp Điệu Xanh, mãi trong tim, trong tim, trong tim. Yeah!!!",
+        "field_of_activity": "Văn nghệ",
+        "email": "vannghenhipdieuxanh@hcmuaf.edu.vn",
+        "fanpage": "https://www.facebook.com/Vnxk.nhip.dieu.xanh"
+      },
+      "target": {
+        "name": "Hội Sinh viên trường"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Đỗ Minh Anh",
+        "role": "Chủ nhiệm"
+      },
+      "target": {
+        "name": "ĐỘI XUNG KÍCH KHOA KHOA HỌC SINH HỌC",
+        "slogan": "Xung kích, kết nối nhiệt huyết – tình nguyện – trách nhiệm",
+        "field_of_activity": "Tình nguyện xã hội, Văn nghệ, Bảo vệ môi trường",
+        "email": "doixungkichkhsh@toitrenonglam.com",
+        "fanpage": "https://www.facebook.com/doixungkichbiotech"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "ĐỘI XUNG KÍCH KHOA KHOA HỌC SINH HỌC",
+        "slogan": "Xung kích, kết nối nhiệt huyết – tình nguyện – trách nhiệm",
+        "field_of_activity": "Tình nguyện xã hội, Văn nghệ, Bảo vệ môi trường",
+        "email": "doixungkichkhsh@toitrenonglam.com",
+        "fanpage": "https://www.facebook.com/doixungkichbiotech"
+      },
+      "target": {
+        "name": "Đoàn–Hội khoa Khoa học Sinh học"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    },
+    {
+      "source": {
+        "name": "Đoàn An Bình",
+        "role": "Chủ nhiệm"
+      },
+      "target": {
+        "name": "HỘI CỔ ĐỘNG VIÊN (NONG LAM BUFFALOES) NLB",
+        "slogan": "We are Nong Lam - We cheer Nong Lam",
+        "field_of_activity": "Thể thao, cổ động thể thao",
+        "email": "nonglambuffaloes@gmail.com",
+        "fanpage": "https://www.facebook.com/NonglamBuffaloes"
+      },
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "là_người_đứng_đầu_của"
+    },
+    {
+      "source": {
+        "name": "HỘI CỔ ĐỘNG VIÊN (NONG LAM BUFFALOES) NLB",
+        "slogan": "We are Nong Lam - We cheer Nong Lam",
+        "field_of_activity": "Thể thao, cổ động thể thao",
+        "email": "nonglambuffaloes@gmail.com",
+        "fanpage": "https://www.facebook.com/NonglamBuffaloes"
+      },
+      "target": {
+        "name": "Hội thể thao"
+      },
+      "type_source": "organization",
+      "type_target": "organization",
+      "relation": "được_quản_lý_bởi"
+    }
+  ]
+}

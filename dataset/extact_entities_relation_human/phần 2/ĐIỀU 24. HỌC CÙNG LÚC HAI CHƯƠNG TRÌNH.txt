@@ -1,980 +1,230 @@
 {
-  "entities": [
-    {
-      "name": "Sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "học phần",
-      "type": "COURSE_COMPONENT"
-    },
-    {
-      "name": "chương trình khác",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "ngành khác",
-      "type": "MAJOR"
-    },
-    {
-      "name": "quyền lợi chính thức",
-      "type": "RIGHT"
-    },
-    {
-      "name": "công nhận tốt nghiệp",
-      "type": "GRADUATION_RECOGNITION"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "khoản 2 Điều này",
-      "type": "ARTICLE_SECTION"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "năm thứ hai",
-      "type": "YEAR"
-    },
-    {
-      "name": "chương trình thứ nhất",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "thời điểm đăng ký",
-      "type": "TIME"
-    },
-    {
-      "name": "điều kiện",
-      "type": "CONDITION"
-    },
-    {
-      "name": "Học lực",
-      "type": "ACADEMIC_PERFORMANCE"
-    },
-    {
-      "name": "điểm trung bình tích lũy",
-      "type": "GPA"
-    },
-    {
-      "name": "loại khá trở lên",
-      "type": "RANK"
-    },
-    {
-      "name": "ngưỡng bảo đảm chất lượng",
-      "type": "QUALITY_THRESHOLD"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "năm tuyển sinh",
-      "type": "YEAR"
-    },
-    {
-      "name": "Học lực",
-      "type": "ACADEMIC_PERFORMANCE"
-    },
-    {
-      "name": "điểm trung bình tích lũy",
-      "type": "GPA"
-    },
-    {
-      "name": "loại trung bình",
-      "type": "RANK"
-    },
-    {
-      "name": "điều kiện trúng tuyển",
-      "type": "ADMISSION_CONDITION"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "năm tuyển sinh",
-      "type": "YEAR"
-    },
-    {
-      "name": "Khoa/Bộ môn",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "hai chương trình",
-      "type": "PROGRAM_GROUP"
-    },
-    {
-      "name": "điểm trung bình tích lũy",
-      "type": "GPA"
-    },
-    {
-      "name": "chương trình thứ nhất",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "điểm trung bình",
-      "type": "AVERAGE_GRADE"
-    },
-    {
-      "name": "diện cảnh báo kết quả học tập",
-      "type": "ACADEMIC_WARNING"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "học kỳ tiếp theo",
-      "type": "SEMESTER"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "02 (hai) học kỳ liên tiếp",
-      "type": "DURATION"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "danh sách",
-      "type": "LIST"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "hai chương trình",
-      "type": "PROGRAM_GROUP"
-    },
-    {
-      "name": "chế độ quyền lợi",
-      "type": "RIGHT"
-    },
-    {
-      "name": "chương trình thứ nhất",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Thời gian tối đa",
-      "type": "MAX_DURATION"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "hai chương trình",
-      "type": "PROGRAM_GROUP"
-    },
-    {
-      "name": "thời gian tối đa",
-      "type": "MAX_DURATION"
-    },
-    {
-      "name": "chương trình thứ nhất",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "khoản 8 Điều 2",
-      "type": "ARTICLE_SECTION"
-    },
-    {
-      "name": "Quy chế này",
-      "type": "REGULATION"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "kết quả",
-      "type": "RESULT"
-    },
-    {
-      "name": "học phần",
-      "type": "COURSE_COMPONENT"
-    },
-    {
-      "name": "nội dung",
-      "type": "CONTENT"
-    },
-    {
-      "name": "khối lượng kiến thức tương đương",
-      "type": "KNOWLEDGE_VOLUME"
-    },
-    {
-      "name": "chương trình thứ nhất",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "điểm học phần tối thiểu",
-      "type": "MINIMUM_GRADE"
-    },
-    {
-      "name": "C",
-      "type": "GRADE"
-    },
-    {
-      "name": "5,5",
-      "type": "GRADE"
-    },
-    {
-      "name": "thang điểm 10",
-      "type": "SCALE"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "xét tốt nghiệp",
-      "type": "GRADUATION_CONSIDERATION"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "điều kiện tốt nghiệp",
-      "type": "GRADUATION_CONDITION"
-    },
-    {
-      "name": "chương trình thứ nhất",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "02 (hai) năm",
-      "type": "DURATION"
-    },
-    {
-      "name": "thời điểm xét tốt nghiệp",
-      "type": "TIME"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Tổng số tín chỉ tối thiểu, tối đa",
-      "type": "CREDIT_LIMIT"
-    },
-    {
-      "name": "mỗi học kỳ",
-      "type": "SEMESTER"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "hai chương trình",
-      "type": "PROGRAM_GROUP"
-    },
-    {
-      "name": "Khoản 3 Điều 9",
-      "type": "ARTICLE_SECTION"
-    },
-    {
-      "name": "Quy chế này",
-      "type": "REGULATION"
-    },
-    {
-      "name": "Thủ tục đăng ký học chương trình thứ hai",
-      "type": "REGISTRATION_PROCEDURE"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "đơn đăng ký học chương trình thứ hai",
-      "type": "REGISTRATION_FORM"
-    },
-    {
-      "name": "đầu mỗi học kỳ chính",
-      "type": "SEMESTER_START"
-    },
-    {
-      "name": "Trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "quyết định chấp thuận",
-      "type": "APPROVAL_DECISION"
-    },
-    {
-      "name": "hai chương trình",
-      "type": "PROGRAM_GROUP"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "CTĐT",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "học phần",
-      "type": "COURSE_COMPONENT"
-    },
-    {
-      "name": "KHHT",
-      "type": "STUDY_PLAN"
-    },
-    {
-      "name": "Khoa",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "học phần",
-      "type": "COURSE_COMPONENT"
-    },
-    {
-      "name": "CTĐT thứ hai",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "CTĐT thứ nhất",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "Khoản 5",
-      "type": "ARTICLE_SECTION"
-    },
-    {
-      "name": "Điều này",
-      "type": "ARTICLE"
-    },
-    {
-      "name": "chương trình thứ nhất",
-      "type": "PROGRAM"
-    },
-    {
-      "name": "sinh viên",
-      "type": "STUDENT"
-    },
-    {
-      "name": "Khoa",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "chương trình thứ hai",
-      "type": "PROGRAM"
-    }
-  ],
   "relationships": [
     {
-      "source": "Sinh viên",
-      "target": "học phần",
-      "relation": "đăng_ký_học_thêm",
-      "type_source": "STUDENT",
-      "type_target": "COURSE_COMPONENT"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "chương trình khác",
-      "relation": "đăng_ký_học_thêm",
-      "type_source": "STUDENT",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "ngành khác",
-      "relation": "đăng_ký_học_thêm",
-      "type_source": "STUDENT",
-      "type_target": "MAJOR"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "quyền lợi chính thức",
-      "relation": "được_hưởng",
-      "type_source": "STUDENT",
-      "type_target": "RIGHT"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "công nhận tốt nghiệp chương trình thứ hai",
-      "relation": "được_xem_xét",
-      "type_source": "STUDENT",
-      "type_target": "GRADUATION_RECOGNITION"
-    },
-    {
-      "source": "công nhận tốt nghiệp chương trình thứ hai",
-      "target": "chương trình thứ hai",
-      "relation": "của",
-      "type_source": "GRADUATION_RECOGNITION",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "công nhận tốt nghiệp",
-      "target": "chương trình thứ hai",
-      "relation": "khi_đã_đăng_ký_thành_công",
-      "type_source": "GRADUATION_RECOGNITION",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "công nhận tốt nghiệp",
-      "target": "khoản 2 Điều này",
-      "relation": "theo_quy_định_tại",
-      "type_source": "GRADUATION_RECOGNITION",
-      "type_target": "ARTICLE_SECTION"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "chương trình thứ hai",
-      "relation": "được_đăng_ký_học",
-      "type_source": "STUDENT",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "chương trình thứ hai",
-      "target": "năm thứ hai",
-      "relation": "sớm_nhất_khi_đã_được_xếp_trình_độ",
-      "type_source": "PROGRAM",
-      "type_target": "YEAR"
-    },
-    {
-      "source": "năm thứ hai",
-      "target": "chương trình thứ nhất",
-      "relation": "của",
-      "type_source": "YEAR",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "điều kiện",
-      "relation": "phải_đáp_ứng",
-      "type_source": "STUDENT",
-      "type_target": "CONDITION"
-    },
-    {
-      "source": "điều kiện",
-      "target": "thời điểm đăng ký",
-      "relation": "tại",
-      "type_source": "CONDITION",
-      "type_target": "TIME"
-    },
-    {
-      "source": "Học lực",
-      "target": "điểm trung bình tích lũy",
-      "relation": "tính_theo",
-      "type_source": "ACADEMIC_PERFORMANCE",
-      "type_target": "GPA"
-    },
-    {
-      "source": "điểm trung bình tích lũy",
-      "target": "loại khá trở lên",
-      "relation": "xếp_loại",
-      "type_source": "GPA",
-      "type_target": "RANK"
-    },
-    {
-      "source": "Học lực",
-      "target": "ngưỡng bảo đảm chất lượng",
-      "relation": "đáp_ứng",
-      "type_source": "ACADEMIC_PERFORMANCE",
-      "type_target": "QUALITY_THRESHOLD"
-    },
-    {
-      "source": "ngưỡng bảo đảm chất lượng",
-      "target": "chương trình thứ hai",
-      "relation": "của",
-      "type_source": "QUALITY_THRESHOLD",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "ngưỡng bảo đảm chất lượng",
-      "target": "năm tuyển sinh",
-      "relation": "trong",
-      "type_source": "QUALITY_THRESHOLD",
-      "type_target": "YEAR"
-    },
-    {
-      "source": "Học lực",
-      "target": "điểm trung bình tích lũy",
-      "relation": "tính_theo",
-      "type_source": "ACADEMIC_PERFORMANCE",
-      "type_target": "GPA"
-    },
-    {
-      "source": "điểm trung bình tích lũy",
-      "target": "loại trung bình",
-      "relation": "xếp_loại",
-      "type_source": "GPA",
-      "type_target": "RANK"
-    },
-    {
-      "source": "Học lực",
-      "target": "điều kiện trúng tuyển",
-      "relation": "đáp_ứng",
-      "type_source": "ACADEMIC_PERFORMANCE",
-      "type_target": "ADMISSION_CONDITION"
-    },
-    {
-      "source": "điều kiện trúng tuyển",
-      "target": "chương trình thứ hai",
-      "relation": "của",
-      "type_source": "ADMISSION_CONDITION",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "điều kiện trúng tuyển",
-      "target": "năm tuyển sinh",
-      "relation": "trong",
-      "type_source": "ADMISSION_CONDITION",
-      "type_target": "YEAR"
-    },
-    {
-      "source": "Khoa/Bộ môn",
-      "target": "khả năng tiếp nhận thêm sinh viên",
-      "relation": "còn",
-      "type_source": "DEPARTMENT",
-      "type_target": "STUDENT"
-    },
-    {
-      "source": "Khoa/Bộ môn",
-      "target": "chương trình thứ hai",
-      "relation": "quản_lý",
-      "type_source": "DEPARTMENT",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "sinh viên",
-      "target": "hai chương trình",
-      "relation": "học_cùng_lúc",
-      "type_source": "STUDENT",
-      "type_target": "PROGRAM_GROUP"
-    },
-    {
-      "source": "điểm trung bình tích lũy",
-      "target": "chương trình thứ nhất",
-      "relation": "của",
-      "type_source": "GPA",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "điểm trung bình tích lũy",
-      "target": "điểm trung bình",
-      "relation": "đạt_dưới",
-      "type_source": "GPA",
-      "type_target": "AVERAGE_GRADE"
-    },
-    {
-      "source": "điểm trung bình tích lũy",
-      "target": "diện cảnh báo kết quả học tập",
-      "relation": "thuộc",
-      "type_source": "GPA",
-      "type_target": "ACADEMIC_WARNING"
-    },
-    {
-      "source": "sinh viên",
-      "target": "chương trình thứ hai",
-      "relation": "phải_dừng_học",
-      "type_source": "STUDENT",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "dừng học",
-      "target": "học kỳ tiếp theo",
-      "relation": "ở",
-      "type_source": "ACTION",
-      "type_target": "SEMESTER"
-    },
-    {
-      "source": "dừng học chương trình thứ hai",
-      "target": "02 (hai) học kỳ liên tiếp",
-      "relation": "nếu",
-      "type_source": "ACTION",
-      "type_target": "DURATION"
-    },
-    {
-      "source": "sinh viên",
-      "target": "danh sách",
-      "relation": "bị_loại_khỏi",
-      "type_source": "STUDENT",
-      "type_target": "LIST"
-    },
-    {
-      "source": "danh sách",
-      "target": "chương trình thứ hai",
-      "relation": "đã_đăng_ký_học",
-      "type_source": "LIST",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "hai chương trình",
-      "relation": "học",
-      "type_source": "STUDENT",
-      "type_target": "PROGRAM_GROUP"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "chế độ quyền lợi",
-      "relation": "chỉ_được_hưởng",
-      "type_source": "STUDENT",
-      "type_target": "RIGHT"
-    },
-    {
-      "source": "chế độ quyền lợi",
-      "target": "chương trình thứ nhất",
-      "relation": "đối_với",
-      "type_source": "RIGHT",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "Thời gian tối đa",
-      "target": "sinh viên",
-      "relation": "được_phép_học",
-      "type_source": "MAX_DURATION",
-      "type_target": "STUDENT"
-    },
-    {
-      "source": "sinh viên",
-      "target": "hai chương trình",
-      "relation": "học_cùng_lúc",
-      "type_source": "STUDENT",
-      "type_target": "PROGRAM_GROUP"
-    },
-    {
-      "source": "Thời gian tối đa",
-      "target": "thời gian tối đa",
-      "relation": "là",
-      "type_source": "MAX_DURATION",
-      "type_target": "MAX_DURATION"
-    },
-    {
-      "source": "thời gian tối đa",
-      "target": "chương trình thứ nhất",
-      "relation": "cho",
-      "type_source": "MAX_DURATION",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "thời gian tối đa",
-      "target": "khoản 8 Điều 2",
-      "relation": "quy_định_tại",
-      "type_source": "MAX_DURATION",
-      "type_target": "ARTICLE_SECTION"
-    },
-    {
-      "source": "Quy chế này",
-      "target": "khoản 8 Điều 2",
-      "relation": "của",
-      "type_source": "REGULATION",
-      "type_target": "ARTICLE_SECTION"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "chương trình thứ hai",
-      "relation": "học",
-      "type_source": "STUDENT",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "kết quả",
-      "relation": "chỉ_được_công_nhận",
-      "type_source": "STUDENT",
-      "type_target": "RESULT"
-    },
-    {
-      "source": "kết quả",
-      "target": "học phần",
-      "relation": "của",
-      "type_source": "RESULT",
-      "type_target": "COURSE_COMPONENT"
-    },
-    {
-      "source": "học phần",
-      "target": "nội dung",
-      "relation": "có",
-      "type_source": "COURSE_COMPONENT",
-      "type_target": "CONTENT"
-    },
-    {
-      "source": "học phần",
-      "target": "khối lượng kiến thức tương đương",
-      "relation": "có",
-      "type_source": "COURSE_COMPONENT",
-      "type_target": "KNOWLEDGE_VOLUME"
-    },
-    {
-      "source": "khối lượng kiến thức tương đương",
-      "target": "chương trình thứ nhất",
-      "relation": "có_trong",
-      "type_source": "KNOWLEDGE_VOLUME",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "điểm học phần tối thiểu",
-      "target": "C",
-      "relation": "là",
-      "type_source": "MINIMUM_GRADE",
-      "type_target": "GRADE"
-    },
-    {
-      "source": "điểm học phần tối thiểu",
-      "target": "5,5",
-      "relation": "là",
-      "type_source": "MINIMUM_GRADE",
-      "type_target": "GRADE"
-    },
-    {
-      "source": "5,5",
-      "target": "thang điểm 10",
-      "relation": "theo",
-      "type_source": "GRADE",
-      "type_target": "SCALE"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "xét tốt nghiệp chương trình thứ hai",
-      "relation": "chỉ_được",
-      "type_source": "STUDENT",
-      "type_target": "GRADUATION_CONSIDERATION"
-    },
-    {
-      "source": "xét tốt nghiệp chương trình thứ hai",
-      "target": "chương trình thứ hai",
-      "relation": "của",
-      "type_source": "GRADUATION_CONSIDERATION",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "xét tốt nghiệp",
-      "target": "điều kiện tốt nghiệp",
-      "relation": "có_đủ",
-      "type_source": "GRADUATION_CONSIDERATION",
-      "type_target": "GRADUATION_CONDITION"
-    },
-    {
-      "source": "điều kiện tốt nghiệp",
-      "target": "chương trình thứ nhất",
-      "relation": "ở",
-      "type_source": "GRADUATION_CONDITION",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "xét tốt nghiệp",
-      "target": "02 (hai) năm",
-      "relation": "đã_đăng_kí_muộn_nhất",
-      "type_source": "GRADUATION_CONSIDERATION",
-      "type_target": "DURATION"
-    },
-    {
-      "source": "02 (hai) năm",
-      "target": "thời điểm xét tốt nghiệp chương trình thứ hai",
-      "relation": "trước",
-      "type_source": "DURATION",
-      "type_target": "TIME"
-    },
-    {
-      "source": "thời điểm xét tốt nghiệp chương trình thứ hai",
-      "target": "chương trình thứ hai",
-      "relation": "của",
-      "type_source": "TIME",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "Tổng số tín chỉ tối thiểu, tối đa",
-      "target": "sinh viên",
-      "relation": "được_đăng_ký",
-      "type_source": "CREDIT_LIMIT",
-      "type_target": "STUDENT"
-    },
-    {
-      "source": "sinh viên",
-      "target": "hai chương trình",
-      "relation": "học_cùng_lúc",
-      "type_source": "STUDENT",
-      "type_target": "PROGRAM_GROUP"
-    },
-    {
-      "source": "Tổng số tín chỉ tối thiểu, tối đa",
-      "target": "mỗi học kỳ",
-      "relation": "trong",
-      "type_source": "CREDIT_LIMIT",
-      "type_target": "SEMESTER"
-    },
-    {
-      "source": "Tổng số tín chỉ tối thiểu, tối đa",
-      "target": "Khoản 3 Điều 9",
-      "relation": "được_quy_định_tại",
-      "type_source": "CREDIT_LIMIT",
-      "type_target": "ARTICLE_SECTION"
-    },
-    {
-      "source": "Quy chế này",
-      "target": "Khoản 3 Điều 9",
-      "relation": "của",
-      "type_source": "REGULATION",
-      "type_target": "ARTICLE_SECTION"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "đơn đăng ký học chương trình thứ hai",
-      "relation": "phải_làm",
-      "type_source": "STUDENT",
-      "type_target": "REGISTRATION_FORM"
-    },
-    {
-      "source": "đơn đăng ký học chương trình thứ hai",
-      "target": "đầu mỗi học kỳ chính",
-      "relation": "trước",
-      "type_source": "REGISTRATION_FORM",
-      "type_target": "SEMESTER_START"
-    },
-    {
-      "source": "đầu mỗi học kỳ chính",
-      "target": "Trường",
-      "relation": "theo_thông_báo_của",
-      "type_source": "SEMESTER_START",
-      "type_target": "ORGANIZATION"
-    },
-    {
-      "source": "quyết định chấp thuận",
-      "target": "hai chương trình",
-      "relation": "học_cùng_lúc",
-      "type_source": "APPROVAL_DECISION",
-      "type_target": "PROGRAM_GROUP"
-    },
-    {
-      "source": "quyết định chấp thuận",
-      "target": "sinh viên",
-      "relation": "khi_có",
-      "type_source": "APPROVAL_DECISION",
-      "type_target": "STUDENT"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "CTĐT",
-      "relation": "nghiên_cứu",
-      "type_source": "STUDENT",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "CTĐT",
-      "target": "chương trình thứ hai",
-      "relation": "của",
-      "type_source": "PROGRAM",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "học phần",
-      "relation": "bổ_sung",
-      "type_source": "STUDENT",
-      "type_target": "COURSE_COMPONENT"
-    },
-    {
-      "source": "học phần",
-      "target": "KHHT",
-      "relation": "vào",
-      "type_source": "COURSE_COMPONENT",
-      "type_target": "STUDY_PLAN"
-    },
-    {
-      "source": "Khoa",
-      "target": "học phần",
-      "relation": "sẽ_xét",
-      "type_source": "DEPARTMENT",
-      "type_target": "COURSE_COMPONENT"
-    },
-    {
-      "source": "học phần",
-      "target": "CTĐT thứ hai",
-      "relation": "của",
-      "type_source": "COURSE_COMPONENT",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "học phần",
-      "target": "CTĐT thứ nhất",
-      "relation": "đã_tích_lũy_ở",
-      "type_source": "COURSE_COMPONENT",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "miễn học phần",
-      "target": "Khoản 5 của Điều này",
-      "relation": "do",
-      "type_source": "ACTION",
-      "type_target": "ARTICLE_SECTION"
-    },
-    {
-      "source": "Khoản 5 của Điều này",
-      "target": "Điều này",
-      "relation": "của",
-      "type_source": "ARTICLE_SECTION",
-      "type_target": "ARTICLE"
-    },
-    {
-      "source": "Khoản 5 của Điều này",
-      "target": "Khoản 5",
-      "relation": "là",
-      "type_source": "ARTICLE_SECTION",
-      "type_target": "ARTICLE_SECTION"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "chương trình thứ nhất",
-      "relation": "tốt_nghiệp",
-      "type_source": "STUDENT",
-      "type_target": "PROGRAM"
-    },
-    {
-      "source": "Sinh viên",
-      "target": "Khoa",
-      "relation": "được_chuyển_về",
-      "type_source": "STUDENT",
-      "type_target": "DEPARTMENT"
-    },
-    {
-      "source": "Khoa",
-      "target": "chương trình thứ hai",
-      "relation": "quản_lý",
-      "type_source": "DEPARTMENT",
-      "type_target": "PROGRAM"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người học",
+        "action_description": "Đăng ký học thêm học phần"
+      },
+      "target": {
+        "name": "Các học phần của một chương trình khác",
+        "source_program_type": "Chương trình khác",
+        "status": "Có thể đăng ký"
+      },
+      "type_source": "student",
+      "type_target": "course",
+      "relation": "có_thể_đăng_ký"
+    },
+    {
+      "source": {
+        "name": "Đăng ký thành công chương trình thứ hai",
+        "process_type": "Đăng ký học",
+        "program_name": "Chương trình thứ hai",
+        "status": "Thành công"
+      },
+      "target": {
+        "name": "Khoản 2 Điều này",
+        "document_source": "Quy chế học vụ",
+        "content_reference": "Quy định đăng ký chương trình thứ hai"
+      },
+      "type_source": "registration_process",
+      "type_target": "regulation_clause",
+      "relation": "theo_quy_định_của"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "academic_level_ct1": "Chưa đạt năm thứ hai",
+        "action_description": "Đăng ký học chương trình thứ hai"
+      },
+      "target": {
+        "name": "Chương trình thứ hai",
+        "registration_condition": "Sớm nhất khi đã được xếp trình độ năm thứ hai của chương trình thứ nhất",
+        "program_type": "Chương trình đào tạo bổ sung"
+      },
+      "type_source": "student",
+      "type_target": "academic_program",
+      "relation": "được_đăng_ký_học_khi_đạt_trình_độ"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "context": "Đăng ký chương trình thứ hai",
+        "time_point": "Thời điểm đăng ký"
+      },
+      "target": {
+        "name": "Điều kiện đăng ký chương trình thứ hai",
+        "type_a_academic": "Học lực Khá trở lên và đáp ứng ngưỡng BĐCL, HOẶC học lực Trung bình và đáp ứng ĐK trúng tuyển",
+        "type_b_capacity": "Khoa/Bộ môn quản lý còn khả năng tiếp nhận"
+      },
+      "type_source": "student",
+      "type_target": "condition",
+      "relation": "phải_đáp_ứng"
+    },
+    {
+      "source": {
+        "name": "Điểm trung bình tích lũy của chương trình thứ nhất",
+        "owner": "Sinh viên học cùng lúc hai chương trình",
+        "evaluation_criteria": "Dưới điểm trung bình hoặc thuộc diện cảnh báo học tập"
+      },
+      "target": {
+        "name": "Việc học chương trình thứ hai",
+        "action_result": "Phải dừng học",
+        "timing": "Học kỳ tiếp theo"
+      },
+      "type_source": "academic_performance_metric",
+      "type_target": "study_activity",
+      "relation": "dẫn_đến_việc_dừng"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "status_condition": "Dừng học chương trình thứ hai 02 học kỳ liên tiếp",
+        "program_context": "Chương trình thứ hai"
+      },
+      "target": {
+        "name": "Danh sách đã đăng ký học chương trình thứ hai",
+        "program_association": "Chương trình thứ hai",
+        "consequence": "Bị loại khỏi"
+      },
+      "type_source": "student",
+      "type_target": "registration_list",
+      "relation": "bị_loại_khỏi"
+    },
+    {
+      "source": {
+        "name": "Sinh viên học hai chương trình",
+        "benefit_context": "Hưởng chế độ quyền lợi",
+        "program_count": "Hai chương trình"
+      },
+      "target": {
+        "name": "Chương trình thứ nhất",
+        "benefit_applicability": "Chỉ đối với chương trình này",
+        "program_role": "Chương trình chính"
+      },
+      "type_source": "student",
+      "type_target": "academic_program",
+      "relation": "hưởng_quyền_lợi_từ"
+    },
+    {
+      "source": {
+        "name": "Thời gian tối đa được phép học (SV học hai chương trình)",
+        "student_category": "Sinh viên học cùng lúc hai chương trình",
+        "regulation_type": "Thời gian học"
+      },
+      "target": {
+        "name": "Thời gian tối đa quy định cho chương trình thứ nhất",
+        "program_association": "Chương trình thứ nhất",
+        "reference_clause": "Khoản 8 Điều 2 của Quy chế này"
+      },
+      "type_source": "study_time_limit",
+      "type_target": "study_time_limit",
+      "relation": "bằng_với"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "context": "Học chương trình thứ hai",
+        "action": "Xin công nhận kết quả học phần"
+      },
+      "target": {
+        "name": "Kết quả học phần từ chương trình thứ nhất",
+        "condition_equivalence": "Nội dung và khối lượng kiến thức tương đương",
+        "condition_grade": "Điểm học phần tối thiểu C (hoặc 5.5)"
+      },
+      "type_source": "student",
+      "type_target": "course_result",
+      "relation": "chỉ_được_công_nhận_nếu_đáp_ứng"
+    },
+    {
+      "source": {
+        "name": "Xét tốt nghiệp chương trình thứ hai",
+        "process_for_student": "Sinh viên",
+        "program_name": "Chương trình thứ hai"
+      },
+      "target": {
+        "name": "Điều kiện tốt nghiệp ở chương trình thứ nhất",
+        "required_status": "Đủ điều kiện",
+        "program_association": "Chương trình thứ nhất"
+      },
+      "type_source": "graduation_process",
+      "type_target": "graduation_condition",
+      "relation": "yêu_cầu_hoàn_thành"
+    },
+    {
+      "source": {
+        "name": "Xét tốt nghiệp chương trình thứ hai",
+        "process_for_student": "Sinh viên",
+        "program_name": "Chương trình thứ hai"
+      },
+      "target": {
+        "name": "Đăng ký chương trình thứ hai",
+        "timing_requirement": "Muộn nhất 02 năm trước thời điểm xét tốt nghiệp CT2",
+        "status": "Đã hoàn thành"
+      },
+      "type_source": "graduation_process",
+      "type_target": "registration_process",
+      "relation": "yêu_cầu_đăng_ký_trước_thời_hạn"
+    },
+    {
+      "source": {
+        "name": "Tổng số tín chỉ đăng ký mỗi học kỳ (SV học hai chương trình)",
+        "student_category": "Sinh viên học cùng lúc hai chương trình",
+        "limit_type": "Tối thiểu, tối đa tín chỉ"
+      },
+      "target": {
+        "name": "Khoản 3 Điều 9 của Quy chế này",
+        "document_source": "Quy chế học vụ",
+        "topic_covered": "Giới hạn tín chỉ đăng ký"
+      },
+      "type_source": "credit_limit",
+      "type_target": "regulation_clause",
+      "relation": "quy_định_tại"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "action_required": "Làm đơn đăng ký",
+        "purpose_of_action": "Đăng ký học chương trình thứ hai"
+      },
+      "target": {
+        "name": "Đơn đăng ký học chương trình thứ hai",
+        "submission_deadline": "Trước đầu mỗi học kỳ chính",
+        "guidance_source": "Thông báo của Trường"
+      },
+      "type_source": "student",
+      "type_target": "application_form",
+      "relation": "phải_nộp"
+    },
+    {
+      "source": {
+        "name": "Khoa quản lý chương trình thứ hai",
+        "role": "Đơn vị xét duyệt",
+        "action_taken": "Xét miễn học phần"
+      },
+      "target": {
+        "name": "Học phần của CTĐT thứ hai",
+        "exemption_basis": "Đã tích lũy ở CTĐT thứ nhất",
+        "regulation_reference": "Khoản 5 của Điều này"
+      },
+      "type_source": "organization_unit",
+      "type_target": "course",
+      "relation": "xét_miễn"
+    },
+    {
+      "source": {
+        "name": "Sinh viên",
+        "status_change_trigger": "Sau khi tốt nghiệp chương trình thứ nhất",
+        "current_program_focus": "Chuyển sang chương trình thứ hai"
+      },
+      "target": {
+        "name": "Khoa quản lý chương trình thứ hai",
+        "new_responsibility": "Quản lý sinh viên",
+        "reason_for_transfer": "Để tiếp tục học chương trình thứ hai"
+      },
+      "type_source": "student",
+      "type_target": "organization_unit",
+      "relation": "được_chuyển_về_quản_lý_bởi"
     }
   ]
 }

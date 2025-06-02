@@ -1,68 +1,117 @@
 {
-  "entities": [
-    {
-      "name": "hoạt động Đoàn – Hội",
-      "type": "YOUTH_ACTIVITY"
-    },
-    {
-      "name": "giấy khen",
-      "type": "AWARD"
-    },
-    {
-      "name": "bằng khen",
-      "type": "AWARD"
-    },
-    {
-      "name": "các cấp Đoàn – Hội",
-      "type": "YOUTH_LEVELS"
-    },
-    {
-      "name": "cấp trường",
-      "type": "SCHOOL_LEVEL"
-    }
-  ],
   "relationships": [
     {
-      "source": "sinh viên",
-      "target": "hoạt động Đoàn – Hội",
-      "relation": "tham_gia",
-      "type_source": "STUDENT",
-      "type_target": "YOUTH_ACTIVITY"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người tham gia",
+        "participation_level": "Tích cực",
+        "activity_context": "Hoạt động Đoàn – Hội",
+        "status_implication": "Đáp ứng một tiêu chí đánh giá"
+      },
+      "target": {
+        "name": "Hoạt động Đoàn – Hội",
+        "category": "Hoạt động phong trào",
+        "organizer_type": "Đoàn Thanh niên – Hội Sinh viên",
+        "purpose": "Rèn luyện, đóng góp, phát triển kỹ năng"
+      },
+      "type_source": "student_group",
+      "type_target": "youth_union_student_association_activity",
+      "relation": "tham_gia_tích_cực"
     },
     {
-      "source": "sinh viên",
-      "target": "giấy khen",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "AWARD"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người được khen thưởng",
+        "possession": "Giấy khen",
+        "basis_of_award": "Thành tích trong hoạt động Đoàn - Hội",
+        "status_implication": "Đáp ứng một tiêu chí đánh giá"
+      },
+      "target": {
+        "name": "Giấy khen",
+        "document_type": "Chứng nhận khen thưởng",
+        "issuing_authority_scope": "Các cấp Đoàn – Hội",
+        "minimum_issuing_level": "Cấp trường",
+        "significance": "Ghi nhận đóng góp hoặc thành tích"
+      },
+      "type_source": "student_group",
+      "type_target": "certificate_of_merit",
+      "relation": "có"
     },
     {
-      "source": "sinh viên",
-      "target": "bằng khen",
-      "relation": "có",
-      "type_source": "STUDENT",
-      "type_target": "AWARD"
+      "source": {
+        "name": "Sinh viên",
+        "role": "Người được khen thưởng",
+        "possession": "Bằng khen",
+        "basis_of_award": "Thành tích xuất sắc trong hoạt động Đoàn - Hội",
+        "status_implication": "Đáp ứng một tiêu chí đánh giá"
+      },
+      "target": {
+        "name": "Bằng khen",
+        "document_type": "Chứng nhận khen thưởng cao hơn",
+        "issuing_authority_scope": "Các cấp Đoàn – Hội",
+        "minimum_issuing_level": "Cấp trường",
+        "significance": "Ghi nhận đóng góp hoặc thành tích xuất sắc"
+      },
+      "type_source": "student_group",
+      "type_target": "diploma_of_merit",
+      "relation": "có"
     },
     {
-      "source": "giấy khen",
-      "target": "các cấp Đoàn – Hội",
-      "relation": "của",
-      "type_source": "AWARD",
-      "type_target": "YOUTH_LEVELS"
+      "source": {
+        "name": "Giấy khen",
+        "document_type": "Chứng nhận khen thưởng",
+        "award_context": "Hoạt động Đoàn – Hội",
+        "level_requirement_text": "Từ cấp trường trở lên",
+        "intended_recipient_type": "Cá nhân/tập thể có thành tích"
+      },
+      "target": {
+        "name": "Các cấp Đoàn – Hội",
+        "organizational_type": "Tổ chức chính trị - xã hội",
+        "role": "Cấp phát khen thưởng",
+        "hierarchical_description": "Bao gồm cấp trường và các cấp cao hơn",
+        "scope_of_authority": "Trong hệ thống Đoàn - Hội"
+      },
+      "type_source": "certificate_of_merit",
+      "type_target": "youth_union_student_association_level",
+      "relation": "được_cấp_bởi"
     },
     {
-      "source": "bằng khen",
-      "target": "các cấp Đoàn – Hội",
-      "relation": "của",
-      "type_source": "AWARD",
-      "type_target": "YOUTH_LEVELS"
+      "source": {
+        "name": "Bằng khen",
+        "document_type": "Chứng nhận khen thưởng cao hơn",
+        "award_context": "Hoạt động Đoàn – Hội",
+        "level_requirement_text": "Từ cấp trường trở lên",
+        "intended_recipient_type": "Cá nhân/tập thể có thành tích xuất sắc"
+      },
+      "target": {
+        "name": "Các cấp Đoàn – Hội",
+        "organizational_type": "Tổ chức chính trị - xã hội",
+        "role": "Cấp phát khen thưởng",
+        "hierarchical_description": "Bao gồm cấp trường và các cấp cao hơn",
+        "scope_of_authority": "Trong hệ thống Đoàn - Hội"
+      },
+      "type_source": "diploma_of_merit",
+      "type_target": "youth_union_student_association_level",
+      "relation": "được_cấp_bởi"
     },
     {
-      "source": "các cấp Đoàn – Hội",
-      "target": "cấp trường",
-      "relation": "từ",
-      "type_source": "YOUTH_LEVELS",
-      "type_target": "SCHOOL_LEVEL"
+      "source": {
+        "name": "Các cấp Đoàn – Hội",
+        "description": "Hệ thống tổ chức của Đoàn Thanh niên và Hội Sinh viên",
+        "hierarchical_nature": "Phân cấp từ cơ sở đến trung ương",
+        "function_relevant_to_context": "Khen thưởng thành tích",
+        "level_specification_text": "Từ cấp trường trở lên"
+      },
+      "target": {
+        "name": "Cấp trường",
+        "level_type": "Cấp độ tổ chức cơ sở",
+        "context": "Trong hệ thống Đoàn – Hội tại một trường học",
+        "significance": "Là mức khởi điểm cho các khen thưởng được đề cập",
+        "relation_to_hierarchy": "Một trong các cấp thuộc Các cấp Đoàn - Hội"
+      },
+      "type_source": "youth_union_student_association_level",
+      "type_target": "school_level",
+      "relation": "có_mức_thấp_nhất_là"
     }
   ]
 }

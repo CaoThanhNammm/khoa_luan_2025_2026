@@ -1,225 +1,251 @@
 {
-  "entities": [
-    {
-      "name": "nội dung",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "trực tuyến",
-      "type": "METHOD"
-    },
-    {
-      "name": "WEBSITE",
-      "type": "PLATFORM"
-    },
-    {
-      "name": "Sinh viên",
-      "type": "PERSON_GROUP"
-    },
-    {
-      "name": "quy định",
-      "type": "REGULATION"
-    },
-    {
-      "name": "Chương 2",
-      "type": "SECTION"
-    },
-    {
-      "name": "Chương 3",
-      "type": "SECTION"
-    },
-    {
-      "name": "trả lời thỏa đáng",
-      "type": "ACTION"
-    },
-    {
-      "name": "phản ánh",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "góp ý",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "kiến nghị",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "công tác đào tạo",
-      "type": "ACTIVITY"
-    },
-    {
-      "name": "công tác sinh viên",
-      "type": "ACTIVITY"
-    },
-    {
-      "name": "nhà trường",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "câu hỏi",
-      "type": "CONCEPT"
-    },
-    {
-      "name": "vấn đề",
-      "type": "PROBLEM"
-    },
-    {
-      "name": "khoản 2 điều 10",
-      "type": "REFERENCE"
-    },
-    {
-      "name": "trả lời",
-      "type": "ACTION"
-    }
-  ],
   "relationships": [
     {
-      "source": "nội dung",
-      "target": "trực tuyến",
-      "type_source": "CONCEPT",
-      "type_target": "METHOD",
-      "relation": "NÓI"
+      "source": {
+        "name": "Sinh viên",
+        "type": "person_role",
+        "role_description": "Người học tại nhà trường",
+        "action_context": "Thực hiện quy định, đưa ra phản ánh, đặt câu hỏi",
+        "expectation": "Nhận được giải quyết/trả lời thỏa đáng"
+      },
+      "target": {
+        "name": "Các quy định tại Chương 2",
+        "type": "document_section",
+        "document_source": "Văn bản quy chế/nội quy của nhà trường",
+        "chapter_reference": "Chương 2",
+        "content_summary": "Các quy định sinh viên cần tuân thủ giai đoạn 1"
+      },
+      "type_source": "person_role",
+      "type_target": "document_section",
+      "relation": "đã_thực_hiện_đầy_đủ"
     },
     {
-      "source": "trực tuyến",
-      "target": "WEBSITE",
-      "type_source": "METHOD",
-      "type_target": "PLATFORM",
-      "relation": "TRÊN"
+      "source": {
+        "name": "Sinh viên",
+        "type": "person_role",
+        "role_description": "Người học tại nhà trường",
+        "action_context": "Thực hiện quy định, đưa ra phản ánh, đặt câu hỏi",
+        "expectation": "Nhận được giải quyết/trả lời thỏa đáng"
+      },
+      "target": {
+        "name": "Các quy định tại Chương 3",
+        "type": "document_section",
+        "document_source": "Văn bản quy chế/nội quy của nhà trường",
+        "chapter_reference": "Chương 3",
+        "content_summary": "Các quy định sinh viên cần tuân thủ giai đoạn 2"
+      },
+      "type_source": "person_role",
+      "type_target": "document_section",
+      "relation": "đã_thực_hiện_đầy_đủ"
     },
     {
-      "source": "Sinh viên",
-      "target": "quy định",
-      "type_source": "PERSON_GROUP",
-      "type_target": "REGULATION",
-      "relation": "THỰC_HIỆN"
+      "source": {
+        "name": "Sinh viên",
+        "type": "person_role",
+        "role_description": "Người học tại nhà trường",
+        "action_context": "Thực hiện quy định, đưa ra phản ánh, đặt câu hỏi",
+        "expectation": "Nhận được giải quyết/trả lời thỏa đáng"
+      },
+      "target": {
+        "name": "Việc trả lời thỏa đáng",
+        "type": "process_outcome",
+        "desired_state": "Thỏa đáng",
+        "recipient_context": "Sinh viên sau khi thực hiện quy định",
+        "current_status_in_text": "Chưa đạt được"
+      },
+      "type_source": "person_role",
+      "type_target": "process_outcome",
+      "relation": "chưa_đạt_được"
     },
     {
-      "source": "quy định",
-      "target": "Chương 2",
-      "type_source": "REGULATION",
-      "type_target": "SECTION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Những phản ánh của sinh viên",
+        "type": "information_item",
+        "information_category": "Phản ánh",
+        "originator_group": "Sinh viên",
+        "topic_focus": "Công tác đào tạo, công tác sinh viên"
+      },
+      "target": {
+        "name": "Công tác đào tạo",
+        "type": "activity_area",
+        "area_description": "Hoạt động liên quan đến giảng dạy và học tập",
+        "managing_organization": "Nhà trường",
+        "relevance_to_feedback": "Đối tượng của phản ánh, góp ý, kiến nghị"
+      },
+      "type_source": "information_item",
+      "type_target": "activity_area",
+      "relation": "về"
     },
     {
-      "source": "quy định",
-      "target": "Chương 3",
-      "type_source": "REGULATION",
-      "type_target": "SECTION",
-      "relation": "TẠI"
+      "source": {
+        "name": "Những phản ánh của sinh viên",
+        "type": "information_item",
+        "information_category": "Phản ánh",
+        "originator_group": "Sinh viên",
+        "topic_focus": "Công tác đào tạo, công tác sinh viên"
+      },
+      "target": {
+        "name": "Công tác sinh viên",
+        "type": "activity_area",
+        "area_description": "Hoạt động liên quan đến quản lý, hỗ trợ sinh viên",
+        "managing_organization": "Nhà trường",
+        "relevance_to_feedback": "Đối tượng của phản ánh, góp ý, kiến nghị"
+      },
+      "type_source": "information_item",
+      "type_target": "activity_area",
+      "relation": "về"
     },
     {
-      "source": "Sinh viên",
-      "target": "trả lời thỏa đáng",
-      "type_source": "PERSON_GROUP",
-      "type_target": "ACTION",
-      "relation": "CHƯA_ĐƯỢC"
+      "source": {
+        "name": "Những góp ý của sinh viên",
+        "type": "information_item",
+        "information_category": "Góp ý",
+        "originator_group": "Sinh viên",
+        "topic_focus": "Công tác đào tạo, công tác sinh viên"
+      },
+      "target": {
+        "name": "Công tác đào tạo",
+        "type": "activity_area",
+        "area_description": "Hoạt động liên quan đến giảng dạy và học tập",
+        "managing_organization": "Nhà trường",
+        "relevance_to_feedback": "Đối tượng của phản ánh, góp ý, kiến nghị"
+      },
+      "type_source": "information_item",
+      "type_target": "activity_area",
+      "relation": "về"
     },
     {
-      "source": "phản ánh",
-      "target": "Sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Những góp ý của sinh viên",
+        "type": "information_item",
+        "information_category": "Góp ý",
+        "originator_group": "Sinh viên",
+        "topic_focus": "Công tác đào tạo, công tác sinh viên"
+      },
+      "target": {
+        "name": "Công tác sinh viên",
+        "type": "activity_area",
+        "area_description": "Hoạt động liên quan đến quản lý, hỗ trợ sinh viên",
+        "managing_organization": "Nhà trường",
+        "relevance_to_feedback": "Đối tượng của phản ánh, góp ý, kiến nghị"
+      },
+      "type_source": "information_item",
+      "type_target": "activity_area",
+      "relation": "về"
     },
     {
-      "source": "góp ý",
-      "target": "Sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Những kiến nghị của sinh viên",
+        "type": "information_item",
+        "information_category": "Kiến nghị",
+        "originator_group": "Sinh viên",
+        "topic_focus": "Công tác đào tạo, công tác sinh viên"
+      },
+      "target": {
+        "name": "Công tác đào tạo",
+        "type": "activity_area",
+        "area_description": "Hoạt động liên quan đến giảng dạy và học tập",
+        "managing_organization": "Nhà trường",
+        "relevance_to_feedback": "Đối tượng của phản ánh, góp ý, kiến nghị"
+      },
+      "type_source": "information_item",
+      "type_target": "activity_area",
+      "relation": "về"
     },
     {
-      "source": "kiến nghị",
-      "target": "Sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Những kiến nghị của sinh viên",
+        "type": "information_item",
+        "information_category": "Kiến nghị",
+        "originator_group": "Sinh viên",
+        "topic_focus": "Công tác đào tạo, công tác sinh viên"
+      },
+      "target": {
+        "name": "Công tác sinh viên",
+        "type": "activity_area",
+        "area_description": "Hoạt động liên quan đến quản lý, hỗ trợ sinh viên",
+        "managing_organization": "Nhà trường",
+        "relevance_to_feedback": "Đối tượng của phản ánh, góp ý, kiến nghị"
+      },
+      "type_source": "information_item",
+      "type_target": "activity_area",
+      "relation": "về"
     },
     {
-      "source": "phản ánh",
-      "target": "công tác đào tạo",
-      "type_source": "CONCEPT",
-      "type_target": "ACTIVITY",
-      "relation": "VỀ"
+      "source": {
+        "name": "Công tác đào tạo",
+        "type": "activity_area",
+        "area_description": "Hoạt động liên quan đến giảng dạy và học tập",
+        "managing_organization": "Nhà trường",
+        "relevance_to_feedback": "Đối tượng của phản ánh, góp ý, kiến nghị"
+      },
+      "target": {
+        "name": "Nhà trường",
+        "type": "organization",
+        "organization_role": "Đơn vị quản lý công tác đào tạo và công tác sinh viên",
+        "responsibility_context": "Tiếp nhận phản hồi từ sinh viên",
+        "scope_of_operations": "Giáo dục và đào tạo"
+      },
+      "type_source": "activity_area",
+      "type_target": "organization",
+      "relation": "thuộc_về"
     },
     {
-      "source": "góp ý",
-      "target": "công tác đào tạo",
-      "type_source": "CONCEPT",
-      "type_target": "ACTIVITY",
-      "relation": "VỀ"
+      "source": {
+        "name": "Công tác sinh viên",
+        "type": "activity_area",
+        "area_description": "Hoạt động liên quan đến quản lý, hỗ trợ sinh viên",
+        "managing_organization": "Nhà trường",
+        "relevance_to_feedback": "Đối tượng của phản ánh, góp ý, kiến nghị"
+      },
+      "target": {
+        "name": "Nhà trường",
+        "type": "organization",
+        "organization_role": "Đơn vị quản lý công tác đào tạo và công tác sinh viên",
+        "responsibility_context": "Tiếp nhận phản hồi từ sinh viên",
+        "scope_of_operations": "Giáo dục và đào tạo"
+      },
+      "type_source": "activity_area",
+      "type_target": "organization",
+      "relation": "thuộc_về"
     },
     {
-      "source": "kiến nghị",
-      "target": "công tác đào tạo",
-      "type_source": "CONCEPT",
-      "type_target": "ACTIVITY",
-      "relation": "VỀ"
+      "source": {
+        "name": "Những câu hỏi của sinh viên",
+        "type": "information_item",
+        "information_category": "Câu hỏi",
+        "originator_group": "Sinh viên",
+        "response_policy_note": "Không được trả lời nếu ngoài vấn đề khoản 2 Điều 10"
+      },
+      "target": {
+        "name": "Những vấn đề nêu trong các khoản 2 của Điều 10",
+        "type": "defined_issue_set",
+        "source_specification": "Các khoản 2 của Điều 10",
+        "purpose_in_text": "Xác định phạm vi câu hỏi được trả lời",
+        "content_description": "Các chủ đề/nội dung cụ thể được quy định làm cơ sở trả lời"
+      },
+      "type_source": "information_item",
+      "type_target": "defined_issue_set",
+      "relation": "có_điều_kiện_trả_lời_dựa_trên"
     },
     {
-      "source": "phản ánh",
-      "target": "công tác sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "ACTIVITY",
-      "relation": "VỀ"
-    },
-    {
-      "source": "góp ý",
-      "target": "công tác sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "ACTIVITY",
-      "relation": "VỀ"
-    },
-    {
-      "source": "kiến nghị",
-      "target": "công tác sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "ACTIVITY",
-      "relation": "VỀ"
-    },
-    {
-      "source": "công tác đào tạo",
-      "target": "nhà trường",
-      "type_source": "ACTIVITY",
-      "type_target": "ORGANIZATION",
-      "relation": "CỦA"
-    },
-    {
-      "source": "công tác sinh viên",
-      "target": "nhà trường",
-      "type_source": "ACTIVITY",
-      "type_target": "ORGANIZATION",
-      "relation": "CỦA"
-    },
-    {
-      "source": "câu hỏi",
-      "target": "Sinh viên",
-      "type_source": "CONCEPT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
-    },
-    {
-      "source": "vấn đề",
-      "target": "khoản 2 điều 10",
-      "type_source": "PROBLEM",
-      "type_target": "REFERENCE",
-      "relation": "NÊU_TRONG"
-    },
-    {
-      "source": "câu hỏi",
-      "target": "vấn đề",
-      "type_source": "CONCEPT",
-      "type_target": "PROBLEM",
-      "relation": "NGOÀI"
-    },
-    {
-      "source": "câu hỏi",
-      "target": "trả lời",
-      "type_source": "CONCEPT",
-      "type_target": "ACTION",
-      "relation": "KHÔNG_ĐƯỢC"
+      "source": {
+        "name": "Những vấn đề nêu trong các khoản 2 của Điều 10",
+        "type": "defined_issue_set",
+        "source_specification": "Các khoản 2 của Điều 10",
+        "purpose_in_text": "Xác định phạm vi câu hỏi được trả lời",
+        "content_description": "Các chủ đề/nội dung cụ thể được quy định làm cơ sở trả lời"
+      },
+      "target": {
+        "name": "Các khoản 2 của Điều 10",
+        "type": "document_section",
+        "document_source_id": "Điều 10",
+        "section_type": "Khoản",
+        "relevance_in_text": "Chứa đựng các vấn đề quy định phạm vi trả lời câu hỏi"
+      },
+      "type_source": "defined_issue_set",
+      "type_target": "document_section",
+      "relation": "được_nêu_trong"
     }
   ]
 }

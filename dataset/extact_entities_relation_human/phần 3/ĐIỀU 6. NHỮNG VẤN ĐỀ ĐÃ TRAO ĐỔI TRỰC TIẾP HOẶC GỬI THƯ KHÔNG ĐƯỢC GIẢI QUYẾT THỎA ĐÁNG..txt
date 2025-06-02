@@ -1,145 +1,124 @@
 {
-  "entities": [
-    {
-      "name": "Giáo viên chủ nhiệm",
-      "type": "PERSON"
-    },
-    {
-      "name": "cố vấn học tập",
-      "type": "PERSON"
-    },
-    {
-      "name": "giáo vụ khoa",
-      "type": "PERSON"
-    },
-    {
-      "name": "trách nhiệm",
-      "type": "RESPONSIBILITY"
-    },
-    {
-      "name": "ghi kính chuyển",
-      "type": "ACTION"
-    },
-    {
-      "name": "đơn",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "sinh viên",
-      "type": "PERSON_GROUP"
-    },
-    {
-      "name": "BCN Khoa",
-      "type": "ORGANIZATION"
-    },
-    {
-      "name": "phòng chức năng",
-      "type": "DEPARTMENT"
-    },
-    {
-      "name": "bản",
-      "type": "DOCUMENT"
-    },
-    {
-      "name": "minh chứng",
-      "type": "EVIDENCE"
-    },
-    {
-      "name": "công tác",
-      "type": "ACTIVITY"
-    }
-  ],
   "relationships": [
     {
-      "source": "Giáo viên chủ nhiệm",
-      "target": "trách nhiệm",
-      "type_source": "PERSON",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Giáo viên chủ nhiệm (cố vấn học tập)",
+        "role_description": "Cố vấn học tập và chủ nhiệm lớp",
+        "action_verb": "Ghi kính chuyển",
+        "target_document_name": "Đơn của sinh viên"
+      },
+      "target": {
+        "name": "Đơn của sinh viên",
+        "document_type_description": "Đơn từ của sinh viên",
+        "processing_action_received": "Được ghi kính chuyển",
+        "potential_destination": "BCN Khoa hoặc phòng chức năng liên quan"
+      },
+      "type_source": "person_role",
+      "type_target": "document",
+      "relation": "ghi_kính_chuyển_vào"
     },
     {
-      "source": "cố vấn học tập",
-      "target": "trách nhiệm",
-      "type_source": "PERSON",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Giáo vụ khoa",
+        "administrative_title": "Giáo vụ",
+        "organizational_affiliation": "Khoa",
+        "action_verb": "Ghi kính chuyển",
+        "target_document_name": "Đơn của sinh viên"
+      },
+      "target": {
+        "name": "Đơn của sinh viên",
+        "document_type_description": "Đơn từ của sinh viên",
+        "processing_action_received": "Được ghi kính chuyển",
+        "potential_destination": "BCN Khoa hoặc phòng chức năng liên quan"
+      },
+      "type_source": "person_role",
+      "type_target": "document",
+      "relation": "ghi_kính_chuyển_vào"
     },
     {
-      "source": "giáo vụ khoa",
-      "target": "trách nhiệm",
-      "type_source": "PERSON",
-      "type_target": "RESPONSIBILITY",
-      "relation": "CÓ"
+      "source": {
+        "name": "Đơn của sinh viên",
+        "status_after_annotation": "Đã được ghi kính chuyển",
+        "forwarding_mechanism": "Thông qua GVCN/Giáo vụ Khoa",
+        "intended_recipient_unit": "BCN Khoa"
+      },
+      "target": {
+        "name": "BCN Khoa",
+        "unit_full_name": "Ban Chủ Nhiệm Khoa",
+        "organizational_level_name": "Khoa",
+        "function_description": "Tiếp nhận đơn để xử lý"
+      },
+      "type_source": "document",
+      "type_target": "organization_unit",
+      "relation": "chuyển_tới"
     },
     {
-      "source": "trách nhiệm",
-      "target": "ghi kính chuyển",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "ACTION",
-      "relation": "BAO_GỒM"
+      "source": {
+        "name": "Đơn của sinh viên",
+        "status_after_annotation": "Đã được ghi kính chuyển",
+        "forwarding_mechanism": "Thông qua GVCN/Giáo vụ Khoa",
+        "intended_recipient_unit": "Phòng chức năng liên quan"
+      },
+      "target": {
+        "name": "Phòng chức năng liên quan",
+        "unit_category_description": "Phòng ban chuyên môn",
+        "relevance_criteria_description": "Liên quan đến nội dung đơn",
+        "function_description": "Tiếp nhận đơn để xử lý"
+      },
+      "type_source": "document",
+      "type_target": "organization_unit",
+      "relation": "chuyển_tới"
     },
     {
-      "source": "ghi kính chuyển",
-      "target": "đơn",
-      "type_source": "ACTION",
-      "type_target": "DOCUMENT",
-      "relation": "VÀO"
+      "source": {
+        "name": "Giáo viên chủ nhiệm (cố vấn học tập)",
+        "action_type": "Lưu trữ tài liệu",
+        "document_to_keep": "Bản làm minh chứng",
+        "reason_for_keeping": "Minh chứng cho công tác"
+      },
+      "target": {
+        "name": "Bản làm minh chứng",
+        "document_nature_description": "Bản sao của đơn sinh viên",
+        "purpose_description": "Làm bằng chứng, minh chứng",
+        "stored_by_role": "Giáo viên chủ nhiệm (cố vấn học tập)"
+      },
+      "type_source": "person_role",
+      "type_target": "document_copy",
+      "relation": "lưu_lại"
     },
     {
-      "source": "đơn",
-      "target": "sinh viên",
-      "type_source": "DOCUMENT",
-      "type_target": "PERSON_GROUP",
-      "relation": "CỦA"
+      "source": {
+        "name": "Giáo vụ khoa",
+        "action_type": "Lưu trữ tài liệu",
+        "document_to_keep": "Bản làm minh chứng",
+        "departmental_procedure": "Lưu trữ hồ sơ theo quy định"
+      },
+      "target": {
+        "name": "Bản làm minh chứng",
+        "document_nature_description": "Bản sao của đơn sinh viên",
+        "purpose_description": "Làm bằng chứng, minh chứng",
+        "stored_by_role": "Giáo vụ khoa"
+      },
+      "type_source": "person_role",
+      "type_target": "document_copy",
+      "relation": "lưu_lại"
     },
     {
-      "source": "ghi kính chuyển",
-      "target": "BCN Khoa",
-      "type_source": "ACTION",
-      "type_target": "ORGANIZATION",
-      "relation": "TỚI"
-    },
-    {
-      "source": "ghi kính chuyển",
-      "target": "phòng chức năng",
-      "type_source": "ACTION",
-      "type_target": "DEPARTMENT",
-      "relation": "TỚI"
-    },
-    {
-      "source": "trách nhiệm",
-      "target": "bản",
-      "type_source": "RESPONSIBILITY",
-      "type_target": "DOCUMENT",
-      "relation": "BAO_GỒM"
-    },
-    {
-      "source": "bản",
-      "target": "minh chứng",
-      "type_source": "DOCUMENT",
-      "type_target": "EVIDENCE",
-      "relation": "LÀM"
-    },
-    {
-      "source": "minh chứng",
-      "target": "công tác",
-      "type_source": "EVIDENCE",
-      "type_target": "ACTIVITY",
-      "relation": "CHO"
-    },
-    {
-      "source": "công tác",
-      "target": "Giáo viên chủ nhiệm",
-      "type_source": "ACTIVITY",
-      "type_target": "PERSON",
-      "relation": "CỦA"
-    },
-    {
-      "source": "công tác",
-      "target": "cố vấn học tập",
-      "type_source": "ACTIVITY",
-      "type_target": "PERSON",
-      "relation": "CỦA"
+      "source": {
+        "name": "Bản làm minh chứng",
+        "evidentiary_function": "Cung cấp bằng chứng",
+        "content_source_document": "Đơn của sinh viên",
+        "utility": "Minh chứng cho hoạt động cụ thể"
+      },
+      "target": {
+        "name": "Công tác giáo viên chủ nhiệm (cố vấn học tập)",
+        "activity_type_description": "Nhiệm vụ chuyên môn của GVCN",
+        "actor_responsible_name": "Giáo viên chủ nhiệm (cố vấn học tập)",
+        "validation_requirement": "Cần có minh chứng cho việc thực hiện"
+      },
+      "type_source": "document_copy",
+      "type_target": "professional_activity",
+      "relation": "là_minh_chứng_cho"
     }
   ]
 }

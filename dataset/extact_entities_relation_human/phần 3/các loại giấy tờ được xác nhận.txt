@@ -1,285 +1,308 @@
 {
-  "entities": [
-    {
-      "name": "giấy tờ",
-      "type": "document"
-    },
-    {
-      "name": "Vay vốn ngân hàng chính sách xã hội",
-      "type": "document_type"
-    },
-    {
-      "name": "ngân hàng chính sách xã hội",
-      "type": "organization"
-    },
-    {
-      "name": "Tạm hoãn nghĩa vụ quân sự",
-      "type": "document_type"
-    },
-    {
-      "name": "Đi xe buýt",
-      "type": "document_type"
-    },
-    {
-      "name": "Bổ sung hồ sơ nhận trợ cấp",
-      "type": "document_type"
-    },
-    {
-      "name": "Bổ sung hồ sơ làm lại thẻ sinh viên",
-      "type": "document_type"
-    },
-    {
-      "name": "thẻ sinh viên",
-      "type": "student_card"
-    },
-    {
-      "name": "Bổ sung hồ sơ thuế cho người thân",
-      "type": "document_type"
-    },
-    {
-      "name": "thuế",
-      "type": "tax_document"
-    },
-    {
-      "name": "người thân",
-      "type": "relative"
-    },
-    {
-      "name": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
-      "type": "document_type"
-    },
-    {
-      "name": "ký túc xá",
-      "type": "dormitory_document"
-    },
-    {
-      "name": "Đại học Quốc gia TP.HCM",
-      "type": "university"
-    },
-    {
-      "name": "Bổ sung hồ sơ thi học kỳ, thi acces",
-      "type": "document_type"
-    },
-    {
-      "name": "thi học kỳ",
-      "type": "exam_document"
-    },
-    {
-      "name": "thi acces",
-      "type": "exam_document"
-    },
-    {
-      "name": "Bổ sung hồ sơ lý lịch cá nhân",
-      "type": "document_type"
-    },
-    {
-      "name": "lý lịch cá nhân",
-      "type": "personal_profile"
-    },
-    {
-      "name": "Bổ sung hồ sơ nhận học bổng",
-      "type": "document_type"
-    },
-    {
-      "name": "học bổng",
-      "type": "scholarship_document"
-    },
-    {
-      "name": "Bổ sung hồ sơ giảm trừ gia cảnh",
-      "type": "document_type"
-    },
-    {
-      "name": "giảm trừ gia cảnh",
-      "type": "family_deduction_document"
-    },
-    {
-      "name": "Bổ sung hồ sơ đi làm, đi thực tập",
-      "type": "document_type"
-    },
-    {
-      "name": "đi làm",
-      "type": "work_document"
-    },
-    {
-      "name": "đi thực tập",
-      "type": "internship_document"
-    }
-  ],
   "relationships": [
     {
-      "source": "Vay vốn ngân hàng chính sách xã hội",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": {
+        "name": "Vay vốn",
+        "type": "financial_process",
+        "process_description": "Quy trình thực hiện các thủ tục để nhận một khoản vay.",
+        "objective": "Nhận được nguồn tài chính từ tổ chức cho vay.",
+        "typical_requirement": "Hồ sơ chứng minh khả năng trả nợ, mục đích vay."
+      },
+      "target": {
+        "name": "ngân hàng chính sách xã hội",
+        "type": "financial_institution",
+        "institution_type": "Ngân hàng chính sách",
+        "primary_role": "Cung cấp các khoản vay ưu đãi cho đối tượng chính sách.",
+        "governance": "Hoạt động theo quy định của nhà nước."
+      },
+      "type_source": "financial_process",
+      "type_target": "financial_institution",
+      "relation": "thực_hiện_tại"
     },
     {
-      "source": "ngân hàng chính sách xã hội",
-      "target": "Vay vốn ngân hàng chính sách xã hội",
-      "relation": "của",
-      "type_source": "organization",
-      "type_target": "document_type"
+      "source": {
+        "name": "Tạm hoãn nghĩa vụ quân sự",
+        "type": "deferment_process",
+        "process_description": "Quy trình xin hoãn thực hiện nghĩa vụ quân sự theo quy định.",
+        "legal_basis": "Dựa trên các điều kiện được pháp luật cho phép.",
+        "outcome": "Được chấp thuận tạm dừng nghĩa vụ trong một thời gian nhất định."
+      },
+      "target": {
+        "name": "nghĩa vụ quân sự",
+        "type": "civic_duty",
+        "duty_description": "Nghĩa vụ của công dân trong việc tham gia phục vụ quân đội.",
+        "enforcement": "Bắt buộc theo luật định.",
+        "governing_law": "Luật Nghĩa vụ quân sự."
+      },
+      "type_source": "deferment_process",
+      "type_target": "civic_duty",
+      "relation": "áp_dụng_cho"
     },
     {
-      "source": "Tạm hoãn nghĩa vụ quân sự",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": {
+        "name": "Đi xe buýt",
+        "type": "transport_activity",
+        "activity_description": "Hành động sử dụng xe buýt làm phương tiện di chuyển.",
+        "purpose": "Đi lại giữa các địa điểm.",
+        "mode_of_transport": "Giao thông công cộng."
+      },
+      "target": {
+        "name": "xe buýt",
+        "type": "transportation_means",
+        "vehicle_type": "Phương tiện giao thông công cộng đường bộ.",
+        "capacity": "Chở nhiều hành khách.",
+        "service_type": "Theo tuyến cố định."
+      },
+      "type_source": "transport_activity",
+      "type_target": "transportation_means",
+      "relation": "sử_dụng"
     },
     {
-      "source": "Đi xe buýt",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": {
+        "name": "Bổ sung hồ sơ nhận trợ cấp",
+        "type": "document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ xin nhận trợ cấp.",
+        "main_objective": "Đủ điều kiện nhận trợ cấp.",
+        "context_specific_purpose": "Hoàn thiện hồ sơ cho việc nhận trợ cấp."
+      },
+      "target": {
+        "name": "trợ cấp",
+        "type": "financial_aid",
+        "aid_description": "Khoản hỗ trợ tài chính hoặc vật chất cho các đối tượng đủ điều kiện.",
+        "purpose": "Giảm bớt khó khăn, hỗ trợ đời sống.",
+        "provider_type": "Cơ quan nhà nước, tổ chức xã hội."
+      },
+      "type_source": "document_supplementation_process",
+      "type_target": "financial_aid",
+      "relation": "nhằm_mục_đích_nhận"
     },
     {
-      "source": "Bổ sung hồ sơ nhận trợ cấp",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": {
+        "name": "Bổ sung hồ sơ làm lại thẻ sinh viên",
+        "type": "document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ xin làm lại thẻ sinh viên.",
+        "main_objective": "Được cấp lại thẻ sinh viên.",
+        "reason_for_action": "Thẻ bị mất, hỏng hoặc cần cập nhật thông tin."
+      },
+      "target": {
+        "name": "thẻ sinh viên",
+        "type": "student_identification_card",
+        "document_purpose": "Giấy tờ xác nhận tư cách sinh viên.",
+        "issuer": "Cơ sở giáo dục, đào tạo.",
+        "validity": "Trong thời gian theo học."
+      },
+      "type_source": "document_supplementation_process",
+      "type_target": "student_identification_card",
+      "relation": "để_làm_lại"
     },
     {
-      "source": "Bổ sung hồ sơ làm lại thẻ sinh viên",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": {
+        "name": "Bổ sung hồ sơ thuế",
+        "type": "tax_document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ liên quan đến thuế.",
+        "main_objective": "Hoàn thành nghĩa vụ thuế hoặc hưởng quyền lợi về thuế.",
+        "document_scope": "Liên quan đến các loại thuế cá nhân, doanh nghiệp."
+      },
+      "target": {
+        "name": "người thân",
+        "type": "family_member",
+        "role_description": "Thành viên trong gia đình có liên quan đến hồ sơ thuế.",
+        "relationship_context": "Cha, mẹ, vợ, chồng, con cái, người phụ thuộc.",
+        "tax_relevance": "Có thể là người nộp thuế hoặc người phụ thuộc."
+      },
+      "type_source": "tax_document_supplementation_process",
+      "type_target": "family_member",
+      "relation": "cho"
     },
     {
-      "source": "thẻ sinh viên",
-      "target": "Bổ sung hồ sơ làm lại thẻ sinh viên",
-      "relation": "của",
-      "type_source": "student_card",
-      "type_target": "document_type"
+      "source": {
+        "name": "Bổ sung hồ sơ thuế",
+        "type": "tax_document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ liên quan đến thuế.",
+        "main_objective": "Hoàn thành nghĩa vụ thuế hoặc hưởng quyền lợi về thuế.",
+        "document_scope": "Liên quan đến các loại thuế cá nhân, doanh nghiệp."
+      },
+      "target": {
+        "name": "thuế",
+        "type": "tax_obligation",
+        "obligation_description": "Nghĩa vụ tài chính bắt buộc phải nộp cho nhà nước.",
+        "purpose_of_tax": "Ngân sách chi tiêu công.",
+        "governing_body": "Cơ quan thuế."
+      },
+      "type_source": "tax_document_supplementation_process",
+      "type_target": "tax_obligation",
+      "relation": "liên_quan_đến_lĩnh_vực"
     },
     {
-      "source": "Bổ sung hồ sơ thuế cho người thân",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": {
+        "name": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
+        "type": "document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ đăng ký ở ký túc xá.",
+        "main_objective": "Được chấp thuận ở tại ký túc xá.",
+        "facility_context": "Ký túc xá của Đại học Quốc gia TP.HCM."
+      },
+      "target": {
+        "name": "Ký túc xá Đại học Quốc gia TP.HCM",
+        "type": "student_dormitory",
+        "facility_description": "Nơi ở dành cho sinh viên của Đại học Quốc gia TP.HCM.",
+        "managing_organization": "Đại học Quốc gia TP.HCM.",
+        "location": "Thành phố Hồ Chí Minh."
+      },
+      "type_source": "document_supplementation_process",
+      "type_target": "student_dormitory",
+      "relation": "cho_thủ_tục_tại"
     },
     {
-      "source": "thuế",
-      "target": "Bổ sung hồ sơ thuế cho người thân",
-      "relation": "của",
-      "type_source": "tax_document",
-      "type_target": "document_type"
+      "source": {
+        "name": "Ký túc xá Đại học Quốc gia TP.HCM",
+        "type": "student_dormitory",
+        "facility_description": "Nơi ở dành cho sinh viên của Đại học Quốc gia TP.HCM.",
+        "purpose": "Cung cấp chỗ ở và môi trường học tập, sinh hoạt cho sinh viên.",
+        "capacity_info": "Phục vụ một lượng lớn sinh viên."
+      },
+      "target": {
+        "name": "Đại học Quốc gia TP.HCM",
+        "type": "university",
+        "university_name_official": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+        "university_type": "Hệ thống đại học công lập đa ngành.",
+        "abbreviation": "VNU-HCM."
+      },
+      "type_source": "student_dormitory",
+      "type_target": "university",
+      "relation": "thuộc_về"
     },
     {
-      "source": "người thân",
-      "target": "Bổ sung hồ sơ thuế cho người thân",
-      "relation": "cho",
-      "type_source": "relative",
-      "type_target": "document_type"
+      "source": {
+        "name": "Bổ sung hồ sơ thi học kỳ",
+        "type": "document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ cho việc thi học kỳ.",
+        "main_objective": "Đủ điều kiện tham gia thi học kỳ.",
+        "event_context": "Kỳ thi cuối mỗi học kỳ."
+      },
+      "target": {
+        "name": "thi học kỳ",
+        "type": "academic_examination",
+        "examination_purpose": "Đánh giá kết quả học tập của sinh viên sau một học kỳ.",
+        "timing": "Cuối mỗi học kỳ.",
+        "format_common": "Thi viết, vấn đáp, hoặc thực hành."
+      },
+      "type_source": "document_supplementation_process",
+      "type_target": "academic_examination",
+      "relation": "cho_sự_kiện"
     },
     {
-      "source": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": {
+        "name": "Bổ sung hồ sơ thi acces",
+        "type": "document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ cho việc thi acces.",
+        "main_objective": "Đủ điều kiện tham gia thi acces.",
+        "event_context": "Kỳ thi môn Acces hoặc kỳ thi có tên tương tự."
+      },
+      "target": {
+        "name": "thi acces",
+        "type": "specific_examination",
+        "examination_description": "Kỳ thi đánh giá kiến thức hoặc kỹ năng về Microsoft Access hoặc một bài thi chuyên biệt.",
+        "subject_focus": "Tin học ứng dụng (MS Access) hoặc chuyên ngành cụ thể.",
+        "purpose": "Hoàn thành môn học hoặc lấy chứng chỉ."
+      },
+      "type_source": "document_supplementation_process",
+      "type_target": "specific_examination",
+      "relation": "cho_sự_kiện"
     },
     {
-      "source": "ký túc xá",
-      "target": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
-      "relation": "của",
-      "type_source": "dormitory_document",
-      "type_target": "document_type"
+      "source": {
+        "name": "Bổ sung hồ sơ lý lịch cá nhân",
+        "type": "document_supplementation_process",
+        "action_description": "Cung cấp thêm thông tin để hoàn thiện hồ sơ lý lịch cá nhân.",
+        "main_objective": "Có một bộ lý lịch cá nhân đầy đủ và chính xác.",
+        "document_context": "Lý lịch cá nhân."
+      },
+      "target": {
+        "name": "lý lịch cá nhân",
+        "type": "personal_record_document",
+        "document_description": "Tài liệu ghi chép thông tin chi tiết về một cá nhân.",
+        "content_includes": "Thông tin nhân thân, quá trình học tập, công tác.",
+        "common_use": "Xin việc, thủ tục hành chính."
+      },
+      "type_source": "document_supplementation_process",
+      "type_target": "personal_record_document",
+      "relation": "để_hoàn_thiện"
     },
     {
-      "source": "Đại học Quốc gia TP.HCM",
-      "target": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
-      "relation": "của",
-      "type_source": "university",
-      "type_target": "document_type"
+      "source": {
+        "name": "Bổ sung hồ sơ nhận học bổng",
+        "type": "document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ xin nhận học bổng.",
+        "main_objective": "Đủ điều kiện nhận học bổng.",
+        "context_specific_purpose": "Hoàn thiện hồ sơ cho việc nhận học bổng."
+      },
+      "target": {
+        "name": "học bổng",
+        "type": "academic_award",
+        "award_description": "Phần thưởng (thường là tài chính) dành cho sinh viên có thành tích xuất sắc hoặc thuộc đối tượng ưu tiên.",
+        "purpose": "Khuyến khích học tập, hỗ trợ tài chính.",
+        "grantor_type": "Trường học, tổ chức, doanh nghiệp."
+      },
+      "type_source": "document_supplementation_process",
+      "type_target": "academic_award",
+      "relation": "nhằm_mục_đích_nhận"
     },
     {
-      "source": "Bổ sung hồ sơ thi học kỳ, thi acces",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": {
+        "name": "Bổ sung hồ sơ giảm trừ gia cảnh",
+        "type": "document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ xin giảm trừ gia cảnh.",
+        "main_objective": "Được hưởng chính sách giảm trừ gia cảnh khi tính thuế.",
+        "tax_context": "Giảm trừ thuế thu nhập cá nhân."
+      },
+      "target": {
+        "name": "giảm trừ gia cảnh",
+        "type": "tax_relief_scheme",
+        "scheme_description": "Chính sách cho phép giảm trừ một khoản tiền nhất định khi tính thuế thu nhập cá nhân dựa trên hoàn cảnh gia đình.",
+        "basis": "Số người phụ thuộc, hoàn cảnh khó khăn.",
+        "legal_framework": "Luật thuế thu nhập cá nhân."
+      },
+      "type_source": "document_supplementation_process",
+      "type_target": "tax_relief_scheme",
+      "relation": "cho_việc_đăng_ký"
     },
     {
-      "source": "thi học kỳ",
-      "target": "Bổ sung hồ sơ thi học kỳ, thi acces",
-      "relation": "của",
-      "type_source": "exam_document",
-      "type_target": "document_type"
+      "source": {
+        "name": "Bổ sung hồ sơ đi làm",
+        "type": "document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ xin việc.",
+        "main_objective": "Hoàn thiện hồ sơ ứng tuyển việc làm.",
+        "activity_context": "Tìm kiếm việc làm, ứng tuyển."
+      },
+      "target": {
+        "name": "đi làm",
+        "type": "employment_activity",
+        "activity_description": "Hoạt động lao động để tạo ra thu nhập và phát triển sự nghiệp.",
+        "purpose": "Kiếm sống, đóng góp cho xã hội.",
+        "requirement_common": "Hồ sơ xin việc, kỹ năng chuyên môn."
+      },
+      "type_source": "document_supplementation_process",
+      "type_target": "employment_activity",
+      "relation": "cho_hoạt_động"
     },
     {
-      "source": "thi acces",
-      "target": "Bổ sung hồ sơ thi học kỳ, thi acces",
-      "relation": "của",
-      "type_source": "exam_document",
-      "type_target": "document_type"
-    },
-    {
-      "source": "Bổ sung hồ sơ lý lịch cá nhân",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
-    },
-    {
-      "source": "lý lịch cá nhân",
-      "target": "Bổ sung hồ sơ lý lịch cá nhân",
-      "relation": "của",
-      "type_source": "personal_profile",
-      "type_target": "document_type"
-    },
-    {
-      "source": "Bổ sung hồ sơ nhận học bổng",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
-    },
-    {
-      "source": "học bổng",
-      "target": "Bổ sung hồ sơ nhận học bổng",
-      "relation": "của",
-      "type_source": "scholarship_document",
-      "type_target": "document_type"
-    },
-    {
-      "source": "Bổ sung hồ sơ giảm trừ gia cảnh",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
-    },
-    {
-      "source": "giảm trừ gia cảnh",
-      "target": "Bổ sung hồ sơ giảm trừ gia cảnh",
-      "relation": "của",
-      "type_source": "family_deduction_document",
-      "type_target": "document_type"
-    },
-    {
-      "source": "Bổ sung hồ sơ đi làm, đi thực tập",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
-    },
-    {
-      "source": "đi làm",
-      "target": "Bổ sung hồ sơ đi làm, đi thực tập",
-      "relation": "của",
-      "type_source": "work_document",
-      "type_target": "document_type"
-    },
-    {
-      "source": "đi thực tập",
-      "target": "Bổ sung hồ sơ đi làm, đi thực tập",
-      "relation": "của",
-      "type_source": "internship_document",
-      "type_target": "document_type"
+      "source": {
+        "name": "Bổ sung hồ sơ đi thực tập",
+        "type": "document_supplementation_process",
+        "action_description": "Cung cấp thêm giấy tờ, thông tin để hoàn thiện hồ sơ xin đi thực tập.",
+        "main_objective": "Hoàn thiện hồ sơ ứng tuyển vị trí thực tập.",
+        "activity_context": "Tìm kiếm cơ hội thực tập."
+      },
+      "target": {
+        "name": "đi thực tập",
+        "type": "internship_activity",
+        "activity_description": "Quá trình học hỏi kinh nghiệm thực tế tại một tổ chức, doanh nghiệp.",
+        "purpose": "Áp dụng kiến thức, phát triển kỹ năng, định hướng nghề nghiệp.",
+        "participant_profile": "Sinh viên, người mới tốt nghiệp."
+      },
+      "type_source": "document_supplementation_process",
+      "type_target": "internship_activity",
+      "relation": "cho_hoạt_động"
     }
   ]
 }

@@ -1,87 +1,68 @@
 {
-  "entities": [
-    {
-      "name": "Đăng ký",
-      "type": "registration"
-    },
-    {
-      "name": "trình duyệt web",
-      "type": "web_browser"
-    },
-    {
-      "name": "thiết bị",
-      "type": "device"
-    },
-    {
-      "name": "internet",
-      "type": "internet"
-    },
-    {
-      "name": "máy tính để bàn",
-      "type": "desktop_computer"
-    },
-    {
-      "name": "máy tính xách tay",
-      "type": "laptop"
-    },
-    {
-      "name": "máy tính bảng",
-      "type": "tablet"
-    },
-    {
-      "name": "điện thoại di động",
-      "type": "mobile_phone"
-    }
-  ],
   "relationships": [
     {
-      "source": "Đăng ký",
-      "target": "trình duyệt web",
-      "relation": "sử_dụng",
-      "type_source": "registration",
-      "type_target": "web_browser"
+      "source": {
+        "name": "Trình duyệt web",
+        "purpose": "Sử dụng trên thiết bị truy cập internet",
+        "software_type": "Ứng dụng"
+      },
+      "target": {
+        "name": "Máy tính để bàn",
+        "capability": "Có thể truy cập internet",
+        "classification": "Thiết bị",
+        "form_factor_hint": "Để bàn"
+      },
+      "type_source": "software_application",
+      "type_target": "desktop_computer",
+      "relation": "sử_dụng_trên"
     },
     {
-      "source": "trình duyệt web",
-      "target": "thiết bị",
-      "relation": "trên",
-      "type_source": "web_browser",
-      "type_target": "device"
+      "source": {
+        "name": "Trình duyệt web",
+        "purpose": "Sử dụng trên thiết bị truy cập internet",
+        "software_type": "Ứng dụng"
+      },
+      "target": {
+        "name": "Máy tính xách tay",
+        "capability": "Có thể truy cập internet",
+        "classification": "Thiết bị",
+        "form_factor_hint": "Xách tay"
+      },
+      "type_source": "software_application",
+      "type_target": "laptop_computer",
+      "relation": "sử_dụng_trên"
     },
     {
-      "source": "thiết bị",
-      "target": "internet",
-      "relation": "truy_cập",
-      "type_source": "device",
-      "type_target": "internet"
+      "source": {
+        "name": "Trình duyệt web",
+        "purpose": "Sử dụng trên thiết bị truy cập internet",
+        "software_type": "Ứng dụng"
+      },
+      "target": {
+        "name": "Máy tính bảng",
+        "capability": "Có thể truy cập internet",
+        "classification": "Thiết bị",
+        "form_factor_hint": "Dạng bảng"
+      },
+      "type_source": "software_application",
+      "type_target": "tablet_device",
+      "relation": "sử_dụng_trên"
     },
     {
-      "source": "thiết bị",
-      "target": "máy tính để bàn",
-      "relation": "như",
-      "type_source": "device",
-      "type_target": "desktop_computer"
-    },
-    {
-      "source": "thiết bị",
-      "target": "máy tính xách tay",
-      "relation": "như",
-      "type_source": "device",
-      "type_target": "laptop"
-    },
-    {
-      "source": "thiết bị",
-      "target": "máy tính bảng",
-      "relation": "như",
-      "type_source": "device",
-      "type_target": "tablet"
-    },
-    {
-      "source": "thiết bị",
-      "target": "điện thoại di động",
-      "relation": "như",
-      "type_source": "device",
-      "type_target": "mobile_phone"
+      "source": {
+        "name": "Trình duyệt web",
+        "purpose": "Sử dụng trên thiết bị truy cập internet",
+        "software_type": "Ứng dụng"
+      },
+      "target": {
+        "name": "Điện thoại di động",
+        "capability": "Có thể truy cập internet",
+        "classification": "Thiết bị",
+        "mobility_hint": "Di động"
+      },
+      "type_source": "software_application",
+      "type_target": "mobile_phone",
+      "relation": "sử_dụng_trên"
     }
   ]
 }

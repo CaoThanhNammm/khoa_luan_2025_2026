@@ -1,182 +1,293 @@
 {
-  "entities": [
-    {
-      "name": "app BIDV Smartbanking",
-      "type": "APPLICATION"
-    },
-    {
-      "name": "Cài đặt sinh trắc học",
-      "type": "BIOMETRIC_SETTING"
-    },
-    {
-      "name": "ô vuông nhỏ",
-      "type": "CHECKBOX"
-    },
-    {
-      "name": "màn hình",
-      "type": "SCREEN"
-    },
-    {
-      "name": "10.000.000 đồng",
-      "type": "MONEY"
-    },
-    {
-      "name": "số tiền tối thiểu",
-      "type": "AMOUNT"
-    },
-    {
-      "name": "Xác thực giao dịch bằng sinh trắc học",
-      "type": "AUTHENTICATION_SETTING"
-    },
-    {
-      "name": "Cài đặt và thu nhập",
-      "type": "SETTING_ACTION"
-    },
-    {
-      "name": "mã OTP",
-      "type": "OTP"
-    },
-    {
-      "name": "tin nhắn điện thoại",
-      "type": "SMS"
-    },
-    {
-      "name": "loại giấy tờ tùy thân",
-      "type": "PERSONAL_DOCUMENT_TYPE"
-    },
-    {
-      "name": "ảnh mặt trước CCCD",
-      "type": "FRONT_CCCD_PHOTO"
-    },
-    {
-      "name": "CCCD",
-      "type": "CCCD"
-    },
-    {
-      "name": "QR",
-      "type": "QR_CODE"
-    },
-    {
-      "name": "ảnh mặt sau CCCD",
-      "type": "BACK_CCCD_PHOTO"
-    },
-    {
-      "name": "CHIP CCCD",
-      "type": "CCCD_CHIP"
-    },
-    {
-      "name": "hình ảnh khuôn mặt",
-      "type": "FACE_IMAGE"
-    },
-    {
-      "name": "hệ thống",
-      "type": "SYSTEM"
-    },
-    {
-      "name": "thành công",
-      "type": "SUCCESS"
-    },
-    {
-      "name": "trạng thái",
-      "type": "STATUS"
-    },
-    {
-      "name": "mục cài đặt sinh trắc học",
-      "type": "BIOMETRIC_SETTING_MENU"
-    },
-    {
-      "name": "Dòng trạng thái thu nhập",
-      "type": "STATUS_LINE"
-    },
-    {
-      "name": "Đã thu nhập cấp độ 2",
-      "type": "LEVEL_2_COLLECTED"
-    }
-  ],
   "relationships": [
     {
-      "source": "app BIDV Smartbanking",
-      "target": "Cài đặt sinh trắc học",
-      "relation": "CHỌN_MỤC",
-      "type_source": "APPLICATION",
-      "type_target": "BIOMETRIC_SETTING"
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "cài đặt sinh trắc học",
+        "step_in_process": "Bước 1"
+      },
+      "target": {
+        "name": "app BIDV Smartbanking",
+        "application_type": "ngân hàng di động",
+        "provider_name": "BIDV",
+        "access_point": "điện thoại di động"
+      },
+      "type_source": "user",
+      "type_target": "application",
+      "relation": "đăng_nhập_vào"
     },
     {
-      "source": "ô vuông nhỏ",
-      "target": "màn hình",
-      "relation": "TRÊN_MÀN_HÌNH",
-      "type_source": "CHECKBOX",
-      "type_target": "SCREEN"
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "cài đặt sinh trắc học",
+        "step_in_process": "Bước 1"
+      },
+      "target": {
+        "name": "Mục “Cài đặt sinh trắc học”",
+        "ui_element_type": "menu_option",
+        "parent_application": "app BIDV Smartbanking",
+        "purpose_of_selection": "truy cập chức năng cài đặt sinh trắc học"
+      },
+      "type_source": "user",
+      "type_target": "ui_menu_item",
+      "relation": "chọn"
     },
     {
-      "source": "số tiền tối thiểu",
-      "target": "10.000.000 đồng",
-      "relation": "LÀ",
-      "type_source": "AMOUNT",
-      "type_target": "MONEY"
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "cài đặt sinh trắc học",
+        "step_in_process": "Bước 2"
+      },
+      "target": {
+        "name": "Tất cả ô vuông nhỏ trên màn hình",
+        "ui_element_type": "checkboxes",
+        "location_description": "trên màn hình cài đặt",
+        "action_performed_on": "tích chọn"
+      },
+      "type_source": "user",
+      "type_target": "ui_element_group",
+      "relation": "tích_chọn_vào"
     },
     {
-      "source": "số tiền tối thiểu",
-      "target": "Xác thực giao dịch bằng sinh trắc học",
-      "relation": "NẰM_DƯỚI",
-      "type_source": "AMOUNT",
-      "type_target": "AUTHENTICATION_SETTING"
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "cài đặt sinh trắc học",
+        "step_in_process": "Bước 2"
+      },
+      "target": {
+        "name": "Số tiền tối thiểu cần xác thực",
+        "value_entered": "10.000.000 đồng",
+        "setting_purpose": "ngưỡng xác thực giao dịch bằng sinh trắc học",
+        "input_field_location_note": "ô số tiền nằm phía dưới phần “Xác thực giao dịch bằng sinh trắc học”"
+      },
+      "type_source": "user",
+      "type_target": "configuration_setting",
+      "relation": "nhập"
     },
     {
-      "source": "Cài đặt và thu nhập",
-      "target": "Cài đặt sinh trắc học",
-      "relation": "CHỌN_MỤC",
-      "type_source": "SETTING_ACTION",
-      "type_target": "BIOMETRIC_SETTING"
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "cài đặt sinh trắc học",
+        "step_in_process": "Bước 2"
+      },
+      "target": {
+        "name": "Mục “Cài đặt và thu nhập”",
+        "ui_element_type": "button_or_menu_item",
+        "action_triggered": "bắt đầu quá trình cài đặt và thu thập dữ liệu sinh trắc học",
+        "parent_application": "app BIDV Smartbanking"
+      },
+      "type_source": "user",
+      "type_target": "ui_interactive_element",
+      "relation": "chọn"
     },
     {
-      "source": "mã OTP",
-      "target": "tin nhắn điện thoại",
-      "relation": "GỬI_VÀO",
-      "type_source": "OTP",
-      "type_target": "SMS"
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "cài đặt sinh trắc học - xác thực",
+        "step_in_process": "Bước 3"
+      },
+      "target": {
+        "name": "Mã OTP",
+        "code_type": "one_time_password",
+        "delivery_method": "gửi vào tin nhắn điện thoại",
+        "purpose_of_code": "xác thực thao tác"
+      },
+      "type_source": "user",
+      "type_target": "security_code",
+      "relation": "nhập"
     },
     {
-      "source": "ảnh mặt trước CCCD",
-      "target": "CCCD",
-      "relation": "MẶT_TRƯỚC",
-      "type_source": "FRONT_CCCD_PHOTO",
-      "type_target": "CCCD"
+      "source": {
+        "name": "Mã OTP",
+        "code_type": "one_time_password",
+        "context_of_use": "xác thực cài đặt sinh trắc học",
+        "sender_system": "Hệ thống BIDV"
+      },
+      "target": {
+        "name": "Tin nhắn điện thoại",
+        "message_medium": "SMS",
+        "recipient_device_type": "điện thoại di động của khách hàng",
+        "content_description": "chứa mã OTP"
+      },
+      "type_source": "security_code",
+      "type_target": "message_delivery_channel",
+      "relation": "được_gửi_vào"
     },
     {
-      "source": "ảnh mặt sau CCCD",
-      "target": "CCCD",
-      "relation": "MẶT_SAU",
-      "type_source": "BACK_CCCD_PHOTO",
-      "type_target": "CCCD"
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "cung cấp thông tin định danh",
+        "step_in_process": "Bước 3"
+      },
+      "target": {
+        "name": "Loại giấy tờ tùy thân",
+        "document_category_type": "identification_document_type",
+        "selection_purpose": "lựa chọn giấy tờ để xác minh",
+        "user_interaction": "chọn từ danh sách"
+      },
+      "type_source": "user",
+      "type_target": "document_category",
+      "relation": "chọn"
     },
     {
-      "source": "hệ thống",
-      "target": "thành công",
-      "relation": "BÁO",
-      "type_source": "SYSTEM",
-      "type_target": "SUCCESS"
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "cung cấp hình ảnh giấy tờ",
+        "step_in_process": "Bước 3"
+      },
+      "target": {
+        "name": "Mặt trước CCCD",
+        "document_type_name": "CCCD (Căn cước công dân)",
+        "document_side_captured": "mặt trước",
+        "capture_method": "chụp ảnh"
+      },
+      "type_source": "user",
+      "type_target": "document_part_image",
+      "relation": "chụp_ảnh"
     },
     {
-      "source": "Dòng trạng thái thu nhập",
-      "target": "Đã thu nhập cấp độ 2",
-      "relation": "LÀ",
-      "type_source": "STATUS_LINE",
-      "type_target": "LEVEL_2_COLLECTED"
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "quét thông tin từ giấy tờ",
+        "step_in_process": "Bước 3"
+      },
+      "target": {
+        "name": "QR CCCD",
+        "data_format_type": "QR_code",
+        "source_document_name": "CCCD (Căn cước công dân)",
+        "capture_method": "quét"
+      },
+      "type_source": "user",
+      "type_target": "qr_code_data",
+      "relation": "quét"
     },
     {
-      "source": "mục cài đặt sinh trắc học",
-      "target": "Cài đặt sinh trắc học",
-      "relation": "LÀ",
-      "type_source": "BIOMETRIC_SETTING_MENU",
-      "type_target": "BIOMETRIC_SETTING"
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "cung cấp hình ảnh giấy tờ",
+        "step_in_process": "Bước 3"
+      },
+      "target": {
+        "name": "Mặt sau CCCD",
+        "document_type_name": "CCCD (Căn cước công dân)",
+        "document_side_captured": "mặt sau",
+        "capture_method": "chụp ảnh"
+      },
+      "type_source": "user",
+      "type_target": "document_part_image",
+      "relation": "chụp_ảnh"
     },
-      {
-      "source": "app BIDV Smartbanking",
-      "target": "Cài đặt sinh trắc học",
-      "relation": "ĐĂNG_NHẬP",
-      "type_source": "APPLICATION",
-      "type_target": "BIOMETRIC_SETTING"
+    {
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "đọc dữ liệu từ chip giấy tờ",
+        "step_in_process": "Bước 3"
+      },
+      "target": {
+        "name": "CHIP CCCD",
+        "component_type_name": "electronic_chip",
+        "source_document_name": "CCCD (Căn cước công dân)",
+        "data_extraction_method": "đọc chip"
+      },
+      "type_source": "user",
+      "type_target": "document_chip",
+      "relation": "đọc"
+    },
+    {
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "thu thập dữ liệu sinh trắc học khuôn mặt",
+        "step_in_process": "Bước 3"
+      },
+      "target": {
+        "name": "Hình ảnh khuôn mặt",
+        "biometric_data_category": "facial_recognition_data",
+        "capture_method": "chụp ảnh theo chỉ dẫn",
+        "purpose_of_collection": "xác thực sinh trắc học"
+      },
+      "type_source": "user",
+      "type_target": "biometric_image",
+      "relation": "lấy"
+    },
+    {
+      "source": {
+        "name": "Hệ thống BIDV Smartbanking",
+        "system_role_description": "xử lý và phản hồi",
+        "triggering_event": "sau khi lấy ảnh khuôn mặt",
+        "step_in_process": "Bước 4"
+      },
+      "target": {
+        "name": "Thông báo thành công (cài đặt sinh trắc học)",
+        "message_nature": "xác nhận hoàn tất",
+        "result_indicated": "thành công",
+        "next_user_action_implied": "đóng thông báo"
+      },
+      "type_source": "system",
+      "type_target": "status_notification_message",
+      "relation": "báo"
+    },
+    {
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "kết thúc xem thông báo",
+        "step_in_process": "Bước 4"
+      },
+      "target": {
+        "name": "Thông báo thành công (cài đặt sinh trắc học)",
+        "ui_element_type": "dialog_or_popup_message",
+        "interaction_type": "đóng",
+        "current_state": "hiển thị"
+      },
+      "type_source": "user",
+      "type_target": "ui_notification_element",
+      "relation": "kích_đóng"
+    },
+    {
+      "source": {
+        "name": "Khách hàng",
+        "user_role": "người dùng BIDV Smartbanking",
+        "action_context": "kiểm tra trạng thái cài đặt",
+        "step_in_process": "Bước 5"
+      },
+      "target": {
+        "name": "Mục cài đặt sinh trắc học",
+        "ui_element_type": "menu_option",
+        "parent_application": "app BIDV Smartbanking",
+        "purpose_of_access": "kiểm tra trạng thái thu nhập dữ liệu"
+      },
+      "type_source": "user",
+      "type_target": "ui_menu_item",
+      "relation": "vào_lại"
+    },
+    {
+      "source": {
+        "name": "Dòng trạng thái thu nhập",
+        "ui_element_type": "text_display_field",
+        "location_context": "trong mục cài đặt sinh trắc học",
+        "information_purpose": "hiển thị cấp độ thu thập dữ liệu sinh trắc học"
+      },
+      "target": {
+        "name": "Trạng thái “Đã thu nhập cấp độ 2”",
+        "status_text_value": "Đã thu nhập cấp độ 2",
+        "meaning_of_status": "quá trình thu thập dữ liệu sinh trắc học đã hoàn tất ở cấp độ 2",
+        "expected_value": "sau khi hoàn thành Bước 4"
+      },
+      "type_source": "ui_status_display",
+      "type_target": "status_value_text",
+      "relation": "hiển_thị_là"
     }
   ]
 }

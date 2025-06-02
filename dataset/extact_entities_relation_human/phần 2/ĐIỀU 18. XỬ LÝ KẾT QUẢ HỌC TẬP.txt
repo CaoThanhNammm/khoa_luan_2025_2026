@@ -1,732 +1,277 @@
 {
-  "entities": [
-    {
-      "name": "Điều 18",
-      "type": "regulation_article"
-    },
-    {
-      "name": "Xử lý kết quả học tập",
-      "type": "process"
-    },
-    {
-      "name": "học kỳ chính",
-      "type": "semester_type"
-    },
-    {
-      "name": "sinh viên",
-      "type": "student"
-    },
-    {
-      "name": "cảnh báo học tập",
-      "type": "academic_warning_status"
-    },
-    {
-      "name": "điều kiện",
-      "type": "condition"
-    },
-    {
-      "name": "đăng ký học",
-      "type": "student_action"
-    },
-    {
-      "name": "14 tín chỉ",
-      "type": "credit_value"
-    },
-    {
-      "name": "Hiệu trưởng",
-      "type": "position"
-    },
-    {
-      "name": "học kỳ cuối cùng",
-      "type": "time_period"
-    },
-    {
-      "name": "CTĐT",
-      "type": "curriculum"
-    },
-    {
-      "name": "Tổng số tín chỉ không đạt",
-      "type": "failed_credit_count"
-    },
-    {
-      "name": "học kỳ",
-      "type": "time_period"
-    },
-    {
-      "name": "50%",
-      "type": "percentage_value"
-    },
-    {
-      "name": "khối lượng đã đăng kí học",
-      "type": "registered_credit_load"
-    },
-    {
-      "name": "tổng số tín chỉ nợ đọng",
-      "type": "accumulated_failed_credit"
-    },
-    {
-      "name": "đầu khóa học",
-      "type": "time_point"
-    },
-    {
-      "name": "24 tín chỉ",
-      "type": "credit_value"
-    },
-    {
-      "name": "Điểm trung bình học kỳ",
-      "type": "gpa_semester"
-    },
-    {
-      "name": "0,8",
-      "type": "gpa_threshold"
-    },
-    {
-      "name": "học kỳ đầu",
-      "type": "time_period"
-    },
-    {
-      "name": "1,0",
-      "type": "gpa_threshold"
-    },
-    {
-      "name": "các học kỳ tiếp theo",
-      "type": "time_period"
-    },
-    {
-      "name": "Điểm trung bình tích lũy",
-      "type": "gpa_cumulative"
-    },
-    {
-      "name": "1,2",
-      "type": "gpa_threshold"
-    },
-    {
-      "name": "sinh viên trình độ năm thứ nhất",
-      "type": "student_year_level"
-    },
-    {
-      "name": "1,4",
-      "type": "gpa_threshold"
-    },
-    {
-      "name": "sinh viên trình độ năm thứ hai",
-      "type": "student_year_level"
-    },
-    {
-      "name": "1,6",
-      "type": "gpa_threshold"
-    },
-    {
-      "name": "sinh viên trình độ năm thứ ba",
-      "type": "student_year_level"
-    },
-    {
-      "name": "1,8",
-      "type": "gpa_threshold"
-    },
-    {
-      "name": "sinh viên các năm tiếp theo",
-      "type": "student_year_level"
-    },
-    {
-      "name": "buộc thôi học",
-      "type": "expulsion_status"
-    },
-    {
-      "name": "kỷ luật",
-      "type": "disciplinary_action"
-    },
-    {
-      "name": "02 lần liên tiếp",
-      "type": "frequency"
-    },
-    {
-      "name": "Thời gian học tập",
-      "type": "study_duration"
-    },
-    {
-      "name": "giới hạn",
-      "type": "limit"
-    },
-    {
-      "name": "khoản 5 Điều 2",
-      "type": "regulation_reference"
-    },
-    {
-      "name": "Quy chế",
-      "type": "regulation_document"
-    },
-    {
-      "name": "Nghỉ học tạm thời",
-      "type": "temporary_leave"
-    },
-    {
-      "name": "thời hạn cho phép",
-      "type": "permitted_duration"
-    },
-    {
-      "name": "đóng học phí",
-      "type": "student_action"
-    },
-    {
-      "name": "02 học kỳ chính liên tiếp",
-      "type": "time_period"
-    },
-    {
-      "name": "lý do",
-      "type": "reason"
-    },
-    {
-      "name": "điểm rèn luyện cả năm học",
-      "type": "yearly_conduct_score"
-    },
-    {
-      "name": "kém",
-      "type": "performance_level"
-    },
-    {
-      "name": "02 năm liên tiếp",
-      "type": "time_period"
-    },
-    {
-      "name": "Điểm b",
-      "type": "regulation_reference"
-    },
-    {
-      "name": "Điểm c",
-      "type": "regulation_reference"
-    },
-    {
-      "name": "xin xét chuyển",
-      "type": "student_request"
-    },
-    {
-      "name": "CTĐT ở các trình độ thấp hơn",
-      "type": "lower_level_curriculum"
-    },
-    {
-      "name": "Trường",
-      "type": "university"
-    },
-    {
-      "name": "Trường khác",
-      "type": "other_university"
-    },
-    {
-      "name": "chương trình giáo dục thường xuyên",
-      "type": "continuing_education_program"
-    },
-    {
-      "name": "1 năm",
-      "type": "duration"
-    },
-    {
-      "name": "ngày ban hành quyết định",
-      "type": "date_event"
-    },
-    {
-      "name": "bảo lưu kết quả học tập",
-      "type": "academic_record_preservation"
-    },
-    {
-      "name": "từng trường hợp cụ thể",
-      "type": "specific_case"
-    },
-    {
-      "name": "Hàng năm",
-      "type": "frequency"
-    },
-    {
-      "name": "quyết định cảnh báo học tập",
-      "type": "decision_document"
-    },
-    {
-      "name": "quyết định buộc thôi học",
-      "type": "decision_document"
-    },
-    {
-      "name": "tháng 4",
-      "type": "month"
-    },
-    {
-      "name": "tháng 10",
-      "type": "month"
-    },
-    {
-      "name": "thông báo",
-      "type": "notification"
-    },
-    {
-      "name": "gia đình",
-      "type": "family"
-    },
-    {
-      "name": "địa phương nơi sinh viên có hộ khẩu thường trú",
-      "type": "permanent_residence_location"
-    }
-  ],
   "relationships": [
     {
-      "source": "Điều 18",
-      "target": "Xử lý kết quả học tập",
-      "type_source": "regulation_article",
-      "type_target": "process",
-      "relation": "quy_định_về"
-    },
-    {
-      "source": "sinh viên",
-      "target": "cảnh báo học tập",
+      "source": {
+        "name": "Sinh viên",
+        "condition_detail": "Không đăng ký học hoặc đăng ký không đủ 14 tín chỉ",
+        "semester_context": "Học kỳ chính",
+        "permission_status": "Không được sự cho phép của Hiệu trưởng",
+        "exception_clause": "Trừ học kỳ cuối cùng (kết thúc CTĐT)"
+      },
+      "target": {
+        "name": "Cảnh báo học tập",
+        "occurrence_time": "Cuối mỗi học kỳ chính",
+        "trigger_condition_code": "1a",
+        "description": "Tình trạng cảnh báo về kết quả học tập"
+      },
       "type_source": "student",
       "type_target": "academic_warning_status",
-      "relation": "được"
+      "relation": "NHẬN_CẢNH_BÁO_HỌC_TẬP_NẾU"
     },
     {
-      "source": "cảnh báo học tập",
-      "target": "cuối mỗi học kỳ chính",
-      "type_source": "academic_warning_status",
-      "type_target": "semester_type",
-      "relation": "thực_hiện_vào"
-    },
-    {
-      "source": "cảnh báo học tập",
-      "target": "điều kiện",
-      "type_source": "academic_warning_status",
-      "type_target": "condition",
-      "relation": "dựa_trên"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đăng ký học",
-      "type_source": "student",
-      "type_target": "student_action",
-      "relation": "không"
-    },
-    {
-      "source": "đăng ký học",
-      "target": "14 tín chỉ",
-      "type_source": "student_action",
-      "type_target": "credit_value",
-      "relation": "không_đủ"
-    },
-    {
-      "source": "đăng ký học",
-      "target": "học kỳ chính",
-      "type_source": "student_action",
-      "type_target": "semester_type",
-      "relation": "trong"
-    },
-    {
-      "source": "sinh viên",
-      "target": "Hiệu trưởng",
-      "type_source": "student",
-      "type_target": "position",
-      "relation": "không_được_sự_cho_phép_của"
-    },
-    {
-      "source": "đăng ký học",
-      "target": "học kỳ cuối cùng",
-      "type_source": "student_action",
-      "type_target": "time_period",
-      "relation": "trừ"
-    },
-    {
-      "source": "Tổng số tín chỉ không đạt",
-      "target": "50%",
-      "type_source": "failed_credit_count",
-      "type_target": "percentage_value",
-      "relation": "vượt_quá"
-    },
-    {
-      "source": "50%",
-      "target": "khối lượng đã đăng kí học",
-      "type_source": "percentage_value",
-      "type_target": "registered_credit_load",
-      "relation": "của"
-    },
-    {
-      "source": "Tổng số tín chỉ không đạt",
-      "target": "học kỳ",
-      "type_source": "failed_credit_count",
-      "type_target": "time_period",
-      "relation": "trong"
-    },
-    {
-      "source": "tổng số tín chỉ nợ đọng",
-      "target": "24 tín chỉ",
-      "type_source": "accumulated_failed_credit",
-      "type_target": "credit_value",
-      "relation": "vượt_quá"
-    },
-    {
-      "source": "tổng số tín chỉ nợ đọng",
-      "target": "đầu khóa học",
-      "type_source": "accumulated_failed_credit",
-      "type_target": "time_point",
-      "relation": "từ"
-    },
-    {
-      "source": "Điểm trung bình học kỳ",
-      "target": "0,8",
-      "type_source": "gpa_semester",
-      "type_target": "gpa_threshold",
-      "relation": "đạt_dưới"
-    },
-    {
-      "source": "Điểm trung bình học kỳ",
-      "target": "học kỳ đầu",
-      "type_source": "gpa_semester",
-      "type_target": "time_period",
-      "relation": "đối_với"
-    },
-    {
-      "source": "Điểm trung bình học kỳ",
-      "target": "1,0",
-      "type_source": "gpa_semester",
-      "type_target": "gpa_threshold",
-      "relation": "đạt_dưới"
-    },
-    {
-      "source": "Điểm trung bình học kỳ",
-      "target": "các học kỳ tiếp theo",
-      "type_source": "gpa_semester",
-      "type_target": "time_period",
-      "relation": "đối_với"
-    },
-    {
-      "source": "Điểm trung bình tích lũy",
-      "target": "1,2",
-      "type_source": "gpa_cumulative",
-      "type_target": "gpa_threshold",
-      "relation": "đạt_dưới"
-    },
-    {
-      "source": "Điểm trung bình tích lũy",
-      "target": "sinh viên trình độ năm thứ nhất",
-      "type_source": "gpa_cumulative",
-      "type_target": "student_year_level",
-      "relation": "đối_với"
-    },
-    {
-      "source": "Điểm trung bình tích lũy",
-      "target": "1,4",
-      "type_source": "gpa_cumulative",
-      "type_target": "gpa_threshold",
-      "relation": "đạt_dưới"
-    },
-    {
-      "source": "Điểm trung bình tích lũy",
-      "target": "sinh viên trình độ năm thứ hai",
-      "type_source": "gpa_cumulative",
-      "type_target": "student_year_level",
-      "relation": "đối_với"
-    },
-    {
-      "source": "Điểm trung bình tích lũy",
-      "target": "1,6",
-      "type_source": "gpa_cumulative",
-      "type_target": "gpa_threshold",
-      "relation": "đạt_dưới"
-    },
-    {
-      "source": "Điểm trung bình tích lũy",
-      "target": "sinh viên trình độ năm thứ ba",
-      "type_source": "gpa_cumulative",
-      "type_target": "student_year_level",
-      "relation": "đối_với"
-    },
-    {
-      "source": "Điểm trung bình tích lũy",
-      "target": "1,8",
-      "type_source": "gpa_cumulative",
-      "type_target": "gpa_threshold",
-      "relation": "đạt_dưới"
-    },
-    {
-      "source": "Điểm trung bình tích lũy",
-      "target": "sinh viên các năm tiếp theo",
-      "type_source": "gpa_cumulative",
-      "type_target": "student_year_level",
-      "relation": "đối_với"
-    },
-    {
-      "source": "sinh viên",
-      "target": "buộc thôi học",
-      "type_source": "student",
-      "type_target": "expulsion_status",
-      "relation": "bị"
-    },
-    {
-      "source": "kỷ luật",
-      "target": "buộc thôi học",
-      "type_source": "disciplinary_action",
-      "type_target": "expulsion_status",
-      "relation": "ở_mức"
-    },
-    {
-      "source": "kỷ luật",
-      "target": "buộc thôi học",
-      "type_source": "disciplinary_action",
-      "type_target": "expulsion_status",
-      "relation": "là_trường_hợp_cho"
-    },
-    {
-      "source": "sinh viên",
-      "target": "cảnh báo học tập",
+      "source": {
+        "name": "Sinh viên",
+        "failed_credits_ratio": "Tổng số tín chỉ không đạt trong học kỳ vượt quá 50% khối lượng đã đăng kí",
+        "evaluation_period": "Trong học kỳ"
+      },
+      "target": {
+        "name": "Cảnh báo học tập",
+        "occurrence_time": "Cuối mỗi học kỳ chính",
+        "trigger_condition_code": "1b_part1",
+        "description": "Tình trạng cảnh báo về kết quả học tập"
+      },
       "type_source": "student",
       "type_target": "academic_warning_status",
-      "relation": "bị"
+      "relation": "NHẬN_CẢNH_BÁO_HỌC_TẬP_NẾU"
     },
     {
-      "source": "cảnh báo học tập",
-      "target": "02 lần liên tiếp",
-      "type_source": "academic_warning_status",
-      "type_target": "frequency",
-      "relation": "với_tần_suất"
-    },
-    {
-      "source": "cảnh báo học tập",
-      "target": "buộc thôi học",
-      "type_source": "academic_warning_status",
-      "type_target": "expulsion_status",
-      "relation": "là_trường_hợp_cho"
-    },
-    {
-      "source": "Thời gian học tập",
-      "target": "giới hạn",
-      "type_source": "study_duration",
-      "type_target": "limit",
-      "relation": "vượt_quá"
-    },
-    {
-      "source": "giới hạn",
-      "target": "khoản 5 Điều 2",
-      "type_source": "limit",
-      "type_target": "regulation_reference",
-      "relation": "quy_định_tại"
-    },
-    {
-      "source": "khoản 5 Điều 2",
-      "target": "Quy chế",
-      "type_source": "regulation_reference",
-      "type_target": "regulation_document",
-      "relation": "của"
-    },
-    {
-      "source": "Thời gian học tập",
-      "target": "buộc thôi học",
-      "type_source": "study_duration",
-      "type_target": "expulsion_status",
-      "relation": "là_trường_hợp_cho"
-    },
-    {
-      "source": "Nghỉ học tạm thời",
-      "target": "thời hạn cho phép",
-      "type_source": "temporary_leave",
-      "type_target": "permitted_duration",
-      "relation": "quá"
-    },
-    {
-      "source": "Nghỉ học tạm thời",
-      "target": "buộc thôi học",
-      "type_source": "temporary_leave",
-      "type_target": "expulsion_status",
-      "relation": "là_trường_hợp_cho"
-    },
-    {
-      "source": "sinh viên",
-      "target": "đóng học phí",
+      "source": {
+        "name": "Sinh viên",
+        "accumulated_failed_credits": "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24"
+      },
+      "target": {
+        "name": "Cảnh báo học tập",
+        "occurrence_time": "Cuối mỗi học kỳ chính",
+        "trigger_condition_code": "1b_part2",
+        "description": "Tình trạng cảnh báo về kết quả học tập"
+      },
       "type_source": "student",
-      "type_target": "student_action",
-      "relation": "không"
+      "type_target": "academic_warning_status",
+      "relation": "NHẬN_CẢNH_BÁO_HỌC_TẬP_NẾU"
     },
     {
-      "source": "đóng học phí",
-      "target": "02 học kỳ chính liên tiếp",
-      "type_source": "student_action",
-      "type_target": "time_period",
-      "relation": "trong"
-    },
-    {
-      "source": "sinh viên",
-      "target": "lý do",
+      "source": {
+        "name": "Sinh viên",
+        "semester_gpa_level": "Dưới 0,8 (học kỳ đầu), dưới 1,0 (các học kỳ tiếp theo)",
+        "academic_period_context": "Học kỳ đầu của khóa học, các học kỳ tiếp theo"
+      },
+      "target": {
+        "name": "Cảnh báo học tập",
+        "occurrence_time": "Cuối mỗi học kỳ chính",
+        "trigger_condition_code": "1c",
+        "description": "Tình trạng cảnh báo về kết quả học tập"
+      },
       "type_source": "student",
-      "type_target": "reason",
-      "relation": "không_có"
+      "type_target": "academic_warning_status",
+      "relation": "NHẬN_CẢNH_BÁO_HỌC_TẬP_NẾU"
     },
     {
-      "source": "đóng học phí",
-      "target": "buộc thôi học",
-      "type_source": "student_action",
-      "type_target": "expulsion_status",
-      "relation": "là_trường_hợp_cho"
-    },
-    {
-      "source": "điểm rèn luyện cả năm học",
-      "target": "kém",
-      "type_source": "yearly_conduct_score",
-      "type_target": "performance_level",
-      "relation": "thuộc_loại"
-    },
-    {
-      "source": "điểm rèn luyện cả năm học",
-      "target": "02 năm liên tiếp",
-      "type_source": "yearly_conduct_score",
-      "type_target": "time_period",
-      "relation": "trong"
-    },
-    {
-      "source": "điểm rèn luyện cả năm học",
-      "target": "buộc thôi học",
-      "type_source": "yearly_conduct_score",
-      "type_target": "expulsion_status",
-      "relation": "là_trường_hợp_cho"
-    },
-    {
-      "source": "buộc thôi học",
-      "target": "Điểm b",
-      "type_source": "expulsion_status",
-      "type_target": "regulation_reference",
-      "relation": "tại"
-    },
-    {
-      "source": "buộc thôi học",
-      "target": "Điểm c",
-      "type_source": "expulsion_status",
-      "type_target": "regulation_reference",
-      "relation": "tại"
-    },
-    {
-      "source": "sinh viên",
-      "target": "xin xét chuyển",
+      "source": {
+        "name": "Sinh viên",
+        "cumulative_gpa_level": "Dưới 1,2 (năm nhất), 1,4 (năm hai), 1,6 (năm ba), 1,8 (năm tiếp theo)",
+        "academic_year_context": "Năm thứ nhất, năm thứ hai, năm thứ ba, các năm tiếp theo"
+      },
+      "target": {
+        "name": "Cảnh báo học tập",
+        "occurrence_time": "Cuối mỗi học kỳ chính",
+        "trigger_condition_code": "1d",
+        "description": "Tình trạng cảnh báo về kết quả học tập"
+      },
       "type_source": "student",
-      "type_target": "student_request",
-      "relation": "có_thể"
+      "type_target": "academic_warning_status",
+      "relation": "NHẬN_CẢNH_BÁO_HỌC_TẬP_NẾU"
     },
     {
-      "source": "xin xét chuyển",
-      "target": "CTĐT ở các trình độ thấp hơn",
-      "type_source": "student_request",
-      "type_target": "lower_level_curriculum",
-      "relation": "sang_học"
+      "source": {
+        "name": "Sinh viên",
+        "disciplinary_action_received": "Bị kỷ luật ở mức buộc thôi học"
+      },
+      "target": {
+        "name": "Buộc thôi học",
+        "reason_code": "2a",
+        "description": "Tình trạng bị buộc dừng học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_dismissal_status",
+      "relation": "BỊ_BUỘC_THÔI_HỌC_DO"
     },
     {
-      "source": "CTĐT ở các trình độ thấp hơn",
-      "target": "Trường",
-      "type_source": "lower_level_curriculum",
-      "type_target": "university",
-      "relation": "tại"
+      "source": {
+        "name": "Sinh viên",
+        "academic_warning_history": "Bị cảnh báo kết quả học tập 02 lần liên tiếp"
+      },
+      "target": {
+        "name": "Buộc thôi học",
+        "reason_code": "2b",
+        "description": "Tình trạng bị buộc dừng học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_dismissal_status",
+      "relation": "BỊ_BUỘC_THÔI_HỌC_DO"
     },
     {
-      "source": "CTĐT ở các trình độ thấp hơn",
-      "target": "Trường khác",
-      "type_source": "lower_level_curriculum",
-      "type_target": "other_university",
-      "relation": "tại"
+      "source": {
+        "name": "Sinh viên",
+        "study_duration_status": "Thời gian học tập vượt quá giới hạn",
+        "regulation_reference": "Khoản 5 Điều 2 của Quy chế này"
+      },
+      "target": {
+        "name": "Buộc thôi học",
+        "reason_code": "2c",
+        "description": "Tình trạng bị buộc dừng học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_dismissal_status",
+      "relation": "BỊ_BUỘC_THÔI_HỌC_DO"
     },
     {
-      "source": "Trường khác",
-      "target": "CTĐT",
-      "type_source": "other_university",
-      "type_target": "curriculum",
-      "relation": "có"
+      "source": {
+        "name": "Thời gian học tập của sinh viên",
+        "status_description": "Vượt quá giới hạn"
+      },
+      "target": {
+        "name": "Giới hạn thời gian học tập",
+        "defined_in_regulation": "Khoản 5 Điều 2 của Quy chế này",
+        "scope": "Thời gian tối đa cho phép để hoàn thành khóa học"
+      },
+      "type_source": "student_study_duration",
+      "type_target": "regulatory_limit",
+      "relation": "VƯỢT_QUÁ"
     },
     {
-      "source": "Trường khác",
-      "target": "chương trình giáo dục thường xuyên",
-      "type_source": "other_university",
-      "type_target": "continuing_education_program",
-      "relation": "có"
+      "source": {
+        "name": "Sinh viên",
+        "temporary_leave_duration": "Nghỉ học tạm thời quá thời hạn cho phép"
+      },
+      "target": {
+        "name": "Buộc thôi học",
+        "reason_code": "2d",
+        "description": "Tình trạng bị buộc dừng học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_dismissal_status",
+      "relation": "BỊ_BUỘC_THÔI_HỌC_DO"
     },
     {
-      "source": "xin xét chuyển",
-      "target": "1 năm",
-      "type_source": "student_request",
-      "type_target": "duration",
-      "relation": "trong_thời_hạn_tối_đa"
+      "source": {
+        "name": "Sinh viên",
+        "tuition_fee_non_payment_period": "02 học kỳ chính liên tiếp",
+        "reason_for_non_payment": "Không có lý do"
+      },
+      "target": {
+        "name": "Buộc thôi học",
+        "reason_code": "2e",
+        "description": "Tình trạng bị buộc dừng học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_dismissal_status",
+      "relation": "BỊ_BUỘC_THÔI_HỌC_DO"
     },
     {
-      "source": "1 năm",
-      "target": "ngày ban hành quyết định",
-      "type_source": "duration",
-      "type_target": "date_event",
-      "relation": "kể_từ"
+      "source": {
+        "name": "Sinh viên",
+        "annual_conduct_score_status": "Loại kém 02 năm liên tiếp",
+        "evaluation_scope": "Cả năm học"
+      },
+      "target": {
+        "name": "Buộc thôi học",
+        "reason_code": "2f",
+        "description": "Tình trạng bị buộc dừng học tập"
+      },
+      "type_source": "student",
+      "type_target": "academic_dismissal_status",
+      "relation": "BỊ_BUỘC_THÔI_HỌC_DO"
     },
     {
-      "source": "Hiệu trưởng",
-      "target": "bảo lưu kết quả học tập",
-      "type_source": "position",
-      "type_target": "academic_record_preservation",
-      "relation": "xem_xét_quyết_định_cho"
+      "source": {
+        "name": "Sinh viên bị buộc thôi học (do điểm b, c)",
+        "expulsion_grounds_codes": "Điểm b, Điểm c",
+        "expulsion_grounds_details": "2 cảnh báo liên tiếp, hoặc vượt quá thời gian học tập",
+        "option_validity": "Tối đa 1 năm kể từ ngày ban hành quyết định buộc thôi học"
+      },
+      "target": {
+        "name": "CTĐT ở trình độ thấp hơn",
+        "location_options": "Tại Trường hoặc tại Trường khác",
+        "alternative_option": "Chương trình giáo dục thường xuyên tương ứng"
+      },
+      "type_source": "dismissed_student",
+      "type_target": "lower_level_academic_program",
+      "relation": "CÓ_THỂ_XIN_XÉT_CHUYỂN_SANG_HỌC"
     },
     {
-      "source": "bảo lưu kết quả học tập",
-      "target": "từng trường hợp cụ thể",
-      "type_source": "academic_record_preservation",
-      "type_target": "specific_case",
-      "relation": "đối_với"
+      "source": {
+        "name": "Hiệu trưởng",
+        "authority_scope": "Xem xét quyết định cho bảo lưu kết quả học tập",
+        "consideration_basis": "Từng trường hợp cụ thể"
+      },
+      "target": {
+        "name": "Kết quả học tập của sinh viên bị buộc thôi học",
+        "student_current_status": "Bị buộc thôi học",
+        "action_under_consideration": "Bảo lưu kết quả học tập"
+      },
+      "type_source": "rector",
+      "type_target": "dismissed_student_academic_record",
+      "relation": "XEM_XÉT_BẢO_LƯU"
     },
     {
-      "source": "Trường",
-      "target": "quyết định cảnh báo học tập",
-      "type_source": "university",
-      "type_target": "decision_document",
-      "relation": "công_bố"
+      "source": {
+        "name": "Trường",
+        "announcement_frequency": "Hàng năm",
+        "announcement_timing_months": "Tháng 4 và tháng 10"
+      },
+      "target": {
+        "name": "Quyết định cảnh báo học tập",
+        "document_nature": "Văn bản chính thức của trường",
+        "purpose": "Thông báo tình trạng học tập của sinh viên"
+      },
+      "type_source": "university_institution",
+      "type_target": "academic_warning_decision_document",
+      "relation": "CÔNG_BỐ"
     },
     {
-      "source": "Trường",
-      "target": "quyết định buộc thôi học",
-      "type_source": "university",
-      "type_target": "decision_document",
-      "relation": "công_bố"
+      "source": {
+        "name": "Trường",
+        "announcement_frequency": "Hàng năm",
+        "announcement_timing_months": "Tháng 4 và tháng 10"
+      },
+      "target": {
+        "name": "Quyết định buộc thôi học",
+        "document_nature": "Văn bản chính thức của trường",
+        "consequence_described": "Chấm dứt tư cách sinh viên"
+      },
+      "type_source": "university_institution",
+      "type_target": "academic_dismissal_decision_document",
+      "relation": "CÔNG_BỐ"
     },
     {
-      "source": "Trường",
-      "target": "tháng 4",
-      "type_source": "university",
-      "type_target": "month",
-      "relation": "công_bố_vào"
+      "source": {
+        "name": "Trường",
+        "notification_trigger": "Sau khi ban hành quyết định cảnh báo học tập hoặc buộc thôi học",
+        "sender_role": "Đơn vị quản lý sinh viên của trường"
+      },
+      "target": {
+        "name": "Gia đình sinh viên",
+        "recipient_role": "Người thân của sinh viên",
+        "information_type_received": "Thông báo về quyết định học vụ của sinh viên"
+      },
+      "type_source": "university_institution",
+      "type_target": "student_family",
+      "relation": "GỬI_THÔNG_BÁO_ĐẾN"
     },
     {
-      "source": "Trường",
-      "target": "tháng 10",
-      "type_source": "university",
-      "type_target": "month",
-      "relation": "công_bố_vào"
-    },
-    {
-      "source": "Trường",
-      "target": "thông báo",
-      "type_source": "university",
-      "type_target": "notification",
-      "relation": "gửi"
-    },
-    {
-      "source": "Trường",
-      "target": "quyết định cảnh báo học tập",
-      "type_source": "university",
-      "type_target": "decision_document",
-      "relation": "ban_hành"
-    },
-    {
-      "source": "Trường",
-      "target": "quyết định buộc thôi học",
-      "type_source": "university",
-      "type_target": "decision_document",
-      "relation": "ban_hành"
-    },
-    {
-      "source": "thông báo",
-      "target": "gia đình",
-      "type_source": "notification",
-      "type_target": "family",
-      "relation": "gửi_về"
-    },
-    {
-      "source": "thông báo",
-      "target": "địa phương nơi sinh viên có hộ khẩu thường trú",
-      "type_source": "notification",
-      "type_target": "permanent_residence_location",
-      "relation": "gửi_về"
+      "source": {
+        "name": "Trường",
+        "notification_trigger": "Sau khi ban hành quyết định cảnh báo học tập hoặc buộc thôi học",
+        "sender_role": "Đơn vị quản lý sinh viên của trường"
+      },
+      "target": {
+        "name": "Địa phương nơi sinh viên có hộ khẩu thường trú",
+        "recipient_role": "Cơ quan quản lý hành chính tại nơi đăng ký hộ khẩu",
+        "information_type_received": "Thông báo về quyết định học vụ của sinh viên"
+      },
+      "type_source": "university_institution",
+      "type_target": "student_local_residence_authority",
+      "relation": "GỬI_THÔNG_BÁO_ĐẾN"
     }
   ]
 }
