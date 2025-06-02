@@ -7,8 +7,12 @@ import Layout from './components/Layout';
 import ProtectedRoute from './components/ProtectedRoute';
 import NotificationContainer from './components/NotificationContainer';
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
 import ChatPage from './pages/ChatPage';
 import ProfilePage from './pages/ProfilePage';
 
@@ -18,12 +22,14 @@ function App() {
       <AuthProvider>
         <UserProvider>
           <ChatProvider>
-            <Router>
-              <Routes>
+            <Router>              <Routes>
                 <Route path="/" element={<Layout />}>
-                  <Route index element={<HomePage />} />
+                  <Route index element={<HomePage />} />                  <Route path="about" element={<AboutPage />} />
+                  <Route path="contact" element={<ContactPage />} />
                   <Route path="login" element={<LoginPage />} />
                   <Route path="register" element={<RegisterPage />} />
+                  <Route path="forgot-password" element={<ForgotPasswordPage />} />
+                  <Route path="reset-password" element={<ResetPasswordPage />} />
                   <Route path="chat" element={
                     <ProtectedRoute>
                       <ChatPage />
