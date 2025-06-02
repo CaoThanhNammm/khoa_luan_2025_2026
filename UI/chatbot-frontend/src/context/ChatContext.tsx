@@ -34,6 +34,27 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Save current conversation ID to localStorage
+  const saveCurrentConversationId = useCallback((conversationId: number | null) => {
+    if (user) {
+      const key = `chatbot_current_conversation_${user.id}`;
+      if (conversationId) {
+        localStorage.setItem(key, conversationId.toString());
+      } else {
+        localStorage.removeItem(key);
+      }
+    }
+  }, [user]);
+
+  // Get saved conversation ID from localStorage
+  const getSavedConversationId = useCallback((): number | null => {
+    if (user) {
+      const key = `chatbot_current_conversation_${user.id}`;
+      const saved = localStorage.getItem(key);
+      return saved ? parseInt(saved, 10) : null;
+    }
+    return null;
+  }, [user]);
   // Load all conversations for the current user
   const loadConversations = useCallback(async () => {
     if (!user) return;
@@ -42,6 +63,28 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     try {
       const conversations = await ChatService.getConversations();
       setConversations(conversations);
+      
+      // Try to restore the previously selected conversation
+      const savedConversationId = getSavedConversationId();
+      if (savedConversationId) {
+        // Find the conversation in the loaded conversations
+        const savedConversation = conversations.find(conv => conv.id === savedConversationId);
+        if (savedConversation) {
+          // Load the full conversation details
+          try {
+            const fullConversation = await ChatService.getConversation(savedConversationId);
+            setCurrentConversation(fullConversation);
+          } catch (err) {
+            // If loading the specific conversation fails, just clear the saved ID
+            console.warn('Failed to load saved conversation:', err);
+            saveCurrentConversationId(null);
+          }
+        } else {
+          // Conversation no longer exists, clear the saved ID
+          saveCurrentConversationId(null);
+        }
+      }
+      
       setError(null);
     } catch (err) {
       const errorMessage = getErrorMessage(err);
@@ -50,8 +93,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  }, [user]);
-
+  }, [user, getSavedConversationId, saveCurrentConversationId]);
   // Create a new conversation
   const createNewConversation = async (message: string): Promise<number | null> => {
     if (!user) return null;
@@ -62,6 +104,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       
       setConversations(prev => [newConversation, ...prev]);
       setCurrentConversation(newConversation);
+      saveCurrentConversationId(newConversation.id); // Save the new conversation ID
       setError(null);
       
       return newConversation.id;
@@ -74,13 +117,13 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       setLoading(false);
     }
   };
-
   // Switch to a specific conversation
   const switchToConversation = async (id: number) => {
     setLoading(true);
     try {
       const conversation = await ChatService.getConversation(id);
       setCurrentConversation(conversation);
+      saveCurrentConversationId(id); // Save the current conversation ID
       setError(null);
     } catch (err) {
       const errorMessage = getErrorMessage(err);
@@ -90,7 +133,6 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       setLoading(false);
     }
   };
-
   // Delete a conversation
   const deleteConversation = async (id: number) => {
     try {
@@ -100,6 +142,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       
       if (currentConversation?.id === id) {
         setCurrentConversation(null);
+        saveCurrentConversationId(null); // Clear saved conversation ID
       }
       
       setError(null);
@@ -131,11 +174,10 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
   const clearError = () => {
     setError(null);
   };
-
   const clearCurrentConversation = () => {
     setCurrentConversation(null);
+    saveCurrentConversationId(null); // Clear saved conversation ID
   };
-
   // Load conversations when user changes
   useEffect(() => {
     if (user) {
@@ -143,6 +185,12 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     } else {
       setConversations([]);
       setCurrentConversation(null);
+      // Clear any saved conversation data when user logs out
+      Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('chatbot_current_conversation_')) {
+          localStorage.removeItem(key);
+        }
+      });
     }
   }, [user, loadConversations]);
   const value: ChatContextType = {

@@ -138,13 +138,11 @@ const formatMessage = (content: string) => {
                 <span className="flex-1 leading-relaxed">{formatInlineText(numberedMatch[2])}</span>
               </div>
             );
-          }
-          
-          // Handle standalone bold text lines
+          }          // Handle standalone bold text lines
           if (trimmedLine.startsWith('**') && trimmedLine.endsWith('**') && trimmedLine.length > 4) {
             const boldText = trimmedLine.slice(2, -2);
             return (
-              <div key={idx} className="chat-text-bold text-gray-900 dark:text-gray-100 my-3 text-base">
+              <div key={idx} className="chat-text-bold my-3 text-base">
                 {boldText}
               </div>
             );
@@ -169,18 +167,16 @@ const formatMessage = (content: string) => {
     // Handle both bold text and inline code
     const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g);
     return (
-      <>
-        {parts.map((part, idx) => {
+      <>        {parts.map((part, idx) => {
           if (part.startsWith('**') && part.endsWith('**')) {
             return (
-              <span key={idx} className="chat-text-bold text-gray-900 dark:text-gray-100">
+              <span key={idx} className="chat-text-bold">
                 {part.slice(2, -2)}
               </span>
             );
-          }
-          if (part.startsWith('`') && part.endsWith('`')) {
+          }          if (part.startsWith('`') && part.endsWith('`')) {
             return (
-              <code key={idx} className="px-1.5 py-0.5 mx-0.5 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-sm font-mono border border-gray-200 dark:border-gray-700">
+              <code key={idx} className="px-1.5 py-0.5 mx-0.5 bg-gray-100 dark:bg-gray-800 text-black dark:text-black rounded text-sm font-mono border border-gray-200 dark:border-gray-700">
                 {part.slice(1, -1)}
               </code>
             );

@@ -742,11 +742,16 @@
     line-height: 1.6;
     letter-spacing: -0.005em;
   }
-  
   .chat-text-bold {
     font-family: 'Inter', system-ui, sans-serif;
     font-weight: 600;
     letter-spacing: -0.01em;
+    color: #111827; /* gray-900 for light mode */
+  }
+
+  /* Force white color for bold text in dark mode */
+  .dark .chat-text-bold {
+    color: white !important;
   }
   
   .chat-timestamp {
