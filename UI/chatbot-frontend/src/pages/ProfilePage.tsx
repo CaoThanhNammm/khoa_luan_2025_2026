@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useUser } from '../context/UserContext';
+import { useSettings } from '../context/SettingsContext';
+import { useTranslation } from '../utils/translations';
 import { 
   BiUser, 
   BiEnvelope, 
@@ -19,20 +21,28 @@ import {
 } from 'react-icons/bi';
 
 const ProfilePage: React.FC = () => {
-  const { user } = useAuth();  const { 
+  const { user } = useAuth();
+  const { 
     profile, 
-    settings, 
     stats,
     loading, 
     error, 
     loadProfile, 
-    loadSettings,
     loadStats,
     updateProfile, 
     updatePassword, 
-    updateSettings,
     clearError 
   } = useUser();
+  
+  const { 
+    settings, 
+    updateTheme, 
+    updateLanguage, 
+    updateNotifications,
+    showNotification 
+  } = useSettings();
+  
+  const { t } = useTranslation(settings.language);
   const navigate = useNavigate();
 
   // Form states
@@ -41,6 +51,7 @@ const ProfilePage: React.FC = () => {
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
   // Profile form (only email is editable)
   const [profileForm, setProfileForm] = useState({
     email: ''
@@ -53,24 +64,18 @@ const ProfilePage: React.FC = () => {
     confirmPassword: ''
   });
 
-  // Settings form
-  const [settingsForm, setSettingsForm] = useState({
-    theme: 'light' as 'light' | 'dark',
-    notifications: true,
-    language: 'en'
-  });
+  // Error messages
+  const [passwordError, setPasswordError] = useState('');
 
-  // Success and error messages
-  const [successMessage, setSuccessMessage] = useState('');
-  const [passwordError, setPasswordError] = useState('');  useEffect(() => {
+  useEffect(() => {
     if (!user) {
       navigate('/login');
       return;
     }
     loadProfile();
-    loadSettings();
     loadStats();
-  }, [user, navigate, loadProfile, loadSettings, loadStats]);
+  }, [user, navigate, loadProfile, loadStats]);
+
   useEffect(() => {
     if (profile) {
       setProfileForm({
@@ -79,22 +84,14 @@ const ProfilePage: React.FC = () => {
     }
   }, [profile]);
 
-  useEffect(() => {
-    if (settings) {
-      setSettingsForm(settings);
-    }
-  }, [settings]);
-
   const handleProfileSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     clearError();
-    setSuccessMessage('');
     
     const success = await updateProfile(profileForm);
     if (success) {
       setIsEditingProfile(false);
-      setSuccessMessage('Profile updated successfully!');
-      setTimeout(() => setSuccessMessage(''), 3000);
+      showNotification(t('profile.profile_updated'), 'success');
     }
   };
 
@@ -102,15 +99,14 @@ const ProfilePage: React.FC = () => {
     e.preventDefault();
     setPasswordError('');
     clearError();
-    setSuccessMessage('');
 
     if (passwordForm.newPassword !== passwordForm.confirmPassword) {
-      setPasswordError('New passwords do not match');
+      setPasswordError(t('profile.password_no_match'));
       return;
     }
 
     if (passwordForm.newPassword.length < 6) {
-      setPasswordError('New password must be at least 6 characters long');
+      setPasswordError(t('profile.password_min_length'));
       return;
     }
 
@@ -126,21 +122,27 @@ const ProfilePage: React.FC = () => {
         newPassword: '',
         confirmPassword: ''
       });
-      setSuccessMessage('Password updated successfully!');
-      setTimeout(() => setSuccessMessage(''), 3000);
+      showNotification(t('profile.password_updated'), 'success');
     }
   };
 
-  const handleSettingsChange = async (newSettings: Partial<typeof settingsForm>) => {
-    const updatedSettings = { ...settingsForm, ...newSettings };
-    setSettingsForm(updatedSettings);
-    
-    const success = await updateSettings(updatedSettings);
-    if (success) {
-      setSuccessMessage('Settings updated successfully!');
-      setTimeout(() => setSuccessMessage(''), 3000);
+  const handleSettingsChange = async (settingType: string, value: string | boolean) => {
+    switch (settingType) {
+      case 'theme':
+        updateTheme(value as 'light' | 'dark');
+        showNotification(t('settings.theme_updated'), 'success');
+        break;
+      case 'language':
+        updateLanguage(value as string);
+        showNotification(t('settings.language_updated'), 'success');
+        break;
+      case 'notifications':
+        updateNotifications(value as boolean);
+        showNotification(t('settings.notifications_updated'), 'success');
+        break;
     }
   };
+
   const cancelProfileEdit = () => {
     setIsEditingProfile(false);
     if (profile) {
@@ -165,28 +167,28 @@ const ProfilePage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-off-white via-beige to-lavender/20 py-8 px-4">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50/30 to-blue-50/40 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 py-8 px-4 transition-colors duration-500 relative overflow-hidden">
+      {/* Enhanced decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-lavender/10 to-sky-blue/10 dark:from-indigo-500/10 dark:to-purple-500/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-sky-blue/10 to-lavender/10 dark:from-purple-500/10 dark:to-indigo-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-200/5 to-blue-200/5 dark:from-indigo-400/5 dark:to-purple-400/5 rounded-full blur-3xl animate-aurora"></div>
+      </div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
         <div className="mb-8 text-center">
-          <h1 className="font-heading text-4xl font-bold text-charcoal mb-2">
-            My Profile
+          <h1 className="font-heading text-4xl font-bold text-charcoal dark:text-white mb-2 transition-colors duration-300">
+            {t('profile.title')}
           </h1>
-          <p className="text-gray-600">
-            Manage your account settings and preferences
+          <p className="text-gray-600 dark:text-gray-300 transition-colors duration-300">
+            {t('profile.subtitle')}
           </p>
         </div>
 
-        {/* Success Message */}
-        {successMessage && (
-          <div className="mb-6 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg text-sm">
-            {successMessage}
-          </div>
-        )}
-
         {/* Error Message */}
         {error && (
-          <div className="mb-6 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+          <div className="mb-6 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 px-4 py-3 rounded-lg text-sm backdrop-blur-xl">
             {error}
           </div>
         )}
@@ -195,26 +197,28 @@ const ProfilePage: React.FC = () => {
           {/* Profile Information */}
           <div className="lg:col-span-2 space-y-6">
             {/* Basic Profile */}
-            <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-lg dark:shadow-2xl border border-white/20 dark:border-slate-600/30 p-6 transition-all duration-300 hover-lift">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="font-heading text-2xl font-semibold text-charcoal flex items-center">
+                <h2 className="font-heading text-2xl font-semibold text-charcoal dark:text-white flex items-center">
                   <BiUser className="h-6 w-6 mr-2" />
-                  Profile Information
+                  {t('profile.info')}
                 </h2>
                 {!isEditingProfile && (
                   <button
                     onClick={() => setIsEditingProfile(true)}
-                    className="flex items-center space-x-1 text-charcoal hover:text-lavender transition-colors"
+                    className="flex items-center space-x-1 text-charcoal dark:text-white hover:text-lavender dark:hover:text-indigo-400 transition-colors"
                   >
                     <BiEdit className="h-5 w-5" />
-                    <span>Edit</span>
+                    <span>{t('profile.edit')}</span>
                   </button>
                 )}
-              </div>              {isEditingProfile ? (
+              </div>
+
+              {isEditingProfile ? (
                 <form onSubmit={handleProfileSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-charcoal mb-2">
-                      Email
+                    <label className="block text-sm font-medium text-charcoal dark:text-white mb-2">
+                      {t('auth.email')}
                     </label>
                     <div className="relative">
                       <BiEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -235,7 +239,7 @@ const ProfilePage: React.FC = () => {
                       className="flex items-center space-x-1 btn-primary disabled:opacity-50"
                     >
                       <BiSave className="h-4 w-4" />
-                      <span>Save Changes</span>
+                      <span>{t('profile.save')}</span>
                     </button>
                     <button
                       type="button"
@@ -243,31 +247,31 @@ const ProfilePage: React.FC = () => {
                       className="flex items-center space-x-1 btn-secondary"
                     >
                       <BiX className="h-4 w-4" />
-                      <span>Cancel</span>
+                      <span>{t('profile.cancel')}</span>
                     </button>
                   </div>
                 </form>
               ) : (
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-500 mb-1">
-                      Username
+                    <label className="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
+                      {t('auth.username')}
                     </label>
-                    <p className="text-charcoal font-medium">{profile?.username || user.username}</p>
+                    <p className="text-charcoal dark:text-white font-medium">{profile?.username || user.username}</p>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-500 mb-1">
-                      Email
+                    <label className="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
+                      {t('auth.email')}
                     </label>
-                    <p className="text-charcoal font-medium">{profile?.email || user.email}</p>
+                    <p className="text-charcoal dark:text-white font-medium">{profile?.email || user.email}</p>
                   </div>
                   {profile?.createdAt && (
                     <div>
-                      <label className="block text-sm font-medium text-gray-500 mb-1">
-                        Member Since
+                      <label className="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
+                        {t('profile.member_since')}
                       </label>
-                      <p className="text-charcoal font-medium">
-                        {new Date(profile.createdAt).toLocaleDateString('en-US', {
+                      <p className="text-charcoal dark:text-white font-medium">
+                        {new Date(profile.createdAt).toLocaleDateString(settings.language === 'vi' ? 'vi-VN' : 'en-US', {
                           year: 'numeric',
                           month: 'long',
                           day: 'numeric'
@@ -280,19 +284,19 @@ const ProfilePage: React.FC = () => {
             </div>
 
             {/* Change Password */}
-            <div className="bg-white rounded-2xl shadow-lg p-6">
+            <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-lg dark:shadow-2xl border border-white/20 dark:border-slate-600/30 p-6 transition-all duration-300 hover-lift">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="font-heading text-2xl font-semibold text-charcoal flex items-center">
+                <h2 className="font-heading text-2xl font-semibold text-charcoal dark:text-white flex items-center">
                   <BiLock className="h-6 w-6 mr-2" />
-                  Change Password
+                  {t('profile.change_password')}
                 </h2>
                 {!isEditingPassword && (
                   <button
                     onClick={() => setIsEditingPassword(true)}
-                    className="flex items-center space-x-1 text-charcoal hover:text-lavender transition-colors"
+                    className="flex items-center space-x-1 text-charcoal dark:text-white hover:text-lavender dark:hover:text-indigo-400 transition-colors"
                   >
                     <BiEdit className="h-5 w-5" />
-                    <span>Change</span>
+                    <span>{t('profile.change')}</span>
                   </button>
                 )}
               </div>
@@ -300,14 +304,14 @@ const ProfilePage: React.FC = () => {
               {isEditingPassword ? (
                 <form onSubmit={handlePasswordSubmit} className="space-y-4">
                   {passwordError && (
-                    <div className="bg-red-50 border border-red-200 text-red-700 px-3 py-2 rounded text-sm">
+                    <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 px-3 py-2 rounded text-sm">
                       {passwordError}
                     </div>
                   )}
 
                   <div>
-                    <label className="block text-sm font-medium text-charcoal mb-2">
-                      Current Password
+                    <label className="block text-sm font-medium text-charcoal dark:text-white mb-2">
+                      {t('profile.current_password')}
                     </label>
                     <div className="relative">
                       <BiLock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -329,8 +333,8 @@ const ProfilePage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-charcoal mb-2">
-                      New Password
+                    <label className="block text-sm font-medium text-charcoal dark:text-white mb-2">
+                      {t('profile.new_password')}
                     </label>
                     <div className="relative">
                       <BiLock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -353,8 +357,8 @@ const ProfilePage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-charcoal mb-2">
-                      Confirm New Password
+                    <label className="block text-sm font-medium text-charcoal dark:text-white mb-2">
+                      {t('profile.confirm_new_password')}
                     </label>
                     <div className="relative">
                       <BiLock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -383,7 +387,7 @@ const ProfilePage: React.FC = () => {
                       className="flex items-center space-x-1 btn-primary disabled:opacity-50"
                     >
                       <BiSave className="h-4 w-4" />
-                      <span>Update Password</span>
+                      <span>{t('profile.update_password')}</span>
                     </button>
                     <button
                       type="button"
@@ -391,14 +395,14 @@ const ProfilePage: React.FC = () => {
                       className="flex items-center space-x-1 btn-secondary"
                     >
                       <BiX className="h-4 w-4" />
-                      <span>Cancel</span>
+                      <span>{t('profile.cancel')}</span>
                     </button>
                   </div>
                 </form>
               ) : (
-                <div className="text-center py-8 text-gray-500">
+                <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                   <BiLock className="h-12 w-12 mx-auto mb-3 opacity-50" />
-                  <p>Click "Change" to update your password</p>
+                  <p>{t('profile.click_change_password')}</p>
                 </div>
               )}
             </div>
@@ -407,40 +411,40 @@ const ProfilePage: React.FC = () => {
           {/* Settings Sidebar */}
           <div className="space-y-6">
             {/* Account Settings */}
-            <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="font-heading text-xl font-semibold text-charcoal flex items-center mb-6">
+            <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-lg dark:shadow-2xl border border-white/20 dark:border-slate-600/30 p-6 transition-all duration-300 hover-lift">
+              <h3 className="font-heading text-xl font-semibold text-charcoal dark:text-white flex items-center mb-6 transition-colors duration-300">
                 <BiCog className="h-5 w-5 mr-2" />
-                Settings
+                {t('profile.settings')}
               </h3>
 
               <div className="space-y-6">
                 {/* Theme Setting */}
                 <div>
-                  <label className="block text-sm font-medium text-charcoal mb-3">
-                    Theme
+                  <label className="block text-sm font-medium text-charcoal dark:text-white mb-3 transition-colors duration-300">
+                    {t('settings.theme')}
                   </label>
                   <div className="flex space-x-2">
                     <button
-                      onClick={() => handleSettingsChange({ theme: 'light' })}
-                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-colors ${
-                        settingsForm.theme === 'light'
-                          ? 'bg-lavender/20 border-lavender text-charcoal'
-                          : 'border-gray-200 text-gray-600 hover:border-lavender'
+                      onClick={() => handleSettingsChange('theme', 'light')}
+                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-all duration-200 hover-lift ${
+                        settings.theme === 'light'
+                          ? 'bg-gradient-to-r from-lavender/30 to-sky-blue/30 dark:from-indigo-500/30 dark:to-purple-500/30 border-lavender/50 dark:border-indigo-500/50 text-charcoal dark:text-white shadow-lg dark:shadow-indigo-500/20 glow-effect'
+                          : 'border-gray-200/50 dark:border-slate-600/50 text-gray-600 dark:text-gray-300 hover:border-lavender/50 dark:hover:border-indigo-500/50 hover:bg-white/50 dark:hover:bg-slate-700/50'
                       }`}
                     >
                       <BiSun className="h-4 w-4" />
-                      <span>Light</span>
+                      <span>{t('settings.light')}</span>
                     </button>
                     <button
-                      onClick={() => handleSettingsChange({ theme: 'dark' })}
-                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-colors ${
-                        settingsForm.theme === 'dark'
-                          ? 'bg-lavender/20 border-lavender text-charcoal'
-                          : 'border-gray-200 text-gray-600 hover:border-lavender'
+                      onClick={() => handleSettingsChange('theme', 'dark')}
+                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-all duration-200 hover-lift ${
+                        settings.theme === 'dark'
+                          ? 'bg-gradient-to-r from-lavender/30 to-sky-blue/30 dark:from-indigo-500/30 dark:to-purple-500/30 border-lavender/50 dark:border-indigo-500/50 text-charcoal dark:text-white shadow-lg dark:shadow-indigo-500/20 glow-effect'
+                          : 'border-gray-200/50 dark:border-slate-600/50 text-gray-600 dark:text-gray-300 hover:border-lavender/50 dark:hover:border-indigo-500/50 hover:bg-white/50 dark:hover:bg-slate-700/50'
                       }`}
                     >
                       <BiMoon className="h-4 w-4" />
-                      <span>Dark</span>
+                      <span>{t('settings.dark')}</span>
                     </button>
                   </div>
                 </div>
@@ -448,19 +452,21 @@ const ProfilePage: React.FC = () => {
                 {/* Notifications */}
                 <div>
                   <label className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-charcoal flex items-center">
+                    <span className="text-sm font-medium text-charcoal dark:text-white flex items-center transition-colors duration-300">
                       <BiBell className="h-4 w-4 mr-2" />
-                      Notifications
+                      {t('settings.notifications')}
                     </span>
                     <button
-                      onClick={() => handleSettingsChange({ notifications: !settingsForm.notifications })}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        settingsForm.notifications ? 'bg-lavender' : 'bg-gray-200'
+                      onClick={() => handleSettingsChange('notifications', !settings.notifications)}
+                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-all duration-200 ${
+                        settings.notifications 
+                          ? 'bg-gradient-to-r from-lavender to-sky-blue dark:from-indigo-600 dark:to-purple-600 shadow-lg dark:shadow-indigo-500/25 glow-effect' 
+                          : 'bg-gray-200/80 dark:bg-slate-600/80'
                       }`}
                     >
                       <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          settingsForm.notifications ? 'translate-x-6' : 'translate-x-1'
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform duration-200 ${
+                          settings.notifications ? 'translate-x-6' : 'translate-x-1'
                         }`}
                       />
                     </button>
@@ -469,14 +475,14 @@ const ProfilePage: React.FC = () => {
 
                 {/* Language */}
                 <div>
-                  <label className="block text-sm font-medium text-charcoal mb-2">
+                  <label className="block text-sm font-medium text-charcoal dark:text-white mb-2 transition-colors duration-300">
                     <BiGlobe className="h-4 w-4 inline mr-2" />
-                    Language
+                    {t('settings.language')}
                   </label>
                   <select
-                    value={settingsForm.language}
-                    onChange={(e) => handleSettingsChange({ language: e.target.value })}
-                    className="w-full input-field"
+                    value={settings.language}
+                    onChange={(e) => handleSettingsChange('language', e.target.value)}
+                    className="w-full input-field backdrop-blur-sm"
                   >
                     <option value="en">English</option>
                     <option value="vi">Tiếng Việt</option>
@@ -486,23 +492,25 @@ const ProfilePage: React.FC = () => {
                   </select>
                 </div>
               </div>
-            </div>            {/* Account Stats */}
-            <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="font-heading text-xl font-semibold text-charcoal mb-4">
-                Account Statistics
+            </div>
+
+            {/* Account Stats */}
+            <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl shadow-lg dark:shadow-2xl border border-white/20 dark:border-slate-600/30 p-6 transition-all duration-300 hover-lift">
+              <h3 className="font-heading text-xl font-semibold text-charcoal dark:text-white mb-4 transition-colors duration-300">
+                {t('profile.stats')}
               </h3>
               <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Total Conversations</span>
-                  <span className="font-medium text-charcoal">{stats?.totalConversations || '-'}</span>
+                <div className="flex justify-between items-center py-2 border-b border-gray-100/50 dark:border-slate-600/30">
+                  <span className="text-gray-600 dark:text-gray-300 transition-colors duration-300">{t('profile.total_conversations')}</span>
+                  <span className="font-medium text-charcoal dark:text-white px-3 py-1 bg-gradient-to-r from-lavender/20 to-sky-blue/20 dark:from-indigo-500/20 dark:to-purple-500/20 rounded-full transition-colors duration-300">
+                    {stats?.totalConversations || '-'}
+                  </span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Messages Sent</span>
-                  <span className="font-medium text-charcoal">{stats?.totalMessages || '-'}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Account Status</span>
-                  <span className="font-medium text-green-600">{stats?.accountStatus || 'Active'}</span>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600 dark:text-gray-300 transition-colors duration-300">{t('profile.messages_sent')}</span>
+                  <span className="font-medium text-charcoal dark:text-white px-3 py-1 bg-gradient-to-r from-lavender/20 to-sky-blue/20 dark:from-indigo-500/20 dark:to-purple-500/20 rounded-full transition-colors duration-300">
+                    {stats?.totalMessages || '-'}
+                  </span>
                 </div>
               </div>
             </div>
