@@ -2,12 +2,9 @@ package com.chatbot.controller;
 
 import com.chatbot.model.User;
 import com.chatbot.repository.UserRepository;
-import com.chatbot.security.CustomUserDetailsService;
-import com.chatbot.service.EmailService;
 import com.chatbot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,7 +18,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173"})
 public class UserController {
 
     @Autowired
@@ -33,9 +30,6 @@ public class UserController {
     @Autowired
     private PasswordEncoder passwordEncoder;
     
-    @Autowired
-    private CustomUserDetailsService userDetailsService;
-
     @GetMapping("/profile")
     public ResponseEntity<?> getCurrentUserProfile() {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
@@ -108,10 +102,6 @@ public class UserController {
     
     @PutMapping("/settings")
     public ResponseEntity<?> updateSettings(@Valid @RequestBody Map<String, Object> settingsData) {
-        String username = SecurityContextHolder.getContext().getAuthentication().getName();
-        User user = userService.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-        
         // We can add user settings (preferences) to the database in the future if needed
         // For now, we'll just acknowledge the request as the settings are stored in localStorage
         

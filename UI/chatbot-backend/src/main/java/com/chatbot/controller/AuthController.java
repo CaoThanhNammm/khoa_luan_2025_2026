@@ -29,7 +29,7 @@ import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173"})
 public class AuthController {
     private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
 
@@ -53,17 +53,39 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                        loginRequest.getUsername(),
-                        loginRequest.getPassword()));
+        logger.info("Login attempt for username: {}", loginRequest.getUsername());
+        
+        try {
+            // Check if user exists first
+            Optional<User> userOpt = userService.findByUsername(loginRequest.getUsername());
+            if (!userOpt.isPresent()) {
+                logger.warn("User not found: {}", loginRequest.getUsername());
+                Map<String, String> response = new HashMap<>();
+                response.put("error", "Invalid username or password");
+                return ResponseEntity.status(401).body(response);
+            }
+            
+            User user = userOpt.get();
+            logger.info("User found: {} with ID: {}", user.getUsername(), user.getId());
+            
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(
+                            loginRequest.getUsername(),
+                            loginRequest.getPassword()));
 
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        String jwt = tokenProvider.generateToken(authentication);
-        
-        User user = userService.findByUsername(loginRequest.getUsername()).orElseThrow();
-        
-        return ResponseEntity.ok(new JwtResponse(jwt, user.getId(), user.getUsername(), user.getEmail()));
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+            String jwt = tokenProvider.generateToken(authentication);
+            
+            logger.info("Login successful for user: {}", user.getUsername());
+            
+            return ResponseEntity.ok(new JwtResponse(jwt, user.getId(), user.getUsername(), user.getEmail()));
+            
+        } catch (Exception e) {
+            logger.error("Login failed for username: {} with error: {}", loginRequest.getUsername(), e.getMessage());
+            Map<String, String> response = new HashMap<>();
+            response.put("error", "Invalid username or password");
+            return ResponseEntity.status(401).body(response);
+        }
     }
 
     @PostMapping("/register")
