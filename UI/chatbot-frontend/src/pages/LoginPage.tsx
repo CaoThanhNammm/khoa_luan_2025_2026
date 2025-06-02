@@ -102,6 +102,14 @@ const LoginPage: React.FC = () => {
                   {showPassword ? <BiHide className="h-5 w-5" /> : <BiShow className="h-5 w-5" />}
                 </button>
               </div>
+              <div className="text-right mt-2">
+                <Link
+                  to="/forgot-password"
+                  className="text-sm text-charcoal dark:text-white hover:text-lavender dark:hover:text-indigo-400 transition-colors"
+                >
+                  {t('auth.forgot_password')}
+                </Link>
+              </div>
             </div>
 
             <button

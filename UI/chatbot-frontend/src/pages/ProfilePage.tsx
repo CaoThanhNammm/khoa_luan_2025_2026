@@ -14,9 +14,6 @@ import {
   BiShow, 
   BiHide,
   BiCog,
-  BiMoon,
-  BiSun,
-  BiBell,
   BiGlobe
 } from 'react-icons/bi';
 
@@ -257,13 +254,13 @@ const ProfilePage: React.FC = () => {
                     <label className="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
                       {t('auth.username')}
                     </label>
-                    <p className="text-charcoal dark:text-white font-medium">{profile?.username || user.username}</p>
+                    <p className="text-charcoal dark:text-white font-medium">{user?.username}</p>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
                       {t('auth.email')}
                     </label>
-                    <p className="text-charcoal dark:text-white font-medium">{profile?.email || user.email}</p>
+                    <p className="text-charcoal dark:text-white font-medium">{profile?.email}</p>
                   </div>
                   {profile?.createdAt && (
                     <div>
@@ -271,11 +268,7 @@ const ProfilePage: React.FC = () => {
                         {t('profile.member_since')}
                       </label>
                       <p className="text-charcoal dark:text-white font-medium">
-                        {new Date(profile.createdAt).toLocaleDateString(settings.language === 'vi' ? 'vi-VN' : 'en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}
+                        {new Date(profile.createdAt).toLocaleDateString()}
                       </p>
                     </div>
                   )}
@@ -344,7 +337,6 @@ const ProfilePage: React.FC = () => {
                         onChange={(e) => setPasswordForm(prev => ({ ...prev, newPassword: e.target.value }))}
                         className="input-field pl-10 pr-10"
                         required
-                        minLength={6}
                       />
                       <button
                         type="button"
@@ -368,7 +360,6 @@ const ProfilePage: React.FC = () => {
                         onChange={(e) => setPasswordForm(prev => ({ ...prev, confirmPassword: e.target.value }))}
                         className="input-field pl-10 pr-10"
                         required
-                        minLength={6}
                       />
                       <button
                         type="button"
@@ -426,25 +417,23 @@ const ProfilePage: React.FC = () => {
                   <div className="flex space-x-2">
                     <button
                       onClick={() => handleSettingsChange('theme', 'light')}
-                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-all duration-200 hover-lift ${
+                      className={`px-4 py-2 rounded-lg transition-colors ${
                         settings.theme === 'light'
-                          ? 'bg-gradient-to-r from-lavender/30 to-sky-blue/30 dark:from-indigo-500/30 dark:to-purple-500/30 border-lavender/50 dark:border-indigo-500/50 text-charcoal dark:text-white shadow-lg dark:shadow-indigo-500/20 glow-effect'
-                          : 'border-gray-200/50 dark:border-slate-600/50 text-gray-600 dark:text-gray-300 hover:border-lavender/50 dark:hover:border-indigo-500/50 hover:bg-white/50 dark:hover:bg-slate-700/50'
+                          ? 'bg-lavender text-white'
+                          : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                       }`}
                     >
-                      <BiSun className="h-4 w-4" />
-                      <span>{t('settings.light')}</span>
+                      {t('settings.light')}
                     </button>
                     <button
                       onClick={() => handleSettingsChange('theme', 'dark')}
-                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-all duration-200 hover-lift ${
+                      className={`px-4 py-2 rounded-lg transition-colors ${
                         settings.theme === 'dark'
-                          ? 'bg-gradient-to-r from-lavender/30 to-sky-blue/30 dark:from-indigo-500/30 dark:to-purple-500/30 border-lavender/50 dark:border-indigo-500/50 text-charcoal dark:text-white shadow-lg dark:shadow-indigo-500/20 glow-effect'
-                          : 'border-gray-200/50 dark:border-slate-600/50 text-gray-600 dark:text-gray-300 hover:border-lavender/50 dark:hover:border-indigo-500/50 hover:bg-white/50 dark:hover:bg-slate-700/50'
+                          ? 'bg-lavender text-white'
+                          : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                       }`}
                     >
-                      <BiMoon className="h-4 w-4" />
-                      <span>{t('settings.dark')}</span>
+                      {t('settings.dark')}
                     </button>
                   </div>
                 </div>
@@ -452,24 +441,15 @@ const ProfilePage: React.FC = () => {
                 {/* Notifications */}
                 <div>
                   <label className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-charcoal dark:text-white flex items-center transition-colors duration-300">
-                      <BiBell className="h-4 w-4 mr-2" />
+                    <span className="text-sm font-medium text-charcoal dark:text-white transition-colors duration-300">
                       {t('settings.notifications')}
                     </span>
-                    <button
-                      onClick={() => handleSettingsChange('notifications', !settings.notifications)}
-                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-all duration-200 ${
-                        settings.notifications 
-                          ? 'bg-gradient-to-r from-lavender to-sky-blue dark:from-indigo-600 dark:to-purple-600 shadow-lg dark:shadow-indigo-500/25 glow-effect' 
-                          : 'bg-gray-200/80 dark:bg-slate-600/80'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg transition-transform duration-200 ${
-                          settings.notifications ? 'translate-x-6' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
+                    <input
+                      type="checkbox"
+                      checked={settings.notifications}
+                      onChange={(e) => handleSettingsChange('notifications', e.target.checked)}
+                      className="rounded"
+                    />
                   </label>
                 </div>
 
@@ -503,13 +483,13 @@ const ProfilePage: React.FC = () => {
                 <div className="flex justify-between items-center py-2 border-b border-gray-100/50 dark:border-slate-600/30">
                   <span className="text-gray-600 dark:text-gray-300 transition-colors duration-300">{t('profile.total_conversations')}</span>
                   <span className="font-medium text-charcoal dark:text-white px-3 py-1 bg-gradient-to-r from-lavender/20 to-sky-blue/20 dark:from-indigo-500/20 dark:to-purple-500/20 rounded-full transition-colors duration-300">
-                    {stats?.totalConversations || '-'}
+                    {stats?.totalConversations || 0}
                   </span>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span className="text-gray-600 dark:text-gray-300 transition-colors duration-300">{t('profile.messages_sent')}</span>
                   <span className="font-medium text-charcoal dark:text-white px-3 py-1 bg-gradient-to-r from-lavender/20 to-sky-blue/20 dark:from-indigo-500/20 dark:to-purple-500/20 rounded-full transition-colors duration-300">
-                    {stats?.totalMessages || '-'}
+                    {stats?.totalMessages || 0}
                   </span>
                 </div>
               </div>

@@ -173,7 +173,7 @@ const RegisterPage: React.FC = () => {
               disabled={isLoading}
               className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isLoading ? t('auth.creating_account') : t('auth.create_account')}
+              {isLoading ? t('auth.creating_account') : t('auth.signup')}
             </button>
           </form>
 
