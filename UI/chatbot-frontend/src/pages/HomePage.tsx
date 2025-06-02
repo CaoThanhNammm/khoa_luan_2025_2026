@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useSettings } from '../context/SettingsContext';
 import { useTranslation } from '../utils/translations';
 import { BiChat, BiRocket, BiShield, BiBot } from 'react-icons/bi';
+import PageTransition from '../components/PageTransition';
 
 const HomePage: React.FC = () => {
   const { user } = useAuth();
@@ -11,7 +12,8 @@ const HomePage: React.FC = () => {
   const { t } = useTranslation(settings.language);
 
   return (
-    <div className="min-h-screen">
+    <PageTransition>
+      <div className="min-h-screen">{/* ...existing code... */}
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-off-white via-beige to-lavender/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-20 px-4 transition-colors duration-300">
         <div className="max-w-6xl mx-auto text-center">
@@ -108,10 +110,10 @@ const HomePage: React.FC = () => {
                 {t('home.sign_in')}
               </Link>
             </div>
-          )}
-        </div>
+          )}        </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

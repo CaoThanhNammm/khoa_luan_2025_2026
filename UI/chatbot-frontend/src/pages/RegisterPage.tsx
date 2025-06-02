@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useSettings } from '../context/SettingsContext';
 import { useTranslation } from '../utils/translations';
 import { BiUser, BiEnvelope, BiLock, BiShow, BiHide } from 'react-icons/bi';
+import PageTransition from '../components/PageTransition';
 
 const RegisterPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -53,9 +54,9 @@ const RegisterPage: React.FC = () => {
       setError(authError || t('auth.registration_failed'));
     }
   };
-
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-off-white via-beige to-lavender/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
+    <PageTransition>
+      <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-off-white via-beige to-lavender/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <h2 className="font-heading text-4xl font-bold text-charcoal dark:text-white mb-2 transition-colors duration-300">
@@ -187,10 +188,10 @@ const RegisterPage: React.FC = () => {
                 {t('auth.signin_here')}
               </Link>
             </p>
-          </div>
-        </div>
+          </div>        </div>
       </div>
     </div>
+    </PageTransition>
   );
 };
 

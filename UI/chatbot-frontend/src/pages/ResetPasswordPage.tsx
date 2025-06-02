@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useSettings } from '../context/SettingsContext';
 import { useTranslation } from '../utils/translations';
 import { BiArrowBack, BiLock, BiShow, BiHide, BiCheckCircle } from 'react-icons/bi';
+import PageTransition from '../components/PageTransition';
 
 const ResetPasswordPage: React.FC = () => {
   const { settings } = useSettings();
@@ -112,14 +113,14 @@ const ResetPasswordPage: React.FC = () => {
       </div>
     );
   }
-
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-off-white via-beige to-lavender/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
-      <div className="max-w-md w-full space-y-8">
-        <div className="text-center">
-          <h2 className="font-heading text-4xl font-bold text-charcoal dark:text-white mb-2 transition-colors duration-300">
-            {t('reset_password.title')}
-          </h2>
+    <PageTransition>
+      <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-off-white via-beige to-lavender/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
+        <div className="max-w-md w-full space-y-8">
+          <div className="text-center">
+            <h2 className="font-heading text-4xl font-bold text-charcoal dark:text-white mb-2 transition-colors duration-300">
+              {t('reset_password.title')}
+            </h2>
           <p className="text-gray-600 dark:text-gray-300 transition-colors duration-300">
             {t('reset_password.instructions')}
           </p>
@@ -217,11 +218,11 @@ const ResetPasswordPage: React.FC = () => {
               >
                 {t('forgot_password.login_now')}
               </Link>
-            </p>
-          </div>
+            </p>          </div>
         </div>
       </div>
     </div>
+    </PageTransition>
   );
 };
 

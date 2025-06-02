@@ -32,13 +32,6 @@ const Navbar: React.FC = () => {
             {user ? (
               <>
                 <Link
-                  to="/"
-                  className="p-2 rounded-lg text-charcoal dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black transition-colors"
-                  title={t('nav.home')}
-                >
-                  <BiHome className="h-5 w-5" />
-                </Link>
-                <Link
                   to="/about"
                   className="p-2 rounded-lg text-charcoal dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black transition-colors"
                   title={t('nav.about')}
@@ -65,7 +58,8 @@ const Navbar: React.FC = () => {
                   title={t('nav.profile')}
                 >
                   <BiUser className="h-5 w-5" />
-                </Link>                <button
+                </Link>
+                <button
                   onClick={handleLogout}
                   className="p-2 rounded-lg text-charcoal dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black transition-colors"
                   title={t('nav.logout')}

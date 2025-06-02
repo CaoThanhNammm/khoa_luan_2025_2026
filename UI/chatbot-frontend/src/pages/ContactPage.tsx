@@ -8,11 +8,11 @@ import {
   BiTime, 
   BiSend, 
   BiUser, 
-  BiMessage,
-  BiSupport,
+  BiMessage,  BiSupport,
   BiQuestionMark,
   BiHeart
 } from 'react-icons/bi';
+import PageTransition from '../components/PageTransition';
 
 const ContactPage: React.FC = () => {
   const { settings } = useSettings();
@@ -46,9 +46,9 @@ const ContactPage: React.FC = () => {
       [e.target.name]: e.target.value
     }));
   };
-
   return (
-    <div className="min-h-screen">
+    <PageTransition>
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-off-white via-beige to-lavender/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-20 px-4 transition-colors duration-300">
         <div className="max-w-6xl mx-auto text-center">
@@ -307,10 +307,10 @@ const ContactPage: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div>        </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 
