@@ -34,17 +34,21 @@ const Navbar: React.FC = () => {
                 >
                   <BiHome className="h-5 w-5" />
                   <span>Home</span>
-                </Link>
-                <Link
+                </Link>                <Link
                   to="/chat"
                   className="flex items-center space-x-1 text-charcoal hover:text-lavender transition-colors"
                 >
                   <BiChat className="h-5 w-5" />
                   <span>Chat</span>
                 </Link>
-                <div className="flex items-center space-x-4">
+                <Link
+                  to="/profile"
+                  className="flex items-center space-x-1 text-charcoal hover:text-lavender transition-colors"
+                >
+                  <BiUser className="h-5 w-5" />
+                  <span>Profile</span>
+                </Link>                <div className="flex items-center space-x-4">
                   <div className="flex items-center space-x-2">
-                    <BiUser className="h-5 w-5 text-charcoal" />
                     <span className="text-sm font-medium text-charcoal">
                       {user.name}
                     </span>
