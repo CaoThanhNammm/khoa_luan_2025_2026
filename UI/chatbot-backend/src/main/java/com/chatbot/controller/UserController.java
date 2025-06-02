@@ -1,7 +1,14 @@
 package com.chatbot.controller;
 
+import com.chatbot.dto.AccountStatsDto;
+import com.chatbot.dto.UserProfileDto;
+import com.chatbot.dto.UserSettingsDto;
 import com.chatbot.model.User;
+import com.chatbot.model.UserSettings;
+import com.chatbot.repository.ConversationRepository;
+import com.chatbot.repository.MessageRepository;
 import com.chatbot.repository.UserRepository;
+import com.chatbot.repository.UserSettingsRepository;
 import com.chatbot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,9 +26,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/users")
 @CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173"})
-public class UserController {
-
-    @Autowired
+public class UserController {    @Autowired
     private UserService userService;
     
     @Autowired
@@ -30,33 +35,37 @@ public class UserController {
     @Autowired
     private PasswordEncoder passwordEncoder;
     
-    @GetMapping("/profile")
+    @Autowired
+    private UserSettingsRepository userSettingsRepository;
+    
+    @Autowired
+    private ConversationRepository conversationRepository;
+    
+    @Autowired
+    private MessageRepository messageRepository;
+      @GetMapping("/profile")
     public ResponseEntity<?> getCurrentUserProfile() {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
         User user = userService.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         
-        // Don't send password in response
-        user.setPassword(null);
+        // Create DTO to avoid serialization issues
+        UserProfileDto profileDto = new UserProfileDto();
+        profileDto.setId(user.getId());
+        profileDto.setUsername(user.getUsername());
+        profileDto.setEmail(user.getEmail());
+        profileDto.setCreatedAt(user.getCreatedAt());
+        profileDto.setUpdatedAt(user.getUpdatedAt());
         
-        return ResponseEntity.ok(user);
+        return ResponseEntity.ok(profileDto);
     }
-    
-    @PutMapping("/profile")
+      @PutMapping("/profile")
     public ResponseEntity<?> updateProfile(@Valid @RequestBody Map<String, String> profileData) {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
         User user = userService.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         
-        String newUsername = profileData.get("username");
         String newEmail = profileData.get("email");
-        
-        // Check if username already exists (if changed)
-        if (!user.getUsername().equals(newUsername) && userService.existsByUsername(newUsername)) {
-            Map<String, String> response = new HashMap<>();
-            response.put("message", "Username is already taken");
-            return ResponseEntity.badRequest().body(response);
-        }
         
         // Check if email already exists (if changed)
         if (!user.getEmail().equals(newEmail) && userService.existsByEmail(newEmail)) {
@@ -64,15 +73,19 @@ public class UserController {
             response.put("message", "Email is already in use");
             return ResponseEntity.badRequest().body(response);
         }
-        
-        // Update user profile
-        user.setUsername(newUsername);
+          // Update user profile - only email can be changed
         user.setEmail(newEmail);
-        userRepository.save(user);
+        User savedUser = userRepository.save(user);
         
-        Map<String, String> response = new HashMap<>();
-        response.put("message", "Profile updated successfully");
-        return ResponseEntity.ok(response);
+        // Return updated profile as DTO
+        UserProfileDto profileDto = new UserProfileDto();
+        profileDto.setId(savedUser.getId());
+        profileDto.setUsername(savedUser.getUsername());
+        profileDto.setEmail(savedUser.getEmail());
+        profileDto.setCreatedAt(savedUser.getCreatedAt());
+        profileDto.setUpdatedAt(savedUser.getUpdatedAt());
+        
+        return ResponseEntity.ok(profileDto);
     }
     
     @PutMapping("/password")
@@ -99,15 +112,80 @@ public class UserController {
         response.put("message", "Password updated successfully");
         return ResponseEntity.ok(response);
     }
+      @GetMapping("/settings")
+    public ResponseEntity<?> getUserSettings() {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        User user = userService.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        
+        Optional<UserSettings> userSettingsOpt = userSettingsRepository.findByUser(user);
+        UserSettings userSettings;
+        
+        if (userSettingsOpt.isPresent()) {
+            userSettings = userSettingsOpt.get();
+        } else {
+            // Create default settings if not exists
+            userSettings = new UserSettings(user);
+            userSettings = userSettingsRepository.save(userSettings);
+        }
+        
+        // Convert to DTO
+        UserSettingsDto settingsDto = new UserSettingsDto();
+        settingsDto.setTheme(userSettings.getTheme());
+        settingsDto.setNotifications(userSettings.getNotifications());
+        settingsDto.setLanguage(userSettings.getLanguage());
+        settingsDto.setCreatedAt(userSettings.getCreatedAt());
+        settingsDto.setUpdatedAt(userSettings.getUpdatedAt());
+        
+        return ResponseEntity.ok(settingsDto);
+    }
     
     @PutMapping("/settings")
     public ResponseEntity<?> updateSettings(@Valid @RequestBody Map<String, Object> settingsData) {
-        // We can add user settings (preferences) to the database in the future if needed
-        // For now, we'll just acknowledge the request as the settings are stored in localStorage
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        User user = userService.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         
-        Map<String, String> response = new HashMap<>();
-        response.put("message", "Settings updated successfully");
-        return ResponseEntity.ok(response);
+        Optional<UserSettings> userSettingsOpt = userSettingsRepository.findByUser(user);
+        UserSettings userSettings;
+        
+        if (userSettingsOpt.isPresent()) {
+            userSettings = userSettingsOpt.get();
+        } else {
+            // Create new settings if not exists
+            userSettings = new UserSettings(user);
+        }
+        
+        // Update settings from request data
+        if (settingsData.containsKey("theme")) {
+            String theme = (String) settingsData.get("theme");
+            if ("light".equals(theme) || "dark".equals(theme)) {
+                userSettings.setTheme(theme);
+            }
+        }
+        
+        if (settingsData.containsKey("notifications")) {
+            Boolean notifications = (Boolean) settingsData.get("notifications");
+            userSettings.setNotifications(notifications);
+        }
+        
+        if (settingsData.containsKey("language")) {
+            String language = (String) settingsData.get("language");
+            userSettings.setLanguage(language);
+        }
+        
+        // Save updated settings
+        UserSettings savedSettings = userSettingsRepository.save(userSettings);
+        
+        // Convert to DTO for response
+        UserSettingsDto settingsDto = new UserSettingsDto();
+        settingsDto.setTheme(savedSettings.getTheme());
+        settingsDto.setNotifications(savedSettings.getNotifications());
+        settingsDto.setLanguage(savedSettings.getLanguage());
+        settingsDto.setCreatedAt(savedSettings.getCreatedAt());
+        settingsDto.setUpdatedAt(savedSettings.getUpdatedAt());
+        
+        return ResponseEntity.ok(settingsDto);
     }
 
     @PostMapping("/forgot-password")
@@ -148,12 +226,35 @@ public class UserController {
         Optional<User> userOpt = userService.getUserByPasswordResetToken(token);
         
         if (userOpt.isPresent() && userService.isPasswordResetTokenValid(userOpt.get())) {
-            userService.resetPassword(userOpt.get(), newPassword);
-            response.put("message", "Password has been reset successfully");
+            userService.resetPassword(userOpt.get(), newPassword);        response.put("message", "Password has been reset successfully");
             return ResponseEntity.ok(response);
         } else {
             response.put("message", "Token is invalid or expired");
             return ResponseEntity.badRequest().body(response);
         }
+    }    @GetMapping("/stats")
+    public ResponseEntity<?> getAccountStats() {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        User user = userService.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        
+        // Count user's conversations
+        Long totalConversations = conversationRepository.countByUser(user);
+        
+        // Count user's messages
+        Long totalMessages = messageRepository.countByConversationUser(user);
+          // Create stats DTO
+        AccountStatsDto statsDto = new AccountStatsDto();
+        statsDto.setTotalConversations(totalConversations);
+        statsDto.setTotalMessages(totalMessages);
+        statsDto.setAccountStatus("Active");
+        
+        // Handle null createdAt for existing users
+        String memberSince = user.getCreatedAt() != null 
+            ? user.getCreatedAt().toString() 
+            : "Unknown";
+        statsDto.setMemberSince(memberSince);
+        
+        return ResponseEntity.ok(statsDto);
     }
 }

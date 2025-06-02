@@ -19,13 +19,15 @@ import {
 } from 'react-icons/bi';
 
 const ProfilePage: React.FC = () => {
-  const { user } = useAuth();
-  const { 
+  const { user } = useAuth();  const { 
     profile, 
     settings, 
+    stats,
     loading, 
     error, 
     loadProfile, 
+    loadSettings,
+    loadStats,
     updateProfile, 
     updatePassword, 
     updateSettings,
@@ -39,10 +41,8 @@ const ProfilePage: React.FC = () => {
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
-  // Profile form
+  // Profile form (only email is editable)
   const [profileForm, setProfileForm] = useState({
-    username: '',
     email: ''
   });
 
@@ -62,20 +62,18 @@ const ProfilePage: React.FC = () => {
 
   // Success and error messages
   const [successMessage, setSuccessMessage] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-
-  useEffect(() => {
+  const [passwordError, setPasswordError] = useState('');  useEffect(() => {
     if (!user) {
       navigate('/login');
       return;
     }
     loadProfile();
-  }, [user, navigate, loadProfile]);
-
+    loadSettings();
+    loadStats();
+  }, [user, navigate, loadProfile, loadSettings, loadStats]);
   useEffect(() => {
     if (profile) {
       setProfileForm({
-        username: profile.username,
         email: profile.email
       });
     }
@@ -143,12 +141,10 @@ const ProfilePage: React.FC = () => {
       setTimeout(() => setSuccessMessage(''), 3000);
     }
   };
-
   const cancelProfileEdit = () => {
     setIsEditingProfile(false);
     if (profile) {
       setProfileForm({
-        username: profile.username,
         email: profile.email
       });
     }
@@ -214,26 +210,8 @@ const ProfilePage: React.FC = () => {
                     <span>Edit</span>
                   </button>
                 )}
-              </div>
-
-              {isEditingProfile ? (
+              </div>              {isEditingProfile ? (
                 <form onSubmit={handleProfileSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-charcoal mb-2">
-                      Username
-                    </label>
-                    <div className="relative">
-                      <BiUser className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                      <input
-                        type="text"
-                        value={profileForm.username}
-                        onChange={(e) => setProfileForm(prev => ({ ...prev, username: e.target.value }))}
-                        className="input-field pl-10"
-                        required
-                      />
-                    </div>
-                  </div>
-
                   <div>
                     <label className="block text-sm font-medium text-charcoal mb-2">
                       Email
@@ -508,9 +486,7 @@ const ProfilePage: React.FC = () => {
                   </select>
                 </div>
               </div>
-            </div>
-
-            {/* Account Stats */}
+            </div>            {/* Account Stats */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <h3 className="font-heading text-xl font-semibold text-charcoal mb-4">
                 Account Statistics
@@ -518,15 +494,15 @@ const ProfilePage: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Total Conversations</span>
-                  <span className="font-medium text-charcoal">-</span>
+                  <span className="font-medium text-charcoal">{stats?.totalConversations || '-'}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Messages Sent</span>
-                  <span className="font-medium text-charcoal">-</span>
+                  <span className="font-medium text-charcoal">{stats?.totalMessages || '-'}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Account Status</span>
-                  <span className="font-medium text-green-600">Active</span>
+                  <span className="font-medium text-green-600">{stats?.accountStatus || 'Active'}</span>
                 </div>
               </div>
             </div>

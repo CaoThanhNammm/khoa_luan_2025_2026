@@ -1,16 +1,19 @@
-import React, { createContext, useContext, useState} from 'react';
+import React, { createContext, useContext, useState, useCallback} from 'react';
 import type { ReactNode } from 'react';
-import UserService, { type UserProfile, type UpdateProfileRequest, type UpdatePasswordRequest, type UserSettings } from '../services/UserService';
+import UserService, { type UserProfile, type UpdateProfileRequest, type UpdatePasswordRequest, type UserSettings, type AccountStats } from '../services/UserService';
 import { useAuth } from './AuthContext';
 
 interface UserContextType {
   profile: UserProfile | null;
   settings: UserSettings | null;
+  stats: AccountStats | null;
   loading: boolean;
   error: string | null;
   
   // Actions
   loadProfile: () => Promise<void>;
+  loadSettings: () => Promise<void>;
+  loadStats: () => Promise<void>;
   updateProfile: (data: UpdateProfileRequest) => Promise<boolean>;
   updatePassword: (data: UpdatePasswordRequest) => Promise<boolean>;
   updateSettings: (data: UserSettings) => Promise<boolean>;
@@ -27,10 +30,10 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const { user } = useAuth();
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [settings, setSettings] = useState<UserSettings | null>(null);
+  const [stats, setStats] = useState<AccountStats | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  const loadProfile = async () => {
+  const loadProfile = useCallback(async () => {
     if (!user) return;
     
     setLoading(true);
@@ -44,7 +47,38 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [user]);
+  const loadSettings = useCallback(async () => {
+    if (!user) return;
+    
+    setLoading(true);
+    try {
+      const response = await UserService.getUserSettings();
+      setSettings(response.data);
+      setError(null);
+    } catch (err) {
+      setError('Failed to load user settings');
+      console.error('Error loading settings:', err);
+    } finally {
+      setLoading(false);
+    }
+  }, [user]);
+
+  const loadStats = useCallback(async () => {
+    if (!user) return;
+    
+    setLoading(true);
+    try {
+      const response = await UserService.getAccountStats();
+      setStats(response.data);
+      setError(null);
+    } catch (err) {
+      setError('Failed to load account statistics');
+      console.error('Error loading stats:', err);
+    } finally {
+      setLoading(false);
+    }
+  }, [user]);
 
   const updateProfile = async (data: UpdateProfileRequest): Promise<boolean> => {
     setLoading(true);
@@ -95,14 +129,15 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
   const clearError = () => {
     setError(null);
-  };
-
-  const value: UserContextType = {
+  };  const value: UserContextType = {
     profile,
     settings,
+    stats,
     loading,
     error,
     loadProfile,
+    loadSettings,
+    loadStats,
     updateProfile,
     updatePassword,
     updateSettings,

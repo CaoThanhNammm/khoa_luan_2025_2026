@@ -12,7 +12,6 @@ export interface UserProfile {
 }
 
 export interface UpdateProfileRequest {
-  username: string;
   email: string;
 }
 
@@ -25,6 +24,13 @@ export interface UserSettings {
   theme: 'light' | 'dark';
   notifications: boolean;
   language: string;
+}
+
+export interface AccountStats {
+  totalConversations: number;
+  totalMessages: number;
+  accountStatus: string;
+  memberSince: string;
 }
 
 class UserService {
@@ -40,8 +46,15 @@ class UserService {
     return axios.put<{ message: string }>(API_URL + "password", passwordData);
   }
 
+  getUserSettings(): Promise<AxiosResponse<UserSettings>> {
+    return axios.get<UserSettings>(API_URL + "settings");
+  }
   updateSettings(settingsData: UserSettings): Promise<AxiosResponse<UserSettings>> {
     return axios.put<UserSettings>(API_URL + "settings", settingsData);
+  }
+
+  getAccountStats(): Promise<AxiosResponse<AccountStats>> {
+    return axios.get<AccountStats>(API_URL + "stats");
   }
 }
 

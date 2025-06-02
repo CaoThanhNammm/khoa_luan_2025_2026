@@ -11,9 +11,12 @@ import org.slf4j.LoggerFactory;
 import javax.mail.MessagingException;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
@@ -105,5 +108,33 @@ public class UserService {
         user.setPasswordResetToken(null);
         user.setPasswordResetTokenExpiry(null);
         userRepository.save(user);
+    }
+    
+    /**
+     * Migration method to fix existing users with null createdAt values
+     * Sets createdAt to a default timestamp for users that don't have it set
+     */
+    public void fixNullCreatedAtValues() {
+        logger.info("Starting migration to fix null createdAt values");
+        
+        List<User> usersWithNullCreatedAt = userRepository.findAll().stream()
+            .filter(user -> user.getCreatedAt() == null)
+            .collect(Collectors.toList());
+            
+        if (!usersWithNullCreatedAt.isEmpty()) {
+            logger.info("Found {} users with null createdAt values", usersWithNullCreatedAt.size());
+            
+            LocalDateTime defaultCreatedAt = LocalDateTime.of(2024, 1, 1, 0, 0); // Default to beginning of 2024
+            
+            for (User user : usersWithNullCreatedAt) {
+                user.setCreatedAt(defaultCreatedAt);
+                user.setUpdatedAt(LocalDateTime.now());
+                userRepository.save(user);
+            }
+            
+            logger.info("Fixed {} users with null createdAt values", usersWithNullCreatedAt.size());
+        } else {
+            logger.info("No users found with null createdAt values");
+        }
     }
 }
