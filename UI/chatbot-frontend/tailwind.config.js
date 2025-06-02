@@ -16,6 +16,10 @@ export default {
       fontFamily: {
         'heading': ['Playfair Display', 'serif'],
         'body': ['Inter', 'Lato', 'sans-serif'],
+        'claude': ['-apple-system', 'BlinkMacSystemFont', 'Inter', 'Source Sans Pro', 'Segoe UI', 'system-ui', 'sans-serif'],
+        'claude-display': ['-apple-system', 'BlinkMacSystemFont', 'Inter', 'Source Sans Pro', 'Segoe UI', 'system-ui', 'sans-serif'],
+        'claude-body': ['-apple-system', 'BlinkMacSystemFont', 'Inter', 'Source Sans Pro', 'Segoe UI', 'system-ui', 'sans-serif'],
+        'mono-modern': ['JetBrains Mono', 'Fira Code', 'SF Mono', 'Consolas', 'monospace'],
       },
     },
   },

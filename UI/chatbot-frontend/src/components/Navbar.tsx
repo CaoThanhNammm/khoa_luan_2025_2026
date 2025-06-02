@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
           <Link to="/" className="flex items-center space-x-2">
             <BiChat className="h-8 w-8 text-charcoal dark:text-white" />
             <span className="font-heading text-xl font-semibold text-charcoal dark:text-white">
-              NLU ChatBot
+              NLU AI
             </span>
           </Link>
 

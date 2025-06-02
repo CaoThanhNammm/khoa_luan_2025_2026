@@ -38,15 +38,13 @@ export const translations: Record<string, Translations> = {
     'auth.enter_email': 'Enter your email',
     'auth.enter_password': 'Enter your password',
     'auth.create_password': 'Create a password',
-    'auth.confirm_password_placeholder': 'Confirm your password',
-
-    // Home Page
-    'home.title': 'NLU ChatBot',
+    'auth.confirm_password_placeholder': 'Confirm your password',    // Home Page
+    'home.title': 'NLU AI',
     'home.subtitle': 'Experience the future of conversational AI with our advanced Natural Language Understanding chatbot.',
     'home.continue_chatting': 'Continue Chatting',
     'home.start_chat': 'Start Chat',
     'home.create_account': 'Create Account',
-    'home.why_choose': 'Why Choose NLU ChatBot?',
+    'home.why_choose': 'Why Choose NLU AI?',
     'home.why_choose_subtitle': 'Built with cutting-edge technology to provide you with the most natural and helpful AI conversations.',
     'home.feature_fast': 'Lightning Fast',
     'home.feature_fast_desc': 'Get instant responses powered by advanced natural language processing algorithms.',
@@ -56,11 +54,10 @@ export const translations: Record<string, Translations> = {
     'home.feature_learning_desc': 'Our AI continuously improves to provide more accurate and helpful responses.',
     'home.ready_to_start': 'Ready to Start Conversations?',
     'home.ready_subtitle': 'Join thousands of users who are already experiencing the power of natural language understanding.',
-    'home.get_started': 'Get Started Free',
-    'home.sign_in': 'Sign In',
+    'home.get_started': 'Get Started Free',    'home.sign_in': 'Sign In',
 
     // Chat
-    'chat.title': 'NLU ChatBot',
+    'chat.title': 'NLU AI',
     'chat.ready': 'Ready to help',
     'chat.thinking': 'Creating response...',
     'chat.placeholder': 'Share your thoughts with me...',
@@ -195,15 +192,12 @@ export const translations: Record<string, Translations> = {
     'auth.enter_email': 'Nhập email của bạn',
     'auth.enter_password': 'Nhập mật khẩu',
     'auth.create_password': 'Tạo mật khẩu',
-    'auth.confirm_password_placeholder': 'Xác nhận mật khẩu của bạn',
-
-    // Home Page
-    'home.title': 'NLU ChatBot',
+    'auth.confirm_password_placeholder': 'Xác nhận mật khẩu của bạn',    // Home Page
+    'home.title': 'NLU AI',
     'home.subtitle': 'Trải nghiệm tương lai của AI hội thoại với chatbot hiểu ngôn ngữ tự nhiên tiên tiến của chúng tôi.',
-    'home.continue_chatting': 'Tiếp tục trò chuyện',
-    'home.start_chat': 'Bắt đầu trò chuyện',
+    'home.continue_chatting': 'Tiếp tục trò chuyện',    'home.start_chat': 'Bắt đầu trò chuyện',
     'home.create_account': 'Tạo tài khoản',
-    'home.why_choose': 'Tại sao chọn NLU ChatBot?',
+    'home.why_choose': 'Tại sao chọn NLU AI?',
     'home.why_choose_subtitle': 'Được xây dựng với công nghệ tiên tiến để cung cấp những cuộc trò chuyện AI tự nhiên và hữu ích nhất.',
     'home.feature_fast': 'Siêu nhanh',
     'home.feature_fast_desc': 'Nhận phản hồi tức thì được hỗ trợ bởi thuật toán xử lý ngôn ngữ tự nhiên tiên tiến.',
@@ -213,11 +207,10 @@ export const translations: Record<string, Translations> = {
     'home.feature_learning_desc': 'AI của chúng tôi liên tục cải thiện để cung cấp các phản hồi chính xác và hữu ích hơn.',
     'home.ready_to_start': 'Sẵn sàng bắt đầu cuộc trò chuyện?',
     'home.ready_subtitle': 'Tham gia cùng hàng nghìn người dùng đã trải nghiệm sức mạnh của việc hiểu ngôn ngữ tự nhiên.',
-    'home.get_started': 'Bắt đầu miễn phí',
-    'home.sign_in': 'Đăng nhập',
+    'home.get_started': 'Bắt đầu miễn phí',    'home.sign_in': 'Đăng nhập',
 
     // Chat
-    'chat.title': 'NLU ChatBot',
+    'chat.title': 'NLU AI',
     'chat.ready': 'Sẵn sàng hỗ trợ',
     'chat.thinking': 'Đang tạo phản hồi...',
     'chat.placeholder': 'Chia sẻ suy nghĩ của bạn với tôi...',
@@ -352,15 +345,13 @@ export const translations: Record<string, Translations> = {
     'auth.enter_email': 'Entrez votre e-mail',
     'auth.enter_password': 'Entrez votre mot de passe',
     'auth.create_password': 'Créez un mot de passe',
-    'auth.confirm_password_placeholder': 'Confirmez votre mot de passe',
-
-    // Home Page
-    'home.title': 'NLU ChatBot',
+    'auth.confirm_password_placeholder': 'Confirmez votre mot de passe',    // Home Page
+    'home.title': 'NLU AI',
     'home.subtitle': 'Découvrez l\'avenir de l\'IA conversationnelle avec notre chatbot avancé de compréhension du langage naturel.',
     'home.continue_chatting': 'Continuer la conversation',
     'home.start_chat': 'Commencer à chatter',
     'home.create_account': 'Créer un compte',
-    'home.why_choose': 'Pourquoi choisir NLU ChatBot ?',
+    'home.why_choose': 'Pourquoi choisir NLU AI ?',
     'home.why_choose_subtitle': 'Construit avec une technologie de pointe pour vous offrir les conversations IA les plus naturelles et utiles.',
     'home.feature_fast': 'Ultra rapide',
     'home.feature_fast_desc': 'Obtenez des réponses instantanées alimentées par des algorithmes avancés de traitement du langage naturel.',
@@ -370,11 +361,10 @@ export const translations: Record<string, Translations> = {
     'home.feature_learning_desc': 'Notre IA s\'améliore continuellement pour fournir des réponses plus précises et utiles.',
     'home.ready_to_start': 'Prêt à commencer les conversations ?',
     'home.ready_subtitle': 'Rejoignez des milliers d\'utilisateurs qui découvrent déjà la puissance de la compréhension du langage naturel.',
-    'home.get_started': 'Commencer gratuitement',
-    'home.sign_in': 'Se connecter',
+    'home.get_started': 'Commencer gratuitement',    'home.sign_in': 'Se connecter',
 
     // Chat
-    'chat.title': 'NLU ChatBot',
+    'chat.title': 'NLU AI',
     'chat.ready': 'Prêt à vous aider',
     'chat.thinking': 'Création de la réponse...',
     'chat.placeholder': 'Partagez vos pensées avec moi...',
@@ -509,15 +499,13 @@ export const translations: Record<string, Translations> = {
     'auth.enter_email': 'Geben Sie Ihre E-Mail ein',
     'auth.enter_password': 'Geben Sie Ihr Passwort ein',
     'auth.create_password': 'Erstellen Sie ein Passwort',
-    'auth.confirm_password_placeholder': 'Bestätigen Sie Ihr Passwort',
-
-    // Home Page
-    'home.title': 'NLU ChatBot',
+    'auth.confirm_password_placeholder': 'Bestätigen Sie Ihr Passwort',    // Home Page
+    'home.title': 'NLU AI',
     'home.subtitle': 'Erleben Sie die Zukunft der konversationellen KI mit unserem fortschrittlichen Chatbot für natürliches Sprachverständnis.',
     'home.continue_chatting': 'Weiter chatten',
     'home.start_chat': 'Chat starten',
     'home.create_account': 'Konto erstellen',
-    'home.why_choose': 'Warum NLU ChatBot wählen?',
+    'home.why_choose': 'Warum NLU AI wählen?',
     'home.why_choose_subtitle': 'Mit modernster Technologie gebaut, um Ihnen die natürlichsten und hilfreichsten KI-Gespräche zu bieten.',
     'home.feature_fast': 'Blitzschnell',
     'home.feature_fast_desc': 'Erhalten Sie sofortige Antworten, die von fortschrittlichen Algorithmen zur Verarbeitung natürlicher Sprache angetrieben werden.',
@@ -527,11 +515,10 @@ export const translations: Record<string, Translations> = {
     'home.feature_learning_desc': 'Unsere KI verbessert sich kontinuierlich, um genauere und hilfreichere Antworten zu liefern.',
     'home.ready_to_start': 'Bereit, Gespräche zu beginnen?',
     'home.ready_subtitle': 'Schließen Sie sich Tausenden von Benutzern an, die bereits die Kraft des natürlichen Sprachverständnisses erleben.',
-    'home.get_started': 'Kostenlos loslegen',
-    'home.sign_in': 'Anmelden',
+    'home.get_started': 'Kostenlos loslegen',    'home.sign_in': 'Anmelden',
 
     // Chat
-    'chat.title': 'NLU ChatBot',
+    'chat.title': 'NLU AI',
     'chat.ready': 'Bereit, Ihnen zu helfen',
     'chat.thinking': 'Antwort erstellen...',
     'chat.placeholder': 'Teilen Sie Ihre Gedanken mit mir...',
@@ -666,15 +653,13 @@ export const translations: Record<string, Translations> = {
     'auth.enter_email': 'Ingresa tu correo electrónico',
     'auth.enter_password': 'Ingresa tu contraseña',
     'auth.create_password': 'Crea una contraseña',
-    'auth.confirm_password_placeholder': 'Confirma tu contraseña',
-
-    // Home Page
-    'home.title': 'NLU ChatBot',
+    'auth.confirm_password_placeholder': 'Confirma tu contraseña',    // Home Page
+    'home.title': 'NLU AI',
     'home.subtitle': 'Experimenta el futuro de la IA conversacional con nuestro chatbot avanzado de comprensión de lenguaje natural.',
     'home.continue_chatting': 'Continuar chateando',
     'home.start_chat': 'Iniciar chat',
     'home.create_account': 'Crear cuenta',
-    'home.why_choose': '¿Por qué elegir NLU ChatBot?',
+    'home.why_choose': '¿Por qué elegir NLU AI?',
     'home.why_choose_subtitle': 'Construido con tecnología de vanguardia para brindarte las conversaciones de IA más naturales y útiles.',
     'home.feature_fast': 'Súper rápido',
     'home.feature_fast_desc': 'Obtén respuestas instantáneas impulsadas por algoritmos avanzados de procesamiento de lenguaje natural.',
@@ -684,11 +669,10 @@ export const translations: Record<string, Translations> = {
     'home.feature_learning_desc': 'Nuestra IA mejora continuamente para proporcionar respuestas más precisas y útiles.',
     'home.ready_to_start': '¿Listo para comenzar conversaciones?',
     'home.ready_subtitle': 'Únete a miles de usuarios que ya están experimentando el poder de la comprensión del lenguaje natural.',
-    'home.get_started': 'Comenzar gratis',
-    'home.sign_in': 'Iniciar sesión',
+    'home.get_started': 'Comenzar gratis',    'home.sign_in': 'Iniciar sesión',
 
     // Chat
-    'chat.title': 'NLU ChatBot',
+    'chat.title': 'NLU AI',
     'chat.ready': 'Listo para ayudarte',
     'chat.thinking': 'Creando respuesta...',
     'chat.placeholder': 'Comparte tus pensamientos conmigo...',

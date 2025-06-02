@@ -9,6 +9,7 @@ interface MessageItemProps {
 
 const MessageItem: React.FC<MessageItemProps> = ({ message, index }) => {
   const [copied, setCopied] = useState(false);
+  const [codeCopied, setCodeCopied] = useState<{ [key: number]: boolean }>({});
 
   const formatTime = (timestamp: string): string => {
     return new Date(timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -23,7 +24,91 @@ const MessageItem: React.FC<MessageItemProps> = ({ message, index }) => {
       console.error('Failed to copy text: ', err);
     }
   };
-  const formatMessage = (content: string) => {
+
+  const copyCodeToClipboard = async (code: string, blockIndex: number) => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCodeCopied(prev => ({ ...prev, [blockIndex]: true }));
+      setTimeout(() => {
+        setCodeCopied(prev => ({ ...prev, [blockIndex]: false }));
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy code: ', err);
+    }
+  };
+
+  // Check if message contains code blocks
+const formatMessage = (content: string) => {
+    // Split content into blocks (text vs code blocks)
+    const blocks = content.split(/(```[\s\S]*?```)/g);
+    
+    return (
+      <div className="space-y-3">
+        {blocks.map((block, blockIdx) => {
+          // Handle code blocks
+          if (block.startsWith('```') && block.endsWith('```')) {
+            const codeContent = block.slice(3, -3);
+            const lines = codeContent.split('\n');
+            
+            // Extract language from first line if present
+            let language = '';
+            let codeLines = lines;
+            if (lines[0] && !lines[0].includes(' ') && lines[0].trim().length < 20) {
+              language = lines[0].trim();
+              codeLines = lines.slice(1);
+            }
+              return (
+              <div key={blockIdx} className="my-4 w-full">
+                <div className="bg-gray-900 dark:bg-gray-950 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 relative group shadow-lg">
+                  {/* Language header with copy button */}
+                  <div className="bg-gray-800 dark:bg-gray-900 px-4 py-3 text-xs font-medium text-gray-300 dark:text-gray-400 border-b border-gray-700 flex justify-between items-center">
+                    <span className="capitalize font-semibold">{language || 'Code'}</span>
+                    <button
+                      onClick={() => copyCodeToClipboard(codeLines.join('\n'), blockIdx)}
+                      className="opacity-70 hover:opacity-100 transition-all duration-200 p-1.5 rounded hover:bg-gray-700 text-gray-400 hover:text-gray-200 flex items-center gap-1"
+                      title="Copy code"
+                    >
+                      {codeCopied[blockIdx] ? <BiCheck className="h-3 w-3" /> : <BiCopy className="h-3 w-3" />}
+                      <span className="text-xs">Copy</span>
+                    </button>
+                  </div>
+                  
+                  {/* Code content with line numbers */}
+                  <div className="relative">
+                    <div className="p-4 overflow-x-auto bg-gray-900 dark:bg-gray-950 max-h-96 overflow-y-auto custom-scrollbar">
+                      <pre className="text-sm font-mono-modern text-gray-100 dark:text-gray-200 leading-relaxed">
+                        <code className={language ? `language-${language}` : ''}>
+                          {codeLines.map((line, lineIdx) => (
+                            <div key={lineIdx} className="flex items-start hover:bg-gray-800/30 -mx-2 px-2 rounded transition-colors">
+                              <span className="text-gray-500 select-none mr-4 text-xs mt-0.5 w-8 text-right">
+                                {lineIdx + 1}
+                              </span>
+                              <span className="min-h-[1.5rem] flex-1">
+                                {line || '\u00A0'}
+                              </span>
+                            </div>
+                          ))}
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          }
+          
+          // Handle regular text blocks
+          return (
+            <div key={blockIdx}>
+              {formatTextBlock(block)}
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const formatTextBlock = (content: string) => {
     const lines = content.split('\n');
     
     return (
@@ -54,7 +139,8 @@ const MessageItem: React.FC<MessageItemProps> = ({ message, index }) => {
               </div>
             );
           }
-            // Handle standalone bold text lines
+          
+          // Handle standalone bold text lines
           if (trimmedLine.startsWith('**') && trimmedLine.endsWith('**') && trimmedLine.length > 4) {
             const boldText = trimmedLine.slice(2, -2);
             return (
@@ -79,17 +165,24 @@ const MessageItem: React.FC<MessageItemProps> = ({ message, index }) => {
       </div>
     );
   };
-
   const formatInlineText = (text: string) => {
-    // Handle bold text within lines
-    const parts = text.split(/(\*\*[^*]+\*\*)/g);
+    // Handle both bold text and inline code
+    const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g);
     return (
-      <>        {parts.map((part, idx) => {
+      <>
+        {parts.map((part, idx) => {
           if (part.startsWith('**') && part.endsWith('**')) {
             return (
               <span key={idx} className="chat-text-bold text-gray-900 dark:text-gray-100">
                 {part.slice(2, -2)}
               </span>
+            );
+          }
+          if (part.startsWith('`') && part.endsWith('`')) {
+            return (
+              <code key={idx} className="px-1.5 py-0.5 mx-0.5 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-sm font-mono border border-gray-200 dark:border-gray-700">
+                {part.slice(1, -1)}
+              </code>
             );
           }
           return <span key={idx}>{part}</span>;
@@ -106,8 +199,7 @@ const MessageItem: React.FC<MessageItemProps> = ({ message, index }) => {
         isUser ? 'flex-row-reverse space-x-reverse' : ''
       }`}
       style={{ animationDelay: `${index * 0.1}s` }}
-    >
-      <div className={`h-10 w-10 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg transition-all duration-300 hover:scale-110 ${
+    >      <div className={`h-10 w-10 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg ${
         isUser 
           ? 'bg-gradient-to-br from-charcoal via-gray-800 to-slate-900 shadow-charcoal/20 dark:from-blue-600 dark:via-blue-700 dark:to-blue-800'
           : 'bg-gradient-to-br from-lavender via-purple-200 to-sky-blue shadow-lavender/20 dark:from-slate-600 dark:via-slate-700 dark:to-slate-800'
@@ -119,20 +211,18 @@ const MessageItem: React.FC<MessageItemProps> = ({ message, index }) => {
         )}
       </div>
       
-      <div className={`flex flex-col max-w-xs lg:max-w-2xl xl:max-w-3xl ${isUser ? 'items-end' : 'items-start'}`}>
-        <div className={`relative px-5 py-4 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 group-hover:scale-[1.02] ${
+      <div className={`flex flex-col max-w-xs lg:max-w-2xl xl:max-w-3xl ${isUser ? 'items-end' : 'items-start'}`}>        <div className={`relative px-5 py-4 rounded-2xl shadow-lg ${
           isUser 
             ? 'bg-gradient-to-br from-charcoal via-gray-800 to-slate-900 text-white shadow-charcoal/20 dark:from-blue-600 dark:via-blue-700 dark:to-blue-800'
             : 'bg-white/95 backdrop-blur-sm text-charcoal border border-white/50 shadow-gray-100/80 dark:bg-slate-800/90 dark:text-gray-100 dark:border-slate-700/50'
-        }`}>          <div className="text-sm chat-text text-crisp">
+        }`}><div className="text-sm chat-text text-crisp">
             {formatMessage(message.content)}
           </div>
-          
-          {/* Copy button - only show for bot messages */}
+            {/* Copy button - only show for bot messages */}
           {!isUser && (
             <button
               onClick={copyToClipboard}
-              className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700"
+              className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-1.5 rounded-lg bg-gray-100/80 dark:bg-slate-700/80"
               title="Copy message"
             >
               {copied ? (
