@@ -36,11 +36,11 @@ const ChatPage: React.FC = () => {
     } catch (error) {
       console.error('Error sending message:', error);
     }
-  };
-
-  const handleCreateNewSession = async () => {
-    // Just clear the current conversation to start fresh
+  };  const handleCreateNewSession = async () => {
+    // Clear the current conversation to start fresh
     // The actual new conversation will be created when sending the first message
+    chatContext.clearError(); // Clear any existing errors
+    chatContext.clearCurrentConversation(); // Clear the current conversation
   };
 
   const handleSwitchToSession = async (conversationId: string) => {

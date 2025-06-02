@@ -17,6 +17,7 @@ interface ChatContextType {
   switchToConversation: (id: number) => Promise<void>;
   deleteConversation: (id: number) => Promise<void>;
   sendMessage: (conversationId: number, message: string) => Promise<void>;
+  clearCurrentConversation: () => void;
   clearError: () => void;
 }
 
@@ -127,9 +128,12 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       console.error('Error sending message:', err);
     }
   };
-
   const clearError = () => {
     setError(null);
+  };
+
+  const clearCurrentConversation = () => {
+    setCurrentConversation(null);
   };
 
   // Load conversations when user changes
@@ -141,7 +145,6 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       setCurrentConversation(null);
     }
   }, [user, loadConversations]);
-
   const value: ChatContextType = {
     conversations,
     currentConversation,
@@ -152,6 +155,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     switchToConversation,
     deleteConversation,
     sendMessage,
+    clearCurrentConversation,
     clearError
   };
 
