@@ -2,13 +2,14 @@ import React, { useState, memo } from 'react';
 import { BiBot, BiUser, BiCopy, BiCheck } from 'react-icons/bi';
 import type { Message } from '../../types/chat';
 import TypewriterText from './TypewriterText';
+import CodeBlock from './CodeBlock';
 
 interface MessageItemProps {
   message: Message;
   index: number;
 }
 
-const MessageItem: React.FC<MessageItemProps> = memo(({ message, index }) => {
+const                                                               MessageItem: React.FC<MessageItemProps> = memo(({ message, index }) => {
   const [copied, setCopied] = useState(false);
   const [codeCopied, setCodeCopied] = useState<{ [key: number]: boolean }>({});
 
@@ -56,45 +57,17 @@ const formatMessage = (content: string) => {
             let codeLines = lines;
             if (lines[0] && !lines[0].includes(' ') && lines[0].trim().length < 20) {
               language = lines[0].trim();
-              codeLines = lines.slice(1);
-            }
-              return (
-              <div key={blockIdx} className="my-4 w-full">
-                <div className="bg-gray-900 dark:bg-gray-950 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 relative group shadow-lg">
-                  {/* Language header with copy button */}
-                  <div className="bg-gray-800 dark:bg-gray-900 px-4 py-3 text-xs font-medium text-gray-300 dark:text-gray-400 border-b border-gray-700 flex justify-between items-center">
-                    <span className="capitalize font-semibold">{language || 'Code'}</span>
-                    <button
-                      onClick={() => copyCodeToClipboard(codeLines.join('\n'), blockIdx)}
-                      className="opacity-70 hover:opacity-100 transition-all duration-200 p-1.5 rounded hover:bg-gray-700 text-gray-400 hover:text-gray-200 flex items-center gap-1"
-                      title="Copy code"
-                    >
-                      {codeCopied[blockIdx] ? <BiCheck className="h-3 w-3" /> : <BiCopy className="h-3 w-3" />}
-                      <span className="text-xs">Copy</span>
-                    </button>
-                  </div>
-                  
-                  {/* Code content with line numbers */}
-                  <div className="relative">
-                    <div className="p-4 overflow-x-auto bg-gray-900 dark:bg-gray-950 max-h-96 overflow-y-auto custom-scrollbar">
-                      <pre className="text-sm font-mono-modern text-gray-100 dark:text-gray-200 leading-relaxed">
-                        <code className={language ? `language-${language}` : ''}>
-                          {codeLines.map((line, lineIdx) => (
-                            <div key={lineIdx} className="flex items-start hover:bg-gray-800/30 -mx-2 px-2 rounded transition-colors">
-                              <span className="text-gray-500 select-none mr-4 text-xs mt-0.5 w-8 text-right">
-                                {lineIdx + 1}
-                              </span>
-                              <span className="min-h-[1.5rem] flex-1">
-                                {line || '\u00A0'}
-                              </span>
-                            </div>
-                          ))}
-                        </code>
-                      </pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              codeLines = lines.slice(1);            }
+
+            return (
+              <CodeBlock
+                key={blockIdx}
+                code={codeLines.join('\n')}
+                language={language}
+                blockIndex={blockIdx}
+                copied={codeCopied[blockIdx] || false}
+                onCopy={copyCodeToClipboard}
+              />
             );
           }
           

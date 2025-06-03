@@ -15,6 +15,7 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import ChatPage from './pages/ChatPage';
 import ProfilePage from './pages/ProfilePage';
+import SyntaxTest from './components/test/SyntaxTest';
 
 function App() {
   return (
@@ -36,12 +37,12 @@ function App() {
                     <ProtectedRoute>
                       <ChatPage />
                     </ProtectedRoute>
-                  } />
-                  <Route path="profile" element={
+                  } />                  <Route path="profile" element={
                     <ProtectedRoute>
                       <ProfilePage />
                     </ProtectedRoute>
                   } />
+                  <Route path="syntax-test" element={<SyntaxTest />} />
                 </Route>
               </Routes>
               <NotificationContainer />
