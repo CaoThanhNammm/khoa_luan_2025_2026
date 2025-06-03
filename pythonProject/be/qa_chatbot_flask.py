@@ -35,13 +35,31 @@ limiter = Limiter(
 
 # Cấu hình Gemini API
 try:
-    model_name = os.getenv('MODEL')
-    api_key = os.getenv('API_KEY')
+
+    # 1. khởi tạo gemini và chat
+    model_name_15_flash = os.getenv('MODEL_15_FLASH')
+    model_name_20_flash = os.getenv('MODEL_20_FLASH')
+    model_name_25_flash = os.getenv('MODEL_25_FLASH')
+
+    # api_key_agent = os.getenv('API_KEY_AGENT')
+    # api_key_generator = os.getenv('API_KEY_GENERATOR')
+    # api_key_valid = os.getenv('API_KEY_VALID')
+    # api_key_commentor = os.getenv('API_KEY_COMMENTOR')
+
+    api_key_agent = "AIzaSyDJOnB0i3Kr4FOk_4mINN9wETWLlV7jdRc"
+    # api_key_generator = "AIzaSyBHEUQT-1f1NbZji3LsvYyVBiNxNPShzFg"
+    api_key_generator = "AIzaSyBpbQbmZek3VC98sGoKJV0hSWiBNbuaKRY"  # pha
+    api_key_valid = "AIzaSyBHEUQT-1f1NbZji3LsvYyVBiNxNPShzFg"
+    # api_key_commentor = "AIzaSyDJOnB0i3Kr4FOk_4mINN9wETWLlV7jdRc"
+    api_key_commentor = "AIzaSyC9JFA36xRYLaS9TAbOfrefpHkPFZEbiRU"  # pha
+    t = 5
+
+    gemini_agent = Gemini(model_name_25_flash, api_key_agent)
+    gemini_generator = Gemini(model_name_20_flash, api_key_generator)
+    gemini_valid = Gemini(model_name_15_flash, api_key_valid)
+    gemini_commentor = Gemini(model_name_15_flash, api_key_commentor)
     pre_processing = PreProcessing()
-    my_qa = pd.DataFrame(columns=['question', 'answer'])
-    t = 2
-    gemini = Gemini(model_name, api_key)
-    chat = Chat(t, gemini, pre_processing)
+    chat = Chat(t, gemini_agent, gemini_generator, gemini_valid, gemini_commentor, pre_processing)
 except Exception as e:
     app.logger.error(f"Failed to configure Gemini API: {str(e)}")
     raise Exception("Gemini API configuration failed")
@@ -92,7 +110,7 @@ def gemini_endpoint():
         question = f"Câu hỏi: {question}"
 
         # Gọi Gemini API
-        answer = chat.answer(question)
+        answer = chat.answer_s2s(question)
 
         # Trả về kết quả
         app.logger.info("Request processed successfully")

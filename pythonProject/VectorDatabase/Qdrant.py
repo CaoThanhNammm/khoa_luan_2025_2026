@@ -10,7 +10,7 @@ import pdfplumber
 from qdrant_client import QdrantClient
 
 class Qdrant:
-    def __init__(self, host, api, model_1024, model_768, model_512, model_late_interaction, collection_name):
+    def __init__(self, host, api, model_1024, model_768, model_512, model_late_interaction, collection_name, pre_processing):
         # self.client = QdrantClient(host=host, port=port)
         self.client = QdrantClient(
             url=host,
@@ -21,7 +21,7 @@ class Qdrant:
         self.model_768 = model_768
         self.model_512 = model_512
         self.model_late_interaction = model_late_interaction
-        self.pre_processing = PreProcessing()
+        self.pre_processing = pre_processing
 
     def create_collection(self, collection_name, size, distance):
         if self.client.collection_exists(collection_name=collection_name):
@@ -169,8 +169,13 @@ class Qdrant:
         except Exception as e:
             print(f"Error upserting points: {e}")
 
-    def query_from_db(self, text_embedded_512, text_embedded_768, text_embedded_1024, embedded_late_interaction):
-        response =  self.client.query_points(
+    def query_from_db(self, text):
+      text_embedded_512 = self.model_512.embed(text)
+      text_embedded_768 = self.model_768.embed(text)
+      text_embedded_1024 = self.model_1024.embed(text)
+      embedded_late_interaction = self.model_late_interaction.embed(text).cpu().numpy()
+
+      response =  self.client.query_points(
             collection_name= self.collection_name,
             prefetch=models.Prefetch(
                 prefetch=models.Prefetch(
@@ -189,19 +194,18 @@ class Qdrant:
             ),
             query=embedded_late_interaction,
             using="late_interaction",
-            limit=20,
+            limit=25,
         )
-
-        documents = []
-        for result in response.points:
-            documents.append(result.payload["text"])
-        return documents
-
+      documents = []
+      for result in response.points:
+        documents.append(result.payload["text"])
+      return documents
 
     def re_ranking(self, query, passages):
         client = NVIDIARerank(
             model="nvidia/llama-3.2-nv-rerankqa-1b-v2",
-            api_key=os.getenv("API_KEY_RERANKING"),
+            api_key=os.getenv('API_KEY_RERANKING'),
+
             top_n=len(passages)
         )
 

@@ -1,22 +1,20 @@
-from dotenv import load_dotenv
-from google import genai
-load_dotenv()
-from sentence_transformers import SentenceTransformer
+# Google Cloud & Generative AI
+import google.generativeai as genai
 
+import time
 class Gemini:
-    def __init__(self, model_name, api_key):
+    def __init__(self, model_name: str, api_key: str):
         self.model_name = model_name
         self.api_key = api_key
 
-        client = genai.Client(api_key=self.api_key)
-        self.model_encode = SentenceTransformer('intfloat/multilingual-e5-large')
-        self.chat = client.chats.create(model=self.model_name)
-        print("load model success")
+        # Cấu hình API key
+        genai.configure(api_key=self.api_key)
 
-    def encode(self, text):
-        return self.model_encode.encode(text)
+        # Khởi tạo model
+        self.model = genai.GenerativeModel(model_name=self.model_name)
+        self.chat = self.model.start_chat()
+        print("Load model success")
 
-    def generator(self, text):
+    def generator(self, text: str) -> str:
         response = self.chat.send_message(text)
-
         return response.text.strip()

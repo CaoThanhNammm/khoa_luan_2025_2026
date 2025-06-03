@@ -105,7 +105,7 @@ Bạn là trợ lý phân tích câu trả lời theo khuôn mẫu.
 
 Câu hỏi: {question}
 Câu trả lời: {answer}
-
+Nếu câu trả lời 'không có thông tin' thì trả lời no mà không cần suy nghĩ
 Nhiệm vụ:
 1. Xác định loại của câu trả lời (what, who, where, how, why).
 2. Kiểm tra câu trả lời có khớp với câu hỏi không:
@@ -140,8 +140,10 @@ Phản hồi theo mẫu:
 """
 
 
+
 def extract_entities_relationship_from_text():
-    return """    Bạn là một hệ thống trích xuất thông tin từ văn bản. Tuân theo khuôn mẫu, Nhiệm vụ của bạn là:
+    return """
+    Bạn là một hệ thống trích xuất thông tin từ văn bản. Tuân theo khuôn mẫu, Nhiệm vụ của bạn là:
 
 1. Trích xuất tất cả các thực thể có trong đoạn văn bản.
    - Mỗi thực thể cần có tên(name) và loại(type).
@@ -156,17 +158,24 @@ def extract_entities_relationship_from_text():
    - "entities": Danh sách các thực thể. Mỗi thực thể có các thuộc tính "name" và "type".
    - "relationships": Danh sách các mối quan hệ. Mỗi mối quan hệ có các thuộc tính "source", "target", "type_source", "type_target" và "relation".
 
+Đoạn văn bản cần trích xuất:
+{question}
+
 Yêu cầu:
-- Trả về kết quả dưới dạng JSON với các trường: relationships.
+- Trả về kết quả dưới dạng JSON với các trường: entities, relationships.
+- Mỗi entity cần có name và type.
 - Mỗi relationship cần có source, target, type_source, type_target và relation.
-- source và target sẽ là 1 json có các thuộc tính mặc định là name, ngoài ra sẽ có từ 2 đến 5 thuộc tính khác nhau tùy theo thông tin văn bản(going như lưu trữ của Neo4j). Thuộc tính ghi tiếng anh, còn giá trị ghi tiếng việt
-- CHỈ TRÍCH XUẤT TỪ THÔNG TIN MÀ TÔI CUNG CẤP, KHÔNG THÊM BẤT CỨ THÔNG TIN GÌ KHÁC BÊN NGOÀI.
+
 ---
 ### Giải thích:
-1. **Relationship**:
+1. **Entity**:
+   - Là các đối tượng được nhắc đến trong văn bản, ví dụ: tên người, địa điểm, tổ chức, ngày tháng, v.v.
+   - Mỗi entity cần được gán một loại phù hợp, ví dụ: person, organization, location, date, v.v
+
+2. **Relationship**:
    - Là mối quan hệ giữa các entity, ví dụ: "Alice knows Bob" → quan hệ Biết giữa Alice và Bob.
 
-2. **Định dạng đầu ra**:
+3. **Định dạng đầu ra**:
    - Sử dụng JSON để trả về kết quả một cách có cấu trúc, dễ dàng xử lý tiếp theo. """
 
 def extract_question_from_text():
@@ -463,13 +472,13 @@ def predict_question_belong_to():
     2. các phần nội dung là phần "name"(tất cả đều ghi thường, tiếng việt)
 
     Cypher query:
-    MATCH (first:<type> {{name: '<name>'}})-[:BAO_GỒM]->(second:<type> {{name: '<name>'}})-[:BAO_GỒM]->(third:<type> {{name: '<name>'}})-[r*1..3]->(e)
+    MATCH (first:<type> {{name: '<name>'}})-[:BAO_GỒM]->(second:<type> {{name: '<name>'}})-[:BAO_GỒM]->(third:<type> {{name: '<name>'}})-[r*1..2]->(e)
     RETURN r AS relation, [first, e] AS target
 
     Trong đó:
         - <type>: Là loại của mục (Part, Section, hoặc Article phải ghi hoa chữ cái đầu).
         - <name>: Là nội dung của mục (viết thường, tiếng Việt, đúng như trong mục lục).
-        - Phần -[r*1..3]->(e) phải luôn có.
+        - Phần -[r*1..2]->(e) phải luôn có.
 
     Hướng dẫn:
       1. Phân tích câu hỏi để xác định chủ đề chính.
@@ -490,65 +499,122 @@ def predict_question_belong_to():
 Ví dụ 1:
 Câu hỏi: Trường Đại học Nông Lâm Thành phố Hồ Chí Minh có diện tích bao nhiêu
 Cypher query:
-MATCH (first:Part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:BAO_GỒM]->(second:Section {{name: 'quá trình hình thành và phát triển'}})-[r*1..3]->(e)
+MATCH (first:Part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:BAO_GỒM]->(second:Section {{name: 'quá trình hình thành và phát triển'}})-[r*1..2]->(e)
 RETURN r AS relation, [first, e] AS target
 
 Ví dụ 2:
 Câu hỏi: Khoa nào phụ trách ngành Công nghệ kỹ thuật năng lượng tái tạo?
 Cypher query:
-MATCH (first:Part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:BAO_GỒM]->(second:Section {{name: 'các khoa - ngành đào tạo'}})-[r*1..3]->(e)
+MATCH (first:Part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:BAO_GỒM]->(second:Section {{name: 'các khoa - ngành đào tạo'}})-[r*1..2]->(e)
 RETURN r AS relation, [first, e] AS target
 
 Ví dụ 3:
 Câu hỏi: lễ tuyên dương tuyên_dương sinh viên có thành tích
 Cypher query:
-MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[:BAO_GỒM]->(second:Section {{name: 'quy định khen thưởng, kỷ luật sinh viên'}})-[:BAO_GỒM]->(third:Part {{name: 'chương 2: khen thưởng'}})-[r*1..3]->(e)
+MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[:BAO_GỒM]->(second:Section {{name: 'quy định khen thưởng, kỷ luật sinh viên'}})-[:BAO_GỒM]->(third:Part {{name: 'chương 2: khen thưởng'}})-[r*1..2]->(e)
 RETURN r AS relation, [first, e] AS target
 
 Ví dụ 4:
 Câu hỏi: Hoạt động chính của CLB Nông Lâm Radio tại Đại học Nông Lâm TP.HCM là gì?
 Cypher query:
-MATCH (first:Part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:BAO_GỒM]->(third:Section {{name: 'câu lạc bộ (clb) - đội, nhóm'}})-[r*1..3]->(e)
+MATCH (first:Part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:BAO_GỒM]->(third:Section {{name: 'câu lạc bộ (clb) - đội, nhóm'}})-[r*1..2]->(e)
 RETURN r AS relation, [first, e] AS target
 
 Ví dụ 5:
 Câu hỏi: ý thức chấp hành nội quy được_đánh_giá_bằng điểm rèn luyện có_khung_điểm_tối_đa 100 điểm
 Cypher query:
-MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[:BAO_GỒM]->(second:Section {{name: 'quy chế đánh giá kết quả rèn luyện'}})-[:BAO_GỒM]->(third:Article {{name: 'điều 5: đánh giá về ý thức chấp hành nội quy, quy chế, quy định trong cơ sở giáo dục đại học'}})-[r*1..3]->(e)
+MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[:BAO_GỒM]->(second:Section {{name: 'quy chế đánh giá kết quả rèn luyện'}})-[:BAO_GỒM]->(third:Article {{name: 'điều 5: đánh giá về ý thức chấp hành nội quy, quy chế, quy định trong cơ sở giáo dục đại học'}})-[r*1..2]->(e)
 RETURN r AS relation, [first, e] AS target
 
 Ví dụ 6:
 Câu hỏi: sinh viên thực_hiện chấm điểm rèn luyện sử_dụng địa chỉ
 Cypher query:
-MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[:BAO_GỒM]->(second:Section {{name: 'quy chế đánh giá kết quả rèn luyện'}})-[r*1..3]->(e)
+MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[:BAO_GỒM]->(second:Section {{name: 'quy chế đánh giá kết quả rèn luyện'}})-[r*1..2]->(e)
 RETURN r AS relation, [first, e] AS target
 
 Ví dụ 7:
 Câu hỏi: sinh viên tuân_theo quy định về học tập và rèn luyện
 Cypher query:
-MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[r*1..3]->(e)
+MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[r*1..2]->(e)
 RETURN r AS relation, [first, e] AS target
 
 Ví dụ 8:
 Câu hỏi: sinh viên tuân_thủ quy tắc ứng xử tuân_thủ quy tắc ứng xử hỏi_hoặc_trả_lời giảng viên
 Cypher query:
-MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[:BAO_GỒM]->(second:Section {{name: 'quy tắc ứng xử văn hóa của người học'}})-[r*1..3]->(e)
+MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[:BAO_GỒM]->(second:Section {{name: 'quy tắc ứng xử văn hóa của người học'}})-[r*1..2]->(e)
 RETURN r AS relation, [first, e] AS target
 
 Ví dụ 9:
 Câu hỏi: trường đại học nông lâm tp.hcm có giá trị cốt lõi
 Cypher query:
-MATCH (first:Part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:BAO_GỒM]->(second:Section {{name: 'giá trị cốt lõi'}})-[r*1..3]->(e)
+MATCH (first:Part {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[:BAO_GỒM]->(second:Section {{name: 'giá trị cốt lõi'}})-[r*1..2]->(e)
 RETURN r AS relation, [first, e] AS target
 
 Ví dụ 10:
 Câu hỏi: sinh viên giao tiếp_với giảng viên cần_thể_hiện thái độ tôn trọng và ý thức kỷ luật thể hiện_qua ngôn ngữ
 Cypher query:
-MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[:BAO_GỒM]->(second:Section {{name: 'quy tắc ứng xử văn hóa của người học'}})-[r*1..3]->(e)
+MATCH (first:Part {{name: 'phần 2: học tập và rèn luyện'}})-[:BAO_GỒM]->(second:Section {{name: 'quy tắc ứng xử văn hóa của người học'}})-[r*1..2]->(e)
 RETURN r AS relation, [first, e] AS target
 
 Chỉ trả về cypher và không giải thích gì thêm
 """
+
+# dùng để trích xuất entities và relationship cho câu hỏi
+def extract_entities_relationship_from_question():
+    return """Bạn là một hệ thống trích xuất thông tin từ văn bản. Nhiệm vụ của bạn là:
+1. Trích xuất tất cả các thực thể có trong đoạn văn bản.
+   - Mỗi thực thể cần có tên(name) và loại(type).
+   - Loại(type) hãy sử dụng các từ mà tôi cung cấp dưới đây:
+   "episode, part, organization, quantity, department, phone_number, website, center, institute, faculty, training_program, person, email, location, facility, activity, type_of_organization, concept, document, year, strategy, time, award, group_of_people, group, title, event, position, disciplinary_action, movement, abbreviation, percentage, beverage, item, network, frequency, action, material, code, device, system, status, clause, chapter, document_type, software, sequence, media, variable, natural_phenomenon, service, crime, grade, data, course_type, degree, assignment, criteria, subject, money, field, right, teaching_method, platform, account, image, feature"
+2. Xác định các mối quan hệ(relaion) giữa các thực thể.
+    - Mỗi mối quan hệ phải có nguồn(source), tên mối quan hệ(relation) và loại của nguồn(type_source)(lấy từ entities).
+    - PHẢI sử dụng các mối quan hệ có sẵn dưới đây, nếu câu hỏi không có sẵn quan hệ bên dưới hãy tìm từ đồng nghĩa, KHÔNG ĐƯỢC LẤY LẠI MỐI QUAN HỆ Ở CÂU HỎI:
+    "website, có, là, tôn_trọng, theo, hủy, in, dưới, bị, mời, đối_với, của, gửi, không, gồm, trong, từ, email, công_bố, BAO_GỒM, sở_hữu, số_điện_thoại, thuộc_khoa, chương_trình_tiên_tiến_tại, chương_trình_nâng_cao_tại, chương_trình_đào_tạo_tại, quản_lý_bởi, chủ_nhiệm, trưởng_ban_điều_hành, đội_trưởng, số_lượng_sách, sử_dụng, số_lượng_phòng, sức_chứa, bao_gồm, về, sánh_vai, trên, đổi_mới, thúc_đẩy, phát_huy, xây_dựng, trở_thành, hàng_đầu, đáp_ứng, tầm_nhìn, tên_khác, trực_thuộc, tọa_lạc_tại, thuộc, thời_gian_hoạt_động, nhận_giải_thưởng, thành_lập, phục_vụ, đào_tạo, và, mục_tiêu_đến, sẽ_trở_thành, với, tổ_chức_bởi, được_đăng_tại, gìn_giữ_và_phát_huy, phát_hiện, nâng_đỡ, cho, đề_cao, hoạt_động_của, dành_cho, hỗ_trợ, tư_vấn, phù_hợp, hướng_dẫn, đăng_ký, ở, điều_chỉnh, xác_nhận, theo_dõi, cập_nhật_trên, không_dưới, ít_nhất, xem_xét, cấp, tham_gia, trường, tổ_chức, vào_cuối, tuyên_dương, khen_thưởng, căn_cứ, đánh_giá, phòng_chống, đạt, thang_điểm, chấp_hành, đến, không_vượt_quá, đánh_giá_qua, đoạt_giải, có_thành_tích, đóng_góp, hoạt_động_tại, thực_hiện, bảo_đảm_an_ninh, ít_hơn_hoặc_bằng, chọn, cao_nhất, cao_thứ_hai, bằng_nhau, công_nhận, xét, áp_dụng_bởi, thông_báo, gửi_thông_báo, làm, tham_dự, sau, chấm_dứt, trừ, vô_lễ, lần_1, giao_cho, hạ_điểm, tài_sản_trong, làm_hư_hỏng, lần_2, lần_3, trái, xâm_phạm, chống_phá, thu_hồi, lắng_nghe, hoàn_thành, nghiêm_túc, phát_động, hỏi, trả_lời, làm_phiền, quan_hệ, không_gây_ồn_ào, giữ_gìn, cung_cấp, nhận, dấu_và_chữ_ký, truy_cập, nhập, thanh_toán, hiển_thị, lưu, tại, tương_ứng, phản_hồi, đăng_nhập, chụp_ảnh, quét, đọc, lấy_ảnh, kiểm_tra, trạng_thái, chuyển_tới, viết, trực_tuyến, không_chấp_nhận, nộp, trao_đổi, thắc_mắc, đề_nghị, mang, được_hỗ_trợ, đi_học, chưa_được_sửa, mất, giúp_đỡ, nêu, hoặc, ghi, chuyển, ký, đã, kèm, giải_quyết, loại, bổ_sung, cập_nhật, trình_ký, đóng_dấu, hoạt_động, liên_hệ, như, cùng, xếp, so_sánh, không_cần, bằng, bố_trí, trọng_số, không_bị, quyết_định, cao_hơn, hơn, lập, trình, làm_tròn, trích_từ, do, phối_hợp, trị_giá, một_lần, qua, mỗi, đóng_mộc, sửa_đổi, mã, nhân, tra_cứu, quản_lý, điện_thoại, thành_lập_từ, vay, để, giúp, thủ_tục, gặp_khó_khăn, cư_trú, sinh_sống, đủ_tiêu_chuẩn, tối_đa, lãi_suất, thông_qua, trả_nợ, đóng_trụ_sở, tuân_thủ_quy_định_của, học_tập_tại, được_tôn_trọng_bởi, được_cung_cấp, được_sử_dụng, hoạt_động_trong, kiến_nghị_với, đề_đạt_nguyện_vọng_lên, được_ở, được_nhận, tuân_thủ_chủ_trương_của, tuân_thủ_pháp_luật_của, tuân_thủ_quy_chế_của, đóng, không_được_xúc_phạm, không_được_tham_gia, không_được, không_được_tổ_chức_hoạt_động_mà_chưa_được_cho_phép, cung_cấp_ctđt_cho, tư_vấn_xây_dựng_khht_cho, thông_báo_học_phần_cho, hướng_dẫn_đăng_ký_cho, thực_hiện_theo, đăng_ký_học_lại, cải_thiện_điểm, cho_phép_đăng_ký_ít_hơn_14_tín_chỉ, rút, không_đi_học, không_dự_thi, nhận_điểm_r, nhận_điểm_f, rút_học_phần_trên, đề_xuất_hủy_hoặc_mở_thêm, đăng_ký_trực_tuyến, công_bố_kết_quả_đăng_ký_cho, cải_thiện_kết_quả, đề_xuất, duy_trì, phê_duyệt_duy_trì, đề_xuất_mở_thêm, chấp_thuận_mở_thêm, mở_thêm, dự_thi, đề_xuất_cấm_thi, duyệt_danh_sách_cấm_thi, tối_thiểu, chuẩn, được_quy_định_trong, thông_báo_cho, thông_báo_lịch_thi, hưởng, chấp_thuận, duyệt_đơn, tổ_chức_thi_cho, xét_tương_đương, quy_định, rà_soát, phê_duyệt, xác_định, đồng_ý, không_đạt, tính_vào, xử_lý, xem_kết_quả, được_đánh_giá, tính, không_tính, dựa_vào, trung_bình_cộng, kỷ_luật, không_tham_gia, xếp_loại, lưu_trong, ghi_vào, đình_chỉ, tiêu_chí, cho_phép, chuyển_sang, cấp_bằng, chấm, thỏa_mản, phân_công, tổ_chức_bảo_vệ, thảo_luận, gia_hạn, quyết_định_gia_hạn, không_hoàn_thành, tích_lũy, ra_quyết_định, được_cấp, báo, bảo_lưu, được_điều_động, cần, theo_quy_định, học_xong, nghỉ, được_công_nhận, học, vượt_quá, nghiên_cứu, bổ_sung_vào, tăng_cường, áp_dụng, chỉ_đạo, phát_triển_trên, không_tổ_chức, giữ_bí_mật, bảo_vệ, chịu_trách_nhiệm, trước, nhấn, mở, tắt, bấm, chia_sẻ"
+    - Tên mối quan hệ phải được ghi thường. Nếu tên mối quan hệ gồm từ hai từ trở lên, các từ phải được nối với nhau bằng dấu gạch dưới (ví dụ: "không_tính", "thông_báo_lịch_thi").
+
+3. Trả về kết quả dưới dạng JSON với các trường:
+   - "entities": Danh sách các thực thể. Mỗi thực thể có các thuộc tính "name" và "type".
+   - "relationships": Danh sách các mối quan hệ: . Mỗi mối quan hệ có các thuộc tính "source", "relation" và "type_source"(lấy từ entities).
+
+Đoạn văn bản cần trích xuất:
+{question}
+
+Yêu cầu:
+- Trả về kết quả dưới dạng JSON với các trường: entities, relationships.
+- Mỗi entity cần có name và type.
+- Mỗi relationship cần có source, relation và "type_source"(lấy từ entities).
+
+---
+### Giải thích:
+1. **Entity**:
+   - Là các đối tượng được nhắc đến trong văn bản, ví dụ: tên người, địa điểm, tổ chức, ngày tháng, v.v.
+   - Mỗi entity cần được gán một loại phù hợp, ví dụ: NGƯỜI, ĐỊA ĐIỂM, TỔ CHỨC, NGÀY, v.v.
+
+2. **Relationship**:
+   - Là mối quan hệ giữa các entity, nhưng không trích xuất target
+
+3. **Định dạng đầu ra**:
+   - Sử dụng JSON để trả về kết quả một cách có cấu trúc, dễ dàng xử lý tiếp theo."""
+
+
+def extract_text_from_paragraph(paragraph):
+    return f"""
+    Bạn là một trợ lý AI chuyên xử lý văn bản tự nhiên. Tôi có một văn bản lớn và muốn bạn giúp tôi trích xuất các đoạn văn nhỏ từ văn bản đó để lưu vào vectordatabase. Hãy thực hiện theo các yêu cầu sau:
+
+1. Chia văn bản thành các đoạn nhỏ, mỗi đoạn có độ dài từ 100 đến 200 từ (hoặc khoảng 2-4 câu, tùy vào ngữ cảnh), nhưng không được cắt giữa chừng làm mất nghĩa của câu hoặc ý chính.
+
+2. Đảm bảo mỗi đoạn nhỏ giữ được ý nghĩa độc lập hoặc liên quan chặt chẽ đến ngữ cảnh của văn bản gốc, không bị rời rạc.
+
+3. Các đoạn văn nhỏ phải liền mạch với nhau, nghĩa là nội dung của đoạn sau phải có sự kết nối tự nhiên với đoạn trước, giống như trong văn bản gốc.
+
+4. Trả về kết quả dưới dạng json có thuộc tính text lưu trữ từng đoạn văn.
+
+5. Nếu có câu hoặc ý nào quá dài, hãy điều chỉnh để đoạn văn vẫn nằm trong khoảng độ dài mong muốn mà không làm mất ý nghĩa.
+
+6. BẮT BUỘC TRÍCH XUẤT ĐÀY ĐỦ NỘI DUNG CỦA VĂN BẢN, KHÔNG ĐƯỢC CHỈNH SỬA NỘI DUNG NHƯ THÊM HOẶC BỚT, KHÔNG ĐƯỢC ĐÍNH KÈM CÁC TỪ CHUNG CHUNG NHƯ "các liên kết dưới đây" hoặc "các thông tin sau"nếu như từ đó không có trong văn bản.
+7. có thể thêm các từ để bổ sung ý nghĩa cho 1 câu như "khu vực A có email kva@gmai..com", "Khư vực B có số điện thoại 0901231212"
+Dưới đây là văn bản lớn mà tôi cung cấp:
+{paragraph}"""
 
 def answer_by_context():
     return """
