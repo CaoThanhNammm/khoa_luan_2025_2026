@@ -7,20 +7,23 @@ import type { Message } from '../../types/chat';
 interface ChatContainerProps {
   messages: Message[];
   isTyping: boolean;
+  isThinking?: boolean;
+  pendingMessage?: Message | null;
   onSendMessage: (message: string) => void;
 }
 
 const ChatContainer: React.FC<ChatContainerProps> = ({
   messages,
   isTyping,
+  isThinking = false,
+  pendingMessage = null,
   onSendMessage
-}) => {
-  return (
+}) => {  return (
     <div className="flex-1 flex flex-col h-full">
-      <ChatHeader isTyping={isTyping} />
+      <ChatHeader isTyping={isTyping || isThinking} />
       <div className="flex-1 flex flex-col min-h-0">
-        <ChatMessages messages={messages} isTyping={isTyping} />
-        <MessageInput onSendMessage={onSendMessage} isTyping={isTyping} />
+        <ChatMessages messages={messages} isTyping={isTyping} isThinking={isThinking} pendingMessage={pendingMessage} />
+        <MessageInput onSendMessage={onSendMessage} isTyping={isTyping || isThinking} />
       </div>
     </div>
   );

@@ -4,6 +4,8 @@ export interface Message {
   type: 'USER' | 'BOT';
   timestamp: string;
   conversationId: number;
+  isStreaming?: boolean; // Để xác định tin nhắn đang được gõ
+  isLatest?: boolean; // Để xác định tin nhắn mới nhất của bot
 }
 
 export interface ChatSession {

@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { BiBot, BiUser, BiCopy, BiCheck } from 'react-icons/bi';
 import type { Message } from '../../types/chat';
+import TypewriterText from './TypewriterText';
 
 interface MessageItemProps {
   message: Message;
   index: number;
 }
 
-const MessageItem: React.FC<MessageItemProps> = ({ message, index }) => {
+const MessageItem: React.FC<MessageItemProps> = memo(({ message, index }) => {
   const [copied, setCopied] = useState(false);
   const [codeCopied, setCodeCopied] = useState<{ [key: number]: boolean }>({});
 
@@ -211,8 +212,16 @@ const formatMessage = (content: string) => {
           isUser 
             ? 'bg-gradient-to-br from-charcoal via-gray-800 to-slate-900 text-white shadow-charcoal/20 dark:from-blue-600 dark:via-blue-700 dark:to-blue-800'
             : 'bg-white/95 backdrop-blur-sm text-charcoal border border-white/50 shadow-gray-100/80 dark:bg-slate-800/90 dark:text-gray-100 dark:border-slate-700/50'
-        }`}><div className="text-sm chat-text text-crisp">
-            {formatMessage(message.content)}
+        }`}>          <div className="text-sm chat-text text-crisp">
+            {!isUser && (message.isStreaming || message.isLatest) ? (
+              <TypewriterText 
+                text={message.content}
+                speed={30}
+                enabled={message.isStreaming !== false}
+              />
+            ) : (
+              formatMessage(message.content)
+            )}
           </div>
             {/* Copy button - only show for bot messages */}
           {!isUser && (
@@ -239,9 +248,8 @@ const formatMessage = (content: string) => {
           <span className="text-xs text-gray-500 dark:text-gray-400 mt-2 px-2 chat-timestamp opacity-70">
           {formatTime(message.timestamp)}
         </span>
-      </div>
-    </div>
+      </div>    </div>
   );
-};
+});
 
 export default MessageItem;

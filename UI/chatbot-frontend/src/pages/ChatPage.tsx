@@ -84,6 +84,8 @@ const ChatPage: React.FC = () => {
       />      <ChatContainer
         messages={messages}
         isTyping={chatContext.loading}
+        isThinking={chatContext.isThinking}
+        pendingMessage={chatContext.pendingMessage}
         onSendMessage={handleSendMessage}
       />
 

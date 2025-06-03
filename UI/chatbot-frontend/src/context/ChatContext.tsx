@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import type { ReactNode } from 'react';
 import ChatService from '../services/ChatService';
-import type { ChatSession } from '../types/chat';
+import type { ChatSession, Message } from '../types/chat';
 import { useAuth } from './AuthContext';
 import { getErrorMessage } from '../utils/errorHandler';
 
@@ -9,6 +9,8 @@ interface ChatContextType {
   conversations: ChatSession[];
   currentConversation: ChatSession | null;
   loading: boolean;
+  isThinking: boolean; // Thêm state cho thinking
+  pendingMessage: Message | null; // Thêm state cho tin nhắn đang pending
   error: string | null;
   
   // Actions
@@ -32,6 +34,8 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
   const [conversations, setConversations] = useState<ChatSession[]>([]);
   const [currentConversation, setCurrentConversation] = useState<ChatSession | null>(null);
   const [loading, setLoading] = useState(false);
+  const [isThinking, setIsThinking] = useState(false); // Thêm state thinking
+  const [pendingMessage, setPendingMessage] = useState<Message | null>(null); // Thêm state cho pending message
   const [error, setError] = useState<string | null>(null);
 
   // Save current conversation ID to localStorage
@@ -93,17 +97,49 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  }, [user, getSavedConversationId, saveCurrentConversationId]);
-  // Create a new conversation
+  }, [user, getSavedConversationId, saveCurrentConversationId]);  // Create a new conversation
   const createNewConversation = async (message: string): Promise<number | null> => {
     if (!user) return null;
     
     setLoading(true);
+    setIsThinking(true);
+      // Tạo conversation tạm thời với tin nhắn user
+    const tempConversation = {
+      id: Date.now(), // Temporary ID
+      title: message.length > 50 ? message.substring(0, 50) + '...' : message,
+      createdAt: new Date().toISOString(),
+      messages: [{
+        id: Date.now(),
+        content: message,
+        timestamp: new Date().toISOString(),
+        type: 'USER' as const,
+        conversationId: Date.now(), // Temporary conversation ID
+        isLatest: false,
+        isStreaming: false
+      }]
+    };
+    
+    // Render conversation tạm thời ngay lập tức
+    setCurrentConversation(tempConversation);
+    
     try {
       const newConversation = await ChatService.startNewConversation(message);
       
-      setConversations(prev => [newConversation, ...prev]);
-      setCurrentConversation(newConversation);
+      // Mark the latest bot message for streaming effect
+      const messagesWithStreaming = newConversation.messages.map((msg, index) => {
+        if (msg.type === 'BOT' && index === newConversation.messages.length - 1) {
+          return { ...msg, isLatest: true, isStreaming: true };
+        }
+        return { ...msg, isLatest: false, isStreaming: false };
+      });
+
+      const conversationWithStreaming = {
+        ...newConversation,
+        messages: messagesWithStreaming
+      };
+      
+      setConversations(prev => [conversationWithStreaming, ...prev]);
+      setCurrentConversation(conversationWithStreaming);
       saveCurrentConversationId(newConversation.id); // Save the new conversation ID
       setError(null);
       
@@ -112,9 +148,12 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       const errorMessage = getErrorMessage(err);
       setError(errorMessage);
       console.error('Error creating conversation:', err);
+      // Xóa conversation tạm thời nếu có lỗi
+      setCurrentConversation(null);
       return null;
     } finally {
       setLoading(false);
+      setIsThinking(false);
     }
   };
   // Switch to a specific conversation
@@ -151,21 +190,52 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       setError(errorMessage);
       console.error('Error deleting conversation:', err);
     }
-  };
-
-  // Send a message in a conversation
+  };  // Send a message in a conversation
   const sendMessage = async (conversationId: number, message: string) => {
     try {
+      // Tạo pending message để hiển thị ngay lập tức
+      const tempUserMessage = {
+        id: Date.now(), // Temporary ID
+        content: message,
+        timestamp: new Date().toISOString(),
+        type: 'USER' as const,
+        conversationId: conversationId,
+        isLatest: false,
+        isStreaming: false
+      };
+
+      // Set pending message thay vì cập nhật currentConversation
+      setPendingMessage(tempUserMessage);
+      setIsThinking(true); // Bắt đầu thinking state
+      
+      // Send message to server và nhận bot response
       await ChatService.sendMessage(conversationId, message);
       
-      // Reload the conversation to get the latest messages
+      setIsThinking(false); // Kết thúc thinking state
+      setPendingMessage(null); // Xóa pending message
+      
+      // Reload conversation để lấy dữ liệu mới nhất từ server
       if (currentConversation?.id === conversationId) {
         const updatedConversation = await ChatService.getConversation(conversationId);
-        setCurrentConversation(updatedConversation);
+        
+        // Mark the latest bot message for streaming effect
+        const messagesWithStreaming = updatedConversation.messages.map((msg, index) => {
+          if (msg.type === 'BOT' && index === updatedConversation.messages.length - 1) {
+            return { ...msg, isLatest: true, isStreaming: true };
+          }
+          return { ...msg, isLatest: false, isStreaming: false };
+        });
+
+        setCurrentConversation({
+          ...updatedConversation,
+          messages: messagesWithStreaming
+        });
       }
       
       setError(null);
     } catch (err) {
+      setIsThinking(false); // Đảm bảo tắt thinking state khi có lỗi
+      setPendingMessage(null); // Xóa pending message khi có lỗi
       const errorMessage = getErrorMessage(err);
       setError(errorMessage);
       console.error('Error sending message:', err);
@@ -192,11 +262,12 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
         }
       });
     }
-  }, [user, loadConversations]);
-  const value: ChatContextType = {
+  }, [user, loadConversations]);  const value: ChatContextType = {
     conversations,
     currentConversation,
     loading,
+    isThinking,
+    pendingMessage,
     error,
     loadConversations,
     createNewConversation,
