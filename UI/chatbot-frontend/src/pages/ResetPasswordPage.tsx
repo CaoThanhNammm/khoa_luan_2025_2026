@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useSettings } from '../context/SettingsContext';
 import { useTranslation } from '../utils/translations';
-import { BiArrowBack, BiLock, BiShow, BiHide, BiCheckCircle } from 'react-icons/bi';
+import { BiArrowBack, BiLock, BiShow, BiHide } from 'react-icons/bi';
 import PageTransition from '../components/PageTransition';
 
 const ResetPasswordPage: React.FC = () => {

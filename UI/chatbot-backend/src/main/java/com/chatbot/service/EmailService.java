@@ -53,12 +53,31 @@ public class EmailService {
             
             helper.setText(emailContent, true);
             logger.info("Email content prepared, sending email...");
-            
-            mailSender.send(message);
+              mailSender.send(message);
             logger.info("Password reset email sent successfully to: {}", to);
         } catch (Exception e) {
             logger.error("Failed to send email: {}", e.getMessage(), e);
             throw new MessagingException("Failed to send email: " + e.getMessage(), e);
+        }
+    }
+    
+    public void sendSimpleMessage(String to, String subject, String text) {
+        logger.info("Preparing to send simple email to: {} with subject: {}", to, subject);
+        
+        try {
+            MimeMessage message = mailSender.createMimeMessage();
+            MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
+            
+            helper.setFrom(fromEmail);
+            helper.setTo(to);
+            helper.setSubject(subject);
+            helper.setText(text, false); // false means plain text
+            
+            mailSender.send(message);
+            logger.info("Simple email sent successfully to: {}", to);
+        } catch (Exception e) {
+            logger.error("Failed to send simple email: {}", e.getMessage(), e);
+            // Don't throw exception to avoid breaking the contact form submission
         }
     }
 }
