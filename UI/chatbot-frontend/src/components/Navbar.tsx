@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useSettings } from '../context/SettingsContext';
 import { useTranslation } from '../utils/translations';
-import { BiLogOut, BiChat, BiHome, BiUser, BiInfoCircle, BiEnvelope } from 'react-icons/bi';
+import { BiLogOut, BiChat, BiUser, BiInfoCircle, BiEnvelope } from 'react-icons/bi';
 
 const Navbar: React.FC = () => {
   const { user, logout } = useAuth();
