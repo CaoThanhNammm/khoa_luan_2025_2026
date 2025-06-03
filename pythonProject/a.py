@@ -28,45 +28,45 @@ if __name__ == "__main__":
     gemini_commentor = Gemini(model_name_20_flash, api_key_commentor)
 
     chat = Chat(t, gemini_agent, gemini_generator, gemini_valid, gemini_commentor, pre_processing)
-
-    my_qa = pd.DataFrame(columns=['question', 'answer'])
-    file_name = 'my_qa_human_hybrid_updated_01.csv'
-
-    for index, row in qa[30:].iterrows():
-        q = row['question']
-
-        time.sleep(60)
-
-        try:
-            answer = chat.answer_s2s(q)
-            new_row = pd.DataFrame({
-                'question': [q],
-                'answer': [answer]
-            })
-            my_qa = pd.concat([my_qa, new_row], ignore_index=True)
-            if len(my_qa) % 2 == 0:
-                my_qa.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
-                print(my_qa)
-        except:
-            gemini_agent = Gemini(model_name_15_flash, api_key_agent)
-            gemini_generator = Gemini(model_name_20_flash, api_key_generator)
-            gemini_valid = Gemini(model_name_15_flash, api_key_valid)
-            gemini_commentor = Gemini(model_name_15_flash, api_key_commentor)
-            chat = Chat(t, gemini_agent, gemini_generator, gemini_valid, gemini_commentor, pre_processing)
-            time.sleep(60)
-
-            answer = chat.answer_s2s(q)
-            new_row = pd.DataFrame({
-                'question': [q],
-                'answer': [answer]
-            })
-            my_qa = pd.concat([my_qa, new_row], ignore_index=True)
-            if len(my_qa) % 2 == 0:
-                my_qa.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
-                print(my_qa)
-
-
-    my_qa.to_csv(fr"C:\Users\Nam\Desktop\my_qa_human_hybrid_updated_final", encoding='utf-8-sig')
+    print(chat.answer_s2s('dai hoc nong lam o dau'))
+    # my_qa = pd.DataFrame(columns=['question', 'answer'])
+    # file_name = 'my_qa_human_hybrid_updated_01.csv'
+    #
+    # for index, row in qa[30:].iterrows():
+    #     q = row['question']
+    #
+    #     time.sleep(60)
+    #
+    #     try:
+    #         answer = chat.answer_s2s(q)
+    #         new_row = pd.DataFrame({
+    #             'question': [q],
+    #             'answer': [answer]
+    #         })
+    #         my_qa = pd.concat([my_qa, new_row], ignore_index=True)
+    #         if len(my_qa) % 2 == 0:
+    #             my_qa.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
+    #             print(my_qa)
+    #     except:
+    #         gemini_agent = Gemini(model_name_15_flash, api_key_agent)
+    #         gemini_generator = Gemini(model_name_20_flash, api_key_generator)
+    #         gemini_valid = Gemini(model_name_15_flash, api_key_valid)
+    #         gemini_commentor = Gemini(model_name_15_flash, api_key_commentor)
+    #         chat = Chat(t, gemini_agent, gemini_generator, gemini_valid, gemini_commentor, pre_processing)
+    #         time.sleep(60)
+    #
+    #         answer = chat.answer_s2s(q)
+    #         new_row = pd.DataFrame({
+    #             'question': [q],
+    #             'answer': [answer]
+    #         })
+    #         my_qa = pd.concat([my_qa, new_row], ignore_index=True)
+    #         if len(my_qa) % 2 == 0:
+    #             my_qa.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
+    #             print(my_qa)
+    #
+    #
+    # my_qa.to_csv(fr"C:\Users\Nam\Desktop\my_qa_human_hybrid_updated_final", encoding='utf-8-sig')
 
 
 
