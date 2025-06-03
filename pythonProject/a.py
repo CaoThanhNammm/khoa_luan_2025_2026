@@ -1,9 +1,5 @@
-import re
 import time
-
-from langchain_core.prompts import PromptTemplate
 from Chat import Chat
-from LLM import prompt
 from LLM.Gemini import Gemini
 import os
 from dotenv import load_dotenv
@@ -14,64 +10,138 @@ import pandas as pd
 if __name__ == "__main__":
     qa = pd.read_csv(r'D:/PycharmProjects/pythonProject/qa_human_hybrid.csv')
     # 1. khởi tạo gemini và chat
-    model_name = os.getenv('MODEL')
-    api_key = os.getenv('API_KEY')
+    model_name_15_flash = os.getenv('MODEL_15_FLASH')
+    model_name_20_flash = os.getenv('MODEL_20_FLASH')
+    model_name_25_flash = os.getenv('MODEL_25_FLASH')
+
+    api_key_agent = os.getenv('API_KEY_AGENT')
+    api_key_generator = os.getenv('API_KEY_GENERATOR')
+    api_key_valid = os.getenv('API_KEY_VALID')
+    api_key_commentor = os.getenv('API_KEY_COMMENTOR')
     pre_processing = PreProcessing()
+
+    t = 5
+
+    gemini_agent = Gemini(model_name_15_flash, api_key_agent)
+    gemini_generator = Gemini(model_name_25_flash, api_key_generator)
+    gemini_valid = Gemini(model_name_15_flash, api_key_valid)
+    gemini_commentor = Gemini(model_name_15_flash, api_key_commentor)
+    chat = Chat(t, gemini_agent, gemini_generator, gemini_valid, gemini_commentor, pre_processing)
+    question = [
+        "Giấy tờ cần nộp cho bồi thường tiêm ngừa bệnh dại là gì?",
+        "Sinh viên nộp hồ sơ bảo hiểm tai nạn vào thời gian nào?",
+        "Lịch nộp hồ sơ bồi thường bảo hiểm tai nạn ra sao?",
+        "Hồ sơ bảo hiểm tai nạn được nộp khi nào?",
+        "Sinh viên cần làm gì đối với các trường hợp tai nạn khác?",
+        "Sinh viên xử lý hồ sơ tai nạn khác ra sao?",
+        "Quy trình bồi thường các tai nạn đặc biệt là gì?",
+        "Hậu quả nếu sinh viên không tham gia BHYT là gì?",
+        "Sinh viên không tham gia BHYT bị phạt thế nào?",
+        "Sinh viên đóng BHYT theo công thức nào?",
+        "Quy định tính tiền BHYT cho sinh viên là gì?",
+        "Mức BHYT sinh viên phải đóng được xác định ra sao?",
+        "Bước thứ hai trong quy trình làm BHYT là gì?",
+        "Bước 3 trong quy trình làm BHYT là gì?",
+        "Sau khi kê khai thông tin, sinh viên làm gì để làm BHYT?",
+        "Sinh viên làm gì sau khi điền thông tin BHYT?",
+        "Quy trình làm BHYT ở bước thứ ba là gì?",
+        "SV có BHYT do Nhà nước cấp phải cập nhật thông tin ở đâu?",
+        "Sinh viên tra cứu thời hạn thẻ BHYT ở đâu?",
+        "Website để kiểm tra thời hạn thẻ BHYT là gì?",
+        "Sinh viên xem thời hạn sử dụng BHYT tại đâu?",
+        "Thời hạn thẻ BHYT được tra cứu ở đâu?",
+        "Bước thứ hai khi thanh toán học phí qua BIDV Online là gì?",
+        "Sinh viên chọn gì sau khi login BIDV Online?",
+        "Quy trình thanh toán học phí qua BIDV Online ở bước 2 là gì?",
+        "Quy trình thanh toán học phí qua BIDV Online ở bước 3 là gì?",
+        "Quy trình thanh toán học phí qua BIDV Online ở bước 4 là gì?",
+        "Sau khi chọn hóa đơn, SV làm gì trên BIDV Online?",
+        "Quy trình thanh toán học phí qua BIDV Online ở bước 5 là gì?",
+        "Bước thứ hai khi thanh toán học phí qua ATM BIDV là gì?",
+        "Sinh viên chọn gì sau khi login ATM BIDV?",
+        "Quy trình thanh toán học phí qua ATM BIDV ở bước 2 là gì?",
+        "Quy trình thanh toán học phí qua ATM BIDV ở bước 3 là gì?",
+        "Quy trình thanh toán học phí qua ATM BIDV ở bước 4 là gì?",
+        "Quy định nhà cung cấp thanh toán học phí qua ATM BIDV là gì?",
+        "Sinh viên có được đóng học phí bằng chuyển khoản không?",
+        "Sau khi điền thông tin, SV làm gì trên website sinh viên?",
+        "Bước 5 trong thanh toán qua website sinh viên là gì?",
+        "Sau khi xem số tiền, SV làm gì để kết thúc thanh toán website?",
+        "Quy trình thanh toán học phí qua website sinh viên ở bước cuối là gì?",
+        "Tài khoản đăng nhập bhytsv.hcmuaf.edu.vn là gì?",
+        "Quy định đăng nhập website BHYT cho sinh viên là gì?",
+        "Những hồ sơ nào được phòng Công tác sinh viên xác nhận?",
+        "Giấy tờ sinh viên được xác nhận bao gồm những gì?",
+        "Sinh viên đăng ký xác nhận giấy tờ qua kênh nào?",
+        "Sinh viên làm thủ tục xác nhận giấy tờ ở đâu?",
+        "Địa chỉ đăng ký xác nhận hồ sơ sinh viên là gì?",
+        "Website để đăng ký xác nhận giấy tờ cho sinh viên là gì?",
+        "Sinh viên sử dụng thiết bị gì để đăng ký xác nhận giấy tờ?",
+        "Thiết bị nào dùng để đăng ký xác nhận hồ sơ sinh viên?",
+        "Sinh viên cần gì để đăng ký xác nhận giấy tờ trực tuyến?",
+        "Đăng ký xác nhận giấy tờ cần thiết bị nào?",
+        "Sau khi truy cập website, sinh viên làm gì tiếp theo?",
+        "Bước 2 để xác nhận hồ sơ sinh viên là gì?",
+        "Bước 3 trong quy trình xác nhận hồ sơ là gì?",
+        "Sinh viên làm gì sau khi cập nhật thông tin cá nhân?",
+        "Bước 4 để xác nhận hồ sơ sinh viên là gì?",
+        "Sau khi kiểm tra thông tin, sinh viên thực hiện gì?",
+        "Quy trình xác nhận giấy tờ ở bước thứ tư là gì?",
+        "Sau khi sinh viên đăng ký, giấy xác nhận được xử lý ra sao?",
+        "Bước 6 trong quy trình xác nhận hồ sơ là gì?",
+        "Sau khi giấy được ký, sinh viên làm gì?",
+        "Kết quả cài đặt sinh trắc học BIDV Smart Banking là gì?"
+    ]
+
     my_qa = pd.DataFrame(columns=['question', 'answer'])
-    t = 2
+    file_name = 'my_qa_human_updated_13.csv'
+    for q in question:
+        time.sleep(60)
 
-    gemini = Gemini(model_name, api_key)
-    chat = Chat(t, gemini, pre_processing)
-    # 2. câu hỏi
-    rows = list(qa.itertuples())[68:]
-    file_name = f'my_qa_hybrid_grag_1.csv'
-
-    for row in rows:
-        question = row.question
-        if question == 'nan':
-            continue
-
-        prompt_template = PromptTemplate(
-            input_variables=["question"],
-            template=prompt.separate_question()
-        )
-        formatted_prompt = prompt_template.format(question=question)
-        answer = gemini.generator(formatted_prompt)
-        separate_question = pre_processing.string_to_json(answer)
-        print(f'question: {question}')
-        answer_child = ""
-        for attr in separate_question:
+        try:
+            answer = chat.answer(q)
+            new_row = pd.DataFrame({
+                'question': [q],
+                'answer': [answer]
+            })
+            my_qa = pd.concat([my_qa, new_row], ignore_index=True)
+            if len(my_qa) % 2 == 0:
+                my_qa.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
+                print(my_qa)
+        except:
+            gemini_agent = Gemini(model_name_15_flash, api_key_agent)
+            gemini_generator = Gemini(model_name_20_flash, api_key_generator)
+            gemini_valid = Gemini(model_name_15_flash, api_key_valid)
+            gemini_commentor = Gemini(model_name_15_flash, api_key_commentor)
+            chat = Chat(t, gemini_agent, gemini_generator, gemini_valid, gemini_commentor, pre_processing)
             time.sleep(60)
-            question_child = separate_question[attr]
 
-            try:
-                answer_child += chat.answer(question_child)
-            except:
-                time.sleep(60)
-                gemini = Gemini(model_name, api_key)
-                chat = Chat(t, gemini, pre_processing)
-                answer_child += chat.answer(question_child)
+            answer = chat.answer(q)
+            new_row = pd.DataFrame({
+                'question': [q],
+                'answer': [answer]
+            })
+            my_qa = pd.concat([my_qa, new_row], ignore_index=True)
+            if len(my_qa) % 2 == 0:
+                my_qa.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
+                print(my_qa)
 
 
-            prompt_template = PromptTemplate(
-                input_variables=["question", 'answer'],
-                template=prompt.summary_answer()
-            )
-            formatted_prompt = prompt_template.format(question=question, answer=answer_child)
-            answer_child = gemini.generator(formatted_prompt)
+    my_qa.to_csv(fr"C:\Users\Nam\Desktop\my_qa_human_updated_final", encoding='utf-8-sig')
 
-        new_row = pd.DataFrame({
-            'question': [question],
-            'answer': [answer_child]
-        })
 
-        my_qa = pd.concat([my_qa, new_row], ignore_index=True)
-        if len(my_qa) % 2 == 0:
-            print(my_qa)
-            print("save")
-            my_qa.to_csv(fr"C:\Users\Nam\Desktop\{file_name}", encoding='utf-8-sig')
 
-    my_qa.to_csv(r"C:\Users\Nam\Desktop\my_qa_final.csv", encoding='utf-8-sig')
+
+
+
+
+
+
+
+
+
+
+
 
 
     # 3. trả lời
@@ -92,7 +162,6 @@ if __name__ == "__main__":
     # )
     # formatted_prompt = prompt_template.format(question=question, answer=result)
     # answer = gemini.generator(formatted_prompt)
-
 
 
 

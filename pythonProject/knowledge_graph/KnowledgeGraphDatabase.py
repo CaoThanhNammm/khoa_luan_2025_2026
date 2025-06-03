@@ -315,37 +315,6 @@ class Neo4j:
         with self.driver.session() as session:
             session.execute_write(_add_entities, entities)
 
-    # def add_relationships(self, relationships, type_part, part):
-    #     def _add_relationships(tx, relationships, part):
-    #         for rel in relationships:
-    #             source = rel["source"]
-    #             target = rel["target"]
-    #             relation = rel["relation"]
-    #             type_source = rel["type_source"]
-    #             type_target = rel["type_target"]
-    #
-    #             # Sử dụng APOC để merge mối quan hệ với nhãn động, tránh tạo quan hệ trùng lặp
-    #             query = """
-    #                 MATCH (source:%s {name: $source})
-    #                 MATCH (target:%s {name: $target})
-    #                 CALL apoc.merge.relationship(source, $relation, {}, {}, target)
-    #                 YIELD rel
-    #                 RETURN rel
-    #             """ % (type_source, type_target)
-    #             tx.run(query, source=source, target=target, relation=relation)
-    #
-    #             # Nếu part được cung cấp, tạo mối quan hệ bao_gồm từ part đến source
-    #             if part:
-    #                 part_query = """
-    #                     MATCH (p:$type_part {name: $part})
-    #                     MATCH (s)
-    #                     WHERE $type_source IN labels(s) AND s.name = $source
-    #                     MERGE (p)-[:bao_gồm]->(s)
-    #                 """
-    #                 tx.run(part_query, part=part, source=source, type_source=type_source)
-    #
-    #     with self.driver.session() as session:
-    #         session.execute_write(_add_relationships, relationships, part)
     def add_relationships(self, relationships, type_part, part):
         def _add_relationships(tx, relationships, part):
             for rel in relationships:
@@ -407,38 +376,70 @@ class Neo4j:
             return data
 
     def get_path(self, query):
-        # query = """
-        #     MATCH (first:episode {name: $episode_name})-[:bao_gồm]->(second:part {name: $part_name})-[r*1..2]->(e)
-        #     RETURN r as relation, e as target
-        # """
-
         with self.driver.session() as session:
             result = session.run(query)
             return [record for record in result]
 
-    def get_relationship(self, records):
-        """Đọc và trích xuất các thuộc tính cần thiết từ kết quả truy vấn episode-part-entity"""
+
+    def format_result_to_json(self, records):
+        # Khởi tạo mảng kết quả
+        graph_data = []
+
+        for record in records:
+            # Lấy thông tin node nguồn (source node)
+            node_n = record["n"]
+            source_node = {
+                "id": node_n.element_id,
+                "label": list(node_n.labels)[0],
+                "properties": dict(node_n)
+            }
+
+            # Lấy thông tin node đích (target node)
+            node_m = record["m"]
+            target_node = {
+                "id": node_m.element_id,
+                "label": list(node_m.labels)[0],
+                "properties": dict(node_m)
+            }
+
+            # Lấy loại quan hệ (relation type)
+            relation_type = record["r"].type
+
+            # Tạo dictionary cho mối quan hệ và thêm vào mảng
+            relation_data = {
+                "source_node": source_node,
+                "relation_type": relation_type,
+                "target_node": target_node
+            }
+            graph_data.append(relation_data)
+
+        return graph_data
+
+    def get_triplet(self, records):
         references_relationship = []
+        seen_triplets = set()  # Dùng để kiểm tra trùng lặp
 
         for record in records:
             relations = record['relation']
+            if not relations:
+                continue
+
             last_relation = relations[-1]
-            source_node = last_relation.nodes[0]['name']
+            source_node = last_relation.nodes[0].get('name')
             relation_type = last_relation.type
-            target_node = last_relation.nodes[1]['name']
+            target_node = last_relation.nodes[1].get('name')
 
-            embed_source_node = last_relation.nodes[0]['embedding']
-            embed_target_node = last_relation.nodes[1]['embedding']
+            triplet = (source_node, relation_type, target_node)
 
-            if source_node is not None:
+            if source_node is not None and triplet not in seen_triplets:
+                seen_triplets.add(triplet)
                 references_relationship.append(
                     {
                         'source_node': source_node,
                         'relation_type': relation_type,
-                        'target_node': target_node,
-                        'embed_source_node': embed_source_node,
-                        'embed_target_node': embed_target_node,
+                        'target_node': target_node
                     }
                 )
 
         return references_relationship
+

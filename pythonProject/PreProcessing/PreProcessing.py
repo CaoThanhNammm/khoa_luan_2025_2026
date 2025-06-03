@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 import re
 import os
+import unicodedata
 
 # Global VnCoreNLP instance
 save_dir = r'C:\Users\Nam\Desktop\vncorenlp'
@@ -34,25 +35,34 @@ class PreProcessing:
         with open(stopwords_path, 'r', encoding='utf-8') as f:
             stop_words = set(f.read().splitlines())
 
-        # 1. Chuyển thành chữ thường
+        # 1. Chuẩn hóa unicode
+        text = self.normalize_unicode(text, 'NFC')
+
+        # 2. Chuyển thành chữ thường
         text = text.lower()
 
-        # 2. Loại bỏ ký tự đánh số/thứ tự ở đầu dòng (ví dụ: "1. ", "a) ")
+        # 3. Loại bỏ ký tự đánh số/thứ tự ở đầu dòng (ví dụ: "1. ", "a) ")
         #    (?m) bật chế độ multiline, ^ khớp đầu dòng, \s* để bỏ khoảng trắng đầu dòng nếu có
         text = re.sub(r'(?m)^\s*(?:\d+\.|[a-z]\))\s*', '', text)
 
-        # 3. Loại bỏ dấu câu
+        # 4. Xóa tất cả các ký tự đặc biệt
         text = re.sub(r'[^\w\s\n]', '', text)
 
-        # 4. Xóa khoảng trắng thừa
+        # 5. Xóa khoảng trắng thừa
         text = text.strip()
 
-        # 5. Tách từ (Tokenization)
-        output = self.vncorenlp.word_segment(text)  # output là một list
-        output = output[0].split(' ')
+        # 6. word segment
+        try:
+            output = self.vncorenlp.word_segment(text)  # output là một list
+            output = output[0].split(' ')
+            # 7. Loại bỏ stop words trực tiếp từ list
+            filtered_words = [word for word in output if word not in stop_words]
+            result_string = ' '.join(filtered_words)
+            return result_string
+        except:
+            output = ''
 
-        # 6. Loại bỏ stop words trực tiếp từ list
-        filtered_words = [word for word in output if word not in stop_words]
-        result_string = ' '.join(filtered_words)
-        return result_string
+        return text
 
+    def normalize_unicode(self, text, form='NFC'):
+        return unicodedata.normalize(form, text)

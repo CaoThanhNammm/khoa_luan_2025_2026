@@ -383,11 +383,6 @@ if __name__ == "__main__":
     "Kết quả cài đặt sinh trắc học BIDV Smart Banking là gì?"
 ]
 
-
-    question = 'Trường Đại học Nông Lâm Thành phố Hồ Chí Minh có diện tích bao nhiêu'
-    answer = chat.retrieval_text(question)
-    print(answer)
-
     # rows = list(qa.itertuples())[2050:]
     # file_name = f'my_qa_7.csv'
     # for question in question:

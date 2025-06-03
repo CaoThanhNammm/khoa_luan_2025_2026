@@ -1,7 +1,5 @@
 from dotenv import load_dotenv
-import google.generativeai as generativeai
 from google import genai
-import os
 load_dotenv()
 from sentence_transformers import SentenceTransformer
 
@@ -10,19 +8,15 @@ class Gemini:
         self.model_name = model_name
         self.api_key = api_key
 
-        self.client = genai.Client(api_key=self.api_key)
+        client = genai.Client(api_key=self.api_key)
         self.model_encode = SentenceTransformer('intfloat/multilingual-e5-large')
-        # chat = client.create(model=self.model_name)
-        # self.chat = chat
+        self.chat = client.chats.create(model=self.model_name)
         print("load model success")
-
 
     def encode(self, text):
         return self.model_encode.encode(text)
 
     def generator(self, text):
-        response = self.client.models.generate_content(
-            model=self.model_name,
-            contents=[text]
-        )
+        response = self.chat.send_message(text)
+
         return response.text.strip()

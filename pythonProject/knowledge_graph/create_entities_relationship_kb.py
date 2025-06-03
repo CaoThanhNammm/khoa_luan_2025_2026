@@ -22,7 +22,7 @@ def add_entities_relationship(json_string, type_part, part):
     for j in json:
         entities.extend(j['entities'])
         relationships.extend(j['relationships'])
-
+    print(len(relationships))
     # change_to_json = json.loads(json_string)
     #
     # entities = change_to_json['entities']
@@ -89,291 +89,598 @@ if __name__ == "__main__":
         """{
   "entities": [
     {
-      "name": "giấy tờ",
-      "type": "document"
+      "name": "học sinh/sinh viên",
+      "type": "person"
     },
     {
-      "name": "Vay vốn ngân hàng chính sách xã hội",
-      "type": "document_type"
+      "name": "giờ học",
+      "type": "time"
     },
     {
-      "name": "ngân hàng chính sách xã hội",
+      "name": "giờ thực tập",
+      "type": "time"
+    },
+    {
+      "name": "điểm rèn luyện",
+      "type": "score_type"
+    },
+    {
+      "name": "thầy",
+      "type": "person"
+    },
+    {
+      "name": "cô giáo",
+      "type": "person"
+    },
+    {
+      "name": "CBVC nhà trường",
+      "type": "person"
+    },
+    {
+      "name": "khiển trách",
+      "type": "punishment"
+    },
+    {
+      "name": "buộc thôi học",
+      "type": "punishment"
+    },
+    {
+      "name": "thi",
+      "type": "activity"
+    },
+    {
+      "name": "kiểm tra",
+      "type": "activity"
+    },
+    {
+      "name": "tiểu luận",
+      "type": "academic_work"
+    },
+    {
+      "name": "đồ án",
+      "type": "academic_work"
+    },
+    {
+      "name": "khóa luận tốt nghiệp",
+      "type": "academic_work"
+    },
+    {
+      "name": "đình chỉ có thời hạn",
+      "type": "punishment"
+    },
+    {
+      "name": "cơ quan chức năng",
       "type": "organization"
     },
     {
-      "name": "Tạm hoãn nghĩa vụ quân sự",
-      "type": "document_type"
+      "name": "phòng thi",
+      "type": "location"
     },
     {
-      "name": "Đi xe buýt",
-      "type": "document_type"
+      "name": "bậc Trung bình",
+      "type": "rating"
     },
     {
-      "name": "Bổ sung hồ sơ nhận trợ cấp",
-      "type": "document_type"
+      "name": "học phí",
+      "type": "fee"
     },
     {
-      "name": "Bổ sung hồ sơ làm lại thẻ sinh viên",
-      "type": "document_type"
+      "name": "bảo hiểm y tế",
+      "type": "fee"
     },
     {
-      "name": "thẻ sinh viên",
-      "type": "student_card"
+      "name": "KTX",
+      "type": "location"
     },
     {
-      "name": "Bổ sung hồ sơ thuế cho người thân",
-      "type": "document_type"
+      "name": "tài sản",
+      "type": "property"
     },
     {
-      "name": "thuế",
-      "type": "tax_document"
+      "name": "rượu",
+      "type": "substance"
     },
     {
-      "name": "người thân",
-      "type": "relative"
+      "name": "bia",
+      "type": "substance"
     },
     {
-      "name": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
-      "type": "document_type"
+      "name": "thuốc lá",
+      "type": "substance"
     },
     {
-      "name": "ký túc xá",
-      "type": "dormitory_document"
+      "name": "phòng họp",
+      "type": "location"
     },
     {
-      "name": "Đại học Quốc gia TP.HCM",
-      "type": "university"
+      "name": "phòng thí nghiệm",
+      "type": "location"
     },
     {
-      "name": "Bổ sung hồ sơ thi học kỳ, thi acces",
-      "type": "document_type"
+      "name": "cảnh cáo",
+      "type": "punishment"
     },
     {
-      "name": "thi học kỳ",
-      "type": "exam_document"
+      "name": "đánh bạc",
+      "type": "violation"
     },
     {
-      "name": "thi acces",
-      "type": "exam_document"
+      "name": "sản phẩm văn hóa đồi trụy",
+      "type": "prohibited_item"
     },
     {
-      "name": "Bổ sung hồ sơ lý lịch cá nhân",
-      "type": "document_type"
+      "name": "hoạt động mê tín dị đoan",
+      "type": "prohibited_activity"
     },
     {
-      "name": "lý lịch cá nhân",
-      "type": "personal_profile"
+      "name": "hoạt động tôn giáo trái phép",
+      "type": "prohibited_activity"
     },
     {
-      "name": "Bổ sung hồ sơ nhận học bổng",
-      "type": "document_type"
+      "name": "ma túy",
+      "type": "prohibited_substance"
     },
     {
-      "name": "học bổng",
-      "type": "scholarship_document"
+      "name": "mại dâm",
+      "type": "prohibited_activity"
     },
     {
-      "name": "Bổ sung hồ sơ giảm trừ gia cảnh",
-      "type": "document_type"
+      "name": "vũ khí",
+      "type": "prohibited_item"
     },
     {
-      "name": "giảm trừ gia cảnh",
-      "type": "family_deduction_document"
+      "name": "chất nổ",
+      "type": "prohibited_item"
     },
     {
-      "name": "Bổ sung hồ sơ đi làm, đi thực tập",
-      "type": "document_type"
+      "name": "hàng cấm",
+      "type": "prohibited_item"
     },
     {
-      "name": "đi làm",
-      "type": "work_document"
+      "name": "phần tử xấu",
+      "type": "person"
     },
     {
-      "name": "đi thực tập",
-      "type": "internship_document"
+      "name": "truyền đơn",
+      "type": "document"
+    },
+    {
+      "name": "áp phích",
+      "type": "document"
+    },
+    {
+      "name": "biểu tình",
+      "type": "prohibited_activity"
+    },
+    {
+      "name": "tụ tập đông người",
+      "type": "prohibited_activity"
+    },
+    {
+      "name": "khiếu kiện",
+      "type": "activity"
+    },
+    {
+      "name": "mạng Internet",
+      "type": "platform"
+    },
+    {
+      "name": "Đảng",
+      "type": "organization"
+    },
+    {
+      "name": "Nhà nước",
+      "type": "organization"
+    },
+    {
+      "name": "an ninh quốc gia",
+      "type": "concept"
+    },
+    {
+      "name": "an toàn giao thông",
+      "type": "regulation"
+    },
+    {
+      "name": "hồ sơ",
+      "type": "document"
+    },
+    {
+      "name": "văn bằng",
+      "type": "document"
+    },
+    {
+      "name": "chứng chỉ",
+      "type": "document"
+    },
+    {
+      "name": "nhà trường",
+      "type": "organization"
     }
   ],
   "relationships": [
     {
-      "source": "Vay vốn ngân hàng chính sách xã hội",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "giờ học",
+      "type_source": "person",
+      "type_target": "time",
+      "relation": "đến_muộn"
     },
     {
-      "source": "ngân hàng chính sách xã hội",
-      "target": "Vay vốn ngân hàng chính sách xã hội",
-      "relation": "của",
+      "source": "học sinh/sinh viên",
+      "target": "giờ thực tập",
+      "type_source": "person",
+      "type_target": "time",
+      "relation": "đến_muộn"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "điểm rèn luyện",
+      "type_source": "person",
+      "type_target": "score_type",
+      "relation": "bị_trừ"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "thầy",
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "vô_lễ_với"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "cô giáo",
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "vô_lễ_với"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "CBVC nhà trường",
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "vô_lễ_với"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "khiển trách",
+      "type_source": "person",
+      "type_target": "punishment",
+      "relation": "bị_xử_lý"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "buộc thôi học",
+      "type_source": "person",
+      "type_target": "punishment",
+      "relation": "bị_xử_lý"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "thi",
+      "type_source": "person",
+      "type_target": "activity",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "kiểm tra",
+      "type_source": "person",
+      "type_target": "activity",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "tiểu luận",
+      "type_source": "person",
+      "type_target": "academic_work",
+      "relation": "làm"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "đồ án",
+      "type_source": "person",
+      "type_target": "academic_work",
+      "relation": "làm"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "khóa luận tốt nghiệp",
+      "type_source": "person",
+      "type_target": "academic_work",
+      "relation": "làm"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "đình chỉ có thời hạn",
+      "type_source": "person",
+      "type_target": "punishment",
+      "relation": "bị_xử_lý"
+    },
+    {
+      "source": "cơ quan chức năng",
+      "target": "học sinh/sinh viên",
       "type_source": "organization",
-      "type_target": "document_type"
+      "type_target": "person",
+      "relation": "xử_lý"
     },
     {
-      "source": "Tạm hoãn nghĩa vụ quân sự",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "phòng thi",
+      "type_source": "person",
+      "type_target": "location",
+      "relation": "mang_tài_liệu_vào"
     },
     {
-      "source": "Đi xe buýt",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "bậc Trung bình",
+      "type_source": "person",
+      "type_target": "rating",
+      "relation": "bị_hạ_điểm_xuống"
     },
     {
-      "source": "Bổ sung hồ sơ nhận trợ cấp",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "học phí",
+      "type_source": "person",
+      "type_target": "fee",
+      "relation": "chậm_nộp"
     },
     {
-      "source": "Bổ sung hồ sơ làm lại thẻ sinh viên",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "bảo hiểm y tế",
+      "type_source": "person",
+      "type_target": "fee",
+      "relation": "chậm_nộp"
     },
     {
-      "source": "thẻ sinh viên",
-      "target": "Bổ sung hồ sơ làm lại thẻ sinh viên",
-      "relation": "của",
-      "type_source": "student_card",
-      "type_target": "document_type"
+      "source": "học sinh/sinh viên",
+      "target": "KTX",
+      "type_source": "person",
+      "type_target": "location",
+      "relation": "ở_trong"
     },
     {
-      "source": "Bổ sung hồ sơ thuế cho người thân",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "tài sản",
+      "type_source": "person",
+      "type_target": "property",
+      "relation": "làm_hư_hỏng"
     },
     {
-      "source": "thuế",
-      "target": "Bổ sung hồ sơ thuế cho người thân",
-      "relation": "của",
-      "type_source": "tax_document",
-      "type_target": "document_type"
+      "source": "học sinh/sinh viên",
+      "target": "cảnh cáo",
+      "type_source": "person",
+      "type_target": "punishment",
+      "relation": "bị_xử_lý"
     },
     {
-      "source": "người thân",
-      "target": "Bổ sung hồ sơ thuế cho người thân",
-      "relation": "cho",
-      "type_source": "relative",
-      "type_target": "document_type"
+      "source": "học sinh/sinh viên",
+      "target": "rượu",
+      "type_source": "person",
+      "type_target": "substance",
+      "relation": "sử_dụng"
     },
     {
-      "source": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "bia",
+      "type_source": "person",
+      "type_target": "substance",
+      "relation": "sử_dụng"
     },
     {
-      "source": "ký túc xá",
-      "target": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
-      "relation": "của",
-      "type_source": "dormitory_document",
-      "type_target": "document_type"
+      "source": "học sinh/sinh viên",
+      "target": "thuốc lá",
+      "type_source": "person",
+      "type_target": "substance",
+      "relation": "hút"
     },
     {
-      "source": "Đại học Quốc gia TP.HCM",
-      "target": "Bổ sung hồ sơ ký túc xá Đại học Quốc gia TP.HCM",
-      "relation": "của",
-      "type_source": "university",
-      "type_target": "document_type"
+      "source": "thuốc lá",
+      "target": "giờ học",
+      "type_source": "substance",
+      "type_target": "time",
+      "relation": "bị_cấm_trong"
     },
     {
-      "source": "Bổ sung hồ sơ thi học kỳ, thi acces",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "thuốc lá",
+      "target": "phòng họp",
+      "type_source": "substance",
+      "type_target": "location",
+      "relation": "bị_cấm_trong"
     },
     {
-      "source": "thi học kỳ",
-      "target": "Bổ sung hồ sơ thi học kỳ, thi acces",
-      "relation": "của",
-      "type_source": "exam_document",
-      "type_target": "document_type"
+      "source": "thuốc lá",
+      "target": "phòng thí nghiệm",
+      "type_source": "substance",
+      "type_target": "location",
+      "relation": "bị_cấm_trong"
     },
     {
-      "source": "thi acces",
-      "target": "Bổ sung hồ sơ thi học kỳ, thi acces",
-      "relation": "của",
-      "type_source": "exam_document",
-      "type_target": "document_type"
+      "source": "học sinh/sinh viên",
+      "target": "đánh bạc",
+      "type_source": "person",
+      "type_target": "violation",
+      "relation": "thực_hiện"
     },
     {
-      "source": "Bổ sung hồ sơ lý lịch cá nhân",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "sản phẩm văn hóa đồi trụy",
+      "type_source": "person",
+      "type_target": "prohibited_item",
+      "relation": "tàng_trữ"
     },
     {
-      "source": "lý lịch cá nhân",
-      "target": "Bổ sung hồ sơ lý lịch cá nhân",
-      "relation": "của",
-      "type_source": "personal_profile",
-      "type_target": "document_type"
+      "source": "học sinh/sinh viên",
+      "target": "hoạt động mê tín dị đoan",
+      "type_source": "person",
+      "type_target": "prohibited_activity",
+      "relation": "tham_gia"
     },
     {
-      "source": "Bổ sung hồ sơ nhận học bổng",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "hoạt động tôn giáo trái phép",
+      "type_source": "person",
+      "type_target": "prohibited_activity",
+      "relation": "tham_gia"
     },
     {
-      "source": "học bổng",
-      "target": "Bổ sung hồ sơ nhận học bổng",
-      "relation": "của",
-      "type_source": "scholarship_document",
-      "type_target": "document_type"
+      "source": "học sinh/sinh viên",
+      "target": "ma túy",
+      "type_source": "person",
+      "type_target": "prohibited_substance",
+      "relation": "buôn_bán"
     },
     {
-      "source": "Bổ sung hồ sơ giảm trừ gia cảnh",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "ma túy",
+      "type_source": "person",
+      "type_target": "prohibited_substance",
+      "relation": "sử_dụng"
     },
     {
-      "source": "giảm trừ gia cảnh",
-      "target": "Bổ sung hồ sơ giảm trừ gia cảnh",
-      "relation": "của",
-      "type_source": "family_deduction_document",
-      "type_target": "document_type"
+      "source": "học sinh/sinh viên",
+      "target": "mại dâm",
+      "type_source": "person",
+      "type_target": "prohibited_activity",
+      "relation": "môi_giới"
     },
     {
-      "source": "Bổ sung hồ sơ đi làm, đi thực tập",
-      "target": "giấy tờ",
-      "relation": "là_loại",
-      "type_source": "document_type",
-      "type_target": "document"
+      "source": "học sinh/sinh viên",
+      "target": "vũ khí",
+      "type_source": "person",
+      "type_target": "prohibited_item",
+      "relation": "buôn_bán"
     },
     {
-      "source": "đi làm",
-      "target": "Bổ sung hồ sơ đi làm, đi thực tập",
-      "relation": "của",
-      "type_source": "work_document",
-      "type_target": "document_type"
+      "source": "học sinh/sinh viên",
+      "target": "chất nổ",
+      "type_source": "person",
+      "type_target": "prohibited_item",
+      "relation": "buôn_bán"
     },
     {
-      "source": "đi thực tập",
-      "target": "Bổ sung hồ sơ đi làm, đi thực tập",
-      "relation": "của",
-      "type_source": "internship_document",
-      "type_target": "document_type"
+      "source": "học sinh/sinh viên",
+      "target": "hàng cấm",
+      "type_source": "person",
+      "type_target": "prohibited_item",
+      "relation": "buôn_bán"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "phần tử xấu",
+      "type_source": "person",
+      "type_target": "person",
+      "relation": "đưa_vào"
+    },
+    {
+      "source": "phần tử xấu",
+      "target": "KTX",
+      "type_source": "person",
+      "type_target": "location",
+      "relation": "được_đưa_vào"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "truyền đơn",
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "viết"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "áp phích",
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "viết"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "biểu tình",
+      "type_source": "person",
+      "type_target": "prohibited_activity",
+      "relation": "tham_gia"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "tụ tập đông người",
+      "type_source": "person",
+      "type_target": "prohibited_activity",
+      "relation": "tham_gia"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "khiếu kiện",
+      "type_source": "person",
+      "type_target": "activity",
+      "relation": "thực_hiện"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "mạng Internet",
+      "type_source": "person",
+      "type_target": "platform",
+      "relation": "sử_dụng"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "Đảng",
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "chống_phá"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "Nhà nước",
+      "type_source": "person",
+      "type_target": "organization",
+      "relation": "chống_phá" 
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "an ninh quốc gia",
+      "type_source": "person",
+      "type_target": "concept",
+      "relation": "xâm_phạm"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "an toàn giao thông",
+      "type_source": "person",
+      "type_target": "regulation",
+      "relation": "vi_phạm"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "hồ sơ",
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "sử_dụng"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "văn bằng",
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "sử_dụng"
+    },
+    {
+      "source": "học sinh/sinh viên",
+      "target": "chứng chỉ",
+      "type_source": "person",
+      "type_target": "document",
+      "relation": "sử_dụng"
+    },
+    {
+      "source": "nhà trường",
+      "target": "học sinh/sinh viên",
+      "type_source": "organization",
+      "type_target": "person",
+      "relation": "xem_xét"
     }
   ]
-}
-"""
+}"""
     ]
-    part = "các loại giấy tờ được xác nhận"
+
+    part = "một số nội dung vi phạm và khung xử lý kỷ luật sinh viên"
 
     add_entities_relationship(json_string, type_part, part)
     # for i in range(len(json_string)):
