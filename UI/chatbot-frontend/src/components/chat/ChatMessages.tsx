@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useMemo } from 'react';
+import React, { useRef, useEffect, useMemo, useState } from 'react';
 import type { Message } from '../../types/chat';
 import MessageItem from './MessageItem';
 import TypingIndicator from './TypingIndicator';
@@ -13,6 +13,7 @@ interface ChatMessagesProps {
 
 const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isTyping, isThinking = false, pendingMessage = null }) => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [previousMessageCount, setPreviousMessageCount] = useState(0);
 
   // Tạo danh sách tin nhắn bao gồm cả pending message
   const allMessages = useMemo(() => {
@@ -21,14 +22,38 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isTyping, isThink
       messageList.push(pendingMessage);
     }
     return messageList;
-  }, [messages, pendingMessage]);
+  }, [messages, pendingMessage]);  // Track message count changes to determine which messages should animate
+  useEffect(() => {
+    // Reset animation state when conversation changes completely
+    // This happens when messages array changes dramatically (different conversation)
+    if (messages.length === 0 || (previousMessageCount > 0 && previousMessageCount > messages.length)) {
+      setPreviousMessageCount(0);
+    }
+  }, [messages, previousMessageCount]); // Include previousMessageCount in dependencies
 
-  // Memoize message components để tránh re-render không cần thiết
+  // Memoize message components với animation logic
   const messageComponents = useMemo(() => {
-    return allMessages.map((message, index) => (
-      <MessageItem key={message.id} message={message} index={index} />
-    ));
-  }, [allMessages]);
+    return allMessages.map((message, index) => {
+      // Only animate new messages (those beyond the previous count)
+      // When switching conversations, previousMessageCount should be reset to 0
+      const shouldAnimate = index >= previousMessageCount && previousMessageCount > 0;
+      return (
+        <MessageItem 
+          key={message.id} 
+          message={message} 
+          index={index} 
+          shouldAnimate={shouldAnimate}
+        />
+      );
+    });
+  }, [allMessages, previousMessageCount]);
+
+  // Update previous count only when new messages are actually added
+  useEffect(() => {
+    if (allMessages.length > previousMessageCount) {
+      setPreviousMessageCount(allMessages.length);
+    }
+  }, [allMessages.length, previousMessageCount]);
 
   useEffect(() => {
     scrollToBottom();

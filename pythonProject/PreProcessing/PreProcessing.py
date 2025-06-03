@@ -1,5 +1,10 @@
 import json
-import py_vncorenlp
+try:
+    import py_vncorenlp
+    PY_VNCORENLP_AVAILABLE = True
+except ImportError:
+    PY_VNCORENLP_AVAILABLE = False
+    print("Warning: py_vncorenlp not available. Some functionality may be limited.")
 from dotenv import load_dotenv
 load_dotenv()
 import re
@@ -12,13 +17,15 @@ VnCoreNLP_INSTANCE = None
 
 def get_vncorenlp_instance():
     global VnCoreNLP_INSTANCE
+    if not PY_VNCORENLP_AVAILABLE:
+        return None
     if VnCoreNLP_INSTANCE is None:
         VnCoreNLP_INSTANCE = py_vncorenlp.VnCoreNLP(annotators=["wseg"], save_dir=save_dir)
     return VnCoreNLP_INSTANCE
 
 class PreProcessing:
     def __init__(self):
-        self.vncorenlp = get_vncorenlp_instance()
+        self.vncorenlp = get_vncorenlp_instance() if PY_VNCORENLP_AVAILABLE else None
 
 
     def string_to_json(self, text):
@@ -49,20 +56,27 @@ class PreProcessing:
         text = re.sub(r'[^\w\s\n]', '', text)
 
         # 5. Xóa khoảng trắng thừa
-        text = text.strip()
-
-        # 6. word segment
+        text = text.strip()        # 6. word segment
         try:
-            output = self.vncorenlp.word_segment(text)  # output là một list
-            output = output[0].split(' ')
-            # 7. Loại bỏ stop words trực tiếp từ list
-            filtered_words = [word for word in output if word not in stop_words]
+            if self.vncorenlp is not None:
+                output = self.vncorenlp.word_segment(text)  # output là một list
+                output = output[0].split(' ')
+                # 7. Loại bỏ stop words trực tiếp từ list
+                filtered_words = [word for word in output if word not in stop_words]
+                result_string = ' '.join(filtered_words)
+                return result_string
+            else:
+                # Fallback: simple word splitting when vncorenlp is not available
+                words = text.split()
+                filtered_words = [word for word in words if word not in stop_words]
+                result_string = ' '.join(filtered_words)
+                return result_string
+        except:
+            # Fallback on any error
+            words = text.split()
+            filtered_words = [word for word in words if word not in stop_words]
             result_string = ' '.join(filtered_words)
             return result_string
-        except:
-            output = ''
-
-        return text
 
     def normalize_unicode(self, text, form='NFC'):
         return unicodedata.normalize(form, text)

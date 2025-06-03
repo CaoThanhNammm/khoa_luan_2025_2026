@@ -173,7 +173,7 @@ class Qdrant:
       text_embedded_512 = self.model_512.embed(text)
       text_embedded_768 = self.model_768.embed(text)
       text_embedded_1024 = self.model_1024.embed(text)
-      embedded_late_interaction = self.model_late_interaction.embed(text).cpu().numpy()
+      embedded_late_interaction = self.model_late_interaction.embed(text)
 
       response =  self.client.query_points(
             collection_name= self.collection_name,

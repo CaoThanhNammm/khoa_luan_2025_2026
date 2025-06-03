@@ -32,12 +32,16 @@ function App() {
                   <Route path="login" element={<LoginPage />} />
                   <Route path="register" element={<RegisterPage />} />
                   <Route path="forgot-password" element={<ForgotPasswordPage />} />
-                  <Route path="reset-password" element={<ResetPasswordPage />} />
-                  <Route path="chat" element={
+                  <Route path="reset-password" element={<ResetPasswordPage />} />                  <Route path="chat" element={
                     <ProtectedRoute>
                       <ChatPage />
                     </ProtectedRoute>
-                  } />                  <Route path="profile" element={
+                  } />
+                  <Route path="chat/:conversationId" element={
+                    <ProtectedRoute>
+                      <ChatPage />
+                    </ProtectedRoute>
+                  } /><Route path="profile" element={
                     <ProtectedRoute>
                       <ProfilePage />
                     </ProtectedRoute>

@@ -38,6 +38,126 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
     if (diffHours < 24) return `${diffHours}h ago`;
     if (diffDays < 7) return `${diffDays}d ago`;
     return date.toLocaleDateString();
+  };  // Detect message type for better preview
+  const getMessageType = (content: string) => {
+    if (!content) return 'empty';
+    if (content.includes('```')) return 'code';
+    if (content.match(/^\*\s+/m)) return 'list';
+    if (content.match(/^\d+\.\s+/m)) return 'numbered';
+    if (content.match(/^\*\*[^*]+\*\*$/m)) return 'header';
+    return 'text';
+  };
+  // Get message type icon
+  const getMessageTypeIcon = (content: string) => {
+    const type = getMessageType(content);
+    switch (type) {
+      case 'code': return '💻';
+      case 'list': return '📝';
+      case 'numbered': return '🔢';
+      case 'header': return '📄';
+      default: return '💬';
+    }
+  };
+
+  // Get message type description for tooltip
+  const getMessageTypeDescription = (content: string) => {
+    const type = getMessageType(content);
+    switch (type) {
+      case 'code': return 'Contains code';
+      case 'list': return 'Bullet list';
+      case 'numbered': return 'Numbered list';
+      case 'header': return 'Header text';
+      default: return 'Text message';
+    }
+  };
+  // Format message preview similar to MessageItem
+  const formatMessagePreview = (content: string, maxLength: number = 80) => {
+    if (!content) return 'No message';
+    
+    // Remove code blocks for preview and replace with indicator
+    let cleanContent = content.replace(/```[\s\S]*?```/g, '[💻 Code]');
+    
+    // Remove bold formatting for preview but keep content
+    cleanContent = cleanContent.replace(/\*\*(.*?)\*\*/g, '$1');
+    
+    // Remove inline code formatting but keep content
+    cleanContent = cleanContent.replace(/`([^`]+)`/g, '$1');
+    
+    // Handle bullet points - convert to bullet symbol
+    cleanContent = cleanContent.replace(/^\*\s+([^\n]*)/gm, '• $1');
+    
+    // Handle numbered lists
+    cleanContent = cleanContent.replace(/^(\d+)\.\s*([^\n]*)/gm, '$1. $2');
+    
+    // Handle standalone bold lines (headers)
+    cleanContent = cleanContent.replace(/^\*\*([^*]+)\*\*$/gm, '▶ $1');
+    
+    // Clean up extra whitespace and newlines
+    cleanContent = cleanContent.replace(/\n\s*\n/g, ' ');
+    cleanContent = cleanContent.replace(/\s+/g, ' ').trim();
+    
+    // Truncate if too long
+    if (cleanContent.length > maxLength) {
+      return cleanContent.substring(0, maxLength) + '...';
+    }
+    
+    return cleanContent;
+  };
+  // Format inline text for preview (simplified version of MessageItem's formatInlineText)
+  const formatInlinePreview = (text: string) => {
+    // For very simple preview, just return the text with minimal formatting
+    if (!text || typeof text !== 'string') return text;
+    
+    // Handle special indicators
+    if (text.includes('[📝 Code]')) {
+      const parts = text.split(/(\[📝 Code\])/g);
+      return (
+        <>
+          {parts.map((part, idx) => {
+            if (part === '[📝 Code]') {
+              return (                <span key={idx} className="inline-flex items-center px-1.5 py-0.5 mx-0.5 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">
+                  💻 Code
+                </span>
+              );
+            }
+            return <span key={idx}>{part}</span>;
+          })}
+        </>
+      );
+    }
+      // Handle bullet points and other formatting
+    const parts = text.split(/(• [^\n]*|▶ [^\n]*|\d+\. [^\n]*)/g);
+    return (
+      <>
+        {parts.map((part, idx) => {          if (part.startsWith('• ')) {
+            return (
+              <span key={idx} className="flex items-start">
+                <span className="text-blue-500 dark:text-blue-400 mr-1 flex-shrink-0">•</span>
+                <span className="flex-1">{part.substring(2)}</span>
+              </span>
+            );
+          }
+          if (part.startsWith('▶ ')) {
+            return (
+              <span key={idx} className="font-semibold text-gray-800 dark:text-gray-200">
+                {part.substring(2)}
+              </span>
+            );
+          }
+          if (part.match(/^\d+\. /)) {
+            const match = part.match(/^(\d+)\. (.+)/);            if (match) {
+              return (
+                <span key={idx} className="flex items-start">
+                  <span className="text-blue-500 dark:text-blue-400 font-medium mr-1 flex-shrink-0">{match[1]}.</span>
+                  <span className="flex-1">{match[2]}</span>
+                </span>
+              );
+            }
+          }
+          return <span key={idx}>{part}</span>;
+        })}
+      </>
+    );
   };
 
   return (
@@ -72,11 +192,9 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
             <span>{t('chat.new_chat')}</span>
           </button>
         )}
-      </div>
-
-      {/* Chat Sessions List */}
+      </div>      {/* Chat Sessions List */}
       {isSidebarOpen && (
-        <div className="flex-1 overflow-y-auto p-3 space-y-2 hide-scrollbar custom-scrollbar bg-gray-50/30 dark:bg-slate-900/30">
+        <div className="flex-1 overflow-y-auto p-3 space-y-2 hide-scrollbar custom-scrollbar bg-gray-50/30 dark:bg-slate-900/30 sidebar-scrollbar">
           {chatSessions.length === 0 ? (
             <div className="text-center py-12 px-4">
               <BiMessage className="h-12 w-12 text-gray-400 dark:text-slate-500 mx-auto mb-3 opacity-50" />
@@ -99,31 +217,39 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
                 onClick={() => onSwitchToSession(session.id)}
               >
                 <div className="flex items-start justify-between">
-                  <div className="flex-1 min-w-0 pr-3">
-                    {/* Session Title */}
+                  <div className="flex-1 min-w-0 pr-3">                    {/* Session Title */}
                     <div className="flex items-center space-x-2 mb-2">
                       <div className={`h-2 w-2 rounded-full flex-shrink-0 ${
                         session.id === currentSessionId 
                           ? 'bg-blue-500 dark:bg-blue-400' 
                           : 'bg-gray-400 dark:bg-slate-500'
-                      }`}></div>
-                      <h3 className={`font-black text-sm truncate transition-colors duration-300 ${
+                      }`}></div>                      <span 
+                        className="text-xs opacity-70 message-type-icon"
+                        title={getMessageTypeDescription(session.lastMessage)}
+                      >
+                        {getMessageTypeIcon(session.lastMessage)}
+                      </span>
+                      <h3 className={`font-black text-sm truncate transition-colors duration-300 flex-1 ${
                         session.id === currentSessionId
                           ? 'text-indigo-800 dark:text-indigo-200'
                           : 'text-slate-900 dark:text-slate-100'
                       }`}>
                         {session.title || 'New Conversation'}
                       </h3>
-                    </div>
-                    
-                    {/* Last Message Preview */}
-                    <p className={`text-xs mb-3 line-clamp-2 leading-relaxed transition-colors duration-300 font-medium ${
+                    </div>                    {/* Last Message Preview */}
+                    <div className={`text-xs mb-3 leading-relaxed transition-colors duration-300 font-medium overflow-hidden sidebar-message-preview ${
                       session.id === currentSessionId
                         ? 'text-blue-800 dark:text-blue-100'
                         : 'text-gray-700 dark:text-gray-200'
-                    }`}>
-                      {session.lastMessage}
-                    </p>
+                    }`} style={{ 
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                      maxHeight: '2.5em',
+                      lineHeight: '1.25em'
+                    }}>
+                      {formatInlinePreview(formatMessagePreview(session.lastMessage))}
+                    </div>
                     
                     {/* Timestamp */}
                     <div className={`flex items-center space-x-1 text-xs transition-colors duration-300 ${

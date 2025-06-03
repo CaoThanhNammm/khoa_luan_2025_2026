@@ -7,9 +7,10 @@ import CodeBlock from './CodeBlock';
 interface MessageItemProps {
   message: Message;
   index: number;
+  shouldAnimate?: boolean; // Thêm prop để điều khiển animation
 }
 
-const                                                               MessageItem: React.FC<MessageItemProps> = memo(({ message, index }) => {
+const MessageItem: React.FC<MessageItemProps> = memo(({ message, index, shouldAnimate = true }) => {
   const [copied, setCopied] = useState(false);
   const [codeCopied, setCodeCopied] = useState<{ [key: number]: boolean }>({});
 
@@ -162,14 +163,13 @@ const formatMessage = (content: string) => {
   };
 
   const isUser = message.type === 'USER';
-
   return (
     <div
-      className={`flex items-start space-x-4 opacity-0 animate-fade-in group ${
-        isUser ? 'flex-row-reverse space-x-reverse' : ''
-      }`}
-      style={{ animationDelay: `${index * 0.1}s` }}
-    >      <div className={`h-10 w-10 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg ${
+      className={`flex items-start space-x-4 group ${
+        shouldAnimate ? 'opacity-0 animate-fade-in' : 'opacity-100'
+      } ${isUser ? 'flex-row-reverse space-x-reverse' : ''}`}
+      style={shouldAnimate ? { animationDelay: `${index * 0.1}s` } : {}}
+    ><div className={`h-10 w-10 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg ${
         isUser 
           ? 'bg-gradient-to-br from-charcoal via-gray-800 to-slate-900 shadow-charcoal/20 dark:from-blue-600 dark:via-blue-700 dark:to-blue-800'
           : 'bg-gradient-to-br from-lavender via-purple-200 to-sky-blue shadow-lavender/20 dark:from-slate-600 dark:via-slate-700 dark:to-slate-800'

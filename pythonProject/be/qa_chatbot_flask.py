@@ -4,10 +4,18 @@ from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import os
+import sys
 import logging
 from logging.handlers import RotatingFileHandler
 import google.generativeai as genai
 from werkzeug.exceptions import HTTPException
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# Add parent directory to Python path to import modules
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from Chat import Chat
 from LLM.Gemini import Gemini

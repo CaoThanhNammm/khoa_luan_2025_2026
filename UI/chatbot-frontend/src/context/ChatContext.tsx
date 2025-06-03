@@ -58,8 +58,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       return saved ? parseInt(saved, 10) : null;
     }
     return null;
-  }, [user]);
-  // Load all conversations for the current user
+  }, [user]);  // Load all conversations for the current user
   const loadConversations = useCallback(async () => {
     if (!user) return;
     
@@ -78,6 +77,15 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
           try {
             const fullConversation = await ChatService.getConversation(savedConversationId);
             setCurrentConversation(fullConversation);
+            
+            // Update URL to reflect restored conversation
+            const currentPath = window.location.pathname;
+            if (currentPath === '/chat' || currentPath.startsWith('/chat/')) {
+              const newPath = `/chat/${savedConversationId}`;
+              if (currentPath !== newPath) {
+                window.history.replaceState(null, '', newPath);
+              }
+            }
           } catch (err) {
             // If loading the specific conversation fails, just clear the saved ID
             console.warn('Failed to load saved conversation:', err);
@@ -86,6 +94,11 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
         } else {
           // Conversation no longer exists, clear the saved ID
           saveCurrentConversationId(null);
+          // If on a specific chat URL, redirect to base chat
+          const currentPath = window.location.pathname;
+          if (currentPath.startsWith('/chat/')) {
+            window.history.replaceState(null, '', '/chat');
+          }
         }
       }
       
@@ -97,7 +110,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  }, [user, getSavedConversationId, saveCurrentConversationId]);  // Create a new conversation
+  }, [user, getSavedConversationId, saveCurrentConversationId]);// Create a new conversation
   const createNewConversation = async (message: string): Promise<number | null> => {
     if (!user) return null;
     
