@@ -44,7 +44,40 @@ const ChatPage: React.FC = () => {
   const [loadingConversationId, setLoadingConversationId] = useState<number | null>(null);  // Ref để track navigation timeout
   const navigationTimeoutRef = useRef<number | null>(null);
   // Ref để track switch conversation debounce
-  const switchTimeoutRef = useRef<number | null>(null);
+  const switchTimeoutRef = useRef<number | null>(null);  // Ref để track conversation switch debounce
+  const conversationSwitchRef = useRef<number | null>(null);
+  const lastSwitchTimeRef = useRef<number>(0);
+  
+  // Throttled switch conversation to prevent duplicate API calls
+  const throttledSwitchToConversation = useCallback(async (id: number) => {
+    const now = Date.now();
+    
+    // Prevent switching too frequently (minimum 500ms between switches)
+    if (now - lastSwitchTimeRef.current < 500) {
+      return;
+    }
+    
+    lastSwitchTimeRef.current = now;
+    
+    // Clear any existing timeout
+    if (conversationSwitchRef.current) {
+      clearTimeout(conversationSwitchRef.current);
+    }
+    
+    // Set a small delay to debounce rapid switches
+    return new Promise<void>((resolve) => {
+      conversationSwitchRef.current = setTimeout(async () => {
+        try {
+          await switchToConversation(id);
+          resolve();
+        } catch (error) {
+          console.error('Error switching conversation:', error);
+          resolve();
+        }
+      }, 100);
+    });
+  }, [switchToConversation]);
+
   // Handle URL synchronization with current conversation
   useEffect(() => {
     // Nếu đang tạo session mới, không làm gì cả
@@ -62,11 +95,10 @@ const ChatPage: React.FC = () => {
         currentConversation?.id !== urlConversationId && 
         conversations.length > 0 &&
         loadingConversationId !== urlConversationId) {
-      
-      const targetConversation = conversations.find(conv => conv.id === urlConversationId);
+        const targetConversation = conversations.find(conv => conv.id === urlConversationId);
       if (targetConversation) {
         setLoadingConversationId(urlConversationId);
-        switchToConversation(urlConversationId).finally(() => {
+        throttledSwitchToConversation(urlConversationId).finally(() => {
           setLoadingConversationId(null);
         });
       } else {
@@ -89,7 +121,20 @@ const ChatPage: React.FC = () => {
       navigate(`/chat/${currentConversation.id}`, { replace: true });
       navigationTimeoutRef.current = setTimeout(() => setIsNavigating(false), 100);
     }
-  }, [urlConversationId, currentConversation, conversations, loading, switchToConversation, navigate, location.pathname, isCreatingNewSession, loadingConversationId, isNavigating]);  // Cleanup timeout on unmount
+  }, [
+    urlConversationId, 
+    currentConversation?.id, 
+    conversations, 
+    loading, 
+    isCreatingNewSession, 
+    loadingConversationId, 
+    isNavigating,
+    location.pathname,
+    throttledSwitchToConversation,
+    navigate,
+    currentConversation  ]);
+  
+  // Cleanup timeout on unmount
   useEffect(() => {
     return () => {
       if (navigationTimeoutRef.current) {
@@ -98,7 +143,11 @@ const ChatPage: React.FC = () => {
       if (switchTimeoutRef.current) {
         clearTimeout(switchTimeoutRef.current);
       }
-    };  }, []);
+      if (conversationSwitchRef.current) {
+        clearTimeout(conversationSwitchRef.current);
+      }
+    };
+  }, []);
   // Get messages from current conversation directly (no conversion needed)
   const messages = currentConversation?.messages || [];
   const currentSessionId = currentConversation?.id.toString() || '';
@@ -166,7 +215,7 @@ const ChatPage: React.FC = () => {
     setIsNavigating(true);
     
     try {
-      await switchToConversation(id);
+      await throttledSwitchToConversation(id);
       // Update URL to reflect selected conversation
       navigate(`/chat/${id}`, { replace: true });
     } catch (error) {
@@ -175,7 +224,7 @@ const ChatPage: React.FC = () => {
       setLoadingConversationId(null);
       switchTimeoutRef.current = setTimeout(() => setIsNavigating(false), 100);
     }
-  }, [currentConversation?.id, loadingConversationId, switchToConversation, navigate]);
+  }, [currentConversation?.id, loadingConversationId, throttledSwitchToConversation, navigate]);
   const handleDeleteSession = async (conversationId: string) => {
     const id = Number(conversationId);
     await deleteConversation(id);

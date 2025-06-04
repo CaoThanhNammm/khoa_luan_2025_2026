@@ -5,7 +5,7 @@ import Prism from 'prismjs';
 // Import CSS theme trước
 import 'prismjs/themes/prism-tomorrow.css';
 
-// Import các ngôn ngữ phổ biến
+// Import các ngôn ngữ phổ biến với thứ tự dependency đúng
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-java';
@@ -18,9 +18,50 @@ import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-c';
 import 'prismjs/components/prism-cpp';
 import 'prismjs/components/prism-csharp';
+// Import PHP dependencies first
+import 'prismjs/components/prism-markup-templating';
 import 'prismjs/components/prism-php';
 import 'prismjs/components/prism-go';
 import 'prismjs/components/prism-rust';
+
+// Safe highlighting function with better error handling
+const safeHighlight = (code: string, language: string): string => {
+  try {
+    const normalizedLang = language.toLowerCase();
+    const langMap: { [key: string]: string } = {
+      'js': 'javascript',
+      'ts': 'typescript',
+      'py': 'python',
+      'rb': 'ruby',
+      'sh': 'bash',
+      'shell': 'bash',
+      'yml': 'yaml',
+      'xml': 'markup',
+      'html': 'markup'
+    };
+
+    const prismLang = langMap[normalizedLang] || normalizedLang;
+
+    // Special handling for languages with dependencies
+    if (prismLang === 'php') {
+      if (!Prism.languages['markup-templating'] || !Prism.languages['php']) {
+        console.warn('PHP language dependencies not properly loaded, falling back to plain text');
+        return code; // Return plain text
+      }
+    }
+
+    // Check if language is supported
+    if (Prism.languages[prismLang]) {
+      return Prism.highlight(code, Prism.languages[prismLang], prismLang);
+    } else {
+      console.warn(`Language '${prismLang}' not supported by Prism, falling back to plain text`);
+      return code; // Return plain text
+    }
+  } catch (error) {
+    console.warn(`Prism highlighting failed for language '${language}':`, error);
+    return code; // Return plain text
+  }
+};
 
 interface CodeBlockProps {
   code: string;
@@ -39,38 +80,9 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
   onCopy,
   isAutoDetected = false
 }) => {
-  const [highlightedCode, setHighlightedCode] = useState('');
-
-  useEffect(() => {
-    // Normalize language name
-    const normalizedLang = language.toLowerCase();
-    const langMap: { [key: string]: string } = {
-      'js': 'javascript',
-      'ts': 'typescript',
-      'py': 'python',
-      'rb': 'ruby',
-      'sh': 'bash',
-      'shell': 'bash',
-      'yml': 'yaml',
-      'xml': 'markup',
-      'html': 'markup'
-    };
-
-    const prismLang = langMap[normalizedLang] || normalizedLang;
-
-    try {
-      // Kiểm tra xem ngôn ngữ có được hỗ trợ không
-      if (Prism.languages[prismLang]) {
-        const highlighted = Prism.highlight(code, Prism.languages[prismLang], prismLang);
-        setHighlightedCode(highlighted);
-      } else {
-        // Fallback to plain text if language not supported
-        setHighlightedCode(code);
-      }
-    } catch (error) {
-      console.warn('Prism highlighting failed:', error);
-      setHighlightedCode(code);
-    }
+  const [highlightedCode, setHighlightedCode] = useState('');  useEffect(() => {
+    const highlighted = safeHighlight(code, language);
+    setHighlightedCode(highlighted);
   }, [code, language]);
   return (
     <div className="my-4 w-full">
