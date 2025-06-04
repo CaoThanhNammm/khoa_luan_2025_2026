@@ -66,10 +66,9 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     try {
       const conversations = await ChatService.getConversations();
       setConversations(conversations);
-      
-      // Try to restore the previously selected conversation
+        // Try to restore the previously selected conversation
       const savedConversationId = getSavedConversationId();
-      if (savedConversationId) {
+      if (savedConversationId && !sessionStorage.getItem('newSessionIntent')) {
         // Find the conversation in the loaded conversations
         const savedConversation = conversations.find(conv => conv.id === savedConversationId);
         if (savedConversation) {
@@ -78,13 +77,11 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
             const fullConversation = await ChatService.getConversation(savedConversationId);
             setCurrentConversation(fullConversation);
             
-            // Update URL to reflect restored conversation
+            // Update URL to reflect restored conversation only if not in new session mode
             const currentPath = window.location.pathname;
-            if (currentPath === '/chat' || currentPath.startsWith('/chat/')) {
+            if (currentPath === '/chat' && !sessionStorage.getItem('newSessionIntent')) {
               const newPath = `/chat/${savedConversationId}`;
-              if (currentPath !== newPath) {
-                window.history.replaceState(null, '', newPath);
-              }
+              window.history.replaceState(null, '', newPath);
             }
           } catch (err) {
             // If loading the specific conversation fails, just clear the saved ID
@@ -96,7 +93,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
           saveCurrentConversationId(null);
           // If on a specific chat URL, redirect to base chat
           const currentPath = window.location.pathname;
-          if (currentPath.startsWith('/chat/')) {
+          if (currentPath.startsWith('/chat/') && !sessionStorage.getItem('newSessionIntent')) {
             window.history.replaceState(null, '', '/chat');
           }
         }

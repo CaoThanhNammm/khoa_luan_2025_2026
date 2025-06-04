@@ -9,11 +9,13 @@ interface ChatMessagesProps {
   isTyping: boolean;
   isThinking?: boolean; // Thêm prop để phân biệt giữa typing và thinking
   pendingMessage?: Message | null; // Thêm prop cho pending message
+  conversationId?: string; // Thêm để detect conversation change
 }
 
-const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isTyping, isThinking = false, pendingMessage = null }) => {
+const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isTyping, isThinking = false, pendingMessage = null, conversationId }) => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [previousMessageCount, setPreviousMessageCount] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Tạo danh sách tin nhắn bao gồm cả pending message
   const allMessages = useMemo(() => {
@@ -28,8 +30,21 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isTyping, isThink
     // This happens when messages array changes dramatically (different conversation)
     if (messages.length === 0 || (previousMessageCount > 0 && previousMessageCount > messages.length)) {
       setPreviousMessageCount(0);
+      setIsTransitioning(true);
+      // Reset transition after animation
+      const timeout = setTimeout(() => setIsTransitioning(false), 300);
+      return () => clearTimeout(timeout);
     }
-  }, [messages, previousMessageCount]); // Include previousMessageCount in dependencies
+  }, [messages.length, previousMessageCount]);
+
+  // Handle conversation changes
+  useEffect(() => {
+    if (conversationId) {
+      setIsTransitioning(true);
+      const timeout = setTimeout(() => setIsTransitioning(false), 300);
+      return () => clearTimeout(timeout);
+    }
+  }, [conversationId]);
 
   // Memoize message components với animation logic
   const messageComponents = useMemo(() => {
@@ -62,9 +77,10 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isTyping, isThink
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
-
   return (
-    <div className="flex-1 overflow-y-auto px-6 py-6 space-y-6 relative hide-scrollbar">
+    <div className={`flex-1 overflow-y-auto px-6 py-6 space-y-6 relative hide-scrollbar transition-opacity duration-300 ${
+      isTransitioning ? 'opacity-50' : 'opacity-100'
+    }`}>
       {messageComponents}
       
       {/* Show thinking indicator when waiting for API response */}

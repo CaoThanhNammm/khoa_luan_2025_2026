@@ -12,16 +12,18 @@ interface ChatSidebarProps {
   onCreateNewSession: () => void;
   onSwitchToSession: (sessionId: string) => void;
   onDeleteSession: (sessionId: string) => void;
+  loadingSessionId?: string | null;
 }
 
-const ChatSidebar: React.FC<ChatSidebarProps> = ({
+const ChatSidebar: React.FC<ChatSidebarProps> = React.memo(({
   isSidebarOpen,
   setIsSidebarOpen,
   chatSessions,
   currentSessionId,
   onCreateNewSession,
   onSwitchToSession,
-  onDeleteSession
+  onDeleteSession,
+  loadingSessionId
 }) => {
   const { settings } = useSettings();
   const { t } = useTranslation(settings.language);
@@ -205,19 +207,25 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
                 Start a new conversation to begin
               </p>
             </div>
-          ) : (
-            chatSessions.map((session) => (
+          ) : (            chatSessions.map((session) => (
               <div
                 key={session.id}
                 className={`group relative p-4 rounded-2xl cursor-pointer transition-all duration-200 border-2 hover:shadow-md dark:hover:shadow-lg ${
                   session.id === currentSessionId
                     ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-700/50 shadow-md shadow-blue-100/50 dark:shadow-blue-900/20'
                     : 'bg-white dark:bg-slate-800/80 border-gray-200/50 dark:border-slate-700/50 hover:bg-gray-50 dark:hover:bg-slate-700/80 hover:border-gray-300/70 dark:hover:border-slate-600/70 hover-lift'
-                }`}
+                } ${loadingSessionId === session.id ? 'opacity-60 pointer-events-none' : ''}`}
                 onClick={() => onSwitchToSession(session.id)}
               >
+                {/* Loading Overlay */}
+                {loadingSessionId === session.id && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-white/50 dark:bg-slate-800/50 rounded-2xl backdrop-blur-sm">
+                    <div className="w-5 h-5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
+                
                 <div className="flex items-start justify-between">
-                  <div className="flex-1 min-w-0 pr-3">                    {/* Session Title */}
+                  <div className="flex-1 min-w-0 pr-3">{/* Session Title */}
                     <div className="flex items-center space-x-2 mb-2">
                       <div className={`h-2 w-2 rounded-full flex-shrink-0 ${
                         session.id === currentSessionId 
@@ -294,8 +302,7 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
           >
             <BiPlus className="h-5 w-5 text-white group-hover:rotate-90 transition-transform duration-200" />
           </button>
-          
-          {/* Session Icons */}
+            {/* Session Icons */}
           {chatSessions.slice(0, 5).map((session, index) => (
             <button
               key={session.id}
@@ -304,9 +311,16 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
                 session.id === currentSessionId
                   ? 'bg-blue-50 dark:bg-blue-900/30 border-blue-200 dark:border-blue-700/50 shadow-md shadow-blue-100/50 dark:shadow-blue-900/20'
                   : 'bg-white dark:bg-slate-800/80 border-gray-200/50 dark:border-slate-700/50 hover:bg-gray-50 dark:hover:bg-slate-700/80 shadow-md hover:shadow-lg hover:border-gray-300/70 dark:hover:border-slate-600/70'
-              }`}
+              } ${loadingSessionId === session.id ? 'opacity-60 pointer-events-none' : ''}`}
               title={session.title}
             >
+              {/* Loading indicator for collapsed sidebar */}
+              {loadingSessionId === session.id && (
+                <div className="absolute inset-0 flex items-center justify-center bg-white/50 dark:bg-slate-800/50 rounded-xl backdrop-blur-sm">
+                  <div className="w-3 h-3 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
+              
               <BiChat className={`h-5 w-5 ${
                 session.id === currentSessionId
                   ? 'text-blue-600 dark:text-blue-300'
@@ -329,9 +343,8 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
             </div>
           )}
         </div>
-      )}
-    </div>
+      )}    </div>
   );
-};
+});
 
 export default ChatSidebar;
