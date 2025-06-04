@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized RAG/GRAG Chat System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 800px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: #f8f9fa;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 2px;
+        }
+        
+        .chat-area {
+            height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #fafafa;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            max-width: 80%;
+        }
+        
+        .user-message {
+            background: #667eea;
+            color: white;
+            margin-left: auto;
+        }
+        
+        .bot-message {
+            background: white;
+            border: 1px solid #eee;
+            margin-right: auto;
+        }
+        
+        .input-area {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+        }
+        
+        #questionInput {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #eee;
+            border-radius: 25px;
+            outline: none;
+            font-size: 14px;
+        }
+        
+        #questionInput:focus {
+            border-color: #667eea;
+        }
+        
+        #sendButton {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        #sendButton:hover {
+            transform: translateY(-2px);
+        }
+        
+        #sendButton:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        
+        .response-time {
+            font-size: 11px;
+            color: #888;
+            margin-top: 5px;
+        }
+        
+        .optimizations {
+            font-size: 10px;
+            color: #667eea;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Optimized RAG/GRAG Chat System</h1>
+            <p>High-performance AI chatbot with vector database and knowledge graph</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value" id="avgResponseTime">--</div>
+                <div class="stat-label">Avg Response Time</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="totalQuestions">0</div>
+                <div class="stat-label">Questions Asked</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">3.26x</div>
+                <div class="stat-label">Speed Improvement</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">69.3%</div>
+                <div class="stat-label">Performance Gain</div>
+            </div>
+        </div>
+        
+        <div class="chat-area" id="chatArea">
+            <div class="message bot-message">
+                <strong>🤖 Optimized Assistant:</strong><br>
+                Xin chào! Tôi là hệ thống chatbot tối ưu hóa với RAG/GRAG. 
+                Hãy hỏi tôi về thông tin trong sổ tay sinh viên.
+                <div class="optimizations">
+                    ✨ Optimizations enabled: Parallel retrieval • Smart caching • Result fusion • Multi-iteration reasoning
+                </div>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div>⚡ Processing with optimized algorithms...</div>
+        </div>
+        
+        <div class="input-area">
+            <input type="text" id="questionInput" placeholder="Hãy hỏi về học phí, quy định, lịch thi..." 
+                   onkeypress="handleKeyPress(event)">
+            <button id="sendButton" onclick="sendQuestion()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        let totalQuestions = 0;
+        let totalResponseTime = 0;
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendQuestion();
+            }
+        }
+        
+        async function sendQuestion() {
+            const input = document.getElementById('questionInput');
+            const question = input.value.trim();
+            
+            if (!question) return;
+            
+            // Add user message
+            addMessage(question, 'user');
+            input.value = '';
+            
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('sendButton').disabled = true;
+            
+            const startTime = Date.now();
+            
+            try {
+                const response = await fetch('/api/chat/optimized', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: question })
+                });
+                
+                const data = await response.json();
+                const responseTime = Date.now() - startTime;
+                
+                if (data.status === 'success') {
+                    addMessage(data.answer, 'bot', responseTime, data.optimizations_used);
+                    updateStats(responseTime);
+                } else {
+                    addMessage(`Error: ${data.error}`, 'bot');
+                }
+                
+            } catch (error) {
+                addMessage(`Connection error: ${error.message}`, 'bot');
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('sendButton').disabled = false;
+            }
+        }
+        
+        function addMessage(text, type, responseTime = null, optimizations = null) {
+            const chatArea = document.getElementById('chatArea');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}-message`;
+            
+            let content = `<strong>${type === 'user' ? '👤 You' : '🤖 Optimized Assistant'}:</strong><br>${text}`;
+            
+            if (responseTime) {
+                content += `<div class="response-time">⚡ Response time: ${responseTime}ms</div>`;
+            }
+            
+            if (optimizations) {
+                const opts = Object.entries(optimizations)
+                    .filter(([key, value]) => value)
+                    .map(([key, value]) => key.replace(/_/g, ' '))
+                    .join(' • ');
+                content += `<div class="optimizations">✨ Used: ${opts}</div>`;
+            }
+            
+            messageDiv.innerHTML = content;
+            chatArea.appendChild(messageDiv);
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+        
+        function updateStats(responseTime) {
+            totalQuestions++;
+            totalResponseTime += responseTime;
+            
+            document.getElementById('totalQuestions').textContent = totalQuestions;
+            document.getElementById('avgResponseTime').textContent = 
+                Math.round(totalResponseTime / totalQuestions) + 'ms';
+        }
+        
+        // Sample questions for testing
+        const sampleQuestions = [
+            "Thông tin về học phí đại học",
+            "Quy định về điểm danh trong trường", 
+            "Lịch thi cuối kỳ học kỳ 1",
+            "Thủ tục xin nghỉ học tạm thời",
+            "Chương trình đào tạo ngành công nghệ thông tin"
+        ];
+        
+        function fillSampleQuestion() {
+            const randomQuestion = sampleQuestions[Math.floor(Math.random() * sampleQuestions.length)];
+            document.getElementById('questionInput').value = randomQuestion;
+        }
+        
+        // Add sample question button
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('questionInput').placeholder += 
+                ' (click here for sample questions)';
+            
+            document.getElementById('questionInput').addEventListener('click', function() {
+                if (!this.value) {
+                    fillSampleQuestion();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

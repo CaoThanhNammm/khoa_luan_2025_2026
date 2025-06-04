@@ -21,6 +21,22 @@ from Chat import Chat
 from LLM.Gemini import Gemini
 from PreProcessing.PreProcessing import PreProcessing
 
+# Import optimized components
+try:
+    from optimization.OptimizedChat import OptimizedChat, RetrievalConfig
+    from optimization.config import load_config_from_env, get_config
+    from optimization.monitoring import start_monitoring, get_dashboard_data
+    OPTIMIZATION_AVAILABLE = True
+    
+    # Load optimization config
+    load_config_from_env()
+    optimization_config = get_config()
+    
+except ImportError as e:
+    app.logger.warning(f"Optimization modules not available: {e}")
+    OPTIMIZATION_AVAILABLE = False
+    optimization_config = None
+
 app = Flask(__name__)
 
 # Cấu hình CORS (cho phép frontend từ các domain cụ thể)
@@ -68,6 +84,29 @@ try:
     gemini_commentor = Gemini(model_name_15_flash, api_key_commentor)
     pre_processing = PreProcessing()
     chat = Chat(t, gemini_agent, gemini_generator, gemini_valid, gemini_commentor, pre_processing)
+    
+    # Initialize optimized chat system if available
+    optimized_chat = None
+    if OPTIMIZATION_AVAILABLE:
+        try:
+            app.logger.info("Initializing optimized chat system...")
+            retrieval_config = RetrievalConfig(
+                max_vector_results=optimization_config.max_vector_results,
+                max_graph_results=optimization_config.max_graph_results,
+                enable_cache=optimization_config.enable_global_cache,
+                cache_ttl=optimization_config.cache_ttl_seconds,
+                fusion_weights=optimization_config.fusion_weights
+            )
+            optimized_chat = OptimizedChat(config=retrieval_config)
+            
+            # Start monitoring
+            start_monitoring(optimized_chat)
+            
+            app.logger.info("Optimized chat system initialized successfully!")
+        except Exception as opt_e:
+            app.logger.error(f"Failed to initialize optimized chat: {opt_e}")
+            optimized_chat = None
+    
 except Exception as e:
     app.logger.error(f"Failed to configure Gemini API: {str(e)}")
     raise Exception("Gemini API configuration failed")
