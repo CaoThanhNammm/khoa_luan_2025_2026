@@ -1,17 +1,15 @@
 from qdrant_client.models import PointStruct
 from dotenv import load_dotenv
-from PreProcessing.PreProcessing import PreProcessing
 load_dotenv()
 from langchain_nvidia_ai_endpoints import NVIDIARerank
 from langchain_core.documents import Document
 from qdrant_client import models
-import os
-import pdfplumber
 from qdrant_client import QdrantClient
+import os
+
 
 class Qdrant:
     def __init__(self, host, api, model_1024, model_768, model_512, model_late_interaction, collection_name, pre_processing):
-        # self.client = QdrantClient(host=host, port=port)
         self.client = QdrantClient(
             url=host,
             api_key=api,
@@ -73,55 +71,18 @@ class Qdrant:
         print("create collection success")
         return self.client
 
-    # đọc tất cả file pdf trong thư mục {data_path}. Mỗi lần đọc 3 trang
-    # trả về danh sách các nội dung bao gồm của 3 trang được ghép thành 1
-    def read_chunks(self, data_path, footer_height=40):
-        all_pages_text = []
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        data_path = os.path.join(script_dir, data_path)
-
-        pdf_files = [f for f in os.listdir(data_path) if f.lower().endswith('.pdf')]
-
-        for pdf_file in pdf_files:
-            pdf_path = os.path.join(data_path, pdf_file)
-
-            try:
-                with pdfplumber.open(pdf_path) as pdf:
-                    num_pages = len(pdf.pages)
-                    start_page = 10
-                    end_page = num_pages - 2
-
-                    # Duyệt qua các trang theo nhóm 3
-                    for i in range(start_page, end_page + 1, 3):
-                        group_text = []
-                        group_pages = []
-
-                        # Lấy tối đa 3 trang liên tiếp
-                        for j in range(i, min(i + 3, end_page + 1)):
-                            page = pdf.pages[j]
-                            page_height = page.height
-
-                            # Chỉ cắt bỏ footer
-                            cropped_page = page.within_bbox(
-                                (0, 0, page.width, page_height - footer_height)
-                            )
-                            text = cropped_page.extract_text()
-                            if text:
-                                group_text.append(text)
-                                group_pages.append(j + 1)  # Số trang người dùng thấy (bắt đầu từ 1)
-
-                        if group_text:  # Chỉ thêm nếu có text
-                            all_pages_text.append('\n'.join(group_text))
-            except Exception as e:
-                print(f"Lỗi khi xử lý file {pdf_file}: {str(e)}")
-
-        return all_pages_text
+    def delete_collection(self, collection_name):
+        if self.client.collection_exists(collection_name=collection_name):
+            self.client.delete_collection(collection_name=collection_name)
+            print(f"Collection '{collection_name}' has been deleted.")
+        else:
+            print(f"Collection '{collection_name}' does not exist.")
 
     def create_embedding(self, chunks):
         points = []
         batch_size = 20
 
-        # Sử dụng enumerate thay vì range(len())
+
         for chunk_id, chunk_text in enumerate(chunks, 1):
             chunk_text_pre_processing = self.pre_processing.text_preprocessing_vietnamese(chunk_text)
             print(chunk_text)
@@ -214,3 +175,5 @@ class Qdrant:
             documents=[Document(page_content=passage) for passage in passages]
         )
         return response
+
+

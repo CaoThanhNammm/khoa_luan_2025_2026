@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from LLM import prompt
 from LLM.Gemini import Gemini
+from PreProcessing.PreProcessing import PreProcessing
+
 load_dotenv()
 from ModelLLM.EmbeddingFactory import EmbeddingFactory
 from VectorDatabase.Qdrant import Qdrant
@@ -29,13 +31,14 @@ if __name__ == "__main__":
     distance = os.getenv("DISTANCE")
     host = os.getenv("HOST_QDRANT")
     api = os.getenv("API_KEY_QDRANT")
-    qdrant = Qdrant(host, api, None, None, None, None, collection_name)
+    pre_processing = PreProcessing()
+    qdrant = Qdrant(host, api, None, None, None, None, collection_name, pre_processing, 'meta/llama-3.1-405b-instruct')
 
     # 4. tạo collection, nếu có rồi thì không tạo nữa
     qdrant.create_collection(collection_name, size, distance)
 
     # 5. lấy ra chunks trong tất cả các doc
-    data_path = os.getenv("DATA_PATH")
+    data_path = "../data"
     chunks = qdrant.read_chunks(data_path)
 
     chunkings = [
@@ -544,9 +547,12 @@ if __name__ == "__main__":
 
     # 7. tạo embedding và lưu vào csdl
 
-    # chunkings_add_summary = pd.read_csv(r"D:\PycharmProjects\pythonProject\qdrant_dataset.csv")
-    # chunkings_add_summary = chunkings_add_summary.to_numpy()
+    chunkings_add_summary = pd.read_csv(r"D:\PycharmProjects\pythonProject\qdrant_dataset.csv")
+    chunkings_add_summary = chunkings_add_summary.to_numpy()
     # qdrant.create_embedding(chunkings_add_summary[:, 0])
+    print(chunkings_add_summary[:, 0])
+
+
 
 
 

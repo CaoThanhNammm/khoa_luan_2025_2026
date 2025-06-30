@@ -1,3 +1,4 @@
+import ast
 import json
 import py_vncorenlp
 from dotenv import load_dotenv
@@ -25,7 +26,7 @@ class PreProcessing:
         removed_special = text.replace("```", "").replace("json", "")
         removed_special = removed_special.strip()
 
-        return json.loads(removed_special)
+        return ast.literal_eval(removed_special)
 
     def text_preprocessing_vietnamese(self, text):
         root_dir = os.path.dirname(os.path.abspath(__file__))  # Thư mục chứa file Python hiện tại

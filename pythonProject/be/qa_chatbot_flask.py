@@ -108,9 +108,9 @@ def gemini_endpoint():
 
         # Kết hợp prompt và question
         question = f"Câu hỏi: {question}"
-
+        chat.set_question(question)
         # Gọi Gemini API
-        answer = chat.answer_s2s(question)
+        answer = chat.answer_s2s()
 
         # Trả về kết quả
         app.logger.info("Request processed successfully")
