@@ -16,4 +16,6 @@ public class ConversationDto {
     private String title;
     private LocalDateTime createdAt;
     private List<MessageDto> messages = new ArrayList<>();
+    private Boolean hasDocument = false;
+    private DocumentDto documentInfo;
 }

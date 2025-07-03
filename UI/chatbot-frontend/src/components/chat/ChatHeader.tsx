@@ -1,13 +1,16 @@
 import React from 'react';
-import { BiBot } from 'react-icons/bi';
+import { BiBot, BiFile } from 'react-icons/bi';
 import { useSettings } from '../../context/SettingsContext';
 import { useTranslation, formatDate, formatMonthDay } from '../../utils/translations';
+import type { DocumentInfo } from '../../types/chat';
 
 interface ChatHeaderProps {
   isTyping: boolean;
+  hasDocument?: boolean;
+  documentInfo?: DocumentInfo;
 }
 
-const ChatHeader: React.FC<ChatHeaderProps> = ({ isTyping }) => {
+const ChatHeader: React.FC<ChatHeaderProps> = ({ isTyping, hasDocument = false, documentInfo }) => {
   const { settings } = useSettings();
   const { t } = useTranslation(settings.language);
 
@@ -27,10 +30,23 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ isTyping }) => {
             <h1 className="font-heading text-2xl font-bold text-charcoal dark:text-slate-100 tracking-wide transition-colors duration-300">
               {t('chat.title')}
             </h1>
-            <p className="text-sm text-gray-600 dark:text-slate-300 flex items-center space-x-2 font-medium transition-colors duration-300">
-              <span className="h-2 w-2 bg-emerald-500 dark:bg-emerald-400 rounded-full animate-pulse shadow-sm"></span>
-              <span>{isTyping ? t('chat.thinking') : t('chat.ready')}</span>
-            </p>
+            <div className="flex items-center space-x-4">
+              <p className="text-sm text-gray-600 dark:text-slate-300 flex items-center space-x-2 font-medium transition-colors duration-300">
+                <span className="h-2 w-2 bg-emerald-500 dark:bg-emerald-400 rounded-full animate-pulse shadow-sm"></span>
+                <span>{isTyping ? t('chat.thinking') : t('chat.ready')}</span>
+              </p>
+              {hasDocument && documentInfo && (
+                <div className="flex items-center space-x-2 px-3 py-1 bg-green-100 dark:bg-green-900/30 rounded-full border border-green-200 dark:border-green-700/50">
+                  <BiFile className="h-3 w-3 text-green-600 dark:text-green-400" />
+                  <span className="text-xs font-medium text-green-700 dark:text-green-300 truncate max-w-32" title={documentInfo.filename}>
+                    {documentInfo.filename}
+                  </span>
+                  <span className="text-xs text-green-600 dark:text-green-400 font-semibold">
+                    PDF
+                  </span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
         <div className="text-right">

@@ -11,7 +11,16 @@ export function adaptConversationToSession(conversation: ConversationResponse): 
     id: conversation.id,
     title: conversation.title,
     createdAt: conversation.createdAt,
-    messages: conversation.messages.map(adaptMessageToFrontend)
+    messages: conversation.messages.map(adaptMessageToFrontend),
+    hasDocument: conversation.hasDocument || false,
+    documentInfo: conversation.documentInfo ? {
+      documentId: conversation.documentInfo.documentId,
+      filename: conversation.documentInfo.filename,
+      fileSize: conversation.documentInfo.fileSize,
+      sentencesCount: conversation.documentInfo.sentencesCount,
+      uploadDate: conversation.documentInfo.uploadDate,
+      status: conversation.documentInfo.status
+    } : undefined
   };
 }
 

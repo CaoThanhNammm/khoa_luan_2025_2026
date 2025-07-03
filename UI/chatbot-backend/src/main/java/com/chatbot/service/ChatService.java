@@ -1,6 +1,7 @@
 package com.chatbot.service;
 
 import com.chatbot.dto.ConversationDto;
+import com.chatbot.dto.DocumentDto;
 import com.chatbot.dto.MessageDto;
 import com.chatbot.model.Conversation;
 import com.chatbot.model.Message;
@@ -38,6 +39,9 @@ public class ChatService {
 
     @Autowired
     private UserService userService;
+    
+    @Autowired
+    private UserDocumentService userDocumentService;
 
     @Value("${gemini.api.url}")
     private String geminiApiUrl;
@@ -52,7 +56,9 @@ public class ChatService {
     private final ObjectMapper objectMapper;
 
     public ChatService() {
-        this.webClient = WebClient.builder().build();
+        this.webClient = WebClient.builder()
+                .codecs(configurer -> configurer.defaultCodecs().maxInMemorySize(1024 * 1024))
+                .build();
         this.objectMapper = new ObjectMapper();
     }
 
@@ -123,8 +129,8 @@ public class ChatService {
         userMessageEntity.setConversation(conversation);
         userMessageEntity = messageRepository.save(userMessageEntity);
         
-        // Get bot response from external API
-        String botResponse = getChatbotResponse(userMessage);
+        // Get bot response from external API with conversation context
+        String botResponse = getChatbotResponseWithDocument(userMessage, conversationId, userId);
         
         // Add bot response
         Message botMessageEntity = new Message();
@@ -152,45 +158,47 @@ public class ChatService {
     }
       private String getChatbotResponse(String userMessage) {
         try {
-            logger.info("Preparing request to Python Flask API for message: {}", userMessage);
+            logger.info("Preparing request to Python API for message: {}", userMessage);
             
-            // Create request payload for Python Flask API
+            // Create request payload for Python API
             Map<String, String> requestBody = new HashMap<>();
             requestBody.put("question", userMessage);
             
             // For debugging - log the request
-            logger.info("Sending request to Python Flask API: {}", objectMapper.writeValueAsString(requestBody));
+            logger.info("Sending request to Python API: {}", objectMapper.writeValueAsString(requestBody));
             
             try {
-                // Call Python Flask API
+                // Call Python API endpoint /api/chat-default
+                String apiEndpoint = pythonApiUrl + "/api/chat-default";
                 String response = webClient.post()
-                        .uri(pythonApiUrl)
+                        .uri(apiEndpoint)
                         .contentType(MediaType.APPLICATION_JSON)
+                        .header("ngrok-skip-browser-warning", "true")
                         .bodyValue(requestBody)
                         .retrieve()
                         .bodyToMono(String.class)
-                        .doOnNext(resp -> logger.info("Received response from Python Flask API: {}", resp))
+                        .doOnNext(resp -> logger.info("Received response from Python API: {}", resp))
                         .flatMap(rawResponse -> {
                             try {
                                 // Parse the JSON response
                                 JsonNode rootNode = objectMapper.readTree(rawResponse);
                                 
-                                // Navigate the response structure for Python Flask API
-                                if (rootNode.has("response") && rootNode.has("status") && 
-                                    "success".equals(rootNode.get("status").asText())) {
-                                    String responseText = rootNode.get("response").asText();
+                                // Navigate the response structure for Python API
+                                if (rootNode.has("data") && rootNode.has("message") && 
+                                    "Process answer successfully".equals(rootNode.get("message").asText())) {
+                                    String responseText = rootNode.get("data").asText();
                                     return Mono.just(responseText);
                                 }
                                 
-                                logger.warn("Could not parse Python Flask API response: {}", rawResponse);
+                                logger.warn("Could not parse Python API response: {}", rawResponse);
                                 return Mono.just(fallbackToGeminiApi(userMessage));
                             } catch (Exception e) {
-                                logger.error("Error parsing Python Flask API response", e);
+                                logger.error("Error parsing Python API response", e);
                                 return Mono.just(fallbackToGeminiApi(userMessage));
                             }
                         })
                         .onErrorResume(e -> {
-                            logger.error("Error calling Python Flask API: {}", e.getMessage());
+                            logger.error("Error calling Python API: {}", e.getMessage());
                             return Mono.just(fallbackToGeminiApi(userMessage));
                         })
                         .block();
@@ -203,6 +211,89 @@ public class ChatService {
         } catch (Exception e) {
             logger.error("Exception in getChatbotResponse", e);
             return getSimulatedResponse(userMessage);
+        }
+    }
+    
+    /**
+     * Get chatbot response with document context from conversation
+     */
+    private String getChatbotResponseWithDocument(String userMessage, Long conversationId, Long userId) {
+        try {
+            logger.info("Preparing request to Python API for message: {} with conversation: {}", userMessage, conversationId);
+            
+            // Get document_id from user_documents table based on conversation_id
+            List<com.chatbot.model.UserDocument> documents = userDocumentService.getDocumentsByConversation(userId, conversationId);
+            
+            // Create request payload for Python API
+            Map<String, Object> requestBody = new HashMap<>();
+            requestBody.put("question", userMessage);
+            
+            // If documents exist for this conversation, use the first one
+            if (!documents.isEmpty()) {
+                String documentId = documents.get(0).getDocumentId();
+                requestBody.put("document_id", documentId);
+                logger.info("Using document_id: {} for conversation: {}", documentId, conversationId);
+                
+                // Call Python API endpoint /api/chat (with document context)
+                return callPythonApiWithDocument(requestBody, userMessage);
+            } else {
+                logger.info("No documents found for conversation: {}, using default endpoint", conversationId);
+                // Fall back to default chat if no documents
+                return getChatbotResponse(userMessage);
+            }
+        } catch (Exception e) {
+            logger.error("Exception in getChatbotResponseWithDocument", e);
+            return getSimulatedResponse(userMessage);
+        }
+    }
+    
+    /**
+     * Call Python API with document context
+     */
+    private String callPythonApiWithDocument(Map<String, Object> requestBody, String userMessage) {
+        try {
+            // For debugging - log the request
+            logger.info("Sending request to Python API: {}", objectMapper.writeValueAsString(requestBody));
+            
+            // Call Python API endpoint /api/chat (with document context)
+            String apiEndpoint = pythonApiUrl + "/api/chat";
+            String response = webClient.post()
+                    .uri(apiEndpoint)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .header("ngrok-skip-browser-warning", "true")
+                    .bodyValue(requestBody)
+                    .retrieve()
+                    .bodyToMono(String.class)
+                    .doOnNext(resp -> logger.info("Received response from Python API: {}", resp))
+                    .flatMap(rawResponse -> {
+                        try {
+                            // Parse the JSON response
+                            JsonNode rootNode = objectMapper.readTree(rawResponse);
+                            
+                            // Navigate the response structure for Python API
+                            if (rootNode.has("data") && rootNode.has("message") && 
+                                "Process answer successfully".equals(rootNode.get("message").asText())) {
+                                String responseText = rootNode.get("data").asText();
+                                return Mono.just(responseText);
+                            }
+                            
+                            logger.warn("Could not parse Python API response: {}", rawResponse);
+                            return Mono.just(fallbackToGeminiApi(userMessage));
+                        } catch (Exception e) {
+                            logger.error("Error parsing Python API response", e);
+                            return Mono.just(fallbackToGeminiApi(userMessage));
+                        }
+                    })
+                    .onErrorResume(e -> {
+                        logger.error("Error calling Python API: {}", e.getMessage());
+                        return Mono.just(fallbackToGeminiApi(userMessage));
+                    })
+                    .block();
+                    
+            return response != null ? response : getSimulatedResponse(userMessage);
+        } catch (Exception e) {
+            logger.error("Exception in Python Flask API call: {}", e.getMessage());
+            return fallbackToGeminiApi(userMessage);
         }
     }
     
@@ -342,6 +433,31 @@ public class ChatService {
         dto.setMessages(messages.stream()
                 .map(this::convertToMessageDto)
                 .collect(Collectors.toList()));
+        
+        // Check if this conversation has any documents
+        try {
+            List<com.chatbot.model.UserDocument> documents = userDocumentService.getDocumentsByConversation(
+                conversation.getUser().getId(), conversation.getId());
+            
+            if (!documents.isEmpty()) {
+                dto.setHasDocument(true);
+                // Use the first document if multiple exist
+                com.chatbot.model.UserDocument document = documents.get(0);
+                DocumentDto documentDto = new DocumentDto();
+                documentDto.setDocumentId(document.getDocumentId());
+                documentDto.setFilename(document.getFilename());
+                documentDto.setFileSize(document.getFileSize());
+                documentDto.setSentencesCount(document.getSentencesCount());
+                documentDto.setUploadDate(document.getUploadDate());
+                documentDto.setStatus(document.getStatus());
+                dto.setDocumentInfo(documentDto);
+            } else {
+                dto.setHasDocument(false);
+            }
+        } catch (Exception e) {
+            logger.warn("Error checking documents for conversation {}: {}", conversation.getId(), e.getMessage());
+            dto.setHasDocument(false);
+        }
                 
         return dto;
     }
