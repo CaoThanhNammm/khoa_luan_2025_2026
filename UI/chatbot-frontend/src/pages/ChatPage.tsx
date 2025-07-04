@@ -41,11 +41,22 @@ const ChatPage: React.FC = () => {
     } catch (error) {
       console.error('Error sending message:', error);
     }
-  };  const handleCreateNewSession = async () => {
+  };  const handleCreateNewSession = async (type: 'default' | 'upload') => {
     // Clear the current conversation to start fresh
-    // The actual new conversation will be created when sending the first message
     chatContext.clearError(); // Clear any existing errors
     chatContext.clearCurrentConversation(); // Clear the current conversation
+    
+    // If it's a default session, create a new conversation with default document
+    if (type === 'default') {
+      try {
+        // Create a new conversation with the default document
+        const defaultMessage = "Xin chào, tôi muốn tìm hiểu về thông tin trong sổ tay sinh viên.";
+        await chatContext.createNewConversationWithDocument(defaultMessage, 'so-tay-sinh-vien-2024');
+      } catch (error) {
+        console.error('Error creating default session:', error);
+      }
+    }
+    // For upload type, just clear the conversation - user will need to upload a file
   };
 
   const handleSwitchToSession = async (conversationId: string) => {
@@ -57,6 +68,16 @@ const ChatPage: React.FC = () => {
   };
 
   const handleFileUpload = async (file: File) => {
+    // Validate file size (10MB = 10 * 1024 * 1024 bytes)
+    const maxFileSize = 10 * 1024 * 1024;
+    if (file.size > maxFileSize) {
+      showNotification(
+        `File size exceeds 10MB limit. Current size: ${(file.size / (1024 * 1024)).toFixed(2)}MB`,
+        'error'
+      );
+      return;
+    }
+
     setIsUploading(true);
     
     try {
@@ -66,27 +87,41 @@ const ChatPage: React.FC = () => {
       
       const response = await FileUploadService.uploadFile(file, conversationId);
       
-      if (response.filename) {
-        showNotification(
-          `File "${response.filename}" uploaded successfully! Document ID: ${response.document_id}${conversationId ? ` linked to conversation ${conversationId}` : ''}`,
-          'success'
-        );
+      // Check if upload was successful or is processing
+      if (response && (response.document_id || response.filename || response.message)) {
+        const filename = response.filename || file.name;
+        const documentId = response.document_id || 'unknown';
+        const status = response.status || 'success';
+        
+        if (status === 'processing') {
+          showNotification(
+            `File "${filename}" uploaded and is being processed. You can start chatting while processing continues in the background.`,
+            'info'
+          );
+        } else {
+          showNotification(
+            `File "${filename}" uploaded successfully! Document ID: ${documentId}${conversationId ? ` linked to conversation ${conversationId}` : ''}`,
+            'success'
+          );
+        }
+        
+        // Create appropriate message based on processing status
+        const chatMessage = status === 'processing' 
+          ? `I've uploaded a PDF file: ${filename}. The file is currently being processed. Please help me analyze this document once processing is complete.`
+          : `I've uploaded a PDF file: ${filename}. Please help me analyze this document.`;
         
         // If no current conversation, create a new one with the uploaded file info
         if (!chatContext.currentConversation) {
-          await chatContext.createNewConversation(`I've uploaded a PDF file: ${response.filename}. Please help me analyze this document.`);
+          await chatContext.createNewConversation(chatMessage);
         } else {
           // If there's a current conversation, send a message about the uploaded file
-          await chatContext.sendMessage(
-            chatContext.currentConversation.id, 
-            `I've uploaded a PDF file: ${response.filename}. Please help me analyze this document.`
-          );
+          await chatContext.sendMessage(chatContext.currentConversation.id, chatMessage);
         }
         
         // Reload conversations to get updated document information
         await chatContext.loadConversations();
       } else {
-        throw new Error(response.message || 'Upload failed');
+        throw new Error('Upload failed - no response data received');
       }
     } catch (error) {
       console.error('File upload failed:', error);
@@ -101,14 +136,15 @@ const ChatPage: React.FC = () => {
 
   if (!user) {
     return null; // Will redirect in useEffect
-  }// Convert conversations to SidebarChatSession format for sidebar
+  }  // Convert conversations to SidebarChatSession format for sidebar
   const chatSessions: SidebarChatSession[] = chatContext.conversations.map((conv: ChatSession) => ({
     id: conv.id.toString(),
     title: conv.title,
     lastMessage: conv.messages.length > 0 ? conv.messages[conv.messages.length - 1].content : 'No messages yet',
     timestamp: new Date(conv.createdAt),
     hasDocument: conv.hasDocument || false,
-    documentFilename: conv.documentInfo?.filename
+    documentFilename: conv.documentInfo?.filename,
+    documentType: conv.documentInfo?.documentId === 'so-tay-sinh-vien-2024' ? 'default' : 'upload'
   }));
 
   const currentSessionId = chatContext.currentConversation?.id.toString() || '';
@@ -142,6 +178,26 @@ const ChatPage: React.FC = () => {
         hasDocument={chatContext.currentConversation?.hasDocument || false}
         documentInfo={chatContext.currentConversation?.documentInfo}
       />
+
+      {/* File Upload Loading Overlay */}
+      {isUploading && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-2xl border border-gray-200 dark:border-slate-700 max-w-sm w-full mx-4">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                Processing File...
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                Your file is being uploaded and processed by our AI system. This may take several minutes for large files.
+              </p>
+              <div className="mt-4 text-xs text-gray-500 dark:text-gray-400">
+                Please do not close this window or navigate away.
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Enhanced Error Display */}
       {chatContext.error && (

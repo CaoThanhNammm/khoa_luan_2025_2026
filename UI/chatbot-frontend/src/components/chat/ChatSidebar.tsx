@@ -9,7 +9,7 @@ interface ChatSidebarProps {
   setIsSidebarOpen: (open: boolean) => void;
   chatSessions: SidebarChatSession[];
   currentSessionId: string;
-  onCreateNewSession: () => void;
+  onCreateNewSession: (type: 'default' | 'upload') => void;
   onSwitchToSession: (sessionId: string) => void;
   onDeleteSession: (sessionId: string) => void;
 }
@@ -64,13 +64,22 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
         </div>
         
         {isSidebarOpen && (
-          <button
-            onClick={onCreateNewSession}
-            className="w-full mt-4 flex items-center justify-center space-x-2 p-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-2xl hover:shadow-lg transition-all duration-200 font-semibold hover-lift group"
-          >
-            <BiPlus className="h-5 w-5 group-hover:rotate-90 transition-transform duration-200" />
-            <span>{t('chat.new_chat')}</span>
-          </button>
+          <div className="mt-4 space-y-3">
+            <button
+              onClick={() => onCreateNewSession('default')}
+              className="w-full flex items-center justify-center space-x-2 p-3.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-2xl hover:shadow-lg transition-all duration-200 font-semibold hover-lift group"
+            >
+              <BiFile className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
+              <span>Chat với Sổ tay SV</span>
+            </button>
+            <button
+              onClick={() => onCreateNewSession('upload')}
+              className="w-full flex items-center justify-center space-x-2 p-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-2xl hover:shadow-lg transition-all duration-200 font-semibold hover-lift group"
+            >
+              <BiPlus className="h-5 w-5 group-hover:rotate-90 transition-transform duration-200" />
+              <span>Chat với tài liệu</span>
+            </button>
+          </div>
         )}
       </div>
 
@@ -118,14 +127,18 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
                       {session.hasDocument && (
                         <div 
                           className={`flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium transition-colors duration-300 ${
-                            session.id === currentSessionId
-                              ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
-                              : 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400'
+                            session.documentType === 'default' 
+                              ? session.id === currentSessionId
+                                ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300'
+                                : 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400'
+                              : session.id === currentSessionId
+                                ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
+                                : 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
                           }`}
-                          title={session.documentFilename ? `Document: ${session.documentFilename}` : 'Has uploaded document'}
+                          title={session.documentFilename ? `Document: ${session.documentFilename}` : 'Has document'}
                         >
                           <BiFile className="h-3 w-3" />
-                          <span>PDF</span>
+                          <span>{session.documentType === 'default' ? 'SV' : 'DOC'}</span>
                         </div>
                       )}
                     </div>
@@ -176,12 +189,22 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
       {!isSidebarOpen && (
         <div className="flex-1 flex flex-col items-center justify-start p-2 space-y-3 mt-4 bg-gray-50/30 dark:bg-slate-900/30">
           {/* New Chat Button - Collapsed */}
-          <button
-            onClick={onCreateNewSession}
-            className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg flex items-center justify-center transition-all duration-200 hover-lift group"
-          >
-            <BiPlus className="h-5 w-5 text-white group-hover:rotate-90 transition-transform duration-200" />
-          </button>
+          <div className="space-y-2">
+            <button
+              onClick={() => onCreateNewSession('default')}
+              className="w-12 h-12 rounded-xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 shadow-lg flex items-center justify-center transition-all duration-200 hover-lift group"
+              title="Chat với Sổ tay SV"
+            >
+              <BiFile className="h-5 w-5 text-white group-hover:scale-110 transition-transform duration-200" />
+            </button>
+            <button
+              onClick={() => onCreateNewSession('upload')}
+              className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg flex items-center justify-center transition-all duration-200 hover-lift group"
+              title="Chat với tài liệu"
+            >
+              <BiPlus className="h-5 w-5 text-white group-hover:rotate-90 transition-transform duration-200" />
+            </button>
+          </div>
           
           {/* Session Icons */}
           {chatSessions.slice(0, 5).map((session, index) => (

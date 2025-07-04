@@ -57,6 +57,20 @@ public class ChatController {
         return ResponseEntity.ok(newConversation);
     }
 
+    @PostMapping("/conversations/with-document")
+    public ResponseEntity<ConversationDto> startConversationWithDocument(@RequestBody Map<String, String> payload, 
+                                                                         Authentication authentication) {
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        Long userId = userService.findByUsername(userDetails.getUsername()).orElseThrow().getId();
+        
+        String message = payload.get("message");
+        String documentId = payload.get("documentId");
+        
+        ConversationDto newConversation = chatService.startNewConversationWithDocument(userId, message, documentId);
+        
+        return ResponseEntity.ok(newConversation);
+    }
+
     @PostMapping("/conversations/{id}/messages")
     public ResponseEntity<MessageDto> sendMessage(@PathVariable Long id, 
                                      @RequestBody Map<String, String> payload,

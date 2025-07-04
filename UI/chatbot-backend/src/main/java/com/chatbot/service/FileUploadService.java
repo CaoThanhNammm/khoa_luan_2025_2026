@@ -69,31 +69,81 @@ public class FileUploadService {
                     .header("ngrok-skip-browser-warning", "true")
                     .body(BodyInserters.fromMultipartData(parts))
                     .retrieve()
+                    .onStatus(status -> !status.is2xxSuccessful(), 
+                        clientResponse -> clientResponse.bodyToMono(String.class)
+                            .map(errorBody -> {
+                                logger.error("Python API error response: {}", errorBody);
+                                return new RuntimeException("Python API error: " + errorBody);
+                            }))
                     .bodyToMono(String.class)
                     .timeout(Duration.ofMinutes(10)) // Increase timeout for large files
                     .doOnNext(resp -> logger.info("Received response from Python API: {}", resp))
+                    .doOnError(error -> logger.error("Error calling Python API: {}", error.getMessage()))
                     .block();
             
             if (response == null) {
                 throw new Exception("No response received from Python API");
             }
             
+            logger.info("Raw response from Python API: {}", response);
+            
             // Parse the response
             JsonNode responseNode = objectMapper.readTree(response);
+            logger.info("Parsed JSON response: {}", responseNode.toString());
+            
+            // Check if the response indicates successful processing
+            String status = responseNode.has("status") && !responseNode.get("status").isNull() ? 
+                responseNode.get("status").asText() : "";
+            
+            // Accept success, completed, or processing status
+            if (!"success".equalsIgnoreCase(status) && 
+                !"completed".equalsIgnoreCase(status) && 
+                !"processing".equalsIgnoreCase(status)) {
+                String errorMessage = responseNode.has("message") && !responseNode.get("message").isNull() ? 
+                    responseNode.get("message").asText() : "Python API did not return a valid status";
+                throw new Exception("File processing failed: " + errorMessage + " (Status: " + status + ")");
+            }
+            
+            // Validate that essential fields are present (only for completed processing)
+            if ("success".equalsIgnoreCase(status) || "completed".equalsIgnoreCase(status)) {
+                if (!responseNode.has("document_id") || responseNode.get("document_id").isNull() || 
+                    responseNode.get("document_id").asText().isEmpty()) {
+                    throw new Exception("Python API did not return a valid document_id - processing may not be complete");
+                }
+            }
             
             Map<String, Object> result = new HashMap<>();
-            result.put("message", responseNode.get("message").asText());
-            result.put("document_id", responseNode.get("document_id").asText());
-            result.put("filename", responseNode.get("filename").asText());
-            result.put("file_size", responseNode.get("file_size").asLong());
-            result.put("sentences_count", responseNode.get("sentences_count").asInt());
-            result.put("s3_key", responseNode.get("s3_key").asText());
-            result.put("s3_url", responseNode.get("s3_url").asText());
-            result.put("status", responseNode.get("status").asText());
+            
+            // Safely extract fields with null checks
+            String message = responseNode.has("message") && !responseNode.get("message").isNull() ? 
+                responseNode.get("message").asText() : "File processed successfully";
+            result.put("message", message);
+            
+            // Handle document_id based on processing status
+            if (responseNode.has("document_id") && !responseNode.get("document_id").isNull() && 
+                !responseNode.get("document_id").asText().isEmpty()) {
+                result.put("document_id", responseNode.get("document_id").asText());
+            } else {
+                // Generate a temporary document_id for processing status
+                result.put("document_id", "processing_" + System.currentTimeMillis());
+            }
+            result.put("filename", responseNode.has("filename") && !responseNode.get("filename").isNull() ? 
+                responseNode.get("filename").asText() : file.getOriginalFilename());
+            result.put("file_size", responseNode.has("file_size") && !responseNode.get("file_size").isNull() ? 
+                responseNode.get("file_size").asLong() : file.getSize());
+            result.put("sentences_count", responseNode.has("sentences_count") && !responseNode.get("sentences_count").isNull() ? 
+                responseNode.get("sentences_count").asInt() : 0);
+            result.put("s3_key", responseNode.has("s3_key") && !responseNode.get("s3_key").isNull() ? 
+                responseNode.get("s3_key").asText() : "");
+            result.put("s3_url", responseNode.has("s3_url") && !responseNode.get("s3_url").isNull() ? 
+                responseNode.get("s3_url").asText() : "");
+            result.put("status", status);
             
             // Add conversation_id if present in response
             if (responseNode.has("conversation_id") && !responseNode.get("conversation_id").isNull()) {
                 result.put("conversation_id", responseNode.get("conversation_id").asLong());
+            } else if (conversationId != null) {
+                result.put("conversation_id", conversationId);
             }
             
             logger.info("File uploaded successfully. Document ID: {}", result.get("document_id"));

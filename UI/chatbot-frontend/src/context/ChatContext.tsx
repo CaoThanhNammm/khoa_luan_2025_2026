@@ -16,6 +16,7 @@ interface ChatContextType {
   // Actions
   loadConversations: () => Promise<void>;
   createNewConversation: (message: string) => Promise<number | null>;
+  createNewConversationWithDocument: (message: string, documentId: string) => Promise<number | null>;
   switchToConversation: (id: number) => Promise<void>;
   deleteConversation: (id: number) => Promise<void>;
   sendMessage: (conversationId: number, message: string) => Promise<void>;
@@ -156,6 +157,75 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       setIsThinking(false);
     }
   };
+  // Create a new conversation with specific document
+  const createNewConversationWithDocument = async (message: string, documentId: string): Promise<number | null> => {
+    if (!user) return null;
+    
+    setLoading(true);
+    setIsThinking(true);
+    
+    // Create temporary conversation with user message
+    const tempConversation = {
+      id: Date.now(), // Temporary ID
+      title: message.length > 50 ? message.substring(0, 50) + '...' : message,
+      createdAt: new Date().toISOString(),
+      messages: [{
+        id: Date.now(),
+        content: message,
+        timestamp: new Date().toISOString(),
+        type: 'USER' as const,
+        conversationId: Date.now(), // Temporary conversation ID
+        isLatest: false,
+        isStreaming: false
+      }],
+      hasDocument: true,
+      documentInfo: {
+        documentId: documentId,
+        filename: documentId === 'so-tay-sinh-vien-2024' ? 'Sổ tay sinh viên 2024' : 'Document',
+        fileSize: 0,
+        sentencesCount: 0,
+        uploadDate: new Date().toISOString(),
+        status: 'active'
+      }
+    };
+    
+    // Render temporary conversation immediately
+    setCurrentConversation(tempConversation);
+    
+    try {
+      const newConversation = await ChatService.startNewConversationWithDocument(message, documentId);
+      
+      // Mark the latest bot message for streaming effect
+      const messagesWithStreaming = newConversation.messages.map((msg, index) => {
+        if (msg.type === 'BOT' && index === newConversation.messages.length - 1) {
+          return { ...msg, isLatest: true, isStreaming: true };
+        }
+        return { ...msg, isLatest: false, isStreaming: false };
+      });
+
+      const conversationWithStreaming = {
+        ...newConversation,
+        messages: messagesWithStreaming
+      };
+      
+      setConversations(prev => [conversationWithStreaming, ...prev]);
+      setCurrentConversation(conversationWithStreaming);
+      saveCurrentConversationId(newConversation.id); // Save the new conversation ID
+      setError(null);
+      
+      return newConversation.id;
+    } catch (err) {
+      const errorMessage = getErrorMessage(err);
+      setError(errorMessage);
+      console.error('Error creating conversation with document:', err);
+      // Remove temporary conversation if error occurs
+      setCurrentConversation(null);
+      return null;
+    } finally {
+      setLoading(false);
+      setIsThinking(false);
+    }
+  };
   // Switch to a specific conversation
   const switchToConversation = async (id: number) => {
     setLoading(true);
@@ -271,6 +341,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     error,
     loadConversations,
     createNewConversation,
+    createNewConversationWithDocument,
     switchToConversation,
     deleteConversation,
     sendMessage,

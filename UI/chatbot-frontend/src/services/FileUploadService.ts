@@ -27,11 +27,12 @@ export const uploadFile = async (file: File, conversationId?: number): Promise<F
     // Get auth headers from AuthService
     const authHeaders = AuthService.getAuthHeader();
     
-    const response = await axios.post<FileUploadResponse>('/upload-file', formData, {
+    const response = await axios.post<FileUploadResponse>('/api/upload-file', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
         ...authHeaders,
       },
+      timeout: 600000, // 10 minutes timeout for file upload
     });
 
     return response.data;
@@ -54,6 +55,20 @@ export const uploadFile = async (file: File, conversationId?: number): Promise<F
   }
 };
 
+export const getUserDocuments = async (): Promise<unknown[]> => {
+  try {
+    const authHeaders = AuthService.getAuthHeader();
+    const response = await axios.get('/api/user-documents', {
+      headers: authHeaders,
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching user documents:', error);
+    throw error;
+  }
+};
+
 export const FileUploadService = {
   uploadFile,
+  getUserDocuments,
 };
