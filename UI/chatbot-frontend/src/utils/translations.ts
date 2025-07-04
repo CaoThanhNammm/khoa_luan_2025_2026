@@ -185,6 +185,13 @@ export const translations: Record<string, Translations> = {  en: {
     'chat.processing_file': 'Processing File...',
     'chat.processing_description': 'Your file is being uploaded and processed by our AI system. This may take several minutes for large files.',
     'chat.do_not_close': 'Please do not close this window or navigate away.',
+    'chat.welcome_title': 'Welcome to AI Chatbot',
+    'chat.welcome_subtitle': 'Choose how you want to start your conversation',
+    'chat.handbook_description': 'Learn about regulations, policies and guidelines for students',
+    'chat.document_description': 'Upload your PDF document and chat about its content',
+    'chat.start_now': 'Start Now',
+    'chat.upload_document_btn': 'Upload Document',
+    'chat.tip_multiple_chats': '💡 You can create multiple conversations and switch between them anytime',
 
     // Profile
     'profile.title': 'My Profile',
@@ -522,6 +529,13 @@ export const translations: Record<string, Translations> = {  en: {
     'chat.processing_file': 'Đang xử lý file...',
     'chat.processing_description': 'File của bạn đang được upload và xử lý bởi hệ thống AI. Quá trình này có thể mất vài phút cho file lớn.',
     'chat.do_not_close': 'Vui lòng không đóng cửa sổ này hoặc chuyển trang.',
+    'chat.welcome_title': 'Chào mừng đến với AI Chatbot',
+    'chat.welcome_subtitle': 'Chọn cách bạn muốn bắt đầu cuộc trò chuyện',
+    'chat.handbook_description': 'Tìm hiểu thông tin về quy định, chính sách và hướng dẫn dành cho sinh viên',
+    'chat.document_description': 'Tải lên tài liệu PDF của bạn và trò chuyện về nội dung trong đó',
+    'chat.start_now': 'Bắt đầu ngay',
+    'chat.upload_document_btn': 'Tải tài liệu',
+    'chat.tip_multiple_chats': '💡 Bạn có thể tạo nhiều cuộc trò chuyện và chuyển đổi giữa chúng bất cứ lúc nào',
 
     // Profile
     'profile.title': 'Hồ sơ của tôi',
@@ -860,6 +874,13 @@ export const translations: Record<string, Translations> = {  en: {
     'chat.processing_file': 'Traitement du fichier...',
     'chat.processing_description': 'Votre fichier est en cours de téléchargement et de traitement par notre système IA. Cela peut prendre plusieurs minutes pour les gros fichiers.',
     'chat.do_not_close': 'Veuillez ne pas fermer cette fenêtre ou naviguer ailleurs.',
+    'chat.welcome_title': 'Bienvenue dans le Chatbot IA',
+    'chat.welcome_subtitle': 'Choisissez comment vous voulez commencer votre conversation',
+    'chat.handbook_description': 'Découvrez les règlements, politiques et directives pour les étudiants',
+    'chat.document_description': 'Téléchargez votre document PDF et discutez de son contenu',
+    'chat.start_now': 'Commencer maintenant',
+    'chat.upload_document_btn': 'Télécharger Document',
+    'chat.tip_multiple_chats': '💡 Vous pouvez créer plusieurs conversations et basculer entre elles à tout moment',
 
     // Profile
     'profile.title': 'Mon profil',

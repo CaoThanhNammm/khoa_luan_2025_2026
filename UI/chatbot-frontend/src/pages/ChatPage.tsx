@@ -4,7 +4,7 @@ import { useChat } from '../context/ChatContext';
 import { useSettings } from '../context/SettingsContext';
 import { useTranslation } from '../utils/translations';
 import { useNavigate } from 'react-router-dom';
-import { ChatSidebar, ChatContainer, FileDropZone } from '../components/chat';
+import { ChatSidebar, ChatContainer, FileDropZone, WelcomeScreen } from '../components/chat';
 import { FileUploadService } from '../services/FileUploadService';
 import type { ChatSession, SidebarChatSession } from '../types/chat';
 import PageTransition from '../components/PageTransition';
@@ -190,14 +190,14 @@ const ChatPage: React.FC = () => {
         onDeleteSession={handleDeleteSession}
       />
 
-      {/* Show FileDropZone or ChatContainer based on state */}
+      {/* Show FileDropZone, WelcomeScreen, or ChatContainer based on state */}
       {showFileDropZone ? (
         <FileDropZone
           onFileUpload={handleFileUpload}
           isUploading={isUploading}
           onCancel={handleCancelFileUpload}
         />
-      ) : (
+      ) : chatContext.currentConversation ? (
         <ChatContainer
           messages={messages}
           isTyping={chatContext.loading}
@@ -209,6 +209,10 @@ const ChatPage: React.FC = () => {
           conversationId={chatContext.currentConversation?.id}
           hasDocument={chatContext.currentConversation?.hasDocument || false}
           documentInfo={chatContext.currentConversation?.documentInfo}
+        />
+      ) : (
+        <WelcomeScreen
+          onCreateNewSession={handleCreateNewSession}
         />
       )}
 

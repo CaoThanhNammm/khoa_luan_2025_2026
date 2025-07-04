@@ -8,3 +8,4 @@ export { default as ChatContainer } from './ChatContainer';
 export { default as TypewriterText } from './TypewriterText';
 export { default as FileUpload } from './FileUpload';
 export { default as FileDropZone } from './FileDropZone';
+export { default as WelcomeScreen } from './WelcomeScreen';
