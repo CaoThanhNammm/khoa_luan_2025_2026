@@ -27,6 +27,13 @@ const ChatPage: React.FC = () => {
     }
   }, [user, navigate]);
 
+  // Hide file drop zone when a conversation is selected
+  useEffect(() => {
+    if (chatContext.currentConversation && showFileDropZone) {
+      setShowFileDropZone(false);
+    }
+  }, [chatContext.currentConversation, showFileDropZone]);
+
   // Get messages from current conversation directly (no conversion needed)
   const messages = chatContext.currentConversation?.messages || [];
 
@@ -52,6 +59,8 @@ const ChatPage: React.FC = () => {
     // If it's a default session, create a new conversation with default document
     if (type === 'default') {
       try {
+        // Hide file drop zone if it's currently showing
+        setShowFileDropZone(false);
         // Create a new conversation with the default document
         const defaultMessage = "Xin chào, tôi muốn tìm hiểu về thông tin trong sổ tay sinh viên.";
         await chatContext.createNewConversationWithDocument(defaultMessage, 'so-tay-sinh-vien-2024');
