@@ -1,5 +1,5 @@
 import React from 'react';
-import { BiChat, BiPlus, BiTrash, BiTime, BiMessage } from 'react-icons/bi';
+import { BiChat, BiPlus, BiTrash, BiTime, BiMessage, BiFile } from 'react-icons/bi';
 import { useSettings } from '../../context/SettingsContext';
 import { useTranslation } from '../../utils/translations';
 import type { SidebarChatSession } from '../../types/chat';
@@ -114,6 +114,20 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
                       }`}>
                         {session.title || 'New Conversation'}
                       </h3>
+                      {/* Document Indicator */}
+                      {session.hasDocument && (
+                        <div 
+                          className={`flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium transition-colors duration-300 ${
+                            session.id === currentSessionId
+                              ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
+                              : 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400'
+                          }`}
+                          title={session.documentFilename ? `Document: ${session.documentFilename}` : 'Has uploaded document'}
+                        >
+                          <BiFile className="h-3 w-3" />
+                          <span>PDF</span>
+                        </div>
+                      )}
                     </div>
                     
                     {/* Last Message Preview */}

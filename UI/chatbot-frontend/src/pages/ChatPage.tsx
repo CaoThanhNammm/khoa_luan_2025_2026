@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useChat } from '../context/ChatContext';
+import { useSettings } from '../context/SettingsContext';
 import { useNavigate } from 'react-router-dom';
 import { ChatSidebar, ChatContainer } from '../components/chat';
+import { FileUploadService } from '../services/FileUploadService';
 import type { ChatSession, SidebarChatSession } from '../types/chat';
 import PageTransition from '../components/PageTransition';
 
 const ChatPage: React.FC = () => {
   const { user } = useAuth();
+  const { showNotification } = useSettings();
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isUploading, setIsUploading] = useState(false);
   
   const chatContext = useChat();
 
@@ -52,6 +56,49 @@ const ChatPage: React.FC = () => {
     await chatContext.deleteConversation(Number(conversationId));
   };
 
+  const handleFileUpload = async (file: File) => {
+    setIsUploading(true);
+    
+    try {
+      // Get current conversation ID if available
+      const conversationId = chatContext.currentConversation?.id;
+      console.log('Uploading file with conversation ID:', conversationId);
+      
+      const response = await FileUploadService.uploadFile(file, conversationId);
+      
+      if (response.filename) {
+        showNotification(
+          `File "${response.filename}" uploaded successfully! Document ID: ${response.document_id}${conversationId ? ` linked to conversation ${conversationId}` : ''}`,
+          'success'
+        );
+        
+        // If no current conversation, create a new one with the uploaded file info
+        if (!chatContext.currentConversation) {
+          await chatContext.createNewConversation(`I've uploaded a PDF file: ${response.filename}. Please help me analyze this document.`);
+        } else {
+          // If there's a current conversation, send a message about the uploaded file
+          await chatContext.sendMessage(
+            chatContext.currentConversation.id, 
+            `I've uploaded a PDF file: ${response.filename}. Please help me analyze this document.`
+          );
+        }
+        
+        // Reload conversations to get updated document information
+        await chatContext.loadConversations();
+      } else {
+        throw new Error(response.message || 'Upload failed');
+      }
+    } catch (error) {
+      console.error('File upload failed:', error);
+      showNotification(
+        `File upload failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        'error'
+      );
+    } finally {
+      setIsUploading(false);
+    }
+  };
+
   if (!user) {
     return null; // Will redirect in useEffect
   }// Convert conversations to SidebarChatSession format for sidebar
@@ -59,7 +106,9 @@ const ChatPage: React.FC = () => {
     id: conv.id.toString(),
     title: conv.title,
     lastMessage: conv.messages.length > 0 ? conv.messages[conv.messages.length - 1].content : 'No messages yet',
-    timestamp: new Date(conv.createdAt)
+    timestamp: new Date(conv.createdAt),
+    hasDocument: conv.hasDocument || false,
+    documentFilename: conv.documentInfo?.filename
   }));
 
   const currentSessionId = chatContext.currentConversation?.id.toString() || '';
@@ -87,6 +136,11 @@ const ChatPage: React.FC = () => {
         isThinking={chatContext.isThinking}
         pendingMessage={chatContext.pendingMessage}
         onSendMessage={handleSendMessage}
+        onFileUpload={handleFileUpload}
+        isUploading={isUploading}
+        conversationId={chatContext.currentConversation?.id}
+        hasDocument={chatContext.currentConversation?.hasDocument || false}
+        documentInfo={chatContext.currentConversation?.documentInfo}
       />
 
       {/* Enhanced Error Display */}

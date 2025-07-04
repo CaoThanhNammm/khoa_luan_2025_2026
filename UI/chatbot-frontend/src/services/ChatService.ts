@@ -10,6 +10,15 @@ export interface ConversationResponse {
   title: string;
   createdAt: string;
   messages: Message[];
+  hasDocument?: boolean;
+  documentInfo?: {
+    documentId: string;
+    filename: string;
+    fileSize: number;
+    sentencesCount: number;
+    uploadDate: string;
+    status: string;
+  };
 }
 
 export interface MessageRequest {

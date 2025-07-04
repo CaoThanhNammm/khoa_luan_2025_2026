@@ -13,6 +13,17 @@ export interface ChatSession {
   title: string;
   createdAt: string;
   messages: Message[];
+  hasDocument?: boolean; // Indicates if this conversation has uploaded documents
+  documentInfo?: DocumentInfo; // Information about the uploaded document
+}
+
+export interface DocumentInfo {
+  documentId: string;
+  filename: string;
+  fileSize: number;
+  sentencesCount: number;
+  uploadDate: string;
+  status: string;
 }
 
 // Extended interface for sidebar display
@@ -21,4 +32,6 @@ export interface SidebarChatSession {
   title: string;
   lastMessage: string;
   timestamp: Date;
+  hasDocument?: boolean;
+  documentFilename?: string;
 }

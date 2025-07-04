@@ -2,7 +2,7 @@ import React from 'react';
 import ChatHeader from './ChatHeader';
 import ChatMessages from './ChatMessages';
 import MessageInput from './MessageInput';
-import type { Message } from '../../types/chat';
+import type { Message, DocumentInfo } from '../../types/chat';
 
 interface ChatContainerProps {
   messages: Message[];
@@ -10,6 +10,11 @@ interface ChatContainerProps {
   isThinking?: boolean;
   pendingMessage?: Message | null;
   onSendMessage: (message: string) => void;
+  onFileUpload?: (file: File) => Promise<void>;
+  isUploading?: boolean;
+  conversationId?: number;
+  hasDocument?: boolean;
+  documentInfo?: DocumentInfo;
 }
 
 const ChatContainer: React.FC<ChatContainerProps> = ({
@@ -17,13 +22,29 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
   isTyping,
   isThinking = false,
   pendingMessage = null,
-  onSendMessage
-}) => {  return (
+  onSendMessage,
+  onFileUpload,
+  isUploading = false,
+  conversationId,
+  hasDocument = false,
+  documentInfo
+}) => {
+  return (
     <div className="flex-1 flex flex-col h-full">
-      <ChatHeader isTyping={isTyping || isThinking} />
+      <ChatHeader 
+        isTyping={isTyping || isThinking} 
+        hasDocument={hasDocument}
+        documentInfo={documentInfo}
+      />
       <div className="flex-1 flex flex-col min-h-0">
         <ChatMessages messages={messages} isTyping={isTyping} isThinking={isThinking} pendingMessage={pendingMessage} />
-        <MessageInput onSendMessage={onSendMessage} isTyping={isTyping || isThinking} />
+        <MessageInput 
+          onSendMessage={onSendMessage} 
+          onFileUpload={onFileUpload}
+          isTyping={isTyping || isThinking}
+          isUploading={isUploading}
+          conversationId={conversationId}
+        />
       </div>
     </div>
   );

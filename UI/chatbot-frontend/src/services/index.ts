@@ -3,6 +3,7 @@ export { default as AuthService } from './AuthService';
 export { default as ChatService } from './ChatService';
 export { default as UserService } from './UserService';
 export { default as ContactService } from './ContactService';
+export { FileUploadService } from './FileUploadService';
 export { default as axios } from './api';
 
 // Types exports
