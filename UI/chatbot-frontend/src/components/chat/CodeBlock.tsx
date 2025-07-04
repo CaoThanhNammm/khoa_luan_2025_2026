@@ -74,15 +74,15 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
   }, [code, language]);
   return (
     <div className="my-4 w-full">
-      <div className="bg-gray-900 dark:bg-gray-950 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 relative group shadow-lg">
+      <div className="bg-charcoal dark:bg-slate-900 rounded-xl overflow-hidden border border-gray-200/50 dark:border-slate-700/50 relative group shadow-lg dark:shadow-slate-900/50 backdrop-blur-sm">
         {/* Language header with copy button */}
-        <div className="bg-gray-800 dark:bg-gray-900 px-4 py-3 text-xs font-medium text-gray-300 dark:text-gray-400 border-b border-gray-700 flex justify-between items-center">
+        <div className="bg-gray-800 dark:bg-slate-800 px-4 py-3 text-xs font-medium text-gray-300 dark:text-slate-300 border-b border-gray-700/50 dark:border-slate-700/50 flex justify-between items-center">
           <span className="capitalize font-semibold">
             {isAutoDetected ? 'Code (Auto-detected)' : (language || 'Code')}
           </span>
           <button
             onClick={() => onCopy(code, blockIndex)}
-            className="opacity-70 hover:opacity-100 transition-all duration-200 p-1.5 rounded hover:bg-gray-700 text-gray-400 hover:text-gray-200 flex items-center gap-1"
+            className="opacity-70 hover:opacity-100 transition-all duration-200 p-1.5 rounded-lg hover:bg-gray-700/50 dark:hover:bg-slate-700/50 text-gray-400 hover:text-gray-200 dark:hover:text-slate-200 flex items-center gap-1"
             title="Copy code"
           >
             {copied ? <BiCheck className="h-3 w-3" /> : <BiCopy className="h-3 w-3" />}
@@ -91,7 +91,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
         </div>
           {/* Code content */}
         <div className="relative">
-          <div className="p-4 overflow-x-auto bg-gray-900 dark:bg-gray-950 max-h-96 overflow-y-auto custom-scrollbar">
+          <div className="p-4 overflow-x-auto bg-charcoal dark:bg-slate-900 max-h-96 overflow-y-auto custom-scrollbar">
             <pre className={`language-${language} !bg-transparent !p-0 !m-0`}>
               <code 
                 className={`language-${language} !bg-transparent`}

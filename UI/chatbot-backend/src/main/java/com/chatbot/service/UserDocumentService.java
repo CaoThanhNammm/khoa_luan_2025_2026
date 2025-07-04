@@ -1,4 +1,4 @@
-    package com.chatbot.service;
+package com.chatbot.service;
 
 import com.chatbot.model.UserDocument;
 import com.chatbot.repository.UserDocumentRepository;
@@ -157,5 +157,45 @@ public class UserDocumentService {
      */
     public List<UserDocument> searchDocumentsByFilename(Long userId, String filename) {
         return userDocumentRepository.findByUserIdAndFilenameContainingIgnoreCase(userId, filename);
+    }
+    
+    /**
+     * Tạo document mặc định cho conversation (an toàn với duplicate)
+     */
+    public UserDocument createDefaultDocument(Long userId, Long conversationId, String documentId, String filename) {
+        logger.info("Creating default document {} for user {} and conversation {}", documentId, userId, conversationId);
+        
+        // Kiểm tra xem document đã tồn tại chưa
+        List<UserDocument> existingDocs = getDocumentsByConversation(userId, conversationId);
+        UserDocument existingDoc = existingDocs.stream()
+            .filter(doc -> documentId.equals(doc.getDocumentId()))
+            .findFirst()
+            .orElse(null);
+            
+        if (existingDoc != null) {
+            logger.info("Document {} already exists for user {} and conversation {}", documentId, userId, conversationId);
+            return existingDoc;
+        }
+        
+        // Tạo document mới
+        UserDocument userDocument = new UserDocument(userId, documentId, filename);
+        userDocument.setConversationId(conversationId);
+        userDocument.setFileSize(0L);
+        userDocument.setSentencesCount(0);
+        userDocument.setStatus("active");
+        userDocument.setS3Key("");
+        userDocument.setS3Url("");
+        
+        try {
+            return userDocumentRepository.save(userDocument);
+        } catch (Exception e) {
+            logger.error("Error saving default document", e);
+            // Thử lấy lại document nếu có thể đã được tạo bởi thread khác
+            existingDocs = getDocumentsByConversation(userId, conversationId);
+            return existingDocs.stream()
+                .filter(doc -> documentId.equals(doc.getDocumentId()))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Failed to create or retrieve default document", e));
+        }
     }
 }

@@ -2,18 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useChat } from '../context/ChatContext';
 import { useSettings } from '../context/SettingsContext';
+import { useTranslation } from '../utils/translations';
 import { useNavigate } from 'react-router-dom';
-import { ChatSidebar, ChatContainer } from '../components/chat';
+import { ChatSidebar, ChatContainer, FileDropZone } from '../components/chat';
 import { FileUploadService } from '../services/FileUploadService';
 import type { ChatSession, SidebarChatSession } from '../types/chat';
 import PageTransition from '../components/PageTransition';
 
 const ChatPage: React.FC = () => {
   const { user } = useAuth();
-  const { showNotification } = useSettings();
+  const { settings, showNotification } = useSettings();
+  const { t } = useTranslation(settings.language);
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
+  const [showFileDropZone, setShowFileDropZone] = useState(false);
   
   const chatContext = useChat();
 
@@ -55,11 +58,14 @@ const ChatPage: React.FC = () => {
       } catch (error) {
         console.error('Error creating default session:', error);
       }
+    } else {
+      // For upload type, show file drop zone
+      setShowFileDropZone(true);
     }
-    // For upload type, just clear the conversation - user will need to upload a file
   };
 
   const handleSwitchToSession = async (conversationId: string) => {
+    setShowFileDropZone(false); // Hide file drop zone when switching conversations
     await chatContext.switchToConversation(Number(conversationId));
   };
 
@@ -120,6 +126,9 @@ const ChatPage: React.FC = () => {
         
         // Reload conversations to get updated document information
         await chatContext.loadConversations();
+        
+        // Hide file drop zone after successful upload
+        setShowFileDropZone(false);
       } else {
         throw new Error('Upload failed - no response data received');
       }
@@ -132,6 +141,10 @@ const ChatPage: React.FC = () => {
     } finally {
       setIsUploading(false);
     }
+  };
+
+  const handleCancelFileUpload = () => {
+    setShowFileDropZone(false);
   };
 
   if (!user) {
@@ -166,18 +179,29 @@ const ChatPage: React.FC = () => {
         onCreateNewSession={handleCreateNewSession}
         onSwitchToSession={handleSwitchToSession}
         onDeleteSession={handleDeleteSession}
-      />      <ChatContainer
-        messages={messages}
-        isTyping={chatContext.loading}
-        isThinking={chatContext.isThinking}
-        pendingMessage={chatContext.pendingMessage}
-        onSendMessage={handleSendMessage}
-        onFileUpload={handleFileUpload}
-        isUploading={isUploading}
-        conversationId={chatContext.currentConversation?.id}
-        hasDocument={chatContext.currentConversation?.hasDocument || false}
-        documentInfo={chatContext.currentConversation?.documentInfo}
       />
+
+      {/* Show FileDropZone or ChatContainer based on state */}
+      {showFileDropZone ? (
+        <FileDropZone
+          onFileUpload={handleFileUpload}
+          isUploading={isUploading}
+          onCancel={handleCancelFileUpload}
+        />
+      ) : (
+        <ChatContainer
+          messages={messages}
+          isTyping={chatContext.loading}
+          isThinking={chatContext.isThinking}
+          pendingMessage={chatContext.pendingMessage}
+          onSendMessage={handleSendMessage}
+          onFileUpload={handleFileUpload}
+          isUploading={isUploading}
+          conversationId={chatContext.currentConversation?.id}
+          hasDocument={chatContext.currentConversation?.hasDocument || false}
+          documentInfo={chatContext.currentConversation?.documentInfo}
+        />
+      )}
 
       {/* File Upload Loading Overlay */}
       {isUploading && (
@@ -186,13 +210,13 @@ const ChatPage: React.FC = () => {
             <div className="text-center">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                Processing File...
+                {t('chat.processing_file')}
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Your file is being uploaded and processed by our AI system. This may take several minutes for large files.
+                {t('chat.processing_description')}
               </p>
               <div className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-                Please do not close this window or navigate away.
+                {t('chat.do_not_close')}
               </div>
             </div>
           </div>

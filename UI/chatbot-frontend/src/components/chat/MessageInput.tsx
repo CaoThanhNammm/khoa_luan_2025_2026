@@ -22,6 +22,11 @@ const MessageInput: React.FC<MessageInputProps> = ({
   const { settings, showNotification } = useSettings();
   const { t } = useTranslation(settings.language);
 
+  // Placeholder text tùy thuộc vào việc có thể upload file hay không
+  const placeholderText = onFileUpload 
+    ? t('chat.placeholder')  // "Chia sẻ suy nghĩ của bạn với tôi... (📎 để tải PDF)"
+    : t('chat.placeholder_handbook'); // "Hỏi về sổ tay sinh viên..."
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputMessage.trim() || isTyping || isUploading) return;
@@ -133,10 +138,10 @@ const MessageInput: React.FC<MessageInputProps> = ({
                   <svg className="w-3 h-3 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
-                  <span>Uploading...</span>
+                  <span>{t('chat.uploading_processing')}</span>
                 </div>
               ) : (
-                'Upload'
+                t('chat.upload_document')
               )}
             </button>
             
@@ -162,7 +167,7 @@ const MessageInput: React.FC<MessageInputProps> = ({
               onClick={handlePaperclipClick}
               disabled={isTyping || isUploading}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed z-10"
-              title={isUploading ? "Uploading..." : "Upload PDF file"}
+              title={isUploading ? t('chat.uploading_processing') : t('chat.upload_document')}
             >
               {isUploading ? (
                 <svg className="h-5 w-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,7 +184,7 @@ const MessageInput: React.FC<MessageInputProps> = ({
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder={t('chat.placeholder')}
+            placeholder={placeholderText}
             className={`w-full py-4 pr-14 border-2 border-gray-200/80 dark:border-gray-600/80 rounded-2xl focus:outline-none focus:ring-4 focus:ring-lavender/30 dark:focus:ring-indigo-500/30 focus:border-lavender dark:focus:border-indigo-500 transition-all duration-300 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm shadow-lg shadow-gray-100/50 dark:shadow-gray-900/50 font-medium placeholder-gray-500 dark:placeholder-gray-400 text-charcoal dark:text-white group-hover:shadow-xl ${
               onFileUpload ? 'pl-12' : 'pl-5'
             }`}

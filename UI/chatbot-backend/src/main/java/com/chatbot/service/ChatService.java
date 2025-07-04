@@ -171,18 +171,11 @@ public class ChatService {
         // Create a user document entry if documentId is provided
         if (documentId != null && !documentId.isEmpty()) {
             try {
-                // Create user document with predefined document ID
-                Map<String, Object> uploadResult = new HashMap<>();
-                uploadResult.put("file_size", 0L);
-                uploadResult.put("sentences_count", 0);
-                uploadResult.put("status", "active");
-                uploadResult.put("s3_key", "");
-                uploadResult.put("s3_url", "");
-                
                 String filename = documentId.equals("so-tay-sinh-vien-2024") ? "Sổ tay sinh viên 2024" : documentId;
-                userDocumentService.saveDocument(userId, conversation.getId(), documentId, filename, uploadResult);
+                userDocumentService.createDefaultDocument(userId, conversation.getId(), documentId, filename);
             } catch (Exception e) {
                 logger.error("Error creating user document entry", e);
+                // Continue without document association if this fails
             }
         }
         

@@ -70,14 +70,14 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
               className="w-full flex items-center justify-center space-x-2 p-3.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-2xl hover:shadow-lg transition-all duration-200 font-semibold hover-lift group"
             >
               <BiFile className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
-              <span>Chat với Sổ tay SV</span>
+              <span>{t('chat.with_handbook')}</span>
             </button>
             <button
               onClick={() => onCreateNewSession('upload')}
               className="w-full flex items-center justify-center space-x-2 p-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-2xl hover:shadow-lg transition-all duration-200 font-semibold hover-lift group"
             >
               <BiPlus className="h-5 w-5 group-hover:rotate-90 transition-transform duration-200" />
-              <span>Chat với tài liệu</span>
+              <span>{t('chat.with_document')}</span>
             </button>
           </div>
         )}
@@ -93,7 +93,7 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
                 {t('chat.no_messages')}
               </p>
               <p className="text-gray-500 dark:text-slate-500 text-xs mt-1">
-                Start a new conversation to begin
+                {t('chat.start_conversation')}
               </p>
             </div>
           ) : (
