@@ -166,7 +166,6 @@ class Qdrant:
         client = NVIDIARerank(
             model="nvidia/llama-3.2-nv-rerankqa-1b-v2",
             api_key=os.getenv('API_KEY_RERANKING'),
-
             top_n=len(passages)
         )
 
