@@ -156,7 +156,55 @@ public class ChatService {
         
         return true;
     }
-      private String getChatbotResponse(String userMessage) {
+    
+    @Transactional
+    public ConversationDto startNewConversationWithDocument(Long userId, String userMessage, String documentId) {
+        User user = userService.getUserById(userId);
+        
+        // Create new conversation
+        Conversation conversation = new Conversation();
+        conversation.setTitle(generateTitle(userMessage));
+        conversation.setUser(user);
+        conversation.setCreatedAt(LocalDateTime.now());
+        conversation = conversationRepository.save(conversation);
+        
+        // Create a user document entry if documentId is provided
+        if (documentId != null && !documentId.isEmpty()) {
+            try {
+                String filename = documentId.equals("so-tay-sinh-vien-2024") ? "Sổ tay sinh viên 2024" : documentId;
+                userDocumentService.createDefaultDocument(userId, conversation.getId(), documentId, filename);
+            } catch (Exception e) {
+                logger.error("Error creating user document entry", e);
+                // Continue without document association if this fails
+            }
+        }
+        
+        // Add user message
+        Message userMessageEntity = new Message();
+        userMessageEntity.setContent(userMessage);
+        userMessageEntity.setType(Message.MessageType.USER);
+        userMessageEntity.setConversation(conversation);
+        userMessageEntity = messageRepository.save(userMessageEntity);
+        
+        // Get bot response with document context
+        String botResponse = documentId != null && !documentId.isEmpty() 
+            ? getChatbotResponseWithDocument(userMessage, conversation.getId(), userId)
+            : getChatbotResponse(userMessage);
+        
+        // Add bot response
+        Message botMessageEntity = new Message();
+        botMessageEntity.setContent(botResponse);
+        botMessageEntity.setType(Message.MessageType.BOT);
+        botMessageEntity.setConversation(conversation);
+        botMessageEntity = messageRepository.save(botMessageEntity);
+        
+        // Return conversation with messages
+        conversation.setMessages(List.of(userMessageEntity, botMessageEntity));
+        
+        return convertToDto(conversation);
+    }
+
+    private String getChatbotResponse(String userMessage) {
         try {
             logger.info("Preparing request to Python API for message: {}", userMessage);
             
@@ -234,8 +282,16 @@ public class ChatService {
                 requestBody.put("document_id", documentId);
                 logger.info("Using document_id: {} for conversation: {}", documentId, conversationId);
                 
-                // Call Python API endpoint /api/chat (with document context)
-                return callPythonApiWithDocument(requestBody, userMessage);
+                // Check if it's the default document
+                if ("so-tay-sinh-vien-2024".equals(documentId)) {
+                    // Use chat-default endpoint for default document (no document_id needed)
+                    Map<String, Object> defaultRequestBody = new HashMap<>();
+                    defaultRequestBody.put("question", userMessage);
+                    return callPythonApiDefault(defaultRequestBody, userMessage);
+                } else {
+                    // Use chat endpoint for uploaded documents (with document_id)
+                    return callPythonApiWithDocument(requestBody, userMessage);
+                }
             } else {
                 logger.info("No documents found for conversation: {}, using default endpoint", conversationId);
                 // Fall back to default chat if no documents
@@ -248,7 +304,8 @@ public class ChatService {
     }
     
     /**
-     * Call Python API with document context
+     * Call Python API with uploaded document context
+     * This endpoint requires document_id for uploaded documents
      */
     private String callPythonApiWithDocument(Map<String, Object> requestBody, String userMessage) {
         try {
@@ -277,7 +334,7 @@ public class ChatService {
                                 return Mono.just(responseText);
                             }
                             
-                            logger.warn("Could not parse Python API response: {}", rawResponse);
+                            logger.warn("Could not parse Gemini API response: {}", rawResponse);
                             return Mono.just(fallbackToGeminiApi(userMessage));
                         } catch (Exception e) {
                             logger.error("Error parsing Python API response", e);
@@ -297,6 +354,57 @@ public class ChatService {
         }
     }
     
+    /**
+     * Call Python API with default document (chat-default endpoint)
+     * This endpoint uses the default document without needing document_id
+     */
+    private String callPythonApiDefault(Map<String, Object> requestBody, String userMessage) {
+        try {
+            // For debugging - log the request
+            logger.info("Sending request to Python API (default): {}", objectMapper.writeValueAsString(requestBody));
+            
+            // Call Python API endpoint /api/chat-default (uses default document, no document_id needed)
+            String apiEndpoint = pythonApiUrl + "/api/chat-default";
+            String response = webClient.post()
+                    .uri(apiEndpoint)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .header("ngrok-skip-browser-warning", "true")
+                    .bodyValue(requestBody)
+                    .retrieve()
+                    .bodyToMono(String.class)
+                    .doOnNext(resp -> logger.info("Received response from Python API (default): {}", resp))
+                    .flatMap(rawResponse -> {
+                        try {
+                            // Parse the JSON response
+                            JsonNode rootNode = objectMapper.readTree(rawResponse);
+                            
+                            // Navigate the response structure for Python API
+                            if (rootNode.has("data") && rootNode.has("message") && 
+                                "Process answer successfully".equals(rootNode.get("message").asText())) {
+                                String responseText = rootNode.get("data").asText();
+                                return Mono.just(responseText);
+                            }
+                            
+                            logger.warn("Could not parse Python API response (default): {}", rawResponse);
+                            return Mono.just(fallbackToGeminiApi(userMessage));
+                        } catch (Exception e) {
+                            logger.error("Error parsing Python API response (default)", e);
+                            return Mono.just(fallbackToGeminiApi(userMessage));
+                        }
+                    })
+                    .onErrorResume(e -> {
+                        logger.error("Error calling Python API (default): {}", e.getMessage());
+                        return Mono.just(fallbackToGeminiApi(userMessage));
+                    })
+                    .block();
+                    
+            return response != null ? response : getSimulatedResponse(userMessage);
+        } catch (Exception e) {
+            logger.error("Exception in Python Flask API call (default): {}", e.getMessage());
+            return fallbackToGeminiApi(userMessage);
+        }
+    }
+
     /**
      * Fallback to Gemini API if Python Flask API is unavailable or fails
      */
@@ -430,35 +538,27 @@ public class ChatService {
         dto.setCreatedAt(conversation.getCreatedAt());
         
         List<Message> messages = messageRepository.findByConversationOrderByTimestampAsc(conversation);
-        dto.setMessages(messages.stream()
-                .map(this::convertToMessageDto)
-                .collect(Collectors.toList()));
+        List<MessageDto> messageDtos = messages.stream()
+            .map(this::convertToMessageDto)
+            .collect(Collectors.toList());
+        dto.setMessages(messageDtos);
         
-        // Check if this conversation has any documents
-        try {
-            List<com.chatbot.model.UserDocument> documents = userDocumentService.getDocumentsByConversation(
-                conversation.getUser().getId(), conversation.getId());
-            
-            if (!documents.isEmpty()) {
-                dto.setHasDocument(true);
-                // Use the first document if multiple exist
-                com.chatbot.model.UserDocument document = documents.get(0);
-                DocumentDto documentDto = new DocumentDto();
-                documentDto.setDocumentId(document.getDocumentId());
-                documentDto.setFilename(document.getFilename());
-                documentDto.setFileSize(document.getFileSize());
-                documentDto.setSentencesCount(document.getSentencesCount());
-                documentDto.setUploadDate(document.getUploadDate());
-                documentDto.setStatus(document.getStatus());
-                dto.setDocumentInfo(documentDto);
-            } else {
-                dto.setHasDocument(false);
-            }
-        } catch (Exception e) {
-            logger.warn("Error checking documents for conversation {}: {}", conversation.getId(), e.getMessage());
-            dto.setHasDocument(false);
+        // Set document info if available
+        List<com.chatbot.model.UserDocument> documents = userDocumentService.getDocumentsByConversation(
+            conversation.getUser().getId(), conversation.getId());
+        if (!documents.isEmpty()) {
+            dto.setHasDocument(true);
+            com.chatbot.model.UserDocument document = documents.get(0);
+            DocumentDto documentDto = new DocumentDto();
+            documentDto.setDocumentId(document.getDocumentId());
+            documentDto.setFilename(document.getFilename());
+            documentDto.setFileSize(document.getFileSize());
+            documentDto.setSentencesCount(document.getSentencesCount());
+            documentDto.setUploadDate(document.getUploadDate());
+            documentDto.setStatus(document.getStatus());
+            dto.setDocumentInfo(documentDto);
         }
-                
+        
         return dto;
     }
     

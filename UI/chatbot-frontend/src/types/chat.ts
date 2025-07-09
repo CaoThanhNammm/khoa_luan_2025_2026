@@ -34,4 +34,5 @@ export interface SidebarChatSession {
   timestamp: Date;
   hasDocument?: boolean;
   documentFilename?: string;
+  documentType?: 'default' | 'upload'; // Thêm type để phân biệt
 }

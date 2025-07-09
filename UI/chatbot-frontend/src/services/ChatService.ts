@@ -64,6 +64,14 @@ class ChatService {
     return axios.delete<{ message: string }>(API_URL + "conversations/" + id);
   }
 
+  async startNewConversationWithDocument(message: string, documentId: string): Promise<ChatSession> {
+    const response = await axios.post<ConversationResponse>(
+      API_URL + "conversations/with-document",
+      { message, documentId }
+    );
+    return adaptConversationToSession(response.data);
+  }
+
   // Raw API methods for backward compatibility
   getConversationsRaw(): Promise<AxiosResponse<ConversationResponse[]>> {
     return axios.get<ConversationResponse[]>(API_URL + "conversations");

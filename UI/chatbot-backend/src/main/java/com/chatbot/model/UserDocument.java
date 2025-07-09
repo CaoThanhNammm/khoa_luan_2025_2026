@@ -4,7 +4,8 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "user_documents")
+@Table(name = "user_documents", 
+       uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "conversation_id", "document_id"}))
 public class UserDocument {
     
     @Id
@@ -17,7 +18,7 @@ public class UserDocument {
     @Column(name = "conversation_id")
     private Long conversationId;
     
-    @Column(name = "document_id", nullable = false, unique = true)
+    @Column(name = "document_id", nullable = false)
     private String documentId;
     
     @Column(name = "filename", nullable = false)

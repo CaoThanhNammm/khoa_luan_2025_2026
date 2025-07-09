@@ -50,6 +50,15 @@ public class FileUploadController {
                 return ResponseEntity.badRequest().body(response);
             }
             
+            // Check file size (10MB = 10 * 1024 * 1024 bytes)
+            long maxFileSize = 10 * 1024 * 1024;
+            if (file.getSize() > maxFileSize) {
+                response.put("success", false);
+                response.put("message", String.format("File quá lớn. Kích thước tối đa: 10MB. Kích thước hiện tại: %.2fMB", 
+                    file.getSize() / (1024.0 * 1024.0)));
+                return ResponseEntity.badRequest().body(response);
+            }
+            
             // Check file type
             String filename = file.getOriginalFilename();
             if (filename == null || !filename.toLowerCase().endsWith(".pdf")) {
@@ -71,16 +80,42 @@ public class FileUploadController {
                 logger.info("Saved document to database: {} for conversation: {}", savedDocument.getId(), conversationId);
             }
             
+            // Merge upload result with response
             response.put("success", true);
             response.put("message", "Upload thành công");
-            response.put("data", uploadResult);
+            
+            // Add all fields from uploadResult directly to response
+            response.putAll(uploadResult);
+            
+            // Ensure required fields are present with fallback values
+            if (!response.containsKey("filename") || response.get("filename") == null || response.get("filename").toString().isEmpty()) {
+                response.put("filename", filename);
+            }
+            if (!response.containsKey("file_size") || response.get("file_size") == null) {
+                response.put("file_size", file.getSize());
+            }
+            if (!response.containsKey("document_id") || response.get("document_id") == null || response.get("document_id").toString().isEmpty()) {
+                response.put("document_id", "doc_" + System.currentTimeMillis());
+            }
             
             return ResponseEntity.ok(response);
             
         } catch (Exception e) {
-            logger.error("Error uploading file", e);
+            logger.error("Error uploading file: {}", e.getMessage(), e);
             response.put("success", false);
-            response.put("message", "Lỗi khi upload file: " + e.getMessage());
+            
+            // Provide more specific error messages
+            String errorMessage = e.getMessage();
+            if (errorMessage.contains("timeout") || errorMessage.contains("Timeout")) {
+                response.put("message", "File processing timed out. Please try again with a smaller file or check your connection.");
+            } else if (errorMessage.contains("connection") || errorMessage.contains("Connection")) {
+                response.put("message", "Unable to connect to processing server. Please try again later.");
+            } else if (errorMessage.contains("processing failed") || errorMessage.contains("did not return success")) {
+                response.put("message", "File processing failed on server. Please check the file format and try again.");
+            } else {
+                response.put("message", "Lỗi khi upload file: " + errorMessage);
+            }
+            
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
         }
     }
