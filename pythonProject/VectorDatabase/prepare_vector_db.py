@@ -26,20 +26,24 @@ if __name__ == "__main__":
     # model_late_interaction = factory.create_embed_model(model_late_interaction_name)
 
     # 3. Khởi tạo client Qdrant
-    collection_name = os.getenv("NAME_COLLECTION")
-    size = os.getenv("SIZE")
+    qdrant_local = os.getenv("QDRANT_LOCAL")
+    # collection_name = os.getenv("NAME_COLLECTION")
+    collection_name = "vi_drop"
     distance = os.getenv("DISTANCE")
     host = os.getenv("HOST_QDRANT")
     api = os.getenv("API_KEY_QDRANT")
     pre_processing = PreProcessing()
-    qdrant = Qdrant(host, api, None, None, None, None, collection_name, pre_processing, 'meta/llama-3.1-405b-instruct')
+    qdrant = Qdrant(qdrant_local, api, None, None, None, None, collection_name, pre_processing)
 
     # 4. tạo collection, nếu có rồi thì không tạo nữa
-    qdrant.create_collection(collection_name, size, distance)
+    qdrant.create_collection(distance)
+
+    # Index(['text', 'embed_1024', 'embed_768', 'embed_512', 'embed_li'], dtype='object')
+    qdrant.load_and_upsert_from_csv(r'D:\PycharmProjects\pythonProject\embed_vi_drop.csv')
 
     # 5. lấy ra chunks trong tất cả các doc
-    data_path = "../data"
-    chunks = qdrant.read_chunks(data_path)
+    # data_path = "../data"
+    # chunks = qdrant.read_chunks(data_path)
 
     chunkings = [
         {
@@ -547,10 +551,10 @@ if __name__ == "__main__":
 
     # 7. tạo embedding và lưu vào csdl
 
-    chunkings_add_summary = pd.read_csv(r"D:\PycharmProjects\pythonProject\qdrant_dataset.csv")
-    chunkings_add_summary = chunkings_add_summary.to_numpy()
+    # chunkings_add_summary = pd.read_csv(r"D:\PycharmProjects\pythonProject\qdrant_dataset.csv")
+    # chunkings_add_summary = chunkings_add_summary.to_numpy()
     # qdrant.create_embedding(chunkings_add_summary[:, 0])
-    print(chunkings_add_summary[:, 0])
+    # print(chunkings_add_summary[:, 0])
 
 
 
