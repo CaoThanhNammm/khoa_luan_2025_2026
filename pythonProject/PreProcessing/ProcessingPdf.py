@@ -4,8 +4,8 @@ import pdfplumber
 import os
 
 class PDF:
-    def __init__(self, folder):
-        self.folder = folder
+    def __init__(self, pdf_path):
+        self.pdf_path = pdf_path
 
     # đọc tất cả file pdf trong thư mục {data_path}. Mỗi lần đọc 3 trang
     # trả về danh sách các nội dung bao gồm của 3 trang được ghép thành 1
@@ -53,34 +53,25 @@ class PDF:
 
     def read_chunks(self):
         all_pages_text = []
-        script_dir = os.path.dirname(os.path.abspath(__file__))
 
-        data_path = os.path.join(script_dir, self.folder)
-        pdf_files = [f for f in os.listdir(data_path) if f.lower().endswith('.pdf')]
+        try:
+            with pdfplumber.open(self.pdf_path) as pdf:
+                num_pages = len(pdf.pages)
 
-        for pdf_file in pdf_files:
-            pdf_path = os.path.join(data_path, pdf_file)
+                # Duyệt qua các trang, mỗi nhóm 2 trang
+                for i in range(0, num_pages, 2):
+                    group_text = []
 
-            try:
-                with pdfplumber.open(pdf_path) as pdf:
-                    num_pages = len(pdf.pages)
+                    for j in range(i, min(i + 2, num_pages)):
+                        page = pdf.pages[j]
+                        text = page.extract_text()
+                        if text:
+                            group_text.append(text)
 
-                    # Duyệt qua tất cả các trang, mỗi nhóm 3 trang
-                    for i in range(0, num_pages, 2):
-                        group_text = []
-                        group_pages = []
-
-                        for j in range(i, min(i + 2, num_pages)):
-                            page = pdf.pages[j]
-                            text = page.extract_text()
-                            if text:
-                                group_text.append(text)
-                                group_pages.append(j + 1)
-
-                        if group_text:
-                            all_pages_text.append('\n'.join(group_text))
-            except Exception as e:
-                print(f"Lỗi khi xử lý file {pdf_file}: {str(e)}")
+                    if group_text:
+                        all_pages_text.append('\n'.join(group_text))
+        except Exception as e:
+            print(f"Lỗi khi xử lý file {self.pdf_path}: {str(e)}")
 
         return all_pages_text
 

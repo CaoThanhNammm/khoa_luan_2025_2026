@@ -8,7 +8,7 @@ import type { ConversationResponse, MessageResponse } from "../services/ChatServ
  */
 export function adaptConversationToSession(conversation: ConversationResponse): ChatSession {
   return {
-    id: conversation.id,
+    id: conversation.id.toString(), // Ensure ID is always a string
     title: conversation.title,
     createdAt: conversation.createdAt,
     messages: conversation.messages.map(adaptMessageToFrontend),
@@ -33,7 +33,7 @@ export function adaptMessageToFrontend(message: MessageResponse): Message {
     content: message.content,
     type: message.type,
     timestamp: message.timestamp,
-    conversationId: message.conversationId
+    conversationId: message.conversationId ? message.conversationId.toString() : ''
   };
 }
 

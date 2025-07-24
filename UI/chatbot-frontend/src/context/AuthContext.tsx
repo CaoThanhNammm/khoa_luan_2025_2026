@@ -54,9 +54,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       const userData = response.data;
       
       // Ensure we have valid data before setting the user
-      if (userData && userData.id) {
+      // Handle both id and user_id formats for compatibility with FastAPI
+      const userId = userData.user_id || userData.id;
+      
+      if (userData && (userId !== undefined)) {
         const user: User = {
-          id: userData.id,
+          id: userId,
           name: userData.username,
           email: userData.email,
           username: userData.username
@@ -84,16 +87,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setError(null);
     try {
       const response = await AuthService.register(username, email, password);
-      const userData = response.data;
       
-      const user: User = {
-        id: userData.id,
-        name: userData.username,
-        email: userData.email,
-        username: userData.username
-      };
+      // For FastAPI, registration might not return user data, just a success message
+      // We'll redirect to login page after successful registration
+      console.log('Registration successful:', response.data);
       
-      setUser(user);
       setIsLoading(false);
       return true;
     } catch (error: unknown) {

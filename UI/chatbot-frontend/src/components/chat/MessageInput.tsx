@@ -8,7 +8,7 @@ interface MessageInputProps {
   onFileUpload?: (file: File) => Promise<void>;
   isTyping: boolean;
   isUploading?: boolean;
-  conversationId?: number;
+  conversationId?: string;
 }
 
 const MessageInput: React.FC<MessageInputProps> = ({ 

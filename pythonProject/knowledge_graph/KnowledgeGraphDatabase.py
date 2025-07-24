@@ -2,6 +2,7 @@ from neo4j import GraphDatabase
 from sentence_transformers import SentenceTransformer, util
 import torch
 
+
 class Neo4j:
     def __init__(self, uri, user, password):
         """Khởi tạo kết nối tới Neo4j"""
@@ -25,7 +26,7 @@ class Neo4j:
             MERGE (highest:General {name: 'tài liệu'})
             MERGE (document:Document {name: 'sổ tay sinh viên 2024'})
             MERGE (highest)-[:bao_gồm]->(document)
-            
+
             MERGE (a:part {name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'})
             MERGE (b:section {name: 'quá trình hình thành và phát triển'})
             MERGE (c:section {name: 'sứ mạng'})
@@ -134,7 +135,7 @@ class Neo4j:
             MERGE (v1_6:article {name: 'ưu tiên 6'})
 
             MERGE (w:section {name: 'danh hiệu sinh viên tiêu biểu'})
-            
+
             MERGE (document)-[:bao_gồm]->(n)
             MERGE (n)-[:bao_gồm]->(o)
             MERGE (o)-[:bao_gồm]->(o2)
@@ -262,7 +263,7 @@ class Neo4j:
             MERGE (mm0_3:article {name: 'căn cứ để xét học bổng khuyến khích học tập'})
             MERGE (mm0_4:article {name: 'mức học bổng khuyến khích học tập'})
             MERGE (mm0_5:article {name: 'quy trình xét học bổng'})
-            
+
             MERGE (document)-[:bao_gồm]->(x)
             MERGE (x)-[:bao_gồm]->(y)
             MERGE (y)-[:bao_gồm]->(y0_2)
@@ -331,7 +332,7 @@ class Neo4j:
     def encode(self, texts):
         return self.sentence_model.encode(texts, convert_to_tensor=True)
 
-    def retrieve_similar_nodes(self, question, node_embeddings, node_texts, top_k=5):
+    def retrieve_similar_nodes(self, question, node_embeddings, node_texts, top_k=20):
         """
         Tìm các node gần nhất về ngữ nghĩa với câu hỏi.
 
@@ -488,7 +489,7 @@ class Neo4j:
             for rel in relationships:
                 source = rel["source"]
                 target = rel["target"]
-                relation = rel["relation"].upper().replace(" ", "_")
+                relation = rel["relation"].upper().replace(" ", "_").replace("-", "_")
                 print(f'{source} {relation} {target}')
                 type_source = self._capitalize_label(rel["type_source"])
                 type_target = self._capitalize_label(rel["type_target"])
@@ -502,12 +503,10 @@ class Neo4j:
                     part, type_Part_cap
                 )
 
-
     @staticmethod
     def _capitalize_label(label):
         # Chuyển thành PascalCase: "university branch" -> "UniversityBranch"
         return ''.join(word.capitalize() for word in label.split(' '))
-
 
     @staticmethod
     def _create_relation_with_Part(tx, source, type_source, target, type_target, relation, Part, type_Part):
@@ -538,15 +537,60 @@ class Neo4j:
         target_type = self._capitalize_label(target_type)
 
         query = f"""
-        MERGE (a:{source_type} {{name: $source_name}})
-        MERGE (b:{target_type} {{name: $target_name}})
-        MERGE (a)-[r:{relation_type}]->(b)
-        RETURN r
+            MERGE (a:{source_type} {{name: $source_name}})
+            MERGE (b:{target_type} {{name: $target_name}})
+            MERGE (a)-[r:{relation_type}]->(b)
+            RETURN r
         """
         with self.driver.session() as session:
             session.run(query, source_name=source_name, target_name=target_name)
 
+    def get_part_of_document(self, document_id):
+        query = """
+            MATCH p = (a:Document {name: $document_id})-[*1..1]-(e)
+            RETURN p
+        """
+        with self.driver.session() as session:
+            result = session.run(query, document_id=document_id)
+            paths = [record["p"] for record in result]
 
-    def re_ranking(self, question, documents):
-        return self.reranker_model.rank(question, documents)
+            if not paths:
+                return ""
+
+            # Extract document ID and part names
+            document_node = paths[0].start_node
+            doc_id = document_node.get("name")
+
+            part_names = []
+            for path in paths:
+                part_name = path.end_node.get("name")
+                if part_name not in part_names:
+                    part_names.append(part_name)
+
+            # Format Cypher
+            lines = []
+            lines.append(f"MERGE (highest:General {{name: 'tài liệu'}})")
+            lines.append(f"MERGE (document:Document {{name: '{doc_id}'}})")
+            lines.append("MERGE (highest)-[:BAO_GỒM]->(document)\n")
+
+            var_names = [chr(i) for i in range(ord('a'), ord('a') + len(part_names))]
+
+            for var, part in zip(var_names, part_names):
+                lines.append(f"MERGE ({var}:Part {{name: '{part}'}})")
+
+            lines.append("")
+
+            for var in var_names:
+                lines.append(f"MERGE (document)-[:BAO_GỒM]->({var})")
+
+            return "\n".join(lines)
+
+    def delete_part_of_document(self, document_id):
+        query = """
+            MATCH (a:Document {name: $document_id})-[*0..]->(b)
+            DETACH DELETE a, b
+        """
+        with self.driver.session() as session:
+            session.run(query, document_id=document_id)
+
 

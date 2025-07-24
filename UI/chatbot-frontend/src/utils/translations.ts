@@ -191,7 +191,7 @@ export const translations: Record<string, Translations> = {  en: {
     'chat.document_description': 'Upload your PDF document and chat about its content',
     'chat.start_now': 'Start Now',
     'chat.upload_document_btn': 'Upload Document',
-    'chat.tip_multiple_chats': '💡 You can create multiple conversations and switch between them anytime',
+
 
     // Profile
     'profile.title': 'My Profile',
@@ -535,7 +535,6 @@ export const translations: Record<string, Translations> = {  en: {
     'chat.document_description': 'Tải lên tài liệu PDF của bạn và trò chuyện về nội dung trong đó',
     'chat.start_now': 'Bắt đầu ngay',
     'chat.upload_document_btn': 'Tải tài liệu',
-    'chat.tip_multiple_chats': '💡 Bạn có thể tạo nhiều cuộc trò chuyện và chuyển đổi giữa chúng bất cứ lúc nào',
 
     // Profile
     'profile.title': 'Hồ sơ của tôi',
@@ -880,7 +879,6 @@ export const translations: Record<string, Translations> = {  en: {
     'chat.document_description': 'Téléchargez votre document PDF et discutez de son contenu',
     'chat.start_now': 'Commencer maintenant',
     'chat.upload_document_btn': 'Télécharger Document',
-    'chat.tip_multiple_chats': '💡 Vous pouvez créer plusieurs conversations et basculer entre elles à tout moment',
 
     // Profile
     'profile.title': 'Mon profil',

@@ -49,7 +49,8 @@ const RegisterPage: React.FC = () => {
 
     const success = await register(formData.username, formData.email, formData.password);
     if (success) {
-      navigate('/chat');
+      // Navigate to login page after successful registration
+      navigate('/login', { state: { message: t('auth.registration_success') } });
     } else {
       setError(authError || t('auth.registration_failed'));
     }

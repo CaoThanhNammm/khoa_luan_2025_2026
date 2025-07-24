@@ -6,10 +6,10 @@ import { adaptConversationToSession, adaptMessageToFrontend } from "../utils/api
 const API_URL = "/api/chat/";
 
 export interface ConversationResponse {
-  id: number;
+  id: string | number;
   title: string;
   createdAt: string;
-  messages: Message[];
+  messages: MessageResponse[];
   hasDocument?: boolean;
   documentInfo?: {
     documentId: string;
@@ -30,7 +30,7 @@ export interface MessageResponse {
   content: string;
   type: 'USER' | 'BOT';
   timestamp: string;
-  conversationId: number;
+  conversationId: string | number;
 }
 
 class ChatService {
@@ -39,7 +39,7 @@ class ChatService {
     return response.data.map(adaptConversationToSession);
   }
 
-  async getConversation(id: number): Promise<ChatSession> {
+  async getConversation(id: string): Promise<ChatSession> {
     const response = await axios.get<ConversationResponse>(API_URL + "conversations/" + id);
     return adaptConversationToSession(response.data);
   }
@@ -52,22 +52,46 @@ class ChatService {
     return adaptConversationToSession(response.data);
   }
 
-  async sendMessage(conversationId: number, message: string): Promise<Message> {
+  async sendMessage(conversationId: string, message: string, documentId?: string): Promise<Message> {
     const response = await axios.post<MessageResponse>(
       API_URL + `conversations/${conversationId}/messages`,
+      { message, document_id: documentId }
+    );
+    return adaptMessageToFrontend(response.data);
+  }
+
+  async sendMessageStsv(conversationId: string, message: string): Promise<Message> {
+    const response = await axios.post<MessageResponse>(
+      API_URL + `conversations/${conversationId}/messages_stsv`,
       { message }
     );
     return adaptMessageToFrontend(response.data);
   }
   
-  deleteConversation(id: number): Promise<AxiosResponse<{ message: string }>> {
+  deleteConversation(id: string): Promise<AxiosResponse<{ message: string }>> {
     return axios.delete<{ message: string }>(API_URL + "conversations/" + id);
   }
 
   async startNewConversationWithDocument(message: string, documentId: string): Promise<ChatSession> {
     const response = await axios.post<ConversationResponse>(
       API_URL + "conversations/with-document",
-      { message, documentId }
+      { message, document_id: documentId }
+    );
+    return adaptConversationToSession(response.data);
+  }
+
+  async createEmptyConversationWithDocument(documentId: string, filename: string, fileSize: number, status?: string, s3Key?: string, s3Url?: string): Promise<ChatSession> {
+    const response = await axios.post<ConversationResponse>(
+      API_URL + "conversations/empty-with-document",
+      { 
+        document_id: documentId, 
+        filename: filename, 
+        file_size: fileSize,
+        title: `Cuộc trò chuyện với ${filename}`,
+        status,
+        s3_key: s3Key,
+        s3_url: s3Url
+      }
     );
     return adaptConversationToSession(response.data);
   }
@@ -77,7 +101,7 @@ class ChatService {
     return axios.get<ConversationResponse[]>(API_URL + "conversations");
   }
 
-  getConversationRaw(id: number): Promise<AxiosResponse<ConversationResponse>> {
+  getConversationRaw(id: string): Promise<AxiosResponse<ConversationResponse>> {
     return axios.get<ConversationResponse>(API_URL + "conversations/" + id);
   }
 
@@ -88,9 +112,16 @@ class ChatService {
     );
   }
 
-  sendMessageRaw(conversationId: number, message: string): Promise<AxiosResponse<MessageResponse>> {
+  sendMessageRaw(conversationId: string, message: string, documentId?: string): Promise<AxiosResponse<MessageResponse>> {
     return axios.post<MessageResponse>(
       API_URL + `conversations/${conversationId}/messages`,
+      { message, document_id: documentId }
+    );
+  }
+
+  sendMessageStsvRaw(conversationId: string, message: string): Promise<AxiosResponse<MessageResponse>> {
+    return axios.post<MessageResponse>(
+      API_URL + `conversations/${conversationId}/messages_stsv`,
       { message }
     );
   }

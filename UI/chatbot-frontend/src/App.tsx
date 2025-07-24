@@ -16,6 +16,7 @@ import ResetPasswordPage from './pages/ResetPasswordPage';
 import ChatPage from './pages/ChatPage';
 import ProfilePage from './pages/ProfilePage';
 import SyntaxTest from './components/test/SyntaxTest';
+import { ApiDebugger } from './components/test';
 
 function App() {
   return (
@@ -43,6 +44,11 @@ function App() {
                     </ProtectedRoute>
                   } />
                   <Route path="syntax-test" element={<SyntaxTest />} />
+                  <Route path="api-debug" element={
+                    <ProtectedRoute>
+                      <ApiDebugger />
+                    </ProtectedRoute>
+                  } />
                 </Route>
               </Routes>
               <NotificationContainer />

@@ -15,11 +15,13 @@ interface ChatContextType {
   
   // Actions
   loadConversations: () => Promise<void>;
-  createNewConversation: (message: string) => Promise<number | null>;
-  createNewConversationWithDocument: (message: string, documentId: string) => Promise<number | null>;
-  switchToConversation: (id: number) => Promise<void>;
-  deleteConversation: (id: number) => Promise<void>;
-  sendMessage: (conversationId: number, message: string) => Promise<void>;
+  createNewConversation: (message: string) => Promise<string | null>;
+  createNewConversationWithDocument: (message: string, documentId: string) => Promise<string | null>;
+  createNewConversationWithSuggestedQuestions: () => Promise<string | null>;
+  createEmptyConversationWithUploadedDocument: (documentId: string, filename: string, fileSize: number, status?: string, s3Key?: string, s3Url?: string) => Promise<string | null>;
+  switchToConversation: (id: string) => Promise<void>;
+  deleteConversation: (id: string) => Promise<void>;
+  sendMessage: (conversationId: string, message: string) => Promise<void>;
   clearCurrentConversation: () => void;
   clearError: () => void;
 }
@@ -40,11 +42,11 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
   const [error, setError] = useState<string | null>(null);
 
   // Save current conversation ID to localStorage
-  const saveCurrentConversationId = useCallback((conversationId: number | null) => {
+  const saveCurrentConversationId = useCallback((conversationId: string | null) => {
     if (user) {
       const key = `chatbot_current_conversation_${user.id}`;
       if (conversationId) {
-        localStorage.setItem(key, conversationId.toString());
+        localStorage.setItem(key, conversationId);
       } else {
         localStorage.removeItem(key);
       }
@@ -52,11 +54,11 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
   }, [user]);
 
   // Get saved conversation ID from localStorage
-  const getSavedConversationId = useCallback((): number | null => {
+  const getSavedConversationId = useCallback((): string | null => {
     if (user) {
       const key = `chatbot_current_conversation_${user.id}`;
       const saved = localStorage.getItem(key);
-      return saved ? parseInt(saved, 10) : null;
+      return saved || null;
     }
     return null;
   }, [user]);
@@ -99,14 +101,16 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       setLoading(false);
     }
   }, [user, getSavedConversationId, saveCurrentConversationId]);  // Create a new conversation
-  const createNewConversation = async (message: string): Promise<number | null> => {
+  const createNewConversation = async (message: string): Promise<string | null> => {
     if (!user) return null;
     
     setLoading(true);
     setIsThinking(true);
-      // Tạo conversation tạm thời với tin nhắn user
+    
+    const tempId = `temp_${Date.now()}`;
+    // Tạo conversation tạm thời với tin nhắn user
     const tempConversation = {
-      id: Date.now(), // Temporary ID
+      id: tempId, // Temporary ID
       title: message.length > 50 ? message.substring(0, 50) + '...' : message,
       createdAt: new Date().toISOString(),
       messages: [{
@@ -114,7 +118,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
         content: message,
         timestamp: new Date().toISOString(),
         type: 'USER' as const,
-        conversationId: Date.now(), // Temporary conversation ID
+        conversationId: tempId, // Temporary conversation ID
         isLatest: false,
         isStreaming: false
       }]
@@ -157,16 +161,18 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       setIsThinking(false);
     }
   };
-  // Create a new conversation with specific document
-  const createNewConversationWithDocument = async (message: string, documentId: string): Promise<number | null> => {
+
+  // Create a new conversation with document (for student handbook)
+  const createNewConversationWithDocument = async (message: string, documentId: string): Promise<string | null> => {
     if (!user) return null;
     
     setLoading(true);
     setIsThinking(true);
     
-    // Create temporary conversation with user message
+    const tempId = `temp_${Date.now()}`;
+    // Tạo conversation tạm thời với tin nhắn user
     const tempConversation = {
-      id: Date.now(), // Temporary ID
+      id: tempId, // Temporary ID
       title: message.length > 50 ? message.substring(0, 50) + '...' : message,
       createdAt: new Date().toISOString(),
       messages: [{
@@ -174,22 +180,13 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
         content: message,
         timestamp: new Date().toISOString(),
         type: 'USER' as const,
-        conversationId: Date.now(), // Temporary conversation ID
+        conversationId: tempId, // Temporary conversation ID
         isLatest: false,
         isStreaming: false
-      }],
-      hasDocument: true,
-      documentInfo: {
-        documentId: documentId,
-        filename: documentId === 'so-tay-sinh-vien-2024' ? 'Sổ tay sinh viên 2024' : 'Document',
-        fileSize: 0,
-        sentencesCount: 0,
-        uploadDate: new Date().toISOString(),
-        status: 'active'
-      }
+      }]
     };
     
-    // Render temporary conversation immediately
+    // Render conversation tạm thời ngay lập tức
     setCurrentConversation(tempConversation);
     
     try {
@@ -218,7 +215,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       const errorMessage = getErrorMessage(err);
       setError(errorMessage);
       console.error('Error creating conversation with document:', err);
-      // Remove temporary conversation if error occurs
+      // Xóa conversation tạm thời nếu có lỗi
       setCurrentConversation(null);
       return null;
     } finally {
@@ -226,8 +223,64 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       setIsThinking(false);
     }
   };
+
+  // Create a new conversation with suggested questions (no initial message)
+  const createNewConversationWithSuggestedQuestions = async (): Promise<string | null> => {
+    if (!user) return null;
+    
+    // Create a temporary conversation with suggested questions display
+    const tempConversation = {
+      id: `temp_${Date.now()}`, // Temporary ID as string
+      title: 'Cuộc trò chuyện mới',
+      createdAt: new Date().toISOString(),
+      messages: [], // No initial messages, will show suggested questions
+      hasDocument: true,
+      documentInfo: {
+        documentId: 'so_tay_sinh_vien_2024',
+        filename: 'Sổ tay sinh viên 2024',
+        fileSize: 0,
+        sentencesCount: 0,
+        uploadDate: new Date().toISOString(),
+        status: 'active'
+      }
+    };
+    
+    // Set the temporary conversation immediately to show suggested questions
+    setCurrentConversation(tempConversation);
+    setError(null);
+    
+    return tempConversation.id;
+  };
+
+  // Create an empty conversation with uploaded document and save to DB
+  const createEmptyConversationWithUploadedDocument = async (documentId: string, filename: string, fileSize: number, status?: string, s3Key?: string, s3Url?: string): Promise<string | null> => {
+    if (!user) return null;
+    
+    setLoading(true);
+    
+    try {
+      // Create empty conversation in database with document info
+      const newConversation = await ChatService.createEmptyConversationWithDocument(documentId, filename, fileSize, status, s3Key, s3Url);
+      
+      // Add to conversations list and set as current
+      setConversations(prev => [newConversation, ...prev]);
+      setCurrentConversation(newConversation);
+      saveCurrentConversationId(newConversation.id); // Save the new conversation ID
+      setError(null);
+      
+      return newConversation.id;
+    } catch (err) {
+      const errorMessage = getErrorMessage(err);
+      setError(errorMessage);
+      console.error('Error creating empty conversation with document:', err);
+      return null;
+    } finally {
+      setLoading(false);
+    }
+  };
+
   // Switch to a specific conversation
-  const switchToConversation = async (id: number) => {
+  const switchToConversation = async (id: string) => {
     setLoading(true);
     try {
       const conversation = await ChatService.getConversation(id);
@@ -243,7 +296,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     }
   };
   // Delete a conversation
-  const deleteConversation = async (id: number) => {
+  const deleteConversation = async (id: string) => {
     try {
       await ChatService.deleteConversation(id);
       
@@ -261,7 +314,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       console.error('Error deleting conversation:', err);
     }
   };  // Send a message in a conversation
-  const sendMessage = async (conversationId: number, message: string) => {
+  const sendMessage = async (conversationId: string, message: string) => {
     try {
       // Tạo pending message để hiển thị ngay lập tức
       const tempUserMessage = {
@@ -278,8 +331,17 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       setPendingMessage(tempUserMessage);
       setIsThinking(true); // Bắt đầu thinking state
       
-      // Send message to server và nhận bot response
-      await ChatService.sendMessage(conversationId, message);
+      // Kiểm tra xem conversation có phải là student handbook không
+      const isStudentHandbook = currentConversation?.hasDocument && 
+                               currentConversation?.documentInfo?.documentId === 'so_tay_sinh_vien_2024';
+      
+      // Send message to server với API phù hợp
+      if (isStudentHandbook) {
+        await ChatService.sendMessageStsv(conversationId, message);
+      } else {
+        const documentId = currentConversation?.hasDocument ? currentConversation?.documentInfo?.documentId : undefined;
+        await ChatService.sendMessage(conversationId, message, documentId);
+      }
       
       setIsThinking(false); // Kết thúc thinking state
       setPendingMessage(null); // Xóa pending message
@@ -342,6 +404,8 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     loadConversations,
     createNewConversation,
     createNewConversationWithDocument,
+    createNewConversationWithSuggestedQuestions,
+    createEmptyConversationWithUploadedDocument,
     switchToConversation,
     deleteConversation,
     sendMessage,

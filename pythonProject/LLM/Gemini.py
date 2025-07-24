@@ -1,6 +1,6 @@
 # Google Cloud & Generative AI
 import google.generativeai as genai
-
+from fastembed import LateInteractionTextEmbedding
 import time
 class Gemini:
     def __init__(self, model_name: str, api_key: str):

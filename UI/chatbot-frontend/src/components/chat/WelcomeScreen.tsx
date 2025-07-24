@@ -74,10 +74,6 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onCreateNewSession }) => 
           </button>
         </div>
 
-        {/* Additional Info */}
-        <div className="text-sm text-gray-500 dark:text-gray-400">
-          <p>{t('chat.tip_multiple_chats')}</p>
-        </div>
       </div>
     </div>
   );

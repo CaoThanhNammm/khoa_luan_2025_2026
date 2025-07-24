@@ -2,6 +2,7 @@ import React from 'react';
 import ChatHeader from './ChatHeader';
 import ChatMessages from './ChatMessages';
 import MessageInput from './MessageInput';
+import SuggestedQuestions from './SuggestedQuestions';
 import type { Message, DocumentInfo } from '../../types/chat';
 
 interface ChatContainerProps {
@@ -12,9 +13,10 @@ interface ChatContainerProps {
   onSendMessage: (message: string) => void;
   onFileUpload?: (file: File) => Promise<void>;
   isUploading?: boolean;
-  conversationId?: number;
+  conversationId?: string;
   hasDocument?: boolean;
   documentInfo?: DocumentInfo;
+  showSuggestedQuestions?: boolean;
 }
 
 const ChatContainer: React.FC<ChatContainerProps> = ({
@@ -27,7 +29,8 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
   isUploading = false,
   conversationId,
   hasDocument = false,
-  documentInfo
+  documentInfo,
+  showSuggestedQuestions = false
 }) => {
   // Ẩn file upload nếu đang chat với sổ tay sinh viên (tài liệu mặc định)
   const isDefaultDocument = documentInfo?.documentId === 'so-tay-sinh-vien-2024';
@@ -48,14 +51,33 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
         documentInfo={documentInfo}
       />
       <div className="flex-1 flex flex-col min-h-0 bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl shadow-xl shadow-gray-100/50 dark:shadow-slate-900/50 border border-gray-200/60 dark:border-slate-700/60 rounded-2xl mx-4 mb-4 transition-all duration-300 relative z-10">
-        <ChatMessages messages={messages} isTyping={isTyping} isThinking={isThinking} pendingMessage={pendingMessage} />
-        <MessageInput 
-          onSendMessage={onSendMessage} 
-          onFileUpload={shouldShowFileUpload ? onFileUpload : undefined}
-          isTyping={isTyping || isThinking}
-          isUploading={isUploading}
-          conversationId={conversationId}
-        />
+        {showSuggestedQuestions && messages.length === 0 ? (
+          <>
+            <SuggestedQuestions 
+              onQuestionClick={onSendMessage} 
+              documentId={documentInfo?.documentId}
+              filename={documentInfo?.filename}
+            />
+            <MessageInput 
+              onSendMessage={onSendMessage} 
+              onFileUpload={shouldShowFileUpload ? onFileUpload : undefined}
+              isTyping={isTyping || isThinking}
+              isUploading={isUploading}
+              conversationId={conversationId}
+            />
+          </>
+        ) : (
+          <>
+            <ChatMessages messages={messages} isTyping={isTyping} isThinking={isThinking} pendingMessage={pendingMessage} />
+            <MessageInput 
+              onSendMessage={onSendMessage} 
+              onFileUpload={shouldShowFileUpload ? onFileUpload : undefined}
+              isTyping={isTyping || isThinking}
+              isUploading={isUploading}
+              conversationId={conversationId}
+            />
+          </>
+        )}
       </div>
     </div>
   );

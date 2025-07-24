@@ -47,8 +47,6 @@ def create_quest_answer(quest_dt, ans_dt, name_file):
 # print(df.columns)
 # print(df.head(5))
 
-# zaloai
-
 
 
 

@@ -1,9 +1,3 @@
-import ast
-import json
-import re
-import uuid
-
-import torch
 from qdrant_client.models import PointStruct
 from dotenv import load_dotenv
 load_dotenv()
@@ -12,23 +6,27 @@ from langchain_core.documents import Document
 from qdrant_client import models
 from qdrant_client import QdrantClient
 import os
-import pandas as pd
+
 
 class Qdrant:
-    def __init__(self, host, api, model_1024, model_768, model_512, model_late_interaction, collection_name, pre_processing):
+    def __init__(self, host: str, api, model_1024, model_768, model_512, model_late_interaction, collection_name,
+                 distance, pre_processing):
         self.client = QdrantClient(
             url=host,
-            # api_key=api,
+            api_key=api,
         )
+
         self.collection_name = collection_name
         self.model_1024 = model_1024
         self.model_768 = model_768
         self.model_512 = model_512
         self.model_late_interaction = model_late_interaction
         self.pre_processing = pre_processing
+        self.distance = distance
 
-    def create_collection(self, distance):
+    def create_collection(self):
         if self.client.collection_exists(collection_name=self.collection_name):
+            print("Collection đã tồn tại")
             return
 
         hnsw_config = {
@@ -43,26 +41,25 @@ class Qdrant:
             vectors_config={
                 'matryoshka-1024dim': models.VectorParams(
                     size=1024,
-                    distance=models.Distance[distance.upper()],
+                    distance=models.Distance[self.distance.upper()],
                     datatype=models.Datatype.FLOAT32
                 ),
                 'matryoshka-768dim': models.VectorParams(
                     size=768,
-                    distance=models.Distance[distance.upper()],
+                    distance=models.Distance[self.distance.upper()],
                     datatype=models.Datatype.FLOAT32
                 ),
                 'matryoshka-512dim': models.VectorParams(
                     size=512,
-                    distance=models.Distance[distance.upper()],
+                    distance=models.Distance[self.distance.upper()],
                     datatype=models.Datatype.FLOAT32
                 ),
                 'late_interaction': models.VectorParams(
-                    size=768,
-                    distance=models.Distance[distance.upper()],
+                    size=12,
+                    distance=models.Distance[self.distance.upper()],
                     multivector_config=models.MultiVectorConfig(
                         comparator=models.MultiVectorComparator.MAX_SIM
-                    ),
-                    datatype=models.Datatype.FLOAT32
+                    )
                 )
             },
             quantization_config=models.ScalarQuantization(
@@ -77,56 +74,65 @@ class Qdrant:
         print("create collection success")
         return self.client
 
-    def delete_collection(self, collection_name):
-        if self.client.collection_exists(collection_name=collection_name):
-            self.client.delete_collection(collection_name=collection_name)
-            print(f"Collection '{collection_name}' has been deleted.")
-        else:
-            print(f"Collection '{collection_name}' does not exist.")
+    def create_embed(self, chunks):
+        """Nhúng toàn bộ văn bản trong chunks một lần theo batch và trả về dict các embedding."""
+        print("Starting full-batch embedding...")
 
-    def create_embedding(self, chunks):
+        try:
+            preprocessed_chunks = [
+                self.pre_processing.text_preprocessing_vietnamese(chunk)
+                for chunk in chunks
+            ]
+
+            # Tạo embedding toàn bộ 1 lần
+            embeddings_dict = {
+                'matryoshka-1024dim': self.model_1024.embed(preprocessed_chunks),
+                'matryoshka-768dim': self.model_768.embed(preprocessed_chunks),
+                'matryoshka-512dim': self.model_512.embed(preprocessed_chunks),
+                'late_interaction': self.model_late_interaction.embed(preprocessed_chunks)
+            }
+
+            print("Embedding completed.")
+            return embeddings_dict
+
+        except Exception as e:
+            print(f"Lỗi khi tạo embedding toàn bộ: {e}")
+            return None
+
+    def add_data(self, chunks, embeddings_dict, batch_size=5):
+        """Lưu embedding vào Qdrant theo batch từ dict embeddings đã tạo."""
+        if embeddings_dict is None:
+            print("No embeddings to upsert.")
+            return
+
+        print("Starting upsert into Qdrant...")
+
         points = []
-        batch_size = 20
 
-
-        for chunk_id, chunk_text in enumerate(chunks, 1):
-            chunk_text_pre_processing = self.pre_processing.text_preprocessing_vietnamese(chunk_text)
-            print(chunk_text)
-
-            try:
-                # Tạo embeddings song song nếu có thể
-                embeddings = {
-                    'matryoshka-1024dim': self.model_1024.embed(chunk_text_pre_processing),
-                    'matryoshka-768dim': self.model_768.embed(chunk_text_pre_processing),
-                    'matryoshka-512dim': self.model_512.embed(chunk_text_pre_processing),
-                    'late_interaction': self.model_late_interaction.embed(chunk_text_pre_processing)
+        for idx in range(len(chunks)):
+            point = PointStruct(
+                id=idx + 1,
+                payload={"text": chunks[idx]},
+                vector={
+                    'matryoshka-1024dim': embeddings_dict['matryoshka-1024dim'][idx],
+                    'matryoshka-768dim': embeddings_dict['matryoshka-768dim'][idx],
+                    'matryoshka-512dim': embeddings_dict['matryoshka-512dim'][idx],
+                    'late_interaction': embeddings_dict['late_interaction'][idx]
                 }
+            )
+            points.append(point)
 
-                # Tạo PointStruct với cách viết gọn hơn
-                points.append(
-                    PointStruct(
-                        id=chunk_id,
-                        payload={"text": chunk_text},
-                        vector=embeddings
-                    )
-                )
+            if len(points) >= batch_size:
+                self._upsert_points(points)
+                print(f"Upserted chunks {idx - batch_size + 2} to {idx + 1}")
+                points.clear()
 
-                print(f"Processed chunk {chunk_id}")
-
-                # Batch processing
-                if len(points) >= batch_size:
-                    self._upsert_points(points)
-                    points.clear()
-
-            except Exception as e:
-                print(f"Error processing chunk {chunk_id}: {e}")
-                continue
-
-        # Xử lý các points còn lại
+        # Upsert phần còn lại
         if points:
             self._upsert_points(points)
+            print(f"Upserted chunks {len(chunks) - len(points) + 1} to {len(chunks)}")
 
-        print("Embedding creation completed successfully")
+        print("Upsert completed.")
 
     def _upsert_points(self, points):
         """Helper method để upsert points vào VDB"""
@@ -136,53 +142,21 @@ class Qdrant:
         except Exception as e:
             print(f"Error upserting points: {e}")
 
-    def load_and_upsert_from_csv(self, csv_path):
-        df = pd.read_csv(csv_path)
-
-        for idx, row in df.iterrows():
-            try:
-                # embed_1024 = json.loads(row['embed_1024'])
-                # embed_768 = json.loads(row['embed_768'])
-                # embed_512 = json.loads(row['embed_512'])
-                # string_tensor_embed_li = json.loads(row['embed_li'])
-
-                embed_1024 = row['embed_1024']
-                embed_768 = row['embed_768']
-                embed_512 = row['embed_512']
-                string_tensor_embed_li = row['embed_li']
-                print(embed_1024)
-
-                # Loại bỏ "tensor(" và ")" để còn lại phần list
-                match = re.search(r"tensor\((.*)\)", string_tensor_embed_li)
-                array_str = match.group(1)
-                tensor = torch.tensor(ast.literal_eval(array_str))
-
-                embeddings = {
-                    'matryoshka-1024dim': embed_1024,
-                    'matryoshka-768dim': embed_768,
-                    'matryoshka-512dim': embed_512,
-                    'late_interaction': tensor
-                }
-
-                point = PointStruct(
-                    id=str(uuid.uuid4()),
-                    payload={"text": row['text']},
-                    vector=embeddings
-                )
-                self._upsert_points([point])
-            except Exception as e:
-                print(f"Lỗi dòng {idx}: {e}")
-
-
-
     def query_from_db(self, text):
-      text_embedded_512 = self.model_512.embed(text)
-      text_embedded_768 = self.model_768.embed(text)
-      text_embedded_1024 = self.model_1024.embed(text)
-      embedded_late_interaction = self.model_late_interaction.embed(text).cpu().numpy()
+        # Embed văn bản với các mô hình khác nhau
+        text_embedded_512 = self.model_512.embed(text)
+        text_embedded_768 = self.model_768.embed(text)
+        text_embedded_1024 = self.model_1024.embed(text)
+        embedded_late_interaction = self.model_late_interaction.embed(text)[0].tolist()
 
-      response =  self.client.query_points(
-            collection_name= self.collection_name,
+        print(f"text_embedded_512: {text_embedded_512[0: 10]}")
+        print(f"text_embedded_768: {text_embedded_768[0: 10]}")
+        print(f"text_embedded_1024: {text_embedded_1024[0: 10]}")
+        print(f"embedded_late_interaction: {embedded_late_interaction[0: 10]}")
+
+        # Gửi truy vấn đến Qdrant client với các mức embedding khác nhau
+        response = self.client.query_points(
+            collection_name=self.collection_name,
             prefetch=models.Prefetch(
                 prefetch=models.Prefetch(
                     prefetch=models.Prefetch(
@@ -202,15 +176,16 @@ class Qdrant:
             using="late_interaction",
             limit=25,
         )
-      documents = []
-      for result in response.points:
-        documents.append(result.payload["text"])
-      return documents
+
+        # Lấy kết quả văn bản từ payload
+        documents = [point.payload["text"] for point in response.points]
+        return documents
 
     def re_ranking(self, query, passages):
         client = NVIDIARerank(
             model="nvidia/llama-3.2-nv-rerankqa-1b-v2",
             api_key=os.getenv('API_KEY_RERANKING'),
+
             top_n=len(passages)
         )
 
@@ -219,5 +194,8 @@ class Qdrant:
             documents=[Document(page_content=passage) for passage in passages]
         )
         return response
+
+    def set_collection_name(self, name):
+        self.collection_name = name
 
 

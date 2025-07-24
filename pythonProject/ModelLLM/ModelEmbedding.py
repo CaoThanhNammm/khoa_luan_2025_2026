@@ -11,4 +11,4 @@ class ModelEmbedding:
         return model
 
     def embed(self, text):
-        return self.model.encode(text)
+        return self.model.encode(text).tolist()

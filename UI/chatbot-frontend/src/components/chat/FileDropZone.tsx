@@ -21,19 +21,19 @@ const FileDropZone: React.FC<FileDropZoneProps> = ({
   const handleDragEnter = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    if (e.dataTransfer.items && e.dataTransfer.items.length > 0) {
+    if (!isUploading && e.dataTransfer.items && e.dataTransfer.items.length > 0) {
       setIsDragOver(true);
     }
-  }, []);
+  }, [isUploading]);
 
   const handleDragLeave = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
     // Only set to false if we're actually leaving the drop zone
-    if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+    if (!isUploading && !e.currentTarget.contains(e.relatedTarget as Node)) {
       setIsDragOver(false);
     }
-  }, []);
+  }, [isUploading]);
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -45,6 +45,8 @@ const FileDropZone: React.FC<FileDropZoneProps> = ({
     e.stopPropagation();
     setIsDragOver(false);
 
+    if (isUploading) return; // Prevent drop when uploading
+
     const files = Array.from(e.dataTransfer.files);
     if (files.length > 0) {
       const file = files[0];
@@ -54,9 +56,11 @@ const FileDropZone: React.FC<FileDropZoneProps> = ({
         alert(t('chat.pdf_only'));
       }
     }
-  }, [onFileUpload, t]);
+  }, [onFileUpload, t, isUploading]);
 
   const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    if (isUploading) return; // Prevent file selection when uploading
+    
     const files = e.target.files;
     if (files && files.length > 0) {
       const file = files[0];
@@ -66,7 +70,7 @@ const FileDropZone: React.FC<FileDropZoneProps> = ({
         alert(t('chat.pdf_only'));
       }
     }
-  }, [onFileUpload, t]);
+  }, [onFileUpload, t, isUploading]);
 
   return (
     <div className="flex-1 flex flex-col h-full bg-gradient-to-br from-slate-50 via-purple-50/30 to-blue-50/40 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative overflow-hidden">
@@ -88,8 +92,13 @@ const FileDropZone: React.FC<FileDropZoneProps> = ({
           </div>
         </div>
         <button
-          onClick={onCancel}
-          className="p-2 rounded-xl bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 transition-all duration-200 text-gray-600 dark:text-gray-300"
+          onClick={isUploading ? undefined : onCancel}
+          disabled={isUploading}
+          className={`p-2 rounded-xl transition-all duration-200 ${
+            isUploading 
+              ? 'bg-gray-200 dark:bg-slate-600 text-gray-400 dark:text-gray-500 cursor-not-allowed' 
+              : 'bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 text-gray-600 dark:text-gray-300 cursor-pointer'
+          }`}
         >
           <BiX className="h-5 w-5" />
         </button>
@@ -108,21 +117,28 @@ const FileDropZone: React.FC<FileDropZoneProps> = ({
         >
           <div
             className={`border-2 border-dashed rounded-3xl p-12 text-center transition-all duration-300 ${
-              isDragOver
+              isUploading
+                ? 'border-gray-400 bg-gray-50/80 dark:bg-slate-700/80 cursor-not-allowed'
+                : isDragOver
                 ? 'border-blue-500 bg-blue-50/80 dark:bg-blue-900/20 shadow-2xl'
                 : 'border-gray-300 dark:border-slate-600 bg-white/80 dark:bg-slate-800/80 hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-900/10'
             } backdrop-blur-xl shadow-xl`}
           >
             {isUploading ? (
               <div className="space-y-6">
-                <div className="animate-spin rounded-full h-16 w-16 border-4 border-blue-500 border-t-transparent mx-auto"></div>
-                <div className="space-y-2">
+                <div className="animate-spin rounded-full h-16 w-16 border-4 border-purple-500 border-t-transparent mx-auto"></div>
+                <div className="space-y-3">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    {t('chat.uploading_processing')}
+                    Đang xử lý file...
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    {t('chat.please_wait')}
+                    Đang upload và phân tích nội dung PDF
                   </p>
+                  <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3 mt-4">
+                    <p className="text-sm text-yellow-800 dark:text-yellow-200 font-medium">
+                      ⚠️ Vui lòng không đóng trang web trong quá trình xử lý
+                    </p>
+                  </div>
                 </div>
               </div>
             ) : (
@@ -142,12 +158,17 @@ const FileDropZone: React.FC<FileDropZoneProps> = ({
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-lg">
                     {t('chat.or_select_file')}{' '}
-                    <label className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer font-semibold underline underline-offset-2">
+                    <label className={`font-semibold underline underline-offset-2 ${
+                      isUploading 
+                        ? 'text-gray-400 dark:text-gray-500 cursor-not-allowed' 
+                        : 'text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer'
+                    }`}>
                       {t('common.select')}
                       <input
                         type="file"
                         accept=".pdf"
                         onChange={handleFileSelect}
+                        disabled={isUploading}
                         className="hidden"
                       />
                     </label>

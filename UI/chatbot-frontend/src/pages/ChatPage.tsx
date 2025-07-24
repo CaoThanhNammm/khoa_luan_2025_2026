@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useChat } from '../context/ChatContext';
 import { useSettings } from '../context/SettingsContext';
-import { useTranslation } from '../utils/translations';
+// import { useTranslation } from '../utils/translations';
 import { useNavigate } from 'react-router-dom';
 import { ChatSidebar, ChatContainer, FileDropZone, WelcomeScreen } from '../components/chat';
 import { FileUploadService } from '../services/FileUploadService';
@@ -11,8 +11,8 @@ import PageTransition from '../components/PageTransition';
 
 const ChatPage: React.FC = () => {
   const { user } = useAuth();
-  const { settings, showNotification } = useSettings();
-  const { t } = useTranslation(settings.language);
+  const { showNotification } = useSettings();
+  // const { t } = useTranslation(settings.language);
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
@@ -42,8 +42,25 @@ const ChatPage: React.FC = () => {
 
     try {
       if (chatContext.currentConversation) {
-        // Send message to existing conversation
-        await chatContext.sendMessage(chatContext.currentConversation.id, inputMessage);
+        // Check if this is a temporary conversation (with suggested questions)
+        const isTemporaryConversation = chatContext.currentConversation.id.startsWith('temp_'); // Temporary IDs start with 'temp_'
+        
+        if (isTemporaryConversation) {
+          // For temporary conversations, check if it has document info
+          const hasDocument = chatContext.currentConversation.hasDocument;
+          const documentId = chatContext.currentConversation.documentInfo?.documentId;
+          
+          if (hasDocument && documentId) {
+            // Create conversation with document (for student handbook)
+            await chatContext.createNewConversationWithDocument(inputMessage, documentId);
+          } else {
+            // Create regular conversation
+            await chatContext.createNewConversation(inputMessage);
+          }
+        } else {
+          // Send message to existing conversation
+          await chatContext.sendMessage(chatContext.currentConversation.id, inputMessage);
+        }
       } else {
         // Create new conversation
         await chatContext.createNewConversation(inputMessage);
@@ -56,14 +73,13 @@ const ChatPage: React.FC = () => {
     chatContext.clearError(); // Clear any existing errors
     chatContext.clearCurrentConversation(); // Clear the current conversation
     
-    // If it's a default session, create a new conversation with default document
+    // If it's a default session, create a new conversation with suggested questions
     if (type === 'default') {
       try {
         // Hide file drop zone if it's currently showing
         setShowFileDropZone(false);
-        // Create a new conversation with the default document
-        const defaultMessage = "Xin chào, tôi muốn tìm hiểu về thông tin trong sổ tay sinh viên.";
-        await chatContext.createNewConversationWithDocument(defaultMessage, 'so-tay-sinh-vien-2024');
+        // Create a new conversation with suggested questions (no initial message)
+        await chatContext.createNewConversationWithSuggestedQuestions();
       } catch (error) {
         console.error('Error creating default session:', error);
       }
@@ -75,14 +91,20 @@ const ChatPage: React.FC = () => {
 
   const handleSwitchToSession = async (conversationId: string) => {
     setShowFileDropZone(false); // Hide file drop zone when switching conversations
-    await chatContext.switchToConversation(Number(conversationId));
+    await chatContext.switchToConversation(conversationId);
   };
 
   const handleDeleteSession = async (conversationId: string) => {
-    await chatContext.deleteConversation(Number(conversationId));
+    await chatContext.deleteConversation(conversationId);
   };
 
   const handleFileUpload = async (file: File) => {
+    // Prevent multiple simultaneous uploads
+    if (isUploading) {
+      showNotification('Upload already in progress. Please wait...', 'info');
+      return;
+    }
+
     // Validate file size (10MB = 10 * 1024 * 1024 bytes)
     const maxFileSize = 10 * 1024 * 1024;
     if (file.size > maxFileSize) {
@@ -96,45 +118,29 @@ const ChatPage: React.FC = () => {
     setIsUploading(true);
     
     try {
-      // Get current conversation ID if available
-      const conversationId = chatContext.currentConversation?.id;
-      console.log('Uploading file with conversation ID:', conversationId);
-      
-      const response = await FileUploadService.uploadFile(file, conversationId);
+      const response = await FileUploadService.uploadFile(file);
       
       // Check if upload was successful or is processing
       if (response && (response.document_id || response.filename || response.message)) {
         const filename = response.filename || file.name;
         const documentId = response.document_id || 'unknown';
-        const status = response.status || 'success';
+        const fileSize = response.file_size || file.size;
         
-        if (status === 'processing') {
-          showNotification(
-            `File "${filename}" uploaded and is being processed. You can start chatting while processing continues in the background.`,
-            'info'
-          );
-        } else {
-          showNotification(
-            `File "${filename}" uploaded successfully! Document ID: ${documentId}${conversationId ? ` linked to conversation ${conversationId}` : ''}`,
-            'success'
-          );
-        }
+        // Always show success message after upload completes
+        showNotification(
+          `File "${filename}" uploaded successfully!`,
+          'success'
+        );
         
-        // Create appropriate message based on processing status
-        const chatMessage = status === 'processing' 
-          ? `I've uploaded a PDF file: ${filename}. The file is currently being processed. Please help me analyze this document once processing is complete.`
-          : `I've uploaded a PDF file: ${filename}. Please help me analyze this document.`;
-        
-        // If no current conversation, create a new one with the uploaded file info
-        if (!chatContext.currentConversation) {
-          await chatContext.createNewConversation(chatMessage);
-        } else {
-          // If there's a current conversation, send a message about the uploaded file
-          await chatContext.sendMessage(chatContext.currentConversation.id, chatMessage);
-        }
-        
-        // Reload conversations to get updated document information
-        await chatContext.loadConversations();
+        // Create empty conversation with uploaded document using document_id and full file info
+        await chatContext.createEmptyConversationWithUploadedDocument(
+          documentId, 
+          filename, 
+          fileSize,
+          response.status,
+          response.s3_key,
+          response.s3_url
+        );
         
         // Hide file drop zone after successful upload
         setShowFileDropZone(false);
@@ -143,8 +149,20 @@ const ChatPage: React.FC = () => {
       }
     } catch (error) {
       console.error('File upload failed:', error);
+      let errorMessage = 'Unknown error occurred';
+      
+      if (error instanceof Error) {
+        if (error.message.includes('timeout')) {
+          errorMessage = 'Upload timeout - file processing took too long. Please try again with a smaller file.';
+        } else if (error.message.includes('Network')) {
+          errorMessage = 'Network error - please check your internet connection and try again.';
+        } else {
+          errorMessage = error.message;
+        }
+      }
+      
       showNotification(
-        `File upload failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        `File upload failed: ${errorMessage}`,
         'error'
       );
     } finally {
@@ -166,7 +184,7 @@ const ChatPage: React.FC = () => {
     timestamp: new Date(conv.createdAt),
     hasDocument: conv.hasDocument || false,
     documentFilename: conv.documentInfo?.filename,
-    documentType: conv.documentInfo?.documentId === 'so-tay-sinh-vien-2024' ? 'default' : 'upload'
+    documentType: conv.documentInfo?.documentId === 'so_tay_sinh_vien_2024' ? 'default' : 'upload'
   }));
 
   const currentSessionId = chatContext.currentConversation?.id.toString() || '';
@@ -209,6 +227,7 @@ const ChatPage: React.FC = () => {
           conversationId={chatContext.currentConversation?.id}
           hasDocument={chatContext.currentConversation?.hasDocument || false}
           documentInfo={chatContext.currentConversation?.documentInfo}
+          showSuggestedQuestions={messages.length === 0 && chatContext.currentConversation?.hasDocument}
         />
       ) : (
         <WelcomeScreen
@@ -218,18 +237,24 @@ const ChatPage: React.FC = () => {
 
       {/* File Upload Loading Overlay */}
       {isUploading && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
-          <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-2xl border border-gray-200 dark:border-slate-700 max-w-sm w-full mx-4">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-2xl border border-gray-200 dark:border-slate-700 max-w-md w-full mx-4">
             <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                {t('chat.processing_file')}
+              <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-purple-600 mx-auto mb-6"></div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                Đang xử lý file...
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                {t('chat.processing_description')}
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                Đang upload và xử lý file PDF của bạn. Quá trình này có thể mất vài phút.
               </p>
-              <div className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-                {t('chat.do_not_close')}
+              <div className="bg-gray-100 dark:bg-slate-700 rounded-lg p-3 mb-4">
+                <div className="flex items-center justify-center space-x-2 text-sm text-gray-700 dark:text-gray-300">
+                  <div className="w-2 h-2 bg-purple-600 rounded-full animate-pulse"></div>
+                  <span>Vui lòng không đóng trang web</span>
+                </div>
+              </div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">
+                Hệ thống đang phân tích nội dung và chuẩn bị cho việc chat
               </div>
             </div>
           </div>

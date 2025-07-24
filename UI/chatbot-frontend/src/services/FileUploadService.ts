@@ -1,38 +1,55 @@
 import { AxiosError } from 'axios';
-import axios from './api';
+import axios from 'axios';
 import AuthService from './AuthService';
 
 export interface FileUploadResponse {
   message: string;
   document_id: string;
-  conversation_id?: number;
+  conversation_uuid?: string;
   filename: string;
   file_size: number;
-  sentences_count: number;
+  sentences_count?: number;
   s3_key: string;
   s3_url: string;
   status: string;
 }
 
-export const uploadFile = async (file: File, conversationId?: number): Promise<FileUploadResponse> => {
+// Track ongoing uploads to prevent duplicates with Promise tracking
+let ongoingUploads = new Map<string, Promise<FileUploadResponse>>();
+
+export const uploadFile = async (file: File): Promise<FileUploadResponse> => {
+  // Create unique identifier for this file upload
+  const fileId = `${file.name}-${file.size}-${file.lastModified}`;
+  
+  // Check if this exact file is already being uploaded
+  if (ongoingUploads.has(fileId)) {
+    console.log('File upload already in progress, returning existing promise');
+    return ongoingUploads.get(fileId)!;
+  }
+
+  // Create and store the upload promise
+  const uploadPromise = performUpload(file, fileId);
+  ongoingUploads.set(fileId, uploadPromise);
+  
+  return uploadPromise;
+};
+
+const performUpload = async (file: File, fileId: string): Promise<FileUploadResponse> => {
+
   try {
     const formData = new FormData();
     formData.append('file', file);
-    
-    // Add conversation_id if provided
-    if (conversationId !== undefined) {
-      formData.append('conversation_id', conversationId.toString());
-    }
 
-    // Get auth headers from AuthService
-    const authHeaders = AuthService.getAuthHeader();
+    // Call local FastAPI backend
+    const uploadUrl = 'http://localhost:8000/api/upload-file';
     
-    const response = await axios.post<FileUploadResponse>('/api/upload-file', formData, {
+    const response = await axios.post<FileUploadResponse>(uploadUrl, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
-        ...authHeaders,
+        'User-Agent': 'ChatBot-Frontend/1.0',
+        ...AuthService.getAuthHeader() // Add authentication header
       },
-      timeout: 600000, // 10 minutes timeout for file upload
+      timeout: 1200000, // 20 minutes timeout for large files
     });
 
     return response.data;
@@ -52,6 +69,9 @@ export const uploadFile = async (file: File, conversationId?: number): Promise<F
       // Something else happened
       throw new Error((error as Error)?.message || 'An unexpected error occurred');
     }
+  } finally {
+    // Always remove from ongoing uploads when done (success or failure)
+    ongoingUploads.delete(fileId);
   }
 };
 

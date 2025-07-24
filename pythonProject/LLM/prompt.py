@@ -71,6 +71,7 @@ Dựa trên các thực thể và quan hệ đã trích xuất, đồ thị tri 
 }}
 """
 
+
 def reflection_stsv():
     return """
 Tài liệu đã truy xuất không đúng.
@@ -86,6 +87,7 @@ Hãy phản hồi theo dạng sau:
   <trích xuất như ví dụ, không được ghi chuỗi theo kiểu lồng chuỗi>
 }}
 """
+
 
 def generator_stsv():
     return """
@@ -162,8 +164,9 @@ Bạn là một hệ thống trích xuất thông tin từ văn bản. Tuân the
 Yêu cầu:
 - Trả về kết quả dưới dạng JSON với các trường: relationships.
 - Mỗi relationship cần có source, target, type_source, type_target và relation.
-- source và target sẽ là 1 json có các thuộc tính mặc định là name, ngoài ra sẽ có từ 2 ĐẾN 5 THUỘC TÍNH KHÁC NHAU tùy theo thông tin văn bản(giống như lưu trữ của Neo4j). Không lặp lại thuộc tính type Thuộc tính ghi tiếng anh, còn giá trị ghi tiếng việt
+- source và target sẽ là 1 json có các thuộc tính mặc định là name, ngoài ra sẽ có từ 2 ĐẾN 5 THUỘC TÍNH KHÁC NHAU tùy theo thông tin văn bản(giống như lưu trữ của Neo4j). TYPE KHÔNG CẦN GHI LẠI Thuộc tính ghi tiếng anh, còn giá trị ghi tiếng việt
 - không giải thích gì thêm, không ghi mở đầu, kết thúc, thống kê. Chỉ phản hồi theo hướng dẫn
+- HÃY TRÍCH XUẤT MỘT CÁCH CHI TIẾT NHẤT CÓ THỂ VÀ KHÔNG BỎ QUA BẤT CỨ MỐI QUAN HỆ NÀO
 - CHỈ TRÍCH XUẤT TỪ THÔNG TIN MÀ TÔI CUNG CẤP, KHÔNG THÊM BẤT CỨ THÔNG TIN GÌ KHÁC BÊN NGOÀI.
 ---
 ### Giải thích:
@@ -271,7 +274,7 @@ def extract_question_from_text():
     return """nhiệm vụ của bạn là sẽ tạo ra TẤT CẢ các câu hỏi từ văn bản từ đầu đến cuối mà không bỏ xót 1 chi tiết nào, các câu hỏi viết chữ thường, chỉ tạo ra danh sách câu hỏi và không thêm bất cứ thông tin gì"""
 
 # yêu cầu llm dự đoán câu hỏi sẽ thuộc về phần nào trong sổ tay sinh viên
-def predict_question_belong_to():
+def predict_question_belong_to_stsv():
     return """
     Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. Nhiệm vụ của bạn:
     Đầu tiên, cần dự đoán câu hỏi sau nằm trong phần nào trong mục lục mà tôi cung cấp:
@@ -556,7 +559,7 @@ def predict_question_belong_to():
 
 
     Thứ hai, sau khi xác định thuộc phần nào, bạn sẽ phải trả về câu cypher query theo mô tả sau:
-    1. các phần như part, section, article được dùng làm "type"(tất cả đều ghi thường, tiếng anh)
+    1. các phần như part, section, article được dùng làm "type"(tất cả đều ghi hoa chữ cái đầu, tiếng anh)
     2. các phần nội dung là phần "name"(tất cả đều ghi thường, tiếng việt)
 
     Cypher query:
@@ -580,380 +583,106 @@ def predict_question_belong_to():
       - Mọi câu hỏi đều thuộc mục lục, không có trường hợp không tìm thấy.
       - Query phải đúng định dạng mẫu
       - CHỈ PHẢN HỒI VỀ CYPHER QUERY VÀ KHÔNG GIẢI THÍCH GÌ THÊM
+      - TRONG CÂU CYPHER, DOCUMENT_ID PHẢI LÀ MỘT STRING 'so_tay_sinh_vien_2024'
 
 Ví dụ 1:
 Câu hỏi: Trường Đại học Nông Lâm Thành phố Hồ Chí Minh có diện tích bao nhiêu
 Cypher query:
-MATCH (document:Document {{name: '{document}'}})-[*]->(predict:Section {{name: 'quá trình hình thành và phát triển'}})
+MATCH (document:Document {{name: {document_id}}})-[*]->(predict:Section {{name: 'quá trình hình thành và phát triển'}})
 MATCH p=(predict)-[r*1..2]->(e)
 RETURN p
 
 Ví dụ 2:
 Câu hỏi: Khoa nào phụ trách ngành Công nghệ kỹ thuật năng lượng tái tạo?
 Cypher query:
-MATCH p=(document:Document {{name: ''{document}}})-[*]->(predict:Section {{name: 'các khoa - ngành đào tạo'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Section {{name: 'các khoa - ngành đào tạo'}})-[r*1..2]->(e)
 RETURN p
 
 Ví dụ 3:
 Câu hỏi: lễ tuyên dương tuyên_dương sinh viên có thành tích
 Cypher query:
-MATCH p=(document:Document {{name: {document}}})-[*]->(predict:Part {{name: 'chương 2: khen thưởng'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Part {{name: 'chương 2: khen thưởng'}})-[r*1..2]->(e)
 RETURN p
 
 Ví dụ 4:
 Câu hỏi: Hoạt động chính của CLB Nông Lâm Radio tại Đại học Nông Lâm TP.HCM là gì?
 Cypher query:
-MATCH p=(document:Document {{name: {document}}})-[*]->(predict:Section {{name: 'câu lạc bộ (clb) - đội, nhóm'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Section {{name: 'câu lạc bộ (clb) - đội, nhóm'}})-[r*1..2]->(e)
 RETURN p
 
 Ví dụ 5:
 Câu hỏi: ý thức chấp hành nội quy được_đánh_giá_bằng điểm rèn luyện có_khung_điểm_tối_đa 100 điểm
 Cypher query:
-MATCH p=(document:Document {{name: {document}}})-[*]->(predict:Article {{name: 'điều 5: đánh giá về ý thức chấp hành nội quy, quy chế, quy định trong cơ sở giáo dục đại học'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Article {{name: 'điều 5: đánh giá về ý thức chấp hành nội quy, quy chế, quy định trong cơ sở giáo dục đại học'}})-[r*1..2]->(e)
 RETURN p
 
 Ví dụ 6:
 Câu hỏi: sinh viên thực_hiện chấm điểm rèn luyện sử_dụng địa chỉ
 Cypher query:
-MATCH p=(document:Document {{name: {document}}})-[*]->(predict:Section {{name: 'quy chế đánh giá kết quả rèn luyện'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Section {{name: 'quy chế đánh giá kết quả rèn luyện'}})-[r*1..2]->(e)
 RETURN p
 
 Ví dụ 7:
 Câu hỏi: sinh viên tuân_theo quy định về học tập và rèn luyện
 Cypher query:
-MATCH p=(document:Document {{name: {document}}})-[*]->(predict:Part {{name: 'phần 2: học tập và rèn luyện'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Part {{name: 'phần 2: học tập và rèn luyện'}})-[r*1..2]->(e)
 RETURN p
 
 Ví dụ 8:
 Câu hỏi: sinh viên tuân_thủ quy tắc ứng xử tuân_thủ quy tắc ứng xử hỏi_hoặc_trả_lời giảng viên
 Cypher query:
-MATCH p=(document:Document {{name: {document}}})-[*]->(predict:Section {{name: 'quy tắc ứng xử văn hóa của người học'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Section {{name: 'quy tắc ứng xử văn hóa của người học'}})-[r*1..2]->(e)
 RETURN p
 
 Ví dụ 9:
 Câu hỏi: trường đại học nông lâm tp.hcm có giá trị cốt lõi
 Cypher query:
-MATCH p=(document:Document {{name: {document}}})-[*]->(predict:Section {{name: 'giá trị cốt lõi'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Section {{name: 'giá trị cốt lõi'}})-[r*1..2]->(e)
 RETURN p
 
 Ví dụ 10:
 Câu hỏi: sinh viên giao tiếp_với giảng viên cần_thể_hiện thái độ tôn trọng và ý thức kỷ luật thể hiện_qua ngôn ngữ
 Cypher query:
-MATCH p=(document:Document {{name: {document}}})-[*]->(predict:Section {{name: 'quy tắc ứng xử văn hóa của người học'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Section {{name: 'quy tắc ứng xử văn hóa của người học'}})-[r*1..2]->(e)
 RETURN p
 
 Ví dụ 11:
 Câu hỏi: không bị xử phạt vi phạm hành chính ở mức độ nào trở lên đối với những hành vi nào
 Cypher query:
-MATCH p=(document:Document {{name: {document}}})-[*]->(predict:Article {{name: 'một số nội dung vi phạm và khung xử lý kỷ luật sinh viên'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Article {{name: 'một số nội dung vi phạm và khung xử lý kỷ luật sinh viên'}})-[r*1..2]->(e)
 RETURN p
 Chỉ trả về cypher và không giải thích gì thêm
 
 Ví dụ 12:
 Câu hỏi: Tớm tắt phần 1
 Cypher query:
-MATCH p=(document:Document {{name: {document}}})-[*]->(predict:Article {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[r*1..2]->(e)
+MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:Article {{name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'}})-[r*1..2]->(e)
 RETURN p
 trả về theo format json sau:
 {{
 "cypher": <câu cypher>
 "path": <mô tả phân được truy xuất>
-}}
+}} 
 
 ### Câu hỏi: {question}
 
 """
 
-def predict_question_belong_to_system():
+def predict_question_belong_to():
     return """
     Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. Nhiệm vụ của bạn:
     Đầu tiên, cần dự đoán câu hỏi sau nằm trong phần nào trong mục lục mà tôi cung cấp:
 
-    Mục lục:
-     MERGE (a:Part {name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'})
-            MERGE (b:Section {name: 'quá trình hình thành và phát triển'})
-            MERGE (c:Section {name: 'sứ mạng'})
-            MERGE (d:Section {name: 'tầm nhìn'})
-            MERGE (e:Section {name: 'giá trị cốt lõi'})
-            MERGE (f:Section {name: 'mục tiêu chiến lược'})
-            MERGE (g:Section {name: 'cơ sở vật chất'})
-            MERGE (h:Section {name: 'các đơn vị trong trường'})
-            MERGE (i:Section {name: 'các khoa - ngành đào tạo'})
-            MERGE (j:Section {name: 'tuần sinh hoạt công dân - sinh viên'})
-            MERGE (k:Section {name: 'hoạt động phong trào sinh viên'})
-            MERGE (l:Section {name: 'câu lạc bộ (clb) - đội, nhóm'})
-            MERGE (m:Section {name: 'cơ sở đào tạo'})
-            MERGE (a)-[:BAO_GỒM]->(b)
-            MERGE (a)-[:BAO_GỒM]->(c)
-            MERGE (a)-[:BAO_GỒM]->(d)
-            MERGE (a)-[:BAO_GỒM]->(e)
-            MERGE (a)-[:BAO_GỒM]->(f)
-            MERGE (a)-[:BAO_GỒM]->(g)
-            MERGE (a)-[:BAO_GỒM]->(h)
-            MERGE (a)-[:BAO_GỒM]->(i)
-            MERGE (a)-[:BAO_GỒM]->(j)
-            MERGE (a)-[:BAO_GỒM]->(k)
-            MERGE (a)-[:BAO_GỒM]->(l)
-            MERGE (a)-[:BAO_GỒM]->(m)
-
-            # Episode 2: học tập và rèn luyện
-            MERGE (n:Part {name: 'phần 2: học tập và rèn luyện'})
-
-            MERGE (o:Section {name: 'quy chế sinh viên'})
-            MERGE (o2:Part {name: 'chương 2: quyền và nghĩa vụ của sinh viên'})
-            MERGE (o2_4:Article {name: 'điều 4: quyền của sinh viên'})
-            MERGE (o2_5:Article {name: 'điều 5: nghĩa vụ của sinh viên'})
-            MERGE (o2_6:Article {name: 'điều 6: các hành vi sinh viên không được làm'})
-
-            MERGE (p:Section {name: 'quy chế học vụ'})
-            MERGE (p2:Part {name: 'chương 2: lập kế hoạch và tổ chức giảng dạy'})
-            MERGE (p2_9:Article {name: 'điều 9: tổ chức đăng ký học tập'})
-            MERGE (p2_10:Article {name: 'điều 10: tổ chức lớp học phần'})
-            MERGE (p3:Part {name: 'chương 3: đánh giá kết quả học tập và cấp bằng tốt nghiệp'})
-            MERGE (p3_12:Article {name: 'điều 12: tổ chức thi kết thúc học phần'})
-            MERGE (p3_13:Article {name: 'điều 13: đánh giá và tính điểm học phần'})
-            MERGE (p3_14:Article {name: 'điều 14: xét tương đường và công nhận học phần của các cơ sở đào tạo khác'})
-            MERGE (p3_15:Article {name: 'điều 15: đánh giá kết quả học tập theo học kỳ, năm học'})
-            MERGE (p3_16:Article {name: 'điều 16: thông báo kết quả học tập'})
-            MERGE (p3_17:Article {name: 'điều 17: điểm rèn luyện(đrl)'})
-            MERGE (p3_18:Article {name: 'điều 18: xử lý kết quả học tập'})
-            MERGE (p3_19:Article {name: 'điều 19: khóa luận, tiểu luận, tích lũy tín chỉ tốt nghiệp'})
-            MERGE (p3_20:Article {name: 'điều 20: công nhận tốt nghiệp và cấp bằng tốt nghiêp'})
-            MERGE (p4:Part {name: 'chương 4: những quy định khác đối với sinh viên'})
-            MERGE (p4_21:Article {name: 'điều 21: nghỉ học tạm thời, thôi học'})
-            MERGE (p4_24:Article {name: 'điều 24: học cùng lúc hai chương trình'})
-
-            MERGE (q:Section {name: 'quy định về việc đào tạo trực tuyến'})
-            MERGE (q0_3:Article {name: 'điều 3: hệ thống đào tạo trực tuyến tại trường đại học nông lâm tp.hcm'})
-            MERGE (q0_9:Article {name: 'điều 9: đánh giá kết quả học tập trực tuyến'})
-            MERGE (q0_13:Article {name: 'điều 13: quyền và trách nhiệm của sinh viên'})
-
-            MERGE (r:Section {name: 'quy định khen thưởng, kỷ luật sinh viên'})
-            MERGE (r2:Part {name: 'chương 2: khen thưởng'})
-            MERGE (r2_4:Article {name: 'điều 4: nội dung khen thưởng'})
-            MERGE (r2_5:Article {name: 'điều 5: khen thưởng đối với cá nhân và tập thể sinh viên đạt thành tích xứng đánh để biểu dương, khen thưởng'})
-            MERGE (r2_6:Article {name: 'điều 6: khen thưởng đối với sinh viên tiêu biểu(svtb) vào cuối mỗi năm học'})
-            MERGE (r2_7:Article {name: 'điều 7: khen thưởng đối với sinh viên là thủ khoa, á khoa kỳ tuyển sinh đầu vào'})
-            MERGE (r2_8:Article {name: 'điều 8: khen thưởng đối với sinh viên tốt nghiệp'})
-            MERGE (r3:Part {name: 'chương 3: kỷ luật'})
-            MERGE (r3_11:Article {name: 'điều 11: hình thức kỷ luật và nội dung vi phạm'})
-            MERGE (r3_12:Article {name: 'điều 12: trình tự, thủ tục và hồ sơ xét kỷ luật'})
-            MERGE (r3_13:Article {name: 'điều 13: chấm dứt hiệu lực của quyết định kỷ luật'})
-            MERGE (r3_0:Article {name: 'một số nội dung vi phạm và khung xử lý kỷ luật sinh viên'})
-
-            MERGE (s:Section {name: 'quy chế đánh giá kết quả rèn luyện'})
-            MERGE (s0_3:Article {name: 'điều 3: nội dung đánh giá và thang điểm'})
-            MERGE (s0_4:Article {name: 'điều 4: đánh giá về ý thức tham gia học tập'})
-            MERGE (s0_5:Article {name: 'điều 5: đánh giá về ý thức chấp hành nội quy, quy chế, quy định trong cơ sở giáo dục đại học'})
-            MERGE (s0_6:Article {name: 'điều 6: đánh giá về ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, nghệ thuật, thể thao, phòng chống tội phạm và các tệ nạn xã hội'})
-            MERGE (s0_7:Article {name: 'điều 7: đánh giá về ý thức công dân trong quản hệ cộng đồng'})
-            MERGE (s0_8:Article {name: 'điều 8: Đánh giá về ý thức và kết quả khi tham gia công tác cán bộ lớp, các đoàn thể, tổ chức trong cơ sở giáo dục đại học hoặc người học đạt được thành tích đặc biệt trong học tập, rèn luyện'})
-            MERGE (s0_9:Article {name: 'điều 9: phân loại kết quả rèn luyện'})
-            MERGE (s0_10:Article {name: 'điều 10: phân loại để đánh giá'})
-            MERGE (s0_11:Article {name: 'điều 11: quy trình đánh giá kết quả rèn luyện'})
-
-            MERGE (t:Section {name: 'quy tắc ứng xử văn hóa của người học'})
-            MERGE (t0_4:Article {name: 'điều 4: ứng xử với công tác học tập, nghiên cứu khoa học, rèn luyện'})
-            MERGE (t0_5:Article {name: 'điều 5: ứng xử đối với giảng viên và nhân viên nhà trường'})
-            MERGE (t0_6:Article {name: 'điều 6: ứng xử với bạn bè'})
-            MERGE (t0_7:Article {name: 'điều 7: ứng xử với cảnh quan môi trường và tài sản công'})
-
-            MERGE (u:Section {name: 'cố vấn học tập'})
-            MERGE (v:Section {name: 'danh hiệu sinh viên 5 tốt'})
-            MERGE (v0_1:Article {name: 'đạo đức tốt'})
-            MERGE (v0_2:Article {name: 'học tập tốt'})
-            MERGE (v0_3:Article {name: 'thể lực tốt'})
-            MERGE (v0_4:Article {name: 'tình nguyện tốt'})
-            MERGE (v0_5:Article {name: 'hội nhập tốt'})
-            MERGE (v0_6:Article {name: 'khái niệm'})
-
-            MERGE (v1:Part {name: 'ngoài ra ưu tiên xét chọn những sinh viên đạt ít nhất 01 trong các các tiêu chuẩn sau'})
-            MERGE (v1_1:Article {name: 'ưu tiên 1'})
-            MERGE (v1_2:Article {name: 'ưu tiên 2'})
-            MERGE (v1_3:Article {name: 'ưu tiên 3'})
-            MERGE (v1_4:Article {name: 'ưu tiên 4'})
-            MERGE (v1_5:Article {name: 'ưu tiên 5'})
-            MERGE (v1_6:Article {name: 'ưu tiên 6'})
-
-            MERGE (w:Section {name: 'danh hiệu sinh viên tiêu biểu'})
-
-            MERGE (n)-[:BAO_GỒM]->(o)
-            MERGE (o)-[:BAO_GỒM]->(o2)
-            MERGE (o2)-[:BAO_GỒM]->(o2_4)
-            MERGE (o2)-[:BAO_GỒM]->(o2_5)
-            MERGE (o2)-[:BAO_GỒM]->(o2_6)
-
-            MERGE (n)-[:BAO_GỒM]->(p)
-            MERGE (p)-[:BAO_GỒM]->(p2)
-            MERGE (p2)-[:BAO_GỒM]->(p2_9)
-            MERGE (p2)-[:BAO_GỒM]->(p2_10)
-            MERGE (p)-[:BAO_GỒM]->(p3)
-            MERGE (p3)-[:BAO_GỒM]->(p3_12)
-            MERGE (p3)-[:BAO_GỒM]->(p3_13)
-            MERGE (p3)-[:BAO_GỒM]->(p3_14)
-            MERGE (p3)-[:BAO_GỒM]->(p3_15)
-            MERGE (p3)-[:BAO_GỒM]->(p3_16)
-            MERGE (p3)-[:BAO_GỒM]->(p3_17)
-            MERGE (p3)-[:BAO_GỒM]->(p3_18)
-            MERGE (p3)-[:BAO_GỒM]->(p3_19)
-            MERGE (p3)-[:BAO_GỒM]->(p3_20)
-            MERGE (p)-[:BAO_GỒM]->(p4)
-            MERGE (p4)-[:BAO_GỒM]->(p4_21)
-            MERGE (p4)-[:BAO_GỒM]->(p4_24)
-
-            MERGE (n)-[:BAO_GỒM]->(q)
-            MERGE (q)-[:BAO_GỒM]->(q0_3)
-            MERGE (q)-[:BAO_GỒM]->(q0_9)
-            MERGE (q)-[:BAO_GỒM]->(q0_13)
-
-            MERGE (n)-[:BAO_GỒM]->(r)
-            MERGE (r)-[:BAO_GỒM]->(r2)
-            MERGE (r2)-[:BAO_GỒM]->(r2_4)
-            MERGE (r2)-[:BAO_GỒM]->(r2_5)
-            MERGE (r2)-[:BAO_GỒM]->(r2_6)
-            MERGE (r2)-[:BAO_GỒM]->(r2_7)
-            MERGE (r2)-[:BAO_GỒM]->(r2_8)
-            MERGE (r)-[:BAO_GỒM]->(r3)
-            MERGE (r3)-[:BAO_GỒM]->(r3_11)
-            MERGE (r3)-[:BAO_GỒM]->(r3_12)
-            MERGE (r3)-[:BAO_GỒM]->(r3_13)
-            MERGE (r3)-[:BAO_GỒM]->(r3_0)
-
-            MERGE (n)-[:BAO_GỒM]->(s)
-            MERGE (s)-[:BAO_GỒM]->(s0_3)
-            MERGE (s)-[:BAO_GỒM]->(s0_4)
-            MERGE (s)-[:BAO_GỒM]->(s0_5)
-            MERGE (s)-[:BAO_GỒM]->(s0_6)
-            MERGE (s)-[:BAO_GỒM]->(s0_7)
-            MERGE (s)-[:BAO_GỒM]->(s0_8)
-            MERGE (s)-[:BAO_GỒM]->(s0_9)
-            MERGE (s)-[:BAO_GỒM]->(s0_10)
-            MERGE (s)-[:BAO_GỒM]->(s0_11)
-
-            MERGE (n)-[:BAO_GỒM]->(t)
-            MERGE (t)-[:BAO_GỒM]->(t0_4)
-            MERGE (t)-[:BAO_GỒM]->(t0_5)
-            MERGE (t)-[:BAO_GỒM]->(t0_6)
-            MERGE (t)-[:BAO_GỒM]->(t0_7)
-
-            MERGE (n)-[:BAO_GỒM]->(u)
-            MERGE (n)-[:BAO_GỒM]->(v)
-            MERGE (v)-[:BAO_GỒM]->(v0_1)
-            MERGE (v)-[:BAO_GỒM]->(v0_2)
-            MERGE (v)-[:BAO_GỒM]->(v0_3)
-            MERGE (v)-[:BAO_GỒM]->(v0_4)
-            MERGE (v)-[:BAO_GỒM]->(v0_5)
-            MERGE (v)-[:BAO_GỒM]->(v0_6)
-            MERGE (v)-[:BAO_GỒM]->(v1)
-            MERGE (v1)-[:BAO_GỒM]->(v1_1)
-            MERGE (v1)-[:BAO_GỒM]->(v1_2)
-            MERGE (v1)-[:BAO_GỒM]->(v1_3)
-            MERGE (v1)-[:BAO_GỒM]->(v1_4)
-            MERGE (v1)-[:BAO_GỒM]->(v1_5)
-            MERGE (v1)-[:BAO_GỒM]->(v1_6)
-
-            MERGE (n)-[:BAO_GỒM]->(w)
-            # Episode 3: hỗ trợ và dịch vụ
-            MERGE (x:Part {name: 'phần 3: hỗ trợ và dịch vụ'})
-            MERGE (y:Section {name: 'quy định phân cấp giải quyết thắc mắc của sinh viên'})
-            MERGE (y0_2:Article {name: 'điều 2: hình thức thắc mắc, kiến nghị'})
-            MERGE (y0_3:Article {name: 'điều 3: các bước gửi thắc mắc, kiên nghị'})
-            MERGE (y0_4:Article {name: 'điều 4: những vấn đề trao đổi trực tiếp hoặc gửi thư qua email'})
-            MERGE (y0_5:Article {name: 'điều 5: trách nhiệm của giảng viên và các bộ phận chức năng'})
-            MERGE (y0_6:Article {name: 'điều 6: những vấn đề đã trao đổi trực tiêp hoặc gửi thư không được giải quyết thoải đáng'})
-            MERGE (y0_7:Article {name: 'điều 7: những vấn đề liên quan đến tổ chức lớp học phần'})
-            MERGE (y0_8:Article {name: 'điều 8: những vấn đề liên quan đến điểm bộ phận, điểm thi kết thúc học phần, điểm thi học phần và tổ chức thi'})
-            MERGE (y0_9:Article {name: 'điều 9; chuyển thắc mắc, kiến nghị của sinh viên'})
-            MERGE (y0_10:Article {name: 'điều 10: những nội dung được nói trực tuyến trên website'})
-            MERGE (y0_11:Article {name: 'điều 11: yêu cầu đối với sinh viên tham gia trực tuyến'})
-
-            MERGE (z:Section {name: 'thông tin học bổng tài trợ'})
-            MERGE (aa:Section {name: 'vay vốn học tập từ ngân hàng chính sách xã hội dành cho sinh viên'})
-            MERGE (aa0_1:Article {name: 'đối tượng sinh viên được hỗ trợ vay tiền'})
-            MERGE (aa0_2:Article {name: 'điều kiện để được hỗ trợ vay tiền sinh viên'})
-            MERGE (aa0_3:Article {name: 'mức tiền và lãi suất hỗ trợ vay tiền sinh viên'})
-            MERGE (aa0_4:Article {name: 'phương thức cho vay tiền sinh viên'})
-            MERGE (aa0_5:Article {name: 'thông tin về vay vốn học tập từ ngân hàng chính sách xã hội dành cho sinh viên'})
-
-            MERGE (bb:Section {name: 'quy trình xác nhận hồ sơ sinh viên'})
-            MERGE (bb0_1:Article {name: 'các loại giấy tờ được xác nhận'})
-            MERGE (bb0_2:Article {name: 'kênh đăng ký'})
-            MERGE (bb0_3:Article {name: 'đăng ký'})
-            MERGE (bb0_4:Article {name: 'quy trình'})
-
-            MERGE (cc:Section {name: 'hồ sơ yêu cầu bồi thường bảo hiểm tai nạn sinh viên'})
-            MERGE (dd:Section {name: 'thông tin về bảo hiểm y tế'})
-
-            MERGE (ee:Section {name: 'hướng dẫn sử dụng các kênh thanh toán học phí, bhyt, lệ phí xét tốt nghiệp'})
-            MERGE (ee0_1:Article {name: 'thanh toán tại quầy giao dịch của bidv'})
-            MERGE (ee0_2:Article {name: 'thanh toán qua kênh bidv smart banking'})
-            MERGE (ee0_3:Article {name: 'thanh toán qua kênh bidv online'})
-            MERGE (ee0_4:Article {name: 'thanh toán qua atm của bidv'})
-            MERGE (ee0_5:Article {name: 'thanh toán qua website sinh viên'})
-            MERGE (ee0_6:Article {name: 'hướng dẫn cài đặt sinh trắc học'})
-
-            MERGE (ff:Section {name: 'tham vấn tâm lý học đường'})
-            MERGE (gg:Section {name: 'trung tâm dịch vụ sinh viên'})
-
-            MERGE (mm:Section {name: 'thông tin học bổng khuyến khích học tập'})
-            MERGE (mm0_1:Article {name: 'đối tượng'})
-            MERGE (mm0_2:Article {name: 'quỹ học bổng khuyến khích học tập'})
-            MERGE (mm0_3:Article {name: 'căn cứ để xét học bổng khuyến khích học tập'})
-            MERGE (mm0_4:Article {name: 'mức học bổng khuyến khích học tập'})
-            MERGE (mm0_5:Article {name: 'quy trình xét học bổng'})
-
-            MERGE (x)-[:BAO_GỒM]->(y)
-            MERGE (y)-[:BAO_GỒM]->(y0_2)
-            MERGE (y)-[:BAO_GỒM]->(y0_3)
-            MERGE (y)-[:BAO_GỒM]->(y0_4)
-            MERGE (y)-[:BAO_GỒM]->(y0_5)
-            MERGE (y)-[:BAO_GỒM]->(y0_6)
-            MERGE (y)-[:BAO_GỒM]->(y0_7)
-            MERGE (y)-[:BAO_GỒM]->(y0_8)
-            MERGE (y)-[:BAO_GỒM]->(y0_9)
-            MERGE (y)-[:BAO_GỒM]->(y0_10)
-            MERGE (y)-[:BAO_GỒM]->(y0_11)
-
-            MERGE (x)-[:BAO_GỒM]->(z)
-            MERGE (x)-[:BAO_GỒM]->(aa)
-            MERGE (aa)-[:BAO_GỒM]->(aa0_1)
-            MERGE (aa)-[:BAO_GỒM]->(aa0_2)
-            MERGE (aa)-[:BAO_GỒM]->(aa0_3)
-            MERGE (aa)-[:BAO_GỒM]->(aa0_4)
-            MERGE (aa)-[:BAO_GỒM]->(aa0_5)
-
-            MERGE (x)-[:BAO_GỒM]->(bb)
-            MERGE (bb)-[:BAO_GỒM]->(bb0_1)
-            MERGE (bb)-[:BAO_GỒM]->(bb0_2)
-            MERGE (bb)-[:BAO_GỒM]->(bb0_3)
-            MERGE (bb)-[:BAO_GỒM]->(bb0_4)
-
-            MERGE (x)-[:BAO_GỒM]->(cc)
-            MERGE (x)-[:BAO_GỒM]->(dd)
-            MERGE (x)-[:BAO_GỒM]->(ee)
-            MERGE (ee)-[:BAO_GỒM]->(ee0_1)
-            MERGE (ee)-[:BAO_GỒM]->(ee0_2)
-            MERGE (ee)-[:BAO_GỒM]->(ee0_3)
-            MERGE (ee)-[:BAO_GỒM]->(ee0_4)
-            MERGE (ee)-[:BAO_GỒM]->(ee0_5)
-            MERGE (ee)-[:BAO_GỒM]->(ee0_6)
-
-            MERGE (x)-[:BAO_GỒM]->(ff)
-            MERGE (x)-[:BAO_GỒM]->(gg)
-            MERGE (x)-[:BAO_GỒM]->(mm)
-            MERGE (mm)-[:BAO_GỒM]->(mm0_1)
-            MERGE (mm)-[:BAO_GỒM]->(mm0_2)
-            MERGE (mm)-[:BAO_GỒM]->(mm0_3)
-            MERGE (mm)-[:BAO_GỒM]->(mm0_4)
-            MERGE (mm)-[:BAO_GỒM]->(mm0_5)
+    Mục lục: 
+    {parts_of_document}
 
 
     Thứ hai, sau khi xác định thuộc phần nào, bạn sẽ phải trả về câu cypher query theo mô tả sau:
-    1. các phần như part, section, article được dùng làm "type"(tất cả đều ghi thường, tiếng anh)
+    1. các phần như part được dùng làm "type"(ghi hoa chữ cái đầu, tiếng anh)
     2. các phần nội dung là phần "name"(tất cả đều ghi thường, tiếng việt)
 
     Cypher query:
-    MATCH p=(first:<type> {name: '<name>'})-[:BAO_GỒM]->(second:<type> {name: '<name>'})-[:BAO_GỒM]->(third:<type> {name: '<name>'})-[r*1..2]->(e)
+    MATCH p=(document:Document {{name: {document_id}}})-[*]->(predict:<type> {{name: '<name>'}})-[r*1..2]->(e)
     RETURN p
 
     Trong đó:
@@ -963,87 +692,20 @@ def predict_question_belong_to_system():
 
     Hướng dẫn:
       1. Phân tích câu hỏi để xác định chủ đề chính.
-      2. Tìm mục cụ thể nhất trong mục lục liên quan đến chủ đề đó:
-        - Nếu câu hỏi liên quan đến một section, chỉ định part chứa section đó và section đó.
-        - Nếu câu hỏi liên quan đến một part con trong section, chỉ định part -> section -> part con.
-        - Nếu câu hỏi rõ ràng đề cập đến một article cụ thể, bạn có thể chỉ định đến article đó.
-        - Nếu <name> là phần 1 thì cypher query phải là 2 tầng
-        - Nếu <name> là phần 2 thì cypher query phải là 4 tầng(trừ danh hiệu sinh viên tiêu biểu, cố vấn học tập là 2 tầng và một số nội dung vi phạm và khung xử lý kỷ luật sinh viên là 3 tầng)
-        - Nếu <name> là phần 3 thì cypher queey phải là 3 tầng(trừ thông tin học bổng tài trợ, hồ sơ yêu cầu bồi thường bảo hiểm tai nạn sinh viên, thông tin về bảo hiểm y tế, tham vấn tâm lý học đường, trung tâm dịch vụ sinh viên là 2 tầng)
-      3. Dùng phán đoán của bạn để quyết định mức độ chi tiết của đường dẫn dựa trên tính cụ thể của câu hỏi.
+      2. Tìm mục cụ thể nhất trong mục lục liên quan đến chủ đề đó
+      3. Dùng phán đoán của bạn để quyết định đường dẫn dựa trên tính cụ thể của câu hỏi.
 
     Lưu ý:
       - Mọi câu hỏi đều thuộc mục lục, không có trường hợp không tìm thấy.
       - Query phải đúng định dạng mẫu
       - CHỈ PHẢN HỒI VỀ CYPHER QUERY VÀ KHÔNG GIẢI THÍCH GÌ THÊM
+trả về theo format json sau:
+{{
+"cypher": <câu cypher>
+"path": <mô tả phân được truy xuất>
+}}
 
-Ví dụ 1:
-Câu hỏi: Trường Đại học Nông Lâm Thành phố Hồ Chí Minh có diện tích bao nhiêu
-Cypher query:
-MATCH p=(first:Part {name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'})-[:BAO_GỒM]->(second:Section {name: 'quá trình hình thành và phát triển'})-[r*1..2]->(e)
-RETURN p
-
-Ví dụ 2:
-Câu hỏi: Khoa nào phụ trách ngành Công nghệ kỹ thuật năng lượng tái tạo?
-Cypher query:
-MATCH p=(first:Part {name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'})-[:BAO_GỒM]->(second:Section {name: 'các khoa - ngành đào tạo'})-[r*1..2]->(e)
-RETURN p
-
-Ví dụ 3:
-Câu hỏi: lễ tuyên dương tuyên_dương sinh viên có thành tích
-Cypher query:
-MATCH p=(first:Part {name: 'phần 2: học tập và rèn luyện'})-[:BAO_GỒM]->(second:Section {name: 'quy định khen thưởng, kỷ luật sinh viên'})-[:BAO_GỒM]->(third:Part {name: 'chương 2: khen thưởng'})-[r*1..2]->(e)
-RETURN p
-
-Ví dụ 4:
-Câu hỏi: Hoạt động chính của CLB Nông Lâm Radio tại Đại học Nông Lâm TP.HCM là gì?
-Cypher query:
-MATCH p=(first:Part {name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'})-[:BAO_GỒM]->(third:Section {name: 'câu lạc bộ (clb) - đội, nhóm'})-[r*1..2]->(e)
-RETURN p
-
-Ví dụ 5:
-Câu hỏi: ý thức chấp hành nội quy được_đánh_giá_bằng điểm rèn luyện có_khung_điểm_tối_đa 100 điểm
-Cypher query:
-MATCH p=(first:Part {name: 'phần 2: học tập và rèn luyện'})-[:BAO_GỒM]->(second:Section {name: 'quy chế đánh giá kết quả rèn luyện'})-[:BAO_GỒM]->(third:Article {name: 'điều 5: đánh giá về ý thức chấp hành nội quy, quy chế, quy định trong cơ sở giáo dục đại học'})-[r*1..2]->(e)
-RETURN p
-
-Ví dụ 6:
-Câu hỏi: sinh viên thực_hiện chấm điểm rèn luyện sử_dụng địa chỉ
-Cypher query:
-MATCH p=(first:Part {name: 'phần 2: học tập và rèn luyện'})-[:BAO_GỒM]->(second:Section {name: 'quy chế đánh giá kết quả rèn luyện'})-[r*1..2]->(e)
-RETURN p
-
-Ví dụ 7:
-Câu hỏi: sinh viên tuân_theo quy định về học tập và rèn luyện
-Cypher query:
-MATCH p=(first:Part {name: 'phần 2: học tập và rèn luyện'})-[r*1..2]->(e)
-RETURN p
-
-Ví dụ 8:
-Câu hỏi: sinh viên tuân_thủ quy tắc ứng xử tuân_thủ quy tắc ứng xử hỏi_hoặc_trả_lời giảng viên
-Cypher query:
-MATCH p=(first:Part {name: 'phần 2: học tập và rèn luyện'})-[:BAO_GỒM]->(second:Section {name: 'quy tắc ứng xử văn hóa của người học'})-[r*1..2]->(e)
-RETURN p
-
-Ví dụ 9:
-Câu hỏi: trường đại học nông lâm tp.hcm có giá trị cốt lõi
-Cypher query:
-MATCH p=(first:Part {name: 'phần 1: nlu - định hướng trường đại học nghiên cứu'})-[:BAO_GỒM]->(second:Section {name: 'giá trị cốt lõi'})-[r*1..2]->(e)
-RETURN p
-
-Ví dụ 10:
-Câu hỏi: sinh viên giao tiếp_với giảng viên cần_thể_hiện thái độ tôn trọng và ý thức kỷ luật thể hiện_qua ngôn ngữ
-Cypher query:
-MATCH p=(first:Part {name: 'phần 2: học tập và rèn luyện'})-[:BAO_GỒM]->(second:Section {name: 'quy tắc ứng xử văn hóa của người học'})-[r*1..2]->(e)
-RETURN p
-
-Ví dụ 11:
-Câu hỏi: không bị xử phạt vi phạm hành chính ở mức độ nào trở lên đối với những hành vi nào
-Cypher query:
-MATCH p=(first:Part {name: 'phần 2: học tập và rèn luyện'})-[:BAO_GỒM]->(second:Section {name: 'quy định khen thưởng, kỷ luật sinh viên'})-[:BAO_GỒM]->(third:Part {name: 'chương 3: kỷ luật'})-[:BAO_GỒM]->(fourth:Article {name: 'một số nội dung vi phạm và khung xử lý kỷ luật sinh viên'})-[r*1..2]->(e)
-RETURN p
-
-Chỉ trả về cypher và không giải thích gì thêm
+### Câu hỏi: {question}
 """
 
 # dùng để trích xuất entities và relationship cho câu hỏi
@@ -1083,6 +745,7 @@ Yêu cầu:
 3. **Định dạng đầu ra**:
    - Sử dụng JSON để trả về kết quả một cách có cấu trúc, dễ dàng xử lý tiếp theo."""
 
+
 def extract_text_from_paragraph(paragraph):
     return f"""
     Bạn là một trợ lý AI chuyên xử lý văn bản tự nhiên. Tôi có một văn bản lớn và muốn bạn giúp tôi trích xuất các đoạn văn nhỏ từ văn bản đó để lưu vào vectordatabase. Hãy thực hiện theo các yêu cầu sau:
@@ -1102,10 +765,12 @@ def extract_text_from_paragraph(paragraph):
 Dưới đây là văn bản lớn mà tôi cung cấp:
 {paragraph}"""
 
+
 def answer_by_context():
     return """
 hãy dựa vào ngữ cảnh của các câu trả lời trước để trả lời câu hỏi {question}. Nếu không có ngữ cảnh để trả lời thì phản hổi 'Không có thông tin' và không giải thích gì thêm.
 """
+
 
 def chunking():
     return """
@@ -1114,18 +779,24 @@ Bạn là một trợ lý AI chuyên xử lý văn bản tự nhiên. Nhiệm v�
 1. Không được cắt giữa chừng làm mất nghĩa của câu hoặc ý chính.
 2. Đảm bảo mỗi đoạn nhỏ giữ được ý nghĩa độc lập và liên quan chặt chẽ đến ngữ cảnh, không bị rời rạc, không thay đổi, chỉnh sửa hoặc thiếu của văn bản gốc.
 3. Các đoạn văn nhỏ phải liền mạch với nhau, nghĩa là nội dung của đoạn sau phải có sự kết nối tự nhiên với đoạn trước, giống như trong văn bản gốc.
-4. Trả về kết quả dưới dạng json như sau:
-{{
+4. Mỗi đoạn phải có ít nhất 2 câu và nhiều nhất là 4 câu. 
+5. Trả về kết quả dưới dạng json như sau:
+{
 "đoạn 1": "",
 "đoạn 2": "",
 "đoạn 3": "",
 "đoạn 4": "",
 ....
-}}
-5. Phải trích xuất từ đầu đến cuối, một cách liên tục và liền mạch mà không bỏ lỡ bất kỳ từ gì
-6. Chỉ trích xuất những nội dung có ý nghĩa và nội dung. Bỏ các nội dung của header, footer, phần, chương, 1., 2., 3., a., b., c., mục lục,...
-7. Json phải sử dụng ký tự "" không được dùng ''
+}
+6. Phải trích xuất từ đầu đến cuối, một cách liên tục và liền mạch mà không bỏ lỡ bất kỳ từ gì
+7. Chỉ trích xuất những nội dung có ý nghĩa và nội dung. Bỏ các nội dung của header, footer, phần, chương, 1., 2., 3., a., b., c., mục lục,...
+8. Json phải sử dụng ký tự "" không được dùng ''
+9. HÃY NHỚ MỞ NGOẶC VÀ ĐÓNG NGOẶC ĐỀ ĐÚNG FORMAT CỦA JSON
+10. KHÔNG GIẢI THÍCH GÌ THÊM, KHÔNG MỞ ĐẦU, KẾT THÚC
+11. NỘI DUNG CỦA TỪNG ĐOẠN KHÔNG CHỨA CHUỖI LỒNG CHUỖI VÍ DỤ NHƯ "xin chào, tôi tên là h"hoang" MÀ ĐÚNG LÀ "xin chào, tôi tên là h hoang"
+12. KHÔNG THAN PHIỀN VỀ BẤT KỲ NỘI DUNG KHÁC
 Hãy trích xuất các đoạn văn nhỏ theo yêu cầu trên và trả lời bằng tiếng Việt. Chỉ trả về theo dạng json và không giải thích gì thêm, không mở đầu, không kết thúc"""
+
 
 # dùng để trích xuất các chủ đề quan trọng. Được sử dụng để thêm thông tin vào chunk để tạo thuận lợi cho ss vector qdrant
 def summary_document():
@@ -1135,6 +806,7 @@ Bạn là một chuyên gia trích xuất chủ đề quan trọng trong văn b�
 2. Chỉ trích xuất các nội dung chính được nhắc đến trong đoạn văn.
 Văn bản: {paragraph}
     """
+
 
 def summary_answer_system():
     return """
@@ -1166,11 +838,13 @@ Requirements:
 * DO NOT EXPLAIN, DO NOT WRITE ANY INTRODUCTION OR CONCLUSION — ONLY OUTPUT THE FINAL COMPOSITE ANSWER.
 """
 
+
 def summary_answer_user():
     return """
 Câu hỏi: {question}
 Câu trả lời: {answer}
     """
+
 
 def summary_answer():
     return """
@@ -1203,6 +877,7 @@ Yêu cầu:
 Câu hỏi: {question}
 Câu trả lời: {answer}
 """
+
 
 # tạo ra tiêu đề cho neo4j khi thêm tài liệu mới
 def create_title():

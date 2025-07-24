@@ -4,7 +4,7 @@ export const API_ENDPOINTS = {
   // Base URLs
   BASE_URL: import.meta.env.PROD 
     ? 'https://your-api-domain.com' 
-    : 'http://localhost:8080',
+    : 'http://localhost:8000', // FastAPI backend port
   
   // Auth endpoints
   AUTH: {

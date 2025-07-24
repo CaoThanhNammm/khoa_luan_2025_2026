@@ -1,0 +1,402 @@
+# 2. Khởi tạo mô hình nhúng
+factory = EmbeddingFactory()
+model_name_512 = user_secrets.get_secret("MODEL_EMBEDDING_512")
+model_name_768 = user_secrets.get_secret("MODEL_EMBEDDING_768")
+model_name_1024 = user_secrets.get_secret("MODEL_EMBEDDING_1024")
+model_name_li = user_secrets.get_secret("MODEL_LATE_INTERACTION")
+
+model_512 = factory.create_embed_model(model_name_512)
+model_768 = factory.create_embed_model(model_name_768)
+model_1024 = factory.create_embed_model(model_name_1024)
+model_li = factory.create_embed_model(model_name_li)
+
+
+# 3. Khởi tạo Qdrant
+host = user_secrets.get_secret("HOST_QDRANT")
+host = "cd105d800c33.ngrok-free.app"
+api = user_secrets.get_secret("API_KEY_QDRANT")
+distance = user_secrets.get_secret("DISTANCE")
+qdrant = Qdrant(
+    host, api,
+    model_1024, 
+    model_768, 
+    model_512, 
+    model_li, 
+    '', 
+    distance,
+    pre_processing
+)
+
+# 4. khởi tạo mô hình llama để tạo chunking
+model_llama_405b = user_secrets.get_secret("MODEL_LLAMA_405B")
+model_llama_70b = user_secrets.get_secret("MODEL_LLAMA_70B")
+api_key_01 =  user_secrets.get_secret("API_KEY_NVIDIA_01")
+api_key_02 =  user_secrets.get_secret("API_KEY_NVIDIA_02")
+api_key_03 =  user_secrets.get_secret("API_KEY_NVIDIA_03")
+
+llama_title = Llama(api_key_01, model_llama_70b)
+llama_content = Llama(api_key_02, model_llama_405b)
+llama_chunks = Llama(api_key_03, model_llama_405b)
+
+# 5. khởi tạo neo4j
+uri = user_secrets.get_secret("URI_NEO")
+user = user_secrets.get_secret("USER")
+password = user_secrets.get_secret("PASSWORD")
+neo = Neo4j(uri, user, password)
+
+# 6. khởi tạo chat
+t = 5
+conver = Chat(t, qdrant, neo, pre_processing, '')
+
+class QuestionRequest(BaseModel):
+    question: str
+    document_id: str | None = None 
+
+from fastapi import FastAPI, File, UploadFile, HTTPException, Response, Form
+from fastapi.middleware.cors import CORSMiddleware
+import io
+from typing import Dict, List
+import uuid
+import tempfile
+import os
+import threading
+import uvicorn
+import os
+import boto3
+from botocore.exceptions import ClientError, NoCredentialsError
+
+# AWS S3 Configuration
+S3_BUCKET_NAME = "khoaluan111"
+S3_REGION = "ap-southeast-1"
+
+# Initialize S3 client
+try:
+    s3_client = boto3.client(
+        's3',
+        region_name=S3_REGION,
+        aws_access_key_id=user_secrets.get_secret('AWS_ACCESS_KEY_ID'),
+        aws_secret_access_key=user_secrets.get_secret('AWS_SECRET_ACCESS_KEY')
+    )
+    # 1. Khởi tạo đối tượng xử lý PDF
+    pdf = PDF(s3_client, '', '', '')
+
+    print("S3 client initialized successfully")
+except Exception as e:
+    print(f"Error initializing S3 client: {str(e)}")
+    s3_client = None
+
+
+app = FastAPI(title="PDF Upload API", version="1.0.0")
+
+# Cấu hình CORS để frontend có thể gọi API
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],  # Chỉ định cụ thể origins
+    allow_credentials=True,  # Cho phép credentials
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["*"],
+)
+
+# Create FastAPI app
+app = FastAPI(title="PDF Processing API", version="1.0.0")
+
+# Cấu hình CORS cho ngrok
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Cho phép tất cả origins cho ngrok
+    allow_credentials=True,
+    allow_methods=["*"],  # Cho phép tất cả HTTP methods
+    allow_headers=["*"],  # Cho phép tất cả headers
+)
+
+@app.get("/")
+async def root():
+    return {"message": "PDF Processing API is running on Kaggle with ngrok"}
+
+@app.get("/health")
+async def health():
+    return {"status": "OK", "message": "Server is running"}
+
+def upload_to_s3(file_content: bytes, file_name: str, document_id: str) -> str:
+    """
+    Upload file to S3 and return the S3 key
+    """
+    try:
+        if not s3_client:
+            raise Exception("S3 client not initialized")
+        
+        # Tạo S3 key với document_id để tránh trùng lặp
+        s3_key = f"documents/{document_id}/{file_name}"
+        
+        # Upload file to S3
+        s3_client.put_object(
+            Bucket=S3_BUCKET_NAME,
+            Key=s3_key,
+            Body=file_content,
+            ContentType='application/pdf'
+        )
+        
+        print(f"File uploaded to S3: s3://{S3_BUCKET_NAME}/{s3_key}")
+        return s3_key
+        
+    except NoCredentialsError:
+        print("AWS credentials not found")
+        raise Exception("AWS credentials not configured")
+    except ClientError as e:
+        print(f"AWS S3 error: {str(e)}")
+        raise Exception(f"Failed to upload to S3: {str(e)}")
+    except Exception as e:
+        print(f"Error uploading to S3: {str(e)}")
+        raise
+
+def get_s3_file_url(s3_key: str) -> str:
+    """
+    Generate S3 file URL
+    """
+    return f"s3://{S3_BUCKET_NAME}/{s3_key}"
+
+@app.post("/upload-file")
+async def upload_file(file: UploadFile = File(...)):
+    try:
+        document_id = str(uuid.uuid4())
+
+        if not file.filename:
+            raise HTTPException(status_code=400, detail="Không có file được upload")
+    
+        if not file.filename.lower().endswith('.pdf'):
+            raise HTTPException(status_code=400, detail="Chỉ chấp nhận file PDF (.pdf)")
+    
+        contents = await file.read()
+        if not contents:
+            raise HTTPException(status_code=400, detail="File rỗng hoặc không thể đọc")
+    
+        s3_key = upload_to_s3(contents, file.filename, document_id)
+        s3_file_url = get_s3_file_url(s3_key)
+    
+        # ⏱ Bọc xử lý PDF bằng timeout 20 phút
+        await asyncio.wait_for(
+            process_pdf(s3_file_url, s3_key, document_id),
+            timeout=1200  # 20 phút = 1200 giây
+        )
+
+        return {
+            "message": "Upload và xử lý thành công.",
+            "document_id": document_id,
+            "filename": file.filename,
+            "file_size": len(contents),
+            "s3_key": s3_key,
+            "s3_url": s3_file_url,
+            "status": "done"
+        }
+    except asyncio.TimeoutError:
+        raise HTTPException(status_code=504, detail="⏰ Quá thời gian xử lý (timeout 20 phút)")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error {str(e)}")
+
+
+
+async def process_pdf(s3_file_url: str, s3_key: str, document_id: str):
+    try:
+        pdf.set_path(s3_file_url)
+        pdf.set_bucket_name(S3_BUCKET_NAME)
+        pdf.set_key(s3_key)
+        sentences = pdf.read_chunks()
+
+        await _add_data_to_neo4j(sentences, document_id)
+        await _add_data_to_qdrant(sentences, document_id)
+        print("🎉 PDF processing hoàn tất.")
+    except Exception as e:
+        print(f"❌ Error during processing: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error {str(e)}")
+
+                
+# Thêm file mới vào qdrant
+async def _add_data_to_qdrant(sentences, document_id):
+    try:
+        chunks = []
+        all_paragraphs = []
+        
+        # sử dụng llama để tự động chia chunk. Output là mảng các json [{}, {}, {}]
+        llama_chunks.set_prompt(chunking())
+        for s in sentences:
+            llama_chunks.set_text(s)
+            chunk_json = llama_chunks.generator()
+            chunk_json = chunk_json.replace("'", '"')
+            print(chunk_json)
+            chunks.append(ast.literal_eval(chunk_json))
+        
+        # tạo ra mảng chứa các chunk. Output là mảng String ['', '', '']
+        for chunk in chunks:
+            for key, content in chunk.items():
+                all_paragraphs.append(content)
+        
+        print(all_paragraphs)
+        
+        # 1. tạo collection trong qdrant
+        qdrant.set_collection_name(document_id)
+        qdrant.create_collection()
+        
+        # 2. Tạo embedding
+        embeddings_dict = qdrant.create_embed(all_paragraphs)
+        # 3. lưu vào qdrant
+        qdrant.add_data(all_paragraphs, embeddings_dict)
+        
+        return {"message": "File uploaded and processed successfully for qdrant", "data": document_id}
+        
+    except Exception as e:
+        print(f"Error processing file in qdrant: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error processing file in qdrant: {str(e)}")
+
+# Thêm file mới vào neo4j
+async def _add_data_to_neo4j(sentences, document_id):
+    try:
+        # Tạo ra tiêu đề cho đồ thị
+        titles = []
+        llama_title.set_prompt(create_title())
+        i = 0
+        for s in sentences:
+            llama_title.set_text(s)
+            title = llama_title.generator().lower()
+            if i % 3 == 0:
+                time.sleep(40)
+            print(title)
+            i += 1
+            titles.append(pre_processing.string_to_json(title))
+        
+        print(titles)
+        
+        # Tạo ra entities và relationships
+        entities_relationship = []
+        llama_content.set_prompt(extract_entities_relationship_from_text())
+        
+        for s in sentences:
+            llama_content.set_text(s)
+            entity_relation = llama_content.generator().lower()
+            entity_relation = pre_processing.string_to_json(entity_relation)
+            print(entity_relation)
+            entities_relationship.append(entity_relation)
+        
+        print(entities_relationship)
+        
+        # B1: Nối "General" với UUID người dùng (Document)
+        neo.add_single_relationship("tài liệu", "General", document_id, "Document", "BAO_GỒM")
+    
+        # B2: Nối document với tiêu đề
+        for title in titles:
+            neo.add_single_relationship(document_id, "Document", title["title"], "Part", "BAO_GỒM")
+        
+        # B3: Nối tiêu đề với entities_relationship
+        for r, title in zip(entities_relationship, titles):
+            neo.import_relationships(r, title["title"], "Part")
+
+    
+        return {"message": "File uploaded and processed successfully for neo4j", "data": document_id}
+        
+    except Exception as e:
+        print(f"Error processing file in neo4j: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error processing file in neo4j: {str(e)}")
+
+# Chat default endpoint - mặc định document_id = 'so_tay_sinh_vien_2024'
+@app.post("/api/chat-default")
+async def chat_stsv(req: QuestionRequest):
+    try:
+
+        conver.set_document_id("so_tay_sinh_vien_2024")
+        conver.set_question(req.question)
+        answer = conver.answer_s2s_stsv()
+        print(f'answer {answer}')
+        
+        return {"message": "Process answer successfully", "data": str(answer)}
+    except Exception as e:
+        print(f"Error processing chat: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error processing chat: {str(e)}")
+
+# Chat custom endpoint - document_id được truyền từ client
+@app.post("/api/chat")
+async def chat(req: QuestionRequest):
+    try:
+        if not req.document_id:
+            raise HTTPException(status_code=400, detail="document_id is required")
+        
+        print(f"Chat custom request - Document ID: {req.document_id}, Question: {req.question}")
+        
+
+        conver.set_document_id(req.document_id)
+        conver.set_question(req.question)
+        answer = conver.answer_s2s()
+        
+        return {"message": "Process answer successfully", "data": answer}
+    except Exception as e:
+        print(f"Error processing chat: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error processing chat: {str(e)}")
+
+@app.get("/test-s3")
+async def test_s3_connection():
+    """
+    Test S3 connection
+    """
+    try:
+        if not s3_client:
+            return {"status": "error", "message": "S3 client not initialized"}
+        
+        # Test connection by listing bucket
+        response = s3_client.head_bucket(Bucket=S3_BUCKET_NAME)
+        return {
+            "status": "success", 
+            "message": f"Successfully connected to S3 bucket: {S3_BUCKET_NAME}",
+            "region": S3_REGION
+        }
+    except Exception as e:
+        return {
+            "status": "error", 
+            "message": f"Failed to connect to S3: {str(e)}"
+        }
+
+
+
+# Global variable để lưu public URL
+public_url = None
+
+def run_server_with_ngrok():
+    global public_url
+    try:
+        print("🔧 Setting up ngrok tunnel...")
+        api_ngrok = user_secrets.get_secret("api_ngrok")
+        ngrok.set_auth_token(api_ngrok)
+        tunnel = ngrok.connect(8000)
+        public_url = tunnel.public_url
+        
+        print(f"🌍 Ngrok tunnel created: {public_url}")
+        print(f"📋 API Documentation: {public_url}/docs")
+        print(f"🔄 Upload endpoint: {public_url}/upload-file")
+        
+        print("🚀 Starting FastAPI server on port 8000...")
+        uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+        
+    except Exception as e:
+        print(f"❌ Error starting server: {str(e)}")
+
+
+def start_kaggle_server():
+    """
+    Function chính để chạy server trong Kaggle notebook
+    """
+    print("🚀 Starting FastAPI server with ngrok...")
+    
+    # Chạy server trong thread riêng để tránh block notebook
+    server_thread = threading.Thread(target=run_server_with_ngrok, daemon=True)
+    server_thread.start()
+    
+    # Đợi server khởi động
+    time.sleep(5)
+    
+    print("✅ Server started successfully!")
+    print("📝 Server is running in background thread...")
+    
+    if public_url:
+        print(f"🌍 Your API is available at: {public_url}")
+    
+    return server_thread
+
+if __name__ == "__main__":
+    start_kaggle_server()

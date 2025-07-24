@@ -2,7 +2,7 @@
 export const API_CONFIG = {
   BASE_URL: import.meta.env.PROD 
     ? 'https://your-api-domain.com' 
-    : 'http://localhost:8080',
+    : 'http://localhost:8000',
   ENDPOINTS: {
     AUTH: '/api/auth',
     CHAT: '/api/chat',
@@ -19,6 +19,8 @@ import AuthService from './AuthService';
 axios.defaults.baseURL = API_CONFIG.BASE_URL;
 axios.defaults.timeout = API_CONFIG.TIMEOUT;
 axios.defaults.headers.common['Content-Type'] = 'application/json';
+axios.defaults.headers.common['Accept'] = 'application/json';
+axios.defaults.withCredentials = false; // Set to false for CORS
 
 // Request interceptor to add auth token
 axios.interceptors.request.use(

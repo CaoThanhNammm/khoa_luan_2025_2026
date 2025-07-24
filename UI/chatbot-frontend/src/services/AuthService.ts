@@ -4,9 +4,12 @@ import type { AxiosResponse } from "axios";
 const API_URL = "/api/auth/";
 
 export interface AuthResponse {
-  token: string;
-  type: string;
+  access_token?: string;
+  token?: string;
+  token_type?: string;
+  type?: string;
   id: number;
+  user_id?: number;
   username: string;
   email: string;
 }
@@ -42,18 +45,31 @@ class AuthService {
   login(username: string, password: string): Promise<AxiosResponse<AuthResponse>> {
     console.log('Attempting login with username:', username);
     
+    // FastAPI OAuth2 login requires form data format
+    const formData = new URLSearchParams();
+    formData.append('username', username);
+    formData.append('password', password);
+    
     return axios
-      .post<AuthResponse>(API_URL + "login", { username, password })
+      .post<AuthResponse>(API_URL + "login", formData, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      })
       .then((response) => {
         console.log('Login response:', response);
         
-        if (response.data && response.data.token) {
+        // Handle both token and access_token formats for compatibility
+        const token = response.data.access_token || response.data.token;
+        const userId = response.data.user_id || response.data.id;
+        
+        if (response.data && token) {
           // Create a properly structured user object before storing
           const userData = {
-            id: response.data.id,
+            id: userId,
             username: response.data.username,
             email: response.data.email,
-            token: response.data.token
+            token: token
           };
           localStorage.setItem("user", JSON.stringify(userData));
           console.log('User data saved to localStorage');
@@ -82,10 +98,36 @@ class AuthService {
   }
 
   register(username: string, email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
+    console.log('Attempting registration with username:', username, 'email:', email);
+    
     return axios.post<AuthResponse>(API_URL + "register", {
       username,
       email,
       password
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    }).then((response) => {
+      console.log('Registration response:', response);
+      return response;
+    }).catch(error => {
+      console.error('Registration error details:', error.response?.data || error.message);
+      console.error('Registration error status:', error.response?.status);
+      console.error('Registration error headers:', error.response?.headers);
+      
+      // Log the full error response for debugging
+      if (error.response) {
+        console.error('Full registration error response:', {
+          status: error.response.status,
+          statusText: error.response.statusText,
+          data: error.response.data,
+          headers: error.response.headers
+        });
+      }
+      
+      throw error;
     });
   }
 

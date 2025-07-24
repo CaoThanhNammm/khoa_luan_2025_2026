@@ -3,13 +3,13 @@ export interface Message {
   content: string;
   type: 'USER' | 'BOT';
   timestamp: string;
-  conversationId: number;
+  conversationId: string;
   isStreaming?: boolean; // Để xác định tin nhắn đang được gõ
   isLatest?: boolean; // Để xác định tin nhắn mới nhất của bot
 }
 
 export interface ChatSession {
-  id: number;
+  id: string;
   title: string;
   createdAt: string;
   messages: Message[];
