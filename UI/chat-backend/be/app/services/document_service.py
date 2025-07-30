@@ -369,7 +369,6 @@ async def _add_data_to_neo4j(sentences, document_id):
         raise HTTPException(status_code=500, detail=f"Error processing file in neo4j: {str(e)}")
 
 
-
 def create_contact_message(db: Session, contact: ContactMessageCreate):
     """Create a new contact message"""
     db_contact = ContactMessage(

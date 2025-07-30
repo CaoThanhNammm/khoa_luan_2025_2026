@@ -6,12 +6,17 @@ alwaysApply: true
 # Repository Information Overview
 
 ## Repository Summary
-This repository contains a chatbot application with multiple components: a React-based frontend, a Java Spring Boot backend, and a Python-based backend (backup). The system appears to be a conversational AI application with knowledge graph capabilities, vector database integration, and multiple LLM integrations.
+This repository contains a chatbot application with a React frontend and FastAPI backend. The system is designed to provide an AI-powered chat interface with document processing capabilities, user authentication, and conversation management.
 
 ## Repository Structure
-- **chatbot-frontend**: React-based UI for the chatbot application
-- **chatbot-backend**: Java Spring Boot backend with authentication system
-- **chat-backend-backup**: Python-based backend with LLM integration and knowledge graph capabilities
+- **chatbot-frontend**: React-based UI with TypeScript and TailwindCSS
+- **chat-backend**: Python FastAPI backend with multiple components:
+  - **be**: Main FastAPI application
+  - **LLM**: Large Language Model integration
+  - **ModelLLM**: Model embedding and interaction components
+  - **PreProcessing**: Document processing utilities
+  - **VectorDatabase**: Vector database integration for semantic search
+  - **knowledge_graph**: Knowledge graph implementation
 
 ## Projects
 
@@ -19,7 +24,7 @@ This repository contains a chatbot application with multiple components: a React
 **Configuration File**: package.json
 
 #### Language & Runtime
-**Language**: TypeScript/JavaScript
+**Language**: TypeScript
 **Version**: TypeScript ~5.8.3
 **Build System**: Vite 6.3.5
 **Package Manager**: npm
@@ -27,11 +32,10 @@ This repository contains a chatbot application with multiple components: a React
 #### Dependencies
 **Main Dependencies**:
 - React 19.1.0
-- React DOM 19.1.0
 - React Router DOM 7.6.1
 - Axios 1.9.0
 - Framer Motion 12.15.0
-- Prismjs 1.30.0
+- PrismJS 1.30.0
 
 **Development Dependencies**:
 - Vite 6.3.5
@@ -46,69 +50,64 @@ npm run dev    # Development server
 npm run build  # Production build
 ```
 
-### Chatbot Backend (Java)
-**Configuration File**: pom.xml
-
-#### Language & Runtime
-**Language**: Java
-**Version**: Java 17
-**Build System**: Maven
-**Framework**: Spring Boot 2.7.12
-
-#### Dependencies
-**Main Dependencies**:
-- Spring Boot Web
-- Spring Boot Data JPA
-- Spring Boot Security
-- JWT (jsonwebtoken 0.11.5)
-- MySQL Connector 8.0.28
-- Spring Boot WebFlux
-- Spring Boot Mail
-- Thymeleaf
-
-**Development Dependencies**:
-- Spring Boot Test
-- Spring Security Test
-- Lombok 1.18.30
-
-#### Build & Installation
-```bash
-mvn clean install
-mvn spring-boot:run
-```
-
-### Chat Backend Backup (Python)
-**Main File**: Chat.py
+### Chat Backend
+**Configuration File**: requirements.txt
 
 #### Language & Runtime
 **Language**: Python
-**Framework**: Custom implementation with LLM integrations
+**Version**: Python 3.8+
+**Package Manager**: pip
 
 #### Dependencies
 **Main Dependencies**:
-- torch/torch_geometric
-- langchain_core
-- dotenv
-- Various LLM APIs (Gemini, Llama)
+- FastAPI 0.104.1
+- Uvicorn 0.24.0
+- SQLAlchemy 2.0.23
+- Pydantic 2.4.2
+- Neo4j 5.14.0
+- Langchain-core 0.1.4
+- Google-generativeai
+- Torch
+- Sentence_transformers
+- Qdrant-client
 
-#### Key Components
-**Main Modules**:
-- LLM: Integration with Gemini and Llama models
-- VectorDatabase: Qdrant integration for vector storage
-- knowledge_graph: Neo4j integration and graph processing
-- PreProcessing: Document and text processing utilities
-- ModelLLM: Embedding and model interaction components
-
-#### Usage & Operations
+#### Build & Installation
 ```bash
-# No explicit build commands found
-# Likely executed directly with Python interpreter
-python Chat.py
+cd chat-backend/be
+python -m venv venv
+venv\Scripts\activate  # On Windows
+pip install -r requirements.txt
+python main.py
 ```
 
-#### Key Features
-- Multi-step reasoning (S2S) for question answering
-- Knowledge graph integration with Neo4j
-- Vector database retrieval with Qdrant
-- Multiple LLM model integration (Gemini, Llama)
-- Document processing and chunking capabilities
+#### Database
+**Type**: MySQL
+**ORM**: SQLAlchemy
+**Setup**: Automatic creation of tables on startup
+**Additional Storage**:
+- Neo4j for knowledge graph
+- Qdrant for vector database
+- AWS S3 for document storage
+
+#### External Services
+- Local LLM API for chat functionality
+- AWS S3 for document storage
+- Email service for password reset
+
+### Architecture
+
+#### Frontend Architecture
+- **React + TypeScript**: Core UI framework
+- **TailwindCSS**: Styling
+- **React Router**: Navigation
+- **Context API**: State management
+- **Axios**: API communication
+
+#### Backend Architecture
+- **FastAPI**: Web framework
+- **SQLAlchemy**: ORM for database
+- **Pydantic**: Data validation
+- **Uvicorn**: ASGI server
+- **LLM Integration**: Multiple model support
+- **Vector Database**: Semantic search
+- **Knowledge Graph**: Neo4j-based graph database
