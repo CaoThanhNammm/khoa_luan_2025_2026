@@ -52,10 +52,10 @@ class ChatService {
     return adaptConversationToSession(response.data);
   }
 
-  async sendMessage(conversationId: string, message: string, documentId?: string): Promise<Message> {
+  async sendMessage(conversationId: string, message: string): Promise<Message> {
     const response = await axios.post<MessageResponse>(
       API_URL + `conversations/${conversationId}/messages`,
-      { message, document_id: documentId }
+      { message }
     );
     return adaptMessageToFrontend(response.data);
   }
@@ -112,10 +112,10 @@ class ChatService {
     );
   }
 
-  sendMessageRaw(conversationId: string, message: string, documentId?: string): Promise<AxiosResponse<MessageResponse>> {
+  sendMessageRaw(conversationId: string, message: string): Promise<AxiosResponse<MessageResponse>> {
     return axios.post<MessageResponse>(
       API_URL + `conversations/${conversationId}/messages`,
-      { message, document_id: documentId }
+      { message }
     );
   }
 

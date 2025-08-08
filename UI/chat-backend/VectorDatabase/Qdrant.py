@@ -149,6 +149,7 @@ class Qdrant:
         embedded_late_interaction = self.model_late_interaction.embed(text)[0].tolist()
 
         # Gửi truy vấn đến Qdrant client với các mức embedding khác nhau
+        print(self.collection_name)
         response = self.client.query_points(
             collection_name=self.collection_name,
             prefetch=models.Prefetch(

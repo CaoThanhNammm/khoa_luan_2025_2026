@@ -90,13 +90,15 @@ const formatMessage = (content: string) => {
         {lines.map((line, idx) => {
           const trimmedLine = line.trim();
           
-          // Handle bullet points (single *)
-          if (trimmedLine.match(/^\*\s+/) && !trimmedLine.match(/^\*\*/)) {
+          // Handle bullet points (single * followed by space)
+          // Match patterns like "* Text" but not "**bold**"
+          const isBulletPoint = trimmedLine.match(/^\*\s/) && !trimmedLine.match(/^\*\*/);
+          if (isBulletPoint) {
             const bulletText = trimmedLine.substring(1).trim();
             return (
-              <div key={idx} className="flex items-start space-x-3 my-2">
-                <span className="text-blue-500 dark:text-blue-400 mt-1 font-bold text-lg leading-none">•</span>
-                <span className="flex-1 leading-relaxed">{formatInlineText(bulletText)}</span>
+              <div key={idx} className="bullet-point">
+                <span className="bullet-marker">•</span>
+                <span className="bullet-content">{formatInlineText(bulletText)}</span>
               </div>
             );
           }
@@ -105,11 +107,9 @@ const formatMessage = (content: string) => {
           const numberedMatch = trimmedLine.match(/^(\d+)\.\s*(.+)/);
           if (numberedMatch) {
             return (
-              <div key={idx} className="flex items-start space-x-3 my-2">
-                <span className="text-blue-500 dark:text-blue-400 font-semibold min-w-[24px] mt-0.5">
-                  {numberedMatch[1]}.
-                </span>
-                <span className="flex-1 leading-relaxed">{formatInlineText(numberedMatch[2])}</span>
+              <div key={idx} className="bullet-point">
+                <span className="bullet-marker">{numberedMatch[1]}.</span>
+                <span className="bullet-content">{formatInlineText(numberedMatch[2])}</span>
               </div>
             );
           }          // Handle standalone bold text lines

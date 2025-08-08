@@ -91,7 +91,7 @@ const MessageInput: React.FC<MessageInputProps> = ({
   };
 
   return (
-    <div className="border-t border-white/20 dark:border-gray-700/20 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl px-6 py-4 shadow-xl shadow-gray-100/50 dark:shadow-gray-900/50 transition-colors duration-300">
+    <div className="border-t border-white/20 dark:border-gray-700/20 bg-white/95 dark:bg-gray-800/95 backdrop-blur-xl px-6 py-4 shadow-xl shadow-gray-100/50 dark:shadow-gray-900/50 transition-colors duration-300 relative z-10">
       {/* File Upload Input (Hidden) */}
       <input
         ref={fileInputRef}

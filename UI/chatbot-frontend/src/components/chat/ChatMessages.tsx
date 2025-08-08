@@ -39,15 +39,19 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isTyping, isThink
   };
 
   return (
-    <div className="flex-1 overflow-y-auto px-6 py-6 space-y-6 relative custom-scrollbar">
-      {messageComponents}
-      
-      {/* Show thinking indicator when waiting for API response */}
-      {isThinking && <ThinkingIndicator />}
-      
-      {/* Show typing indicator when processing (legacy) */}
-      {isTyping && !isThinking && <TypingIndicator />}
-      <div ref={messagesEndRef} />
+    <div className="flex-1 overflow-y-auto px-6 py-6 space-y-6 relative custom-scrollbar h-full">
+      <div className="min-h-full flex flex-col justify-end">
+        <div className="space-y-6">
+          {messageComponents}
+          
+          {/* Show thinking indicator when waiting for API response */}
+          {isThinking && <ThinkingIndicator />}
+          
+          {/* Show typing indicator when processing (legacy) */}
+          {isTyping && !isThinking && <TypingIndicator />}
+        </div>
+        <div ref={messagesEndRef} />
+      </div>
     </div>
   );
 };

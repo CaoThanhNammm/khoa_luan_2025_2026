@@ -48,34 +48,26 @@ app = FastAPI(title="Chatbot API", version="1.0.0", lifespan=lifespan)
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:5173"
+    ],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=[
+        "Accept",
+        "Accept-Language",
+        "Content-Language",
+        "Content-Type",
+        "Authorization",
+        "X-Requested-With",
+        "Origin",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers",
+    ],
 )
-
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=[
-#         "http://localhost:3000",
-#         "http://localhost:5173",
-#         "http://127.0.0.1:3000",
-#         "http://127.0.0.1:5173"
-#     ],
-#     allow_credentials=True,
-#     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-#     allow_headers=[
-#         "Accept",
-#         "Accept-Language",
-#         "Content-Language",
-#         "Content-Type",
-#         "Authorization",
-#         "X-Requested-With",
-#         "Origin",
-#         "Access-Control-Request-Method",
-#         "Access-Control-Request-Headers",
-#     ],
-# )
 
 # Add logging middleware
 from app.middleware.logging_middleware import LoggingMiddleware

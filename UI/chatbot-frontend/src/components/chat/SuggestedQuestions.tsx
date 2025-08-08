@@ -33,8 +33,8 @@ const SuggestedQuestions: React.FC<SuggestedQuestionsProps> = ({ onQuestionClick
   const suggestedQuestions = getSuggestedQuestions();
 
   return (
-    <div className="flex-1 flex items-center justify-center p-8 animate-fade-in">
-      <div className="max-w-2xl w-full">
+    <div className="flex-1 overflow-y-auto p-8 animate-fade-in custom-scrollbar">
+      <div className="max-w-2xl w-full mx-auto flex flex-col justify-center min-h-full">
         {/* Welcome message */}
         <div className="text-center mb-8 animate-slide-up">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl mb-4 shadow-lg animate-float">

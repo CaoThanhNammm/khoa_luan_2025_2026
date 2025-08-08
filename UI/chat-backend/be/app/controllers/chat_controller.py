@@ -94,7 +94,7 @@ def send_message(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    """Send a message in a conversation"""
+    """Send a message in a conversation - document_id will be automatically retrieved from database"""
     message = chat_service.send_message(db, conversation_id, request.document_id or "", request.message, current_user.id)
     return message
 

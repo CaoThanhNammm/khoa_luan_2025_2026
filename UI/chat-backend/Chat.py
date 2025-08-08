@@ -108,6 +108,7 @@ class Chat:
         return self.summary_answer()
 
     def answer_s2s_stsv(self):
+        self.document_id = 'so_tay_sinh_vien_2024'
         self.references_final = ""
         self.extract = ""
         self.feedback = ""
@@ -145,14 +146,14 @@ class Chat:
     def summary_answer(self):
         prompt_template = PromptTemplate(
             input_variables=["question", 'answer'],
-            template=prompt.summary_answer_user()
+            template=prompt.summary_answer()
         )
         formatted_prompt = prompt_template.format(question=self.question, answer=self.answer_final)
-        # return self.gemini_agent.generator(formatted_prompt)
+        return self.gemini_agent.generator(formatted_prompt)
 
-        self.llama3_1_summary.set_prompt(prompt.summary_answer_system())
-        self.llama3_1_summary.set_text(formatted_prompt)
-        return self.llama3_1_summary.generator()
+        # self.llama3_1_summary.set_prompt(prompt.summary_answer_system())
+        # self.llama3_1_summary.set_text(formatted_prompt)
+        # return self.llama3_1_summary.generator()
 
     def agent(self):
         agent = self.first_decision() if not self.feedback else self.reflection()
@@ -200,7 +201,7 @@ class Chat:
         # llm dự đoán câu hỏi thuộc phần nào để thu hẹp nội dung cần truy xuất
         prompt_template = PromptTemplate(
             input_variables=["question", "document_id"],
-            template=prompt.predict_question_belong_to_stsv()
+            template=prompt.predict_question_belong_to_stsv_01()
         )
         formatted_prompt = prompt_template.format(question=self.question, document_id=self.document_id)
         query = self.gemini_agent.generator(formatted_prompt)
@@ -209,6 +210,7 @@ class Chat:
 
         print('query:', query['cypher'])
         nodes, edges = self.neo.fetch_subgraph(query['cypher'])
+
         # Tạo mapping node_id_to_idx trước
         node_id_list = list(nodes.keys())
         node_id_to_idx = {nid: i for i, nid in enumerate(node_id_list)}
@@ -225,24 +227,24 @@ class Chat:
         texts = [" ".join([f"{key} {value}" for key, value in dict(nodes[nid].items())['properties'].items()]) for nid
                  in node_id_list]
 
-        x = self.neo.encode(texts)
-
-        # Chuyển x lên cùng device
-        if isinstance(x, torch.Tensor):
-            x = x.to(device)
-        else:
-            x = torch.tensor(x).to(device)
-
-        data = Data(x=x, edge_index=edge_index)
-
-        # Chuyển model lên device
-        model = GCN(input_dim=x.shape[1], hidden_dim=x.shape[1], output_dim=x.shape[1]).to(device)
-
-        output = model(data)  # output: [num_nodes, 16]
-        results = self.neo.retrieve_similar_nodes(self.question, output, texts, math.ceil(x.shape[0] * 0.5))
-        texts = ''
-        for res in results:
-            texts += res + " "
+        # x = self.neo.encode(texts)
+        #
+        # # Chuyển x lên cùng device
+        # if isinstance(x, torch.Tensor):
+        #     x = x.to(device)
+        # else:
+        #     x = torch.tensor(x).to(device)
+        #
+        # data = Data(x=x, edge_index=edge_index)
+        #
+        # # Chuyển model lên device
+        # model = GCN(input_dim=x.shape[1], hidden_dim=x.shape[1], output_dim=x.shape[1]).to(device)
+        #
+        # output = model(data)  # output: [num_nodes, 16]
+        # results = self.neo.retrieve_similar_nodes(self.question, output, texts, math.ceil(x.shape[0] * 0.5))
+        # texts = ''
+        # for res in results:
+        #     texts += res + " "
         return texts
 
     def retrieval_text(self):

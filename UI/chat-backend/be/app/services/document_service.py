@@ -1,5 +1,7 @@
 import ast
 import asyncio
+import json
+import re
 import time
 
 from botocore.exceptions import NoCredentialsError, ClientError
@@ -17,7 +19,9 @@ from app.core.global_instances import (
     get_qdrant, get_neo, get_preprocessing, get_s3_client
 )
 from LLM.prompt import extract_entities_relationship_from_text, chunking, create_title
-
+import ast
+import traceback
+from fastapi import HTTPException
 load_dotenv()
 
 # AWS S3 Configuration
@@ -158,7 +162,7 @@ async def process_file_upload(file: UploadFile, user_id: int, db: Session):
     
     # Upload to S3
     s3_info = upload_to_s3(contents, file.filename, document_id)
-    
+    print('in main: ' + document_id)
     # Create document record
     document = DocumentCreate(
         document_id=document_id,
@@ -267,36 +271,57 @@ async def process_pdf(s3_file_url: str, s3_key: str, document_id: str):
 
 # Thêm file mới vào qdrant
 async def _add_data_to_qdrant(sentences, document_id):
+    print('in qdrant: ' + document_id)
     try:
         instances = _get_global_instances()
         llama_chunks = instances['llama_chunks']
         qdrant = instances['qdrant']
-        
+
         chunks = []
         all_paragraphs = []
 
-        # sử dụng llama để tự động chia chunk. Output là mảng các json [{}, {}, {}]
         llama_chunks.set_prompt(chunking())
-        for s in sentences:
-            llama_chunks.set_text(s)
-            try:
-                chunk_json = llama_chunks.generator()
-                chunk_json = chunk_json.replace("'", '"')
-                chunk_json = ast.literal_eval(chunk_json)
-            except:
-                chunk_json = llama_chunks.generator()
-                chunk_json = chunk_json.replace("'", '"')
-                chunk_json = ast.literal_eval(chunk_json)
 
-            print(chunk_json)
+        for idx, s in enumerate(sentences):
+            print("văn bản ban đầu: " + s)
+            llama_chunks.set_text(s)
+            print(f"\n--- Sentence {idx + 1}/{len(sentences)} ---")
+            try:
+                raw_output = llama_chunks.generator()
+                print("[Lần 1] Raw output:", repr(raw_output))
+
+                # Nếu muốn parse Python literal
+                chunk_json = ast.literal_eval(raw_output)
+                print("[Lần 1] Parsed data:", chunk_json)
+
+            except Exception as e1:
+                print("[Lần 1] Lỗi parse:", e1)
+                traceback.print_exc()
+
+                try:
+                    raw_output_2 = llama_chunks.generator()
+                    print("[Lần 2] Raw output:", repr(raw_output_2))
+
+                    chunk_json = ast.literal_eval(raw_output_2)
+                    print("[Lần 2] Parsed data:", chunk_json)
+
+                except Exception as e2:
+                    print("[Lần 2] Lỗi parse:", e2)
+                    traceback.print_exc()
+                    raise HTTPException(
+                        status_code=500,
+                        detail=f"Không parse được chunk_json cho câu {idx + 1}"
+                    )
+
             chunks.append(chunk_json)
 
-        # tạo ra mảng chứa các chunk. Output là mảng String ['', '', '']
+        # Tạo mảng các paragraph
         for chunk in chunks:
             for key, content in chunk.items():
                 all_paragraphs.append(content)
 
-        print(all_paragraphs)
+        print("\nTổng số paragraph:", len(all_paragraphs))
+        print("Danh sách paragraph:", all_paragraphs)
 
         # 1. tạo collection trong qdrant
         qdrant.set_collection_name(document_id)
@@ -304,68 +329,136 @@ async def _add_data_to_qdrant(sentences, document_id):
 
         # 2. Tạo embedding
         embeddings_dict = qdrant.create_embed(all_paragraphs)
+        print("Embeddings đã tạo, số lượng:", len(embeddings_dict))
+
         # 3. lưu vào qdrant
         qdrant.add_data(all_paragraphs, embeddings_dict)
+        print("Đã lưu vào Qdrant thành công.")
 
-        return {"message": "File uploaded and processed successfully for qdrant", "data": document_id}
+        return {
+            "message": "File uploaded and processed successfully for qdrant",
+            "data": document_id
+        }
 
     except Exception as e:
-        print(f"Error processing file in qdrant: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Error processing file in qdrant: {str(e)}")
+        print(f"[ERROR] Error processing file in qdrant: {str(e)}")
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error processing file in qdrant: {str(e)}"
+        )
 
 
-# Thêm file mới vào neo4j
 async def _add_data_to_neo4j(sentences, document_id):
     try:
+        print("\n[DEBUG] Bắt đầu xử lý file cho Neo4j")
         instances = _get_global_instances()
         llama_title = instances['llama_title']
         llama_content = instances['llama_content']
         neo = instances['neo']
         pre_processing = instances['pre_processing']
 
-        # Tạo ra tiêu đề cho đồ thị
+        # =========================
+        # BƯỚC 1: TẠO TIÊU ĐỀ
+        # =========================
         titles = []
         llama_title.set_prompt(create_title())
-        i = 0
-        for s in sentences:
-            llama_title.set_text(s)
-            title = llama_title.generator().lower()
-            if i % 2 == 0:
-                time.sleep(45)
-            print(title)
-            i += 1
-            titles.append(pre_processing.string_to_json(title))
+        print("\n[DEBUG] Tạo tiêu đề cho từng câu...")
+        for i, s in enumerate(sentences):
+            try:
+                llama_title.set_text(s)
+                raw_title = llama_title.generator().lower()
+                print(f"\n[Title {i + 1}] Raw output:", repr(raw_title))
 
-        print(titles)
+                title_json = pre_processing.string_to_json(raw_title)
+                print(f"[Title {i + 1}] Parsed JSON:", title_json)
 
-        # Tạo ra entities và relationships
+                titles.append(title_json)
+
+                # Sleep để tránh rate-limit nếu cần
+                if i % 2 == 0 and i != 0:
+                    print(f"[DEBUG] Sleep 45s sau câu thứ {i + 1}...")
+                    time.sleep(45)
+
+            except Exception as e:
+                print(f"[ERROR] Lỗi khi xử lý tiêu đề câu {i + 1}: {e}")
+                traceback.print_exc()
+                raise HTTPException(status_code=500, detail=f"Lỗi parse tiêu đề tại câu {i + 1}: {e}")
+
+        print("\n[DEBUG] Danh sách tiêu đề cuối cùng:", titles)
+
+        # =========================
+        # BƯỚC 2: TẠO ENTITIES & RELATIONSHIPS
+        # =========================
         entities_relationship = []
         llama_content.set_prompt(extract_entities_relationship_from_text())
+        print("\n[DEBUG] Tạo entities & relationships cho từng câu...")
 
-        for s in sentences:
-            llama_content.set_text(s)
-            entity_relation = llama_content.generator().lower()
-            entity_relation = pre_processing.string_to_json(entity_relation)
-            print(entity_relation)
-            entities_relationship.append(entity_relation)
+        for i, s in enumerate(sentences):
+            try:
+                llama_content.set_text(s)
+                raw_er = llama_content.generator().lower()
+                print(f"\n[Entities {i + 1}] Raw output:", repr(raw_er))
 
-        print(entities_relationship)
+                match = re.search(r'(\{\s*"relationships".*\})', raw_er, re.DOTALL)
+                if match:
+                    json_str = match.group(1)
+                    try:
+                        er_json = json.loads(json_str)
+                        print(f"[Entities {i + 1}] Parsed JSON:", er_json)
+                        entities_relationship.append(er_json)
+                    except json.JSONDecodeError as e:
+                        try:
+                            raw_er = llama_content.generator().lower()
+                            match = re.search(r'(\{\s*"relationships".*\})', raw_er, re.DOTALL)
+                            if match:
+                                json_str = match.group(1)
+                                er_json = json.loads(json_str)
+                                print(f"[Entities {i + 1}] Parsed JSON:", er_json)
+                                entities_relationship.append(er_json)
+                        except:
+                            print("Lỗi parse JSON:", e)
+            except Exception as e:
+                print(f"[ERROR] Lỗi khi xử lý entities câu {i + 1}: {e}")
+                traceback.print_exc()
+                raise HTTPException(status_code=500, detail=f"Lỗi parse entities tại câu {i + 1}: {e}")
 
-        # B1: Nối "General" với UUID người dùng (Document)
-        neo.add_single_relationship("tài liệu", "General", document_id, "Document", "BAO_GỒM")
+        print("\n[DEBUG] Danh sách entities_relationship cuối cùng:", entities_relationship)
 
-        # B2: Nối document với tiêu đề
-        for title in titles:
-            neo.add_single_relationship(document_id, "Document", title["title"], "Part", "BAO_GỒM")
+        # =========================
+        # BƯỚC 3: LƯU VÀO NEO4J
+        # =========================
+        print("\n[DEBUG] Thêm node & relationship vào Neo4j...")
 
-        # B3: Nối tiêu đề với entities_relationship
-        for r, title in zip(entities_relationship, titles):
-            neo.import_relationships(r, title["title"], "Part")
+        try:
+            # B1: Nối "General" với Document
+            neo.add_single_relationship("tài liệu", "General", document_id, "Document", "BAO_GỒM")
+            print(f"[Neo4j] Đã nối 'General' -> Document {document_id}")
 
-        return {"message": "File uploaded and processed successfully for neo4j", "data": document_id}
+            # B2: Nối Document với tiêu đề
+            for title in titles:
+                neo.add_single_relationship(document_id, "Document", title["title"], "Part", "BAO_GỒM")
+                print(f"[Neo4j] Đã nối Document {document_id} -> Part {title['title']}")
+
+            # B3: Nối tiêu đề với entities_relationship
+            for r, title in zip(entities_relationship, titles):
+                neo.import_relationships(r, title["title"], "Part")
+                print(f"[Neo4j] Đã import relationships cho Part {title['title']}")
+
+        except Exception as e:
+            print(f"[ERROR] Lỗi khi insert vào Neo4j: {e}")
+            traceback.print_exc()
+            raise HTTPException(status_code=500, detail=f"Lỗi insert vào Neo4j: {e}")
+
+        print("\n[DEBUG] Hoàn tất thêm dữ liệu vào Neo4j.")
+        return {
+            "message": "File uploaded and processed successfully for neo4j",
+            "data": document_id
+        }
 
     except Exception as e:
-        print(f"Error processing file in neo4j: {str(e)}")
+        print(f"[ERROR] Error processing file in neo4j: {str(e)}")
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=f"Error processing file in neo4j: {str(e)}")
 
 

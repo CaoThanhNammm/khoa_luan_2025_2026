@@ -183,14 +183,29 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
         conversationId: tempId, // Temporary conversation ID
         isLatest: false,
         isStreaming: false
-      }]
+      }],
+      // Đánh dấu document info cho student handbook
+      ...(documentId === 'so_tay_sinh_vien_2024' && {
+        hasDocument: true,
+        documentInfo: {
+          documentId: 'so_tay_sinh_vien_2024',
+          filename: 'Sổ tay sinh viên 2024',
+          fileSize: 0,
+          sentencesCount: 0,
+          uploadDate: new Date().toISOString(),
+          status: 'processed'
+        }
+      })
     };
     
     // Render conversation tạm thời ngay lập tức
     setCurrentConversation(tempConversation);
     
     try {
-      const newConversation = await ChatService.startNewConversationWithDocument(message, documentId);
+      // Sử dụng API /conversations cho student handbook
+      const newConversation = documentId === 'so_tay_sinh_vien_2024' 
+        ? await ChatService.startNewConversation(message)
+        : await ChatService.startNewConversationWithDocument(message, documentId);
       
       // Mark the latest bot message for streaming effect
       const messagesWithStreaming = newConversation.messages.map((msg, index) => {
@@ -202,7 +217,19 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
 
       const conversationWithStreaming = {
         ...newConversation,
-        messages: messagesWithStreaming
+        messages: messagesWithStreaming,
+        // Đánh dấu là student handbook conversation nếu cần
+        ...(documentId === 'so_tay_sinh_vien_2024' && {
+          hasDocument: true,
+          documentInfo: {
+            documentId: 'so_tay_sinh_vien_2024',
+            filename: 'Sổ tay sinh viên 2024',
+            fileSize: 0,
+            sentencesCount: 0,
+            uploadDate: new Date().toISOString(),
+            status: 'processed'
+          }
+        })
       };
       
       setConversations(prev => [conversationWithStreaming, ...prev]);
@@ -339,8 +366,8 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       if (isStudentHandbook) {
         await ChatService.sendMessageStsv(conversationId, message);
       } else {
-        const documentId = currentConversation?.hasDocument ? currentConversation?.documentInfo?.documentId : undefined;
-        await ChatService.sendMessage(conversationId, message, documentId);
+        // document_id sẽ được tự động lấy từ database dựa trên conversation_id
+        await ChatService.sendMessage(conversationId, message);
       }
       
       setIsThinking(false); // Kết thúc thinking state
@@ -358,10 +385,24 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
           return { ...msg, isLatest: false, isStreaming: false };
         });
 
-        setCurrentConversation({
+        // Preserve student handbook info if it exists in current conversation
+        const preservedConversation = {
           ...updatedConversation,
-          messages: messagesWithStreaming
-        });
+          messages: messagesWithStreaming,
+          ...(isStudentHandbook && {
+            hasDocument: true,
+            documentInfo: {
+              documentId: 'so_tay_sinh_vien_2024',
+              filename: 'Sổ tay sinh viên 2024',
+              fileSize: 0,
+              sentencesCount: 0,
+              uploadDate: currentConversation.documentInfo?.uploadDate || new Date().toISOString(),
+              status: 'processed'
+            }
+          })
+        };
+
+        setCurrentConversation(preservedConversation);
       }
       
       setError(null);

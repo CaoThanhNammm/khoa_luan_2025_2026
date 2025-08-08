@@ -301,7 +301,7 @@ def send_message_stsv(db: Session, conversation_id: str, message: str, user_id: 
     
     return bot_message
 
-def send_message(db: Session, conversation_id: str, document_id:str, message: str, user_id: int):
+def send_message(db: Session, conversation_id: str, document_id: str, message: str, user_id: int):
     """Send a message in a conversation"""
     # Get conversation
     conversation = get_conversation(db, conversation_id)
@@ -310,6 +310,16 @@ def send_message(db: Session, conversation_id: str, document_id:str, message: st
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Conversation not found or access denied"
         )
+
+    # Get document_id from user_documents table based on conversation_id
+    user_document = db.query(UserDocument).filter(
+        UserDocument.conversation_id == conversation_id,
+        UserDocument.user_id == user_id
+    ).first()
+    
+    # Use document_id from database if available, otherwise use the provided one
+    actual_document_id = user_document.document_id if user_document else document_id
+    print(f"Using document_id: {actual_document_id} (from DB: {user_document is not None})")
 
     # Get existing chat object from cache (should already exist)
     chat = get_or_create_chat_for_conversation(conversation_id)
@@ -323,9 +333,9 @@ def send_message(db: Session, conversation_id: str, document_id:str, message: st
     db.add(user_message)
     db.commit()
 
-    # Get bot response
+    # Get bot response using the actual document_id from database
     chat.set_question(message)
-    chat.set_document_id(document_id)
+    chat.set_document_id(actual_document_id)
     bot_response = chat.answer_s2s()
 
     # Add bot message
