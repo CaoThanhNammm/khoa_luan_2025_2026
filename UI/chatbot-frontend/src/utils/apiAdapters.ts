@@ -48,7 +48,18 @@ export function getMessageSender(type: 'USER' | 'BOT'): 'user' | 'bot' {
  * Format timestamp for display
  */
 export function formatTimestamp(timestamp: string): string {
+  if (!timestamp) {
+    return 'Unknown time';
+  }
+  
   const date = new Date(timestamp);
+  
+  // Check if date is valid
+  if (isNaN(date.getTime())) {
+    console.warn('Invalid timestamp:', timestamp);
+    return 'Invalid date';
+  }
+  
   return date.toLocaleString();
 }
 

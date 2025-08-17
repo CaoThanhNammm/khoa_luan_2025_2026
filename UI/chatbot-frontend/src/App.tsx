@@ -15,6 +15,8 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import ChatPage from './pages/ChatPage';
 import ProfilePage from './pages/ProfilePage';
+import SessionTestPage from './pages/SessionTestPage';
+import SimpleSessionTest from './pages/SimpleSessionTest';
 import SyntaxTest from './components/test/SyntaxTest';
 import { ApiDebugger } from './components/test';
 
@@ -41,6 +43,16 @@ function App() {
                   } />                  <Route path="profile" element={
                     <ProtectedRoute>
                       <ProfilePage />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="session-test" element={
+                    <ProtectedRoute>
+                      <SessionTestPage />
+                    </ProtectedRoute>
+                  } />
+                  <Route path="simple-session" element={
+                    <ProtectedRoute>
+                      <SimpleSessionTest />
                     </ProtectedRoute>
                   } />
                   <Route path="syntax-test" element={<SyntaxTest />} />

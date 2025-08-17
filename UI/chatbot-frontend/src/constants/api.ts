@@ -50,3 +50,11 @@ export const LOCAL_STORAGE_KEYS = {
   THEME: 'theme',
   LANGUAGE: 'language',
 } as const;
+
+// Session Management Constants
+export const SESSION_CONFIG = {
+  // TTL for session in milliseconds (1 month = 30 days)
+  TTL: 30 * 24 * 60 * 60 * 1000, // 30 days (1 month)
+  // Key for storing session timestamp
+  TIMESTAMP_KEY: 'session_timestamp',
+} as const;

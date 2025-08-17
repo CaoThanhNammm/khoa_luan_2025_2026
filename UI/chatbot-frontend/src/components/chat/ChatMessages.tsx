@@ -39,8 +39,8 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isTyping, isThink
   };
 
   return (
-    <div className="flex-1 overflow-y-auto px-6 py-6 space-y-6 relative custom-scrollbar h-full">
-      <div className="min-h-full flex flex-col justify-end">
+    <div className="h-full flex flex-col">
+      <div className="flex-1 overflow-y-auto px-6 py-6 custom-scrollbar chat-messages-scroll">
         <div className="space-y-6">
           {messageComponents}
           

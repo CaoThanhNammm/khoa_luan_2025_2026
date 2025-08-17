@@ -643,3 +643,51 @@ class Neo4j:
                     target_json=json.dumps(target, ensure_ascii=False),
                 )
             )
+
+    def run_cypher(self, query):
+        node_names = []
+        rel_names = []
+        triplets = []
+
+        with self.driver.session() as session:
+            result = session.run(query)
+            if result:
+                for record in result:
+                    path_obj = record["p"]
+
+                    # Lấy tên các node
+                    for node in path_obj.nodes:
+                        name = node.get("name")
+                        if name and name not in node_names:
+                            node_names.append(name)
+
+                    # Lấy tên các quan hệ và tạo triplets với tất cả thuộc tính node
+                    for rel in path_obj.relationships:
+                        rel_type = rel.type
+                        if rel_type and rel_type not in rel_names:
+                            rel_names.append(rel_type)
+
+                        # Lấy tất cả thuộc tính của node nguồn và node đích
+                        source_node = self.remove_id_fields(dict(rel.start_node))
+                        target_node = self.remove_id_fields(dict(rel.end_node))
+
+                        triplets.append({
+                            "source": source_node,
+                            "relation": rel_type,
+                            "target": target_node
+                        })
+
+        self.driver.close()
+        return node_names, rel_names, triplets
+
+    def remove_id_fields(self, data):
+        if isinstance(data, dict):
+            new_data = {}
+            for k, v in data.items():
+                if "id" not in k.lower():  # bỏ qua key chứa "id"
+                    new_data[k] = self.remove_id_fields(v)
+            return new_data
+        elif isinstance(data, list):
+            return [self.remove_id_fields(item) for item in data]
+        else:
+            return data

@@ -176,6 +176,36 @@ class Qdrant:
         documents = [point.payload["text"] for point in response.points]
         return documents
 
+
+    def query_from_db_prime(self, text):
+        # Embed văn bản với các mô hình khác nhau
+        text_embedded_512 = self.model_512.embed(text)
+        text_embedded_768 = self.model_768.embed(text)
+        text_embedded_1024 = self.model_1024.embed(text)
+
+        # Gửi truy vấn đến Qdrant client với các mức embedding khác nhau
+        print(self.collection_name)
+        response = self.client.query_points(
+            collection_name=self.collection_name,
+            prefetch=models.Prefetch(
+                prefetch=models.Prefetch(
+                    query=text_embedded_512,
+                    using="matryoshka-512dim",
+                    limit=200,
+                ),
+                query=text_embedded_768,
+                using="matryoshka-768dim",
+                limit=100,
+            ),
+            query=text_embedded_1024,
+            using="matryoshka-1024dim",
+            limit=50,
+        )
+
+        # Lấy kết quả văn bản từ payload
+        documents = [point.payload["text"] for point in response.points]
+        return documents
+
     def re_ranking(self, query, passages):
         client = NVIDIARerank(
             model="nvidia/llama-3.2-nv-rerankqa-1b-v2",

@@ -27,6 +27,11 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
   const { t } = useTranslation(settings.language);
 
   const formatTimeAgo = (date: Date) => {
+    // Check if date is valid
+    if (!date || isNaN(date.getTime())) {
+      return 'Unknown';
+    }
+    
     const now = new Date();
     const diffMs = now.getTime() - date.getTime();
     const diffMins = Math.floor(diffMs / 60000);
@@ -85,7 +90,7 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({
 
       {/* Chat Sessions List */}
       {isSidebarOpen && (
-        <div className="flex-1 overflow-y-auto p-3 space-y-2 hide-scrollbar custom-scrollbar bg-gray-50/30 dark:bg-slate-900/30">
+        <div className="flex-1 overflow-y-auto p-3 space-y-2 custom-scrollbar bg-gray-50/30 dark:bg-slate-900/30">
           {chatSessions.length === 0 ? (
             <div className="text-center py-12 px-4">
               <BiMessage className="h-12 w-12 text-gray-400 dark:text-slate-500 mx-auto mb-3 opacity-50" />

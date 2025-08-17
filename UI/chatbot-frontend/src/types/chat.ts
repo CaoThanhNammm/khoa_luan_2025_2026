@@ -18,12 +18,12 @@ export interface ChatSession {
 }
 
 export interface DocumentInfo {
-  documentId: string;
+  documentId: string | null;
   filename: string;
-  fileSize: number;
-  sentencesCount: number;
+  fileSize?: number;
+  sentencesCount?: number;
   uploadDate: string;
-  status: string;
+  status?: string;
 }
 
 // Extended interface for sidebar display

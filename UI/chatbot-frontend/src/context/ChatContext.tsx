@@ -40,6 +40,9 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
   const [isThinking, setIsThinking] = useState(false); // Thêm state thinking
   const [pendingMessage, setPendingMessage] = useState<Message | null>(null); // Thêm state cho pending message
   const [error, setError] = useState<string | null>(null);
+  
+  // State để theo dõi document_id từ database - 'so_tay_sinh_vien_2024' nghĩa là student handbook
+  const [currentDocumentId, setCurrentDocumentId] = useState<string | null>(null);
 
   // Save current conversation ID to localStorage
   const saveCurrentConversationId = useCallback((conversationId: string | null) => {
@@ -130,6 +133,10 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     try {
       const newConversation = await ChatService.startNewConversation(message);
       
+      // Set currentDocumentId cho student handbook
+      setCurrentDocumentId('so_tay_sinh_vien_2024'); // Student handbook có document_id = 'so_tay_sinh_vien_2024'
+      console.log('Set currentDocumentId: so_tay_sinh_vien_2024 (student handbook - createNewConversation)');
+      
       // Mark the latest bot message for streaming effect
       const messagesWithStreaming = newConversation.messages.map((msg, index) => {
         if (msg.type === 'BOT' && index === newConversation.messages.length - 1) {
@@ -188,7 +195,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       ...(documentId === 'so_tay_sinh_vien_2024' && {
         hasDocument: true,
         documentInfo: {
-          documentId: 'so_tay_sinh_vien_2024',
+          documentId: null, // Student handbook có documentId là null
           filename: 'Sổ tay sinh viên 2024',
           fileSize: 0,
           sentencesCount: 0,
@@ -207,6 +214,15 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
         ? await ChatService.startNewConversation(message)
         : await ChatService.startNewConversationWithDocument(message, documentId);
       
+      // Set currentDocumentId dựa trên loại conversation
+      if (documentId === 'so_tay_sinh_vien_2024') {
+        setCurrentDocumentId('so_tay_sinh_vien_2024'); // Student handbook
+        console.log('Set currentDocumentId: so_tay_sinh_vien_2024 (student handbook)');
+      } else {
+        setCurrentDocumentId(documentId); // Uploaded document
+        console.log('Set currentDocumentId:', documentId);
+      }
+      
       // Mark the latest bot message for streaming effect
       const messagesWithStreaming = newConversation.messages.map((msg, index) => {
         if (msg.type === 'BOT' && index === newConversation.messages.length - 1) {
@@ -222,7 +238,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
         ...(documentId === 'so_tay_sinh_vien_2024' && {
           hasDocument: true,
           documentInfo: {
-            documentId: 'so_tay_sinh_vien_2024',
+            documentId: null, // Student handbook có documentId là null
             filename: 'Sổ tay sinh viên 2024',
             fileSize: 0,
             sentencesCount: 0,
@@ -289,6 +305,10 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       // Create empty conversation in database with document info
       const newConversation = await ChatService.createEmptyConversationWithDocument(documentId, filename, fileSize, status, s3Key, s3Url);
       
+      // Set currentDocumentId cho uploaded document
+      setCurrentDocumentId(documentId);
+      console.log('Set currentDocumentId:', documentId, '(uploaded document)');
+      
       // Add to conversations list and set as current
       setConversations(prev => [newConversation, ...prev]);
       setCurrentConversation(newConversation);
@@ -311,6 +331,24 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     setLoading(true);
     try {
       const conversation = await ChatService.getConversation(id);
+      
+      // Debug logging
+      console.log('Debug switchToConversation:', {
+        conversationId: id,
+        hasDocument: conversation?.hasDocument,
+        documentId: conversation?.documentInfo?.documentId,
+        filename: conversation?.documentInfo?.filename
+      });
+      
+      // Set currentDocumentId dựa trên thông tin từ database
+      if (conversation?.hasDocument && conversation?.documentInfo) {
+        setCurrentDocumentId(conversation.documentInfo.documentId);
+        console.log('Set currentDocumentId:', conversation.documentInfo.documentId);
+      } else {
+        setCurrentDocumentId(undefined); // Không có document
+        console.log('Set currentDocumentId: undefined (no document)');
+      }
+      
       setCurrentConversation(conversation);
       saveCurrentConversationId(id); // Save the current conversation ID
       setError(null);
@@ -358,15 +396,25 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       setPendingMessage(tempUserMessage);
       setIsThinking(true); // Bắt đầu thinking state
       
-      // Kiểm tra xem conversation có phải là student handbook không
-      const isStudentHandbook = currentConversation?.hasDocument && 
-                               currentConversation?.documentInfo?.documentId === 'so_tay_sinh_vien_2024';
+      // Sử dụng currentDocumentId để quyết định API nào sẽ gọi
+      // 'so_tay_sinh_vien_2024' = student handbook -> gọi sendMessageStsv
+      // other string = uploaded document -> gọi sendMessage  
+      // undefined/null = no document -> gọi sendMessage
+      const shouldUseStsv = currentDocumentId === 'so_tay_sinh_vien_2024';
+      
+      // Debug logging
+      console.log('Debug sendMessage:', {
+        currentDocumentId: currentDocumentId,
+        shouldUseStsv: shouldUseStsv,
+        conversationId: conversationId
+      });
       
       // Send message to server với API phù hợp
-      if (isStudentHandbook) {
+      if (shouldUseStsv) {
+        console.log('Calling sendMessageStsv (student handbook)');
         await ChatService.sendMessageStsv(conversationId, message);
       } else {
-        // document_id sẽ được tự động lấy từ database dựa trên conversation_id
+        console.log('Calling sendMessage (regular chat or uploaded document)');
         await ChatService.sendMessage(conversationId, message);
       }
       
@@ -385,24 +433,13 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
           return { ...msg, isLatest: false, isStreaming: false };
         });
 
-        // Preserve student handbook info if it exists in current conversation
-        const preservedConversation = {
+        // Update conversation with streaming effect
+        const updatedConversationWithStreaming = {
           ...updatedConversation,
-          messages: messagesWithStreaming,
-          ...(isStudentHandbook && {
-            hasDocument: true,
-            documentInfo: {
-              documentId: 'so_tay_sinh_vien_2024',
-              filename: 'Sổ tay sinh viên 2024',
-              fileSize: 0,
-              sentencesCount: 0,
-              uploadDate: currentConversation.documentInfo?.uploadDate || new Date().toISOString(),
-              status: 'processed'
-            }
-          })
+          messages: messagesWithStreaming
         };
 
-        setCurrentConversation(preservedConversation);
+        setCurrentConversation(updatedConversationWithStreaming);
       }
       
       setError(null);
@@ -419,7 +456,9 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
   };
   const clearCurrentConversation = () => {
     setCurrentConversation(null);
+    setCurrentDocumentId(undefined); // Reset document ID
     saveCurrentConversationId(null); // Clear saved conversation ID
+    console.log('Cleared currentConversation and currentDocumentId');
   };
   // Load conversations when user changes
   useEffect(() => {
@@ -428,6 +467,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     } else {
       setConversations([]);
       setCurrentConversation(null);
+      setCurrentDocumentId(undefined); // Reset document ID when logout
       // Clear any saved conversation data when user logs out
       Object.keys(localStorage).forEach(key => {
         if (key.startsWith('chatbot_current_conversation_')) {

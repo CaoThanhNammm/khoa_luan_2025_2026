@@ -23,7 +23,7 @@ def create_quest_answer(quest_dt, ans_dt, name_file):
 
 
 # stark-mag và stark-prime
-# splits = {'synthesized_all_split_mag': 'qa/mag/stark_qa/stark_qa.csv', 'humen_generated_eval_mag': 'qa/mag/stark_qa/stark_qa_human_generated_eval.csv', 'synthesized_all_split_prime': 'qa/prime/stark_qa/stark_qa.csv', 'humen_generated_eval_prime': 'qa/prime/stark_qa/stark_qa_human_generated_eval.csv'}
+splits = {'synthesized_all_split_mag': 'qa/mag/stark_qa/stark_qa.csv', 'humen_generated_eval_mag': 'qa/mag/stark_qa/stark_qa_human_generated_eval.csv', 'synthesized_all_split_prime': 'qa/prime/stark_qa/stark_qa.csv', 'humen_generated_eval_prime': 'qa/prime/stark_qa/stark_qa_human_generated_eval.csv'}
 
 # answer_auto_mag = pd.read_csv('dataset/mag/mag_auto.csv')
 # df_synthesized_all_split_mag = pd.read_csv("hf://datasets/snap-stanford/stark/" + splits["synthesized_all_split_mag"])
@@ -33,9 +33,9 @@ def create_quest_answer(quest_dt, ans_dt, name_file):
 # df_human_generated_eval_mag = pd.read_csv("hf://datasets/snap-stanford/stark/" + splits["humen_generated_eval_mag"])
 # create_quest_answer(df_human_generated_eval_mag, answer_human_mag, "mag_human_qa.csv")
 #
-# answer_auto_prime = pd.read_csv('dataset/prime/prime_auto_doc.csv')
-# df_synthesized_all_split_prime = pd.read_csv("hf://datasets/snap-stanford/stark/" + splits["synthesized_all_split_prime"])
-# create_quest_answer(df_synthesized_all_split_prime, answer_auto_prime, "prime_auto_qa.csv")
+answer_auto_prime = pd.read_csv('dataset/prime/prime_auto_doc.csv')
+df_synthesized_all_split_prime = pd.read_csv("hf://datasets/snap-stanford/stark/" + splits["synthesized_all_split_prime"])
+create_quest_answer(df_synthesized_all_split_prime, answer_auto_prime, "prime_auto_qa.csv")
 #
 # answer_human_prime = pd.read_csv('dataset/prime/prime_human_doc.csv')
 # df_human_generated_eval_prime = pd.read_csv("hf://datasets/snap-stanford/stark/" + splits["humen_generated_eval_prime"])

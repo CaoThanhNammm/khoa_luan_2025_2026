@@ -14,7 +14,19 @@ const                                                               MessageItem:
   const [codeCopied, setCodeCopied] = useState<{ [key: number]: boolean }>({});
 
   const formatTime = (timestamp: string): string => {
-    return new Date(timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    if (!timestamp) {
+      return 'Unknown time';
+    }
+    
+    const date = new Date(timestamp);
+    
+    // Check if date is valid
+    if (isNaN(date.getTime())) {
+      console.warn('Invalid message timestamp:', timestamp);
+      return 'Invalid time';
+    }
+    
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
   const copyToClipboard = async () => {

@@ -1,5 +1,6 @@
 import axios from "./api";
 import type { AxiosResponse } from "axios";
+import { SESSION_CONFIG, LOCAL_STORAGE_KEYS } from "../constants/api";
 
 const API_URL = "/api/auth/";
 
@@ -42,6 +43,53 @@ export interface ResetPasswordRequest {
 }
 
 class AuthService {
+  // Session management methods
+  private setSessionTimestamp(): void {
+    const timestamp = Date.now();
+    localStorage.setItem(SESSION_CONFIG.TIMESTAMP_KEY, timestamp.toString());
+  }
+
+  private getSessionTimestamp(): number | null {
+    const timestamp = localStorage.getItem(SESSION_CONFIG.TIMESTAMP_KEY);
+    return timestamp ? parseInt(timestamp, 10) : null;
+  }
+
+  private isSessionExpired(): boolean {
+    const timestamp = this.getSessionTimestamp();
+    if (!timestamp) return true;
+    
+    const now = Date.now();
+    const elapsed = now - timestamp;
+    return elapsed > SESSION_CONFIG.TTL;
+  }
+
+  private clearSession(): void {
+    localStorage.removeItem(LOCAL_STORAGE_KEYS.USER);
+    localStorage.removeItem(SESSION_CONFIG.TIMESTAMP_KEY);
+  }
+
+  // Check if session is valid (not expired)
+  isSessionValid(): boolean {
+    const user = this.getCurrentUser();
+    if (!user) return false;
+    
+    if (this.isSessionExpired()) {
+      console.log('Session expired, clearing user data');
+      this.clearSession();
+      return false;
+    }
+    
+    return true;
+  }
+
+  // Refresh session timestamp (extend session)
+  refreshSession(): void {
+    if (this.getCurrentUser()) {
+      this.setSessionTimestamp();
+      console.log('Session refreshed');
+    }
+  }
+
   login(username: string, password: string): Promise<AxiosResponse<AuthResponse>> {
     console.log('Attempting login with username:', username);
     
@@ -72,7 +120,9 @@ class AuthService {
             token: token
           };
           localStorage.setItem("user", JSON.stringify(userData));
-          console.log('User data saved to localStorage');
+          // Set session timestamp for TTL management
+          this.setSessionTimestamp();
+          console.log('User data saved to localStorage with session timestamp');
         } else {
           console.warn('Login response missing token or data');
         }
@@ -143,13 +193,22 @@ class AuthService {
   }
 
   logout(): void {
-    localStorage.removeItem("user");
+    this.clearSession();
+    console.log('User logged out and session cleared');
   }
 
   getCurrentUser(): User | null {
     const userStr = localStorage.getItem("user");
-    if (userStr) return JSON.parse(userStr);
-    return null;
+    if (!userStr) return null;
+    
+    // Check if session is expired
+    if (this.isSessionExpired()) {
+      console.log('Session expired, clearing user data');
+      this.clearSession();
+      return null;
+    }
+    
+    return JSON.parse(userStr);
   }
 
   getAuthHeader(): { Authorization: string } | Record<string, never> {

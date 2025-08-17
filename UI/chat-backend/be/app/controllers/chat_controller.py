@@ -7,7 +7,9 @@ from app.schemas.conversation import ConversationResponse, ConversationCreate, C
     EmptyConversationWithDocumentCreate, MessageResponse, MessageRequest, StudentHandbookConversationCreate, \
     StudentHandbookMessageRequest
 from app.services import chat_service
+from app.services.chat_service import convert_message_to_response
 from app.utils.security import get_current_user
+from app.models.document import UserDocument
 router = APIRouter(prefix="/api/chat", tags=["Chat"])
 
 @router.get("/conversations", response_model=List[ConversationResponse])
@@ -40,8 +42,8 @@ def start_conversation(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    """Start a new conversation"""
-    conversation = chat_service.start_new_conversation(db, current_user.id, request.message)
+    """Start a new conversation (default: student handbook)"""
+    conversation = chat_service.start_new_conversation(db, current_user.id, request.message, is_student_handbook=True)
     return conversation
 
 @router.post("/conversations/with-document", response_model=ConversationResponse)
@@ -85,7 +87,8 @@ def send_message_stsv(
 ):
     """Send a message in a conversation"""
     message = chat_service.send_message_stsv(db, conversation_id, request.message, current_user.id)
-    return message
+    # Convert SQLAlchemy model to Pydantic model
+    return convert_message_to_response(message)
 
 @router.post("/conversations/{conversation_id}/messages", response_model=MessageResponse)
 def send_message(
@@ -96,7 +99,8 @@ def send_message(
 ):
     """Send a message in a conversation - document_id will be automatically retrieved from database"""
     message = chat_service.send_message(db, conversation_id, request.document_id or "", request.message, current_user.id)
-    return message
+    # Convert SQLAlchemy model to Pydantic model
+    return convert_message_to_response(message)
 
 @router.post("/student-handbook/conversations", response_model=ConversationResponse)
 def create_student_handbook_conversation(
@@ -118,7 +122,8 @@ def send_message_to_student_handbook(
     message = chat_service.send_message_to_student_handbook(
         db, request.message, current_user.id
     )
-    return message
+    # Convert SQLAlchemy model to Pydantic model
+    return convert_message_to_response(message)
 
 @router.post("/student-handbook/conversations/{conversation_id}/messages", response_model=MessageResponse)
 def send_message_to_existing_student_handbook_conversation(
@@ -131,7 +136,8 @@ def send_message_to_existing_student_handbook_conversation(
     message = chat_service.send_message_to_student_handbook(
         db, request.message, current_user.id, conversation_id
     )
-    return message
+    # Convert SQLAlchemy model to Pydantic model
+    return convert_message_to_response(message)
 
 @router.get("/cache-info")
 def get_cache_info(
@@ -139,6 +145,29 @@ def get_cache_info(
 ):
     """Get cache information for debugging"""
     return chat_service.get_cache_info()
+
+@router.get("/debug/conversation/{conversation_id}/user-document")
+def debug_user_document(
+    conversation_id: str,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Debug endpoint to check user_document for a conversation"""
+    user_document = db.query(UserDocument).filter(
+        UserDocument.conversation_id == conversation_id
+    ).first()
+    
+    if user_document:
+        return {
+            "found": True,
+            "user_id": user_document.user_id,
+            "conversation_id": user_document.conversation_id,
+            "document_id": user_document.document_id,
+            "filename": user_document.filename,
+            "created_at": user_document.created_at.isoformat() if user_document.created_at else None
+        }
+    else:
+        return {"found": False}
 
 @router.delete("/conversations/{conversation_id}")
 def delete_conversation(

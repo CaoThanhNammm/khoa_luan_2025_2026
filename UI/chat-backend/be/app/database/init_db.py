@@ -101,7 +101,7 @@ def init_database():
             id INT AUTO_INCREMENT PRIMARY KEY,
             user_id INT NOT NULL,
             conversation_id VARCHAR(36) NULL,
-            document_id VARCHAR(255) NOT NULL,
+            document_id VARCHAR(255) NULL,
             filename VARCHAR(255) NOT NULL,
             file_size BIGINT NULL,
             status VARCHAR(50) NULL DEFAULT 'processing',

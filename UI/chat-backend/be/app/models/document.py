@@ -10,7 +10,7 @@ class UserDocument(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     conversation_id = Column(String(36), ForeignKey("conversations.id"), nullable=True)
-    document_id = Column(String(255), nullable=False)  # External document ID (e.g., UUID for S3)
+    document_id = Column(String(255), nullable=True)  # External document ID (e.g., UUID for S3)
     filename = Column(String(255), nullable=False)
     file_size = Column(BigInteger, nullable=True)
     status = Column(String(50), nullable=True, default="processing")  # processing, done, error

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import type { ReactNode } from 'react';
 import AuthService from '../services/AuthService';
 import { getErrorMessage } from '../utils/errorHandler';
@@ -30,10 +30,16 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const logout = useCallback(() => {
+    setUser(null);
+    setError(null);
+    AuthService.logout();
+  }, []);
+
   useEffect(() => {
-    // Check if user is already logged in using AuthService
+    // Check if user is already logged in and session is valid
     const savedUser = AuthService.getCurrentUser();
-    if (savedUser) {
+    if (savedUser && AuthService.isSessionValid()) {
       const user: User = {
         id: savedUser.id,
         name: savedUser.username,
@@ -44,6 +50,23 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
     setIsLoading(false);
   }, []);
+
+  // Auto-refresh session every 30 minutes to keep it alive
+  useEffect(() => {
+    if (user) {
+      const refreshInterval = setInterval(() => {
+        if (AuthService.isSessionValid()) {
+          AuthService.refreshSession();
+          console.log('Session auto-refreshed');
+        } else {
+          console.log('Session expired, logging out');
+          logout();
+        }
+      }, 30 * 60 * 1000); // 30 minutes
+
+      return () => clearInterval(refreshInterval);
+    }
+  }, [user, logout]);
 
   const login = async (username: string, password: string): Promise<boolean> => {
     setIsLoading(true);
@@ -100,12 +123,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       setIsLoading(false);
       return false;
     }
-  };
-
-  const logout = () => {
-    setUser(null);
-    setError(null);
-    AuthService.logout();
   };
 
   const value: AuthContextType = {

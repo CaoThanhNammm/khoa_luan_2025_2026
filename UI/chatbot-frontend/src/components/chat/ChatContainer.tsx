@@ -53,7 +53,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
       <div className="flex-1 flex flex-col min-h-0 bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl shadow-xl shadow-gray-100/50 dark:shadow-slate-900/50 border border-gray-200/60 dark:border-slate-700/60 rounded-2xl mx-4 mb-4 transition-all duration-300 relative z-10 overflow-hidden">
         {showSuggestedQuestions && messages.length === 0 ? (
           <>
-            <div className="flex-1 overflow-hidden">
+            <div className="flex-1 min-h-0">
               <SuggestedQuestions 
                 onQuestionClick={onSendMessage} 
                 documentId={documentInfo?.documentId}
@@ -72,7 +72,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
           </>
         ) : (
           <>
-            <div className="flex-1 overflow-hidden">
+            <div className="flex-1 min-h-0">
               <ChatMessages messages={messages} isTyping={isTyping} isThinking={isThinking} pendingMessage={pendingMessage} />
             </div>
             <div className="flex-shrink-0">

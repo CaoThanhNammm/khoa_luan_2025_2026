@@ -177,15 +177,26 @@ const ChatPage: React.FC = () => {
   if (!user) {
     return null; // Will redirect in useEffect
   }  // Convert conversations to SidebarChatSession format for sidebar
-  const chatSessions: SidebarChatSession[] = chatContext.conversations.map((conv: ChatSession) => ({
-    id: conv.id.toString(),
-    title: conv.title,
-    lastMessage: conv.messages.length > 0 ? conv.messages[conv.messages.length - 1].content : 'No messages yet',
-    timestamp: new Date(conv.createdAt),
-    hasDocument: conv.hasDocument || false,
-    documentFilename: conv.documentInfo?.filename,
-    documentType: conv.documentInfo?.documentId === 'so_tay_sinh_vien_2024' ? 'default' : 'upload'
-  }));
+  const chatSessions: SidebarChatSession[] = chatContext.conversations.map((conv: ChatSession) => {
+    // Safely parse the timestamp
+    let timestamp = new Date();
+    if (conv.createdAt) {
+      const parsedDate = new Date(conv.createdAt);
+      if (!isNaN(parsedDate.getTime())) {
+        timestamp = parsedDate;
+      }
+    }
+    
+    return {
+      id: conv.id.toString(),
+      title: conv.title,
+      lastMessage: conv.messages.length > 0 ? conv.messages[conv.messages.length - 1].content : 'No messages yet',
+      timestamp: timestamp,
+      hasDocument: conv.hasDocument || false,
+      documentFilename: conv.documentInfo?.filename,
+      documentType: conv.documentInfo?.documentId === 'so_tay_sinh_vien_2024' ? 'default' : 'upload'
+    };
+  });
 
   const currentSessionId = chatContext.currentConversation?.id.toString() || '';
   return (

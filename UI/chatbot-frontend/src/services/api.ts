@@ -45,6 +45,12 @@ axios.interceptors.response.use(
   (response) => {
     // Log successful response for debugging (remove in production)
     console.log(`Received response from ${response.config.url}:`, response.status);
+    
+    // Refresh session on successful API calls to keep session alive
+    if (AuthService.getCurrentUser()) {
+      AuthService.refreshSession();
+    }
+    
     return response;
   },
   (error) => {

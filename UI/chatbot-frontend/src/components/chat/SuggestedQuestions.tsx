@@ -18,14 +18,26 @@ const SuggestedQuestions: React.FC<SuggestedQuestionsProps> = ({ onQuestionClick
       return [
         "Lịch sử trường đại học nông lâm tphcm",
         "Địa chỉ trường đại học nông lâm tphcm", 
-        "Tổng quan về sổ tay sinh viên 2024"
+        "Tổng quan về sổ tay sinh viên 2024",
+        "Quy định về học phí và học bổng",
+        "Thông tin về các khoa và ngành đào tạo",
+        "Quy chế đào tạo và thi cử",
+        "Hoạt động sinh viên và câu lạc bộ",
+        "Thông tin về ký túc xá và chỗ ở",
+        "Dịch vụ hỗ trợ sinh viên",
+        "Quy định về thực tập và việc làm",
+        "Thông tin liên hệ các phòng ban",
+        "Lịch năm học và các sự kiện quan trọng"
       ];
     } else {
       // For uploaded documents
       return [
         `Tóm tắt nội dung chính của ${filename || 'tài liệu này'}`,
         `Những điểm quan trọng nhất trong ${filename || 'tài liệu này'} là gì?`,
-        `Giải thích chi tiết về ${filename || 'tài liệu này'}`
+        `Giải thích chi tiết về ${filename || 'tài liệu này'}`,
+        `Phân tích cấu trúc của ${filename || 'tài liệu này'}`,
+        `Những thông tin hữu ích từ ${filename || 'tài liệu này'}`,
+        `Kết luận và đánh giá về ${filename || 'tài liệu này'}`
       ];
     }
   };
@@ -33,8 +45,9 @@ const SuggestedQuestions: React.FC<SuggestedQuestionsProps> = ({ onQuestionClick
   const suggestedQuestions = getSuggestedQuestions();
 
   return (
-    <div className="flex-1 overflow-y-auto p-8 animate-fade-in custom-scrollbar">
-      <div className="max-w-2xl w-full mx-auto flex flex-col justify-center min-h-full">
+    <div className="h-full flex flex-col">
+      <div className="flex-1 p-8 animate-fade-in suggested-questions-scroll">
+        <div className="max-w-2xl w-full mx-auto">
         {/* Welcome message */}
         <div className="text-center mb-8 animate-slide-up">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl mb-4 shadow-lg animate-float">
@@ -97,6 +110,7 @@ const SuggestedQuestions: React.FC<SuggestedQuestionsProps> = ({ onQuestionClick
               💡 Bạn cũng có thể nhập câu hỏi tùy chỉnh ở phía dưới
             </p>
           </div>
+        </div>
         </div>
       </div>
     </div>

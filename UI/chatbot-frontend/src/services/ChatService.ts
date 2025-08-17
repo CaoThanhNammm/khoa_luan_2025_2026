@@ -12,12 +12,12 @@ export interface ConversationResponse {
   messages: MessageResponse[];
   hasDocument?: boolean;
   documentInfo?: {
-    documentId: string;
+    documentId: string | null;
     filename: string;
-    fileSize: number;
-    sentencesCount: number;
+    fileSize?: number;
+    sentencesCount?: number;
     uploadDate: string;
-    status: string;
+    status?: string;
   };
 }
 
@@ -87,7 +87,7 @@ class ChatService {
         document_id: documentId, 
         filename: filename, 
         file_size: fileSize,
-        title: `Cuộc trò chuyện với ${filename}`,
+        title: filename, // Use filename directly as title
         status,
         s3_key: s3Key,
         s3_url: s3Url
