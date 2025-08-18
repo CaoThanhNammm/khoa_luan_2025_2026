@@ -5,7 +5,7 @@ from cohere import ClientV2
 class CohereChatBot:
     def __init__(self, model="command-a-vision-07-2025", temperature=0.3):
         load_dotenv()
-        api_key = os.getenv("API_KEY_COHERE_02")
+        api_key = os.getenv("API_KEY_COHERE_03")
         if not api_key:
             raise ValueError("API_KEY_COHERE not found in .env file")
         self.client = ClientV2(api_key=api_key)

@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "ED001",
+    "question": "Chương trình giáo dục phổ thông 2018 ở Việt Nam có điểm mới cốt lõi nào so với chương trình cũ?",
+    "choices": {
+      "A": "Tăng số lượng môn học bắt buộc ở tất cả các cấp.",
+      "B": "Chuyển từ định hướng nội dung sang định hướng phát triển phẩm chất và năng lực học sinh.",
+      "C": "Loại bỏ hoàn toàn các hoạt động trải nghiệm và hướng nghiệp.",
+      "D": "Chỉ sử dụng duy nhất một bộ sách giáo khoa do Bộ Giáo dục và Đào tạo biên soạn."
+    },
+    "answer": "B"
+  },
+  {
+    "id": "ED002",
+    "question": "Xu hướng giáo dục STEM đang được đẩy mạnh trong các trường học ở Việt Nam là viết tắt của các lĩnh vực nào?",
+    "choices": {
+      "A": "Khoa học, Công nghệ, Kinh tế và Toán học (Science, Technology, Economics, Mathematics).",
+      "B": "Khoa học, Kỹ thuật, Năng khiếu và Môi trường (Science, Techniques, Aptitude, Environment).",
+      "C": "Khoa học, Công nghệ, Kỹ thuật và Toán học (Science, Technology, Engineering, Mathematics).",
+      "D": "Khoa học Xã hội, Công nghệ, Thể chất và Âm nhạc (Social Science, Technology, Physical Education, Music)."
+    },
+    "answer": "C"
+  },
+  {
+    "id": "ED003",
+    "question": "Theo phương án tổ chức kỳ thi tốt nghiệp THPT từ năm 2025, thí sinh sẽ thi bao nhiêu môn bắt buộc?",
+    "choices": {
+      "A": "Bốn môn: Toán, Ngữ văn, Ngoại ngữ và một môn tự chọn.",
+      "B": "Ba môn: Toán, Ngữ văn và Ngoại ngữ.",
+      "C": "Năm môn: Toán, Ngữ văn, Ngoại ngữ, Lịch sử và Giáo dục công dân.",
+      "D": "Hai môn: Toán và Ngữ văn."
+    },
+    "answer": "D"
+  },
+  {
+    "id": "ED004",
+    "question": "Tự chủ đại học ở Việt Nam có nghĩa là gì?",
+    "choices": {
+      "A": "Các trường đại học hoàn toàn độc lập khỏi sự quản lý của nhà nước.",
+      "B": "Các trường được quyền chủ động quyết định về đào tạo, nghiên cứu khoa học, tổ chức nhân sự và tài chính trong khuôn khổ pháp luật. [5, 7, 10]",
+      "C": "Sinh viên được toàn quyền quyết định chương trình học và học phí.",
+      "D": "Tất cả các trường đại học đều phải tự chủ hoàn toàn về tài chính mà không có sự hỗ trợ từ nhà nước."
+    },
+    "answer": "B"
+  },
+  {
+    "id": "ED005",
+    "question": "Một trong những thách thức lớn mà ngành giáo dục Việt Nam đang đối mặt trong bối cảnh chuyển đổi số là gì?",
+    "choices": {
+      "A": "Học sinh không quan tâm đến việc sử dụng công nghệ trong học tập.",
+      "B": "Sự chênh lệch về cơ sở hạ tầng công nghệ và kỹ năng số của giáo viên giữa các vùng miền. [23]",
+      "C": "Phụ huynh phản đối việc ứng dụng công nghệ thông tin trong trường học.",
+      "D": "Thừa thãi nguồn nhân lực giáo viên có trình độ công nghệ cao."
+    },
+    "answer": "B"
+  },
+  {
+    "id": "ED006",
+    "question": "Mục tiêu chính của việc tăng cường giáo dục kỹ năng mềm cho học sinh trong các trường học hiện nay là gì?",
+    "choices": {
+      "A": "Chỉ để giúp học sinh đạt điểm cao hơn trong các kỳ thi.",
+      "B": "Trang bị cho học sinh khả năng tư duy phản biện, giải quyết vấn đề và giao tiếp hiệu quả để thành công trong học tập và sự nghiệp. [3]",
+      "C": "Thay thế hoàn toàn kiến thức chuyên môn.",
+      "D": "Giúp học sinh có thêm thời gian tham gia các hoạt động giải trí."
+    },
+    "answer": "B"
+  },
+  {
+    "id": "GDH_001",
+    "question": "Đối tượng nghiên cứu của Giáo dục học là gì?",
+    "choices": [
+      "A. Quá trình hình thành và phát triển nhân cách con người.",
+      "B. Quá trình sư phạm (quá trình giáo dục theo nghĩa rộng).",
+      "C. Hoạt động dạy và hoạt động học của thầy và trò.",
+      "D. Các quy luật của xã hội và tự nhiên."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "GDH_002",
+    "question": "Chức năng cơ bản của giáo dục là gì?",
+    "choices": [
+      "A. Chức năng kinh tế - sản xuất và chức năng chính trị - xã hội.",
+      "B. Chức năng văn hóa - xã hội và chức năng cá nhân.",
+      "C. Chức năng truyền đạt kinh nghiệm và chức năng tái sản xuất sức lao động.",
+      "D. Cả A và B đều đúng."
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "GDH_003",
+    "question": "Yếu tố nào giữ vai trò chủ đạo trong sự phát triển nhân cách?",
+    "choices": [
+      "A. Di truyền (bẩm sinh).",
+      "B. Môi trường sống.",
+      "C. Giáo dục.",
+      "D. Hoạt động cá nhân."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "GDH_004",
+    "question": "Nguyên lý giáo dục nào của Việt Nam được nêu trong Luật Giáo dục?",
+    "choices": [
+      "A. Học đi đôi với hành, lý luận gắn liền với thực tiễn.",
+      "B. Giáo dục kết hợp với lao động sản xuất.",
+      "C. Dân chủ hóa, hiện đại hóa, xã hội hóa.",
+      "D. Cả A và B đều đúng."
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "GDH_005",
+    "question": "Đâu là một trong những nhiệm vụ của giáo dục thể chất?",
+    "choices": [
+      "A. Phát triển tư duy logic.",
+      "B. Hình thành thế giới quan khoa học.",
+      "C. Nâng cao năng lực làm việc và sức khỏe.",
+      "D. Bồi dưỡng tình yêu quê hương, đất nước."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "TLH_001",
+    "question": "Theo Jean Piaget, trẻ em ở giai đoạn nào bắt đầu có tư duy logic, cụ thể?",
+    "choices": [
+      "A. Giai đoạn cảm giác - vận động (0-2 tuổi).",
+      "B. Giai đoạn tiền thao tác (2-7 tuổi).",
+      "C. Giai đoạn thao tác cụ thể (7-11 tuổi).",
+      "D. Giai đoạn thao tác hình thức (11 tuổi trở lên)."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "TLH_002",
+    "question": "Lý thuyết 'Vùng phát triển gần nhất' (Zone of Proximal Development) là của nhà tâm lý học nào?",
+    "choices": [
+      "A. Jean Piaget.",
+      "B. Lev Vygotsky.",
+      "C. B.F. Skinner.",
+      "D. Sigmund Freud."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "TLH_003",
+    "question": "Hiện tượng học sinh có xu hướng quên đi những kiến thức vừa học nếu không được ôn tập củng cố gọi là gì?",
+    "choices": [
+      "A. Sự ức chế.",
+      "B. Sự mệt mỏi.",
+      "C. Sự mai một của trí nhớ.",
+      "D. Sự nhiễu loạn thông tin."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "TLH_004",
+    "question": "Theo thuyết đa trí tuệ của Howard Gardner, người có khả năng cảm nhận tốt về không gian, hình ảnh thuộc loại trí tuệ nào?",
+    "choices": [
+      "A. Trí tuệ ngôn ngữ.",
+      "B. Trí tuệ logic-toán học.",
+      "C. Trí tuệ không gian.",
+      "D. Trí tuệ nội tâm."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "TLH_005",
+    "question": "Động cơ học tập nào được coi là bền vững và có hiệu quả nhất?",
+    "choices": [
+      "A. Động cơ học tập vì điểm số cao.",
+      "B. Động cơ học tập vì sợ bị phạt.",
+      "C. Động cơ học tập vì hứng thú và mong muốn khám phá tri thức.",
+      "D. Động cơ học tập để được bạn bè nể phục."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "PPDH_001",
+    "question": "Đâu là đặc điểm cơ bản của phương pháp dạy học tích cực?",
+    "choices": [
+      "A. Giáo viên là trung tâm, truyền thụ kiến thức một chiều.",
+      "B. Học sinh thụ động tiếp thu kiến thức.",
+      "C. Phát huy tính chủ động, sáng tạo, hợp tác của học sinh.",
+      "D. Chỉ tập trung vào kết quả cuối cùng, không quan tâm quá trình."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "PPDH_002",
+    "question": "Phương pháp dạy học nào mà trong đó học sinh thực hiện một nhiệm vụ học tập phức hợp, gắn với thực tiễn, kết hợp lý thuyết với thực hành, tạo ra các sản phẩm có thể giới thiệu?",
+    "choices": [
+      "A. Phương pháp thuyết trình.",
+      "B. Phương pháp vấn đáp.",
+      "C. Dạy học theo dự án.",
+      "D. Phương pháp luyện tập."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "PPDH_003",
+    "question": "Kỹ thuật dạy học 'Khăn trải bàn' nhằm mục đích gì?",
+    "choices": [
+      "A. Giúp học sinh ghi nhớ kiến thức một cách máy móc.",
+      "B. Tăng cường hoạt động cá nhân và hoạt động nhóm.",
+      "C. Chỉ dành cho các môn học xã hội.",
+      "D. Đánh giá khả năng viết của từng học sinh."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PPDH_004",
+    "question": "Trong mô hình lớp học đảo ngược (Flipped Classroom), hoạt động nào thường được thực hiện ở nhà?",
+    "choices": [
+      "A. Thảo luận nhóm và giải bài tập khó.",
+      "B. Nghe giáo viên giảng bài mới qua video hoặc tài liệu.",
+      "C. Làm thí nghiệm, thực hành.",
+      "D. Trình bày dự án học tập."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PPDH_005",
+    "question": "Mục đích chính của việc đặt câu hỏi trong dạy học là gì?",
+    "choices": [
+      "A. Để kiểm tra trí nhớ của học sinh.",
+      "B. Để duy trì trật tự lớp học.",
+      "C. Kích thích tư duy, thu hút sự tham gia của học sinh.",
+      "D. Để kết thúc bài giảng nhanh hơn."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "QLGD_001",
+    "question": "Chức năng nào của quản lý giáo dục liên quan đến việc xác định mục tiêu và xây dựng kế hoạch hành động?",
+    "choices": [
+      "A. Chức năng tổ chức.",
+      "B. Chức năng kế hoạch hóa.",
+      "C. Chức năng chỉ đạo.",
+      "D. Chức năng kiểm tra."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "QLGD_002",
+    "question": "Phân tích SWOT trong quản lý giáo dục là phân tích các yếu tố nào?",
+    "choices": [
+      "A. Điểm mạnh, Điểm yếu, Cơ hội, Thách thức.",
+      "B. Kế hoạch, Tổ chức, Nhân sự, Tài chính.",
+      "C. Giáo viên, Học sinh, Phụ huynh, Cộng đồng.",
+      "D. Mục tiêu, Nội dung, Phương pháp, Đánh giá."
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "QLGD_003",
+    "question": "Văn hóa nhà trường được hiểu là gì?",
+    "choices": [
+      "A. Cơ sở vật chất, trang thiết bị của nhà trường.",
+      "B. Các quy định, nội quy của nhà trường.",
+      "C. Toàn bộ các giá trị, niềm tin, chuẩn mực hành vi... đặc trưng cho một nhà trường.",
+      "D. Thành tích học tập của học sinh trong trường."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "QLGD_004",
+    "question": "Hoạt động nào sau đây thuộc về quản lý chuyên môn trong nhà trường?",
+    "choices": [
+      "A. Quản lý tài chính, tài sản.",
+      "B. Xây dựng kế hoạch tuyển sinh.",
+      "C. Tổ chức dự giờ, thăm lớp, sinh hoạt tổ chuyên môn.",
+      "D. Công tác thi đua, khen thưởng."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "QLGD_005",
+    "question": "Cấp học nào thuộc hệ thống giáo dục quốc dân của Việt Nam?",
+    "choices": [
+      "A. Giáo dục mầm non.",
+      "B. Giáo dục phổ thông.",
+      "C. Giáo dục đại học.",
+      "D. Cả A, B, và C."
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "LSGD_001",
+    "question": "Văn Miếu - Quốc Tử Giám, trường đại học đầu tiên của Việt Nam, được xây dựng dưới triều đại nào?",
+    "choices": [
+      "A. Triều Lý.",
+      "B. Triều Trần.",
+      "C. Triều Lê.",
+      "D. Triều Nguyễn."
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "LSGD_002",
+    "question": "Phong trào nào do các sĩ phu yêu nước khởi xướng vào đầu thế kỷ 20 có chủ trương mở trường học dạy theo lối mới?",
+    "choices": [
+      "A. Phong trào Cần Vương.",
+      "B. Phong trào Đông Du.",
+      "C. Phong trào Duy Tân.",
+      "D. Phong trào Xô Viết Nghệ Tĩnh."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "LSGD_003",
+    "question": "Chủ tịch Hồ Chí Minh đã phát động phong trào nào ngay sau Cách mạng Tháng Tám năm 1945 để chống 'giặc dốt'?",
+    "choices": [
+      "A. Phong trào 'Ba sẵn sàng'.",
+      "B. Phong trào 'Bình dân học vụ'.",
+      "C. Phong trào 'Nghìn việc tốt'.",
+      "D. Phong trào 'Dạy tốt, học tốt'."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "LSGD_004",
+    "question": "Cuộc cải cách giáo dục lớn đầu tiên của nước Việt Nam Dân chủ Cộng hòa diễn ra vào năm nào?",
+    "choices": [
+      "A. 1945.",
+      "B. 1950.",
+      "C. 1956.",
+      "D. 1961."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "LSGD_005",
+    "question": "Chương trình giáo dục phổ thông mới của Việt Nam bắt đầu được triển khai từ năm học nào đối với lớp 1?",
+    "choices": [
+      "A. 2018-2019.",
+      "B. 2019-2020.",
+      "C. 2020-2021.",
+      "D. 2021-2022."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "KTĐG_001",
+    "question": "Mục đích chính của đánh giá thường xuyên trong quá trình dạy học là gì?",
+    "choices": [
+      "A. Để xếp loại học sinh cuối kỳ.",
+      "B. Để so sánh học sinh này với học sinh khác.",
+      "C. Cung cấp thông tin phản hồi để điều chỉnh việc dạy và học.",
+      "D. Để cho điểm và ghi vào sổ học bạ."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "KTĐG_002",
+    "question": "Đánh giá năng lực người học là tập trung vào việc:",
+    "choices": [
+      "A. Kiểm tra khả năng ghi nhớ kiến thức lý thuyết.",
+      "B. Xem xét khả năng vận dụng kiến thức, kỹ năng vào giải quyết các tình huống thực tiễn.",
+      "C. Chấm điểm dựa trên số lượng câu trả lời đúng.",
+      "D. So sánh kết quả của học sinh với đáp án có sẵn."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "KTĐG_003",
+    "question": "Công cụ nào sau đây thường được sử dụng trong đánh giá quá trình?",
+    "choices": [
+      "A. Bài thi cuối kỳ.",
+      "B. Phiếu quan sát, bảng kiểm (checklist), rubric.",
+      "C. Bằng tốt nghiệp.",
+      "D. Đề thi tuyển sinh đại học."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "KTĐG_004",
+    "question": "Một câu hỏi trắc nghiệm được xem là có độ khó cao khi nào?",
+    "choices": [
+      "A. Khi có nhiều học sinh trả lời đúng.",
+      "B. Khi có rất ít học sinh trả lời đúng.",
+      "C. Khi các phương án nhiễu không hợp lý.",
+      "D. Khi câu hỏi quá dài và phức tạp."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "KTĐG_005",
+    "question": "'Tự đánh giá' và 'đánh giá đồng đẳng' trong học tập có ý nghĩa gì?",
+    "choices": [
+      "A. Giúp giáo viên giảm bớt khối lượng công việc chấm bài.",
+      "B. Phát triển năng lực tự chủ, tự học và tinh thần trách nhiệm của học sinh.",
+      "C. Chỉ mang tính hình thức, không có giá trị.",
+      "D. Gây ra sự so bì, mất đoàn kết giữa các học sinh."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "GDH_006",
+    "question": "Mối quan hệ giữa giáo dục và sự phát triển kinh tế là mối quan hệ:",
+    "choices": [
+      "A. Tác động một chiều, giáo dục quyết định kinh tế.",
+      "B. Tác động một chiều, kinh tế quyết định giáo dục.",
+      "C. Tác động qua lại, biện chứng.",
+      "D. Không có mối liên hệ nào."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "GDH_007",
+    "question": "Trong các lực lượng giáo dục, lực lượng nào có vai trò nền tảng, đầu tiên đối với sự hình thành nhân cách của trẻ?",
+    "choices": [
+      "A. Nhà trường.",
+      "B. Gia đình.",
+      "C. Xã hội.",
+      "D. Bạn bè."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "GDH_008",
+    "question": "Giáo dục theo nghĩa hẹp (quá trình dạy học và giáo dục) chủ yếu diễn ra ở đâu?",
+    "choices": [
+      "A. Trong gia đình.",
+      "B. Ngoài xã hội.",
+      "C. Trong các cơ sở giáo dục (nhà trường).",
+      "D. Qua các phương tiện truyền thông."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "GDH_009",
+    "question": "Nguyên tắc đảm bảo sự thống nhất giữa lý luận và thực tiễn trong giáo dục đòi hỏi điều gì?",
+    "choices": [
+      "A. Chỉ tập trung vào việc giảng dạy các kiến thức hàn lâm.",
+      "B. Chỉ chú trọng rèn luyện kỹ năng thực hành, xem nhẹ lý thuyết.",
+      "C. Kiến thức sách vở phải được gắn liền với cuộc sống, giúp học sinh vận dụng được vào thực tế.",
+      "D. Lý luận và thực tiễn là hai mặt tách rời nhau."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "GDH_010",
+    "question": "Đâu là một biểu hiện của giáo dục đạo đức?",
+    "choices": [
+      "A. Dạy học sinh giải một bài toán khó.",
+      "B. Hướng dẫn học sinh làm thí nghiệm vật lý.",
+      "C. Tổ chức cho học sinh tham gia hoạt động tình nguyện, giúp đỡ người có hoàn cảnh khó khăn.",
+      "D. Rèn luyện kỹ năng đọc hiểu văn bản cho học sinh."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "TLH_006",
+    "question": "Theo thuyết học tập của B.F. Skinner, hành vi được củng cố và có khả năng lặp lại cao hơn khi nhận được điều gì?",
+    "choices": [
+      "A. Một hình phạt.",
+      "B. Một sự củng cố tích cực (phần thưởng).",
+      "C. Sự thờ ơ, không quan tâm.",
+      "D. Một kích thích trung tính."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "TLH_007",
+    "question": "Sự chú ý không chủ định của học sinh thường bị thu hút bởi các đối tượng có đặc điểm gì?",
+    "choices": [
+      "A. Quen thuộc, đơn điệu.",
+      "B. Mới lạ, hấp dẫn, có cường độ mạnh.",
+      "C. Trừu tượng, khó hiểu.",
+      "D. Không liên quan đến nhu cầu của học sinh."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "TLH_008",
+    "question": "Khủng hoảng tâm lý tuổi dậy thì là một hiện tượng:",
+    "choices": [
+      "A. Bất thường và cần can thiệp y tế.",
+      "B. Chỉ xảy ra ở các học sinh cá biệt.",
+      "C. Mang tính quy luật, phổ biến, đánh dấu một bước phát triển mới về tâm sinh lý.",
+      "D. Hoàn toàn do ảnh hưởng tiêu cực từ môi trường xã hội."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "TLH_009",
+    "question": "Phong cách học tập nào mô tả người học tốt nhất thông qua việc lắng nghe (giảng bài, thảo luận)?",
+    "choices": [
+      "A. Phong cách học qua thị giác (Visual).",
+      "B. Phong cách học qua thính giác (Auditory).",
+      "C. Phong cách học qua vận động (Kinesthetic).",
+      "D. Phong cách học qua đọc/viết (Reading/Writing)."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "TLH_010",
+    "question": "Để giúp học sinh hình thành tư duy sáng tạo, giáo viên nên:",
+    "choices": [
+      "A. Luôn đưa ra đáp án duy nhất và yêu cầu học sinh làm theo.",
+      "B. Khuyến khích học sinh đặt câu hỏi, tìm nhiều giải pháp cho một vấn đề.",
+      "C. Tránh các hoạt động đòi hỏi sự tưởng tượng.",
+      "D. Phê bình những ý tưởng khác biệt của học sinh."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PPDH_006",
+    "question": "Đâu không phải là một phương pháp dạy học tích cực?",
+    "choices": [
+      "A. Dạy học giải quyết vấn đề.",
+      "B. Dạy học theo góc.",
+      "C. Phương pháp đọc - chép.",
+      "D. Dạy học theo hợp đồng."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "PPDH_007",
+    "question": "Trong dạy học, phương tiện trực quan có vai trò gì?",
+    "choices": [
+      "A. Chỉ để trang trí cho lớp học thêm sinh động.",
+      "B. Giúp cụ thể hóa kiến thức, tăng tính hấp dẫn và hiệu quả nhận thức cho học sinh.",
+      "C. Thay thế hoàn toàn lời giảng của giáo viên.",
+      "D. Chỉ cần thiết đối với cấp học mầm non."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PPDH_008",
+    "question": "Hình thức tổ chức dạy học cơ bản và phổ biến nhất ở trường phổ thông hiện nay là gì?",
+    "choices": [
+      "A. Dạy học theo lớp - bài.",
+      "B. Tham quan, dã ngoại.",
+      "C. Dạy học theo dự án.",
+      "D. Học tập ngoại khóa."
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "PPDH_009",
+    "question": "Mục tiêu của dạy học phân hóa là gì?",
+    "choices": [
+      "A. Chia học sinh thành các lớp giỏi, khá, trung bình riêng biệt.",
+      "B. Áp dụng một phương pháp dạy học duy nhất cho tất cả học sinh.",
+      "C. Tạo điều kiện để mỗi học sinh được phát triển tối đa tiềm năng của bản thân dựa trên năng lực, sở thích cá nhân.",
+      "D. Chỉ tập trung vào việc bồi dưỡng học sinh giỏi."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "PPDH_010",
+    "question": "Sử dụng trò chơi học tập trong giảng dạy có tác dụng gì?",
+    "choices": [
+      "A. Làm mất thời gian, ảnh hưởng đến tiến độ chương trình.",
+      "B. Chỉ phù hợp với học sinh tiểu học.",
+      "C. Gây mất trật tự, khó quản lý lớp học.",
+      "D. Giúp thay đổi không khí học tập, củng cố kiến thức một cách nhẹ nhàng, hứng thú."
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "QLGD_006",
+    "question": "Ai là người chịu trách nhiệm quản lý toàn diện các hoạt động của một trường phổ thông?",
+    "choices": [
+      "A. Tổ trưởng chuyên môn.",
+      "B. Hiệu trưởng.",
+      "C. Chủ tịch công đoàn trường.",
+      "D. Bí thư Đoàn trường."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "QLGD_007",
+    "question": "Xã hội hóa giáo dục có nghĩa là gì?",
+    "choices": [
+      "A. Nhà nước không còn đầu tư cho giáo dục.",
+      "B. Huy động sự tham gia, đóng góp của toàn xã hội vào sự nghiệp phát triển giáo dục.",
+      "C. Biến tất cả các trường công lập thành trường tư thục.",
+      "D. Chỉ cho phép các tổ chức xã hội tham gia vào giáo dục."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "QLGD_008",
+    "question": "Kiểm định chất lượng giáo dục nhằm mục đích gì?",
+    "choices": [
+      "A. Xếp hạng các cơ sở giáo dục để cạnh tranh.",
+      "B. Đánh giá và công nhận mức độ cơ sở giáo dục đáp ứng các tiêu chuẩn chất lượng.",
+      "C. Chỉ để kiểm tra hồ sơ, sổ sách của nhà trường.",
+      "D. Phạt các trường không đạt chuẩn."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "QLGD_009",
+    "question": "Phong cách quản lý nào mà người lãnh đạo thường tự mình quyết định mọi việc và ít tham khảo ý kiến cấp dưới?",
+    "choices": [
+      "A. Phong cách dân chủ.",
+      "B. Phong cách tự do.",
+      "C. Phong cách độc đoán, chuyên quyền.",
+      "D. Phong cách hợp tác."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "QLGD_010",
+    "question": "Việc xây dựng 'Trường học hạnh phúc' hướng tới mục tiêu cốt lõi nào?",
+    "choices": [
+      "A. Xây dựng trường có cơ sở vật chất hiện đại nhất.",
+      "B. Tạo ra môi trường giáo dục an toàn, yêu thương, tôn trọng, nơi cả giáo viên và học sinh đều cảm thấy vui vẻ, hứng thú.",
+      "C. Đạt được nhiều giải thưởng trong các kỳ thi học sinh giỏi.",
+      "D. Có 100% học sinh lên lớp."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "LSGD_006",
+    "question": "Nội dung 'Tiên học lễ, hậu học văn' nhấn mạnh điều gì trong giáo dục Nho học?",
+    "choices": [
+      "A. Coi trọng việc học kiến thức văn hóa hơn lễ nghĩa.",
+      "B. Coi trọng việc học lễ nghĩa, đạo đức trước khi học kiến thức.",
+      "C. Phải học đồng thời cả lễ nghĩa và văn hóa.",
+      "D. Chỉ cần học lễ nghĩa, không cần học văn hóa."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "LSGD_007",
+    "question": "Cơ quan chữ viết của người Việt được tạo ra trên cơ sở tiếp thu và cải biến chữ Hán là chữ gì?",
+    "choices": [
+      "A. Chữ Quốc ngữ.",
+      "B. Chữ Nôm.",
+      "C. Chữ Phạn.",
+      "D. Chữ La-tinh."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "LSGD_008",
+    "question": "Nghị quyết Trung ương 2 khóa VIII (1996) của Đảng Cộng sản Việt Nam đã xác định giáo dục và đào tạo cùng với khoa học và công nghệ là:",
+    "choices": [
+      "A. Nhiệm vụ hàng đầu.",
+      "B. Quốc sách hàng đầu.",
+      "C. Mục tiêu hàng đầu.",
+      "D. Động lực hàng đầu."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "LSGD_009",
+    "question": "Trường Đông Kinh Nghĩa Thục (1907) là một mô hình giáo dục tiêu biểu cho xu hướng nào?",
+    "choices": [
+      "A. Bảo thủ, duy trì nền giáo dục Nho học.",
+      "B. Hoàn toàn theo mô hình giáo dục của Pháp.",
+      "C. Cải cách, truyền bá tư tưởng dân chủ và khoa học kỹ thuật.",
+      "D. Chỉ tập trung dạy các môn học quân sự."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "LSGD_010",
+    "question": "Luật Giáo dục hiện hành của Việt Nam được Quốc hội thông qua vào năm nào?",
+    "choices": [
+      "A. 2005.",
+      "B. 2009.",
+      "C. 2015.",
+      "D. 2019."
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "KTĐG_006",
+    "question": "Độ tin cậy của một bài kiểm tra thể hiện điều gì?",
+    "choices": [
+      "A. Bài kiểm tra có đo lường đúng cái cần đo hay không.",
+      "B. Kết quả kiểm tra có ổn định, nhất quán khi tiến hành đo lặp lại hay không.",
+      "C. Bài kiểm tra có phù hợp với mục tiêu dạy học hay không.",
+      "D. Bài kiểm tra có dễ chấm điểm hay không."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "KTĐG_007",
+    "question": "Khi một bài kiểm tra đo lường được đúng những nội dung, kỹ năng cần đo thì bài kiểm tra đó có:",
+    "choices": [
+      "A. Độ khó cao.",
+      "B. Độ tin cậy cao.",
+      "C. Độ giá trị cao.",
+      "D. Độ phân biệt tốt."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "KTĐG_008",
+    "question": "Đánh giá tổng kết (đánh giá định kỳ) thường được tiến hành vào thời điểm nào?",
+    "choices": [
+      "A. Hàng ngày, trong mỗi tiết học.",
+      "B. Sau khi kết thúc một chương, một học kỳ hoặc một năm học.",
+      "C. Bất cứ khi nào giáo viên muốn.",
+      "D. Chỉ khi học sinh có yêu cầu."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "KTĐG_009",
+    "question": "Trong ma trận đề kiểm tra, trục ngang và trục dọc thường thể hiện điều gì?",
+    "choices": [
+      "A. Trục ngang: Mức độ nhận thức; Trục dọc: Nội dung kiến thức.",
+      "B. Trục ngang: Nội dung kiến thức; Trục dọc: Mức độ nhận thức.",
+      "C. Trục ngang: Dạng câu hỏi; Trục dọc: Thời gian làm bài.",
+      "D. Trục ngang: Số lượng câu hỏi; Trục dọc: Thang điểm."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "KTĐG_010",
+    "question": "Hình thức đánh giá bằng nhận xét thay cho điểm số đối với một số môn học ở tiểu học nhằm mục đích gì?",
+    "choices": [
+      "A. Giảm áp lực điểm số, tập trung vào sự tiến bộ của học sinh.",
+      "B. Làm cho việc đánh giá trở nên đơn giản hơn cho giáo viên.",
+      "C. Vì học sinh tiểu học chưa biết đọc điểm số.",
+      "D. Phân loại học sinh một cách chính xác hơn."
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "XHDH_001",
+    "question": "Giáo dục STEM là viết tắt của các lĩnh vực nào?",
+    "choices": [
+      "A. Khoa học, Công nghệ, Kỹ thuật, Toán học (Science, Technology, Engineering, Math).",
+      "B. Xã hội, Công nghệ, Kinh tế, Quản lý (Society, Technology, Economics, Management).",
+      "C. Khoa học, Giảng dạy, Giáo dục, Phương pháp (Science, Teaching, Education, Method).",
+      "D. Thể thao, Công nghệ, Năng lượng, Y học (Sports, Technology, Energy, Medicine)."
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "XHDH_002",
+    "question": "Học tập suốt đời (Lifelong learning) có nghĩa là gì?",
+    "choices": [
+      "A. Chỉ học tập trong nhà trường phổ thông.",
+      "B. Quá trình học hỏi, tiếp thu kiến thức và kỹ năng diễn ra liên tục trong suốt cuộc đời của một người.",
+      "C. Bắt buộc mọi người phải đi học cho đến khi về già.",
+      "D. Chỉ dành cho những người làm công tác nghiên cứu khoa học."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "XHDH_003",
+    "question": "Mục tiêu của giáo dục hòa nhập là gì?",
+    "choices": [
+      "A. Tạo ra các trường chuyên biệt cho trẻ khuyết tật.",
+      "B. Đảm bảo mọi trẻ em, bao gồm cả trẻ khuyết tật và trẻ có hoàn cảnh khó khăn, đều được học tập trong môi trường giáo dục chung.",
+      "C. Miễn học cho tất cả trẻ em có hoàn cảnh đặc biệt.",
+      "D. Chỉ chấp nhận những học sinh có khả năng học tập tốt vào trường công lập."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "XHDH_004",
+    "question": "Công dân toàn cầu trong giáo dục được hiểu là người có những phẩm chất nào?",
+    "choices": [
+      "A. Chỉ biết về văn hóa và lịch sử của đất nước mình.",
+      "B. Có kiến thức, kỹ năng và thái độ để sống và làm việc hiệu quả trong một thế giới kết nối, đa văn hóa.",
+      "C. Có khả năng nói được nhiều ngoại ngữ nhưng không hiểu biết về các vấn đề toàn cầu.",
+      "D. Chỉ quan tâm đến lợi ích kinh tế của bản thân."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "XHDH_005",
+    "question": "Trí tuệ nhân tạo (AI) được ứng dụng trong giáo dục như thế nào?",
+    "choices": [
+      "A. Thay thế hoàn toàn vai trò của giáo viên.",
+      "B. Cá nhân hóa lộ trình học tập, cung cấp tài nguyên học liệu thông minh, hỗ trợ đánh giá.",
+      "C. Làm cho quá trình học tập trở nên phức tạp và khó khăn hơn.",
+      "D. Chỉ được dùng để quản lý điểm số của học sinh."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "GDH_011",
+    "question": "Mục đích cuối cùng của quá trình giáo dục là gì?",
+    "choices": [
+      "A. Giúp học sinh thi đỗ vào các trường đại học hàng đầu.",
+      "B. Hình thành và phát triển toàn diện nhân cách người học.",
+      "C. Truyền thụ hết khối lượng kiến thức trong sách giáo khoa.",
+      "D. Rèn luyện cho học sinh khả năng ghi nhớ máy móc."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "GDH_012",
+    "question": "Đâu là một phương pháp giáo dục kỷ luật tích cực?",
+    "choices": [
+      "A. Phạt học sinh đứng góc lớp.",
+      "B. Mắng nhiếc, sỉ nhục học sinh trước tập thể.",
+      "C. Trò chuyện, phân tích để học sinh hiểu ra lỗi sai và hướng dẫn cách sửa chữa.",
+      "D. Đuổi học sinh ra khỏi lớp."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "TLH_011",
+    "question": "Khi học sinh gặp một bài toán khó và nỗ lực tìm nhiều cách giải khác nhau, điều này thể hiện đặc điểm nào của tư duy?",
+    "choices": [
+      "A. Tính logic.",
+      "B. Tính trừu tượng.",
+      "C. Tính linh hoạt.",
+      "D. Tính khái quát."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "TLH_012",
+    "question": "Trí thông minh cảm xúc (EQ) bao gồm những năng lực nào?",
+    "choices": [
+      "A. Khả năng tính toán nhanh và tư duy logic.",
+      "B. Năng lực nhận biết, thấu hiểu và quản lý cảm xúc của bản thân và người khác.",
+      "C. Khả năng ghi nhớ các sự kiện và con số.",
+      "D. Năng khiếu về âm nhạc và hội họa."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PPDH_011",
+    "question": "Kỹ thuật dạy học 'Các mảnh ghép' (Jigsaw) có ưu điểm nổi bật là gì?",
+    "choices": [
+      "A. Mỗi học sinh chỉ cần học một phần nhỏ của bài học.",
+      "B. Thúc đẩy sự hợp tác, học hỏi lẫn nhau và trách nhiệm của mỗi cá nhân trong nhóm.",
+      "C. Chỉ phù hợp với các bài học lý thuyết dài.",
+      "D. Giáo viên không cần chuẩn bị bài giảng."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PPDH_012",
+    "question": "Nội dung dạy học được cấu trúc theo kiểu đồng tâm có đặc điểm gì?",
+    "choices": [
+      "A. Các kiến thức được sắp xếp theo một đường thẳng, học xong phần trước mới đến phần sau.",
+      "B. Một chủ đề kiến thức được lặp lại ở các lớp học khác nhau nhưng ở mức độ sâu và rộng hơn.",
+      "C. Mỗi lớp học một chương trình hoàn toàn khác biệt, không liên quan.",
+      "D. Học sinh tự lựa chọn nội dung học tập."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "QLGD_011",
+    "question": "Hệ thống giáo dục mở là một hệ thống:",
+    "choices": [
+      "A. Chỉ dành cho người lớn tuổi.",
+      "B. Không có quy chế, quy định.",
+      "C. Tạo cơ hội học tập cho mọi người, mọi lúc, mọi nơi, với nhiều hình thức linh hoạt.",
+      "D. Chỉ đào tạo từ xa qua mạng internet."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "QLGD_012",
+    "question": "Công tác chủ nhiệm lớp bao gồm những nhiệm vụ chính nào?",
+    "choices": [
+      "A. Chỉ dạy môn học chuyên môn của mình.",
+      "B. Chỉ quản lý sổ điểm và học bạ của lớp.",
+      "C. Xây dựng tập thể lớp, giáo dục học sinh và phối hợp với các lực lượng giáo dục khác.",
+      "D. Chỉ tổ chức các hoạt động văn nghệ, thể thao."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "LSGD_011",
+    "question": "Alexandre de Rhodes là người có công lớn trong việc:",
+    "choices": [
+      "A. Sáng tạo ra chữ Nôm.",
+      "B. Hệ thống hóa và latinh hóa chữ Quốc ngữ.",
+      "C. Mở trường đại học đầu tiên ở Việt Nam.",
+      "D. Dịch các bộ kinh của Nho giáo ra tiếng Việt."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "LSGD_012",
+    "question": "Mục tiêu của Chương trình giáo dục phổ thông 2018 là chuyển từ giáo dục theo định hướng nội dung sang giáo dục theo định hướng:",
+    "choices": [
+      "A. Thi cử.",
+      "B. Phát triển phẩm chất và năng lực người học.",
+      "C. Yêu cầu của giáo viên.",
+      "D. Thành tích."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "KTĐG_011",
+    "question": "Đánh giá bằng portfolio (hồ sơ học tập) là hình thức thu thập:",
+    "choices": [
+      "A. Chỉ các bài kiểm tra đạt điểm 10 của học sinh.",
+      "B. Các sản phẩm, bằng chứng có lựa chọn về quá trình học tập và sự tiến bộ của học sinh.",
+      "C. Nhận xét của phụ huynh về học sinh.",
+      "D. Điểm thi cuối kỳ của tất cả các môn."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "KTĐG_012",
+    "question": "Thang đo nhận thức của Bloom (bản điều chỉnh) sắp xếp các cấp độ tư duy theo thứ tự từ thấp đến cao như thế nào?",
+    "choices": [
+      "A. Nhớ, Hiểu, Vận dụng, Phân tích, Đánh giá, Sáng tạo.",
+      "B. Nhớ, Vận dụng, Hiểu, Phân tích, Sáng tạo, Đánh giá.",
+      "C. Hiểu, Nhớ, Vận dụng, Đánh giá, Phân tích, Sáng tạo.",
+      "D. Sáng tạo, Đánh giá, Phân tích, Vận dụng, Hiểu, Nhớ."
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "XHDH_006",
+    "question": "Gamification (Trò chơi hóa) trong giáo dục là gì?",
+    "choices": [
+      "A. Chỉ cho học sinh chơi game trong giờ học.",
+      "B. Bắt buộc học sinh phải tham gia các trò chơi điện tử.",
+      "C. Ứng dụng các cơ chế, thành phần của trò chơi vào môi trường học tập để tăng động lực, sự tham gia.",
+      "D. Biến tất cả các bài học thành các trò chơi may rủi."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "XHDH_007",
+    "question": "Học tập kết hợp (Blended Learning) là sự kết hợp giữa hình thức học tập nào?",
+    "choices": [
+      "A. Học ở trường và học ở trung tâm gia sư.",
+      "B. Học lý thuyết và học thực hành.",
+      "C. Học trực tiếp trên lớp và học trực tuyến (online).",
+      "D. Học các môn tự nhiên và các môn xã hội."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "GDH_013",
+    "question": "Câu nói 'Hiền tài là nguyên khí của quốc gia' của Thân Nhân Trung nhấn mạnh vai trò của yếu tố nào?",
+    "choices": [
+      "A. Quân đội hùng mạnh.",
+      "B. Kinh tế phát triển.",
+      "C. Người có tài có đức đối với đất nước.",
+      "D. Tài nguyên thiên nhiên phong phú."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "TLH_013",
+    "question": "Hiện tượng 'bắt chước' hành vi của người khác là cơ sở của lý thuyết học tập nào?",
+    "choices": [
+      "A. Thuyết học tập kiến tạo (Constructivism).",
+      "B. Thuyết học tập xã hội (Social Learning Theory) của Albert Bandura.",
+      "C. Thuyết học tập qua trải nghiệm (Experiential Learning).",
+      "D. Thuyết hành vi (Behaviorism)."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PPDH_013",
+    "question": "Phương pháp 'Bàn tay nặn bột' được áp dụng chủ yếu trong việc giảng dạy lĩnh vực nào?",
+    "choices": [
+      "A. Lịch sử.",
+      "B. Ngữ văn.",
+      "C. Khoa học tự nhiên.",
+      "D. Giáo dục công dân."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "QLGD_013",
+    "question": "Tầm nhìn (Vision) của một nhà trường là:",
+    "choices": [
+      "A. Kế hoạch hoạt động chi tiết cho một năm học.",
+      "B. Bảng nội quy dành cho học sinh.",
+      "C. Bức tranh lý tưởng về tương lai mà nhà trường mong muốn đạt tới.",
+      "D. Danh sách cán bộ, giáo viên, nhân viên của trường."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "LSGD_013",
+    "question": "Hệ thống trường phổ thông ở Việt Nam hiện nay gồm mấy cấp học?",
+    "choices": [
+      "A. 2 cấp (Tiểu học và Trung học).",
+      "B. 3 cấp (Tiểu học, Trung học cơ sở, và Trung học phổ thông).",
+      "C. 4 cấp (Mầm non, Tiểu học, Trung học cơ sở, Trung học phổ thông).",
+      "D. 1 cấp duy nhất kéo dài 12 năm."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "KTĐG_013",
+    "question": "Một phương án nhiễu tốt trong câu hỏi trắc nghiệm khách quan là phương án:",
+    "choices": [
+      "A. Hoàn toàn sai và không liên quan đến câu hỏi.",
+      "B. Có vẻ hợp lý đối với những học sinh không nắm vững kiến thức.",
+      "C. Đúng trong một trường hợp khác.",
+      "D. Là một đáp án đúng khác ngoài đáp án chính."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "XHDH_008",
+    "question": "Microlearning (Học tập vi mô) là hình thức học tập:",
+    "choices": [
+      "A. Yêu cầu người học phải học trong thời gian dài liên tục.",
+      "B. Cung cấp các nội dung học tập theo từng đơn vị nhỏ, ngắn gọn, tập trung vào một mục tiêu cụ thể.",
+      "C. Chỉ học qua kính hiển vi.",
+      "D. Dành cho các học sinh có năng lực học tập yếu."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "GDH_014",
+    "question": "Giáo dục thẩm mỹ nhằm mục đích chính là gì?",
+    "choices": [
+      "A. Dạy học sinh trở thành họa sĩ hoặc nhạc sĩ.",
+      "B. Bồi dưỡng năng lực cảm thụ, đánh giá và sáng tạo cái đẹp.",
+      "C. Dạy các quy tắc ứng xử trong xã hội.",
+      "D. Rèn luyện sức khỏe và thể chất."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "TLH_014",
+    "question": "Sự ghi nhớ không chủ định thường có hiệu quả cao khi:",
+    "choices": [
+      "A. Nội dung học tập khô khan, nhàm chán.",
+      "B. Người học có cảm xúc và hứng thú mạnh mẽ với đối tượng ghi nhớ.",
+      "C. Người học bị ép buộc phải ghi nhớ.",
+      "D. Nội dung ghi nhớ không có ý nghĩa."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "PPDH_014",
+    "question": "Sơ đồ tư duy (Mind Map) là công cụ hỗ trợ hiệu quả cho hoạt động nào?",
+    "choices": [
+      "A. Chỉ dùng để vẽ trang trí.",
+      "B. Ghi chép, tổng hợp, hệ thống hóa kiến thức một cách logic và sáng tạo.",
+      "C. Tính toán các phương trình phức tạp.",
+      "D. Viết một bài văn hoàn chỉnh."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "QLGD_014",
+    "question": "Phổ cập giáo dục là chính sách của nhà nước nhằm:",
+    "choices": [
+      "A. Bắt buộc mọi công dân phải có bằng đại học.",
+      "B. Đảm bảo mọi công dân trong độ tuổi quy định đều được học tập để đạt đến một trình độ học vấn tối thiểu.",
+      "C. Miễn học phí cho tất cả các cấp học.",
+      "D. Chỉ đầu tư cho các trường ở thành phố lớn."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "LSGD_014",
+    "question": "UNESCO là tên viết tắt của tổ chức nào?",
+    "choices": [
+      "A. Tổ chức Y tế Thế giới.",
+      "B. Quỹ Nhi đồng Liên Hợp Quốc.",
+      "C. Tổ chức Giáo dục, Khoa học và Văn hóa của Liên Hợp Quốc.",
+      "D. Chương trình Phát triển Liên Hợp Quốc."
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "KTĐG_014",
+    "question": "Mục đích của việc công bố chuẩn kiến thức, kỹ năng của chương trình môn học là gì?",
+    "choices": [
+      "A. Để học sinh và giáo viên chỉ cần dạy và học những nội dung đó.",
+      "B. Làm cơ sở để biên soạn sách giáo khoa, quản lý dạy học và đánh giá kết quả giáo dục.",
+      "C. Gây thêm áp lực cho giáo viên và học sinh.",
+      "D. Chỉ mang tính tham khảo, không bắt buộc."
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "XHDH_009",
+    "question": "Kỹ năng '4C' cần thiết cho người học trong thế kỷ 21 là gì?",
+    "choices": [
+      "A. Giao tiếp, Hợp tác, Tư duy phản biện, Sáng tạo (Communication, Collaboration, Critical Thinking, Creativity).",
+      "B. Tính toán, Viết, Đọc, Ghi nhớ (Calculation, Composition, Comprehension, memorization).",
+      "C. Máy tính, Lập trình, Mạng, Dữ liệu (Computer, Coding, Connectivity, Data).",
+      "D. Chăm chỉ, Cẩn thận, Trung thực, Khiêm tốn."
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "GDH_015",
+    "question": "Hoạt động ngoài giờ lên lớp có vai trò như thế nào?",
+    "choices": [
+      "A. Là hoạt động không bắt buộc, không quan trọng.",
+      "B. Là một phần của quá trình giáo dục, giúp học sinh phát triển năng lực, phẩm chất và kỹ năng sống.",
+      "C. Chỉ là hoạt động vui chơi, giải trí đơn thuần.",
+      "D. Gây tốn kém và mất thời gian của nhà trường."
+    ],
+    "answer": "B"
+  }
+]

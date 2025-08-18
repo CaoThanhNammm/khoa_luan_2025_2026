@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "1",
+    "question": "Chất dinh dưỡng nào sau đây là nguồn cung cấp năng lượng chính cho cơ thể?",
+    "choices": [
+      "A. Vitamin",
+      "B. Chất xơ",
+      "C. Carbohydrate (Chất bột đường)",
+      "D. Nước"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "2",
+    "question": "Loại vitamin nào giúp tăng cường thị lực và sức khỏe của mắt?",
+    "choices": [
+      "A. Vitamin A",
+      "B. Vitamin C",
+      "C. Vitamin D",
+      "D. Vitamin K"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "3",
+    "question": "Để phòng ngừa bệnh loãng xương, cơ thể cần được cung cấp đủ khoáng chất nào?",
+    "choices": [
+      "A. Sắt",
+      "B. Kẽm",
+      "C. Canxi",
+      "D. Magie"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "4",
+    "question": "Hoạt động thể chất nào sau đây được xem là tốt cho sức khỏe tim mạch?",
+    "choices": [
+      "A. Đi bộ nhanh",
+      "B. Chạy bộ",
+      "C. Bơi lội",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "5",
+    "question": "Tổ chức Y tế Thế giới (WHO) khuyến nghị người trưởng thành nên tập thể dục với cường độ vừa phải ít nhất bao nhiêu phút mỗi tuần?",
+    "choices": [
+      "A. 30 phút",
+      "B. 60 phút",
+      "C. 150 phút",
+      "D. 300 phút"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "6",
+    "question": "Bệnh nào sau đây không phải là bệnh lây truyền qua đường hô hấp?",
+    "choices": [
+      "A. Cúm",
+      "B. Lao",
+      "C. Sởi",
+      "D. Sốt xuất huyết"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "7",
+    "question": "Biện pháp nào sau đây giúp phòng ngừa bệnh tiểu đường type 2 hiệu quả?",
+    "choices": [
+      "A. Duy trì cân nặng hợp lý",
+      "B. Chế độ ăn uống lành mạnh",
+      "C. Tập thể dục thường xuyên",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "8",
+    "question": "Khi gặp một người bị ngất xỉu, việc đầu tiên bạn nên làm là gì?",
+    "choices": [
+      "A. Đưa ngay đến bệnh viện",
+      "B. Kiểm tra đường thở và nhịp thở của nạn nhân",
+      "C. Cho nạn nhân uống nước",
+      "D. Cố gắng đỡ nạn nhân ngồi dậy"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "9",
+    "question": "Đối với vết bỏng nhẹ, không bị phồng rộp, cách sơ cứu đúng là gì?",
+    "choices": [
+      "A. Bôi kem đánh răng lên vết bỏng",
+      "B. Chườm đá trực tiếp lên vết bỏng",
+      "C. Ngâm vùng bị bỏng vào nước mát trong khoảng 15-20 phút",
+      "D. Dùng bông gòn lau sạch vết bỏng"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "10",
+    "question": "Chất gây nghiện chính có trong thuốc lá là gì?",
+    "choices": [
+      "A. Carbon Monoxide",
+      "B. Tar (Hắc ín)",
+      "C. Nicotine",
+      "D. Amoniac"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "11",
+    "question": "Uống nhiều rượu bia trong thời gian dài có thể dẫn đến bệnh nghiêm trọng nào ở gan?",
+    "choices": [
+      "A. Viêm gan siêu vi B",
+      "B. Xơ gan",
+      "C. Sỏi mật",
+      "D. Ung thư dạ dày"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "12",
+    "question": "Người trưởng thành trung bình cần ngủ bao nhiêu tiếng mỗi đêm để đảm bảo sức khỏe?",
+    "choices": [
+      "A. 4-5 tiếng",
+      "B. 5-6 tiếng",
+      "C. 7-8 tiếng",
+      "D. 9-10 tiếng"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "13",
+    "question": "Thiếu ngủ kéo dài có thể dẫn đến những vấn đề sức khỏe nào?",
+    "choices": [
+      "A. Suy giảm trí nhớ",
+      "B. Tăng nguy cơ béo phì",
+      "C. Yếu hệ miễn dịch",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "14",
+    "question": "Rửa tay bằng xà phòng và nước sạch là biện pháp phòng ngừa hiệu quả bệnh nào sau đây?",
+    "choices": [
+      "A. Tiêu chảy",
+      "B. Cúm",
+      "C. Tay chân miệng",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "15",
+    "question": "Để duy trì sức khỏe tinh thần tốt, bạn nên làm gì?",
+    "choices": [
+      "A. Chia sẻ cảm xúc với người tin cậy",
+      "B. Duy trì các mối quan hệ xã hội tích cực",
+      "C. Dành thời gian cho sở thích cá nhân",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "16",
+    "question": "Loại thực phẩm nào sau đây giàu chất sắt, giúp phòng ngừa bệnh thiếu máu?",
+    "choices": [
+      "A. Sữa và các sản phẩm từ sữa",
+      "B. Các loại rau có màu xanh đậm",
+      "C. Trái cây họ cam quýt",
+      "D. Gạo trắng"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "17",
+    "question": "Lợi ích của việc uống đủ nước mỗi ngày là gì?",
+    "choices": [
+      "A. Điều hòa thân nhiệt",
+      "B. Hỗ trợ tiêu hóa",
+      "C. Giúp da khỏe mạnh",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "18",
+    "question": "Stress kéo dài có thể gây ra những ảnh hưởng tiêu cực nào đến sức khỏe thể chất?",
+    "choices": [
+      "A. Tăng huyết áp",
+      "B. Gây ra các vấn đề về tiêu hóa",
+      "C. Làm suy yếu hệ miễn dịch",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "19",
+    "question": "Khi bị chảy máu cam, bạn nên làm gì?",
+    "choices": [
+      "A. Ngửa đầu ra sau",
+      "B. Nằm xuống ngay lập tức",
+      "C. Ngồi thẳng, đầu hơi cúi về phía trước và bóp chặt hai bên cánh mũi",
+      "D. Nhét bông gòn sâu vào trong mũi"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "20",
+    "question": "Hút thuốc lá thụ động (hít phải khói thuốc từ người khác) có hại cho sức khỏe không?",
+    "choices": [
+      "A. Không, chỉ có người hút trực tiếp mới bị ảnh hưởng",
+      "B. Có, nhưng mức độ nguy hiểm thấp hơn nhiều so với hút thuốc chủ động",
+      "C. Có, và cũng làm tăng nguy cơ mắc các bệnh như ung thư phổi và bệnh tim",
+      "D. Chỉ có hại cho trẻ em, không ảnh hưởng đến người lớn"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "21",
+    "question": "Chất xơ trong chế độ ăn uống có vai trò quan trọng gì?",
+    "choices": [
+      "A. Cung cấp năng lượng",
+      "B. Hỗ trợ hệ tiêu hóa hoạt động tốt, ngăn ngừa táo bón",
+      "C. Xây dựng cơ bắp",
+      "D. Giúp đông máu"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "22",
+    "question": "Tia UV từ ánh nắng mặt trời có thể gây ra vấn đề sức khỏe nào về da?",
+    "choices": [
+      "A. Mụn trứng cá",
+      "B. Vảy nến",
+      "C. Ung thư da",
+      "D. Chàm"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "23",
+    "question": "Bệnh cao huyết áp còn được gọi là gì?",
+    "choices": [
+      "A. Kẻ giết người thầm lặng",
+      "B. Bệnh nhà giàu",
+      "C. Bệnh của người già",
+      "D. Cơn đau tim"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "24",
+    "question": "Để phòng tránh muỗi đốt và các bệnh do muỗi truyền, biện pháp nào sau đây là hiệu quả?",
+    "choices": [
+      "A. Ngủ trong màn (mùng)",
+      "B. Dọn dẹp, loại bỏ các vật chứa nước đọng quanh nhà",
+      "C. Sử dụng kem chống muỗi",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "25",
+    "question": "Trong trường hợp bị hóc dị vật đường thở và nạn nhân vẫn còn tỉnh táo, có thể ho được, bạn nên làm gì?",
+    "choices": [
+      "A. Cố gắng dùng tay móc dị vật ra",
+      "B. Khuyến khích nạn nhân tiếp tục ho mạnh",
+      "C. Vỗ mạnh vào lưng nạn nhân",
+      "D. Thực hiện ngay nghiệm pháp Heimlich"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "26",
+    "question": "Protein (chất đạm) có vai trò chính là gì trong cơ thể?",
+    "choices": [
+      "A. Cung cấp năng lượng chính",
+      "B. Xây dựng và sửa chữa các mô, cơ",
+      "C. Điều hòa thân nhiệt",
+      "D. Vận chuyển oxy"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "27",
+    "question": "HIV/AIDS lây truyền qua những con đường nào?",
+    "choices": [
+      "A. Qua đường máu, quan hệ tình dục không an toàn, và từ mẹ sang con",
+      "B. Qua đường hô hấp (ho, hắt hơi)",
+      "C. Qua việc dùng chung bát đũa, ly tách",
+      "D. Qua muỗi đốt"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "28",
+    "question": "Thói quen nào sau đây có thể giúp bạn có một giấc ngủ ngon hơn?",
+    "choices": [
+      "A. Sử dụng điện thoại trên giường trước khi ngủ",
+      "B. Uống cà phê vào buổi tối",
+      "C. Tạo một không gian ngủ yên tĩnh, tối và mát mẻ",
+      "D. Ăn một bữa no ngay trước khi đi ngủ"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "29",
+    "question": "Vitamin C có nhiều trong loại thực phẩm nào?",
+    "choices": [
+      "A. Thịt bò",
+      "B. Trứng",
+      "C. Cam, chanh, ổi",
+      "D. Sữa"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "30",
+    "question": "Tập thể dục thường xuyên mang lại lợi ích gì cho sức khỏe tinh thần?",
+    "choices": [
+      "A. Giảm căng thẳng, lo âu",
+      "B. Cải thiện tâm trạng",
+      "C. Tăng cường sự tự tin",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "31",
+    "question": "Bệnh béo phì làm tăng nguy cơ mắc các bệnh nào sau đây?",
+    "choices": [
+      "A. Bệnh tim mạch",
+      "B. Tiểu đường type 2",
+      "C. Một số loại ung thư",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "32",
+    "question": "Khi một người bị co giật, bạn không nên làm gì?",
+    "choices": [
+      "A. Di chuyển các vật sắc nhọn, cứng ra xa nạn nhân",
+      "B. Kê một vật mềm (áo, gối) dưới đầu nạn nhân",
+      "C. Cố gắng giữ chặt tay chân của nạn nhân",
+      "D. Nới lỏng quần áo chật quanh cổ nạn nhân"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "33",
+    "question": "Việc khám sức khỏe định kỳ có ý nghĩa gì?",
+    "choices": [
+      "A. Chỉ cần thiết khi bạn cảm thấy bị bệnh",
+      "B. Giúp phát hiện sớm các vấn đề sức khỏe tiềm ẩn",
+      "C. Tốn kém và không cần thiết nếu bạn cảm thấy khỏe mạnh",
+      "D. Chỉ dành cho người cao tuổi"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "34",
+    "question": "Đâu là một dấu hiệu của tình trạng mất nước?",
+    "choices": [
+      "A. Nước tiểu trong hoặc màu vàng nhạt",
+      "B. Cảm thấy khát",
+      "C. Đi tiểu thường xuyên",
+      "D. Da ẩm"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "35",
+    "question": "Chất béo nào được coi là 'chất béo tốt' cho sức khỏe?",
+    "choices": [
+      "A. Chất béo bão hòa (saturated fat)",
+      "B. Chất béo chuyển hóa (trans fat)",
+      "C. Chất béo không bão hòa (unsaturated fat)",
+      "D. Cholesterol"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "36",
+    "question": "Việc bỏ bữa sáng có thể dẫn đến hậu quả gì?",
+    "choices": [
+      "A. Giúp giảm cân hiệu quả",
+      "B. Tăng khả năng tập trung vào buổi sáng",
+      "C. Có thể gây mệt mỏi, giảm khả năng tập trung và tăng nguy cơ ăn nhiều hơn vào các bữa sau",
+      "D. Không ảnh hưởng gì đến sức khỏe"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "37",
+    "question": "Kỹ thuật RICE (Nghỉ ngơi, Chườm đá, Băng ép, Nâng cao) được sử dụng để sơ cứu chấn thương nào?",
+    "choices": [
+      "A. Bỏng",
+      "B. Bong gân, căng cơ",
+      "C. Ngộ độc thực phẩm",
+      "D. Say nắng"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "38",
+    "question": "Tại sao việc tiêm phòng (chủng ngừa) lại quan trọng?",
+    "choices": [
+      "A. Giúp cơ thể tạo ra kháng thể để chống lại các bệnh truyền nhiễm cụ thể",
+      "B. Chỉ cần thiết cho trẻ sơ sinh",
+      "C. Có thể gây ra nhiều tác dụng phụ nguy hiểm hơn là lợi ích",
+      "D. Chỉ dành cho những người có hệ miễn dịch yếu"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "39",
+    "question": "Thói quen ăn mặn (nhiều muối) có thể dẫn đến nguy cơ sức khỏe nào?",
+    "choices": [
+      "A. Hạ huyết áp",
+      "B. Cao huyết áp và các bệnh tim mạch",
+      "C. Bệnh tiểu đường",
+      "D. Bệnh loãng xương"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "40",
+    "question": "Đâu không phải là một phương pháp hiệu quả để quản lý căng thẳng?",
+    "choices": [
+      "A. Tập thể dục",
+      "B. Thiền hoặc tập hít thở sâu",
+      "C. Lạm dụng rượu bia hoặc chất kích thích",
+      "D. Dành thời gian với bạn bè, gia đình"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "41",
+    "question": "Vitamin D còn được gọi là 'vitamin ánh nắng' vì sao?",
+    "choices": [
+      "A. Vì nó có màu vàng như ánh nắng",
+      "B. Vì nó chỉ có trong các loại trái cây mùa hè",
+      "C. Vì cơ thể có thể tự tổng hợp vitamin D khi da tiếp xúc với ánh nắng mặt trời",
+      "D. Vì nó giúp mắt sáng hơn dưới ánh nắng"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "42",
+    "question": "Thời gian tối thiểu để rửa tay hiệu quả bằng xà phòng là bao lâu?",
+    "choices": [
+      "A. 5 giây",
+      "B. 10 giây",
+      "C. 20 giây",
+      "D. 1 phút"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "43",
+    "question": "Bệnh Gout (Gút) có liên quan đến sự tích tụ của chất nào trong cơ thể?",
+    "choices": [
+      "A. Axit Uric",
+      "B. Cholesterol",
+      "C. Canxi",
+      "D. Glucose"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "44",
+    "question": "Đâu là một trong những dấu hiệu cảnh báo sớm của đột quỵ?",
+    "choices": [
+      "A. Đột ngột tê hoặc yếu ở mặt, tay hoặc chân, đặc biệt là ở một bên của cơ thể",
+      "B. Đau đầu dữ dội không rõ nguyên nhân",
+      "C. Khó nói hoặc khó hiểu lời nói",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "45",
+    "question": "Ăn nhiều đồ ngọt và thực phẩm chế biến sẵn có thể dẫn đến nguy cơ nào?",
+    "choices": [
+      "A. Tăng cân, béo phì",
+      "B. Sâu răng",
+      "C. Tăng nguy cơ mắc bệnh tiểu đường type 2",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "46",
+    "question": "Tư thế ngồi làm việc đúng giúp phòng tránh vấn đề sức khỏe nào?",
+    "choices": [
+      "A. Đau mỏi cổ, vai, gáy và lưng",
+      "B. Bệnh tim mạch",
+      "C. Bệnh tiểu đường",
+      "D. Bệnh về đường hô hấp"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "47",
+    "question": "Sử dụng tai nghe với âm lượng lớn trong thời gian dài có thể gây ra hậu quả gì?",
+    "choices": [
+      "A. Cải thiện khả năng nghe",
+      "B. Gây tổn thương thính lực không hồi phục",
+      "C. Giúp tập trung tốt hơn",
+      "D. Không có ảnh hưởng gì"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "48",
+    "question": "Biện pháp tránh thai nào sau đây giúp phòng ngừa các bệnh lây truyền qua đường tình dục (STIs)?",
+    "choices": [
+      "A. Thuốc uống tránh thai hàng ngày",
+      "B. Vòng tránh thai",
+      "C. Bao cao su",
+      "D. Que cấy tránh thai"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "49",
+    "question": "Nguyên nhân chính gây ra bệnh sâu răng là gì?",
+    "choices": [
+      "A. Uống quá nhiều nước lạnh",
+      "B. Vi khuẩn trong mảng bám trên răng chuyển hóa đường thành axit, làm mòn men răng",
+      "C. Đánh răng quá mạnh",
+      "D. Thiếu vitamin C"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "50",
+    "question": "Hội chứng ruột kích thích (IBS) là một rối loạn ảnh hưởng đến cơ quan nào?",
+    "choices": [
+      "A. Dạ dày",
+      "B. Gan",
+      "C. Ruột già (đại tràng)",
+      "D. Phổi"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "51",
+    "question": "Chất chống oxy hóa (antioxidants) có lợi ích gì cho sức khỏe?",
+    "choices": [
+      "A. Cung cấp năng lượng tức thì",
+      "B. Giúp bảo vệ tế bào khỏi tổn thương do các gốc tự do gây ra",
+      "C. Giúp tăng cân",
+      "D. Giúp cơ thể hấp thụ canxi"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "52",
+    "question": "Tập các bài tập khởi động trước khi chơi thể thao có tác dụng gì?",
+    "choices": [
+      "A. Làm cho cơ thể mệt mỏi nhanh hơn",
+      "B. Giúp tăng tính linh hoạt của cơ bắp và giảm nguy cơ chấn thương",
+      "C. Không có tác dụng gì đặc biệt",
+      "D. Chỉ cần thiết cho các vận động viên chuyên nghiệp"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "53",
+    "question": "Bệnh thủy đậu do loại virus nào gây ra?",
+    "choices": [
+      "A. Virus cúm (Influenza virus)",
+      "B. Virus Varicella-Zoster",
+      "C. Virus Dengue",
+      "D. Virus HIV"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "54",
+    "question": "Để đảm bảo an toàn thực phẩm, bạn nên làm gì?",
+    "choices": [
+      "A. Rửa tay sạch trước khi chế biến thức ăn",
+      "B. Nấu chín kỹ thức ăn",
+      "C. Bảo quản thực phẩm ở nhiệt độ thích hợp",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "55",
+    "question": "Khi bị ong đốt, sau khi đã lấy ngòi ong ra (nếu có), bạn nên làm gì tiếp theo?",
+    "choices": [
+      "A. Nặn máu ra khỏi vết đốt",
+      "B. Rửa sạch vùng bị đốt bằng xà phòng và nước, sau đó chườm lạnh",
+      "C. Bôi vôi hoặc bùn đất lên vết đốt",
+      "D. Băng kín vết đốt lại ngay lập tức"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "56",
+    "question": "Tình trạng thiếu I-ốt có thể dẫn đến bệnh gì?",
+    "choices": [
+      "A. Bệnh tim",
+      "B. Bệnh bướu cổ",
+      "C. Bệnh tiểu đường",
+      "D. Bệnh loãng xương"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "57",
+    "question": "Omega-3 là một loại axit béo có nhiều trong thực phẩm nào?",
+    "choices": [
+      "A. Thịt gà",
+      "B. Các loại cá béo (cá hồi, cá thu, cá trích)",
+      "C. Gạo trắng",
+      "D. Táo"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "58",
+    "question": "Đâu là một biểu hiện của chứng rối loạn lo âu?",
+    "choices": [
+      "A. Cảm giác lo lắng, sợ hãi quá mức và khó kiểm soát",
+      "B. Cảm thấy thư giãn và bình tĩnh",
+      "C. Luôn cảm thấy vui vẻ, lạc quan",
+      "D. Ngủ rất ngon và sâu giấc"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "59",
+    "question": "Tuổi vị thành niên là giai đoạn chuyển tiếp giữa?",
+    "choices": [
+      "A. Sơ sinh và thiếu nhi",
+      "B. Thiếu nhi và trưởng thành",
+      "C. Trưởng thành và người cao tuổi",
+      "D. Sơ sinh và trưởng thành"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "60",
+    "question": "Tác hại của việc sử dụng đồ uống có cồn đối với thanh thiếu niên là gì?",
+    "choices": [
+      "A. Ảnh hưởng đến sự phát triển của não bộ",
+      "B. Tăng nguy cơ tai nạn giao thông và hành vi nguy hiểm",
+      "C. Có thể dẫn đến nghiện rượu",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "61",
+    "question": "Kali là một khoáng chất quan trọng giúp duy trì chức năng gì của cơ thể?",
+    "choices": [
+      "A. Cân bằng chất lỏng và chức năng thần kinh",
+      "B. Xây dựng xương chắc khỏe",
+      "C. Tạo hồng cầu",
+      "D. Tăng cường thị lực"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "62",
+    "question": "Đâu là triệu chứng phổ biến của bệnh cảm lạnh thông thường?",
+    "choices": [
+      "A. Sổ mũi, nghẹt mũi",
+      "B. Đau họng",
+      "C. Ho",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "63",
+    "question": "Nguyên tắc 'ăn chín, uống sôi' giúp phòng ngừa bệnh nào?",
+    "choices": [
+      "A. Các bệnh lây qua đường tiêu hóa như tả, lỵ, thương hàn",
+      "B. Các bệnh về tim mạch",
+      "C. Các bệnh về hô hấp",
+      "D. Bệnh ung thư"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "64",
+    "question": "Kỹ thuật ép tim ngoài lồng ngực trong hồi sức tim phổi (CPR) được thực hiện ở vị trí nào?",
+    "choices": [
+      "A. Bên trái lồng ngực, ngay trên tim",
+      "B. Chính giữa xương ức",
+      "C. Bên phải lồng ngực",
+      "D. Vùng bụng trên"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "65",
+    "question": "Tại sao không nên tự ý sử dụng thuốc kháng sinh khi không có chỉ định của bác sĩ?",
+    "choices": [
+      "A. Vì có thể gây ra tình trạng kháng kháng sinh",
+      "B. Vì thuốc kháng sinh chỉ có tác dụng với nhiễm khuẩn, không có tác dụng với virus",
+      "C. Vì có thể gặp các tác dụng phụ không mong muốn",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "66",
+    "question": "Chỉ số khối cơ thể (BMI) được sử dụng để làm gì?",
+    "choices": [
+      "A. Đo lường trí thông minh",
+      "B. Đánh giá tình trạng cân nặng (gầy, bình thường, thừa cân, béo phì) của một người",
+      "C. Đo huyết áp",
+      "D. Xác định nhóm máu"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "67",
+    "question": "Việc giữ gìn vệ sinh cá nhân sạch sẽ có vai trò gì?",
+    "choices": [
+      "A. Phòng ngừa các bệnh ngoài da và bệnh truyền nhiễm",
+      "B. Giúp cơ thể thoải mái, tự tin",
+      "C. Tạo ấn tượng tốt với người xung quanh",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "68",
+    "question": "Bệnh sốt rét lây truyền từ người sang người qua vật trung gian nào?",
+    "choices": [
+      "A. Chuột",
+      "B. Ruồi",
+      "C. Muỗi Anopheles",
+      "D. Ve"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "69",
+    "question": "Đâu là một phương pháp giúp cải thiện và duy trì trí nhớ tốt?",
+    "choices": [
+      "A. Ngủ đủ giấc",
+      "B. Tham gia các hoạt động thử thách trí não như đọc sách, chơi cờ",
+      "C. Tập thể dục đều đặn",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "70",
+    "question": "Khi bị say nắng, say nóng, cần đưa nạn nhân vào nơi râm mát và làm gì tiếp theo?",
+    "choices": [
+      "A. Ủ ấm cho nạn nhân",
+      "B. Cho nạn nhân uống rượu hoặc cà phê",
+      "C. Nới lỏng quần áo, dùng khăn mát lau người hoặc quạt để làm mát cơ thể",
+      "D. Để nạn nhân nằm yên và không làm gì cả"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "71",
+    "question": "Việc ăn đa dạng các loại thực phẩm nhằm mục đích gì?",
+    "choices": [
+      "A. Chỉ để bữa ăn thêm ngon miệng",
+      "B. Cung cấp đầy đủ các nhóm chất dinh dưỡng, vitamin và khoáng chất cần thiết cho cơ thể",
+      "C. Giúp tăng cân nhanh hơn",
+      "D. Không có ý nghĩa về mặt dinh dưỡng"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "72",
+    "question": "Bệnh trầm cảm là một rối loạn liên quan đến:",
+    "choices": [
+      "A. Tim mạch",
+      "B. Hô hấp",
+      "C. Sức khỏe tinh thần",
+      "D. Tiêu hóa"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "73",
+    "question": "Đâu là cách tốt nhất để bảo vệ da khỏi tác hại của ánh nắng mặt trời?",
+    "choices": [
+      "A. Chỉ cần mặc áo dài tay",
+      "B. Sử dụng kem chống nắng có chỉ số SPF phù hợp, đội mũ rộng vành và đeo kính râm",
+      "C. Tránh ra ngoài trời hoàn toàn",
+      "D. Chỉ cần thoa kem chống nắng một lần vào buổi sáng"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "74",
+    "question": "Bệnh viêm gan B chủ yếu lây truyền qua đường nào?",
+    "choices": [
+      "A. Đường máu, đường tình dục và từ mẹ sang con",
+      "B. Đường hô hấp",
+      "C. Đường ăn uống",
+      "D. Côn trùng đốt"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "75",
+    "question": "Tập các bài tập giãn cơ sau khi vận động có lợi ích gì?",
+    "choices": [
+      "A. Giúp cơ bắp phục hồi nhanh hơn và giảm đau mỏi",
+      "B. Gây chấn thương cho cơ bắp",
+      "C. Làm giảm hiệu quả của buổi tập",
+      "D. Không có lợi ích nào"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "76",
+    "question": "Cholesterol cao trong máu là một yếu tố nguy cơ chính của bệnh nào?",
+    "choices": [
+      "A. Bệnh cúm",
+      "B. Bệnh xơ vữa động mạch và bệnh tim",
+      "C. Bệnh lao",
+      "D. Bệnh sởi"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "77",
+    "question": "Để phòng ngừa ngộ độc thực phẩm, điều nào sau đây là quan trọng?",
+    "choices": [
+      "A. Không ăn thức ăn ôi thiu, có mùi lạ",
+      "B. Để riêng thực phẩm sống và chín",
+      "C. Rã đông thực phẩm đúng cách",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "78",
+    "question": "Tác dụng của vắc-xin phòng uốn ván là gì?",
+    "choices": [
+      "A. Phòng bệnh cúm",
+      "B. Phòng ngừa bệnh do vi khuẩn uốn ván gây ra, thường xâm nhập qua các vết thương hở",
+      "C. Phòng bệnh dại",
+      "D. Phòng bệnh thủy đậu"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "79",
+    "question": "Hoạt động nào sau đây giúp rèn luyện sức bền của cơ thể?",
+    "choices": [
+      "A. Nâng tạ nặng trong thời gian ngắn",
+      "B. Chạy marathon",
+      "C. Chạy nước rút 100m",
+      "D. Nghỉ ngơi"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "80",
+    "question": "Dấu hiệu nào cho thấy bạn cần đi khám nha sĩ?",
+    "choices": [
+      "A. Đau răng",
+      "B. Chảy máu nướu khi đánh răng",
+      "C. Nướu sưng đỏ",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "81",
+    "question": "Chế độ ăn uống cân bằng là gì?",
+    "choices": [
+      "A. Chỉ ăn rau củ và trái cây",
+      "B. Chỉ ăn thịt và các sản phẩm từ động vật",
+      "C. Ăn đủ và đa dạng các nhóm thực phẩm theo tỷ lệ hợp lý",
+      "D. Ăn thật nhiều vào một bữa và bỏ các bữa còn lại"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "82",
+    "question": "Tình trạng 'mắt làm việc với máy tính' có thể gây ra triệu chứng gì?",
+    "choices": [
+      "A. Mỏi mắt, khô mắt",
+      "B. Nhìn mờ",
+      "C. Đau đầu",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "83",
+    "question": "Để giảm mỏi mắt khi làm việc với máy tính, bạn nên áp dụng quy tắc nào?",
+    "choices": [
+      "A. Quy tắc 20-20-20 (Sau mỗi 20 phút, nhìn ra xa 20 feet (khoảng 6m) trong 20 giây)",
+      "B. Nhìn liên tục vào màn hình để không bị gián đoạn công việc",
+      "C. Tăng độ sáng màn hình lên mức tối đa",
+      "D. Ngồi càng gần màn hình càng tốt"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "84",
+    "question": "Virus HPV là nguyên nhân chính gây ra loại ung thư nào?",
+    "choices": [
+      "A. Ung thư phổi",
+      "B. Ung thư gan",
+      "C. Ung thư cổ tử cung",
+      "D. Ung thư dạ dày"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "85",
+    "question": "Uống nước ngọt có ga thường xuyên có thể gây ra những vấn đề sức khỏe nào?",
+    "choices": [
+      "A. Tăng nguy cơ béo phì và tiểu đường type 2",
+      "B. Gây hại cho răng",
+      "C. Có thể làm giảm mật độ xương",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "86",
+    "question": "Dấu hiệu 'da vàng, mắt vàng' thường là triệu chứng của bệnh liên quan đến cơ quan nào?",
+    "choices": [
+      "A. Phổi",
+      "B. Tim",
+      "C. Gan",
+      "D. Thận"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "87",
+    "question": "Lợi ích của việc cười là gì?",
+    "choices": [
+      "A. Giảm stress",
+      "B. Tăng cường hệ miễn dịch",
+      "C. Giảm đau",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "88",
+    "question": "Để phòng tránh các bệnh về cột sống, bạn nên chú ý điều gì khi mang vác vật nặng?",
+    "choices": [
+      "A. Cúi gập lưng để nhấc vật lên",
+      "B. Giữ lưng thẳng, khuỵu gối để nâng vật lên bằng sức của chân",
+      "C. Vặn xoắn người khi đang nâng vật nặng",
+      "D. Cố gắng nâng vật càng xa cơ thể càng tốt"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "89",
+    "question": "Dị ứng là phản ứng của hệ miễn dịch đối với:",
+    "choices": [
+      "A. Một chất lạ thường vô hại đối với hầu hết mọi người (dị nguyên)",
+      "B. Vi khuẩn gây bệnh",
+      "C. Virus gây bệnh",
+      "D. Nấm mốc"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "90",
+    "question": "Khi bị điện giật, việc đầu tiên cần làm là gì?",
+    "choices": [
+      "A. Chạm ngay vào người nạn nhân để kéo ra",
+      "B. Ngắt ngay nguồn điện một cách an toàn (dập cầu dao, rút phích cắm)",
+      "C. Đổ nước lên người nạn nhân",
+      "D. Gọi xe cấp cứu và chờ đợi"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "91",
+    "question": "Trong các nhóm thực phẩm, nhóm nào nên được tiêu thụ với số lượng hạn chế nhất theo tháp dinh dưỡng?",
+    "choices": [
+      "A. Rau và trái cây",
+      "B. Ngũ cốc",
+      "C. Dầu mỡ, đường, muối",
+      "D. Thịt, cá, trứng, sữa"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "92",
+    "question": "Tình trạng nào sau đây KHÔNG phải là một rối loạn giấc ngủ?",
+    "choices": [
+      "A. Mất ngủ",
+      "B. Ngưng thở khi ngủ",
+      "C. Mộng du",
+      "D. Nằm mơ"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "93",
+    "question": "Magie là khoáng chất cần thiết cho chức năng nào của cơ thể?",
+    "choices": [
+      "A. Chức năng cơ và thần kinh",
+      "B. Điều hòa đường huyết",
+      "C. Duy trì huyết áp ổn định",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "94",
+    "question": "Tập yoga mang lại lợi ích nào cho sức khỏe?",
+    "choices": [
+      "A. Tăng sự dẻo dai và linh hoạt",
+      "B. Giảm căng thẳng",
+      "C. Cải thiện thăng bằng",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "95",
+    "question": "Đâu là triệu chứng của bệnh hen suyễn (hen phế quản)?",
+    "choices": [
+      "A. Khó thở",
+      "B. Ho",
+      "C. Khò khè",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "96",
+    "question": "Kinh nguyệt là một hiện tượng sinh lý bình thường ở:",
+    "choices": [
+      "A. Nam giới tuổi dậy thì",
+      "B. Nữ giới tuổi dậy thì",
+      "C. Cả nam và nữ",
+      "D. Người cao tuổi"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "97",
+    "question": "Bệnh loãng xương làm cho xương trở nên:",
+    "choices": [
+      "A. Cứng và đặc hơn",
+      "B. Giòn, yếu và dễ gãy",
+      "C. Dài ra nhanh chóng",
+      "D. Không thay đổi"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "98",
+    "question": "Probiotics (lợi khuẩn) thường được tìm thấy trong thực phẩm nào?",
+    "choices": [
+      "A. Nước ngọt có ga",
+      "B. Sữa chua, kim chi",
+      "C. Bánh mì trắng",
+      "D. Khoai tây chiên"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "99",
+    "question": "Sự khác biệt chính giữa cảm lạnh và cảm cúm là gì?",
+    "choices": [
+      "A. Không có sự khác biệt nào",
+      "B. Cảm lạnh do vi khuẩn gây ra, cảm cúm do virus gây ra",
+      "C. Cảm cúm thường có triệu chứng nặng hơn, khởi phát đột ngột và có thể kèm theo sốt cao, đau nhức cơ thể",
+      "D. Cảm lạnh luôn kéo dài hơn cảm cúm"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "100",
+    "question": "Đâu là biện pháp quan trọng để duy trì một trái tim khỏe mạnh?",
+    "choices": [
+      "A. Không hút thuốc lá",
+      "B. Kiểm soát huyết áp và cholesterol",
+      "C. Duy trì một lối sống năng động và chế độ ăn uống lành mạnh",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  }
+]

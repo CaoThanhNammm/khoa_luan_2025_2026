@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "1",
+    "question": "World Cup được tổ chức mấy năm một lần?",
+    "choices": {
+      "a": "2 năm",
+      "b": "3 năm",
+      "c": "4 năm",
+      "d": "5 năm"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "2",
+    "question": "Đội tuyển quốc gia nào vô địch World Cup nhiều nhất?",
+    "choices": {
+      "a": "Argentina",
+      "b": "Đức",
+      "c": "Brazil",
+      "d": "Ý"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "3",
+    "question": "Quả bóng vàng FIFA (Ballon d'Or) gần đây nhất thuộc về cầu thủ nào?",
+    "choices": {
+      "a": "Lionel Messi",
+      "b": "Cristiano Ronaldo",
+      "c": "Karim Benzema",
+      "d": "Erling Haaland"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "4",
+    "question": "Sân vận động nào lớn nhất thế giới?",
+    "choices": {
+      "a": "Sân vận động Wembley (Anh)",
+      "b": "Sân vận động Camp Nou (Tây Ban Nha)",
+      "c": "Sân vận động Rungrado 1st of May (Triều Tiên)",
+      "d": "Sân vận động Maracanã (Brazil)"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "5",
+    "question": "Giải bóng đá vô địch quốc gia Anh có tên là gì?",
+    "choices": {
+      "a": "La Liga",
+      "b": "Serie A",
+      "c": "Bundesliga",
+      "d": "Premier League"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "6",
+    "question": "Cầu thủ nào được mệnh danh là \"Vua bóng đá\"?",
+    "choices": {
+      "a": "Diego Maradona",
+      "b": "Pelé",
+      "c": "Johan Cruyff",
+      "d": "Franz Beckenbauer"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "7",
+    "question": "Đội tuyển Việt Nam vô địch AFF Cup lần đầu tiên vào năm nào?",
+    "choices": {
+      "a": "2008",
+      "b": "2010",
+      "c": "2016",
+      "d": "2018"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "8",
+    "question": "Ai là huấn luyện viên trưởng của đội tuyển bóng đá quốc gia Việt Nam hiện tại?",
+    "choices": {
+      "a": "Park Hang-seo",
+      "b": "Philippe Troussier",
+      "c": "Kim Sang-sik",
+      "d": "Kiatisuk Senamuang"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "9",
+    "question": "Câu lạc bộ nào vô địch V.League nhiều lần nhất?",
+    "choices": {
+      "a": "Hà Nội FC",
+      "b": "Becamex Bình Dương",
+      "c": "SHB Đà Nẵng",
+      "d": "Hoàng Anh Gia Lai"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "10",
+    "question": "Cầu thủ nào ghi nhiều bàn thắng nhất cho đội tuyển Việt Nam?",
+    "choices": {
+      "a": "Lê Công Vinh",
+      "b": "Nguyễn Tiến Linh",
+      "c": "Nguyễn Quang Hải",
+      "d": "Phan Thanh Bình"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "11",
+    "question": "Môn thể thao nào được mệnh danh là \"môn thể thao vua\"?",
+    "choices": {
+      "a": "Bóng rổ",
+      "b": "Bóng đá",
+      "c": "Quần vợt",
+      "d": "Điền kinh"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "12",
+    "question": "Một trận đấu bóng đá chính thức kéo dài bao nhiêu phút?",
+    "choices": {
+      "a": "60 phút",
+      "b": "80 phút",
+      "c": "90 phút",
+      "d": "120 phút"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "13",
+    "question": "Mỗi đội bóng đá khi thi đấu trên sân có bao nhiêu cầu thủ?",
+    "choices": {
+      "a": "9 cầu thủ",
+      "b": "10 cầu thủ",
+      "c": "11 cầu thủ",
+      "d": "12 cầu thủ"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "14",
+    "question": "Thẻ vàng trong bóng đá dùng để làm gì?",
+    "choices": {
+      "a": "Cảnh cáo cầu thủ",
+      "b": "Truất quyền thi đấu",
+      "c": "Công nhận bàn thắng",
+      "d": "Bắt đầu trận đấu"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "15",
+    "question": "Thế vận hội Olympic được tổ chức mấy năm một lần?",
+    "choices": {
+      "a": "2 năm",
+      "b": "3 năm",
+      "c": "4 năm",
+      "d": "5 năm"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "16",
+    "question": "Biểu tượng của Olympic là gì?",
+    "choices": {
+      "a": "Ngọn đuốc",
+      "b": "Vòng nguyệt quế",
+      "c": "5 vòng tròn lồng vào nhau",
+      "d": "Cành ô liu"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "17",
+    "question": "SEA Games là viết tắt của cụm từ nào?",
+    "choices": {
+      "a": "South East Asian Games",
+      "b": "South East Asia Games",
+      "c": "Southern East Asian Games",
+      "d": "Southeast Asian Games"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "18",
+    "question": "Linh vật của SEA Games 31 được tổ chức tại Việt Nam là con gì?",
+    "choices": {
+      "a": "Trâu vàng",
+      "b": "Sao la",
+      "c": "Rồng",
+      "d": "Hổ"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "19",
+    "question": "Một trận đấu bóng rổ có bao nhiêu hiệp chính?",
+    "choices": {
+      "a": "2 hiệp",
+      "b": "3 hiệp",
+      "c": "4 hiệp",
+      "d": "5 hiệp"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "20",
+    "question": "Giải bóng rổ nhà nghề Mỹ có tên là gì?",
+    "choices": {
+      "a": "NFL",
+      "b": "MLB",
+      "c": "NHL",
+      "d": "NBA"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "21",
+    "question": "Cầu thủ bóng rổ nào được coi là vĩ đại nhất mọi thời đại?",
+    "choices": {
+      "a": "LeBron James",
+      "b": "Michael Jordan",
+      "c": "Kobe Bryant",
+      "d": "Stephen Curry"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "22",
+    "question": "Trong quần vợt, tỷ số 40-40 được gọi là gì?",
+    "choices": {
+      "a": "Game",
+      "b": "Set",
+      "c": "Match",
+      "d": "Deuce"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "23",
+    "question": "Tay vợt nào có nhiều danh hiệu Grand Slam đơn nam nhất?",
+    "choices": {
+      "a": "Roger Federer",
+      "b": "Rafael Nadal",
+      "c": "Novak Djokovic",
+      "d": "Pete Sampras"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "24",
+    "question": "Giải quần vợt Wimbledon được tổ chức trên mặt sân nào?",
+    "choices": {
+      "a": "Sân đất nện",
+      "b": "Sân cứng",
+      "c": "Sân cỏ",
+      "d": "Sân thảm"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "25",
+    "question": "Môn võ nào là quốc võ của Hàn Quốc?",
+    "choices": {
+      "a": "Karate",
+      "b": "Judo",
+      "c": "Taekwondo",
+      "d": "Vovinam"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "26",
+    "question": "Vovinam là môn võ của nước nào?",
+    "choices": {
+      "a": "Thái Lan",
+      "b": "Việt Nam",
+      "c": "Nhật Bản",
+      "d": "Trung Quốc"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "27",
+    "question": "Trong môn điền kinh, cự ly chạy marathon tiêu chuẩn là bao nhiêu?",
+    "choices": {
+      "a": "21,0975 km",
+      "b": "42,195 km",
+      "c": "10 km",
+      "d": "100m"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "28",
+    "question": "Vận động viên nào đang giữ kỷ lục thế giới ở cự ly 100m và 200m nam?",
+    "choices": {
+      "a": "Tyson Gay",
+      "b": "Yohan Blake",
+      "c": "Usain Bolt",
+      "d": "Justin Gatlin"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "29",
+    "question": "Trong môn bơi lội, kiểu bơi nào được coi là khó nhất?",
+    "choices": {
+      "a": "Bơi sải",
+      "b": "Bơi ếch",
+      "c": "Bơi ngửa",
+      "d": "Bơi bướm"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "30",
+    "question": "Kình ngư Michael Phelps đã giành được bao nhiêu huy chương vàng Olympic?",
+    "choices": {
+      "a": "20",
+      "b": "23",
+      "c": "28",
+      "d": "18"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "31",
+    "question": "Môn thể thao nào sử dụng vợt và quả cầu lông?",
+    "choices": {
+      "a": "Quần vợt",
+      "b": "Bóng bàn",
+      "c": "Cầu lông",
+      "d": "Squash"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "32",
+    "question": "Tay vợt cầu lông nào của Việt Nam từng giữ vị trí số 1 thế giới?",
+    "choices": {
+      "a": "Nguyễn Tiến Minh",
+      "b": "Nguyễn Thùy Linh",
+      "c": "Vũ Thị Trang",
+      "d": "Lê Đức Phát"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "33",
+    "question": "Một ván cờ vua, mỗi bên có bao nhiêu quân cờ?",
+    "choices": {
+      "a": "12",
+      "b": "14",
+      "c": "16",
+      "d": "18"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "34",
+    "question": "Ai là vua cờ Việt Nam đầu tiên?",
+    "choices": {
+      "a": "Lê Quang Liêm",
+      "b": "Nguyễn Ngọc Trường Sơn",
+      "c": "Từ Hoàng Thông",
+      "d": "Đào Thiên Hải"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "35",
+    "question": "Môn thể thao nào được chơi trên băng với gậy và một quả bóng cao su cứng?",
+    "choices": {
+      "a": "Khúc côn cầu trên cỏ",
+      "b": "Khúc côn cầu trên băng",
+      "c": "Bandy",
+      "d": "Floorball"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "36",
+    "question": "Giải đua xe đạp danh giá nhất thế giới là gì?",
+    "choices": {
+      "a": "Giro d'Italia",
+      "b": "Vuelta a España",
+      "c": "Tour de France",
+      "d": "Paris-Roubaix"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "37",
+    "question": "Trong bóng chuyền, một đội có bao nhiêu cầu thủ trên sân?",
+    "choices": {
+      "a": "5",
+      "b": "6",
+      "c": "7",
+      "d": "8"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "38",
+    "question": "Vận động viên nào được coi là huyền thoại của làng quyền Anh hạng nặng?",
+    "choices": {
+      "a": "Mike Tyson",
+      "b": "Muhammad Ali",
+      "c": "Rocky Marciano",
+      "d": "Joe Frazier"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "39",
+    "question": "Môn thể thao nào yêu cầu người chơi đánh một quả bóng nhỏ vào một loạt các lỗ trên một sân rộng?",
+    "choices": {
+      "a": "Cricket",
+      "b": "Golf",
+      "c": "Polo",
+      "d": "Croquet"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "40",
+    "question": "Đội tuyển bóng đá nữ quốc gia nào vô địch World Cup nhiều nhất?",
+    "choices": {
+      "a": "Đức",
+      "b": "Na Uy",
+      "c": "Nhật Bản",
+      "d": "Mỹ"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "41",
+    "question": "Giải bóng chày chuyên nghiệp của Mỹ có tên là gì?",
+    "choices": {
+      "a": "NBA",
+      "b": "NFL",
+      "c": "MLB",
+      "d": "NHL"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "42",
+    "question": "Môn thể thao nào là sự kết hợp của bơi, đạp xe và chạy bộ?",
+    "choices": {
+      "a": "Năm môn phối hợp hiện đại",
+      "b": "Ba môn phối hợp (Triathlon)",
+      "c": "Hai môn phối hợp (Duathlon)",
+      "d": "Aquathlon"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "43",
+    "question": "Trong môn bowling, nếu một người chơi hạ gục tất cả các pin trong lần ném đầu tiên, đó được gọi là gì?",
+    "choices": {
+      "a": "Spare",
+      "b": "Strike",
+      "c": "Gutter",
+      "d": "Split"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "44",
+    "question": "Giải đua ô tô Công thức 1 (F1) nổi tiếng nhất thế giới được tổ chức ở đâu?",
+    "choices": {
+      "a": "Indianapolis 500",
+      "b": "Le Mans 24 Hours",
+      "c": "Monaco Grand Prix",
+      "d": "Daytona 500"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "45",
+    "question": "Môn thể thao nào sử dụng một tấm ván để lướt trên sóng?",
+    "choices": {
+      "a": "Lướt ván diều",
+      "b": "Lướt ván buồm",
+      "c": "Lướt sóng",
+      "d": "Wakeboarding"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "46",
+    "question": "Trong bóng bàn, một trận đấu thường có bao nhiêu set?",
+    "choices": {
+      "a": "3 hoặc 5",
+      "b": "5 hoặc 7",
+      "c": "Chỉ 3",
+      "d": "Chỉ 5"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "47",
+    "question": "Môn thể dục dụng cụ nào không dành cho nam giới ở cấp độ Olympic?",
+    "choices": {
+      "a": "Xà đơn",
+      "b": "Ngựa tay quay",
+      "c": "Cầu thăng bằng",
+      "d": "Vòng treo"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "48",
+    "question": "Vận động viên thể dục dụng cụ nào của Romania đã giành được điểm 10 tuyệt đối đầu tiên trong lịch sử Olympic?",
+    "choices": {
+      "a": "Larisa Iordache",
+      "b": "Nadia Comăneci",
+      "c": "Simona Amânar",
+      "d": "Cătălina Ponor"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "49",
+    "question": "Môn võ Judo có nguồn gốc từ quốc gia nào?",
+    "choices": {
+      "a": "Trung Quốc",
+      "b": "Hàn Quốc",
+      "c": "Nhật Bản",
+      "d": "Brazil"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "50",
+    "question": "Trong môn đấu vật, mục tiêu chính là gì?",
+    "choices": {
+      "a": "Đấm ngã đối thủ",
+      "b": "Ghim vai đối thủ xuống sàn",
+      "c": "Khiến đối thủ bỏ cuộc",
+      "d": "Ghi nhiều điểm hơn"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "51",
+    "question": "Môn thể thao nào có các vị trí như \"Quarterback\", \"Running back\" và \"Wide receiver\"?",
+    "choices": {
+      "a": "Bóng bầu dục Mỹ",
+      "b": "Bóng bầu dục liên hiệp (Rugby union)",
+      "c": "Bóng bầu dục liên minh (Rugby league)",
+      "d": "Bóng đá kiểu Úc"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "52",
+    "question": "Super Bowl là trận chung kết của giải đấu nào?",
+    "choices": {
+      "a": "Major League Baseball (MLB)",
+      "b": "National Basketball Association (NBA)",
+      "c": "National Hockey League (NHL)",
+      "d": "National Football League (NFL)"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "53",
+    "question": "Môn thể thao nào có nguồn gốc từ Scotland và được chơi trên băng với những viên đá granit?",
+    "choices": {
+      "a": "Bi đá trên băng (Curling)",
+      "b": "Bandy",
+      "c": "Trượt băng tốc độ",
+      "d": "Khúc côn cầu trên băng"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "54",
+    "question": "Trong môn đua ngựa, sự kiện \"Triple Crown\" của Mỹ bao gồm những cuộc đua nào?",
+    "choices": {
+      "a": "Kentucky Derby, Preakness Stakes, Belmont Stakes",
+      "b": "Grand National, Epsom Derby, Royal Ascot",
+      "c": "Melbourne Cup, Cox Plate, Caulfield Cup",
+      "d": "Prix de l'Arc de Triomphe, Dubai World Cup, Japan Cup"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "55",
+    "question": "Môn thể thao nào liên quan đến việc bắn tên bằng cung?",
+    "choices": {
+      "a": "Bắn súng",
+      "b": "Bắn cung",
+      "c": "Ném lao",
+      "d": "Đấu kiếm"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "56",
+    "question": "Đâu là một trong ba loại vũ khí được sử dụng trong môn đấu kiếm Olympic?",
+    "choices": {
+      "a": "Katana",
+      "b": "Kiếm lá (Foil)",
+      "c": "Broadsword",
+      "d": "Rapier"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "57",
+    "question": "Môn thể thao nào có các cú đánh được gọi là \"jab\", \"hook\" và \"uppercut\"?",
+    "choices": {
+      "a": "Quyền Anh",
+      "b": "Đấu vật",
+      "c": "Karate",
+      "d": "Muay Thái"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "58",
+    "question": "Giải vô địch bóng bầu dục thế giới có tên là gì?",
+    "choices": {
+      "a": "Six Nations Championship",
+      "b": "The Rugby Championship",
+      "c": "Rugby World Cup",
+      "d": "Super Rugby"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "59",
+    "question": "Môn Cricket phổ biến nhất ở khu vực nào trên thế giới?",
+    "choices": {
+      "a": "Bắc Mỹ",
+      "b": "Nam Á và Khối thịnh vượng chung Anh",
+      "c": "Đông Á",
+      "d": "Châu Âu lục địa"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "60",
+    "question": "Trong bóng chuyền bãi biển, mỗi đội có bao nhiêu cầu thủ?",
+    "choices": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "6"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "61",
+    "question": "Môn thể thao nào có liên quan đến việc leo lên các mặt đá hoặc cấu trúc nhân tạo?",
+    "choices": {
+      "a": "Leo núi băng",
+      "b": "Leo núi trong nhà (Sport climbing)",
+      "c": "Đi bộ đường dài (Hiking)",
+      "d": "Chèo thuyền vượt thác"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "62",
+    "question": "Môn thể thao nào sử dụng ván trượt để thực hiện các kỹ thuật trên các địa hình khác nhau?",
+    "choices": {
+      "a": "Trượt ván (Skateboarding)",
+      "b": "Trượt tuyết (Snowboarding)",
+      "c": "Lướt ván",
+      "d": "Trượt patin"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "63",
+    "question": "Trong thể dục nhịp điệu, vận động viên biểu diễn với những dụng cụ nào?",
+    "choices": {
+      "a": "Bóng, vòng, chùy, dải lụa, dây",
+      "b": "Xà đơn, xà kép, vòng treo",
+      "c": "Cầu thăng bằng, ngựa gỗ",
+      "d": "Tất cả các đáp án trên"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "64",
+    "question": "Môn thể thao nào liên quan đến việc chèo thuyền trên sông hoặc các vùng nước khác?",
+    "choices": {
+      "a": "Chèo thuyền (Rowing)",
+      "b": "Canoeing",
+      "c": "Kayaking",
+      "d": "Tất cả các đáp án trên"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "65",
+    "question": "Môn võ Muay Thái có nguồn gốc từ đâu?",
+    "choices": {
+      "a": "Việt Nam",
+      "b": "Campuchia",
+      "c": "Lào",
+      "d": "Thái Lan"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "66",
+    "question": "Môn thể thao nào được gọi là \"trò chơi của các vị vua\"?",
+    "choices": {
+      "a": "Cờ vua",
+      "b": "Polo",
+      "c": "Đua ngựa",
+      "d": "Golf"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "67",
+    "question": "Trong môn khúc côn cầu trên cỏ, mỗi đội có bao nhiêu cầu thủ trên sân?",
+    "choices": {
+      "a": "9",
+      "b": "10",
+      "c": "11",
+      "d": "12"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "68",
+    "question": "Môn thể thao mùa đông nào liên quan đến việc trượt xuống một con dốc phủ đầy tuyết trên hai ván trượt?",
+    "choices": {
+      "a": "Trượt tuyết (Skiing)",
+      "b": "Trượt tuyết ván (Snowboarding)",
+      "c": "Trượt băng",
+      "d": "Xe trượt lòng máng (Bobsleigh)"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "69",
+    "question": "Đâu là một môn thể thao đồng đội được chơi với một quả bóng và gậy trên một sân hình kim cương?",
+    "choices": {
+      "a": "Bóng mềm (Softball)",
+      "b": "Bóng chày (Baseball)",
+      "c": "Cricket",
+      "d": "Cả A và B"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "70",
+    "question": "Giải đua xe mô tô danh giá nhất thế giới là gì?",
+    "choices": {
+      "a": "Superbike World Championship",
+      "b": "MotoGP",
+      "c": "Isle of Man TT",
+      "d": "Dakar Rally"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "71",
+    "question": "Môn thể thao nào có các nội dung như nhảy xa, nhảy cao, nhảy sào?",
+    "choices": {
+      "a": "Thể dục dụng cụ",
+      "b": "Điền kinh",
+      "c": "Năm môn phối hợp hiện đại",
+      "d": "Ba môn phối hợp"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "72",
+    "question": "Môn thể thao nào sử dụng bóng nặng có lỗ để cầm và ném vào các chai gỗ (pin)?",
+    "choices": {
+      "a": "Bowling",
+      "b": "Bocce",
+      "c": "Lawn bowls",
+      "d": "Petanque"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "73",
+    "question": "Trong bóng ném, mỗi đội có bao nhiêu cầu thủ trên sân?",
+    "choices": {
+      "a": "5",
+      "b": "6",
+      "c": "7",
+      "d": "8"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "74",
+    "question": "Môn thể thao nào liên quan đến việc lặn xuống nước với thiết bị thở?",
+    "choices": {
+      "a": "Lặn tự do",
+      "b": "Lặn với bình khí (Scuba diving)",
+      "c": "Lặn với ống thở (Snorkeling)",
+      "d": "Bơi nghệ thuật"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "75",
+    "question": "Môn thể thao nào có các giải đấu lớn được gọi là \"The Majors\"?",
+    "choices": {
+      "a": "Quần vợt",
+      "b": "Golf",
+      "c": "Cả A và B",
+      "d": "Chỉ quần vợt"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "76",
+    "question": "Trong môn bi-a, loại bi nào người chơi không được đánh vào lỗ cho đến cuối cùng?",
+    "choices": {
+      "a": "Bi cái",
+      "b": "Bi số 1",
+      "c": "Bi số 8",
+      "d": "Bi số 9"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "77",
+    "question": "Môn thể thao nào có mục tiêu là đưa một quả cầu (puck) vào lưới của đối phương bằng gậy?",
+    "choices": {
+      "a": "Khúc côn cầu trên băng",
+      "b": "Khúc côn cầu trên cỏ",
+      "c": "Bandy",
+      "d": "Tất cả các đáp án trên"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "78",
+    "question": "Môn thể thao nào được chơi trên ngựa, trong đó hai đội cố gắng ghi bàn bằng cách dùng vồ đánh một quả bóng vào khung thành đối phương?",
+    "choices": {
+      "a": "Polocrosse",
+      "b": "Horseball",
+      "c": "Polo",
+      "d": "Buzkashi"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "79",
+    "question": "Đại hội Thể thao châu Á (Asian Games) được tổ chức mấy năm một lần?",
+    "choices": {
+      "a": "2 năm",
+      "b": "3 năm",
+      "c": "4 năm",
+      "d": "5 năm"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "80",
+    "question": "Môn thể thao nào có các thuật ngữ như \"checkmate\" (chiếu hết)?",
+    "choices": {
+      "a": "Cờ vây",
+      "b": "Cờ tướng",
+      "c": "Cờ vua",
+      "d": "Shogi"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "81",
+    "question": "Đội tuyển bóng rổ quốc gia nào đã giành nhiều huy chương vàng Olympic nhất (tính cả nam và nữ)?",
+    "choices": {
+      "a": "Tây Ban Nha",
+      "b": "Liên Xô (cũ)",
+      "c": "Mỹ",
+      "d": "Argentina"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "82",
+    "question": "Môn thể thao nào có các nội dung thi đấu như slalom, giant slalom, và downhill?",
+    "choices": {
+      "a": "Trượt tuyết băng đồng",
+      "b": "Trượt tuyết đổ đèo (Alpine skiing)",
+      "c": "Trượt tuyết tự do (Freestyle skiing)",
+      "d": "Hai môn phối hợp mùa đông (Biathlon)"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "83",
+    "question": "Môn thể thao nào kết hợp trượt tuyết băng đồng và bắn súng trường?",
+    "choices": {
+      "a": "Hai môn phối hợp mùa đông (Biathlon)",
+      "b": "Năm môn phối hợp mùa đông",
+      "c": "Trượt tuyết nhảy xa",
+      "d": "Bắc Âu phối hợp"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "84",
+    "question": "Trong môn lặn tự do, kỷ lục thế giới về nín thở tĩnh là hơn bao nhiêu phút?",
+    "choices": {
+      "a": "5 phút",
+      "b": "7 phút",
+      "c": "9 phút",
+      "d": "11 phút"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "85",
+    "question": "Môn thể thao nào sử dụng một quả bóng có lông vũ?",
+    "choices": {
+      "a": "Đá cầu",
+      "b": "Cầu lông",
+      "c": "Cả A và B",
+      "d": "Không có môn nào"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "86",
+    "question": "Giải đấu eSports (thể thao điện tử) nào có giải thưởng lớn nhất lịch sử?",
+    "choices": {
+      "a": "League of Legends World Championship",
+      "b": "The International (Dota 2)",
+      "c": "Fortnite World Cup",
+      "d": "CS:GO Major Championships"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "87",
+    "question": "Môn thể thao nào được chơi trên một sân băng hình chữ nhật, trong đó người chơi trượt những viên đá về phía một mục tiêu?",
+    "choices": {
+      "a": "Bi đá trên băng (Curling)",
+      "b": "Shuffleboard",
+      "c": "Bocce",
+      "d": "Ice stock sport"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "88",
+    "question": "Môn thể thao nào có nguồn gốc từ Hawaii?",
+    "choices": {
+      "a": "Lướt sóng",
+      "b": "Bóng chuyền bãi biển",
+      "c": "Chèo thuyền outrigger",
+      "d": "Cả A và C"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "89",
+    "question": "Trong môn thể hình, cuộc thi danh giá nhất là gì?",
+    "choices": {
+      "a": "Arnold Classic",
+      "b": "Mr. Olympia",
+      "c": "World Bodybuilding Championships",
+      "d": "Universe Championships"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "90",
+    "question": "Môn thể thao nào liên quan đến việc di chuyển trên tuyết bằng cách sử dụng ván trượt tuyết (snowboard)?",
+    "choices": {
+      "a": "Trượt tuyết đổ đèo",
+      "b": "Trượt ván tuyết",
+      "c": "Trượt băng tốc độ",
+      "d": "Trượt tuyết băng đồng"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "91",
+    "question": "Vận động viên Việt Nam đầu tiên và duy nhất cho đến nay giành huy chương vàng Olympic là ai?",
+    "choices": {
+      "a": "Trần Hiếu Ngân",
+      "b": "Hoàng Xuân Vinh",
+      "c": "Nguyễn Thị Ánh Viên",
+      "d": "Lý Hoàng Nam"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "92",
+    "question": "Môn thể thao nào có các đai biểu thị cấp độ của người tập, ví dụ như đai trắng, đai đen?",
+    "choices": {
+      "a": "Quyền Anh",
+      "b": "Đấu vật",
+      "c": "Võ thuật (Karate, Judo, Taekwondo...)",
+      "d": "Đấu kiếm"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "93",
+    "question": "Đâu là một môn thể thao dưới nước đồng đội, trong đó hai đội cố gắng ghi bàn bằng cách ném bóng vào khung thành đối phương?",
+    "choices": {
+      "a": "Bóng nước",
+      "b": "Khúc côn cầu dưới nước",
+      "c": "Bóng bầu dục dưới nước",
+      "d": "Bơi nghệ thuật"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "94",
+    "question": "Môn thể thao nào là môn thể thao đồng đội lâu đời nhất ở Bắc Mỹ?",
+    "choices": {
+      "a": "Bóng chày",
+      "b": "Bóng rổ",
+      "c": "Lacrosse",
+      "d": "Khúc côn cầu trên băng"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "95",
+    "question": "Trong môn cử tạ, có hai nội dung thi đấu là gì?",
+    "choices": {
+      "a": "Cử giật và cử đẩy",
+      "b": "Nâng tạ và đẩy tạ",
+      "c": "Squat và deadlift",
+      "d": "Bench press và overhead press"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "96",
+    "question": "Môn thể thao nào được coi là môn thể thao cá nhân phổ biến nhất trên thế giới?",
+    "choices": {
+      "a": "Điền kinh",
+      "b": "Bơi lội",
+      "c": "Quần vợt",
+      "d": "Golf"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "97",
+    "question": "Giải Tour de France là giải đấu của môn thể thao nào?",
+    "choices": {
+      "a": "Điền kinh",
+      "b": "Bơi lội",
+      "c": "Đua xe đạp",
+      "d": "Đua ngựa"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "98",
+    "question": "Môn thể thao nào có luật \"việt vị\"?",
+    "choices": {
+      "a": "Bóng đá",
+      "b": "Bóng rổ",
+      "c": "Bóng chuyền",
+      "d": "Cầu lông"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "99",
+    "question": "Giải Grand Slam đầu tiên trong năm của môn quần vợt là giải nào?",
+    "choices": {
+      "a": "Pháp Mở rộng",
+      "b": "Wimbledon",
+      "c": "Mỹ Mở rộng",
+      "d": "Úc Mở rộng"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "100",
+    "question": "Nước nào là chủ nhà của kỳ World Cup 2026?",
+    "choices": {
+      "a": "Qatar",
+      "b": "Brazil",
+      "c": "Mỹ, Canada, và Mexico",
+      "d": "Argentina, Uruguay, và Paraguay"
+    },
+    "answer": "c"
+  }
+]

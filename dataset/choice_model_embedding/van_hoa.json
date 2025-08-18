@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "VH001",
+    "question": "Nền văn minh nào được coi là một trong những nền văn minh sớm nhất của nhân loại, nằm ở lưu vực sông Lưỡng Hà?",
+    "choices": [
+      "A. Ai Cập",
+      "B. Sumer",
+      "C. Ấn Độ",
+      "D. Trung Hoa"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH002",
+    "question": "Vạn Lý Trường Thành, một trong những công trình kiến trúc vĩ đại nhất thế giới, được xây dựng chủ yếu dưới triều đại nào của Trung Quốc?",
+    "choices": [
+      "A. Nhà Hán",
+      "B. Nhà Đường",
+      "C. Nhà Tần",
+      "D. Nhà Minh"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH003",
+    "question": "Kim tự tháp Giza, một trong Bảy kỳ quan thế giới cổ đại, được xây dựng với mục đích chính là gì?",
+    "choices": [
+      "A. Cung điện cho vua",
+      "B. Lăng mộ cho các pharaoh",
+      "C. Đài quan sát thiên văn",
+      "D. Nơi thờ cúng các vị thần"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH004",
+    "question": "Tác phẩm \"Sử thi Iliad và Odyssey\" được cho là của nhà thơ mù nào của Hy Lạp cổ đại?",
+    "choices": [
+      "A. Socrates",
+      "B. Plato",
+      "C. Aristotle",
+      "D. Homer"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH005",
+    "question": "Phật giáo có nguồn gốc từ quốc gia nào?",
+    "choices": [
+      "A. Trung Quốc",
+      "B. Ấn Độ",
+      "C. Thái Lan",
+      "D. Nhật Bản"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH006",
+    "question": "Lễ hội nào của người Việt Nam được tổ chức vào ngày mùng 10 tháng 3 Âm lịch hàng năm để tưởng nhớ các vua Hùng?",
+    "choices": [
+      "A. Tết Nguyên Đán",
+      "B. Lễ hội Chùa Hương",
+      "C. Giỗ Tổ Hùng Vương",
+      "D. Lễ hội Gióng"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH007",
+    "question": "Điệu múa truyền thống nào của Nhật Bản được biểu diễn bởi các nghệ sĩ trang điểm đậm và mặc trang phục lộng lẫy?",
+    "choices": [
+      "A. Kabuki",
+      "B. Noh",
+      "C. Bunraku",
+      "D. Odori"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "VH008",
+    "question": "Nghệ thuật Phục hưng, một phong trào văn hóa lớn, khởi nguồn từ thành phố nào của Ý?",
+    "choices": [
+      "A. Rome",
+      "B. Venice",
+      "C. Florence",
+      "D. Milan"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH009",
+    "question": "Tôn giáo chính của Đế chế La Mã trước khi Cơ đốc giáo được chấp nhận là gì?",
+    "choices": [
+      "A. Đa thần giáo Hy Lạp",
+      "B. Đa thần giáo La Mã",
+      "C. Do Thái giáo",
+      "D. Hỏa giáo"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH010",
+    "question": "Nhạc cụ nào được coi là biểu tượng của văn hóa Ireland?",
+    "choices": [
+      "A. Kèn túi",
+      "B. Đàn hạc",
+      "C. Vĩ cầm",
+      "D. Sáo"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH011",
+    "question": "Di sản văn hóa thế giới được UNESCO công nhận đầu tiên của Việt Nam là gì?",
+    "choices": [
+      "A. Vịnh Hạ Long",
+      "B. Quần thể di tích Cố đô Huế",
+      "C. Phố cổ Hội An",
+      "D. Thánh địa Mỹ Sơn"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH012",
+    "question": "Vũ điệu Samba sôi động có nguồn gốc từ quốc gia nào?",
+    "choices": [
+      "A. Argentina",
+      "B. Colombia",
+      "C. Brazil",
+      "D. Mexico"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH013",
+    "question": "Hệ thống chữ viết tượng hình của người Ai Cập cổ đại được gọi là gì?",
+    "choices": [
+      "A. Chữ hình nêm",
+      "B. Chữ tượng hình",
+      "C. Bảng chữ cái Phoenicia",
+      "D. Chữ rune"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH014",
+    "question": "Lễ hội ném cà chua \"La Tomatina\" nổi tiếng được tổ chức hàng năm ở quốc gia nào?",
+    "choices": [
+      "A. Ý",
+      "B. Bồ Đào Nha",
+      "C. Tây Ban Nha",
+      "D. Hy Lạp"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH015",
+    "question": "Trong thần thoại Hy Lạp, vị thần nào là vua của các vị thần trên đỉnh Olympus?",
+    "choices": [
+      "A. Apollo",
+      "B. Poseidon",
+      "C. Hades",
+      "D. Zeus"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH016",
+    "question": "Áo dài, trang phục truyền thống của phụ nữ Việt Nam, thường được mặc trong những dịp nào?",
+    "choices": [
+      "A. Chỉ trong lễ cưới",
+      "B. Chỉ trong các lễ hội",
+      "C. Trong các dịp lễ, tết, sự kiện quan trọng",
+      "D. Chỉ khi đi làm"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH017",
+    "question": "Thành phố cổ Machu Picchu, di tích của đế chế Inca, nằm ở quốc gia nào hiện nay?",
+    "choices": [
+      "A. Peru",
+      "B. Bolivia",
+      "C. Ecuador",
+      "D. Chile"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "VH018",
+    "question": "Bộ môn nghệ thuật nào của Nga nổi tiếng với những vũ công múa ba lê điêu luyện?",
+    "choices": [
+      "A. Opera",
+      "B. Ballet",
+      "C. Nhạc kịch",
+      "D. Múa dân gian"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH019",
+    "question": "Kinh Qur'an là kinh sách thiêng liêng của tôn giáo nào?",
+    "choices": [
+      "A. Cơ đốc giáo",
+      "B. Do Thái giáo",
+      "C. Hồi giáo",
+      "D. Phật giáo"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH020",
+    "question": "Lễ hội té nước Songkran là lễ hội mừng năm mới truyền thống của quốc gia nào?",
+    "choices": [
+      "A. Việt Nam",
+      "B. Lào",
+      "C. Campuchia",
+      "D. Thái Lan"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH021",
+    "question": "Nhà hát Opera Sydney, với kiến trúc hình vỏ sò độc đáo, là biểu tượng của thành phố nào?",
+    "choices": [
+      "A. Melbourne",
+      "B. Sydney",
+      "C. Canberra",
+      "D. Brisbane"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH022",
+    "question": "Tác phẩm \"Mona Lisa\" của danh họa Leonardo da Vinci hiện đang được trưng bày tại bảo tàng nào?",
+    "choices": [
+      "A. Bảo tàng Anh",
+      "B. Bảo tàng Vatican",
+      "C. Bảo tàng Louvre",
+      "D. Bảo tàng Prado"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH023",
+    "question": "Văn hóa Đông Sơn, nổi tiếng với trống đồng, là một nền văn hóa cổ của dân tộc nào?",
+    "choices": [
+      "A. Người Chăm",
+      "B. Người Khmer",
+      "C. Người Việt cổ",
+      "D. Người Thái"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH024",
+    "question": "Môn võ nào được coi là quốc võ của Hàn Quốc?",
+    "choices": [
+      "A. Judo",
+      "B. Karate",
+      "C. Taekwondo",
+      "D. Aikido"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH025",
+    "question": "Kiến trúc Gô-tích (Gothic) nổi bật với đặc điểm nào?",
+    "choices": [
+      "A. Mái vòm tròn và tường dày",
+      "B. Cột Doric, Ionic và Corinthian",
+      "C. Mái vòm nhọn, vòm có sườn và cửa sổ kính màu lớn",
+      "D. Các chi tiết trang trí tối giản và đường nét thẳng"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH026",
+    "question": "Nền văn minh Maya cổ đại phát triển rực rỡ ở khu vực nào?",
+    "choices": [
+      "A. Nam Mỹ",
+      "B. Trung Mỹ",
+      "C. Bắc Mỹ",
+      "D. Vùng Caribe"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH027",
+    "question": "Lễ hội Hoa anh đào (Hanami) là một nét văn hóa đặc trưng của quốc gia nào?",
+    "choices": [
+      "A. Trung Quốc",
+      "B. Hàn Quốc",
+      "C. Nhật Bản",
+      "D. Đài Loan"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH028",
+    "question": "Tác phẩm văn học \"Truyện Kiều\" là của đại thi hào nào của Việt Nam?",
+    "choices": [
+      "A. Nguyễn Du",
+      "B. Nguyễn Trãi",
+      "C. Hồ Xuân Hương",
+      "D. Bà Huyện Thanh Quan"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "VH029",
+    "question": "Vũ điệu Flamenco, với tiếng đàn guitar và những bước nhảy mạnh mẽ, là đặc sản văn hóa của vùng nào ở Tây Ban Nha?",
+    "choices": [
+      "A. Catalonia",
+      "B. Andalusia",
+      "C. Basque",
+      "D. Galicia"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH030",
+    "question": "Hệ thống đẳng cấp (Varna) là một đặc trưng của xã hội truyền thống ở quốc gia nào?",
+    "choices": [
+      "A. Trung Quốc",
+      "B. Ai Cập",
+      "C. Ấn Độ",
+      "D. Hy Lạp"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH031",
+    "question": "Món ăn nào được coi là quốc hồn quốc túy của ẩm thực Việt Nam?",
+    "choices": [
+      "A. Bún chả",
+      "B. Phở",
+      "C. Bánh mì",
+      "D. Nem rán"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH032",
+    "question": "Nhà soạn nhạc thiên tài nào người Áo được mệnh danh là \"thần đồng âm nhạc\"?",
+    "choices": [
+      "A. Bach",
+      "B. Beethoven",
+      "C. Mozart",
+      "D. Chopin"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH033",
+    "question": "Tháp Eiffel, biểu tượng của Paris, được xây dựng nhân dịp sự kiện nào?",
+    "choices": [
+      "A. Kỷ niệm 100 năm Cách mạng Pháp",
+      "B. Triển lãm Thế giới năm 1889",
+      "C. Thế vận hội Olympic",
+      "D. Lễ đăng quang của Napoléon"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH034",
+    "question": "Trong văn hóa phương Tây, con số nào thường được coi là không may mắn?",
+    "choices": [
+      "A. 7",
+      "B. 12",
+      "C. 13",
+      "D. 21"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH035",
+    "question": "Nghệ thuật Tuồng là một loại hình sân khấu truyền thống của vùng nào ở Việt Nam?",
+    "choices": [
+      "A. Miền Bắc",
+      "B. Miền Trung",
+      "C. Miền Nam",
+      "D. Tây Nguyên"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH036",
+    "question": "Nhân vật Thạch Sanh trong truyện cổ tích Việt Nam đã dùng vũ khí gì để chiến đấu với đại bàng?",
+    "choices": [
+      "A. Gươm thần",
+      "B. Cung tên vàng",
+      "C. Niêu cơm thần",
+      "D. Đàn thần"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH037",
+    "question": "Phong cách nghệ thuật nào của thế kỷ 20 nổi tiếng với việc sử dụng các hình khối hình học?",
+    "choices": [
+      "A. Ấn tượng",
+      "B. Lập thể",
+      "C. Siêu thực",
+      "D. Trừu tượng"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH038",
+    "question": "Lễ hội Carnival nổi tiếng nhất thế giới được tổ chức ở thành phố nào của Brazil?",
+    "choices": [
+      "A. São Paulo",
+      "B. Brasília",
+      "C. Salvador",
+      "D. Rio de Janeiro"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH039",
+    "question": "Đấu trường La Mã (Colosseum) được xây dựng để phục vụ cho các hoạt động giải trí nào?",
+    "choices": [
+      "A. Đua ngựa",
+      "B. Các cuộc thi đấu võ sĩ giác đấu",
+      "C. Biểu diễn kịch",
+      "D. Các cuộc họp chính trị"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH040",
+    "question": "Nhã nhạc cung đình Huế được UNESCO công nhận là di sản văn hóa phi vật thể của nhân loại vào năm nào?",
+    "choices": [
+      "A. 2000",
+      "B. 2003",
+      "C. 2005",
+      "D. 2008"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH041",
+    "question": "Vị thần nào trong thần thoại Ai Cập có đầu là chó rừng và cai quản việc ướp xác và thế giới bên kia?",
+    "choices": [
+      "A. Ra",
+      "B. Osiris",
+      "C. Anubis",
+      "D. Horus"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH042",
+    "question": "Trà đạo là một nghệ thuật thưởng thức trà truyền thống của quốc gia nào?",
+    "choices": [
+      "A. Trung Quốc",
+      "B. Việt Nam",
+      "C. Hàn Quốc",
+      "D. Nhật Bản"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH043",
+    "question": "Tác phẩm \"Don Quixote\" (Đôn-ki-hô-tê), một trong những tiểu thuyết vĩ đại nhất của văn học phương Tây, là của nhà văn nào?",
+    "choices": [
+      "A. William Shakespeare",
+      "B. Miguel de Cervantes",
+      "C. Dante Alighieri",
+      "D. Victor Hugo"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH044",
+    "question": "Trang phục Kimono là trang phục truyền thống của quốc gia nào?",
+    "choices": [
+      "A. Trung Quốc",
+      "B. Nhật Bản",
+      "C. Hàn Quốc",
+      "D. Mông Cổ"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH045",
+    "question": "Lễ hội Ánh sáng Diwali là một trong những lễ hội quan trọng nhất của tôn giáo nào?",
+    "choices": [
+      "A. Hồi giáo",
+      "B. Phật giáo",
+      "C. Hindu giáo",
+      "D. Sikh giáo"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH046",
+    "question": "Điệu múa Hula truyền thống có nguồn gốc từ đâu?",
+    "choices": [
+      "A. Tahiti",
+      "B. Samoa",
+      "C. Hawaii",
+      "D. New Zealand"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH047",
+    "question": "Tín ngưỡng thờ cúng tổ tiên là một nét văn hóa đặc trưng của nhiều quốc gia châu Á, trong đó có Việt Nam. Tín ngưỡng này thể hiện điều gì?",
+    "choices": [
+      "A. Lòng biết ơn và hiếu thảo với ông bà, tổ tiên",
+      "B. Mong muốn được tổ tiên phù hộ, che chở",
+      "C. Sự gắn kết giữa các thế hệ trong gia đình, dòng họ",
+      "D. Tất cả các đáp án trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH048",
+    "question": "Kiến trúc của đền Taj Mahal ở Ấn Độ là sự kết hợp của những phong cách kiến trúc nào?",
+    "choices": [
+      "A. Ấn Độ và Trung Quốc",
+      "B. Ấn Độ, Ba Tư và Hồi giáo",
+      "C. Ấn Độ và Hy Lạp",
+      "D. Ấn Độ và La Mã"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH049",
+    "question": "Nhà hát Globe ở London, Anh, gắn liền với tên tuổi của nhà viết kịch vĩ đại nào?",
+    "choices": [
+      "A. Christopher Marlowe",
+      "B. Ben Jonson",
+      "C. William Shakespeare",
+      "D. Oscar Wilde"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH050",
+    "question": "Hội Lim là một lễ hội lớn ở vùng Kinh Bắc (Bắc Ninh, Việt Nam) nổi tiếng với hoạt động văn hóa nào?",
+    "choices": [
+      "A. Hát Chèo",
+      "B. Hát Xoan",
+      "C. Hát Quan họ",
+      "D. Hát Trống quân"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH051",
+    "question": "Nền văn minh Aztec cổ đại có trung tâm ở khu vực ngày nay là quốc gia nào?",
+    "choices": [
+      "A. Peru",
+      "B. Colombia",
+      "C. Mexico",
+      "D. Brazil"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH052",
+    "question": "Oktoberfest là lễ hội bia lớn nhất thế giới được tổ chức hàng năm tại thành phố nào của Đức?",
+    "choices": [
+      "A. Berlin",
+      "B. Hamburg",
+      "C. Frankfurt",
+      "D. Munich"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH053",
+    "question": "Trong \"Tứ đại danh tác\" của văn học Trung Quốc, tác phẩm nào kể về cuộc hành trình của bốn thầy trò Đường Tăng đi lấy kinh?",
+    "choices": [
+      "A. Tam quốc diễn nghĩa",
+      "B. Thủy hử",
+      "C. Tây du ký",
+      "D. Hồng lâu mộng"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH054",
+    "question": "Nghệ thuật làm gốm Bát Tràng là một làng nghề truyền thống nổi tiếng ở đâu?",
+    "choices": [
+      "A. Hà Nội",
+      "B. Huế",
+      "C. Đà Nẵng",
+      "D. Thành phố Hồ Chí Minh"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "VH055",
+    "question": "Điệu nhảy Tango đam mê và quyến rũ có nguồn gốc từ quốc gia nào?",
+    "choices": [
+      "A. Tây Ban Nha",
+      "B. Bồ Đào Nha",
+      "C. Ý",
+      "D. Argentina"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH056",
+    "question": "Vườn treo Babylon, một trong Bảy kỳ quan thế giới cổ đại, được cho là nằm ở quốc gia nào ngày nay?",
+    "choices": [
+      "A. Ai Cập",
+      "B. Iran",
+      "C. Iraq",
+      "D. Syria"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH057",
+    "question": "Nhà triết học nào của Hy Lạp cổ đại được coi là người thầy của Alexander Đại đế?",
+    "choices": [
+      "A. Socrates",
+      "B. Plato",
+      "C. Aristotle",
+      "D. Pythagoras"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH058",
+    "question": "Lễ hội Đèn lồng được tổ chức vào ngày rằm tháng Giêng Âm lịch ở nhiều nước châu Á. Ý nghĩa chính của lễ hội này là gì?",
+    "choices": [
+      "A. Cầu mong một năm mới tốt lành, may mắn",
+      "B. Tưởng nhớ người đã khuất",
+      "C. Mừng vụ mùa bội thu",
+      "D. Tôn vinh các vị thần"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "VH059",
+    "question": "Dòng sông nào được coi là linh thiêng nhất trong tín ngưỡng của người Hindu ở Ấn Độ?",
+    "choices": [
+      "A. Sông Ấn",
+      "B. Sông Hằng",
+      "C. Sông Yamuna",
+      "D. Sông Brahmaputra"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH060",
+    "question": "Làng cổ Shirakawa-go ở Nhật Bản nổi tiếng với kiểu kiến trúc nhà nào?",
+    "choices": [
+      "A. Nhà sàn",
+      "B. Nhà rông",
+      "C. Nhà Gassho-zukuri (bàn tay cầu nguyện)",
+      "D. Nhà machiya"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH061",
+    "question": "Lễ hội nào ở Việt Nam gắn liền với truyền thuyết Thánh Gióng bay về trời?",
+    "choices": [
+      "A. Lễ hội Chùa Hương",
+      "B. Lễ hội Gióng",
+      "C. Lễ hội Đền Hùng",
+      "D. Lễ hội Yên Tử"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH062",
+    "question": "Trong thần thoại Bắc Âu, ai là vị thần của sấm sét, cầm trong tay cây búa Mjolnir?",
+    "choices": [
+      "A. Odin",
+      "B. Loki",
+      "C. Thor",
+      "D. Frey"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH063",
+    "question": "Thành phố Petra cổ đại, được mệnh danh là \"Thành phố hoa hồng\", nằm ở quốc gia nào?",
+    "choices": [
+      "A. Ai Cập",
+      "B. Israel",
+      "C. Jordan",
+      "D. Lebanon"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH064",
+    "question": "Ngày của người chết (Día de los Muertos) là một lễ hội truyền thống đặc sắc của quốc gia nào?",
+    "choices": [
+      "A. Mexico",
+      "B. Tây Ban Nha",
+      "C. Colombia",
+      "D. Peru"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "VH065",
+    "question": "Nghệ thuật múa rối nước là một loại hình nghệ thuật sân khấu dân gian độc đáo của quốc gia nào?",
+    "choices": [
+      "A. Thái Lan",
+      "B. Trung Quốc",
+      "C. Indonesia",
+      "D. Việt Nam"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH066",
+    "question": "Hệ thống chữ cái Latinh, được sử dụng rộng rãi trên thế giới ngày nay, có nguồn gốc từ hệ thống chữ viết của nền văn minh nào?",
+    "choices": [
+      "A. Hy Lạp",
+      "B. Ai Cập",
+      "C. La Mã",
+      "D. Phoenicia"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH067",
+    "question": "Võ sĩ Samurai là tầng lớp võ sĩ quý tộc trong xã hội phong kiến của quốc gia nào?",
+    "choices": [
+      "A. Trung Quốc",
+      "B. Hàn Quốc",
+      "C. Nhật Bản",
+      "D. Mông Cổ"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH068",
+    "question": "Cà phê được cho là có nguồn gốc từ quốc gia nào ở châu Phi?",
+    "choices": [
+      "A. Kenya",
+      "B. Ethiopia",
+      "C. Nigeria",
+      "D. Ghana"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH069",
+    "question": "Quần thể Angkor Wat, một trong những di tích tôn giáo lớn nhất thế giới, là di sản của đế chế nào?",
+    "choices": [
+      "A. Đế chế Champa",
+      "B. Đế chế Khmer",
+      "C. Đế chế Sukhothai",
+      "D. Đế chế Ayutthaya"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH070",
+    "question": "Tục lệ uống trà chiều (afternoon tea) là một nét văn hóa đặc trưng của quốc gia nào?",
+    "choices": [
+      "A. Pháp",
+      "B. Ý",
+      "C. Đức",
+      "D. Anh"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH071",
+    "question": "Bánh Chưng, Bánh Dày là những món ăn không thể thiếu trong dịp Tết Nguyên Đán của người Việt, gắn liền với sự tích về vị vua nào?",
+    "choices": [
+      "A. Vua Hùng thứ nhất",
+      "B. Vua Hùng thứ sáu",
+      "C. An Dương Vương",
+      "D. Lý Thái Tổ"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH072",
+    "question": "Bộ luật Hammurabi, một trong những bộ luật thành văn cổ xưa nhất, là thành tựu của nền văn minh nào?",
+    "choices": [
+      "A. Ai Cập",
+      "B. Lưỡng Hà",
+      "C. La Mã",
+      "D. Hy Lạp"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH073",
+    "question": "Kịch Noh là một loại hình kịch mặt nạ cổ điển của Nhật Bản, thường có đặc điểm gì?",
+    "choices": [
+      "A. Sôi động và hài hước",
+      "B. Chuyển động chậm, mang tính biểu tượng và nội tâm",
+      "C. Sử dụng nhiều con rối",
+      "D. Có nhiều pha hành động và võ thuật"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH074",
+    "question": "Thành phố nào được coi là cái nôi của nền dân chủ thế giới?",
+    "choices": [
+      "A. Rome",
+      "B. Athens",
+      "C. Sparta",
+      "D. Alexandria"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH075",
+    "question": "Lễ Phục sinh là một ngày lễ quan trọng của tôn giáo nào, kỷ niệm sự sống lại của Chúa Jesus?",
+    "choices": [
+      "A. Hồi giáo",
+      "B. Do Thái giáo",
+      "C. Cơ đốc giáo",
+      "D. Hindu giáo"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH076",
+    "question": "Không gian văn hóa Cồng Chiêng Tây Nguyên của Việt Nam được UNESCO vinh danh vì giá trị gì?",
+    "choices": [
+      "A. Giá trị kiến trúc độc đáo",
+      "B. Giá trị âm nhạc và vai trò trong đời sống cộng đồng",
+      "C. Giá trị về ẩm thực",
+      "D. Giá trị về trang phục truyền thống"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH077",
+    "question": "Nền văn minh Minoan, một nền văn minh thời đại đồ đồng, phát triển rực rỡ trên hòn đảo nào?",
+    "choices": [
+      "A. Sicily",
+      "B. Cyprus",
+      "C. Crete",
+      "D. Sardinia"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH078",
+    "question": "Nghệ thuật Thư pháp (Calligraphy) có vị trí đặc biệt quan trọng trong văn hóa của khu vực nào?",
+    "choices": [
+      "A. Châu Âu",
+      "B. Châu Phi",
+      "C. Thế giới Ả Rập và Đông Á",
+      "D. Châu Mỹ Latinh"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH079",
+    "question": "Tượng Nữ thần Tự do ở New York, Mỹ là món quà của quốc gia nào dành tặng cho Hoa Kỳ?",
+    "choices": [
+      "A. Anh",
+      "B. Đức",
+      "C. Ý",
+      "D. Pháp"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH080",
+    "question": "Lễ hội ném bột màu Holi là một lễ hội mùa xuân đầy màu sắc của người theo đạo nào ở Ấn Độ và Nepal?",
+    "choices": [
+      "A. Phật giáo",
+      "B. Hồi giáo",
+      "C. Hindu",
+      "D. Sikh"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH081",
+    "question": "Loại hình nghệ thuật nào của Việt Nam được hình thành và phát triển ở vùng châu thổ sông Hồng?",
+    "choices": [
+      "A. Đờn ca tài tử",
+      "B. Hát bội",
+      "C. Múa rối nước",
+      "D. Hát then"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH082",
+    "question": "Con đường Tơ lụa là một mạng lưới các tuyến đường thương mại cổ đại kết nối phương Đông và phương Tây, bắt nguồn từ quốc gia nào?",
+    "choices": [
+      "A. Ấn Độ",
+      "B. Ba Tư",
+      "C. Trung Quốc",
+      "D. Đế chế La Mã"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH083",
+    "question": "Tác phẩm \"Bình Ngô đại cáo\" được coi là \"bản tuyên ngôn độc lập thứ hai\" của Việt Nam, là của tác giả nào?",
+    "choices": [
+      "A. Lý Thường Kiệt",
+      "B. Trần Hưng Đạo",
+      "C. Nguyễn Trãi",
+      "D. Lê Lợi"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH084",
+    "question": "Yoga, một phương pháp luyện tập thể chất, tinh thần và tâm linh, có nguồn gốc từ quốc gia nào?",
+    "choices": [
+      "A. Trung Quốc",
+      "B. Nhật Bản",
+      "C. Thái Lan",
+      "D. Ấn Độ"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH085",
+    "question": "Hang động Altamira ở Tây Ban Nha nổi tiếng với di sản nghệ thuật nào từ thời tiền sử?",
+    "choices": [
+      "A. Các công cụ bằng đá",
+      "B. Các bức tranh vẽ trên vách hang",
+      "C. Các mảnh gốm cổ",
+      "D. Các bộ xương người cổ"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH086",
+    "question": "Trong văn hóa của người Celtic cổ, lễ hội nào được coi là tiền thân của lễ Halloween ngày nay?",
+    "choices": [
+      "A. Beltane",
+      "B. Imbolc",
+      "C. Samhain",
+      "D. Lughnasadh"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH087",
+    "question": "Thành phố Timbuktu, từng là một trung tâm học thuật và thương mại quan trọng, nằm ở quốc gia châu Phi nào?",
+    "choices": [
+      "A. Nigeria",
+      "B. Mali",
+      "C. Ghana",
+      "D. Senegal"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH088",
+    "question": "Điệu múa của các tu sĩ Hồi giáo dòng Mevlevi, với những vòng xoay liên tục, có nguồn gốc từ quốc gia nào?",
+    "choices": [
+      "A. Iran",
+      "B. Ả Rập Xê Út",
+      "C. Thổ Nhĩ Kỳ",
+      "D. Ai Cập"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH089",
+    "question": "Nhạc cụ Didgeridoo, một loại kèn gỗ dài, là nhạc cụ truyền thống của dân tộc nào?",
+    "choices": [
+      "A. Người Maori ở New Zealand",
+      "B. Người thổ dân Úc",
+      "C. Người Inuit ở Bắc Cực",
+      "D. Người da đỏ ở Bắc Mỹ"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH090",
+    "question": "Tục \"bắt vợ\" là một phong tục hôn nhân tồn tại ở một số dân tộc thiểu số nào của Việt Nam?",
+    "choices": [
+      "A. Kinh",
+      "B. Tày, Nùng",
+      "C. H'Mông, Thái",
+      "D. Chăm, Khmer"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH091",
+    "question": "Phong trào văn hóa nào ở châu Âu thế kỷ 18 đề cao lý trí, khoa học và tự do cá nhân?",
+    "choices": [
+      "A. Phục hưng",
+      "B. Cải cách Tin lành",
+      "C. Khai sáng",
+      "D. Lãng mạn"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH092",
+    "question": "Nhân vật ông già Noel (Santa Claus) trong văn hóa phương Tây được lấy cảm hứng từ vị thánh nào?",
+    "choices": [
+      "A. Thánh Peter",
+      "B. Thánh Patrick",
+      "C. Thánh Nicholas",
+      "D. Thánh George"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH093",
+    "question": "Món Sushi, nổi tiếng trên toàn thế giới, là một phần tinh hoa của ẩm thực quốc gia nào?",
+    "choices": [
+      "A. Trung Quốc",
+      "B. Hàn Quốc",
+      "C. Nhật Bản",
+      "D. Việt Nam"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH094",
+    "question": "Hệ thống đường đi bộ của người Inca, một mạng lưới đường sá phức tạp ở Nam Mỹ, được xây dựng với mục đích chính là gì?",
+    "choices": [
+      "A. Du lịch",
+      "B. Giao thương và hành chính, quân sự",
+      "C. Nghi lễ tôn giáo",
+      "D. Thể thao"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH095",
+    "question": "Tranh dân gian Đông Hồ (Bắc Ninh, Việt Nam) được làm từ những vật liệu gì có nguồn gốc tự nhiên?",
+    "choices": [
+      "A. Giấy điệp và màu sắc từ cây cỏ, khoáng sản",
+      "B. Vải lụa và thuốc nhuộm hóa học",
+      "C. Giấy dó và mực tàu",
+      "D. Gỗ và sơn mài"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "VH096",
+    "question": "Bức tượng David, một kiệt tác của nghệ thuật Phục hưng, là tác phẩm của nhà điêu khắc nào?",
+    "choices": [
+      "A. Leonardo da Vinci",
+      "B. Raphael",
+      "C. Donatello",
+      "D. Michelangelo"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "VH097",
+    "question": "Ngôn ngữ nào được sử dụng phổ biến nhất trên thế giới tính theo số lượng người bản ngữ?",
+    "choices": [
+      "A. Tiếng Anh",
+      "B. Tiếng Tây Ban Nha",
+      "C. Tiếng Quan Thoại (Trung Quốc)",
+      "D. Tiếng Hindi"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH098",
+    "question": "Tháp nghiêng Pisa nổi tiếng của Ý bị nghiêng do nguyên nhân gì?",
+    "choices": [
+      "A. Lỗi thiết kế cố ý",
+      "B. Nền đất yếu và không ổn định",
+      "C. Tác động của một trận động đất",
+      "D. Bị hư hại trong chiến tranh"
+    ],
+    "answer": "B"
+  },
+  {
+    "id": "VH099",
+    "question": "Trong văn hóa Việt Nam, \"cá chép vượt vũ môn\" là biểu tượng cho điều gì?",
+    "choices": [
+      "A. Sự giàu sang, phú quý",
+      "B. Sự may mắn, tài lộc",
+      "C. Ý chí, nghị lực và sự thành công trong học tập, thi cử",
+      "D. Sự sum vầy, đoàn tụ gia đình"
+    ],
+    "answer": "C"
+  },
+  {
+    "id": "VH100",
+    "question": "Thể loại âm nhạc Jazz có nguồn gốc từ cộng đồng nào ở Hoa Kỳ?",
+    "choices": [
+      "A. Người Mỹ gốc Ý",
+      "B. Người Mỹ gốc Ireland",
+      "C. Người Mỹ gốc Phi",
+      "D. Người Mỹ bản địa"
+    ],
+    "answer": "C"
+  }
+]

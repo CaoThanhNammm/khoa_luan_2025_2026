@@ -67,7 +67,7 @@ if __name__ == "__main__":
     my_qa = pd.DataFrame(columns=['question', 'answer'])
     file_name = 'my_qa_prime_01.csv'
 
-    for index, row in qa[275:].iterrows():
+    for index, row in qa[577:].iterrows():
         q = row['query']
 
         try:

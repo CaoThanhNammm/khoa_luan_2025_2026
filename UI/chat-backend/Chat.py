@@ -337,7 +337,7 @@ class Chat:
         res = self.pre_processing.string_to_json(res)
 
         query = f"""
-        MATCH (document:Document {{name: '{self.document_id}'}})-[*]->(predict:Document {{name: '{res['name']}'}})
+        MATCH (document:Document {{name: '{self.document_id}'}})-[*]->(predict:Part {{name: '{res['name']}'}})
         MATCH p=(predict)-[r*1..{res['level']}]->(e)
         RETURN p
         """

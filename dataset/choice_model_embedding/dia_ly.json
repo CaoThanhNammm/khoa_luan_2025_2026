@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "1",
+    "question": "Quốc gia nào có diện tích lớn nhất thế giới?",
+    "choices": {
+      "A": "Trung Quốc",
+      "B": "Hoa Kỳ",
+      "C": "Canada",
+      "D": "Nga"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "2",
+    "question": "Dãy núi nào được coi là 'nóc nhà của thế giới'?",
+    "choices": {
+      "A": "Andes",
+      "B": "Alps",
+      "C": "Himalaya",
+      "D": "Rocky"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "3",
+    "question": "Thủ đô của Úc là gì?",
+    "choices": {
+      "A": "Sydney",
+      "B": "Melbourne",
+      "C": "Canberra",
+      "D": "Perth"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "4",
+    "question": "Sông nào dài nhất thế giới?",
+    "choices": {
+      "A": "Sông Nile",
+      "B": "Sông Amazon",
+      "C": "Sông Mississippi",
+      "D": "Sông Dương Tử"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "5",
+    "question": "Kim tự tháp Giza nằm ở quốc gia nào?",
+    "choices": {
+      "A": "Hy Lạp",
+      "B": "Ai Cập",
+      "C": "Ý",
+      "D": "Thổ Nhĩ Kỳ"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "6",
+    "question": "Thành phố nào được mệnh danh là 'Thành phố tình yêu'?",
+    "choices": {
+      "A": "Rome",
+      "B": "Venice",
+      "C": "Paris",
+      "D": "Vienna"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "7",
+    "question": "Eo biển nào nối liền Đại Tây Dương và Thái Bình Dương?",
+    "choices": {
+      "A": "Eo biển Gibraltar",
+      "B": "Eo biển Bering",
+      "C": "Eo biển Malacca",
+      "D": "Eo biển Panama"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "8",
+    "question": "Quốc gia nào có dân số đông nhất thế giới? [16, 17]",
+    "choices": {
+      "A": "Ấn Độ",
+      "B": "Trung Quốc",
+      "C": "Hoa Kỳ",
+      "D": "Indonesia"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "9",
+    "question": "Sa mạc nào lớn nhất thế giới?",
+    "choices": {
+      "A": "Sahara",
+      "B": "Gobi",
+      "C": "Kalahari",
+      "D": "Nam Cực"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "10",
+    "question": "Thủ đô của Nhật Bản là gì? [35]",
+    "choices": {
+      "A": "Kyoto",
+      "B": "Osaka",
+      "C": "Tokyo",
+      "D": "Hiroshima"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "11",
+    "question": "Đỉnh núi cao nhất Việt Nam là gì? [3]",
+    "choices": {
+      "A": "Fansipan",
+      "B": "Pu Si Lung",
+      "C": "Bạch Mộc Lương Tử",
+      "D": "Tà Chì Nhù"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "12",
+    "question": "Đồng bằng sông Cửu Long còn có tên gọi khác là gì?",
+    "choices": {
+      "A": "Đồng bằng châu thổ sông Hồng",
+      "B": "Đồng bằng duyên hải miền Trung",
+      "C": "Đồng bằng Tây Nam Bộ",
+      "D": "Đồng bằng Đông Nam Bộ"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "13",
+    "question": "Vịnh nào của Việt Nam được UNESCO công nhận là Di sản Thiên nhiên Thế giới?",
+    "choices": {
+      "A": "Vịnh Nha Trang",
+      "B": "Vịnh Lăng Cô",
+      "C": "Vịnh Hạ Long",
+      "D": "Vịnh Vĩnh Hy"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "14",
+    "question": "Hồ tự nhiên lớn nhất Việt Nam là gì?",
+    "choices": {
+      "A": "Hồ Tây",
+      "B": "Hồ Ba Bể",
+      "C": "Hồ Tuyền Lâm",
+      "D": "Hồ Lắk"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "15",
+    "question": "Quần đảo nào xa nhất của Việt Nam về phía Đông?",
+    "choices": {
+      "A": "Hoàng Sa",
+      "B": "Trường Sa",
+      "C": "Côn Đảo",
+      "D": "Phú Quốc"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "16",
+    "question": "Tỉnh nào có diện tích lớn nhất Việt Nam?",
+    "choices": {
+      "A": "Thanh Hóa",
+      "B": "Sơn La",
+      "C": "Nghệ An",
+      "D": "Gia Lai"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "17",
+    "question": "Thành phố nào là trung tâm kinh tế lớn nhất của Việt Nam?",
+    "choices": {
+      "A": "Hà Nội",
+      "B": "Đà Nẵng",
+      "C": "Thành phố Hồ Chí Minh",
+      "D": "Hải Phòng"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "18",
+    "question": "Việt Nam có đường biên giới trên đất liền với những quốc gia nào? [12]",
+    "choices": {
+      "A": "Trung Quốc, Lào, Thái Lan",
+      "B": "Trung Quốc, Lào, Campuchia",
+      "C": "Lào, Campuchia, Thái Lan",
+      "D": "Trung Quốc, Campuchia, Myanmar"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "19",
+    "question": "Loại khoáng sản nào có trữ lượng lớn ở vùng biển Việt Nam? [15]",
+    "choices": {
+      "A": "Than đá",
+      "B": "Bô-xít",
+      "C": "Dầu khí",
+      "D": "Sắt"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "20",
+    "question": "Dân tộc nào có dân số đông nhất ở Việt Nam?",
+    "choices": {
+      "A": "Tày",
+      "B": "Thái",
+      "C": "Kinh",
+      "D": "Mường"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "21",
+    "question": "Đại dương nào lớn nhất thế giới?",
+    "choices": {
+      "A": "Đại Tây Dương",
+      "B": "Ấn Độ Dương",
+      "C": "Thái Bình Dương",
+      "D": "Bắc Băng Dương"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "22",
+    "question": "Thác nước cao nhất thế giới là gì?",
+    "choices": {
+      "A": "Thác Niagara",
+      "B": "Thác Victoria",
+      "C": "Thác Angel",
+      "D": "Thác Iguazu"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "23",
+    "question": "Thủ đô của Canada là gì?",
+    "choices": {
+      "A": "Toronto",
+      "B": "Vancouver",
+      "C": "Montreal",
+      "D": "Ottawa"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "24",
+    "question": "Quốc gia nào có hình chiếc ủng?",
+    "choices": {
+      "A": "Hy Lạp",
+      "B": "Ý",
+      "C": "Tây Ban Nha",
+      "D": "Bồ Đào Nha"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "25",
+    "question": "Thành phố Vatican nằm trong quốc gia nào?",
+    "choices": {
+      "A": "Tây Ban Nha",
+      "B": "Pháp",
+      "C": "Ý",
+      "D": "Thụy Sĩ"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "26",
+    "question": "Rạn san hô Great Barrier nằm ở ngoài khơi quốc gia nào? [39]",
+    "choices": {
+      "A": "Úc",
+      "B": "Indonesia",
+      "C": "Philippines",
+      "D": "Nhật Bản"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "27",
+    "question": "Quốc gia nào được mệnh danh là 'Xứ sở của những nụ cười'?",
+    "choices": {
+      "A": "Việt Nam",
+      "B": "Nhật Bản",
+      "C": "Hàn Quốc",
+      "D": "Thái Lan"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "28",
+    "question": "Kênh đào Suez nối liền hai biển nào?",
+    "choices": {
+      "A": "Biển Đỏ và Biển Đen",
+      "B": "Biển Địa Trung Hải và Biển Đỏ",
+      "C": "Biển Địa Trung Hải và Biển Đen",
+      "D": "Biển Đỏ và Biển Ả Rập"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "29",
+    "question": "Ngôn ngữ nào được nói nhiều nhất trên thế giới?",
+    "choices": {
+      "A": "Tiếng Anh",
+      "B": "Tiếng Quan Thoại",
+      "C": "Tiếng Tây Ban Nha",
+      "D": "Tiếng Hindi"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "30",
+    "question": "Thủ đô của Brazil là gì? [18]",
+    "choices": {
+      "A": "Rio de Janeiro",
+      "B": "São Paulo",
+      "C": "Brasília",
+      "D": "Salvador"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "31",
+    "question": "Địa hình Việt Nam chủ yếu là? [7]",
+    "choices": {
+      "A": "Đồng bằng",
+      "B": "Đồi núi",
+      "C": "Cao nguyên",
+      "D": "Ven biển"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "32",
+    "question": "Khí hậu Việt Nam mang tính chất gì? [2, 5]",
+    "choices": {
+      "A": "Ôn đới hải dương",
+      "B": "Nhiệt đới khô",
+      "C": "Nhiệt đới ẩm gió mùa",
+      "D": "Cận nhiệt đới lục địa"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "33",
+    "question": "Hệ thống sông lớn nhất ở miền Bắc Việt Nam là gì? [34]",
+    "choices": {
+      "A": "Sông Mã",
+      "B": "Sông Cả",
+      "C": "Sông Hồng",
+      "D": "Sông Thái Bình"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "34",
+    "question": "Vùng kinh tế trọng điểm nào có vai trò quan trọng nhất trong nền kinh tế Việt Nam?",
+    "choices": {
+      "A": "Vùng kinh tế trọng điểm Bắc Bộ",
+      "B": "Vùng kinh tế trọng điểm miền Trung",
+      "C": "Vùng kinh tế trọng điểm phía Nam",
+      "D": "Vùng kinh tế trọng điểm Đồng bằng sông Cửu Long"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "35",
+    "question": "Loại đất chủ yếu ở Đồng bằng sông Hồng là gì?",
+    "choices": {
+      "A": "Đất feralit",
+      "B": "Đất phù sa",
+      "C": "Đất phèn",
+      "D": "Đất mặn"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "36",
+    "question": "Tỉnh nào của Việt Nam có cả đường biên giới trên bộ và trên biển với Trung Quốc?",
+    "choices": {
+      "A": "Lào Cai",
+      "B": "Hà Giang",
+      "C": "Cao Bằng",
+      "D": "Quảng Ninh"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "37",
+    "question": "Vườn quốc gia nào là vườn quốc gia đầu tiên của Việt Nam?",
+    "choices": {
+      "A": "Cúc Phương",
+      "B": "Ba Vì",
+      "C": "Tam Đảo",
+      "D": "Cát Bà"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "38",
+    "question": "Đặc điểm nổi bật của địa hình ven biển miền Trung là gì?",
+    "choices": {
+      "A": "Bờ biển dài, khúc khuỷu, nhiều vũng, vịnh",
+      "B": "Bờ biển tương đối bằng phẳng, có nhiều bãi tắm đẹp",
+      "C": "Bờ biển bị chia cắt bởi các dãy núi đâm ngang ra biển",
+      "D": "Bờ biển có nhiều đầm phá"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "39",
+    "question": "Tài nguyên đất hiếm của Việt Nam tập trung chủ yếu ở đâu? [19]",
+    "choices": {
+      "A": "Tây Bắc",
+      "B": "Đông Bắc",
+      "C": "Bắc Trung Bộ",
+      "D": "Tây Nguyên"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "40",
+    "question": "Thành phố nào được mệnh danh là 'Đà Lạt của miền Bắc'?",
+    "choices": {
+      "A": "Sa Pa",
+      "B": "Tam Đảo",
+      "C": "Mẫu Sơn",
+      "D": "Sìn Hồ"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "41",
+    "question": "Châu lục nào lạnh nhất, khô nhất và cao nhất trên Trái Đất?",
+    "choices": {
+      "A": "Châu Á",
+      "B": "Châu Phi",
+      "C": "Châu Nam Cực",
+      "D": "Châu Úc"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "42",
+    "question": "Thủ đô của Nga là gì? [35]",
+    "choices": {
+      "A": "Saint Petersburg",
+      "B": "Moscow",
+      "C": "Kazan",
+      "D": "Novosibirsk"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "43",
+    "question": "Quốc gia nào không có biển?",
+    "choices": {
+      "A": "Bolivia",
+      "B": "Peru",
+      "C": "Colombia",
+      "D": "Chile"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "44",
+    "question": "Thành phố nào trải dài trên hai châu lục?",
+    "choices": {
+      "A": "Cairo",
+      "B": "Moscow",
+      "C": "Istanbul",
+      "D": "Suez"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "45",
+    "question": "Dãy núi nào phân cách châu Âu và châu Á?",
+    "choices": {
+      "A": "Dãy Alps",
+      "B": "Dãy Ural",
+      "C": "Dãy Caucasus",
+      "D": "Dãy Pyrenees"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "46",
+    "question": "Hồ nước ngọt lớn nhất thế giới về diện tích là gì?",
+    "choices": {
+      "A": "Hồ Superior",
+      "B": "Hồ Victoria",
+      "C": "Hồ Baikal",
+      "D": "Hồ Michigan"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "47",
+    "question": "Quốc gia nào có nhiều múi giờ nhất?",
+    "choices": {
+      "A": "Nga",
+      "B": "Hoa Kỳ",
+      "C": "Canada",
+      "D": "Pháp"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "48",
+    "question": "Thủ đô của Argentina là gì? [18]",
+    "choices": {
+      "A": "Santiago",
+      "B": "Lima",
+      "C": "Bogotá",
+      "D": "Buenos Aires"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "49",
+    "question": "Biển Chết nằm giữa hai quốc gia nào?",
+    "choices": {
+      "A": "Israel và Jordan",
+      "B": "Ai Cập và Israel",
+      "C": "Syria và Jordan",
+      "D": "Liban và Israel"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "50",
+    "question": "Đảo lớn nhất thế giới là gì?",
+    "choices": {
+      "A": "New Guinea",
+      "B": "Borneo",
+      "C": "Madagascar",
+      "D": "Greenland"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "51",
+    "question": "Hướng nghiêng chung của địa hình Việt Nam là gì? [3, 4, 7]",
+    "choices": {
+      "A": "Đông Bắc - Tây Nam",
+      "B": "Tây Bắc - Đông Nam",
+      "C": "Bắc - Nam",
+      "D": "Đông - Tây"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "52",
+    "question": "Miền khí hậu phía Bắc Việt Nam có mấy mùa rõ rệt? [2, 6]",
+    "choices": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "53",
+    "question": "Sông ngòi ở miền Trung Việt Nam có đặc điểm gì? [34]",
+    "choices": {
+      "A": "Dài, dốc, nhiều phù sa",
+      "B": "Ngắn, dốc, lũ lên nhanh",
+      "C": "Rộng, sâu, chảy êm đềm",
+      "D": "Nhiều phụ lưu, chi lưu"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "54",
+    "question": "Tây Nguyên là vùng có thế mạnh về trồng loại cây công nghiệp nào?",
+    "choices": {
+      "A": "Cây lúa",
+      "B": "Cây ăn quả",
+      "C": "Cây công nghiệp lâu năm",
+      "D": "Cây công nghiệp hàng năm"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "55",
+    "question": "Tỉnh nào có trữ lượng bô-xít lớn nhất Việt Nam? [8]",
+    "choices": {
+      "A": "Lâm Đồng",
+      "B": "Đắk Nông",
+      "C": "Gia Lai",
+      "D": "Kon Tum"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "56",
+    "question": "Hang động nào lớn nhất thế giới nằm ở Việt Nam?",
+    "choices": {
+      "A": "Hang Sơn Đoòng",
+      "B": "Động Phong Nha",
+      "C": "Động Thiên Đường",
+      "D": "Hang Én"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "57",
+    "question": "Đường bờ biển Việt Nam dài bao nhiêu km? [11, 20]",
+    "choices": {
+      "A": "Khoảng 1.650 km",
+      "B": "Khoảng 2.360 km",
+      "C": "Khoảng 3.260 km",
+      "D": "Khoảng 4.550 km"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "58",
+    "question": "Loại gió nào gây ra hiện tượng phơn khô nóng cho vùng Bắc Trung Bộ?",
+    "choices": {
+      "A": "Gió mùa Đông Bắc",
+      "B": "Gió mùa Tây Nam",
+      "C": "Gió Tín phong",
+      "D": "Gió đất, gió biển"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "59",
+    "question": "Quần đảo Hoàng Sa và Trường Sa lần lượt thuộc các tỉnh, thành phố nào của Việt Nam?",
+    "choices": {
+      "A": "Quảng Ngãi, Khánh Hòa",
+      "B": "Đà Nẵng, Khánh Hòa",
+      "C": "Quảng Nam, Bình Định",
+      "D": "Bình Thuận, Bà Rịa - Vũng Tàu"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "60",
+    "question": "Vịnh Cam Ranh thuộc tỉnh nào?",
+    "choices": {
+      "A": "Bình Định",
+      "B": "Phú Yên",
+      "C": "Ninh Thuận",
+      "D": "Khánh Hòa"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "61",
+    "question": "Thủ đô của Ai Cập là gì?",
+    "choices": {
+      "A": "Alexandria",
+      "B": "Cairo",
+      "C": "Luxor",
+      "D": "Giza"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "62",
+    "question": "Tượng Nữ thần Tự do nằm ở thành phố nào của Hoa Kỳ?",
+    "choices": {
+      "A": "Washington, D.C.",
+      "B": "Los Angeles",
+      "C": "New York",
+      "D": "Chicago"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "63",
+    "question": "Quốc gia nào được mệnh danh là 'Đất nước mặt trời mọc'?",
+    "choices": {
+      "A": "Trung Quốc",
+      "B": "Hàn Quốc",
+      "C": "Nhật Bản",
+      "D": "Việt Nam"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "64",
+    "question": "Thành phố Machu Picchu là di tích của nền văn minh nào?",
+    "choices": {
+      "A": "Maya",
+      "B": "Aztec",
+      "C": "Inca",
+      "D": "Olmec"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "65",
+    "question": "Quốc gia nào có nhiều kim tự tháp nhất?",
+    "choices": {
+      "A": "Ai Cập",
+      "B": "Mexico",
+      "C": "Sudan",
+      "D": "Peru"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "66",
+    "question": "Thủ đô của Tây Ban Nha là gì?",
+    "choices": {
+      "A": "Barcelona",
+      "B": "Seville",
+      "C": "Madrid",
+      "D": "Valencia"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "67",
+    "question": "Hồ nào sâu nhất thế giới?",
+    "choices": {
+      "A": "Hồ Tanganyika",
+      "B": "Hồ Baikal",
+      "C": "Hồ Caspian",
+      "D": "Hồ Superior"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "68",
+    "question": "Quốc gia nào là quốc gia nhỏ nhất thế giới?",
+    "choices": {
+      "A": "Monaco",
+      "B": "Nauru",
+      "C": "Tuvalu",
+      "D": "Thành Vatican"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "69",
+    "question": "Thành phố nào nổi tiếng với các con kênh?",
+    "choices": {
+      "A": "Amsterdam",
+      "B": "Stockholm",
+      "C": "Venice",
+      "D": "Copenhagen"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "70",
+    "question": "Thủ đô của Hàn Quốc là gì? [23, 35]",
+    "choices": {
+      "A": "Busan",
+      "B": "Incheon",
+      "C": "Seoul",
+      "D": "Daegu"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "71",
+    "question": "Đặc điểm nào không phải là đặc điểm của sông ngòi Việt Nam? [47]",
+    "choices": {
+      "A": "Mạng lưới sông ngòi dày đặc",
+      "B": "Sông có lượng nước lớn, giàu phù sa",
+      "C": "Chế độ nước điều hòa quanh năm",
+      "D": "Hướng chảy chủ yếu là Tây Bắc - Đông Nam"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "72",
+    "question": "Vùng Duyên hải Nam Trung Bộ có thế mạnh về ngành kinh tế nào?",
+    "choices": {
+      "A": "Khai thác khoáng sản",
+      "B": "Trồng cây công nghiệp",
+      "C": "Kinh tế biển",
+      "D": "Thủy điện"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "73",
+    "question": "Thành phố trực thuộc trung ương nào không giáp biển?",
+    "choices": {
+      "A": "Hải Phòng",
+      "B": "Đà Nẵng",
+      "C": "Cần Thơ",
+      "D": "Thành phố Hồ Chí Minh"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "74",
+    "question": "Loại rừng nào chiếm diện tích lớn nhất ở Việt Nam hiện nay?",
+    "choices": {
+      "A": "Rừng nguyên sinh",
+      "B": "Rừng sản xuất",
+      "C": "Rừng phòng hộ",
+      "D": "Rừng đặc dụng"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "75",
+    "question": "Đèo nào được mệnh danh là 'Thiên hạ đệ nhất hùng quan'?",
+    "choices": {
+      "A": "Đèo Ngang",
+      "B": "Đèo Hải Vân",
+      "C": "Đèo Cả",
+      "D": "Đèo An Khê"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "76",
+    "question": "Trung tâm công nghiệp lớn nhất vùng Đồng bằng sông Hồng là gì?",
+    "choices": {
+      "A": "Hà Nội",
+      "B": "Hải Phòng",
+      "C": "Quảng Ninh",
+      "D": "Thái Nguyên"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "77",
+    "question": "Nơi nào ở Việt Nam có thể quan sát tuyết rơi vào mùa đông?",
+    "choices": {
+      "A": "Đà Lạt",
+      "B": "Mộc Châu",
+      "C": "Sa Pa",
+      "D": "Tam Đảo"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "78",
+    "question": "Ngành công nghiệp nào được coi là ngành công nghiệp mũi nhọn của vùng Đông Nam Bộ?",
+    "choices": {
+      "A": "Khai thác than",
+      "B": "Công nghiệp thực phẩm",
+      "C": "Sản xuất xi măng",
+      "D": "Khai thác và chế biến dầu khí"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "79",
+    "question": "Tỉnh nào là tỉnh duy nhất của Tây Nguyên giáp biển?",
+    "choices": {
+      "A": "Gia Lai",
+      "B": "Kon Tum",
+      "C": "Đắk Lắk",
+      "D": "Lâm Đồng"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "80",
+    "question": "Đồng bằng lớn thứ hai của Việt Nam là gì? [3, 12]",
+    "choices": {
+      "A": "Đồng bằng sông Cửu Long",
+      "B": "Đồng bằng sông Hồng",
+      "C": "Đồng bằng Thanh Hóa",
+      "D": "Đồng bằng duyên hải miền Trung"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "81",
+    "question": "Điểm cực Bắc trên đất liền của Việt Nam thuộc tỉnh nào?",
+    "choices": {
+      "A": "Lào Cai",
+      "B": "Cao Bằng",
+      "C": "Hà Giang",
+      "D": "Lai Châu"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "82",
+    "question": "Vùng nào chịu ảnh hưởng mạnh nhất của gió mùa Đông Bắc ở Việt Nam?",
+    "choices": {
+      "A": "Tây Bắc",
+      "B": "Đông Bắc",
+      "C": "Đồng bằng sông Hồng",
+      "D": "Bắc Trung Bộ"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "83",
+    "question": "Loại hình giao thông vận tải nào có vai trò quan trọng nhất trong việc vận chuyển hàng hóa Bắc - Nam ở Việt Nam?",
+    "choices": {
+      "A": "Đường sắt",
+      "B": "Đường bộ",
+      "C": "Đường biển",
+      "D": "Đường hàng không"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "84",
+    "question": "Tỉnh nào có nhiều thành phố trực thuộc tỉnh nhất Việt Nam?",
+    "choices": {
+      "A": "Bình Dương",
+      "B": "Đồng Nai",
+      "C": "Quảng Ninh",
+      "D": "Thanh Hóa"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "85",
+    "question": "Cảng biển nước sâu lớn nhất Việt Nam hiện nay là gì?",
+    "choices": {
+      "A": "Cảng Hải Phòng",
+      "B": "Cảng Đà Nẵng",
+      "C": "Cảng Cái Mép - Thị Vải",
+      "D": "Cảng Sài Gòn"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "86",
+    "question": "Khó khăn lớn nhất về tự nhiên đối với sản xuất nông nghiệp ở Đồng bằng sông Cửu Long là gì?",
+    "choices": {
+      "A": "Thiếu nước vào mùa khô",
+      "B": "Đất phèn, đất mặn chiếm diện tích lớn",
+      "C": "Lũ lụt hàng năm",
+      "D": "Sâu bệnh hại cây trồng"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "87",
+    "question": "Dân cư Việt Nam phân bố chủ yếu ở đâu?",
+    "choices": {
+      "A": "Vùng núi và cao nguyên",
+      "B": "Vùng đồng bằng và ven biển",
+      "C": "Các đô thị lớn",
+      "D": "Vùng trung du"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "88",
+    "question": "Cánh đồng muối lớn nhất Việt Nam nằm ở đâu?",
+    "choices": {
+      "A": "Sa Huỳnh (Quảng Ngãi)",
+      "B": "Cà Ná (Ninh Thuận)",
+      "C": "Hòn Khói (Khánh Hòa)",
+      "D": "Long Điền (Bà Rịa - Vũng Tàu)"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "89",
+    "question": "Thủ đô của Ấn Độ là gì? [35]",
+    "choices": {
+      "A": "Mumbai",
+      "B": "New Delhi",
+      "C": "Kolkata",
+      "D": "Bangalore"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "90",
+    "question": "Nước nào có quốc kỳ duy nhất không phải là hình chữ nhật?",
+    "choices": {
+      "A": "Thụy Sĩ",
+      "B": "Nepal",
+      "C": "Vatican",
+      "D": "Qatar"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "91",
+    "question": "Thủ đô của Thổ Nhĩ Kỳ là gì? [35]",
+    "choices": {
+      "A": "Istanbul",
+      "B": "Ankara",
+      "C": "Izmir",
+      "D": "Bursa"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "92",
+    "question": "Núi Phú Sĩ, biểu tượng của Nhật Bản, là loại núi gì?",
+    "choices": {
+      "A": "Núi lửa đã tắt",
+      "B": "Núi lửa đang hoạt động",
+      "C": "Núi đá vôi",
+      "D": "Núi uốn nếp"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "93",
+    "question": "Đường xích đạo không đi qua châu lục nào?",
+    "choices": {
+      "A": "Châu Phi",
+      "B": "Châu Á",
+      "C": "Châu Âu",
+      "D": "Nam Mỹ"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "94",
+    "question": "Quốc gia nào có đường bờ biển dài nhất thế giới?",
+    "choices": {
+      "A": "Nga",
+      "B": "Canada",
+      "C": "Úc",
+      "D": "Indonesia"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "95",
+    "question": "Thành phố nào của Ý nổi tiếng với tháp nghiêng?",
+    "choices": {
+      "A": "Rome",
+      "B": "Florence",
+      "C": "Pisa",
+      "D": "Milan"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "96",
+    "question": "Thủ đô của Thái Lan là gì? [35]",
+    "choices": {
+      "A": "Chiang Mai",
+      "B": "Phuket",
+      "C": "Pattaya",
+      "D": "Bangkok"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "97",
+    "question": "Dòng biển nóng Gulf Stream có ảnh hưởng lớn đến khí hậu của khu vực nào?",
+    "choices": {
+      "A": "Đông Á",
+      "B": "Tây Âu",
+      "C": "Đông Nam Á",
+      "D": "Tây Phi"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "98",
+    "question": "Vĩ tuyến 0 độ được gọi là gì?",
+    "choices": {
+      "A": "Chí tuyến Bắc",
+      "B": "Chí tuyến Nam",
+      "C": "Đường Xích đạo",
+      "D": "Vòng cực Bắc"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "99",
+    "question": "Quốc gia nào ở Nam Mỹ không giáp biển?",
+    "choices": {
+      "A": "Paraguay và Bolivia",
+      "B": "Uruguay và Paraguay",
+      "C": "Ecuador và Bolivia",
+      "D": "Peru và Uruguay"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "100",
+    "question": "Kinh tuyến 0 độ đi qua thành phố nào?",
+    "choices": {
+      "A": "Paris, Pháp",
+      "B": "London, Anh",
+      "C": "Madrid, Tây Ban Nha",
+      "D": "Lisbon, Bồ Đào Nha"
+    },
+    "answer": "B"
+  }
+]

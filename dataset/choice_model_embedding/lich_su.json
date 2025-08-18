@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "1",
+    "question": "Ai là vị vua đầu tiên của nhà Trần?",
+    "choices": [
+      "A. Trần Thái Tông",
+      "B. Trần Thánh Tông",
+      "C. Trần Nhân Tông",
+      "D. Trần Anh Tông"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "2",
+    "question": "Cuộc khởi nghĩa Lam Sơn do ai lãnh đạo?",
+    "choices": [
+      "A. Lê Lợi",
+      "B. Nguyễn Trãi",
+      "C. Trần Hưng Đạo",
+      "D. Quang Trung"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "3",
+    "question": "Năm 1010, vua Lý Thái Tổ đã dời đô từ Hoa Lư về đâu?",
+    "choices": [
+      "A. Thăng Long",
+      "B. Phú Xuân",
+      "C. Tây Đô",
+      "D. Cổ Loa"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "4",
+    "question": "Chiến thắng Bạch Đằng năm 938 gắn liền với tên tuổi của vị anh hùng dân tộc nào?",
+    "choices": [
+      "A. Ngô Quyền",
+      "B. Lý Thường Kiệt",
+      "C. Trần Hưng Đạo",
+      "D. Lê Hoàn"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "5",
+    "question": "Ai là tác giả của tác phẩm \"Bình Ngô đại cáo\"?",
+    "choices": [
+      "A. Nguyễn Trãi",
+      "B. Nguyễn Du",
+      "C. Hồ Xuân Hương",
+      "D. Bà Huyện Thanh Quan"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "6",
+    "question": "Triều đại phong kiến cuối cùng của Việt Nam là triều đại nào?",
+    "choices": [
+      "A. Nhà Nguyễn",
+      "B. Nhà Mạc",
+      "C. Nhà Tây Sơn",
+      "D. Nhà Hồ"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "7",
+    "question": "Vị vua nào của nhà Lý đã cho xây dựng Văn Miếu - Quốc Tử Giám?",
+    "choices": [
+      "A. Lý Thánh Tông",
+      "B. Lý Nhân Tông",
+      "C. Lý Thái Tông",
+      "D. Lý Anh Tông"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "8",
+    "question": "Cuộc khởi nghĩa Hai Bà Trưng diễn ra vào năm nào?",
+    "choices": [
+      "A. 40 - 43",
+      "B. 248",
+      "C. 542",
+      "D. 722"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "9",
+    "question": "Ai là người đã lãnh đạo cuộc kháng chiến chống quân Mông - Nguyên lần thứ nhất?",
+    "choices": [
+      "A. Trần Thủ Độ",
+      "B. Trần Hưng Đạo",
+      "C. Trần Quang Khải",
+      "D. Trần Nhật Duật"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "10",
+    "question": "Quốc hiệu của nước ta dưới thời vua Quang Trung là gì?",
+    "choices": [
+      "A. Đại Việt",
+      "B. Đại Ngu",
+      "C. Vạn Xuân",
+      "D. Đại Cồ Việt"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "11",
+    "question": "Ai là người đã sáng lập ra vương triều nhà Mạc?",
+    "choices": [
+      "A. Mạc Đăng Dung",
+      "B. Mạc Đăng Doanh",
+      "C. Mạc Kính Điển",
+      "D. Mạc Mậu Hợp"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "12",
+    "question": "Trận Rạch Gầm - Xoài Mút là chiến thắng của nghĩa quân Tây Sơn chống lại quân xâm lược nào?",
+    "choices": [
+      "A. Xiêm",
+      "B. Thanh",
+      "C. Mãn Thanh",
+      "D. Pháp"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "13",
+    "question": "Hội nghị Diên Hồng được tổ chức dưới triều đại nào?",
+    "choices": [
+      "A. Nhà Trần",
+      "B. Nhà Lý",
+      "C. Nhà Lê",
+      "D. Nhà Nguyễn"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "14",
+    "question": "Ai là người đã lãnh đạo cuộc khởi nghĩa nông dân Yên Thế?",
+    "choices": [
+      "A. Hoàng Hoa Thám",
+      "B. Phan Đình Phùng",
+      "C. Nguyễn Thái Học",
+      "D. Trương Định"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "15",
+    "question": "Vị vua nào đã ban hành bộ luật Hồng Đức?",
+    "choices": [
+      "A. Lê Thánh Tông",
+      "B. Lê Thái Tông",
+      "C. Lê Nhân Tông",
+      "D. Lê Hiến Tông"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "16",
+    "question": "Nước Vạn Xuân do ai thành lập?",
+    "choices": [
+      "A. Lý Bí",
+      "B. Triệu Quang Phục",
+      "C. Mai Thúc Loan",
+      "D. Phùng Hưng"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "17",
+    "question": "Ai là người có công dẹp loạn 12 sứ quân, thống nhất đất nước?",
+    "choices": [
+      "A. Đinh Bộ Lĩnh",
+      "B. Lê Hoàn",
+      "C. Lý Công Uẩn",
+      "D. Ngô Quyền"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "18",
+    "question": "Tên gọi Thăng Long có nghĩa là gì?",
+    "choices": [
+      "A. Rồng bay lên",
+      "B. Rồng vàng",
+      "C. Rồng hạ xuống",
+      "D. Rồng ngủ"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "19",
+    "question": "Vị tướng nào đã có công lớn trong việc đánh tan 20 vạn quân Thanh xâm lược vào năm 1789?",
+    "choices": [
+      "A. Quang Trung - Nguyễn Huệ",
+      "B. Nguyễn Ánh",
+      "C. Trần Hưng Đạo",
+      "D. Lê Lợi"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "20",
+    "question": "Ai là người lãnh đạo phong trào Cần Vương chống Pháp?",
+    "choices": [
+      "A. Vua Hàm Nghi và Tôn Thất Thuyết",
+      "B. Phan Đình Phùng",
+      "C. Hoàng Hoa Thám",
+      "D. Nguyễn Thái Học"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "21",
+    "question": "Chiến tranh thế giới thứ nhất diễn ra trong khoảng thời gian nào?",
+    "choices": [
+      "A. 1914 - 1918",
+      "B. 1912 - 1916",
+      "C. 1916 - 1920",
+      "D. 1918 - 1922"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "22",
+    "question": "Sự kiện nào được coi là châm ngòi cho Chiến tranh thế giới thứ nhất?",
+    "choices": [
+      "A. Vụ ám sát Thái tử Áo-Hung Franz Ferdinand",
+      "B. Đức tấn công Ba Lan",
+      "C. Nhật Bản tấn công Trân Châu Cảng",
+      "D. Khủng hoảng kinh tế thế giới"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "23",
+    "question": "Phe Liên minh Trung tâm trong Chiến tranh thế giới thứ nhất bao gồm các quốc gia nào?",
+    "choices": [
+      "A. Đức, Áo-Hung, Ottoman, Bulgaria",
+      "B. Anh, Pháp, Nga, Mỹ",
+      "C. Ý, Nhật Bản, Đức, Áo-Hung",
+      "D. Nga, Anh, Pháp, Serbia"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "24",
+    "question": "Chiến tranh thế giới thứ hai bắt đầu bằng sự kiện nào?",
+    "choices": [
+      "A. Đức xâm lược Ba Lan",
+      "B. Nhật tấn công Mãn Châu",
+      "C. Ý xâm lược Ethiopia",
+      "D. Nội chiến Tây Ban Nha"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "25",
+    "question": "Phe Trục trong Chiến tranh thế giới thứ hai gồm những nước nào?",
+    "choices": [
+      "A. Đức, Ý, Nhật",
+      "B. Anh, Pháp, Liên Xô, Mỹ",
+      "C. Đức, Áo, Hungary",
+      "D. Ý, Nhật, Tây Ban Nha"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "26",
+    "question": "Trận Stalingrad được coi là bước ngoặt của Chiến tranh thế giới thứ hai ở mặt trận nào?",
+    "choices": [
+      "A. Mặt trận phía Đông",
+      "B. Mặt trận phía Tây",
+      "C. Mặt trận Bắc Phi",
+      "D. Mặt trận Thái Bình Dương"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "27",
+    "question": "Sự kiện nào đánh dấu sự kết thúc của Chiến tranh thế giới thứ hai ở châu Âu?",
+    "choices": [
+      "A. Đức quốc xã đầu hàng vô điều kiện",
+      "B. Trận Berlin",
+      "C. Hội nghị Yalta",
+      "D. Quân Đồng minh đổ bộ lên Normandy"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "28",
+    "question": "Thành phố nào của Nhật Bản đã bị Mỹ ném bom nguyên tử vào tháng 8 năm 1945?",
+    "choices": [
+      "A. Hiroshima và Nagasaki",
+      "B. Tokyo và Kyoto",
+      "C. Osaka và Kobe",
+      "D. Yokohama và Nagoya"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "29",
+    "question": "Tổ chức quốc tế nào được thành lập sau Chiến tranh thế giới thứ hai nhằm duy trì hòa bình và an ninh thế giới?",
+    "choices": [
+      "A. Liên Hợp Quốc",
+      "B. Hội Quốc Liên",
+      "C. NATO",
+      "D. Khối Warszawa"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "30",
+    "question": "Chiến tranh Lạnh là cuộc đối đầu giữa hai khối nào?",
+    "choices": [
+      "A. Khối tư bản chủ nghĩa do Mỹ đứng đầu và khối xã hội chủ nghĩa do Liên Xô đứng đầu",
+      "B. Khối Đồng minh và khối Trục",
+      "C. Khối NATO và khối SEATO",
+      "D. Các nước đế quốc và các nước thuộc địa"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "31",
+    "question": "Đế quốc La Mã được thành lập vào năm nào?",
+    "choices": [
+      "A. 27 TCN",
+      "B. 509 TCN",
+      "C. 44 TCN",
+      "D. 14 SCN"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "32",
+    "question": "Ai là vị hoàng đế đầu tiên của Đế quốc La Mã?",
+    "choices": [
+      "A. Augustus",
+      "B. Julius Caesar",
+      "C. Nero",
+      "D. Constantine"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "33",
+    "question": "Công trình kiến trúc nổi tiếng nào của La Mã cổ đại được sử dụng cho các cuộc giác đấu?",
+    "choices": [
+      "A. Đấu trường Colosseum",
+      "B. Đền Pantheon",
+      "C. Khải hoàn môn Constantine",
+      "D. Quảng trường La Mã"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "34",
+    "question": "Nền văn minh Ai Cập cổ đại phát triển rực rỡ bên dòng sông nào?",
+    "choices": [
+      "A. Sông Nile",
+      "B. Sông Tigris",
+      "C. Sông Euphrates",
+      "D. Sông Ấn"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "35",
+    "question": "Chữ viết của người Ai Cập cổ đại được gọi là gì?",
+    "choices": [
+      "A. Chữ tượng hình",
+      "B. Chữ hình nêm",
+      "C. Chữ cái alphabet",
+      "D. Chữ Phạn"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "36",
+    "question": "Kim tự tháp Giza được xây dựng để làm gì?",
+    "choices": [
+      "A. Lăng mộ của các pharaoh",
+      "B. Đền thờ các vị thần",
+      "C. Đài quan sát thiên văn",
+      "D. Cung điện của vua"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "37",
+    "question": "Nền dân chủ đầu tiên trên thế giới ra đời ở thành bang nào của Hy Lạp cổ đại?",
+    "choices": [
+      "A. Athens",
+      "B. Sparta",
+      "C. Corinth",
+      "D. Thebes"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "38",
+    "question": "Ai được coi là \"cha đẻ của lịch sử học\"?",
+    "choices": [
+      "A. Herodotus",
+      "B. Thucydides",
+      "C. Socrates",
+      "D. Plato"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "39",
+    "question": "Thế vận hội Olympic cổ đại được tổ chức để tôn vinh vị thần nào?",
+    "choices": [
+      "A. Thần Zeus",
+      "B. Thần Apollo",
+      "C. Thần Athena",
+      "D. Thần Poseidon"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "40",
+    "question": "Cuộc cách mạng công nghiệp lần thứ nhất bắt đầu ở quốc gia nào?",
+    "choices": [
+      "A. Anh",
+      "B. Pháp",
+      "C. Đức",
+      "D. Mỹ"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "41",
+    "question": "Phát minh quan trọng nào đã mở đầu cho cuộc cách mạng công nghiệp lần thứ nhất?",
+    "choices": [
+      "A. Máy hơi nước",
+      "B. Động cơ đốt trong",
+      "C. Điện thoại",
+      "D. Bóng đèn điện"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "42",
+    "question": "Cách mạng tháng Mười Nga năm 1917 đã lật đổ chế độ nào?",
+    "choices": [
+      "A. Chế độ Nga hoàng",
+      "B. Chính phủ lâm thời tư sản",
+      "C. Chế độ Cộng hòa",
+      "D. Chế độ quân chủ lập hiến"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "43",
+    "question": "Ai là người lãnh đạo cuộc Cách mạng tháng Mười Nga?",
+    "choices": [
+      "A. V.I. Lenin",
+      "B. Joseph Stalin",
+      "C. Leon Trotsky",
+      "D. Karl Marx"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "44",
+    "question": "Bức tường Berlin sụp đổ vào năm nào?",
+    "choices": [
+      "A. 1989",
+      "B. 1990",
+      "C. 1991",
+      "D. 1988"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "45",
+    "question": "Ai là Tổng thống da màu đầu tiên của Nam Phi?",
+    "choices": [
+      "A. Nelson Mandela",
+      "B. Martin Luther King Jr.",
+      "C. Barack Obama",
+      "D. Kofi Annan"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "46",
+    "question": "Cuộc chiến tranh Việt Nam kết thúc vào năm nào?",
+    "choices": [
+      "A. 1975",
+      "B. 1973",
+      "C. 1968",
+      "D. 1954"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "47",
+    "question": "Hiệp định Genève về chấm dứt chiến tranh ở Đông Dương được ký kết vào năm nào?",
+    "choices": [
+      "A. 1954",
+      "B. 1955",
+      "C. 1956",
+      "D. 1953"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "48",
+    "question": "Ai là người đầu tiên đặt chân lên Mặt Trăng?",
+    "choices": [
+      "A. Neil Armstrong",
+      "B. Yuri Gagarin",
+      "C. Buzz Aldrin",
+      "D. Michael Collins"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "49",
+    "question": "Con đường tơ lụa là tuyến đường thương mại nổi tiếng nối liền hai châu lục nào?",
+    "choices": [
+      "A. Châu Á và Châu Âu",
+      "B. Châu Á và Châu Phi",
+      "C. Châu Âu và Châu Phi",
+      "D. Châu Á và Châu Mỹ"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "50",
+    "question": "Thành Cổ Loa gắn liền với câu chuyện truyền thuyết nào?",
+    "choices": [
+      "A. An Dương Vương và Mỵ Châu - Trọng Thủy",
+      "B. Sơn Tinh - Thủy Tinh",
+      "C. Bánh chưng, bánh giầy",
+      "D. Sự tích Hồ Gươm"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "51",
+    "question": "Phong trào Đông Du do ai khởi xướng?",
+    "choices": [
+      "A. Phan Bội Châu",
+      "B. Phan Châu Trinh",
+      "C. Lương Văn Can",
+      "D. Huỳnh Thúc Kháng"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "52",
+    "question": "Tổ chức Việt Nam Quốc dân đảng do ai sáng lập?",
+    "choices": [
+      "A. Nguyễn Thái Học",
+      "B. Phan Bội Châu",
+      "C. Trần Phú",
+      "D. Hồ Chí Minh"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "53",
+    "question": "Cách mạng tháng Tám năm 1945 thành công đã dẫn đến sự ra đời của nhà nước nào?",
+    "choices": [
+      "A. Việt Nam Dân chủ Cộng hòa",
+      "B. Quốc gia Việt Nam",
+      "C. Cộng hòa Miền Nam Việt Nam",
+      "D. Cộng hòa Xã hội chủ nghĩa Việt Nam"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "54",
+    "question": "Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập tại đâu?",
+    "choices": [
+      "A. Quảng trường Ba Đình, Hà Nội",
+      "B. Bến Nhà Rồng, Sài Gòn",
+      "C. Cây đa Tân Trào, Tuyên Quang",
+      "D. Pác Bó, Cao Bằng"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "55",
+    "question": "Chiến dịch Điện Biên Phủ diễn ra vào năm nào?",
+    "choices": [
+      "A. 1954",
+      "B. 1953",
+      "C. 1952",
+      "D. 1951"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "56",
+    "question": "Đường mòn Hồ Chí Minh trên biển còn có tên gọi khác là gì?",
+    "choices": [
+      "A. Đường số 0",
+      "B. Con đường tơ lụa trên biển",
+      "C. Con đường gốm sứ",
+      "D. Con đường không số"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "57",
+    "question": "Hiệp định Paris về chấm dứt chiến tranh, lập lại hòa bình ở Việt Nam được ký kết vào năm nào?",
+    "choices": [
+      "A. 1973",
+      "B. 1972",
+      "C. 1974",
+      "D. 1975"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "58",
+    "question": "Chiến dịch Hồ Chí Minh lịch sử giải phóng hoàn toàn miền Nam, thống nhất đất nước vào ngày tháng năm nào?",
+    "choices": [
+      "A. 30/04/1975",
+      "B. 02/09/1945",
+      "C. 07/05/1954",
+      "D. 27/01/1973"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "59",
+    "question": "Ai là nữ vương đầu tiên trong lịch sử Việt Nam?",
+    "choices": [
+      "A. Trưng Trắc",
+      "B. Trưng Nhị",
+      "C. Dương Vân Nga",
+      "D. Ỷ Lan"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "60",
+    "question": "Vị vua nào của triều Nguyễn đã đặt quốc hiệu nước ta là Việt Nam?",
+    "choices": [
+      "A. Gia Long",
+      "B. Minh Mạng",
+      "C. Tự Đức",
+      "D. Thành Thái"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "61",
+    "question": "Trận Chi Lăng - Xương Giang là chiến thắng quyết định của cuộc khởi nghĩa Lam Sơn chống lại quân xâm lược nào?",
+    "choices": [
+      "A. Quân Minh",
+      "B. Quân Thanh",
+      "C. Quân Mông - Nguyên",
+      "D. Quân Tống"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "62",
+    "question": "Ai là người đã chỉ huy cuộc kháng chiến chống quân Tống lần thứ hai (1075 - 1077)?",
+    "choices": [
+      "A. Lý Thường Kiệt",
+      "B. Tôn Đản",
+      "C. Lê Phụng Hiểu",
+      "D. Thân Cảnh Phúc"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "63",
+    "question": "Bài thơ \"Nam quốc sơn hà\" được coi là bản tuyên ngôn độc lập đầu tiên của nước ta. Bài thơ này gắn liền với sự kiện nào?",
+    "choices": [
+      "A. Cuộc kháng chiến chống quân Tống lần thứ hai",
+      "B. Cuộc kháng chiến chống quân Mông - Nguyên",
+      "C. Cuộc khởi nghĩa Lam Sơn",
+      "D. Cuộc kháng chiến chống quân Thanh"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "64",
+    "question": "Ai là tác giả của bộ \"Đại Việt sử ký toàn thư\"?",
+    "choices": [
+      "A. Ngô Sĩ Liên",
+      "B. Lê Văn Hưu",
+      "C. Phan Phu Tiên",
+      "D. Sử Hy Nhan"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "65",
+    "question": "Nhà Hồ tồn tại trong bao nhiêu năm?",
+    "choices": [
+      "A. 7 năm",
+      "B. 10 năm",
+      "C. 15 năm",
+      "D. 20 năm"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "66",
+    "question": "Phong trào Duy Tân do ai khởi xướng?",
+    "choices": [
+      "A. Phan Châu Trinh",
+      "B. Phan Bội Châu",
+      "C. Lương Văn Can",
+      "D. Huỳnh Thúc Kháng"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "67",
+    "question": "Sự kiện nào đánh dấu bước ngoặt trong cuộc đời hoạt động cách mạng của Nguyễn Ái Quốc?",
+    "choices": [
+      "A. Đọc \"Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa\" của Lênin",
+      "B. Tham gia sáng lập Đảng Cộng sản Pháp",
+      "C. Gửi bản \"Yêu sách của nhân dân An Nam\" tới Hội nghị Versailles",
+      "D. Thành lập Hội Việt Nam Cách mạng Thanh niên"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "68",
+    "question": "Đảng Cộng sản Việt Nam được thành lập vào ngày tháng năm nào?",
+    "choices": [
+      "A. 03/02/1930",
+      "B. 03/02/1929",
+      "C. 02/03/1930",
+      "D. 02/03/1929"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "69",
+    "question": "Phong trào Xô viết Nghệ - Tĩnh diễn ra trong khoảng thời gian nào?",
+    "choices": [
+      "A. 1930 - 1931",
+      "B. 1936 - 1939",
+      "C. 1939 - 1945",
+      "D. 1946 - 1954"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "70",
+    "question": "Chiến thắng Việt Bắc thu - đông năm 1947 đã làm phá sản kế hoạch chiến tranh nào của thực dân Pháp?",
+    "choices": [
+      "A. Kế hoạch \"đánh nhanh thắng nhanh\"",
+      "B. Kế hoạch Rơve",
+      "C. Kế hoạch Đờ Lát đơ Tátxinhi",
+      "D. Kế hoạch Nava"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "71",
+    "question": "Phong trào \"Đồng khởi\" ở miền Nam diễn ra mạnh mẽ nhất vào năm nào?",
+    "choices": [
+      "A. 1960",
+      "B. 1959",
+      "C. 1961",
+      "D. 1962"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "72",
+    "question": "Cuộc Tổng tiến công và nổi dậy Xuân Mậu Thân 1968 diễn ra vào dịp nào?",
+    "choices": [
+      "A. Tết Nguyên đán",
+      "B. Quốc khánh 2/9",
+      "C. Ngày sinh nhật Bác 19/5",
+      "D. Lễ Giáng sinh"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "73",
+    "question": "Chiến thắng \"Điện Biên Phủ trên không\" là thắng lợi của quân và dân ta trong việc chống lại cuộc tập kích đường không bằng máy bay B-52 của Mỹ vào đâu?",
+    "choices": [
+      "A. Hà Nội, Hải Phòng và một số thành phố khác ở miền Bắc",
+      "B. Sài Gòn",
+      "C. Cứ điểm Điện Biên Phủ",
+      "D. Đường mòn Hồ Chí Minh"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "74",
+    "question": "Nhà nước Âu Lạc của An Dương Vương tồn tại trong khoảng thời gian nào?",
+    "choices": [
+      "A. 257 TCN - 208 TCN",
+      "B. 2879 TCN - 258 TCN",
+      "C. 40 - 43",
+      "D. 544 - 602"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "75",
+    "question": "Vị vua nào đã đặt tên nước là Đại Cồ Việt?",
+    "choices": [
+      "A. Đinh Tiên Hoàng",
+      "B. Lê Đại Hành",
+      "C. Lý Thái Tổ",
+      "D. Ngô Quyền"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "76",
+    "question": "Ai là người đã lãnh đạo nhân dân ta kháng chiến chống quân Nam Hán lần thứ nhất?",
+    "choices": [
+      "A. Dương Đình Nghệ",
+      "B. Khúc Thừa Dụ",
+      "C. Ngô Quyền",
+      "D. Kiều Công Tiễn"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "77",
+    "question": "Thành nhà Hồ (Tây Đô) được xây dựng dưới triều đại nào?",
+    "choices": [
+      "A. Nhà Hồ",
+      "B. Nhà Trần",
+      "C. Nhà Lê",
+      "D. Nhà Nguyễn"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "78",
+    "question": "Cuộc khởi nghĩa của Bà Triệu (Triệu Thị Trinh) diễn ra vào năm nào?",
+    "choices": [
+      "A. 248",
+      "B. 40",
+      "C. 542",
+      "D. 722"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "79",
+    "question": "Vị trạng nguyên đầu tiên của nước ta là ai?",
+    "choices": [
+      "A. Lê Văn Thịnh",
+      "B. Nguyễn Hiền",
+      "C. Mạc Đĩnh Chi",
+      "D. Lương Thế Vinh"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "80",
+    "question": "Ai là người đã sáng lập ra Thiền phái Trúc Lâm Yên Tử?",
+    "choices": [
+      "A. Trần Nhân Tông",
+      "B. Trần Thái Tông",
+      "C. Tuệ Trung Thượng Sĩ",
+      "D. Huyền Quang"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "81",
+    "question": "Tác phẩm \"Hịch tướng sĩ\" do ai sáng tác?",
+    "choices": [
+      "A. Trần Hưng Đạo",
+      "B. Lý Thường Kiệt",
+      "C. Nguyễn Trãi",
+      "D. Quang Trung"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "82",
+    "question": "Cuộc chiến tranh Trịnh - Nguyễn phân tranh kéo dài bao nhiêu năm?",
+    "choices": [
+      "A. Gần 200 năm",
+      "B. Hơn 100 năm",
+      "C. Khoảng 50 năm",
+      "D. Trên 300 năm"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "83",
+    "question": "Ai là người được mệnh danh là \"Lưỡng quốc Trạng nguyên\"?",
+    "choices": [
+      "A. Mạc Đĩnh Chi",
+      "B. Nguyễn Bỉnh Khiêm",
+      "C. Lê Quý Đôn",
+      "D. Nguyễn Trực"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "84",
+    "question": "Phong trào \"Thơ mới\" ra đời trong giai đoạn lịch sử nào?",
+    "choices": [
+      "A. 1932 - 1945",
+      "B. 1900 - 1930",
+      "C. 1945 - 1954",
+      "D. 1954 - 1975"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "85",
+    "question": "Tổ chức \"Tự lực văn đoàn\" do ai sáng lập?",
+    "choices": [
+      "A. Nhất Linh (Nguyễn Tường Tam)",
+      "B. Khái Hưng (Trần Khánh Giư)",
+      "C. Thạch Lam (Nguyễn Tường Lân)",
+      "D. Hoàng Đạo (Nguyễn Tường Long)"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "86",
+    "question": "Ai là tác giả của tiểu thuyết \"Số đỏ\"?",
+    "choices": [
+      "A. Vũ Trọng Phụng",
+      "B. Ngô Tất Tố",
+      "C. Nam Cao",
+      "D. Nguyễn Công Hoan"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "87",
+    "question": "Cuộc cải cách của vua Minh Mạng tập trung vào lĩnh vực nào là chủ yếu?",
+    "choices": [
+      "A. Hành chính",
+      "B. Kinh tế",
+      "C. Quân sự",
+      "D. Giáo dục"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "88",
+    "question": "Sự kiện Vịnh Bắc Bộ năm 1964 đã tạo cớ cho Mỹ làm gì?",
+    "choices": [
+      "A. Ném bom phá hoại miền Bắc",
+      "B. Đưa quân vào miền Nam Việt Nam",
+      "C. Phong tỏa cảng Hải Phòng",
+      "D. Rút quân khỏi miền Nam Việt Nam"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "89",
+    "question": "Ai là người đã cắm lá cờ chiến thắng trên nóc hầm tướng Đờ Cát trong chiến dịch Điện Biên Phủ?",
+    "choices": [
+      "A. Phan Đình Giót",
+      "B. Tô Vĩnh Diện",
+      "C. Bế Văn Đàn",
+      "D. Không có cá nhân nào cụ thể, đây là chiến công của tập thể"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "90",
+    "question": "Chiến lược \"Việt Nam hóa chiến tranh\" của Mỹ được thực hiện dưới thời tổng thống nào?",
+    "choices": [
+      "A. Richard Nixon",
+      "B. Lyndon B. Johnson",
+      "C. John F. Kennedy",
+      "D. Dwight D. Eisenhower"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "91",
+    "question": "Phong trào \"vô sản hóa\" do tổ chức nào phát động?",
+    "choices": [
+      "A. Hội Việt Nam Cách mạng Thanh niên",
+      "B. Tân Việt Cách mạng Đảng",
+      "C. Việt Nam Quốc dân Đảng",
+      "D. An Nam Cộng sản Đảng"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "92",
+    "question": "Nhà nước Văn Lang có kinh đô đặt ở đâu?",
+    "choices": [
+      "A. Phong Châu (Phú Thọ)",
+      "B. Cổ Loa (Hà Nội)",
+      "C. Hoa Lư (Ninh Bình)",
+      "D. Mê Linh (Vĩnh Phúc)"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "93",
+    "question": "Sông Bạch Đằng đã diễn ra bao nhiêu trận thủy chiến lớn trong lịch sử chống ngoại xâm của dân tộc ta?",
+    "choices": [
+      "A. 3 lần",
+      "B. 2 lần",
+      "C. 4 lần",
+      "D. 1 lần"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "94",
+    "question": "Ai là người đã lãnh đạo cuộc khởi nghĩa của nông dân ở Đàng Ngoài vào thế kỷ 18?",
+    "choices": [
+      "A. Nguyễn Hữu Cầu",
+      "B. Lê Duy Mật",
+      "C. Hoàng Công Chất",
+      "D. Cả 3 người trên"
+    ],
+    "answer": "D"
+  },
+  {
+    "id": "95",
+    "question": "Vị vua nào của nhà Trần có đến hai niên hiệu?",
+    "choices": [
+      "A. Trần Minh Tông",
+      "B. Trần Anh Tông",
+      "C. Trần Dụ Tông",
+      "D. Trần Nghệ Tông"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "96",
+    "question": "Bộ \"Quốc triều hình luật\" (luật Hồng Đức) được ban hành dưới triều vua nào?",
+    "choices": [
+      "A. Lê Thánh Tông",
+      "B. Lê Thái Tổ",
+      "C. Trần Thái Tông",
+      "D. Gia Long"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "97",
+    "question": "Phong trào \"Thanh niên xung phong\" ra đời trong cuộc kháng chiến nào?",
+    "choices": [
+      "A. Chống Pháp",
+      "B. Chống Mỹ",
+      "C. Cả hai cuộc kháng chiến",
+      "D. Thời kỳ đổi mới"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "98",
+    "question": "Ai là Tổng bí thư đầu tiên của Đảng Cộng sản Việt Nam?",
+    "choices": [
+      "A. Trần Phú",
+      "B. Lê Hồng Phong",
+      "C. Hà Huy Tập",
+      "D. Nguyễn Văn Cừ"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "99",
+    "question": "Vị vua nào của triều Nguyễn có thời gian trị vì lâu nhất?",
+    "choices": [
+      "A. Tự Đức",
+      "B. Gia Long",
+      "C. Minh Mạng",
+      "D. Khải Định"
+    ],
+    "answer": "A"
+  },
+  {
+    "id": "100",
+    "question": "Nước ta chính thức mang tên Cộng hòa Xã hội chủ nghĩa Việt Nam từ năm nào?",
+    "choices": [
+      "A. 1976",
+      "B. 1975",
+      "C. 1986",
+      "D. 1991"
+    ],
+    "answer": "A"
+  }
+]

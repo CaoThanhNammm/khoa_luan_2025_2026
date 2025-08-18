@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "001",
+    "question": "Đâu là nguyên nhân chính gây ra hiệu ứng nhà kính?",
+    "choices": {
+      "A": "Sự gia tăng nồng độ khí oxy trong khí quyển",
+      "B": "Sự gia tăng nồng độ khí nitơ trong khí quyển",
+      "C": "Sự gia tăng nồng độ khí cacbonic (CO2) và các khí nhà kính khác trong khí quyển. [8]",
+      "D": "Sự suy giảm tầng ozon"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "002",
+    "question": "Hiện tượng nào sau đây là biểu hiện của biến đổi khí hậu?",
+    "choices": {
+      "A": "Nhiệt độ trung bình toàn cầu tăng lên. [8]",
+      "B": "Mực nước biển dâng cao. [8]",
+      "C": "Các hiện tượng thời tiết cực đoan xảy ra thường xuyên hơn. [10]",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "003",
+    "question": "Tầng ozon có vai trò quan trọng nào đối với sự sống trên Trái Đất?",
+    "choices": {
+      "A": "Duy trì nhiệt độ ổn định cho Trái Đất",
+      "B": "Hấp thụ các tia cực tím (UV) có hại từ Mặt Trời. [8]",
+      "C": "Cung cấp oxy cho sinh vật hô hấp",
+      "D": "Tạo ra các hiện tượng thời tiết"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "004",
+    "question": "Loại năng lượng nào sau đây được coi là năng lượng tái tạo?",
+    "choices": {
+      "A": "Năng lượng mặt trời. [4]",
+      "B": "Than đá",
+      "C": "Dầu mỏ",
+      "D": "Khí tự nhiên"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "005",
+    "question": "Hệ sinh thái là gì?",
+    "choices": {
+      "A": "Là một tập hợp các cá thể cùng loài sống trong một khu vực nhất định",
+      "B": "Là một tập hợp các quần thể sinh vật khác loài cùng sống trong một không gian nhất định",
+      "C": "Là một hệ thống bao gồm quần xã sinh vật và môi trường sống của chúng (sinh cảnh). [12]",
+      "D": "Chỉ bao gồm các yếu tố vô sinh như đất, nước, không khí"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "006",
+    "question": "Đâu là một trong những nguyên nhân chính gây ô nhiễm nguồn nước?",
+    "choices": {
+      "A": "Khí thải từ các nhà máy công nghiệp",
+      "B": "Nước thải sinh hoạt và công nghiệp không qua xử lý. [13]",
+      "C": "Tiếng ồn từ các phương tiện giao thông",
+      "D": "Sử dụng năng lượng mặt trời"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "007",
+    "question": "Phát triển bền vững là gì?",
+    "choices": {
+      "A": "Là sự phát triển chỉ tập trung vào tăng trưởng kinh tế",
+      "B": "Là sự phát triển đáp ứng nhu cầu của thế hệ hiện tại mà không làm ảnh hưởng đến khả năng đáp ứng nhu cầu của các thế hệ tương lai. [39]",
+      "C": "Là sự phát triển chỉ quan tâm đến bảo vệ môi trường",
+      "D": "Là sự phát triển không có kế hoạch dài hạn"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "008",
+    "question": "Sách Đỏ Việt Nam là danh sách các loài động, thực vật:",
+    "choices": {
+      "A": "Có số lượng nhiều nhất Việt Nam",
+      "B": "Có nguy cơ tuyệt chủng cần được bảo vệ. [8]",
+      "C": "Mới được phát hiện ở Việt Nam",
+      "D": "Có giá trị kinh tế cao"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "009",
+    "question": "Hoạt động nào sau đây góp phần bảo vệ môi trường?",
+    "choices": {
+      "A": "Vứt rác bừa bãi",
+      "B": "Sử dụng túi ni lông một lần",
+      "C": "Trồng cây xanh. [30]",
+      "D": "Lãng phí điện, nước"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "010",
+    "question": "\"3R\" trong quản lý chất thải là viết tắt của:",
+    "choices": {
+      "A": "Reduce, Reuse, Recycle (Giảm thiểu, Tái sử dụng, Tái chế). [48]",
+      "B": "Read, Rewrite, Remember",
+      "C": "Run, Rest, Repeat",
+      "D": "Red, Right, Round"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "011",
+    "question": "Khí nào sau đây là thành phần chính gây mưa axit?",
+    "choices": {
+      "A": "Oxy (O2)",
+      "B": "Nitơ (N2)",
+      "C": "Lưu huỳnh đioxit (SO2) và các oxit của nitơ (NOx). [24]",
+      "D": "Cacbon monoxit (CO)"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "012",
+    "question": "Đa dạng sinh học là gì?",
+    "choices": {
+      "A": "Sự phong phú về số lượng cá thể trong một loài",
+      "B": "Sự đa dạng về môi trường sống",
+      "C": "Sự phong phú, đa dạng về nguồn gen, loài sinh vật và hệ sinh thái. [11]",
+      "D": "Sự đồng nhất về các loài trong một khu vực"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "013",
+    "question": "Luật Bảo vệ môi trường ở Việt Nam được ban hành nhằm mục đích gì?",
+    "choices": {
+      "A": "Chỉ để xử phạt các hành vi vi phạm",
+      "B": "Quy định về hoạt động bảo vệ môi trường; quyền, nghĩa vụ và trách nhiệm của cơ quan, tổ chức, hộ gia đình và cá nhân trong hoạt động bảo vệ môi trường. [32]",
+      "C": "Khuyến khích các hoạt động gây ô nhiễm",
+      "D": "Chỉ áp dụng cho các doanh nghiệp lớn"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "014",
+    "question": "Loại tài nguyên nào sau đây là tài nguyên không tái tạo?",
+    "choices": {
+      "A": "Năng lượng gió",
+      "B": "Nước",
+      "C": "Dầu mỏ. [33]",
+      "D": "Rừng"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "015",
+    "question": "Hậu quả của việc phá rừng đầu nguồn là gì?",
+    "choices": {
+      "A": "Gây lũ lụt, sạt lở đất ở vùng hạ lưu",
+      "B": "Làm giảm đa dạng sinh học",
+      "C": "Gây xói mòn, thoái hóa đất",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "016",
+    "question": "Chất thải nguy hại là gì?",
+    "choices": {
+      "A": "Là tất cả các loại rác thải sinh hoạt",
+      "B": "Là chất thải chứa yếu tố độc hại, phóng xạ, lây nhiễm, dễ cháy, dễ nổ, gây ăn mòn, gây ngộ độc hoặc có đặc tính nguy hại khác. [46]",
+      "C": "Là rác thải có thể tái chế được",
+      "D": "Là chất thải hữu cơ dễ phân hủy"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "017",
+    "question": "Sinh vật sản xuất trong một hệ sinh thái thường là:",
+    "choices": {
+      "A": "Động vật ăn cỏ",
+      "B": "Động vật ăn thịt",
+      "C": "Thực vật. [12]",
+      "D": "Vi sinh vật phân giải"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "018",
+    "question": "Ô nhiễm tiếng ồn gây ra tác hại gì?",
+    "choices": {
+      "A": "Ảnh hưởng đến hệ hô hấp",
+      "B": "Gây ra các bệnh về da",
+      "C": "Ảnh hưởng đến thính giác, gây căng thẳng thần kinh, stress. [48]",
+      "D": "Làm tăng nhiệt độ môi trường"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "019",
+    "question": "Biện pháp nào giúp tiết kiệm năng lượng hiệu quả trong gia đình?",
+    "choices": {
+      "A": "Bật tất cả các đèn ngay cả khi không sử dụng",
+      "B": "Sử dụng các thiết bị điện có hiệu suất năng lượng cao, tắt các thiết bị khi không sử dụng. [30]",
+      "C": "Để cửa tủ lạnh mở lâu",
+      "D": "Sử dụng nước nóng một cách lãng phí"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "020",
+    "question": "Mục tiêu chính của Thỏa thuận Paris về biến đổi khí hậu là gì?",
+    "choices": {
+      "A": "Giữ cho mức tăng nhiệt độ trung bình toàn cầu dưới 2°C so với mức tiền công nghiệp và nỗ lực giới hạn mức tăng ở 1,5°C. [10]",
+      "B": "Tăng cường sử dụng nhiên liệu hóa thạch",
+      "C": "Xóa bỏ hoàn toàn ngành công nghiệp",
+      "D": "Không có mục tiêu cụ thể"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "021",
+    "question": "Loại ô nhiễm nào được gây ra bởi việc sử dụng quá nhiều phân bón và thuốc trừ sâu trong nông nghiệp?",
+    "choices": {
+      "A": "Ô nhiễm không khí",
+      "B": "Ô nhiễm tiếng ồn",
+      "C": "Ô nhiễm đất và ô nhiễm nước. [1]",
+      "D": "Ô nhiễm ánh sáng"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "022",
+    "question": "Đâu là ví dụ về một hệ sinh thái nhân tạo?",
+    "choices": {
+      "A": "Rừng rậm Amazon",
+      "B": "Rạn san hô Great Barrier",
+      "C": "Một hồ thủy sản. [5]",
+      "D": "Sa mạc Sahara"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "023",
+    "question": "Hiện tượng phú dưỡng (eutrophication) trong các hồ nước thường do nguyên nhân nào?",
+    "choices": {
+      "A": "Sự gia tăng nhiệt độ của nước",
+      "B": "Sự dư thừa các chất dinh dưỡng như nitơ và phốtpho từ phân bón và nước thải. [1]",
+      "C": "Sự xâm nhập của các loài sinh vật ngoại lai",
+      "D": "Sự giảm lượng oxy hòa tan trong nước"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "024",
+    "question": "Năng lượng địa nhiệt được khai thác từ đâu?",
+    "choices": {
+      "A": "Sức nóng từ bên trong Trái Đất. [33]",
+      "B": "Ánh sáng mặt trời",
+      "C": "Sức gió",
+      "D": "Sóng biển"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "025",
+    "question": "Hành động nào sau đây KHÔNG phải là biện pháp bảo vệ đa dạng sinh học?",
+    "choices": {
+      "A": "Xây dựng các khu bảo tồn thiên nhiên. [11]",
+      "B": "Săn bắt, buôn bán động vật hoang dã trái phép. [30]",
+      "C": "Trồng cây gây rừng",
+      "D": "Tuyên truyền, nâng cao ý thức bảo vệ môi trường"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "026",
+    "question": "Chất thải rắn sinh hoạt được phân loại tại nguồn nhằm mục đích gì?",
+    "choices": {
+      "A": "Làm tăng khối lượng rác thải phải chôn lấp",
+      "B": "Tăng cường hiệu quả tái chế, giảm lượng rác thải ra môi trường. [45]",
+      "C": "Gây khó khăn cho công tác thu gom rác",
+      "D": "Chỉ để tuân thủ quy định"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "027",
+    "question": "Vai trò của rừng ngập mặn đối với môi trường và đời sống con người là gì?",
+    "choices": {
+      "A": "Chắn sóng, bảo vệ bờ biển, chống xói lở",
+      "B": "Là nơi sinh sống và cung cấp thức ăn cho nhiều loài thủy sản",
+      "C": "Điều hòa khí hậu, hấp thụ CO2",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "028",
+    "question": "Khái niệm \"dấu chân carbon\" (carbon footprint) đề cập đến điều gì?",
+    "choices": {
+      "A": "Tổng lượng khí nhà kính (chủ yếu là CO2) được thải ra trực tiếp hoặc gián tiếp bởi một cá nhân, tổ chức, sự kiện hoặc sản phẩm.",
+      "B": "Diện tích đất cần thiết để sản xuất tài nguyên và hấp thụ chất thải",
+      "C": "Lượng nước được sử dụng trong quá trình sản xuất",
+      "D": "Dấu vết của động vật trong tự nhiên"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "029",
+    "question": "Sự cố tràn dầu trên biển gây ra hậu quả nghiêm trọng nào?",
+    "choices": {
+      "A": "Gây ô nhiễm môi trường biển, ảnh hưởng hệ sinh thái",
+      "B": "Làm chết các sinh vật biển",
+      "C": "Ảnh hưởng đến hoạt động kinh tế biển như du lịch, đánh bắt",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "030",
+    "question": "Tổ chức nào của Liên Hợp Quốc chịu trách nhiệm về các vấn đề môi trường toàn cầu?",
+    "choices": {
+      "A": "Tổ chức Y tế Thế giới (WHO)",
+      "B": "Chương trình Môi trường Liên Hợp Quốc (UNEP)",
+      "C": "Quỹ Nhi đồng Liên Hợp Quốc (UNICEF)",
+      "D": "Tổ chức Lương thực và Nông nghiệp Liên Hợp Quốc (FAO)"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "031",
+    "question": "Hiện tượng sa mạc hóa là gì?",
+    "choices": {
+      "A": "Quá trình hình thành các sa mạc tự nhiên",
+      "B": "Là quá trình thoái hóa đất ở các vùng khô cằn, bán khô hạn do biến đổi khí hậu và hoạt động của con người. [24]",
+      "C": "Sự mở rộng diện tích các ốc đảo",
+      "D": "Sự gia tăng lượng mưa ở các vùng sa mạc"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "032",
+    "question": "Nguồn gây ô nhiễm không khí chính ở các đô thị lớn là gì?",
+    "choices": {
+      "A": "Hoạt động nông nghiệp",
+      "B": "Khí thải từ các phương tiện giao thông và hoạt động công nghiệp. [1]",
+      "C": "Cháy rừng tự nhiên",
+      "D": "Hoạt động của núi lửa"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "033",
+    "question": "Trong chuỗi thức ăn, sinh vật tiêu thụ bậc 1 là những sinh vật nào?",
+    "choices": {
+      "A": "Động vật ăn thịt",
+      "B": "Thực vật",
+      "C": "Động vật ăn thực vật (động vật ăn cỏ). [12]",
+      "D": "Vi sinh vật phân giải"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "034",
+    "question": "Pin và ắc quy đã qua sử dụng được xếp vào loại chất thải nào?",
+    "choices": {
+      "A": "Chất thải hữu cơ",
+      "B": "Chất thải tái chế",
+      "C": "Chất thải nguy hại. [45]",
+      "D": "Chất thải xây dựng"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "035",
+    "question": "Kinh tế tuần hoàn (Circular Economy) là mô hình kinh tế như thế nào?",
+    "choices": {
+      "A": "Mô hình kinh tế tuyến tính (khai thác - sản xuất - vứt bỏ)",
+      "B": "Mô hình trong đó các hoạt động thiết kế, sản xuất và dịch vụ nhằm kéo dài tuổi thọ của vật chất, và loại bỏ tác động tiêu cực đến môi trường.",
+      "C": "Mô hình chỉ tập trung vào tái chế",
+      "D": "Mô hình không quan tâm đến yếu tố môi trường"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "036",
+    "question": "Đánh giá tác động môi trường (ĐTM) là gì?",
+    "choices": {
+      "A": "Là quá trình phân tích, dự báo các tác động đến môi trường của một dự án đầu tư để đưa ra các biện pháp bảo vệ môi trường khi triển khai dự án đó. [36]",
+      "B": "Là việc kiểm tra chất lượng không khí hàng ngày",
+      "C": "Là việc thống kê số lượng các loài động vật trong một khu vực",
+      "D": "Là báo cáo về tình hình tài chính của một dự án"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "037",
+    "question": "\"Hóa thạch\" là nguồn năng lượng nào?",
+    "choices": {
+      "A": "Năng lượng tái tạo",
+      "B": "Năng lượng không tái tạo, bao gồm than đá, dầu mỏ, khí đốt tự nhiên. [23]",
+      "C": "Năng lượng hạt nhân",
+      "D": "Năng lượng sạch"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "038",
+    "question": "Sự suy giảm đa dạng sinh học có thể dẫn đến hậu quả gì?",
+    "choices": {
+      "A": "Mất cân bằng hệ sinh thái. [24]",
+      "B": "Suy giảm nguồn lương thực, dược liệu",
+      "C": "Tăng nguy cơ phát sinh dịch bệnh",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "039",
+    "question": "Chỉ số chất lượng không khí (AQI) được sử dụng để làm gì?",
+    "choices": {
+      "A": "Đo nhiệt độ không khí",
+      "B": "Báo cáo về mức độ ô nhiễm không khí và các tác động liên quan đến sức khỏe. [45]",
+      "C": "Dự báo thời tiết",
+      "D": "Đo độ ẩm không khí"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "040",
+    "question": "Ngày Môi trường Thế giới là ngày nào?",
+    "choices": {
+      "A": "Ngày 22 tháng 4",
+      "B": "Ngày 5 tháng 6",
+      "C": "Ngày 22 tháng 3",
+      "D": "Ngày 21 tháng 12"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "041",
+    "question": "Lợi ích của việc sử dụng xe đạp hoặc đi bộ thay cho xe máy, ô tô là gì?",
+    "choices": {
+      "A": "Giảm thiểu ô nhiễm không khí",
+      "B": "Giảm ùn tắc giao thông",
+      "C": "Tăng cường sức khỏe",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "042",
+    "question": "Loài nào sau đây được coi là sinh vật chỉ thị cho môi trường nước sạch?",
+    "choices": {
+      "A": "Ruồi",
+      "B": "Giun đất",
+      "C": "Tôm, cua, cá",
+      "D": "Lăng quăng"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "043",
+    "question": "Để xử lý rác thải hữu cơ tại hộ gia đình, phương pháp nào sau đây là thân thiện với môi trường?",
+    "choices": {
+      "A": "Đốt rác",
+      "B": "Vứt ra sông, hồ",
+      "C": "Ủ compost làm phân bón",
+      "D": "Chôn lấp tùy tiện"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "044",
+    "question": "Nạn phá rừng Amazon, \"lá phổi xanh\" của thế giới, gây ra ảnh hưởng gì trên quy mô toàn cầu?",
+    "choices": {
+      "A": "Làm gia tăng nồng độ CO2 trong khí quyển, thúc đẩy biến đổi khí hậu",
+      "B": "Gây mất mát đa dạng sinh học nghiêm trọng",
+      "C": "Ảnh hưởng đến chu trình nước toàn cầu",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "045",
+    "question": "Giờ Trái Đất là sự kiện quốc tế kêu gọi mọi người làm gì?",
+    "choices": {
+      "A": "Đi ngủ sớm hơn",
+      "B": "Tắt đèn và các thiết bị điện không cần thiết trong một giờ đồng hồ",
+      "C": "Tổ chức tiệc tùng",
+      "D": "Xem phim về môi trường"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "046",
+    "question": "Thành phần nào của môi trường KHÔNG phải là tài nguyên thiên nhiên?",
+    "choices": {
+      "A": "Đất",
+      "B": "Nước",
+      "C": "Chất thải nhựa. [24]",
+      "D": "Khoáng sản"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "047",
+    "question": "Khu dự trữ sinh quyển thế giới là gì?",
+    "choices": {
+      "A": "Là một vườn thú lớn",
+      "B": "Là danh hiệu do UNESCO trao tặng cho các khu vực có giá trị đặc biệt về thiên nhiên và đa dạng sinh học.",
+      "C": "Là nơi chỉ để nghiên cứu khoa học",
+      "D": "Là một khu du lịch thông thường"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "048",
+    "question": "Hạn hán kéo dài là một trong những biểu hiện của biến đổi khí hậu, gây ra hậu quả gì?",
+    "choices": {
+      "A": "Thiếu nước sinh hoạt và sản xuất",
+      "B": "Gây cháy rừng",
+      "C": "Ảnh hưởng đến an ninh lương thực",
+      "D": "Tất cả các đáp án trên. [28]"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "049",
+    "question": "Thuật ngữ \"ô nhiễm trắng\" dùng để chỉ loại ô nhiễm nào?",
+    "choices": {
+      "A": "Ô nhiễm do tuyết",
+      "B": "Ô nhiễm do rác thải nhựa, đặc biệt là túi ni lông. [8]",
+      "C": "Ô nhiễm ánh sáng",
+      "D": "Ô nhiễm do hóa chất tẩy rửa"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "050",
+    "question": "Trong các hoạt động sau, hoạt động nào tiêu thụ nhiều nước nhất?",
+    "choices": {
+      "A": "Sinh hoạt",
+      "B": "Sản xuất công nghiệp",
+      "C": "Nông nghiệp (trồng trọt và chăn nuôi). [31]",
+      "D": "Du lịch"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "051",
+    "question": "Sự cố môi trường là gì?",
+    "choices": {
+      "A": "Là sự cố xảy ra trong quá trình hoạt động của con người hoặc do biến đổi của tự nhiên, gây ô nhiễm, suy thoái hoặc biến đổi môi trường nghiêm trọng. [46]",
+      "B": "Là một trận mưa rào",
+      "C": "Là hiện tượng nhật thực",
+      "D": "Là sự thay đổi thời tiết theo mùa"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "052",
+    "question": "Phương pháp xử lý nước thải nào sử dụng vi sinh vật để phân hủy các chất hữu cơ?",
+    "choices": {
+      "A": "Phương pháp hóa lý",
+      "B": "Phương pháp sinh học. [44]",
+      "C": "Phương pháp cơ học",
+      "D": "Phương pháp hóa học"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "053",
+    "question": "Việc xây dựng các đập thủy điện lớn có thể gây ra tác động tiêu cực nào đến môi trường?",
+    "choices": {
+      "A": "Làm thay đổi dòng chảy tự nhiên của sông",
+      "B": "Ảnh hưởng đến hệ sinh thái và đường đi của các loài thủy sản",
+      "C": "Gây mất đất, mất rừng và phải di dời dân cư",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "054",
+    "question": "Khái niệm \"nông nghiệp hữu cơ\" (organic farming) nghĩa là gì?",
+    "choices": {
+      "A": "Phương pháp canh tác chỉ sử dụng phân bón hóa học",
+      "B": "Hệ thống sản xuất nông nghiệp tôn trọng các quy luật của hệ sinh thái, không sử dụng phân bón hóa học, thuốc trừ sâu tổng hợp và sinh vật biến đổi gen.",
+      "C": "Canh tác trong nhà kính",
+      "D": "Trồng cây thủy canh"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "055",
+    "question": "Công ước CITES (Công ước về buôn bán quốc tế các loài động, thực vật hoang dã nguy cấp) có mục tiêu gì?",
+    "choices": {
+      "A": "Khuyến khích buôn bán động vật hoang dã",
+      "B": "Kiểm soát và điều tiết việc buôn bán quốc tế các loài động, thực vật hoang dã để đảm bảo sự tồn tại của chúng. [50]",
+      "C": "Cấm hoàn toàn việc nuôi nhốt động vật",
+      "D": "Chỉ áp dụng cho việc buôn bán thực vật"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "056",
+    "question": "Khí CFCs (Chlorofluorocarbons) là tác nhân chính gây ra hiện tượng gì?",
+    "choices": {
+      "A": "Hiệu ứng nhà kính",
+      "B": "Thủng tầng ozon. [8]",
+      "C": "Mưa axit",
+      "D": "Sương mù quang hóa"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "057",
+    "question": "Để giảm thiểu rác thải nhựa, chúng ta nên làm gì?",
+    "choices": {
+      "A": "Sử dụng túi vải, bình nước cá nhân thay cho đồ nhựa dùng một lần. [29]",
+      "B": "Vứt chai nhựa ra môi trường",
+      "C": "Yêu cầu nhiều hơn các sản phẩm bọc trong nhựa",
+      "D": "Không quan tâm đến vấn đề này"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "058",
+    "question": "Quan hệ giữa các sinh vật trong một hệ sinh thái được thể hiện qua:",
+    "choices": {
+      "A": "Chuỗi thức ăn và lưới thức ăn. [9]",
+      "B": "Chỉ quan hệ cạnh tranh",
+      "C": "Chỉ quan hệ cộng sinh",
+      "D": "Không có mối quan hệ nào"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "059",
+    "question": "Axit hóa đại dương là hiện tượng gì?",
+    "choices": {
+      "A": "Sự gia tăng độ mặn của nước biển",
+      "B": "Sự giảm độ pH của các đại dương, chủ yếu do việc hấp thụ CO2 từ khí quyển. [24]",
+      "C": "Sự nóng lên của nước biển",
+      "D": "Sự gia tăng các loài tảo độc"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "060",
+    "question": "Hoạt động du lịch sinh thái có đặc điểm gì?",
+    "choices": {
+      "A": "Là loại hình du lịch dựa vào thiên nhiên và văn hóa bản địa, gắn với giáo dục môi trường và đóng góp cho các nỗ lực bảo tồn. [50]",
+      "B": "Xây dựng các khu nghỉ dưỡng lớn, bê tông hóa",
+      "C": "Không quan tâm đến việc bảo vệ môi trường",
+      "D": "Gây ra nhiều tác động tiêu cực đến tự nhiên"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "061",
+    "question": "Chất lượng môi trường đất bị suy thoái do nguyên nhân nào?",
+    "choices": {
+      "A": "Xói mòn, rửa trôi",
+      "B": "Nhiễm mặn, nhiễm phèn",
+      "C": "Ô nhiễm do hóa chất, chất thải công nghiệp",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "062",
+    "question": "Năng lượng sinh khối (biomass) là năng lượng có nguồn gốc từ đâu?",
+    "choices": {
+      "A": "Các vật liệu hữu cơ như thực vật, gỗ, chất thải nông nghiệp, rác thải hữu cơ. [33]",
+      "B": "Phản ứng hạt nhân",
+      "C": "Nhiên liệu hóa thạch",
+      "D": "Năng lượng mặt trời"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "063",
+    "question": "Đâu không phải là một trong 17 Mục tiêu Phát triển Bền vững (SDGs) của Liên Hợp Quốc?",
+    "choices": {
+      "A": "Xóa đói",
+      "B": "Bình đẳng giới",
+      "C": "Hành động về khí hậu",
+      "D": "Khám phá các hành tinh mới"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "064",
+    "question": "Thế nào là một loài xâm lấn (invasive species)?",
+    "choices": {
+      "A": "Là một loài bản địa có số lượng lớn",
+      "B": "Là một loài du nhập, phát triển quá mức và gây hại cho môi trường, kinh tế hoặc sức khỏe con người ở nơi nó được đưa đến.",
+      "C": "Là một loài có nguy cơ tuyệt chủng",
+      "D": "Là một loài được nuôi trồng trong nông nghiệp"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "065",
+    "question": "Nguyên tắc \"người gây ô nhiễm phải trả tiền\" có nghĩa là gì?",
+    "choices": {
+      "A": "Bất kỳ ai cũng phải trả tiền để bảo vệ môi trường",
+      "B": "Tổ chức, cá nhân gây ra ô nhiễm môi trường phải có trách nhiệm chi trả cho việc xử lý, khắc phục hậu quả và bồi thường thiệt hại.",
+      "C": "Chỉ có chính phủ mới phải chịu trách nhiệm về ô nhiễm",
+      "D": "Người dân phải trả tiền cho các công ty gây ô nhiễm"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "066",
+    "question": "Sương mù quang hóa, thường xuất hiện ở các thành phố lớn, được hình thành do đâu?",
+    "choices": {
+      "A": "Sự kết hợp của hơi nước và bụi",
+      "B": "Phản ứng hóa học giữa các oxit nitơ (NOx), các hợp chất hữu cơ dễ bay hơi (VOCs) dưới tác động của ánh sáng mặt trời.",
+      "C": "Nhiệt độ không khí giảm đột ngột",
+      "D": "Sự phun trào của núi lửa"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "067",
+    "question": "Việc sử dụng các sản phẩm thân thiện với môi trường có lợi ích gì?",
+    "choices": {
+      "A": "Giảm thiểu tác động tiêu cực đến môi trường",
+      "B": "Thường được làm từ vật liệu tái chế hoặc bền vững",
+      "C": "An toàn hơn cho sức khỏe người tiêu dùng",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "068",
+    "question": "Vai trò của vi sinh vật trong chu trình vật chất của hệ sinh thái là gì?",
+    "choices": {
+      "A": "Sản xuất chất hữu cơ",
+      "B": "Tiêu thụ sinh vật sản xuất",
+      "C": "Phân giải xác chết và chất thải của sinh vật, trả lại các chất vô cơ cho môi trường. [12]",
+      "D": "Không có vai trò gì"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "069",
+    "question": "Hiện tượng băng tan ở hai cực do biến đổi khí hậu gây ra hệ quả trực tiếp nào?",
+    "choices": {
+      "A": "Làm mực nước biển dâng lên, đe dọa các vùng ven biển. [35]",
+      "B": "Làm tăng diện tích đất liền",
+      "C": "Làm giảm nhiệt độ toàn cầu",
+      "D": "Không gây ra hệ quả nào đáng kể"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "070",
+    "question": "BOD (Biochemical Oxygen Demand) là chỉ số dùng để đánh giá mức độ ô nhiễm của loại môi trường nào?",
+    "choices": {
+      "A": "Không khí",
+      "B": "Đất",
+      "C": "Nước (đánh giá lượng oxy cần thiết để vi sinh vật phân hủy chất hữu cơ). [44]",
+      "D": "Tiếng ồn"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "071",
+    "question": "Để bảo vệ tài nguyên rừng, biện pháp nào là quan trọng nhất?",
+    "choices": {
+      "A": "Khai thác triệt để để lấy gỗ",
+      "B": "Ngăn chặn nạn phá rừng, phòng chống cháy rừng và trồng lại rừng. [22]",
+      "C": "Chuyển đổi đất rừng thành đất nông nghiệp",
+      "D": "Xây dựng nhiều công trình trong rừng"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "072",
+    "question": "\"Tín chỉ carbon\" là một công cụ dựa trên thị trường nhằm mục đích gì?",
+    "choices": {
+      "A": "Khuyến khích phát thải khí nhà kính",
+      "B": "Giảm phát thải khí nhà kính bằng cách tạo ra một thị trường mua bán quyền phát thải.",
+      "C": "Đo lường lượng carbon trong đất",
+      "D": "Cung cấp carbon cho các nhà máy"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "073",
+    "question": "Khu vực nào trên Trái Đất có đa dạng sinh học cao nhất?",
+    "choices": {
+      "A": "Các vùng cực",
+      "B": "Các sa mạc",
+      "C": "Các rừng mưa nhiệt đới. [16]",
+      "D": "Các vùng ôn đới"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "074",
+    "question": "Chất độc màu da cam/dioxin là một ví dụ về loại ô nhiễm nào?",
+    "choices": {
+      "A": "Ô nhiễm sinh học",
+      "B": "Ô nhiễm hóa học tồn lưu, gây ảnh hưởng lâu dài đến môi trường và sức khỏe con người. [1]",
+      "C": "Ô nhiễm vật lý",
+      "D": "Ô nhiễm phóng xạ"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "075",
+    "question": "Nguồn nước nào sau đây là nguồn nước ngọt chủ yếu mà con người sử dụng?",
+    "choices": {
+      "A": "Nước biển và đại dương",
+      "B": "Nước từ các sông, hồ và nước ngầm. [31]",
+      "C": "Nước từ băng tan ở hai cực",
+      "D": "Nước mưa"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "076",
+    "question": "Hành vi nào sau đây vi phạm Luật Bảo vệ môi trường?",
+    "choices": {
+      "A": "Phân loại rác tại nguồn",
+      "B": "Thải chất thải chưa qua xử lý ra môi trường. [32]",
+      "C": "Sử dụng tiết kiệm tài nguyên",
+      "D": "Tham gia các hoạt động dọn dẹp vệ sinh"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "077",
+    "question": "Đâu là ưu điểm của năng lượng gió?",
+    "choices": {
+      "A": "Là nguồn năng lượng sạch, không gây ô nhiễm không khí. [23]",
+      "B": "Phụ thuộc vào thời tiết",
+      "C": "Gây tiếng ồn",
+      "D": "Chi phí đầu tư ban đầu cao"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "078",
+    "question": "Trong một hệ sinh thái, dòng năng lượng diễn ra theo một chiều từ:",
+    "choices": {
+      "A": "Sinh vật tiêu thụ → Sinh vật sản xuất → Sinh vật phân giải",
+      "B": "Sinh vật sản xuất → Sinh vật tiêu thụ → Sinh vật phân giải",
+      "C": "Sinh vật phân giải → Sinh vật tiêu thụ → Sinh vật sản xuất",
+      "D": "Đi theo một vòng tuần hoàn khép kín"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "079",
+    "question": "Lối sống xanh (green living) khuyến khích điều gì?",
+    "choices": {
+      "A": "Tiêu thụ nhiều hơn",
+      "B": "Lựa chọn và thực hành các hành vi tiêu dùng bền vững, giảm thiểu tác động đến môi trường.",
+      "C": "Sử dụng các sản phẩm dùng một lần",
+      "D": "Không quan tâm đến nguồn gốc sản phẩm"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "080",
+    "question": "Tác động của ô nhiễm ánh sáng đối với môi trường và sinh vật là gì?",
+    "choices": {
+      "A": "Làm gián đoạn chu kỳ sinh học của động vật hoang dã",
+      "B": "Ảnh hưởng đến sự di cư của các loài chim",
+      "C": "Lãng phí năng lượng",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "081",
+    "question": "Thủy triều đỏ là hiện tượng gì?",
+    "choices": {
+      "A": "Nước biển có màu đỏ do hoàng hôn",
+      "B": "Sự nở hoa của tảo biển với số lượng lớn, một số loài có thể gây độc cho sinh vật biển.",
+      "C": "Một loại san hô có màu đỏ",
+      "D": "Sự cố tràn hóa chất màu đỏ ra biển"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "082",
+    "question": "Bãi chôn lấp hợp vệ sinh cần đáp ứng yêu cầu nào?",
+    "choices": {
+      "A": "Có lớp lót chống thấm để ngăn nước rỉ rác làm ô nhiễm đất và nước ngầm.",
+      "B": "Không cần che phủ rác thải",
+      "C": "Nằm gần khu dân cư",
+      "D": "Không cần hệ thống thu gom khí gas"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "083",
+    "question": "Mục đích của việc bảo tồn đa dạng sinh học là gì?",
+    "choices": {
+      "A": "Bảo vệ các loài, các hệ sinh thái và các quá trình sinh thái",
+      "B": "Duy trì các dịch vụ hệ sinh thái mà thiên nhiên cung cấp",
+      "C": "Đảm bảo sự phát triển bền vững",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "084",
+    "question": "Năng lượng hạt nhân có ưu điểm là không phát thải khí nhà kính, nhưng nhược điểm lớn nhất là gì?",
+    "choices": {
+      "A": "Chi phí nhiên liệu cao",
+      "B": "Hiệu suất thấp",
+      "C": "Nguy cơ xảy ra sự cố rò rỉ phóng xạ và vấn đề xử lý chất thải phóng xạ nguy hiểm.",
+      "D": "Không thể sản xuất điện liên tục"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "085",
+    "question": "Hiện tượng El Niño là gì?",
+    "choices": {
+      "A": "Là một hiện tượng thời tiết bình thường",
+      "B": "Là sự nóng lên dị thường của lớp nước biển bề mặt ở khu vực xích đạo trung và đông Thái Bình Dương, gây ra những thay đổi lớn về thời tiết toàn cầu.",
+      "C": "Là sự lạnh đi dị thường của nước biển",
+      "D": "Là một cơn bão lớn"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "086",
+    "question": "Đất ngập nước (wetlands) có vai trò quan trọng như thế nào?",
+    "choices": {
+      "A": "Lọc nước tự nhiên",
+      "B": "Là môi trường sống của nhiều loài động thực vật",
+      "C": "Giúp kiểm soát lũ lụt",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "087",
+    "question": "Tại sao việc bảo vệ các rạn san hô lại quan trọng?",
+    "choices": {
+      "A": "Chúng là nơi có đa dạng sinh học cao nhất trong các hệ sinh thái biển",
+      "B": "Bảo vệ đường bờ biển khỏi bị xói mòn do sóng",
+      "C": "Là nguồn lợi kinh tế từ du lịch và thủy sản",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "088",
+    "question": "Công nghệ xanh (green technology) là gì?",
+    "choices": {
+      "A": "Bất kỳ công nghệ nào có màu xanh",
+      "B": "Là việc sử dụng khoa học và công nghệ để tạo ra các sản phẩm và dịch vụ thân thiện với môi trường.",
+      "C": "Công nghệ chỉ được sử dụng trong nông nghiệp",
+      "D": "Công nghệ lạc hậu"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "089",
+    "question": "Để ứng phó với biến đổi khí hậu, chúng ta cần thực hiện những hành động nào?",
+    "choices": {
+      "A": "Giảm thiểu phát thải khí nhà kính (mitigation)",
+      "B": "Thích ứng với những tác động không thể tránh khỏi của biến đổi khí hậu (adaptation)",
+      "C": "Cả hai hành động trên",
+      "D": "Không cần làm gì cả"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "090",
+    "question": "Loại hình canh tác nào có thể gây xói mòn đất nghiêm trọng nhất?",
+    "choices": {
+      "A": "Trồng cây theo đường đồng mức",
+      "B": "Làm ruộng bậc thang",
+      "C": "Canh tác trên đất dốc mà không có biện pháp bảo vệ. [40]",
+      "D": "Nông lâm kết hợp"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "091",
+    "question": "Chất thải y tế lây nhiễm cần được xử lý như thế nào?",
+    "choices": {
+      "A": "Vứt chung với rác thải sinh hoạt",
+      "B": "Phải được thu gom, xử lý theo quy trình đặc biệt nghiêm ngặt để tránh lây lan mầm bệnh. [49]",
+      "C": "Tái chế thành đồ dùng khác",
+      "D": "Đổ xuống cống rãnh"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "092",
+    "question": "Việc khai thác quá mức tài nguyên nước ngầm có thể dẫn đến hậu quả gì?",
+    "choices": {
+      "A": "Hạ thấp mực nước ngầm, gây cạn kiệt nguồn nước",
+      "B": "Gây sụt lún mặt đất",
+      "C": "Gây nhiễm mặn ở các vùng ven biển",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "093",
+    "question": "Một trong ba trụ cột chính của phát triển bền vững là gì?",
+    "choices": {
+      "A": "Chỉ có kinh tế",
+      "B": "Kinh tế, Xã hội và Môi trường. [19]",
+      "C": "Chỉ có môi trường",
+      "D": "Công nghệ"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "094",
+    "question": "Sự cố nhà máy điện hạt nhân Chernobyl và Fukushima là những ví dụ thảm khốc về loại ô nhiễm nào?",
+    "choices": {
+      "A": "Ô nhiễm không khí",
+      "B": "Ô nhiễm phóng xạ. [24]",
+      "C": "Ô nhiễm nước",
+      "D": "Ô nhiễm tiếng ồn"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "095",
+    "question": "Hoạt động \"tái sử dụng\" (reuse) khác với \"tái chế\" (recycle) như thế nào?",
+    "choices": {
+      "A": "Tái sử dụng là dùng lại một sản phẩm cho cùng mục đích hoặc mục đích khác mà không cần qua xử lý, chế biến phức tạp.",
+      "B": "Tái chế là quá trình xử lý vật liệu đã qua sử dụng để tạo ra sản phẩm mới",
+      "C": "Cả A và B đều đúng",
+      "D": "Không có sự khác biệt"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "096",
+    "question": "Thực phẩm địa phương (local food) có lợi ích gì về mặt môi trường?",
+    "choices": {
+      "A": "Giảm lượng khí thải carbon do vận chuyển đường dài",
+      "B": "Thường tươi ngon hơn",
+      "C": "Hỗ trợ kinh tế địa phương",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "097",
+    "question": "Đâu là một ví dụ về tài nguyên thiên nhiên vĩnh cửu?",
+    "choices": {
+      "A": "Khoáng sản",
+      "B": "Rừng",
+      "C": "Năng lượng mặt trời. [33]",
+      "D": "Nước ngọt"
+    },
+    "answer": "C"
+  },
+  {
+    "id": "098",
+    "question": "Vai trò của giáo dục môi trường trong các trường học là gì?",
+    "choices": {
+      "A": "Nâng cao nhận thức, kiến thức và kỹ năng về môi trường cho học sinh",
+      "B": "Hình thành thái độ và hành vi sống thân thiện với môi trường",
+      "C": "Tạo ra một thế hệ công dân có trách nhiệm với môi trường",
+      "D": "Tất cả các đáp án trên"
+    },
+    "answer": "D"
+  },
+  {
+    "id": "099",
+    "question": "Hiệu ứng đảo nhiệt đô thị (urban heat island effect) là hiện tượng gì?",
+    "choices": {
+      "A": "Nhiệt độ ở khu vực nông thôn cao hơn thành thị",
+      "B": "Nhiệt độ ở khu vực đô thị cao hơn đáng kể so với các khu vực nông thôn xung quanh. [50]",
+      "C": "Nhiệt độ ở các hòn đảo cao hơn đất liền",
+      "D": "Nhiệt độ không có sự khác biệt giữa các khu vực"
+    },
+    "answer": "B"
+  },
+  {
+    "id": "100",
+    "question": "Trách nhiệm bảo vệ môi trường là của ai?",
+    "choices": {
+      "A": "Chỉ của chính phủ và các tổ chức môi trường",
+      "B": "Chỉ của các doanh nghiệp",
+      "C": "Của mọi cơ quan, tổ chức, hộ gia đình và cá nhân. [32]",
+      "D": "Chỉ của các nhà khoa học"
+    },
+    "answer": "C"
+  }
+]

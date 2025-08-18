@@ -547,32 +547,29 @@ class Neo4j:
         with self.driver.session() as session:
             session.run(query, source_name=source_name, target_name=target_name)
 
-    def get_part_of_document(self, document_id):
+    def get_part_of_document(self, document_id: str) -> str:
         query = """
-            MATCH p = (a:Document {name: $document_id})-[*1..1]-(e)
-            RETURN p
+            MATCH (a:Document {name: $document_id})-[]->(e)
+            RETURN e
         """
         with self.driver.session() as session:
             result = session.run(query, document_id=document_id)
-            paths = [record["p"] for record in result]
+            nodes = [record["e"] for record in result]
 
-            if not paths:
+            if not nodes:
                 return ""
 
-            # Extract document ID and part names
-            document_node = paths[0].start_node
-            doc_id = document_node.get("name")
-
+            # Lấy danh sách part names, loại bỏ trùng lặp
             part_names = []
-            for path in paths:
-                part_name = path.end_node.get("name")
-                if part_name not in part_names:
+            for node in nodes:
+                part_name = node.get("name")
+                if part_name and part_name not in part_names:
                     part_names.append(part_name)
 
             # Format Cypher
             lines = []
-            lines.append(f"MERGE (highest:General {{name: 'tài liệu'}})")
-            lines.append(f"MERGE (document:Document {{name: '{doc_id}'}})")
+            lines.append("MERGE (highest:General {name: 'tài liệu'})")
+            lines.append(f"MERGE (document:Document {{name: '{document_id}'}})")
             lines.append("MERGE (highest)-[:BAO_GỒM]->(document)\n")
 
             var_names = [chr(i) for i in range(ord('a'), ord('a') + len(part_names))]
