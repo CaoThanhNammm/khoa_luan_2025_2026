@@ -65,6 +65,8 @@ Dựa trên các thực thể và quan hệ đã trích xuất, knowledge graph 
 {{
   <trích xuất như ví dụ, không được ghi chuỗi theo kiểu lồng chuỗi, chỉ sử dụng text document hoặc knowledge graph>
 }}
+
+Chỉ trích xuất các đối tượng là câu hỏi, không trích xuất các đối tượng khác
 """
 
 
@@ -139,6 +141,10 @@ Dựa trên câu hỏi knowledge graph hay text document hữu ích hơn để t
 {{
   <trích xuất như ví dụ, không được ghi chuỗi theo kiểu lồng chuỗi, chỉ sử dụng text document hoặc knowledge graph>
 }}
+
+Lưu ý:
+1. Trích xuất tối đa 3 đối tượng
+2. Chỉ trích xuất các đối tượng là câu hỏi, không trích xuất các đối tượng khác
 """
 
 

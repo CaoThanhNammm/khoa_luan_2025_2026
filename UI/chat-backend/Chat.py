@@ -8,6 +8,8 @@ from LLM.Gemini import Gemini
 import LLM.prompt as prompt
 from LLM.Llama import Llama
 from dotenv import load_dotenv
+
+from Validator import Validator
 from knowledge_graph.create_entities_relationship_kb import pre_processing
 
 load_dotenv()
@@ -22,12 +24,17 @@ class Chat:
         self.t = t
         self.question = ''
         self.pre_processing = pre_processing
-        self.references_final = ""
+        self.reference = []
         self.extract = ""
         self.feedback = ""
+        self.answer = ""
+        self.more_info = ""
+        self.new_question = ""
         self.answer_final = ""
+        self.reference_final = []
         self.entities = []
         self.relations = []
+        self.len_ans = 0
         self.document_id = document_id
 
         # 1. khởi tạo gemini và chat
@@ -39,7 +46,6 @@ class Chat:
         api_key_generator = os.getenv('API_KEY_GENERATOR')
         api_key_valid = os.getenv('API_KEY_VALID')
         api_key_commentor = os.getenv('API_KEY_COMMENTOR')
-
 
         self.gemini_agent = Gemini(model_name_25_flash, api_key_agent)
         self.gemini_generator = Gemini(model_name_20_flash, api_key_generator)
@@ -66,13 +72,16 @@ class Chat:
         self.cohere_valid = CohereChatBot()
         self.cohere_commentor = CohereChatBot()
 
-
         self.gpt_agent = GPT("gpt-5-mini")
         self.gpt_generator = GPT("gpt-5-nano")
         self.gpt_valid = GPT("gpt-5-nano")
         self.gpt_commentor = GPT("gpt-5-mini")
         self.gpt_summary = GPT("gpt-5-nano")
         self.gpt_graph = GPT("gpt-5-nano")
+
+        self.validator_512 = Validator(qdrant.get_model_512())
+        self.validator_768 = Validator(qdrant.get_model_768())
+        self.validator_1024 = Validator(qdrant.get_model_1024())
 
         print('Initialize Chat success')
 
@@ -86,7 +95,6 @@ class Chat:
         return self.gemini_agent.generator(formatted_prompt)
 
     def answer_s2s(self):
-        self.references_final = ""
         self.extract = ""
         self.feedback = ""
         self.answer_final = ""
@@ -94,7 +102,7 @@ class Chat:
         print(f'question: {self.question}')
         for t in range(self.t):
             print(f"Step {t}, initial feedback: {self.feedback}")
-            self.references_final = ""
+            self.reference = ""
 
             self.extract = self.agent()
             print(f'extract: {self.extract}')
@@ -103,12 +111,16 @@ class Chat:
                 action = self.extract[attr]
                 print(f'attr: {attr}')
                 print(f'action: {action}')
-                references = self.retrieval_bank(action)
-                print(f"Available references: {references}")
-                self.references_final += str(references)
+                reference_retrieval = self.retrieval_bank(action)
 
-            self.answer_final += f"Step {t}: {self.generator()}"
-            print(f"Answer: {self.answer_final}")
+                self.reference_final.extend(reference_retrieval)  # dùng để tính toán validator
+                self.reference = str(reference_retrieval)  # dùng để trả lời câu hỏi
+
+                print(f"Available references: {self.reference}")
+                self.answer = self.generator()
+                print(f"answer: {self.answer}")
+
+                self.answer_final += self.answer
 
             validator = self.valid()
             print(f"valid: {validator}")
@@ -120,9 +132,47 @@ class Chat:
 
         return self.summary_answer()
 
+    # def answer_s2s_stsv(self):
+    #     self.document_id = 'so_tay_sinh_vien_2024'
+    #     self.extract = ""
+    #     self.feedback = ""
+    #     self.answer_final = ""
+    #
+    #     print(f'question: {self.question}')
+    #     for t in range(self.t):
+    #         print(f"Step {t}, initial feedback: {self.feedback}")
+    #         self.reference = ""
+    #
+    #         self.extract = self.agent()
+    #         print(f'extract: {self.extract}')
+    #
+    #         for attr in self.extract:
+    #             action = self.extract[attr]
+    #             print(f'attr: {attr}')
+    #             print(f'action: {action}')
+    #             reference_retrieval = self.retrieval_bank_stsv(action)
+    #
+    #             self.reference_final.extend(reference_retrieval)  # dùng để tính toán validator
+    #             self.reference = str(reference_retrieval)  # dùng để trả lời câu hỏi
+    #
+    #             print(f"Available references: {self.reference}")
+    #             self.answer = self.generator()
+    #             print(f"answer: {self.answer}")
+    #
+    #             self.answer_final += f"{attr}: {self.answer}"
+    #
+    #         validator = self.valid()
+    #         print(f"valid: {validator}")
+    #
+    #         if "yes" in validator:
+    #             return self.summary_answer()
+    #
+    #         self.feedback = self.commentor()
+    #
+    #     return self.summary_answer()
+
     def answer_s2s_stsv(self):
         self.document_id = 'so_tay_sinh_vien_2024'
-        self.references_final = ""
         self.extract = ""
         self.feedback = ""
         self.answer_final = ""
@@ -130,29 +180,38 @@ class Chat:
         print(f'question: {self.question}')
         for t in range(self.t):
             print(f"Step {t}, initial feedback: {self.feedback}")
-            self.references_final = ""
+            self.reference = ""
 
             self.extract = self.agent()
             print(f'extract: {self.extract}')
 
             for attr in self.extract:
                 action = self.extract[attr]
-                print(f'attr: {attr}')
-                print(f'action: {action}')
-                references = self.retrieval_bank_stsv(action)
-                print(f"Available references: {references}")
-                self.references_final += str(references)
+                self.new_question += attr
+            print(f"new question: {self.new_question}")
+            reference_retrieval = self.retrieval_graph_stsv()
+            self.reference = str(reference_retrieval)
+            self.reference_final = reference_retrieval
+            print(f"Available references: {self.reference}")
 
-            self.answer_final += f"Step {t}: {self.generator()}"
-            print(f"Answer: {self.answer_final}")
+            self.answer = self.generator()
+            self.more_info = self.retrieval_text()
+            print(f"answer: {self.answer}")
+            print(f"more_info: {self.more_info}")
 
-            validator = self.valid()
-            print(f"valid: {validator}")
+            self.answer_final = f"""
+                {self.answer},
+                Các thông tin bổ sung: {self.more_info}
+            """
 
-            if "yes" in validator:
-                return self.summary_answer()
+            if len(self.reference_final) != 0:
+                validator = self.valid()
+                print(f"valid: {validator}")
 
-            self.feedback = self.commentor()
+                if "yes" in validator:
+                    return self.summary_answer()
+            else:
+                self.feedback = self.commentor()
 
         return self.summary_answer()
 
@@ -160,54 +219,20 @@ class Chat:
         self.extract = ""
         self.answer_final = ""
         self.feedback = ""
-        self.references_final = ""
 
         print(f'question: {self.question}')
         for t in range(self.t):
             print(f"Step {t}, initial feedback: {self.feedback}")
-            self.references_final = ""
+            self.reference.clear()
 
             relationship, action = self.agent_prime()  # knowledge graph or text documents
 
             print(f'Relationship: {relationship}')
             print(f'Action: {action}')
 
-            self.references_final = self.retrieval_bank_prime(action, relationship)
+            documents = self.retrieval_bank_prime(action, relationship)
 
-            self.answer_final = f"{self.generator_prime()}"
-            print(f"Answer: {self.answer_final}")
-
-            validator = self.valid_prime()
-            print(f"valid: {validator}")
-
-            if "yes" in validator:
-                self.entities.clear()
-                self.relations.clear()
-                return self.summary_answer_prime()
-
-            self.feedback = self.commentor_prime()
-            self.entities.clear()
-            self.relations.clear()
-
-        return self.summary_answer_prime()
-
-    def answer_mag(self):
-        self.extract = ""
-        self.answer_final = ""
-        self.feedback = ""
-        self.references_final = ""
-
-        print(f'question: {self.question}')
-        for t in range(self.t):
-            print(f"Step {t}, initial feedback: {self.feedback}")
-            self.references_final = ""
-
-            relationship, action = self.agent_mag()  # knowledge graph or text documents
-
-            print(f'Relationship: {relationship}')
-            print(f'Action: {action}')
-
-            self.references_final = self.retrieval_bank_mag(action, relationship)
+            self.reference.append(documents)
 
             self.answer_final = f"{self.generator_prime()}"
             print(f"Answer: {self.answer_final}")
@@ -231,15 +256,6 @@ class Chat:
         print(f"Agent: {agent}")
         agent = pre_processing.string_to_json(agent)
 
-
-        return agent["relationship"], agent["action"]
-
-    def agent_mag(self):
-        agent = self.first_decision_mag() if not self.feedback else self.reflection_prime()
-        print(f"Agent: {agent}")
-        agent = pre_processing.string_to_json(agent)
-
-
         return agent["relationship"], agent["action"]
 
     def first_decision_prime(self):
@@ -254,15 +270,6 @@ class Chat:
         # return self.llama3_1_graph.generator().lower()
         return self.cohere_agent.chat(formatted_prompt).lower()
 
-    def first_decision_mag(self):
-        prompt_template = PromptTemplate(
-            input_variables=["question"],
-            template=prompt.first_decision_mag()
-        )
-
-        formatted_prompt = prompt_template.format(question=self.question)
-        return self.cohere_agent.chat(formatted_prompt).lower()
-
     def reflection_prime(self):
         prompt_template = PromptTemplate(
             input_variables=["question", "feedback"],
@@ -273,10 +280,10 @@ class Chat:
 
     def summary_answer(self):
         prompt_template = PromptTemplate(
-            input_variables=["question", 'answer'],
+            input_variables=['question', 'answer'],
             template=prompt.summary_answer()
         )
-        formatted_prompt = prompt_template.format(question=self.question, answer=self.answer_final)
+        formatted_prompt = prompt_template.format(question=self.question, answer=str(self.answer_final))
         return self.gpt_summary.ask(formatted_prompt)
 
     def summary_answer_prime(self):
@@ -298,10 +305,8 @@ class Chat:
         return self.retrieval_graph() if 'graph' in action else self.retrieval_text()
 
     def retrieval_bank_prime(self, action, relationship):
-        return self.retrieval_graph_prime(relationship) if 'knowledge graph' in action else self.retrieval_text_prime(relationship)
-
-    def retrieval_bank_mag(self, action, relationship):
-        return self.retrieval_graph_prime(relationship)
+        return self.retrieval_graph_prime(relationship) if 'knowledge graph' in action else self.retrieval_text_prime(
+            relationship)
 
     def retrieval_graph_prime(self, relationship):
         res = ""
@@ -367,7 +372,7 @@ class Chat:
             input_variables=["question", "document_id"],
             template=prompt.predict_question_belong_to_stsv()
         )
-        formatted_prompt = prompt_template.format(question=self.question, document_id=self.document_id)
+        formatted_prompt = prompt_template.format(question=self.new_question, document_id=self.document_id)
         res = self.gpt_graph.ask(formatted_prompt)
         res = self.pre_processing.string_to_json(res)
 
@@ -418,37 +423,33 @@ class Chat:
     def retrieval_text(self):
         self.qdrant.set_collection_name(self.document_id)
         documents = self.qdrant.query_from_db(self.question)
-        try:
-            re_ranking_query_text = self.qdrant.re_ranking(self.question, documents)
-            reference = ""
-            for i in range(len(re_ranking_query_text)):
-                logit = re_ranking_query_text[i].metadata['relevance_score']
-                text = re_ranking_query_text[i].page_content
-                if logit > 0:
-                    reference += f'{text}\n'
-            return reference
-        except:
-            return documents
+
+        re_ranking_query_text = self.qdrant.re_ranking(self.question, documents)
+        reference = []
+        for i in range(len(re_ranking_query_text)):
+            logit = re_ranking_query_text[i].metadata['relevance_score']
+            text = re_ranking_query_text[i].page_content
+            if logit > 0:
+                reference.append(f'{text}\n')
+
+        return reference
 
     def retrieval_text_prime(self, relationship):
         self.qdrant.set_collection_name(self.document_id)
-        entities_topic  = ""
+        entities_topic = ""
         for relation in relationship:
             entities_topic += relation["head"]
 
         documents = self.qdrant.query_from_db_prime(entities_topic)
 
-        try:
-            re_ranking_query_text = self.qdrant.re_ranking(entities_topic, documents)
-            reference = ""
-            for i in range(len(re_ranking_query_text)):
-                logit = re_ranking_query_text[i].metadata['relevance_score']
-                text = re_ranking_query_text[i].page_content
-                if logit > 0:
-                    reference += f'{text}\n'
-            return reference
-        except:
-            return documents
+        re_ranking_query_text = self.qdrant.re_ranking(entities_topic, documents)
+        reference = ""
+        for i in range(len(re_ranking_query_text)):
+            logit = re_ranking_query_text[i].metadata['relevance_score']
+            text = re_ranking_query_text[i].page_content
+            if logit > 0:
+                reference += f'{text}\n'
+        return reference
 
     def first_decision(self):
         prompt_template = PromptTemplate(
@@ -464,7 +465,7 @@ class Chat:
             template=prompt.reflection_stsv()
         )
         formatted_prompt = prompt_template.format(question=self.question, feedback=self.feedback,
-                                                  answer=self.answer_final)
+                                                  answer=str(self.answer_final))
         return self.gpt_agent.ask(formatted_prompt).lower()
 
     def generator(self):
@@ -473,16 +474,15 @@ class Chat:
             template=prompt.generator()
         )
 
-        formatted_prompt = prompt_template.format(question=self.question, references=self.references_final)
+        formatted_prompt = prompt_template.format(question=self.question, references=self.reference)
         return self.gpt_generator.ask(formatted_prompt)
-
 
     def generator_prime(self):
         prompt_template = PromptTemplate(
             input_variables=["question", "document"],
             template=prompt.generator_prime()
         )
-        formatted_prompt = prompt_template.format(question=self.question, document=self.references_final)
+        formatted_prompt = prompt_template.format(question=self.question, document=str(self.reference))
         return self.gpt_generator.ask(formatted_prompt)
 
     def valid(self):
@@ -492,6 +492,24 @@ class Chat:
         )
         formatted_prompt = prompt_template.format(question=self.question, answer=self.answer_final)
 
+        print("----Các tham số đầu vào để valid----")
+        print(f"Câu hỏi: {self.question}")
+        print(f"Trả lời: {self.answer}")
+        print(f"Tài liệu: {self.reference_final}")
+
+        val_512 = self.validator_512.evaluate(self.question, self.answer, self.reference_final)
+        val_768 = self.validator_768.evaluate(self.question, self.answer, self.reference_final)
+        val_1024 = self.validator_1024.evaluate(self.question, self.answer, self.reference_final)
+
+        qa_mean = (val_512['QA_similarity'] + val_768['QA_similarity'] + val_1024['QA_similarity']) / 3
+        qd_mean = (val_512['Q_in_D_max'] + val_768['Q_in_D_max'] + val_1024['Q_in_D_max']) / 3
+        ad_mean = (val_512['A_in_D_max'] + val_768['A_in_D_max'] + val_1024['A_in_D_max']) / 3
+
+        print(f"val_512: {val_512}")
+        print(f"val_768: {val_768}")
+        print(f"val_512: {val_1024}")
+        print(f"qa_mean: {qa_mean}\nqd_mean: {qd_mean}\nad_mean: {ad_mean}")
+
         # return self.gemini_valid.generator(formatted_prompt).lower()
         return self.gpt_valid.ask(formatted_prompt).lower()
 
@@ -500,7 +518,8 @@ class Chat:
             input_variables=["question", "document", "answer"],
             template=prompt.validator_prime()
         )
-        formatted_prompt = prompt_template.format(question=self.question, document=self.references_final, answer=self.answer_final)
+        formatted_prompt = prompt_template.format(question=self.question, document=self.reference,
+                                                  answer=self.answer_final)
         return self.gpt_valid.ask(formatted_prompt).lower()
 
     def commentor(self):
@@ -509,7 +528,7 @@ class Chat:
             template=prompt.commentor_stsv()
         )
         formatted_prompt = prompt_template.format(question=self.question, entities=self.extract,
-                                                  references=self.references_final)
+                                                  references=self.reference)
         # return self.gemini_commentor.generator(formatted_prompt)
         return self.gpt_commentor.ask(formatted_prompt)
 
@@ -527,6 +546,7 @@ class Chat:
         # return self.cohere_commentor.chat(formatted_prompt)
 
         return self.gpt_commentor.ask(formatted_prompt)
+
     def set_question(self, question):
         self.question = question
 

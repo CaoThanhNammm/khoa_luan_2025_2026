@@ -5,7 +5,7 @@ load_dotenv()
 
 class GPT:
     def __init__(self, model="gpt-5"):
-        self.client = OpenAI(api_key=os.getenv("api_key_gpt"))
+        self.client = OpenAI(api_key=os.getenv("API_KEY_GPT_02"))
         self.model = model
 
     def ask(self, question: str) -> str:

@@ -209,7 +209,7 @@ class Qdrant:
     def re_ranking(self, query, passages):
         client = NVIDIARerank(
             model="nvidia/llama-3.2-nv-rerankqa-1b-v2",
-            api_key=os.getenv('API_KEY_RERANKING'),
+            api_key=os.getenv('API_KEY_NVIDIA_04'),
 
             top_n=len(passages)
         )
@@ -218,9 +218,17 @@ class Qdrant:
             query=query,
             documents=[Document(page_content=passage) for passage in passages]
         )
+
         return response
 
     def set_collection_name(self, name):
         self.collection_name = name
 
+    def get_model_512(self):
+        return self.model_512
 
+    def get_model_768(self):
+        return self.model_768
+
+    def get_model_1024(self):
+        return self.model_1024
