@@ -98,121 +98,91 @@ class Chat:
         self.extract = ""
         self.feedback = ""
         self.answer_final = ""
+        self.new_question = ""
+        self.reference = ""
+        self.reference_final.clear()
 
         print(f'question: {self.question}')
         for t in range(self.t):
             print(f"Step {t}, initial feedback: {self.feedback}")
+            self.new_question = ""
             self.reference = ""
+            self.reference_final.clear()
 
             self.extract = self.agent()
             print(f'extract: {self.extract}')
 
-            for attr in self.extract:
-                action = self.extract[attr]
-                print(f'attr: {attr}')
-                print(f'action: {action}')
-                reference_retrieval = self.retrieval_bank(action)
+            for question in self.extract.values():
+                self.new_question += f"{question}, "
 
-                self.reference_final.extend(reference_retrieval)  # dùng để tính toán validator
-                self.reference = str(reference_retrieval)  # dùng để trả lời câu hỏi
+            print(f"new question: {self.new_question}")
+            reference_retrieval = self.retrieval_graph()
+            self.reference = str(reference_retrieval)
+            self.reference_final = reference_retrieval
+            print(f"Available references: {self.reference}")
 
-                print(f"Available references: {self.reference}")
-                self.answer = self.generator()
-                print(f"answer: {self.answer}")
+            self.more_info = self.retrieval_text()
+            self.reference_final.extend(self.more_info)
+            print(f"more_info: {self.more_info}")
 
-                self.answer_final += self.answer
+            self.answer = self.generator()
+            print(f"answer: {self.answer}")
+            self.answer_final = self.answer
 
-            validator = self.valid()
-            print(f"valid: {validator}")
+            if len(self.reference_final) != 0 or len(self.more_info) != 0:
+                validator = self.valid()
+                print(f"valid: {validator}")
 
-            if "yes" in validator:
-                return self.summary_answer()
+                if "yes" in validator:
+                    return self.summary_answer()
 
             self.feedback = self.commentor()
-
         return self.summary_answer()
-
-    # def answer_s2s_stsv(self):
-    #     self.document_id = 'so_tay_sinh_vien_2024'
-    #     self.extract = ""
-    #     self.feedback = ""
-    #     self.answer_final = ""
-    #
-    #     print(f'question: {self.question}')
-    #     for t in range(self.t):
-    #         print(f"Step {t}, initial feedback: {self.feedback}")
-    #         self.reference = ""
-    #
-    #         self.extract = self.agent()
-    #         print(f'extract: {self.extract}')
-    #
-    #         for attr in self.extract:
-    #             action = self.extract[attr]
-    #             print(f'attr: {attr}')
-    #             print(f'action: {action}')
-    #             reference_retrieval = self.retrieval_bank_stsv(action)
-    #
-    #             self.reference_final.extend(reference_retrieval)  # dùng để tính toán validator
-    #             self.reference = str(reference_retrieval)  # dùng để trả lời câu hỏi
-    #
-    #             print(f"Available references: {self.reference}")
-    #             self.answer = self.generator()
-    #             print(f"answer: {self.answer}")
-    #
-    #             self.answer_final += f"{attr}: {self.answer}"
-    #
-    #         validator = self.valid()
-    #         print(f"valid: {validator}")
-    #
-    #         if "yes" in validator:
-    #             return self.summary_answer()
-    #
-    #         self.feedback = self.commentor()
-    #
-    #     return self.summary_answer()
 
     def answer_s2s_stsv(self):
         self.document_id = 'so_tay_sinh_vien_2024'
         self.extract = ""
         self.feedback = ""
         self.answer_final = ""
+        self.reference = ""
+        self.new_question = ""
+        self.reference_final.clear()
 
         print(f'question: {self.question}')
         for t in range(self.t):
             print(f"Step {t}, initial feedback: {self.feedback}")
+            self.new_question = ""
             self.reference = ""
+            self.reference_final.clear()
 
             self.extract = self.agent()
             print(f'extract: {self.extract}')
 
-            for attr in self.extract:
-                action = self.extract[attr]
-                self.new_question += attr
+            for question in self.extract.values():
+                self.new_question += f"{question}, "
             print(f"new question: {self.new_question}")
+
             reference_retrieval = self.retrieval_graph_stsv()
             self.reference = str(reference_retrieval)
             self.reference_final = reference_retrieval
             print(f"Available references: {self.reference}")
 
-            self.answer = self.generator()
             self.more_info = self.retrieval_text()
-            print(f"answer: {self.answer}")
+            self.reference_final.extend(self.more_info)
             print(f"more_info: {self.more_info}")
 
-            self.answer_final = f"""
-                {self.answer},
-                Các thông tin bổ sung: {self.more_info}
-            """
+            self.answer = self.generator()
+            print(f"answer: {self.answer}")
+            self.answer_final = self.answer
 
-            if len(self.reference_final) != 0:
+            if len(self.reference_final) != 0 or len(self.more_info) != 0:
                 validator = self.valid()
                 print(f"valid: {validator}")
 
                 if "yes" in validator:
                     return self.summary_answer()
-            else:
-                self.feedback = self.commentor()
 
+            self.feedback = self.commentor()
         return self.summary_answer()
 
     def answer_prime(self):
@@ -397,28 +367,14 @@ class Chat:
             [node_id_to_idx[edge["target"]] for edge in edges]
         ], dtype=torch.long).to(device)
 
-        texts = [" ".join([f"{key} {value}" for key, value in dict(nodes[nid].items())['properties'].items()]) for nid
-                 in node_id_list]
+        documents = [" ".join([f"{key} {value}" for key, value in dict(nodes[nid].items())['properties'].items()]) for
+                     nid
+                     in node_id_list]
 
-        # x = self.neo.encode(texts)
-        #
-        # # Chuyển x lên cùng device
-        # if isinstance(x, torch.Tensor):
-        #     x = x.to(device)
-        # else:
-        #     x = torch.tensor(x).to(device)
-        #
-        # data = Data(x=x, edge_index=edge_index)
-        #
-        # # Chuyển model lên device
-        # model = GCN(input_dim=x.shape[1], hidden_dim=x.shape[1], output_dim=x.shape[1]).to(device)
-        #
-        # output = model(data)  # output: [num_nodes, 16]
-        # results = self.neo.retrieve_similar_nodes(self.question, output, texts, math.ceil(x.shape[0] * 0.5))
-        # texts = ''
-        # for res in results:
-        #     texts += res + " "
-        return texts
+        embed_question = self.neo.encode(self.new_question)
+        embed_documents = self.neo.encode(documents)
+
+        return self.neo.re_ranking(embed_question, embed_documents, documents, int(len(embed_documents) * 0.5))
 
     def retrieval_text(self):
         self.qdrant.set_collection_name(self.document_id)
@@ -454,7 +410,7 @@ class Chat:
     def first_decision(self):
         prompt_template = PromptTemplate(
             input_variables=["question"],
-            template=prompt.first_decision_stsv()
+            template=prompt.first_decision()
         )
         formatted_prompt = prompt_template.format(question=self.question)
         return self.gpt_agent.ask(formatted_prompt).lower()
@@ -462,7 +418,7 @@ class Chat:
     def reflection(self):
         prompt_template = PromptTemplate(
             input_variables=["question", "feedback", "answer"],
-            template=prompt.reflection_stsv()
+            template=prompt.self_reflection()
         )
         formatted_prompt = prompt_template.format(question=self.question, feedback=self.feedback,
                                                   answer=str(self.answer_final))
@@ -474,7 +430,8 @@ class Chat:
             template=prompt.generator()
         )
 
-        formatted_prompt = prompt_template.format(question=self.question, references=self.reference)
+        formatted_prompt = prompt_template.format(question=self.question,
+                                                  references=f"{str(self.reference)}, {str(self.more_info)}")
         return self.gpt_generator.ask(formatted_prompt)
 
     def generator_prime(self):
@@ -497,18 +454,16 @@ class Chat:
         print(f"Trả lời: {self.answer}")
         print(f"Tài liệu: {self.reference_final}")
 
-        val_512 = self.validator_512.evaluate(self.question, self.answer, self.reference_final)
-        val_768 = self.validator_768.evaluate(self.question, self.answer, self.reference_final)
-        val_1024 = self.validator_1024.evaluate(self.question, self.answer, self.reference_final)
-
-        qa_mean = (val_512['QA_similarity'] + val_768['QA_similarity'] + val_1024['QA_similarity']) / 3
-        qd_mean = (val_512['Q_in_D_max'] + val_768['Q_in_D_max'] + val_1024['Q_in_D_max']) / 3
-        ad_mean = (val_512['A_in_D_max'] + val_768['A_in_D_max'] + val_1024['A_in_D_max']) / 3
-
-        print(f"val_512: {val_512}")
-        print(f"val_768: {val_768}")
-        print(f"val_512: {val_1024}")
-        print(f"qa_mean: {qa_mean}\nqd_mean: {qd_mean}\nad_mean: {ad_mean}")
+        # val_512 = self.validator_512.evaluate(self.question, self.answer, self.reference_final)
+        # val_768 = self.validator_768.evaluate(self.question, self.answer, self.reference_final)
+        # val_1024 = self.validator_1024.evaluate(self.question, self.answer, self.reference_final)
+        # qa_mean = (val_512['QA_similarity'] + val_768['QA_similarity'] + val_1024['QA_similarity']) / 3
+        # qd_mean = (val_512['Q_in_D_max'] + val_768['Q_in_D_max'] + val_1024['Q_in_D_max']) / 3
+        # ad_mean = (val_512['A_in_D_max'] + val_768['A_in_D_max'] + val_1024['A_in_D_max']) / 3
+        # print(f"val_512: {val_512}")
+        # print(f"val_768: {val_768}")
+        # print(f"val_512: {val_1024}")
+        # print(f"qa_mean: {qa_mean}\nqd_mean: {qd_mean}\nad_mean: {ad_mean}")
 
         # return self.gemini_valid.generator(formatted_prompt).lower()
         return self.gpt_valid.ask(formatted_prompt).lower()

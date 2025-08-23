@@ -1,5 +1,7 @@
 import json
-
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+import torch.nn.functional as F
 from neo4j import GraphDatabase
 from sentence_transformers import SentenceTransformer, util
 import torch
@@ -334,33 +336,18 @@ class Neo4j:
     def encode(self, texts):
         return self.sentence_model.encode(texts, convert_to_tensor=True)
 
-    def retrieve_similar_nodes(self, question, node_embeddings, node_texts, top_k=20):
-        """
-        Tìm các node gần nhất về ngữ nghĩa với câu hỏi.
+    def re_ranking(self, embed_question, embed_documents, documents, k):
+        if embed_question.dim() == 1:
+            embed_question = embed_question.unsqueeze(0)
 
-        Parameters:
-        - question (str): câu hỏi cần truy vấn
-        - sentence_model: model SentenceTransformer
-        - node_embeddings: tensor (N, D) – embedding của từng node
-        - node_texts: list[str] – mô tả văn bản ban đầu của node
-        - top_k (int): số lượng kết quả muốn lấy
+        # cosine similarity
+        similarities = F.cosine_similarity(embed_question, embed_documents, dim=-1)
 
-        Returns:
-        - List[Tuple[str, float]]: danh sách các text node giống nhất cùng với độ tương đồng cosine
-        """
-        # Bước 1: Embedding câu hỏi
-        question_embedding = self.sentence_model.encode(question, convert_to_tensor=True)
+        # top-k
+        top_k_values, top_k_indices = torch.topk(similarities, k)
 
-        # Bước 2: Tính cosine similarity
-        cosine_scores = util.cos_sim(question_embedding, node_embeddings)[0]
-
-        # Bước 3: Lấy top-k node giống nhất
-        top_results = torch.topk(cosine_scores, k=top_k)
-
-        results = []
-        for score, idx in zip(top_results.values, top_results.indices):
-            results.append(node_texts[idx])
-
+        # trả về list string
+        results = [documents[idx] for idx in top_k_indices.tolist()]
         return results
 
     def fetch_subgraph(self, query):
@@ -591,8 +578,6 @@ class Neo4j:
         """
         with self.driver.session() as session:
             session.run(query, document_id=document_id)
-
-
 
     def add_to_neo4j(self, source, target, relation, source_type, target_type):
         if source_type == 'paper':

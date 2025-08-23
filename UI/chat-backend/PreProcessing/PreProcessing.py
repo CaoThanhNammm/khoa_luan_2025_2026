@@ -25,7 +25,6 @@ class PreProcessing:
     def string_to_json(self, text):
         removed_special = text.replace("```", "").replace("json", "")
         removed_special = removed_special.strip()
-
         return ast.literal_eval(removed_special)
 
     def text_preprocessing_vietnamese(self, text):

@@ -1,150 +1,143 @@
-def first_decision_stsv():
+def first_decision():
     return """
 Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. Với câu hỏi sau, hãy trích xuất thông tin từ câu hỏi theo yêu cầu.
-Quy tắc:
-1. Thông tin quan hệ phải đến từ các loại quan hệ đã cho.
-2. Mỗi thực thể phải có chính xác một danh mục trong ngoặc đơn.
-3. Các câu hỏi yêu cầu phải tóm tắt thì ưu tiên nguồn truy xuất GRAPH
+
+### Câu hỏi: '{question}'
+Lưu ý:
+1. Không giải thích gì thêm chỉ làm theo hướng dẫn
+2. Cần có tài liệu để trả lời câu hỏi đã cho, và mục tiêu là tìm kiếm các tài liệu hữu ích. Mỗi thực thể trong đồ thị tri thức được liên kết với một tài liệu.
+3. Dựa trên các thực thể và quan hệ đã trích xuất. Hãy phản hồi theo dạng sau
+{{
+  "extract_01": <trích xuất như ví dụ, không được ghi chuỗi theo kiểu lồng chuỗi>,
+  "extract_02": <trích xuất như ví dụ, không được ghi chuỗi theo kiểu lồng chuỗi>,
+  ...
+}}
+4. Chỉ trích xuất các đối tượng là câu hỏi, không trích xuất các đối tượng khác
 
 ví dụ 1: Các khoa có số điện thoại là 028372 mà giảng dạy về ngoại ngữ?
 {{
-  "khoa có số điện thoại là 028372": "text document",
-  "giảng dạy về ngoại ngữ": "knowledge graph"
+  "extrac_01": "khoa có số điện thoại là 028372",
+  "extrac_02": "giảng dạy về ngoại ngữ"
 }}
 ví dụ 2: Ngành quản trị kinh doanh do khoa nào quản lý và số điện thoại của khoa đó là gì?
 {{
-  "quản trị kinh doanh": "text document",
-  "số điện thoại của khoa": "knowledge graph"
+  "extract_01": "quản trị kinh doanh",
+  "extract_01": "số điện thoại của khoa"
 }}
 
 ví dụ 3: Câu lạc bộ nào thuộc lĩnh vực học thuật, ngoại ngữ mà do Nguyễn Thị Ngọc Hân chủ nhiệm?
 {{
-  "học thuật, ngoại ngữ": "text document",
-  "Nguyễn Thị Ngọc Hân chủ nhiệm": "knowledge graph"
+  "extract_01": "học thuật, ngoại ngữ",
+  "extract_01": "Nguyễn Thị Ngọc Hân chủ nhiệm"
 }}
 
 ví dụ 4: Ký túc xá tại Đại học Nông Lâm TP.HCM có số lượng là bao nhiêu?
 {{
-  "Ký túc xá tại Đại học Nông Lâm TP.HCM": "knowledge graph"
+  "extract_01": "Ký túc xá tại Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 5: Viện nghiên cứu tại Đại học Nông Lâm TP.HCM có số lượng là bao nhiêu?
 {{
-  "Viện nghiên cứu tại Đại học Nông Lâm TP.HCM": "knowledge graph"
+  "extract_01": "Viện nghiên cứu tại Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 6: Số ngành đào tạo thuộc Khoa Chăn nuôi - Thú y của Đại học Nông Lâm TP.HCM là bao nhiêu?
 {{
-  "Khoa Chăn nuôi - Thú y của Đại học Nông Lâm TP.HCM": "knowledge graph"
+  "extract_01": "Khoa Chăn nuôi - Thú y của Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 7: Trang web nào cung cấp thông tin về sinh hoạt công dân - sinh viên của Trường Đại học Nông Lâm TP.HCM?
 {{
-  "sinh hoạt công dân - sinh viên của Trường Đại học Nông Lâm TP.HCM": "knowledge graph"
+  "extract_01": "sinh hoạt công dân - sinh viên của Trường Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 8: Chiến dịch Mùa hè xanh tại Trường Đại học Nông Lâm TP.HCM diễn ra vào thời điểm nào?
 {{
-  "Chiến dịch Mùa hè xanh tại Trường Đại học Nông Lâm TP.HCM": "text document"
+  "extract_01": "Chiến dịch Mùa hè xanh tại Trường Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 9: Slogan của BEC English Club tại Trường Đại học Nông Lâm TP.HCM là gì?
 {{
-  "BEC English Club tại Trường Đại học Nông Lâm TP.HCM": "text document"
+  "extract_01": "BEC English Club tại Trường Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 10: Hoạt động chính của CLB Nông Lâm Radio tại Đại học Nông Lâm TP.HCM là gì?
 {{
-  "CLB Nông Lâm Radio tại Đại học Nông Lâm TP.HCM": "text document"
+  "extract_01": "CLB Nông Lâm Radio tại Đại học Nông Lâm TP.HCM"
 }}
-
-### Câu hỏi: '{question}'
-Không giải thích gì thêm chỉ làm theo hướng dẫn
-Cần có tài liệu để trả lời câu hỏi đã cho, và mục tiêu là tìm kiếm các tài liệu hữu ích. Mỗi thực thể trong đồ thị tri thức được liên kết với một tài liệu.
-Dựa trên các thực thể và quan hệ đã trích xuất, knowledge graph hay text document hữu ích hơn để thu hẹp không gian tìm kiếm?. Hãy phản hồi theo dạng sau
-{{
-  <trích xuất như ví dụ, không được ghi chuỗi theo kiểu lồng chuỗi, chỉ sử dụng text document hoặc knowledge graph>
-}}
-
-Chỉ trích xuất các đối tượng là câu hỏi, không trích xuất các đối tượng khác
 """
 
-
-def reflection_stsv():
+def self_reflection():
     return """
-Tài liệu đã truy xuất không đúng. Hãy dựa vào câu hỏi và tiếp tục trích xuất theo feedback
+Tài liệu đã truy xuất không đúng. Trả lời lại dựa trên các thực thể chủ đề mới được trích xuất. Hãy dựa vào câu hỏi và tiếp tục trích xuất theo feedback
 ### feedback: '{feedback}'
 ### Câu hỏi: '{question}'
 ### Câu trả lời: '{answer}'
+Với câu hỏi sau hãy trích xuất các thực thể chủ đề và các quan hệ hữu ích từ câu hỏi.
+
+Lưu ý:
+1. CHỈ TRÍCH XUẤT LẠI VỚI CÂU HỎI CHƯA ĐƯỢC TRẢ LỜI HOẶC CHƯA CÓ THÔNG TIN. CÂU HỎI ĐÃ ĐƯỢC TRẢ LỜI RỒI THÌ KHÔNG CẦN ĐỂ TĂNG TỐC ĐỘ TRUY XUẤT
+2. Không giải thích gì thêm chỉ làm theo hướng dẫn
+3. Trích xuất tối đa 3 đối tượng
+4. Chỉ trích xuất các đối tượng hữu ích có tác dụng trả lời câu hỏi, các thông tin thêm trong câu hỏi thì không quan tâm
+5. Hãy phản hồi theo dạng sau:
+{{
+  "extract_01": <trích xuất như ví dụ, không được ghi chuỗi theo kiểu lồng chuỗi>,
+  "extract_02": <trích xuất như ví dụ, không được ghi chuỗi theo kiểu lồng chuỗi>,
+  ...
+}}
 
 ví dụ 1: Các khoa có số điện thoại là 028372 mà giảng dạy về ngoại ngữ?
 {{
-  "khoa có số điện thoại là 028372": "text document",
-  "giảng dạy về ngoại ngữ": "knowledge graph"
+  "extrac_01": "khoa có số điện thoại là 028372",
+  "extrac_02": "giảng dạy về ngoại ngữ"
 }}
 ví dụ 2: Ngành quản trị kinh doanh do khoa nào quản lý và số điện thoại của khoa đó là gì?
 {{
-  "quản trị kinh doanh": "text document",
-  "số điện thoại của khoa": "knowledge graph"
+  "extract_01": "quản trị kinh doanh",
+  "extract_01": "số điện thoại của khoa"
 }}
 
 ví dụ 3: Câu lạc bộ nào thuộc lĩnh vực học thuật, ngoại ngữ mà do Nguyễn Thị Ngọc Hân chủ nhiệm?
 {{
-  "học thuật, ngoại ngữ": "text document",
-  "Nguyễn Thị Ngọc Hân chủ nhiệm": "knowledge graph"
+  "extract_01": "học thuật, ngoại ngữ",
+  "extract_01": "Nguyễn Thị Ngọc Hân chủ nhiệm"
 }}
 
 ví dụ 4: Ký túc xá tại Đại học Nông Lâm TP.HCM có số lượng là bao nhiêu?
 {{
-  "Ký túc xá tại Đại học Nông Lâm TP.HCM": "knowledge graph"
+  "extract_01": "Ký túc xá tại Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 5: Viện nghiên cứu tại Đại học Nông Lâm TP.HCM có số lượng là bao nhiêu?
 {{
-  "Viện nghiên cứu tại Đại học Nông Lâm TP.HCM": "knowledge graph"
+  "extract_01": "Viện nghiên cứu tại Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 6: Số ngành đào tạo thuộc Khoa Chăn nuôi - Thú y của Đại học Nông Lâm TP.HCM là bao nhiêu?
 {{
-  "Khoa Chăn nuôi - Thú y của Đại học Nông Lâm TP.HCM": "knowledge graph"
+  "extract_01": "Khoa Chăn nuôi - Thú y của Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 7: Trang web nào cung cấp thông tin về sinh hoạt công dân - sinh viên của Trường Đại học Nông Lâm TP.HCM?
 {{
-  "sinh hoạt công dân - sinh viên của Trường Đại học Nông Lâm TP.HCM": "knowledge graph"
+  "extract_01": "sinh hoạt công dân - sinh viên của Trường Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 8: Chiến dịch Mùa hè xanh tại Trường Đại học Nông Lâm TP.HCM diễn ra vào thời điểm nào?
 {{
-  "Chiến dịch Mùa hè xanh tại Trường Đại học Nông Lâm TP.HCM": "text document"
+  "extract_01": "Chiến dịch Mùa hè xanh tại Trường Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 9: Slogan của BEC English Club tại Trường Đại học Nông Lâm TP.HCM là gì?
 {{
-  "BEC English Club tại Trường Đại học Nông Lâm TP.HCM": "text document"
+  "extract_01": "BEC English Club tại Trường Đại học Nông Lâm TP.HCM"
 }}
 
 ví dụ 10: Hoạt động chính của CLB Nông Lâm Radio tại Đại học Nông Lâm TP.HCM là gì?
 {{
-  "CLB Nông Lâm Radio tại Đại học Nông Lâm TP.HCM": "text document"
+  "extract_01": "CLB Nông Lâm Radio tại Đại học Nông Lâm TP.HCM"
 }}
-
-CHỈ TRÍCH XUẤT LẠI VỚI CÂU HỎI CHƯA ĐƯỢC TRẢ LỜI HOẶC CHƯA CÓ THÔNG TIN. CÂU HỎI ĐÃ ĐƯỢC TRẢ LỜI RỒI THÌ KHÔNG CẦN ĐỂ TĂNG TỐC ĐỘ TRUY XUẤT
-Tài liệu đã truy xuất không đúng. Trả lời lại dựa trên các thực thể chủ đề mới được trích xuất.
-Hãy phản hồi theo dạng sau:
-
-Với câu hỏi sau hãy trích xuất các thực thể chủ đề và các quan hệ hữu ích từ câu hỏi.
-
-Không giải thích gì thêm chỉ làm theo hướng dẫn
-Cần có tài liệu để trả lời câu hỏi đã cho, và mục tiêu là tìm kiếm các tài liệu hữu ích. Mỗi thực thể trong đồ thị tri thức được liên kết với một tài liệu.
-Dựa trên câu hỏi knowledge graph hay text document hữu ích hơn để thu hẹp không gian tìm kiếm?. Hãy phản hồi theo dạng sau
-{{
-  <trích xuất như ví dụ, không được ghi chuỗi theo kiểu lồng chuỗi, chỉ sử dụng text document hoặc knowledge graph>
-}}
-
-Lưu ý:
-1. Trích xuất tối đa 3 đối tượng
-2. Chỉ trích xuất các đối tượng là câu hỏi, không trích xuất các đối tượng khác
 """
 
 
