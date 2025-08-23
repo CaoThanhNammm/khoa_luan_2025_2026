@@ -1,19 +1,12 @@
-import re
-
-from markdown_it.common.entities import entities
-
 from LLM.Cohere import CohereChatBot
 from LLM.GPT import GPT
 from LLM.Gemini import Gemini
 import LLM.prompt as prompt
 from LLM.Llama import Llama
 from dotenv import load_dotenv
-
 from Validator import Validator
 from knowledge_graph.create_entities_relationship_kb import pre_processing
-
 load_dotenv()
-import json
 import os
 import torch
 from langchain_core.prompts import PromptTemplate
@@ -30,7 +23,6 @@ class Chat:
         self.answer = ""
         self.more_info = ""
         self.new_question = ""
-        self.answer_final = ""
         self.reference_final = []
         self.entities = []
         self.relations = []
@@ -97,7 +89,6 @@ class Chat:
     def answer_s2s(self):
         self.extract = ""
         self.feedback = ""
-        self.answer_final = ""
         self.new_question = ""
         self.reference = ""
         self.reference_final.clear()
@@ -127,7 +118,6 @@ class Chat:
 
             self.answer = self.generator()
             print(f"answer: {self.answer}")
-            self.answer_final = self.answer
 
             if len(self.reference_final) != 0 or len(self.more_info) != 0:
                 validator = self.valid()
@@ -143,7 +133,6 @@ class Chat:
         self.document_id = 'so_tay_sinh_vien_2024'
         self.extract = ""
         self.feedback = ""
-        self.answer_final = ""
         self.reference = ""
         self.new_question = ""
         self.reference_final.clear()
@@ -173,7 +162,6 @@ class Chat:
 
             self.answer = self.generator()
             print(f"answer: {self.answer}")
-            self.answer_final = self.answer
 
             if len(self.reference_final) != 0 or len(self.more_info) != 0:
                 validator = self.valid()
@@ -187,7 +175,6 @@ class Chat:
 
     def answer_prime(self):
         self.extract = ""
-        self.answer_final = ""
         self.feedback = ""
 
         print(f'question: {self.question}')
@@ -204,8 +191,8 @@ class Chat:
 
             self.reference.append(documents)
 
-            self.answer_final = f"{self.generator_prime()}"
-            print(f"Answer: {self.answer_final}")
+            self.answer = f"{self.generator_prime()}"
+            print(f"Answer: {self.answer}")
 
             validator = self.valid_prime()
             print(f"valid: {validator}")
@@ -253,7 +240,7 @@ class Chat:
             input_variables=['question', 'answer'],
             template=prompt.summary_answer()
         )
-        formatted_prompt = prompt_template.format(question=self.question, answer=str(self.answer_final))
+        formatted_prompt = prompt_template.format(question=self.question, answer=str(self.answer))
         return self.gpt_summary.ask(formatted_prompt)
 
     def summary_answer_prime(self):
@@ -261,7 +248,7 @@ class Chat:
             input_variables=["question", 'answer'],
             template=prompt.summary_answer_prime()
         )
-        formatted_prompt = prompt_template.format(question=self.question, answer=self.answer_final)
+        formatted_prompt = prompt_template.format(question=self.question, answer=self.answer)
         return self.gpt_summary.ask(formatted_prompt)
 
     def agent(self):
@@ -421,7 +408,7 @@ class Chat:
             template=prompt.self_reflection()
         )
         formatted_prompt = prompt_template.format(question=self.question, feedback=self.feedback,
-                                                  answer=str(self.answer_final))
+                                                  answer=str(self.answer))
         return self.gpt_agent.ask(formatted_prompt).lower()
 
     def generator(self):
@@ -447,25 +434,24 @@ class Chat:
             input_variables=["question", "answer"],
             template=prompt.valid_stsv()
         )
-        formatted_prompt = prompt_template.format(question=self.question, answer=self.answer_final)
+        formatted_prompt = prompt_template.format(question=self.question, answer=self.answer)
 
         print("----Các tham số đầu vào để valid----")
         print(f"Câu hỏi: {self.question}")
         print(f"Trả lời: {self.answer}")
         print(f"Tài liệu: {self.reference_final}")
 
-        # val_512 = self.validator_512.evaluate(self.question, self.answer, self.reference_final)
-        # val_768 = self.validator_768.evaluate(self.question, self.answer, self.reference_final)
-        # val_1024 = self.validator_1024.evaluate(self.question, self.answer, self.reference_final)
-        # qa_mean = (val_512['QA_similarity'] + val_768['QA_similarity'] + val_1024['QA_similarity']) / 3
-        # qd_mean = (val_512['Q_in_D_max'] + val_768['Q_in_D_max'] + val_1024['Q_in_D_max']) / 3
-        # ad_mean = (val_512['A_in_D_max'] + val_768['A_in_D_max'] + val_1024['A_in_D_max']) / 3
-        # print(f"val_512: {val_512}")
-        # print(f"val_768: {val_768}")
-        # print(f"val_512: {val_1024}")
-        # print(f"qa_mean: {qa_mean}\nqd_mean: {qd_mean}\nad_mean: {ad_mean}")
+        val_512 = self.validator_512.evaluate(self.question, self.answer, self.reference_final)
+        val_768 = self.validator_768.evaluate(self.question, self.answer, self.reference_final)
+        val_1024 = self.validator_1024.evaluate(self.question, self.answer, self.reference_final)
+        qa_mean = (val_512['QA_similarity'] + val_768['QA_similarity'] + val_1024['QA_similarity']) / 3
+        qd_mean = (val_512['Q_in_D_max'] + val_768['Q_in_D_max'] + val_1024['Q_in_D_max']) / 3
+        ad_mean = (val_512['A_in_D_max'] + val_768['A_in_D_max'] + val_1024['A_in_D_max']) / 3
+        print(f"val_512: {val_512}")
+        print(f"val_768: {val_768}")
+        print(f"val_512: {val_1024}")
+        print(f"qa_mean: {qa_mean}\nqd_mean: {qd_mean}\nad_mean: {ad_mean}")
 
-        # return self.gemini_valid.generator(formatted_prompt).lower()
         return self.gpt_valid.ask(formatted_prompt).lower()
 
     def valid_prime(self):
@@ -474,7 +460,7 @@ class Chat:
             template=prompt.validator_prime()
         )
         formatted_prompt = prompt_template.format(question=self.question, document=self.reference,
-                                                  answer=self.answer_final)
+                                                  answer=self.answer)
         return self.gpt_valid.ask(formatted_prompt).lower()
 
     def commentor(self):
