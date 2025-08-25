@@ -159,37 +159,49 @@ Bạn là trợ lý phân tích câu trả lời theo khuôn mẫu.
 
 Câu hỏi: {question}
 Câu trả lời: {answer}
-Nếu câu trả lời 'không có thông tin' thì trả lời no mà không cần suy nghĩ
-Nhiệm vụ:
-1. Xác định loại của câu trả lời (what, who, where, how, why).
-2. Kiểm tra câu trả lời có khớp với câu hỏi không:
-2.1 Nếu khớp, trả lời "yes".
-2.2 Nếu 'không có thông tin' hoặc câu trả lời không thỏa mãn thì trả lời 'no'.
-Trả lời: Chỉ 1 từ ("yes" hoặc "no")."""
+Tài liệu: {reference}
+Các metrics:
+qa_mean: {qa_mean}
+qd_mean: {qd_mean}
+ad_mean: {ad_mean}
 
-def commentor_stsv():
+Giải thích các metrics:
+- qa_mean: Cosine simalirity giữa câu hỏi hỏi và câu trả lời
+- qd_mean: Cosine simalirity cao nhất giữa câu hỏi và tài liệu
+- ad_mean: Cosine simalirity cao nhất giữa câu trả lời và tài liệu
+
+Bạn sẽ phải tự chọn ngưỡng threshhold cho từng metrics, vào từng trường hợp, điều kiện, câu hỏi, câu trả lời, tài liệu khác nhau
+
+Nhiệm vụ của bạn là dựa vào các metrics và các kiến thức mà bạn đã học được hãy:
+1. Xác định loại của câu trả lời (what, who, where, how, why).
+2. Kiểm tra câu trả lời có khớp với câu hỏi không
+3. Kiểm tra câu hỏi có nằm trong tài liệu hay không
+4. Kiểm tra câu trả lời có nằm trong tài liệu hay không
+
+Lưu ý:
+1. Nếu câu trả lời 'không có thông tin' thì trả lời no mà không cần suy nghĩ
+2. Không giải thích gì thêm
+3. Hãy chú ý nhiều vào metrics để đánh giá
+
+Nếu thỏa tất cả điều kiện trên hãy trả lời "yes".
+Nếu 'không có thông tin' hoặc câu trả lời không thỏa mãn thì trả lời 'no'.
+Trả lời: Chỉ 1 từ ("yes" hoặc "no").
+"""
+
+def commentor():
     return """
 Bạn là một trợ lý hữu ích, tuân theo khuôn mẫu. 
-Hãy phản hồi sửa lỗi một cách chi tiết nhất có thể cho:
-1. Nếu nguồn truy xuất hiện tại là 'TEXT DOCUMENT', hãy chỉ ra lỗi được liệt kê dưới đây:
- - Chỉ ra thực thể hoặc quan hệ được trích xuất sai từ câu hỏi, nếu Tài liệu khả thi trống.
- - Chỉ ra thực thể hoặc quan hệ bị thiếu từ câu hỏi, nếu Tài liệu khả thi trống.
- - Có thể đề xuất chuyển sang nguồn truy xuất 'KNOWLEDGE GRAPH', nếu sử dụng TEXT DOCUMENT quá nhiều nhưng không tìm thấy thông tin hoặc tài liệu trống
-
-2. Nếu nguồn truy xuất hiện tại là 'KNOWLEDGE GRAPH', hãy chỉ ra lỗi được liệt kê dưới đây:
+Hãy phản hồi sửa lỗi một cách chi tiết nhất có thể cho, chỉ ra lỗi được liệt kê dưới đây:
  - Nếu tài liệu không có ý nghĩa. Ưu tiên dự đoán lại mục lục.
- - Có thể đề xuất chuyển sang nguồn truy xuất 'TEXT DOCUMENT', nếu sử dụng GRAPH quá nhiều nhưng không tìm thấy thông tin hoặc tài liệu trống
+ - Nếu tài liệu trống hãy yêu cầu trích xuất lại thực thể
 
 ### Câu hỏi: {question}
 ### Thực thể chủ đề: {entities}
 ### Tài liệu khả thi: {references}
 
-Lưu ý:
-1. Hiện tại chỉ có 2 nguồn là 'TEXT' và 'GRAPH'. KHÔNG ĐỀ NGHỊ NGUỒN KHÁC NGOÀI 2 CÁI TRÊN
-
 Phản hồi theo mẫu:
 1. <hãy chỉ ra lỗi>
-2. <đề xuất ngắn gọn, rõ ràng, cụ thể để sửa lỗi tương ứng với 'TEXT' hoặc 'GRAPH', mỗi lần chỉ đề xuất 1 nguồn, không tính tới bước tiếp theo>
+2. <đề xuất ngắn gọn, rõ ràng, cụ thể để sửa lỗi>
 """
 
 def extract_entities_relationship_from_text():
@@ -1435,9 +1447,6 @@ Câu 8: Find publications from Carma researchers that report detections using th
     }}
     head_name must be in singular form. DON'T EXPLAIN
 """
-
-
-
 
 
 

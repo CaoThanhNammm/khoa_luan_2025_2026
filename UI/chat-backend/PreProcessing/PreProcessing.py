@@ -21,7 +21,6 @@ class PreProcessing:
     def __init__(self):
         self.vncorenlp = get_vncorenlp_instance()
 
-
     def string_to_json(self, text):
         removed_special = text.replace("```", "").replace("json", "")
         removed_special = removed_special.strip()

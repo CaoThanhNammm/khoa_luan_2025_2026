@@ -6,6 +6,7 @@ from LLM.Llama import Llama
 from dotenv import load_dotenv
 from Validator import Validator
 from knowledge_graph.create_entities_relationship_kb import pre_processing
+
 load_dotenv()
 import os
 import torch
@@ -306,22 +307,16 @@ class Chat:
         print('query:', query)
         nodes, edges = self.neo.fetch_subgraph(query)
 
-        # Tạo mapping node_id_to_idx trước
         node_id_list = list(nodes.keys())
-        node_id_to_idx = {nid: i for i, nid in enumerate(node_id_list)}
 
-        # Xác định thiết bị (GPU nếu có, ngược lại CPU)
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        documents = [" ".join([f"{key} {value}" for key, value in dict(nodes[nid].items())['properties'].items()]) for
+                     nid
+                     in node_id_list]
 
-        # Tạo edge_index và chuyển lên device
-        edge_index = torch.tensor([
-            [node_id_to_idx[edge["source"]] for edge in edges],
-            [node_id_to_idx[edge["target"]] for edge in edges]
-        ], dtype=torch.long).to(device)
+        embed_question = self.neo.encode(self.new_question)
+        embed_documents = self.neo.encode(documents)
 
-        texts = [" ".join([f"{key} {value}" for key, value in dict(nodes[nid].items())['properties'].items()]) for nid
-                 in node_id_list]
-        return texts
+        return self.neo.re_ranking(embed_question, embed_documents, documents)
 
     def retrieval_graph_stsv(self):
         # llm dự đoán câu hỏi thuộc phần nào để thu hẹp nội dung cần truy xuất
@@ -340,19 +335,7 @@ class Chat:
         """
         print('query:', query)
         nodes, edges = self.neo.fetch_subgraph(query)
-
-        # Tạo mapping node_id_to_idx trước
         node_id_list = list(nodes.keys())
-        node_id_to_idx = {nid: i for i, nid in enumerate(node_id_list)}
-
-        # Xác định thiết bị (GPU nếu có, ngược lại CPU)
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-        # Tạo edge_index và chuyển lên device
-        edge_index = torch.tensor([
-            [node_id_to_idx[edge["source"]] for edge in edges],
-            [node_id_to_idx[edge["target"]] for edge in edges]
-        ], dtype=torch.long).to(device)
 
         documents = [" ".join([f"{key} {value}" for key, value in dict(nodes[nid].items())['properties'].items()]) for
                      nid
@@ -361,7 +344,7 @@ class Chat:
         embed_question = self.neo.encode(self.new_question)
         embed_documents = self.neo.encode(documents)
 
-        return self.neo.re_ranking(embed_question, embed_documents, documents, int(len(embed_documents) * 0.5))
+        return self.neo.re_ranking(embed_question, embed_documents, documents)
 
     def retrieval_text(self):
         self.qdrant.set_collection_name(self.document_id)
@@ -430,17 +413,6 @@ class Chat:
         return self.gpt_generator.ask(formatted_prompt)
 
     def valid(self):
-        prompt_template = PromptTemplate(
-            input_variables=["question", "answer"],
-            template=prompt.valid_stsv()
-        )
-        formatted_prompt = prompt_template.format(question=self.question, answer=self.answer)
-
-        print("----Các tham số đầu vào để valid----")
-        print(f"Câu hỏi: {self.question}")
-        print(f"Trả lời: {self.answer}")
-        print(f"Tài liệu: {self.reference_final}")
-
         val_512 = self.validator_512.evaluate(self.question, self.answer, self.reference_final)
         val_768 = self.validator_768.evaluate(self.question, self.answer, self.reference_final)
         val_1024 = self.validator_1024.evaluate(self.question, self.answer, self.reference_final)
@@ -449,8 +421,15 @@ class Chat:
         ad_mean = (val_512['A_in_D_max'] + val_768['A_in_D_max'] + val_1024['A_in_D_max']) / 3
         print(f"val_512: {val_512}")
         print(f"val_768: {val_768}")
-        print(f"val_512: {val_1024}")
+        print(f"val_1024: {val_1024}")
         print(f"qa_mean: {qa_mean}\nqd_mean: {qd_mean}\nad_mean: {ad_mean}")
+
+        prompt_template = PromptTemplate(
+            input_variables=["question", "answer", "qa_mean", "reference" "qd_mean", "ad_mean"],
+            template=prompt.valid_stsv()
+        )
+        formatted_prompt = prompt_template.format(question=self.question, answer=self.answer, reference=self.reference,
+                                                  qa_mean=qa_mean, qd_mean=qd_mean, ad_mean=ad_mean)
 
         return self.gpt_valid.ask(formatted_prompt).lower()
 
@@ -466,11 +445,10 @@ class Chat:
     def commentor(self):
         prompt_template = PromptTemplate(
             input_variables=["question", "entities", "references"],
-            template=prompt.commentor_stsv()
+            template=prompt.commentor()
         )
         formatted_prompt = prompt_template.format(question=self.question, entities=self.extract,
-                                                  references=self.reference)
-        # return self.gemini_commentor.generator(formatted_prompt)
+                                                  references=str(self.reference_final))
         return self.gpt_commentor.ask(formatted_prompt)
 
     def commentor_prime(self):

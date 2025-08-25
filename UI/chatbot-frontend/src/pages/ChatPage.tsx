@@ -36,6 +36,8 @@ const ChatPage: React.FC = () => {
 
   // Get messages from current conversation directly (no conversion needed)
   const messages = chatContext.currentConversation?.messages || [];
+  
+
 
   const handleSendMessage = async (inputMessage: string) => {
     if (!inputMessage.trim()) return;

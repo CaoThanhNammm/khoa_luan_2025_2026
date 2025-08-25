@@ -208,6 +208,12 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     // Render conversation tạm thời ngay lập tức
     setCurrentConversation(tempConversation);
     
+    // Force a re-render by using React's state batching
+    await new Promise(resolve => {
+      // Use setTimeout to ensure the state update is processed
+      setTimeout(resolve, 200);
+    });
+    
     try {
       // Sử dụng API /conversations cho student handbook
       const newConversation = documentId === 'so_tay_sinh_vien_2024' 

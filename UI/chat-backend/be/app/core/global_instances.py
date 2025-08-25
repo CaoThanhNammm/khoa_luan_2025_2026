@@ -127,7 +127,7 @@ def initialize_global_instances():
         # 5. khởi tạo neo4j
         try:
             uri = os.getenv("URI_NEO")
-            user = os.getenv("USER")
+            user = 'neo4j'
             password = os.getenv("PASSWORD")
             
             neo = Neo4j(uri, user, password)

@@ -51,7 +51,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({
         documentInfo={documentInfo}
       />
       <div className="flex-1 flex flex-col min-h-0 bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl shadow-xl shadow-gray-100/50 dark:shadow-slate-900/50 border border-gray-200/60 dark:border-slate-700/60 rounded-2xl mx-4 mb-4 transition-all duration-300 relative z-10 overflow-hidden">
-        {showSuggestedQuestions && messages.length === 0 ? (
+        {showSuggestedQuestions && messages.length === 0 && !isThinking ? (
           <>
             <div className="flex-1 min-h-0">
               <SuggestedQuestions 
